@@ -1,0 +1,23 @@
+{
+  "title": "BPM — Product Design Review",
+  "project_id": "appgprj_6abd1b4cc7fc81918f01d4a2e99698b3",
+  "slug": "bpm-product-design-review",
+  "live_url": "https://bpm-product-design-review.cameron91.chatgpt.site",
+  "status": "active",
+  "access_mode": "custom",
+  "source_version_number": 1,
+  "projection_revision": 2,
+  "created_at": "2026-09-30T14:38:04.214018Z",
+  "figma": {
+    "name": "BPM - Updates",
+    "file_key": "REGkhZvykpOP4XmN7EKSnh",
+    "frames": {
+      "home": "42:985",
+      "about": "42:1214",
+      "shop": "42:1366",
+      "contact": "42:1518",
+      "product_detail": "42:1635"
+    }
+  },
+  "live_shopify_store": "https://bpmdeodorant.com/"
+}
