@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Recovered BPM product-design review baseline.">
+  <title>BPM — Product Design Review</title>
+  <link rel="preconnect" href="https://bpmdeodorant.com">
+  <link rel="stylesheet" href="./styles.css">
+  <script defer src="./app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#product">Skip to product</a>
+
+  <div class="preview-bar">
+    <span>BPM · Design preview · 30 September 2026</span>
+    <button class="text-button" type="button" data-review-open>Review &amp; comment</button>
+  </div>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="BPM home">BPM</a>
+    <nav aria-label="Primary">
+      <a href="#product">Shop</a>
+      <a href="#story">Our story</a>
+      <a href="#formula">The formula</a>
+    </nav>
+    <a class="bag-link" href="https://bpmdeodorant.com/cart" target="_blank" rel="noreferrer">Bag <span>0</span></a>
+  </header>
+
+  <main id="top">
+    <section class="product-shell" id="product" data-section="Product">
+      <div class="gallery" aria-label="Bergamot & Lime product gallery">
+        <div class="gallery-main">
+          <img id="gallery-image"
+               src="https://bpmdeodorant.com/cdn/shop/files/Unscented_2.png?v=1770084423&width=1400"
+               alt="BPM Bergamot & Lime natural deodorant packaging">
+          <span class="gallery-count" id="gallery-count">1 / 7</span>
+        </div>
+        <div class="thumbs" role="list" aria-label="Choose product image">
+          <button class="thumb is-active" type="button" data-image="https://bpmdeodorant.com/cdn/shop/files/Unscented_2.png?v=1770084423&width=1400" data-alt="BPM Bergamot & Lime natural deodorant packaging" aria-label="Show packaging image 1"><img src="https://bpmdeodorant.com/cdn/shop/files/Unscented_2.png?v=1770084423&width=240" alt=""></button>
+          <button class="thumb" type="button" data-image="https://bpmdeodorant.com/cdn/shop/files/Metal_Tube_copy_2.png?v=1776721242&width=1400" data-alt="BPM natural deodorant in metal tube" aria-label="Show metal tube detail"><img src="https://bpmdeodorant.com/cdn/shop/files/Metal_Tube_copy_2.png?v=1776721242&width=240" alt=""></button>
+          <button class="thumb" type="button" data-image="https://bpmdeodorant.com/cdn/shop/files/Open_box_BL.png?v=1776721242&width=1400" data-alt="BPM Bergamot & Lime open packaging" aria-label="Show open packaging"><img src="https://bpmdeodorant.com/cdn/shop/files/Open_box_BL.png?v=1776721242&width=240" alt=""></button>
+          <button class="thumb" type="button" data-image="https://bpmdeodorant.com/cdn/shop/files/PXL_20260329_201605488.jpg?v=1776722875&width=1400" data-alt="Close-up of BPM cream texture" aria-label="Show cream texture"><img src="https://bpmdeodorant.com/cdn/shop/files/PXL_20260329_201605488.jpg?v=1776722875&width=240" alt=""></button>
+          <button class="thumb" type="button" data-image="https://bpmdeodorant.com/cdn/shop/files/Hand_Photos_beige.png?v=1776721242&width=1400" data-alt="Hand holding a BPM deodorant tube" aria-label="Show product in hand"><img src="https://bpmdeodorant.com/cdn/shop/files/Hand_Photos_beige.png?v=1776721242&width=240" alt=""></button>
+          <button class="thumb" type="button" data-image="https://bpmdeodorant.com/cdn/shop/files/PXL_20260311_221227877.jpg?v=1776721242&width=1400" data-alt="BPM packaging beside a turntable and books" aria-label="Show BPM lifestyle image"><img src="https://bpmdeodorant.com/cdn/shop/files/PXL_20260311_221227877.jpg?v=1776721242&width=240" alt=""></button>
+          <button class="thumb" type="button" data-image="https://bpmdeodorant.com/cdn/shop/files/PXL_20260312_224936992.jpg?v=1776721242&width=1400" data-alt="BPM deodorant tube beside a turntable" aria-label="Show turntable image"><img src="https://bpmdeodorant.com/cdn/shop/files/PXL_20260312_224936992.jpg?v=1776721242&width=240" alt=""></button>
+        </div>
+      </div>
+
+      <div class="product-info">
+        <p class="breadcrumb">Shop / Natural deodorant / Bergamot &amp; Lime</p>
+        <p class="eyebrow">Natural deodorant / 1 × 76 g</p>
+        <h1>Bergamot &amp; Lime</h1>
+        <p class="dek">Bright bergamot. Fresh lime. A quiet cedarwood finish.</p>
+        <a class="review-link" href="#feedback">Read BPM feedback</a>
+        <p class="price">$23.99 <span>CAD</span></p>
+
+        <fieldset class="choice-group">
+          <legend>Choose your rotation</legend>
+          <div class="segmented">
+            <button type="button" class="is-active" aria-pressed="true">Bergamot &amp; Lime</button>
+            <button type="button" aria-pressed="false">Unscented</button>
+            <button type="button" aria-pressed="false">Side A / Side B</button>
+          </div>
+        </fieldset>
+
+        <fieldset class="choice-group">
+          <legend>Purchase option</legend>
+          <label class="purchase-card is-selected">
+            <input type="radio" name="purchase" value="23.99" checked>
+            <span>One-time purchase</span>
+            <strong>$23.99</strong>
+          </label>
+          <label class="purchase-card">
+            <input type="radio" name="purchase" value="21.60">
+            <span>Subscribe &amp; save <small>10%</small></span>
+            <strong>$21.60</strong>
+          </label>
+        </fieldset>
+
+        <div class="cart-row">
+          <div class="quantity" aria-label="Quantity">
+            <button type="button" data-qty-minus aria-label="Decrease quantity">−</button>
+            <output id="quantity" aria-live="polite">1</output>
+            <button type="button" data-qty-plus aria-label="Increase quantity">+</button>
+          </div>
+          <a class="button button-dark" id="add-to-bag" href="https://bpmdeodorant.com/products/bpm-natural-deodorant-bergamot-lime" target="_blank" rel="noreferrer">Add to bag · $23.99</a>
+        </div>
+
+        <p class="shipping">Canada shipping: $1.50 for a single tube.</p>
+        <ul class="claims">
+          <li>Baking soda free.</li>
+          <li>Wax free.</li>
+          <li>Natural, plant and mineral-based ingredients.</li>
+          <li>Indigenous-owned.</li>
+          <li>Made in Canada.</li>
+        </ul>
+
+        <div class="inline-accordions">
+          <details><summary>How to use</summary><p>Start with a pea-sized amount, apply to clean underarms and massage in. Adjust only if needed.</p></details>
+          <details><summary>Ingredients</summary><p>Built around magnesium hydroxide, zinc ricinoleate, tapioca starch, kaolin, plant oils and essential oils.</p></details>
+          <details><summary>Compare</summary><p>One tube: 76 g. Approximately 304 pea-sized applications. About 7.9¢ per application.</p></details>
+        </div>
+        <button class="section-comment" type="button" data-review-open data-review-section="Product">Comment on this section</button>
+      </div>
+    </section>
+
+    <section class="statement dark" aria-labelledby="performance-title" data-section="Performance">
+      <p class="kicker">Performance first. A little goes a long way. Nothing extra.</p>
+      <h2 id="performance-title">Get to know the tube.<br>Built for real life.</h2>
+      <p class="lead">Odour control, a smooth glide and a clean finish. The everyday essentials, considered.</p>
+
+      <div class="feature-grid">
+        <article>
+          <img src="https://bpmdeodorant.com/cdn/shop/files/PXL_20260329_201605488.jpg?v=1776722875&width=900" alt="Close-up of BPM cream texture">
+          <p class="eyebrow">01 / The feel</p>
+          <h3>Smooth moves.</h3>
+          <p>A cream that spreads easily and absorbs quickly, without a waxy coating.</p>
+        </article>
+        <article>
+          <img src="https://bpmdeodorant.com/cdn/shop/files/Hand_Photos_beige.png?v=1776721242&width=900" alt="Hand holding a tube of BPM deodorant">
+          <p class="eyebrow">02 / The formula</p>
+          <h3>Every ingredient has a job.</h3>
+          <p>Odour control, moisture absorption and skin feel. No baking soda, waxes or fillers.</p>
+        </article>
+        <article>
+          <img src="https://bpmdeodorant.com/cdn/shop/files/Metal_Tube_copy_2.png?v=1776721242&width=900" alt="BPM metal deodorant tube">
+          <p class="eyebrow">03 / The format</p>
+          <h3>A different kind of tube.</h3>
+          <p>Metal packaging and a small squeeze. A considered alternative to the usual plastic stick.</p>
+        </article>
+      </div>
+      <button class="section-comment light" type="button" data-review-open data-review-section="Performance">Comment on this section</button>
+    </section>
+
+    <section class="routine" data-section="Routine">
+      <div class="section-heading">
+        <p class="eyebrow">Press play on your routine</p>
+        <h2>A little goes a long way.</h2>
+        <p>See the texture. See the amount. See how it goes on.</p>
+      </div>
+      <div class="steps">
+        <article><span>01</span><h3>Squeeze a little.</h3><p>Start with a pea-sized amount on your fingertip or a small spoon.</p></article>
+        <article><span>02</span><h3>Swipe it on.</h3><p>Apply to your underarms, then massage it in.</p></article>
+        <article><span>03</span><h3>Find your rhythm.</h3><p>Start small and adjust the amount if needed.</p></article>
+      </div>
+      <a class="video-card" href="https://bpmdeodorant.com/products/bpm-natural-deodorant-bergamot-lime" target="_blank" rel="noreferrer" aria-label="Open BPM application video on the live product page">
+        <img src="https://bpmdeodorant.com/cdn/shop/files/preview_images/af18b156c3864777b8d905edd00e8148.thumbnail.0000000000.jpg?v=1774979744&width=1400" alt="A pea-sized amount of BPM deodorant shown up close">
+        <span class="play">▶</span>
+        <span class="video-copy">BPM’s original application video · 15 seconds</span>
+      </a>
+      <p class="caption">A pea-sized amount, shown up close. The cream is spread onto skin until it absorbs.</p>
+      <button class="section-comment" type="button" data-review-open data-review-section="Routine">Comment on this section</button>
+    </section>
+
+    <section class="scent split" data-section="Scent story">
+      <div class="media-panel">
+        <img src="https://bpmdeodorant.com/cdn/shop/files/Open_box_BL.png?v=1776721242&width=1400" alt="Bergamot & Lime original packaging shown open">
+      </div>
+      <div class="copy-panel">
+        <p class="eyebrow">The scent story</p>
+        <h2>Bright citrus.<br>Clean finish.</h2>
+        <p class="lead">Bergamot and lime bring the brightness. Cedarwood adds a quiet woody finish underneath.</p>
+        <ul class="scent-notes"><li>Bergamot</li><li>Lime</li><li>Cedarwood</li></ul>
+        <p class="note">Scented with essential oils. No synthetic fragrance.</p>
+        <button class="section-comment" type="button" data-review-open data-review-section="Scent story">Comment on this section</button>
+      </div>
+    </section>
+
+    <section class="chemistry" id="formula" data-section="Formula">
+      <div class="section-heading">
+        <p class="eyebrow">Nothing extra. Everything intentional.</p>
+        <h2>Good chemistry.</h2>
+        <p>Here’s what the ingredients do, in plain language.</p>
+      </div>
+      <div class="chem-grid">
+        <article><span>01</span><h3>Control odour.</h3><p>Magnesium hydroxide helps neutralise odour. Zinc ricinoleate helps trap it.</p></article>
+        <article><span>02</span><h3>Absorb moisture.</h3><p>Tapioca starch and kaolin help absorb moisture and give the cream a drier feel.</p></article>
+        <article><span>03</span><h3>Keep it smooth.</h3><p>Fractionated coconut oil gives the formula glide. Sunflower oil helps soften skin.</p></article>
+        <article><span>04</span><h3>Hold it together.</h3><p>Plant-based thickeners and olive-derived ingredients help keep the texture creamy and even.</p></article>
+      </div>
+      <details class="full-ingredients">
+        <summary>Full ingredient list</summary>
+        <p>Caprylic/capric triglyceride, tapioca starch, magnesium hydroxide, sunflower seed oil, kaolin, stearic acid, cetearyl olivate, sorbitan olivate, cetearyl alcohol, zinc ricinoleate, tocopherol, bergamot peel oil, lime oil, cedarwood bark oil, limonene, linalool, citral.</p>
+      </details>
+      <button class="section-comment" type="button" data-review-open data-review-section="Formula">Comment on this section</button>
+    </section>
+
+    <section class="math" data-section="Everyday math">
+      <p class="eyebrow">The everyday math</p>
+      <h2>Small squeeze.<br>Long rotation.</h2>
+      <div class="math-grid">
+        <div><strong>76 g</strong><span>in your pack</span></div>
+        <div><strong>≈ 304</strong><span>pea-sized applications</span></div>
+        <div><strong>≈ 7.9¢</strong><span>per application</span></div>
+      </div>
+      <p class="note">BPM’s published estimates. Your amount and frequency of use affect how long a tube lasts.</p>
+      <button class="section-comment" type="button" data-review-open data-review-section="Everyday math">Comment on this section</button>
+    </section>
+
+    <section class="story split dark" id="story" data-section="Story">
+      <div class="media-panel">
+        <img src="https://bpmdeodorant.com/cdn/shop/files/PXL_20260311_221227877.jpg?v=1776721242&width=1400" alt="BPM tube and packaging beside a turntable">
+      </div>
+      <div class="copy-panel">
+        <p class="eyebrow">On beat. On you.</p>
+        <h2>A daily essential.<br>With a soundtrack.</h2>
+        <p>Music is part of BPM’s character, from the founder’s working soundtrack to the names in your rotation.</p>
+        <p>Corey Goss started making deodorant in his kitchen in 2020. Performance, ingredients, packaging and fair pricing became the standard behind the product.</p>
+        <a class="button button-light" href="https://bpmdeodorant.com/pages/about-us" target="_blank" rel="noreferrer">Meet BPM</a>
+        <ul class="story-tags"><li>Indigenous-owned.</li><li>Toronto-built.</li><li>Made to perform.</li></ul>
+        <button class="section-comment light" type="button" data-review-open data-review-section="Story">Comment on this section</button>
+      </div>
+    </section>
+
+    <section class="rotation" data-section="Rotation">
+      <div class="section-heading">
+        <p class="eyebrow">Choose your BPM</p>
+        <h2>Solo or in rotation.</h2>
+        <p>Same everyday ritual. A different way to stock your shelf.</p>
+      </div>
+      <div class="product-cards">
+        <article>
+          <img src="https://bpmdeodorant.com/cdn/shop/files/BERGOMOT_LIME.webp?v=1770211397&width=900" alt="Bergamot and Lime carton">
+          <h3>Bergamot &amp; Lime</h3>
+          <p>Bright citrus + quiet cedarwood.</p>
+          <dl><div><dt>Pack</dt><dd>1 × 76 g</dd></div><div><dt>Fragrance</dt><dd>Essential oils</dd></div><div><dt>Canada shipping</dt><dd>$1.50</dd></div></dl>
+          <strong>$23.99 CAD</strong>
+          <a href="https://bpmdeodorant.com/products/bpm-natural-deodorant-bergamot-lime" target="_blank" rel="noreferrer">Choose citrus →</a>
+        </article>
+        <article>
+          <img src="https://bpmdeodorant.com/cdn/shop/files/UNSCENTED.webp?v=1770211431&width=900" alt="Unscented carton">
+          <h3>Unscented</h3>
+          <p>No added essential oils or masking fragrance.</p>
+          <dl><div><dt>Pack</dt><dd>1 × 76 g</dd></div><div><dt>Fragrance</dt><dd>No added fragrance</dd></div><div><dt>Canada shipping</dt><dd>$1.50</dd></div></dl>
+          <strong>$23.99 CAD</strong>
+          <a href="https://bpmdeodorant.com/collections/unscented-deodorant" target="_blank" rel="noreferrer">Keep it quiet →</a>
+        </article>
+        <article>
+          <img src="https://bpmdeodorant.com/cdn/shop/files/BERGOMOT_LIME.webp?v=1770211397&width=900" alt="Bergamot & Lime and Unscented cartons">
+          <h3>Side A / Side B</h3>
+          <p>One bright citrus. One unscented.</p>
+          <dl><div><dt>Pack</dt><dd>2 × 76 g</dd></div><div><dt>Fragrance</dt><dd>A mix of both</dd></div><div><dt>Canada shipping</dt><dd>Free</dd></div></dl>
+          <strong>$39.99 CAD</strong>
+          <a href="https://bpmdeodorant.com/products/side-a-side-b-mixed-scent-natural-deodorant-duo" target="_blank" rel="noreferrer">Try both sides →</a>
+        </article>
+      </div>
+      <button class="section-comment" type="button" data-review-open data-review-section="Rotation">Comment on this section</button>
+    </section>
+
+    <section class="feedback dark" id="feedback" data-section="Feedback">
+      <p class="eyebrow">BPM feedback</p>
+      <blockquote>“Texture is silky and smooth and absorbed quickly into my skin without leaving a sticky or oily residue.”</blockquote>
+      <p>Sima Q. / Bergamot &amp; Lime customer review</p>
+      <a class="button button-light" href="https://bpmdeodorant.com/products/bpm-natural-deodorant-bergamot-lime" target="_blank" rel="noreferrer">Read reviews on BPM</a>
+      <button class="section-comment light" type="button" data-review-open data-review-section="Feedback">Comment on this section</button>
+    </section>
+
+    <section class="faq" data-section="FAQ">
+      <div class="section-heading">
+        <p class="eyebrow">A few things you might be wondering</p>
+        <h2>Good questions.</h2>
+      </div>
+      <div class="faq-list">
+        <details><summary>How much should I use?</summary><p>Start with a pea-sized amount for each underarm and adjust only if needed.</p></details>
+        <details><summary>Is BPM baking soda free?</summary><p>Yes. BPM is formulated without baking soda.</p></details>
+        <details><summary>How long does a tube last?</summary><p>A 76 g tube contains approximately 304 pea-sized applications. Actual use varies.</p></details>
+        <details><summary>Where do you ship?</summary><p>BPM currently ships to Canada and the United States. Check the live store for current rates and thresholds.</p></details>
+      </div>
+      <button class="section-comment" type="button" data-review-open data-review-section="FAQ">Comment on this section</button>
+    </section>
+
+    <section class="final-cta">
+      <h2>Find your everyday BPM.</h2>
+      <a href="#product">Back to the tube ↑</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand" href="#top">BPM</a>
+    <nav aria-label="Footer">
+      <a href="https://bpmdeodorant.com/collections/all" target="_blank" rel="noreferrer">Shop</a>
+      <a href="https://bpmdeodorant.com/pages/about-us" target="_blank" rel="noreferrer">Our story</a>
+      <a href="https://bpmdeodorant.com/pages/indigenous-owned" target="_blank" rel="noreferrer">Indigenous-owned</a>
+      <a href="https://bpmdeodorant.com/pages/contact" target="_blank" rel="noreferrer">Contact</a>
+    </nav>
+    <p>© BPM Deodorant · Canada / CAD</p>
+  </footer>
+
+  <button class="review-fab" type="button" data-review-open>Review &amp; comment</button>
+
+  <aside class="review-drawer" id="review-drawer" aria-hidden="true" aria-labelledby="review-title">
+    <div class="drawer-head">
+      <div>
+        <p class="eyebrow">Design review</p>
+        <h2 id="review-title">Leave feedback</h2>
+      </div>
+      <button class="icon-button" type="button" data-review-close aria-label="Close review panel">×</button>
+    </div>
+    <form id="review-form">
+      <label>Section
+        <select id="review-section">
+          <option>General</option>
+          <option>Product</option>
+          <option>Performance</option>
+          <option>Routine</option>
+          <option>Scent story</option>
+          <option>Formula</option>
+          <option>Everyday math</option>
+          <option>Story</option>
+          <option>Rotation</option>
+          <option>Feedback</option>
+          <option>FAQ</option>
+        </select>
+      </label>
+      <label>Comment
+        <textarea id="review-comment" rows="5" placeholder="What should change?" required></textarea>
+      </label>
+      <button class="button button-dark" type="submit">Save comment locally</button>
+    </form>
+    <p class="drawer-note">Recovery baseline only: comments are stored in this browser and are not sent anywhere.</p>
+    <div id="saved-comments" class="saved-comments" aria-live="polite"></div>
+  </aside>
+  <div class="drawer-scrim" data-review-close hidden></div>
+</body>
+</html>
