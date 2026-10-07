@@ -2,6 +2,8 @@
 
 Local work remains on `work/recover-original-source`, unpushed; draft PR #12 does not include these audit commits. Latest work reconciles native page/article assignments and inspects narrow product source dependencies.
 
+Requirement-by-requirement readiness audit: `phase-0-1-readiness.md`. GitHub issue bodies and draft PR state refreshed read-only on 7 October 2026 UTC. PR head is unchanged and only GitGuardian is reported; no local workflow execution on GitHub is implied. Independent Phase 0 recovery comparisons and original-asset coverage also remain open.
+
 - Verified: recovery reference and local checks; installed app inventory; seven bundle mappings; subscription plan configuration; ten editorial field namespaces; app-embed states and default-product app blocks; displayed product/collection/page/blog assignments; native menu structure; fifteen redirect rules/public outcomes; account URL/sign-in-links and English language status.
 - Findings for owner review: Monthly subscription title versus five-month delivery; four existing redirects end at 404; Google local-inventory connection error; Judge.me shipping warning; confirmed no-plan subscription discount fallback (future-product risk), percentage-only pricing assumption and incorrect Ingredients help text.
 - Still pending: #28 accepted design/version/editor expectations; #3 protected source export/backup and isolated development setup; #4/#13 exact source/app dependencies, remaining settings/values and journey verification; #14 final per-element model/help/fallback contract; #15 actual Liquid Theme Check and GitHub CI evidence. No phase is declared complete.

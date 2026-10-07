@@ -1,0 +1,34 @@
+# Phase 0/1 requirement audit
+
+GitHub issue bodies and PR #12 refreshed read-only on 7 October 2026 UTC. Local evidence inspected through commit `147f636`. This is a readiness audit, not client approval or issue closure. All referenced issues remain OPEN.
+
+| Requirement | Evidence now | Still needed / owner |
+|---|---|---|
+| #1 independently runnable recovered review | Original 60-file bundle with hashes; local build/API/route checks and limited rendered interactions in `original-source-recovery.md` | Representative live-versus-local comparisons covering major sections/interactions; implementation owner |
+| #2 original asset preservation | Five Figma export mappings in `figma-asset-manifest.md`; recovered original media/crop mappings | Remaining source asset inventory/masters, optimised variants, crop/dimension and alt intent. Remote CDN mappings are not an offline original archive; implementation owner/source access |
+| #28 all concerns testable | Eight concerns mapped to owner issues and concrete tests in `design-acceptance.md` | Final approved reference/version, consolidated further feedback and agreement on editor limits; Cameron/Corey |
+| #28 requests and concept classification | Screenshot contains positive direction and questions, no new bounded visual change; unapproved concept content labelled | Any subsequent requests must be recorded against existing issues. Client agreement cannot be inferred from prepared tests; Cameron/Corey |
+| #3 theme identity / secrets exclusion | Authenticated main theme ID; public Dawn version; protected destination and ignored private outputs | Exact exported source/version, recoverable checksum-backed backup, isolated development theme/preview and tested rollback procedure; Cameron export confirmation then implementation owner |
+| #3 local/CLI procedure | Exact bounded pull and setup/release sequence in `theme-workflow.md` | Run approved command, verify output; no export exists yet. Creating/uploading a development theme needs separate authorization |
+| #4 app inventory | Eleven installed apps; channels/Agentic; Google overview; seven public bundles and subscription configuration in `app-audit.md`/`authenticated-audit.md` | Complete per-app source dependencies, scripts/snippets/cart/checkout placement and remaining settings; protected source plus implementation owner |
+| #4 enabled insertions/reviews | Current embed states and default-product Judge.me blocks observed | Candidate block availability, real assigned review output and integration journeys. Enabled UI and preview sample ratings do not prove compatibility; candidate QA |
+| #4 commerce QA coverage | Required one-time/subscription/bundle cases mapped to #7/#20/#21 and QA matrix | Execute in authorized isolated environment, including cart transport and error/availability cases. No purchase or production form submission performed |
+| #13 template owners and URLs | Editor groups mapped to owner issues; native nine page/nine article assignments; public 45 routes/canonicals; 15 native redirects with four 404 destinations | Complete source inventory, every visible feature's binding, forms/provider/search/cart/localisation behaviour; preserve-by-default until approved replacement |
+| #13 data and unknowns | Nine public products plus two zero-channel retailer testers; variant/options, ten editorial definitions/values, menus/account links and configured category summaries | Full metafield/metaobject references/constraints, Markets/shipping operational configuration and complete source bindings; no guessing from public/configuration evidence |
+| #14 dynamic-element ownership | Ownership table and existing field contract; nine-product value coverage; palette tokens and source subscription findings | Per-element mapping across every review module, final reusable architecture under #6, existing shared-data semantics and source consumption; implementation owner |
+| #14 names/types/validation/help/fallbacks | Ten names/types verified; proposed rich-text/text rules, missing-data rules and corrected Ingredients help | Complete constraints and final merchant labels; palette token mapping, future-product/missing-data checks and actual editor demonstration. No live field changes |
+| #15 static checks / CI safety | Credential-free local reference workflow; local Node 26.5/22.13 checks previously passed; no deploy step | Actual Liquid Theme Check/config and equivalent local command; required PR checks, justified exceptions, GitHub execution after authorized push |
+
+## PR and dependency reconciliation
+
+PR #12 remains OPEN and draft at `04f4455a259369baf94a2f39e6fcf81a539e9f71`, branch `recovery/chatgpt-site-baseline`. Its only returned status check is successful GitGuardian Security Checks; that is not reference CI, Shopify Theme Check, rendered QA or design approval. Local branch `work/recover-original-source` includes the original source recovery and audit commits, but none is pushed. The PR description still describes the first reconstruction; rewrite around the final recovery and evidence only when an authorized PR update is made.
+
+Master #11 still requires #28 before production design sign-off and a preview/rollback path before development affects a store theme. #14 also depends on #6 reusable architecture: define the provisional contract now, then prove it against implemented sections rather than pretending the entire final model is accepted before architecture exists. #27's numbered dependencies remain inconsistent with current titles (analytics is #25, cross-device QA #26); a local finding is recorded, no remote issue edited.
+
+## Concrete resume conditions
+
+1. Cameron confirms the exact protected read-only pull in `theme-workflow.md`; retrieve/checksum and inspect the actual base theme, then finish source-dependent #3/#4/#13/#14/#15 work locally.
+2. Cameron/Corey record the selected reference/version, outstanding changes and merchant-editor expectations for #28. No message has been sent or client acceptance invented.
+3. Isolated preview creation/upload and GitHub push/PR update require their own explicit authorization under this task's operating conventions. Prepare those exact artifacts locally first.
+
+Independent unfinished Phase 0 work remains: live-versus-local recovery comparisons and original asset coverage. Those can advance without claiming Shopify backup or client acceptance. Implementation and release must retain their actual prerequisites; no Phase 0/1 issue meets all criteria yet.
