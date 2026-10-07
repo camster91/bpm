@@ -33,6 +33,8 @@ No deployment or Shopify credentials are required. Media crop responses still fe
 
 These are recovery checks, not Shopify commerce, SEO, full accessibility, client acceptance or complete cross-device QA. Issue #1 remains open until representative comparisons and interaction checks are complete.
 
+Fresh matched live/local comparisons at desktop homepage (1280), tablet About (768) and mobile Bergamot PDP (390), plus local gallery/subscription/quantity controls, are recorded in `recovery-rendered-comparison.md`. All accepted pairs match main-section text and rounded geometry; visual inspection is limited to the sampled viewports. Remaining families/below-fold visual and interaction coverage still prevents closure.
+
 ## Review findings and next work
 
 - #11 provides the phased project tracker; #28 governs design acceptance. Corey's positive feedback is not full production approval.
