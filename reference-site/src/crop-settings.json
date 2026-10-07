@@ -1,0 +1,275 @@
+[
+  {
+    "source": "gallery-pack.png",
+    "preview": "framed/gallery-pack.svg",
+    "source_dimensions": [
+      581,
+      432
+    ],
+    "crop_xywh": [
+      197,
+      1,
+      193,
+      430
+    ],
+    "note": "Non-destructive viewport; original pixels embedded unchanged. Export this crop to PNG/WebP for Shopify product media."
+  },
+  {
+    "source": "unscented-pack.png",
+    "preview": "framed/unscented-pack.svg",
+    "source_dimensions": [
+      581,
+      432
+    ],
+    "crop_xywh": [
+      187,
+      1,
+      213,
+      430
+    ],
+    "note": "Non-destructive viewport; original pixels embedded unchanged. Export this crop to PNG/WebP for Shopify product media."
+  },
+  {
+    "source": "duo-pack.png",
+    "preview": "framed/duo-pack.svg",
+    "source_dimensions": [
+      1044,
+      1264
+    ],
+    "crop_xywh": [
+      230,
+      265,
+      581,
+      734
+    ],
+    "note": "Non-destructive viewport; original pixels embedded unchanged. Export this crop to PNG/WebP for Shopify product media."
+  },
+  {
+    "source": "metal-tube.png",
+    "preview": "framed/metal-tube.svg",
+    "source_dimensions": [
+      1316,
+      3556
+    ],
+    "crop_xywh": [
+      10,
+      18,
+      1284,
+      3529
+    ],
+    "note": "Non-destructive viewport; original pixels embedded unchanged. Export this crop to PNG/WebP for Shopify product media."
+  },
+  {
+    "source": "open-box.png",
+    "preview": "framed/open-box.svg",
+    "source_dimensions": [
+      1600,
+      1600
+    ],
+    "crop_xywh": [
+      177,
+      120,
+      1255,
+      1375
+    ],
+    "note": "Non-destructive viewport; original pixels embedded unchanged. Export this crop to PNG/WebP for Shopify product media."
+  },
+  {
+    "source": "unscented-open-box.png",
+    "preview": "framed/unscented-open-box.svg",
+    "source_dimensions": [
+      1600,
+      1600
+    ],
+    "crop_xywh": [
+      177,
+      120,
+      1255,
+      1375
+    ],
+    "note": "Non-destructive viewport; original pixels embedded unchanged. Export this crop to PNG/WebP for Shopify product media."
+  },
+  {
+    "source": "duo-open-box.png",
+    "preview": "framed/duo-open-box.svg",
+    "source_dimensions": [
+      980,
+      696
+    ],
+    "crop_xywh": [
+      33,
+      22,
+      910,
+      638
+    ],
+    "note": "Non-destructive viewport; original pixels embedded unchanged. Export this crop to PNG/WebP for Shopify product media."
+  },
+  {
+    "source": "four-on-the-floor-mixed-scent-4-tube-deodorant-bundle-0.png",
+    "preview": "framed/four-on-the-floor-mixed-scent-4-tube-deodorant-bundle-0.svg",
+    "source_dimensions": [
+      1446,
+      1306
+    ],
+    "crop_xywh": [
+      193,
+      292,
+      1051,
+      701
+    ]
+  },
+  {
+    "source": "four-on-the-floor-mixed-scent-4-tube-deodorant-bundle-1.png",
+    "preview": "framed/four-on-the-floor-mixed-scent-4-tube-deodorant-bundle-1.svg",
+    "source_dimensions": [
+      1018,
+      1286
+    ],
+    "crop_xywh": [
+      112,
+      61,
+      757,
+      1203
+    ]
+  },
+  {
+    "source": "citrus-on-repeat-family-pack-4-tube-bergamot-lime-deodorant-bundle-0.png",
+    "preview": "framed/citrus-on-repeat-family-pack-4-tube-bergamot-lime-deodorant-bundle-0.svg",
+    "source_dimensions": [
+      1526,
+      1298
+    ],
+    "crop_xywh": [
+      256,
+      314,
+      983,
+      668
+    ]
+  },
+  {
+    "source": "citrus-on-repeat-family-pack-4-tube-bergamot-lime-deodorant-bundle-1.png",
+    "preview": "framed/citrus-on-repeat-family-pack-4-tube-bergamot-lime-deodorant-bundle-1.svg",
+    "source_dimensions": [
+      998,
+      1288
+    ],
+    "crop_xywh": [
+      124,
+      67,
+      768,
+      1166
+    ]
+  },
+  {
+    "source": "silent-on-repeat-family-pack-4-tube-unscented-deodorant-bundle-0.png",
+    "preview": "framed/silent-on-repeat-family-pack-4-tube-unscented-deodorant-bundle-0.svg",
+    "source_dimensions": [
+      1488,
+      1298
+    ],
+    "crop_xywh": [
+      196,
+      293,
+      1064,
+      699
+    ]
+  },
+  {
+    "source": "silent-on-repeat-family-pack-4-tube-unscented-deodorant-bundle-1.png",
+    "preview": "framed/silent-on-repeat-family-pack-4-tube-unscented-deodorant-bundle-1.svg",
+    "source_dimensions": [
+      932,
+      1298
+    ],
+    "crop_xywh": [
+      103,
+      14,
+      756,
+      1258
+    ]
+  },
+  {
+    "source": "3-4-time-0.png",
+    "preview": "framed/3-4-time-0.svg",
+    "source_dimensions": [
+      1472,
+      1224
+    ],
+    "crop_xywh": [
+      231,
+      282,
+      994,
+      668
+    ]
+  },
+  {
+    "source": "3-4-time-1.png",
+    "preview": "framed/3-4-time-1.svg",
+    "source_dimensions": [
+      1114,
+      1316
+    ],
+    "crop_xywh": [
+      160,
+      51,
+      773,
+      1175
+    ]
+  },
+  {
+    "source": "silent-repeat-0.png",
+    "preview": "framed/silent-repeat-0.svg",
+    "source_dimensions": [
+      1134,
+      1242
+    ],
+    "crop_xywh": [
+      307,
+      254,
+      536,
+      724
+    ]
+  },
+  {
+    "source": "silent-repeat-1.png",
+    "preview": "framed/silent-repeat-1.svg",
+    "source_dimensions": [
+      1088,
+      776
+    ],
+    "crop_xywh": [
+      89,
+      60,
+      920,
+      642
+    ]
+  },
+  {
+    "source": "citrus-repeat-0.png",
+    "preview": "framed/citrus-repeat-0.svg",
+    "source_dimensions": [
+      1066,
+      1240
+    ],
+    "crop_xywh": [
+      257,
+      261,
+      553,
+      719
+    ]
+  },
+  {
+    "source": "citrus-repeat-1.png",
+    "preview": "framed/citrus-repeat-1.svg",
+    "source_dimensions": [
+      982,
+      666
+    ],
+    "crop_xywh": [
+      17,
+      13,
+      957,
+      634
+    ]
+  }
+]

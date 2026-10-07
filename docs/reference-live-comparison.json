@@ -1,0 +1,63 @@
+{
+  "checked_at": "2026-10-06",
+  "scope": "Eight representative served HTML/CSS/JS files; not entire deployment or media",
+  "results": [
+    {
+      "route": "index.html",
+      "fetched": true,
+      "matches": false,
+      "local_sha256": "4bfb23191a19d25ef6c98891dbb4c2af6005185a23797e86934f0abeda44f084",
+      "live_sha256": "8f9715d0366e3fec300003e993e89651453702a50e812967b1595cdb4832346c"
+    },
+    {
+      "route": "shop.html",
+      "fetched": true,
+      "matches": false,
+      "local_sha256": "814779b6a4f4c3ae6d828aac16130a34a360fe908e8394ed5252a688e8989f12",
+      "live_sha256": "374e44c3f657c6eff095754c0302d46a6bb7e5d7860ae59269a817e19d8f1d47"
+    },
+    {
+      "route": "product-media/preview.html",
+      "fetched": true,
+      "matches": false,
+      "local_sha256": "2b88862d5fbba7b12c20c2f382d827cf72d6ee4fcc841aeec6cd99200e7a22e8",
+      "live_sha256": "08bd388dfb32a881f261f5520144639002a4c0305af22fb4b31ea7e7c5f3bfd4"
+    },
+    {
+      "route": "site.css",
+      "fetched": true,
+      "matches": true,
+      "local_sha256": "6b0b0cfd9aec2ccd86e67c9e6cfa4e8aa3dbe5c8c73ac8fea452f20c0ef826c7",
+      "live_sha256": "6b0b0cfd9aec2ccd86e67c9e6cfa4e8aa3dbe5c8c73ac8fea452f20c0ef826c7"
+    },
+    {
+      "route": "site.js",
+      "fetched": true,
+      "matches": true,
+      "local_sha256": "59f5d6ca2ca5beee61c3e3276df8dfba15bb52c1858e3dc7ff8801cba1094a1b",
+      "live_sha256": "59f5d6ca2ca5beee61c3e3276df8dfba15bb52c1858e3dc7ff8801cba1094a1b"
+    },
+    {
+      "route": "product-media/preview.css",
+      "fetched": true,
+      "matches": true,
+      "local_sha256": "c92cc5064adfa9717f6b58d2cff3cb2ed28a1cb63fd9ced17537900e881b9791",
+      "live_sha256": "c92cc5064adfa9717f6b58d2cff3cb2ed28a1cb63fd9ced17537900e881b9791"
+    },
+    {
+      "route": "product-media/preview.js",
+      "fetched": true,
+      "matches": true,
+      "local_sha256": "37010bcee5346cfa0a4f206c1010de716b90766f4aeffab01dd2177ccef20ead",
+      "live_sha256": "37010bcee5346cfa0a4f206c1010de716b90766f4aeffab01dd2177ccef20ead"
+    },
+    {
+      "route": "product-media/review.js",
+      "fetched": true,
+      "matches": true,
+      "local_sha256": "df8148720e4f032413bf2e026503bac3907fc745b315db198cc0db4e45cc6903",
+      "live_sha256": "df8148720e4f032413bf2e026503bac3907fc745b315db198cc0db4e45cc6903"
+    }
+  ],
+  "html_difference_review": "The three HTML differences were inspected with SequenceMatcher: inserted Cloudflare script only. Original source retained; served responses are not byte-identical."
+}

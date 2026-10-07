@@ -1,0 +1,1141 @@
+{
+  "retrieved_at": "2026-10-07T02:03:55.900390+00:00",
+  "scope": "Public sitemap URLs plus recovered policy sources. No authenticated templates, stock, app inventory or purchase verification.",
+  "sitemaps": [
+    "https://bpmdeodorant.com/sitemap_agentic_discovery.xml",
+    "https://bpmdeodorant.com/sitemap_products_1.xml?from=14880059228532&to=15222739599732",
+    "https://bpmdeodorant.com/sitemap_pages_1.xml?from=702804590964&to=715065426292",
+    "https://bpmdeodorant.com/sitemap_collections_1.xml?from=630368239988&to=642635759988",
+    "https://bpmdeodorant.com/sitemap_blogs_1.xml"
+  ],
+  "agentic_discovery": [
+    {
+      "sitemap": "https://bpmdeodorant.com/sitemap_agentic_discovery.xml",
+      "public_locations": [
+        "https://bpmdeodorant.com/agents.md"
+      ]
+    }
+  ],
+  "recovered_article_urls_missing_from_current_sitemap": [],
+  "routes": [
+    {
+      "url": "https://bpmdeodorant.com/",
+      "kind": "home",
+      "owner_issues": [
+        "#16"
+      ],
+      "decision": "preserve pending approved change",
+      "fetched": true,
+      "sha256": "c4c7bca68062695595d40ac5fc4dcdfffa208333574839382f0559a48e50427d",
+      "canonicals": [
+        "https://bpmdeodorant.com/"
+      ],
+      "robots": [],
+      "section_ids": [
+        "shopify-section-sections--28360681685364__announcement-bar",
+        "shopify-section-sections--28360681685364__header",
+        "shopify-section-template--28360681881972__custom_banner_hero_with_newsletter_FneY3d",
+        "shopify-section-template--28360681881972__marquee_text_RJFV8W",
+        "shopify-section-template--28360681881972__image_banner_CGfdie",
+        "shopify-section-template--28360681881972__rich_text_QrCG8i",
+        "shopify-section-template--28360681881972__178804382923e4f1b1",
+        "shopify-section-template--28360681881972__product_showcase",
+        "shopify-section-template--28360681881972__featured_collection_mr98EB",
+        "shopify-section-template--28360681881972__featured_collection_Nmhknb",
+        "shopify-section-template--28360681881972__info_banner_RFVjQc",
+        "shopify-section-template--28360681881972__info_banner_46beEQ",
+        "shopify-section-template--28360681881972__bpm_hero_section_cRkaye",
+        "shopify-section-template--28360681881972__multicolumn_mhDmw3",
+        "shopify-section-template--28360681881972__formulated_without_qkhdxA",
+        "shopify-section-template--28360681881972__faq",
+        "shopify-section-template--28360681881972__17901039230621dba9",
+        "shopify-section-sections--28360681718132__footer_banner_J9ye8Q",
+        "shopify-section-sections--28360681718132__custom_footer_6hXLnw"
+      ],
+      "source_h1_count": 1
+    },
+    {
+      "url": "https://bpmdeodorant.com/blogs/news",
+      "kind": "blog",
+      "owner_issues": [
+        "#19"
+      ],
+      "decision": "preserve pending approved change",
+      "fetched": true,
+      "sha256": "4da29ff685eb56e3e968041f6da6c8bec20f8b723ec70569ce673159bee426df",
+      "canonicals": [
+        "https://bpmdeodorant.com/blogs/news"
+      ],
+      "robots": [],
+      "section_ids": [
+        "shopify-section-sections--28360681685364__announcement-bar",
+        "shopify-section-sections--28360681685364__header",
+        "shopify-section-template--28360681750900__main",
+        "shopify-section-sections--28360681718132__footer_banner_J9ye8Q",
+        "shopify-section-sections--28360681718132__custom_footer_6hXLnw"
+      ],
+      "source_h1_count": 1
+    },
+    {
+      "url": "https://bpmdeodorant.com/blogs/news/best-natural-deodorant-for-sensitive-skin-what-to-look-for-and-what-to-avoid",
+      "kind": "article",
+      "owner_issues": [
+        "#19"
+      ],
+      "decision": "preserve pending approved change",
+      "fetched": true,
+      "sha256": "268239742802b9bca0e7e5ca25cafa6594329423504903f19b2de1a07e3844fc",
+      "canonicals": [
+        "https://bpmdeodorant.com/blogs/news/best-natural-deodorant-for-sensitive-skin-what-to-look-for-and-what-to-avoid"
+      ],
+      "robots": [],
+      "section_ids": [
+        "shopify-section-sections--28360681685364__announcement-bar",
+        "shopify-section-sections--28360681685364__header",
+        "shopify-section-template--28360681783668__main",
+        "shopify-section-sections--28360681718132__footer_banner_J9ye8Q",
+        "shopify-section-sections--28360681718132__custom_footer_6hXLnw"
+      ],
+      "source_h1_count": 1
+    },
+    {
+      "url": "https://bpmdeodorant.com/blogs/news/deodorant-is-changing-shape-heres-why-we-chose-cream",
+      "kind": "article",
+      "owner_issues": [
+        "#19"
+      ],
+      "decision": "preserve pending approved change",
+      "fetched": true,
+      "sha256": "00e427f0295f01e07df6864500c7bfe14fc81ae10a19eac7b2a379a75c7fe080",
+      "canonicals": [
+        "https://bpmdeodorant.com/blogs/news/deodorant-is-changing-shape-heres-why-we-chose-cream"
+      ],
+      "robots": [],
+      "section_ids": [
+        "shopify-section-sections--28360681685364__announcement-bar",
+        "shopify-section-sections--28360681685364__header",
+        "shopify-section-template--28360681783668__main",
+        "shopify-section-sections--28360681718132__footer_banner_J9ye8Q",
+        "shopify-section-sections--28360681718132__custom_footer_6hXLnw"
+      ],
+      "source_h1_count": 1
+    },
+    {
+      "url": "https://bpmdeodorant.com/blogs/news/how-to-switch-to-natural-deodorant-without-the-awkward-transition-period",
+      "kind": "article",
+      "owner_issues": [
+        "#19"
+      ],
+      "decision": "preserve pending approved change",
+      "fetched": true,
+      "sha256": "4ba8841cb4ce519d5904a64b9c857eef187010771872d4aa9d413472afe7f5cb",
+      "canonicals": [
+        "https://bpmdeodorant.com/blogs/news/how-to-switch-to-natural-deodorant-without-the-awkward-transition-period"
+      ],
+      "robots": [],
+      "section_ids": [
+        "shopify-section-sections--28360681685364__announcement-bar",
+        "shopify-section-sections--28360681685364__header",
+        "shopify-section-template--28360681783668__main",
+        "shopify-section-sections--28360681718132__footer_banner_J9ye8Q",
+        "shopify-section-sections--28360681718132__custom_footer_6hXLnw"
+      ],
+      "source_h1_count": 1
+    },
+    {
+      "url": "https://bpmdeodorant.com/blogs/news/is-baking-soda-bad-for-sensitive-skin-what-you-need-to-know",
+      "kind": "article",
+      "owner_issues": [
+        "#19"
+      ],
+      "decision": "preserve pending approved change",
+      "fetched": true,
+      "sha256": "6c350376c3b1f198b46804f68824e77cfce13cbd0075e08af12f26b31a9275e4",
+      "canonicals": [
+        "https://bpmdeodorant.com/blogs/news/is-baking-soda-bad-for-sensitive-skin-what-you-need-to-know"
+      ],
+      "robots": [],
+      "section_ids": [
+        "shopify-section-sections--28360681685364__announcement-bar",
+        "shopify-section-sections--28360681685364__header",
+        "shopify-section-template--28360681783668__main",
+        "shopify-section-sections--28360681718132__footer_banner_J9ye8Q",
+        "shopify-section-sections--28360681718132__custom_footer_6hXLnw"
+      ],
+      "source_h1_count": 1
+    },
+    {
+      "url": "https://bpmdeodorant.com/blogs/news/the-math-behind-fair-pricing-bpm-vs-native-vs-schmidts",
+      "kind": "article",
+      "owner_issues": [
+        "#19"
+      ],
+      "decision": "preserve pending approved change",
+      "fetched": true,
+      "sha256": "00588ae06943edeb2a56f1f958b5082983ddd6e36f203df88bdf03efc9d6033e",
+      "canonicals": [
+        "https://bpmdeodorant.com/blogs/news/the-math-behind-fair-pricing-bpm-vs-native-vs-schmidts"
+      ],
+      "robots": [],
+      "section_ids": [
+        "shopify-section-sections--28360681685364__announcement-bar",
+        "shopify-section-sections--28360681685364__header",
+        "shopify-section-template--28360681783668__main",
+        "shopify-section-sections--28360681718132__footer_banner_J9ye8Q",
+        "shopify-section-sections--28360681718132__custom_footer_6hXLnw"
+      ],
+      "source_h1_count": 1
+    },
+    {
+      "url": "https://bpmdeodorant.com/blogs/news/the-math-behind-our-metal-tube-bpm-vs-native",
+      "kind": "article",
+      "owner_issues": [
+        "#19"
+      ],
+      "decision": "preserve pending approved change",
+      "fetched": true,
+      "sha256": "c0922fe03de6bd3af693fb974be7138a377788c301d18d0f9a96d9b2161be23c",
+      "canonicals": [
+        "https://bpmdeodorant.com/blogs/news/the-math-behind-our-metal-tube-bpm-vs-native"
+      ],
+      "robots": [],
+      "section_ids": [
+        "shopify-section-sections--28360681685364__announcement-bar",
+        "shopify-section-sections--28360681685364__header",
+        "shopify-section-template--28360681783668__main",
+        "shopify-section-sections--28360681718132__footer_banner_J9ye8Q",
+        "shopify-section-sections--28360681718132__custom_footer_6hXLnw"
+      ],
+      "source_h1_count": 1
+    },
+    {
+      "url": "https://bpmdeodorant.com/blogs/news/the-name-behind-bpm-indigenous-ownership-and-finding-my-way-back",
+      "kind": "article",
+      "owner_issues": [
+        "#19"
+      ],
+      "decision": "preserve pending approved change",
+      "fetched": true,
+      "sha256": "80beddaf99417c0bb8132e422195931183a034bbd92073ec5bbfcc629e02f9df",
+      "canonicals": [
+        "https://bpmdeodorant.com/blogs/news/the-name-behind-bpm-indigenous-ownership-and-finding-my-way-back"
+      ],
+      "robots": [],
+      "section_ids": [
+        "shopify-section-sections--28360681685364__announcement-bar",
+        "shopify-section-sections--28360681685364__header",
+        "shopify-section-template--28360681783668__main",
+        "shopify-section-sections--28360681718132__footer_banner_J9ye8Q",
+        "shopify-section-sections--28360681718132__custom_footer_6hXLnw"
+      ],
+      "source_h1_count": 1
+    },
+    {
+      "url": "https://bpmdeodorant.com/blogs/news/underarm-skin-care-ingredients",
+      "kind": "article",
+      "owner_issues": [
+        "#19"
+      ],
+      "decision": "preserve pending approved change",
+      "fetched": true,
+      "sha256": "044dcc2f3fc26702560646685db9a295e8c7f2066193e1ce4bc714e15a7c5d27",
+      "canonicals": [
+        "https://bpmdeodorant.com/blogs/news/underarm-skin-care-ingredients"
+      ],
+      "robots": [],
+      "section_ids": [
+        "shopify-section-sections--28360681685364__announcement-bar",
+        "shopify-section-sections--28360681685364__header",
+        "shopify-section-template--28360681783668__main",
+        "shopify-section-sections--28360681718132__footer_banner_J9ye8Q",
+        "shopify-section-sections--28360681718132__custom_footer_6hXLnw"
+      ],
+      "source_h1_count": 1
+    },
+    {
+      "url": "https://bpmdeodorant.com/blogs/news/whats-changing-in-deodorant-packaging-right-now-and-why-we-went-with-metal",
+      "kind": "article",
+      "owner_issues": [
+        "#19"
+      ],
+      "decision": "preserve pending approved change",
+      "fetched": true,
+      "sha256": "b1d3f444d7e0277a0be26ffa8b8ca9dedb4dffa402f769fbf4c31e0ae9bb449d",
+      "canonicals": [
+        "https://bpmdeodorant.com/blogs/news/whats-changing-in-deodorant-packaging-right-now-and-why-we-went-with-metal"
+      ],
+      "robots": [],
+      "section_ids": [
+        "shopify-section-sections--28360681685364__announcement-bar",
+        "shopify-section-sections--28360681685364__header",
+        "shopify-section-template--28360681783668__main",
+        "shopify-section-sections--28360681718132__footer_banner_J9ye8Q",
+        "shopify-section-sections--28360681718132__custom_footer_6hXLnw"
+      ],
+      "source_h1_count": 1
+    },
+    {
+      "url": "https://bpmdeodorant.com/collections/all",
+      "kind": "collection",
+      "owner_issues": [
+        "#17"
+      ],
+      "decision": "preserve pending approved change",
+      "fetched": true,
+      "sha256": "d2167d950dcf290932d75af4c470abc92ff8493174e9ef9ee3213bd1331653df",
+      "canonicals": [
+        "https://bpmdeodorant.com/collections/all"
+      ],
+      "robots": [],
+      "section_ids": [
+        "shopify-section-sections--28360681685364__announcement-bar",
+        "shopify-section-sections--28360681685364__header",
+        "shopify-section-template--28360681849204__rich_text_NgYfia",
+        "shopify-section-template--28360681849204__1790102197577cd252",
+        "shopify-section-template--28360681849204__product-grid",
+        "shopify-section-template--28360681849204__1790102236706cc09d",
+        "shopify-section-sections--28360681718132__footer_banner_J9ye8Q",
+        "shopify-section-sections--28360681718132__custom_footer_6hXLnw"
+      ],
+      "source_h1_count": 0
+    },
+    {
+      "url": "https://bpmdeodorant.com/collections/baking-soda-free-deodorant",
+      "kind": "collection",
+      "owner_issues": [
+        "#17"
+      ],
+      "decision": "preserve pending approved change",
+      "fetched": true,
+      "sha256": "b8b77c4d7fd423c73c2229b7c34cbbd24bc1d169e686d97117ce4e1426686296",
+      "canonicals": [
+        "https://bpmdeodorant.com/collections/baking-soda-free-deodorant"
+      ],
+      "robots": [],
+      "section_ids": [
+        "shopify-section-sections--28360681685364__announcement-bar",
+        "shopify-section-sections--28360681685364__header",
+        "shopify-section-template--28360681849204__rich_text_NgYfia",
+        "shopify-section-template--28360681849204__1790102197577cd252",
+        "shopify-section-template--28360681849204__product-grid",
+        "shopify-section-template--28360681849204__1790102236706cc09d",
+        "shopify-section-sections--28360681718132__footer_banner_J9ye8Q",
+        "shopify-section-sections--28360681718132__custom_footer_6hXLnw"
+      ],
+      "source_h1_count": 0
+    },
+    {
+      "url": "https://bpmdeodorant.com/collections/frontpage",
+      "kind": "collection",
+      "owner_issues": [
+        "#17"
+      ],
+      "decision": "preserve pending approved change",
+      "fetched": true,
+      "sha256": "de03976ac08edfe498d4f6ba0e562f7fc08d8b6ed8d8f603d953a457b397c59b",
+      "canonicals": [
+        "https://bpmdeodorant.com/collections/frontpage"
+      ],
+      "robots": [],
+      "section_ids": [
+        "shopify-section-sections--28360681685364__announcement-bar",
+        "shopify-section-sections--28360681685364__header",
+        "shopify-section-template--28360681849204__rich_text_NgYfia",
+        "shopify-section-template--28360681849204__1790102197577cd252",
+        "shopify-section-template--28360681849204__product-grid",
+        "shopify-section-template--28360681849204__1790102236706cc09d",
+        "shopify-section-sections--28360681718132__footer_banner_J9ye8Q",
+        "shopify-section-sections--28360681718132__custom_footer_6hXLnw"
+      ],
+      "source_h1_count": 0
+    },
+    {
+      "url": "https://bpmdeodorant.com/collections/natural-deodorant",
+      "kind": "collection",
+      "owner_issues": [
+        "#17"
+      ],
+      "decision": "preserve pending approved change",
+      "fetched": true,
+      "sha256": "fcf687321f308ca8d4f0d4916f0d5662fba06a94bff653143ad29dc887ca12fd",
+      "canonicals": [
+        "https://bpmdeodorant.com/collections/natural-deodorant"
+      ],
+      "robots": [],
+      "section_ids": [
+        "shopify-section-sections--28360681685364__announcement-bar",
+        "shopify-section-sections--28360681685364__header",
+        "shopify-section-template--28360681849204__rich_text_NgYfia",
+        "shopify-section-template--28360681849204__1790102197577cd252",
+        "shopify-section-template--28360681849204__product-grid",
+        "shopify-section-template--28360681849204__1790102236706cc09d",
+        "shopify-section-sections--28360681718132__footer_banner_J9ye8Q",
+        "shopify-section-sections--28360681718132__custom_footer_6hXLnw"
+      ],
+      "source_h1_count": 0
+    },
+    {
+      "url": "https://bpmdeodorant.com/collections/sensitive-skin-deodorant",
+      "kind": "collection",
+      "owner_issues": [
+        "#17"
+      ],
+      "decision": "preserve pending approved change",
+      "fetched": true,
+      "sha256": "6f9641dc8f4e26a75b7f2ba14faecd946334efc860168de85bd3f2fb817a3afe",
+      "canonicals": [
+        "https://bpmdeodorant.com/collections/sensitive-skin-deodorant"
+      ],
+      "robots": [],
+      "section_ids": [
+        "shopify-section-sections--28360681685364__announcement-bar",
+        "shopify-section-sections--28360681685364__header",
+        "shopify-section-template--28360681849204__rich_text_NgYfia",
+        "shopify-section-template--28360681849204__1790102197577cd252",
+        "shopify-section-template--28360681849204__product-grid",
+        "shopify-section-template--28360681849204__1790102236706cc09d",
+        "shopify-section-sections--28360681718132__footer_banner_J9ye8Q",
+        "shopify-section-sections--28360681718132__custom_footer_6hXLnw"
+      ],
+      "source_h1_count": 0
+    },
+    {
+      "url": "https://bpmdeodorant.com/collections/the-four-count",
+      "kind": "collection",
+      "owner_issues": [
+        "#17"
+      ],
+      "decision": "preserve pending approved change",
+      "fetched": true,
+      "sha256": "14752bf5f18ee9d8f5676e597af2a20871fd8111949aa93c0a883afe1b6f5a59",
+      "canonicals": [
+        "https://bpmdeodorant.com/collections/the-four-count"
+      ],
+      "robots": [],
+      "section_ids": [
+        "shopify-section-sections--28360681685364__announcement-bar",
+        "shopify-section-sections--28360681685364__header",
+        "shopify-section-template--28360681849204__rich_text_NgYfia",
+        "shopify-section-template--28360681849204__1790102197577cd252",
+        "shopify-section-template--28360681849204__product-grid",
+        "shopify-section-template--28360681849204__1790102236706cc09d",
+        "shopify-section-sections--28360681718132__footer_banner_J9ye8Q",
+        "shopify-section-sections--28360681718132__custom_footer_6hXLnw"
+      ],
+      "source_h1_count": 0
+    },
+    {
+      "url": "https://bpmdeodorant.com/collections/the-two-track-collection",
+      "kind": "collection",
+      "owner_issues": [
+        "#17"
+      ],
+      "decision": "preserve pending approved change",
+      "fetched": true,
+      "sha256": "2d5a2c15ca160d877fd36046b327af4811c027aaffe82f8e05f5e91f620ee7c5",
+      "canonicals": [
+        "https://bpmdeodorant.com/collections/the-two-track-collection"
+      ],
+      "robots": [],
+      "section_ids": [
+        "shopify-section-sections--28360681685364__announcement-bar",
+        "shopify-section-sections--28360681685364__header",
+        "shopify-section-template--28360681849204__rich_text_NgYfia",
+        "shopify-section-template--28360681849204__1790102197577cd252",
+        "shopify-section-template--28360681849204__product-grid",
+        "shopify-section-template--28360681849204__1790102236706cc09d",
+        "shopify-section-sections--28360681718132__footer_banner_J9ye8Q",
+        "shopify-section-sections--28360681718132__custom_footer_6hXLnw"
+      ],
+      "source_h1_count": 0
+    },
+    {
+      "url": "https://bpmdeodorant.com/collections/unscented-deodorant",
+      "kind": "collection",
+      "owner_issues": [
+        "#17"
+      ],
+      "decision": "preserve pending approved change",
+      "fetched": true,
+      "sha256": "0335255ce3acd403b17fc948e551f66163901fbbce3026b38a69d5e2eb3ca8c2",
+      "canonicals": [
+        "https://bpmdeodorant.com/collections/unscented-deodorant"
+      ],
+      "robots": [],
+      "section_ids": [
+        "shopify-section-sections--28360681685364__announcement-bar",
+        "shopify-section-sections--28360681685364__header",
+        "shopify-section-template--28360681849204__rich_text_NgYfia",
+        "shopify-section-template--28360681849204__1790102197577cd252",
+        "shopify-section-template--28360681849204__product-grid",
+        "shopify-section-template--28360681849204__1790102236706cc09d",
+        "shopify-section-sections--28360681718132__footer_banner_J9ye8Q",
+        "shopify-section-sections--28360681718132__custom_footer_6hXLnw"
+      ],
+      "source_h1_count": 0
+    },
+    {
+      "url": "https://bpmdeodorant.com/collections/unscented-deodorant-copy",
+      "kind": "collection",
+      "owner_issues": [
+        "#17"
+      ],
+      "decision": "preserve pending approved change",
+      "fetched": true,
+      "sha256": "19e4c934f05337a8977257d52f41faa7144dd98960e4f18a3b628c10aca6c8cb",
+      "canonicals": [
+        "https://bpmdeodorant.com/collections/unscented-deodorant-copy"
+      ],
+      "robots": [],
+      "section_ids": [
+        "shopify-section-sections--28360681685364__announcement-bar",
+        "shopify-section-sections--28360681685364__header",
+        "shopify-section-template--28360681849204__rich_text_NgYfia",
+        "shopify-section-template--28360681849204__1790102197577cd252",
+        "shopify-section-template--28360681849204__product-grid",
+        "shopify-section-template--28360681849204__1790102236706cc09d",
+        "shopify-section-sections--28360681718132__footer_banner_J9ye8Q",
+        "shopify-section-sections--28360681718132__custom_footer_6hXLnw"
+      ],
+      "source_h1_count": 0
+    },
+    {
+      "url": "https://bpmdeodorant.com/pages/300-applications",
+      "kind": "page",
+      "owner_issues": [
+        "#18"
+      ],
+      "decision": "preserve pending approved change",
+      "fetched": true,
+      "sha256": "69f897568b7534112d137b15da0642d9edcd2f3b2a7abb1c0f7ee50af2e091ba",
+      "canonicals": [
+        "https://bpmdeodorant.com/pages/300-applications"
+      ],
+      "robots": [],
+      "section_ids": [
+        "shopify-section-sections--28360681685364__announcement-bar",
+        "shopify-section-sections--28360681685364__header",
+        "shopify-section-template--28566983901556__clean_living_banner_Y4ARD4",
+        "shopify-section-template--28566983901556__image_with_text_QPG9Jh",
+        "shopify-section-template--28566983901556__marquee_text_n9gJtC",
+        "shopify-section-template--28566983901556__featured_collection_GwAQHU",
+        "shopify-section-template--28566983901556__product_showcase_ehrCFd",
+        "shopify-section-template--28566983901556__image_with_text_baQxUw",
+        "shopify-section-template--28566983901556__image_with_text_7kCEch",
+        "shopify-section-template--28566983901556__faq_zj49hb",
+        "shopify-section-template--28566983901556__image_with_text_tjWE4e",
+        "shopify-section-sections--28360681718132__footer_banner_J9ye8Q",
+        "shopify-section-sections--28360681718132__custom_footer_6hXLnw"
+      ],
+      "source_h1_count": 0
+    },
+    {
+      "url": "https://bpmdeodorant.com/pages/5gx1ilbntnodkhnob56pexkv",
+      "kind": "page",
+      "owner_issues": [
+        "#18"
+      ],
+      "decision": "preserve pending approved change",
+      "fetched": true,
+      "sha256": "0f684441382c1fb3cf0fb9d237f8aa726d4d3e8b3c3f24b56310a3bf799fd8d2",
+      "canonicals": [
+        "https://bpmdeodorant.com/pages/5gx1ilbntnodkhnob56pexkv"
+      ],
+      "robots": [
+        "noindex, nofollow"
+      ],
+      "section_ids": [
+        "shopify-section-sections--28360681685364__announcement-bar",
+        "shopify-section-sections--28360681685364__header",
+        "shopify-section-template--29208423825780__rich_text_rkBLy3",
+        "shopify-section-template--29208423825780__1789480192637267d5",
+        "shopify-section-template--29208423825780__178948037845d81c00",
+        "shopify-section-template--29208423825780__1789588410c3174cf8",
+        "shopify-section-template--29208423825780__rich_text_HpFQ7R",
+        "shopify-section-sections--28360681718132__footer_banner_J9ye8Q",
+        "shopify-section-sections--28360681718132__custom_footer_6hXLnw"
+      ],
+      "source_h1_count": 0
+    },
+    {
+      "url": "https://bpmdeodorant.com/pages/about-us",
+      "kind": "page",
+      "owner_issues": [
+        "#18"
+      ],
+      "decision": "preserve pending approved change",
+      "fetched": true,
+      "sha256": "cd8dfaad845efd1b00f69951c01d124659056b378a509bbd481908f8f00126a1",
+      "canonicals": [
+        "https://bpmdeodorant.com/pages/about-us"
+      ],
+      "robots": [],
+      "section_ids": [
+        "shopify-section-sections--28360681685364__announcement-bar",
+        "shopify-section-sections--28360681685364__header",
+        "shopify-section-template--28360682013044__rich_text_jcUEne",
+        "shopify-section-template--28360682013044__image_banner_7aerYV",
+        "shopify-section-template--28360682013044__clean_living_banner_Y4ARD4",
+        "shopify-section-template--28360682013044__founder_story_TWcYQA",
+        "shopify-section-template--28360682013044__bpm_values_q9gtPL",
+        "shopify-section-sections--28360681718132__footer_banner_J9ye8Q",
+        "shopify-section-sections--28360681718132__custom_footer_6hXLnw"
+      ],
+      "source_h1_count": 0
+    },
+    {
+      "url": "https://bpmdeodorant.com/pages/contact",
+      "kind": "page",
+      "owner_issues": [
+        "#18"
+      ],
+      "decision": "preserve pending approved change",
+      "fetched": true,
+      "sha256": "66a54d78d34e0db274432a6513fc0f5f61d8d85430160786f376a1d0e0a088ec",
+      "canonicals": [
+        "https://bpmdeodorant.com/pages/contact"
+      ],
+      "robots": [],
+      "section_ids": [
+        "shopify-section-sections--28360681685364__announcement-bar",
+        "shopify-section-sections--28360681685364__header",
+        "shopify-section-template--28360682209652__contact-banner",
+        "shopify-section-template--28360682209652__contact-section",
+        "shopify-section-template--28360682209652__contact-faq",
+        "shopify-section-sections--28360681718132__footer_banner_J9ye8Q",
+        "shopify-section-sections--28360681718132__custom_footer_6hXLnw"
+      ],
+      "source_h1_count": 1
+    },
+    {
+      "url": "https://bpmdeodorant.com/pages/data-sharing-opt-out",
+      "kind": "page",
+      "owner_issues": [
+        "#18"
+      ],
+      "decision": "preserve pending approved change",
+      "fetched": true,
+      "sha256": "693217fd12e39cbe30d9866faf685d4579583d5d17e9d674f8fd1028d29ea68f",
+      "canonicals": [
+        "https://bpmdeodorant.com/pages/data-sharing-opt-out"
+      ],
+      "robots": [],
+      "section_ids": [
+        "shopify-section-sections--28360681685364__announcement-bar",
+        "shopify-section-sections--28360681685364__header",
+        "shopify-section-template--28360682013044__rich_text_jcUEne",
+        "shopify-section-template--28360682013044__image_banner_7aerYV",
+        "shopify-section-template--28360682013044__clean_living_banner_Y4ARD4",
+        "shopify-section-template--28360682013044__founder_story_TWcYQA",
+        "shopify-section-template--28360682013044__bpm_values_q9gtPL",
+        "shopify-section-sections--28360681718132__footer_banner_J9ye8Q",
+        "shopify-section-sections--28360681718132__custom_footer_6hXLnw"
+      ],
+      "source_h1_count": 0
+    },
+    {
+      "url": "https://bpmdeodorant.com/pages/indigenous-owned",
+      "kind": "page",
+      "owner_issues": [
+        "#18"
+      ],
+      "decision": "preserve pending approved change",
+      "fetched": true,
+      "sha256": "fc63a26918b8d4392b50c83a41f53d036229927a376695e07625e91bfa09bbf6",
+      "canonicals": [
+        "https://bpmdeodorant.com/pages/indigenous-owned"
+      ],
+      "robots": [],
+      "section_ids": [
+        "shopify-section-sections--28360681685364__announcement-bar",
+        "shopify-section-sections--28360681685364__header",
+        "shopify-section-template--29239702421876__image_banner_VUMkFa",
+        "shopify-section-template--29239702421876__main",
+        "shopify-section-template--29239702421876__rich_text_wtKRpm",
+        "shopify-section-template--29239702421876__image_banner_AtxcF4",
+        "shopify-section-sections--28360681718132__footer_banner_J9ye8Q",
+        "shopify-section-sections--28360681718132__custom_footer_6hXLnw"
+      ],
+      "source_h1_count": 1
+    },
+    {
+      "url": "https://bpmdeodorant.com/pages/polished-texture",
+      "kind": "page",
+      "owner_issues": [
+        "#18"
+      ],
+      "decision": "preserve pending approved change",
+      "fetched": true,
+      "sha256": "52f394725c9008e1496d429672fd10883d7bc9cc939fbdf58196cd3c73746d3c",
+      "canonicals": [
+        "https://bpmdeodorant.com/pages/polished-texture"
+      ],
+      "robots": [],
+      "section_ids": [
+        "shopify-section-sections--28360681685364__announcement-bar",
+        "shopify-section-sections--28360681685364__header",
+        "shopify-section-template--28568038670708__clean_living_banner_Y4ARD4",
+        "shopify-section-template--28568038670708__video_Vj9CWa",
+        "shopify-section-template--28568038670708__marquee_text_n9gJtC",
+        "shopify-section-template--28568038670708__featured_collection_GwAQHU",
+        "shopify-section-template--28568038670708__product_showcase_ehrCFd",
+        "shopify-section-template--28568038670708__image_with_text_baQxUw",
+        "shopify-section-template--28568038670708__video_gi3niD",
+        "shopify-section-template--28568038670708__image_with_text_7kCEch",
+        "shopify-section-template--28568038670708__faq_zj49hb",
+        "shopify-section-template--28568038670708__image_with_text_tjWE4e",
+        "shopify-section-sections--28360681718132__footer_banner_J9ye8Q",
+        "shopify-section-sections--28360681718132__custom_footer_6hXLnw"
+      ],
+      "source_h1_count": 0
+    },
+    {
+      "url": "https://bpmdeodorant.com/pages/privacy-policy",
+      "kind": "page",
+      "owner_issues": [
+        "#18"
+      ],
+      "decision": "preserve pending approved change",
+      "fetched": true,
+      "sha256": "b0cfec8161a3b02722fcd8da267c9d4218fc5cd6b865039e77d4fb28f09da46f",
+      "canonicals": [
+        "https://bpmdeodorant.com/pages/privacy-policy"
+      ],
+      "robots": [],
+      "section_ids": [
+        "shopify-section-sections--28360681685364__announcement-bar",
+        "shopify-section-sections--28360681685364__header",
+        "shopify-section-template--28360682013044__rich_text_jcUEne",
+        "shopify-section-template--28360682013044__image_banner_7aerYV",
+        "shopify-section-template--28360682013044__clean_living_banner_Y4ARD4",
+        "shopify-section-template--28360682013044__founder_story_TWcYQA",
+        "shopify-section-template--28360682013044__bpm_values_q9gtPL",
+        "shopify-section-sections--28360681718132__footer_banner_J9ye8Q",
+        "shopify-section-sections--28360681718132__custom_footer_6hXLnw"
+      ],
+      "source_h1_count": 0
+    },
+    {
+      "url": "https://bpmdeodorant.com/pages/terms-of-service",
+      "kind": "page",
+      "owner_issues": [
+        "#18"
+      ],
+      "decision": "preserve pending approved change",
+      "fetched": true,
+      "sha256": "c6651bfb7eb787e55390638a8f52c5902c6ddcda22028c9377cfd91ac35f6983",
+      "canonicals": [
+        "https://bpmdeodorant.com/pages/terms-of-service"
+      ],
+      "robots": [],
+      "section_ids": [
+        "shopify-section-sections--28360681685364__announcement-bar",
+        "shopify-section-sections--28360681685364__header",
+        "shopify-section-template--28360682013044__rich_text_jcUEne",
+        "shopify-section-template--28360682013044__image_banner_7aerYV",
+        "shopify-section-template--28360682013044__clean_living_banner_Y4ARD4",
+        "shopify-section-template--28360682013044__founder_story_TWcYQA",
+        "shopify-section-template--28360682013044__bpm_values_q9gtPL",
+        "shopify-section-sections--28360681718132__footer_banner_J9ye8Q",
+        "shopify-section-sections--28360681718132__custom_footer_6hXLnw"
+      ],
+      "source_h1_count": 0
+    },
+    {
+      "url": "https://bpmdeodorant.com/policies/contact-information",
+      "kind": "policy",
+      "owner_issues": [
+        "#29",
+        "#22"
+      ],
+      "decision": "preserve pending approved change",
+      "fetched": true,
+      "sha256": "cc5770c93d92b9b75a369ea7e22a745af0a3da83f411817140cc0eadf85c1330",
+      "canonicals": [
+        "https://bpmdeodorant.com/policies/contact-information"
+      ],
+      "robots": [],
+      "section_ids": [
+        "shopify-section-sections--28360681685364__announcement-bar",
+        "shopify-section-sections--28360681685364__header",
+        "shopify-section-sections--28360681718132__footer_banner_J9ye8Q",
+        "shopify-section-sections--28360681718132__custom_footer_6hXLnw"
+      ],
+      "source_h1_count": 1
+    },
+    {
+      "url": "https://bpmdeodorant.com/policies/legal-notice",
+      "kind": "policy",
+      "owner_issues": [
+        "#29",
+        "#22"
+      ],
+      "decision": "preserve pending approved change",
+      "fetched": true,
+      "sha256": "f71fed26b6f989c07fd8f27a70da5142ce69a1c557de5fce3d3aa93beccb9bee",
+      "canonicals": [
+        "https://bpmdeodorant.com/policies/legal-notice"
+      ],
+      "robots": [],
+      "section_ids": [
+        "shopify-section-sections--28360681685364__announcement-bar",
+        "shopify-section-sections--28360681685364__header",
+        "shopify-section-sections--28360681718132__footer_banner_J9ye8Q",
+        "shopify-section-sections--28360681718132__custom_footer_6hXLnw"
+      ],
+      "source_h1_count": 1
+    },
+    {
+      "url": "https://bpmdeodorant.com/policies/privacy-policy",
+      "kind": "policy",
+      "owner_issues": [
+        "#29",
+        "#22"
+      ],
+      "decision": "preserve pending approved change",
+      "fetched": true,
+      "sha256": "d2cc176a653890e27c363823a9f64b8239a4b07e13355443c2527fb9dbe5f5fb",
+      "canonicals": [
+        "https://bpmdeodorant.com/policies/privacy-policy"
+      ],
+      "robots": [],
+      "section_ids": [
+        "shopify-section-sections--28360681685364__announcement-bar",
+        "shopify-section-sections--28360681685364__header",
+        "shopify-section-sections--28360681718132__footer_banner_J9ye8Q",
+        "shopify-section-sections--28360681718132__custom_footer_6hXLnw"
+      ],
+      "source_h1_count": 1
+    },
+    {
+      "url": "https://bpmdeodorant.com/policies/refund-policy",
+      "kind": "policy",
+      "owner_issues": [
+        "#29",
+        "#22"
+      ],
+      "decision": "preserve pending approved change",
+      "fetched": true,
+      "sha256": "45bfaa5fe78801b51cc360126c6f3980702916b6e04c3a8adcd5682226e2ee16",
+      "canonicals": [
+        "https://bpmdeodorant.com/policies/refund-policy"
+      ],
+      "robots": [],
+      "section_ids": [
+        "shopify-section-sections--28360681685364__announcement-bar",
+        "shopify-section-sections--28360681685364__header",
+        "shopify-section-sections--28360681718132__footer_banner_J9ye8Q",
+        "shopify-section-sections--28360681718132__custom_footer_6hXLnw"
+      ],
+      "source_h1_count": 2
+    },
+    {
+      "url": "https://bpmdeodorant.com/policies/shipping-policy",
+      "kind": "policy",
+      "owner_issues": [
+        "#29",
+        "#22"
+      ],
+      "decision": "preserve pending approved change",
+      "fetched": true,
+      "sha256": "c3d87bb3e991950425a4721c3d109c9853e31ee312d74a7db4a2bf8b99d0eb75",
+      "canonicals": [
+        "https://bpmdeodorant.com/policies/shipping-policy"
+      ],
+      "robots": [],
+      "section_ids": [
+        "shopify-section-sections--28360681685364__announcement-bar",
+        "shopify-section-sections--28360681685364__header",
+        "shopify-section-sections--28360681718132__footer_banner_J9ye8Q",
+        "shopify-section-sections--28360681718132__custom_footer_6hXLnw"
+      ],
+      "source_h1_count": 1
+    },
+    {
+      "url": "https://bpmdeodorant.com/policies/subscription-policy",
+      "kind": "policy",
+      "owner_issues": [
+        "#29",
+        "#22"
+      ],
+      "decision": "preserve pending approved change",
+      "fetched": true,
+      "sha256": "58138f8ba64dd94f345f3484e449d8986e2399205afa744519f5ef37dffd2d2c",
+      "canonicals": [
+        "https://bpmdeodorant.com/policies/subscription-policy"
+      ],
+      "robots": [],
+      "section_ids": [
+        "shopify-section-sections--28360681685364__announcement-bar",
+        "shopify-section-sections--28360681685364__header",
+        "shopify-section-sections--28360681718132__footer_banner_J9ye8Q",
+        "shopify-section-sections--28360681718132__custom_footer_6hXLnw"
+      ],
+      "source_h1_count": 1
+    },
+    {
+      "url": "https://bpmdeodorant.com/policies/terms-of-service",
+      "kind": "policy",
+      "owner_issues": [
+        "#29",
+        "#22"
+      ],
+      "decision": "preserve pending approved change",
+      "fetched": true,
+      "sha256": "e6515c8141fbebc42ea7861d50e6157967d05cef5afce4d5b34c8d718c9af1e7",
+      "canonicals": [
+        "https://bpmdeodorant.com/policies/terms-of-service"
+      ],
+      "robots": [],
+      "section_ids": [
+        "shopify-section-sections--28360681685364__announcement-bar",
+        "shopify-section-sections--28360681685364__header",
+        "shopify-section-sections--28360681718132__footer_banner_J9ye8Q",
+        "shopify-section-sections--28360681718132__custom_footer_6hXLnw"
+      ],
+      "source_h1_count": 1
+    },
+    {
+      "url": "https://bpmdeodorant.com/products/3-4-time",
+      "kind": "product",
+      "owner_issues": [
+        "#7",
+        "#21"
+      ],
+      "decision": "preserve pending approved change",
+      "fetched": true,
+      "sha256": "218bb3a003a364a53491bf3e23d0c15cb981117c57621178359f41565787f931",
+      "canonicals": [
+        "https://bpmdeodorant.com/products/3-4-time"
+      ],
+      "robots": [],
+      "section_ids": [
+        "shopify-section-sections--28360681685364__announcement-bar",
+        "shopify-section-sections--28360681685364__header",
+        "shopify-section-template--28360682078580__1783639957f84f83fe",
+        "shopify-section-template--28360682078580__main",
+        "shopify-section-template--28360682078580__product_showcase_GJm9zj",
+        "shopify-section-template--28360682078580__178363988335de2b3c",
+        "shopify-section-template--28360682078580__testimonial_slider_KkqqXt",
+        "shopify-section-sections--28360681718132__footer_banner_J9ye8Q",
+        "shopify-section-sections--28360681718132__custom_footer_6hXLnw"
+      ],
+      "source_h1_count": 17
+    },
+    {
+      "url": "https://bpmdeodorant.com/products/bpm-natural-deodorant-bergamot-lime",
+      "kind": "product",
+      "owner_issues": [
+        "#7",
+        "#21"
+      ],
+      "decision": "preserve pending approved change",
+      "fetched": true,
+      "sha256": "ccfc948b683c2e43fe5b18ef664c50c5c81d72db5d690f22fdd9d6f86a6b9773",
+      "canonicals": [
+        "https://bpmdeodorant.com/products/bpm-natural-deodorant-bergamot-lime"
+      ],
+      "robots": [],
+      "section_ids": [
+        "shopify-section-sections--28360681685364__announcement-bar",
+        "shopify-section-sections--28360681685364__header",
+        "shopify-section-template--29059143663988__1783639957f84f83fe",
+        "shopify-section-template--29059143663988__main",
+        "shopify-section-template--29059143663988__product_showcase_GJm9zj",
+        "shopify-section-template--29059143663988__178363988335de2b3c",
+        "shopify-section-sections--28360681718132__footer_banner_J9ye8Q",
+        "shopify-section-sections--28360681718132__custom_footer_6hXLnw"
+      ],
+      "source_h1_count": 16
+    },
+    {
+      "url": "https://bpmdeodorant.com/products/bpm-natural-deodorant-unscented",
+      "kind": "product",
+      "owner_issues": [
+        "#7",
+        "#21"
+      ],
+      "decision": "preserve pending approved change",
+      "fetched": true,
+      "sha256": "7f15adbccb3b250ee782d1f52d00790fca534a899c9fe912c88547df2e7a6a95",
+      "canonicals": [
+        "https://bpmdeodorant.com/products/bpm-natural-deodorant-unscented"
+      ],
+      "robots": [],
+      "section_ids": [
+        "shopify-section-sections--28360681685364__announcement-bar",
+        "shopify-section-sections--28360681685364__header",
+        "shopify-section-template--29059173613940__1783639957f84f83fe",
+        "shopify-section-template--29059173613940__main",
+        "shopify-section-template--29059173613940__product_showcase_GJm9zj",
+        "shopify-section-template--29059173613940__178363988335de2b3c",
+        "shopify-section-sections--28360681718132__footer_banner_J9ye8Q",
+        "shopify-section-sections--28360681718132__custom_footer_6hXLnw"
+      ],
+      "source_h1_count": 13
+    },
+    {
+      "url": "https://bpmdeodorant.com/products/citrus-on-repeat-family-pack-4-tube-bergamot-lime-deodorant-bundle",
+      "kind": "product",
+      "owner_issues": [
+        "#7",
+        "#21"
+      ],
+      "decision": "preserve pending approved change",
+      "fetched": true,
+      "sha256": "387db428f228b20d72e5947d2e036447fb4b7d710ee3f7ef16f145bcea890e63",
+      "canonicals": [
+        "https://bpmdeodorant.com/products/citrus-on-repeat-family-pack-4-tube-bergamot-lime-deodorant-bundle"
+      ],
+      "robots": [],
+      "section_ids": [
+        "shopify-section-sections--28360681685364__announcement-bar",
+        "shopify-section-sections--28360681685364__header",
+        "shopify-section-template--28360682078580__1783639957f84f83fe",
+        "shopify-section-template--28360682078580__main",
+        "shopify-section-template--28360682078580__product_showcase_GJm9zj",
+        "shopify-section-template--28360682078580__178363988335de2b3c",
+        "shopify-section-template--28360682078580__testimonial_slider_KkqqXt",
+        "shopify-section-sections--28360681718132__footer_banner_J9ye8Q",
+        "shopify-section-sections--28360681718132__custom_footer_6hXLnw"
+      ],
+      "source_h1_count": 17
+    },
+    {
+      "url": "https://bpmdeodorant.com/products/citrus-repeat",
+      "kind": "product",
+      "owner_issues": [
+        "#7",
+        "#21"
+      ],
+      "decision": "preserve pending approved change",
+      "fetched": true,
+      "sha256": "0f3473287680229d5273aedcce28b9ff5d74b32a4bb381526594c2519ff8f05f",
+      "canonicals": [
+        "https://bpmdeodorant.com/products/citrus-repeat"
+      ],
+      "robots": [],
+      "section_ids": [
+        "shopify-section-sections--28360681685364__announcement-bar",
+        "shopify-section-sections--28360681685364__header",
+        "shopify-section-template--28360682078580__1783639957f84f83fe",
+        "shopify-section-template--28360682078580__main",
+        "shopify-section-template--28360682078580__product_showcase_GJm9zj",
+        "shopify-section-template--28360682078580__178363988335de2b3c",
+        "shopify-section-template--28360682078580__testimonial_slider_KkqqXt",
+        "shopify-section-sections--28360681718132__footer_banner_J9ye8Q",
+        "shopify-section-sections--28360681718132__custom_footer_6hXLnw"
+      ],
+      "source_h1_count": 16
+    },
+    {
+      "url": "https://bpmdeodorant.com/products/four-on-the-floor-mixed-scent-4-tube-deodorant-bundle",
+      "kind": "product",
+      "owner_issues": [
+        "#7",
+        "#21"
+      ],
+      "decision": "preserve pending approved change",
+      "fetched": true,
+      "sha256": "35e019cf0ddc030e38be47e88013fdd8d89a6cc89fcdc7a78d81c49365ae4c91",
+      "canonicals": [
+        "https://bpmdeodorant.com/products/four-on-the-floor-mixed-scent-4-tube-deodorant-bundle"
+      ],
+      "robots": [],
+      "section_ids": [
+        "shopify-section-sections--28360681685364__announcement-bar",
+        "shopify-section-sections--28360681685364__header",
+        "shopify-section-template--28360682078580__1783639957f84f83fe",
+        "shopify-section-template--28360682078580__main",
+        "shopify-section-template--28360682078580__product_showcase_GJm9zj",
+        "shopify-section-template--28360682078580__178363988335de2b3c",
+        "shopify-section-template--28360682078580__testimonial_slider_KkqqXt",
+        "shopify-section-sections--28360681718132__footer_banner_J9ye8Q",
+        "shopify-section-sections--28360681718132__custom_footer_6hXLnw"
+      ],
+      "source_h1_count": 17
+    },
+    {
+      "url": "https://bpmdeodorant.com/products/side-a-side-b",
+      "kind": "product",
+      "owner_issues": [
+        "#7",
+        "#21"
+      ],
+      "decision": "preserve pending approved change",
+      "fetched": true,
+      "sha256": "c0d7dc379bd6864ca609f19b95c4c65fbf35b6538b99f9de085fd130c3fcb36c",
+      "canonicals": [
+        "https://bpmdeodorant.com/products/side-a-side-b"
+      ],
+      "robots": [],
+      "section_ids": [
+        "shopify-section-sections--28360681685364__announcement-bar",
+        "shopify-section-sections--28360681685364__header",
+        "shopify-section-template--28360682078580__1783639957f84f83fe",
+        "shopify-section-template--28360682078580__main",
+        "shopify-section-template--28360682078580__product_showcase_GJm9zj",
+        "shopify-section-template--28360682078580__178363988335de2b3c",
+        "shopify-section-template--28360682078580__testimonial_slider_KkqqXt",
+        "shopify-section-sections--28360681718132__footer_banner_J9ye8Q",
+        "shopify-section-sections--28360681718132__custom_footer_6hXLnw"
+      ],
+      "source_h1_count": 17
+    },
+    {
+      "url": "https://bpmdeodorant.com/products/silent-on-repeat-family-pack-4-tube-unscented-deodorant-bundle",
+      "kind": "product",
+      "owner_issues": [
+        "#7",
+        "#21"
+      ],
+      "decision": "preserve pending approved change",
+      "fetched": true,
+      "sha256": "a47711d68cf7daeed78f834f87c3a9c27fed7a5ea812438bc75ea8ad21b0e34f",
+      "canonicals": [
+        "https://bpmdeodorant.com/products/silent-on-repeat-family-pack-4-tube-unscented-deodorant-bundle"
+      ],
+      "robots": [],
+      "section_ids": [
+        "shopify-section-sections--28360681685364__announcement-bar",
+        "shopify-section-sections--28360681685364__header",
+        "shopify-section-template--28360682078580__1783639957f84f83fe",
+        "shopify-section-template--28360682078580__main",
+        "shopify-section-template--28360682078580__product_showcase_GJm9zj",
+        "shopify-section-template--28360682078580__178363988335de2b3c",
+        "shopify-section-template--28360682078580__testimonial_slider_KkqqXt",
+        "shopify-section-sections--28360681718132__footer_banner_J9ye8Q",
+        "shopify-section-sections--28360681718132__custom_footer_6hXLnw"
+      ],
+      "source_h1_count": 13
+    },
+    {
+      "url": "https://bpmdeodorant.com/products/silent-repeat",
+      "kind": "product",
+      "owner_issues": [
+        "#7",
+        "#21"
+      ],
+      "decision": "preserve pending approved change",
+      "fetched": true,
+      "sha256": "dca2565f663cee990a14b8af87200ec3928d4db795c3577fc8cb160e3ca8b950",
+      "canonicals": [
+        "https://bpmdeodorant.com/products/silent-repeat"
+      ],
+      "robots": [],
+      "section_ids": [
+        "shopify-section-sections--28360681685364__announcement-bar",
+        "shopify-section-sections--28360681685364__header",
+        "shopify-section-template--28360682078580__1783639957f84f83fe",
+        "shopify-section-template--28360682078580__main",
+        "shopify-section-template--28360682078580__product_showcase_GJm9zj",
+        "shopify-section-template--28360682078580__178363988335de2b3c",
+        "shopify-section-template--28360682078580__testimonial_slider_KkqqXt",
+        "shopify-section-sections--28360681718132__footer_banner_J9ye8Q",
+        "shopify-section-sections--28360681718132__custom_footer_6hXLnw"
+      ],
+      "source_h1_count": 13
+    }
+  ],
+  "heading_scope": "Raw source tags, not visible heading counts. Bergamot browser check: 16 DOM H1 elements, one visible product title."
+}

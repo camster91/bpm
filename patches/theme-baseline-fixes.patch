@@ -1,0 +1,331 @@
+--- a/blocks/ai_gen_block_9978168.liquid
++++ b/blocks/ai_gen_block_9978168.liquid
+@@ -354,7 +354,7 @@
+             {% for media in product.media %}
+               <div class="ai-product-thumbnail-{{ ai_gen_id }} {% if forloop.first %}active{% endif %}" data-media-index="{{ forloop.index0 }}">
+                 {% if media.media_type == 'image' %}
+-                  <img src="{{ media | image_url: width: 100 }}" alt="{{ media.alt | escape }}" loading="lazy">
++                  <img width="{{ media.preview_image.width }}" height="{{ media.preview_image.height }}" src="{{ media | image_url: width: 100 }}" alt="{{ media.alt | escape }}" loading="lazy">
+                 {% elsif media.media_type == 'video' or media.media_type == 'external_video' %}
+                   <video muted>
+                     {% if media.media_type == 'video' %}
+@@ -370,7 +370,7 @@
+             {% for media in product.media %}
+               <div class="ai-product-media-item-{{ ai_gen_id }} {% if forloop.first %}active{% endif %}" data-media-index="{{ forloop.index0 }}">
+                 {% if media.media_type == 'image' %}
+-                  <img src="{{ media | image_url: width: 1000 }}" alt="{{ media.alt | escape }}" loading="lazy">
++                  <img width="{{ media.preview_image.width }}" height="{{ media.preview_image.height }}" src="{{ media | image_url: width: 1000 }}" alt="{{ media.alt | escape }}" loading="lazy">
+                 {% elsif media.media_type == 'video' %}
+                   <video controls>
+                     {% for source in media.sources %}
+@@ -392,7 +392,7 @@
+             {% for media in product.media %}
+               <div class="ai-product-carousel-slide-{{ ai_gen_id }}">
+                 {% if media.media_type == 'image' %}
+-                  <img src="{{ media | image_url: width: 800 }}" alt="{{ media.alt | escape }}" loading="lazy">
++                  <img width="{{ media.preview_image.width }}" height="{{ media.preview_image.height }}" src="{{ media | image_url: width: 800 }}" alt="{{ media.alt | escape }}" loading="lazy">
+                 {% elsif media.media_type == 'video' %}
+                   <video controls>
+                     {% for source in media.sources %}
+--- a/layout/password.liquid
++++ b/layout/password.liquid
+@@ -36,6 +36,7 @@
+       {{ body_font_bold_italic | font_face: font_display: 'swap' }}
+       {{ settings.type_header_font | font_face: font_display: 'swap' }}
+ 
++      {% assign scheme_classes = '' %}
+       {% for scheme in settings.color_schemes -%}
+         {% assign scheme_classes = scheme_classes | append: ', .color-' | append: scheme.id %}
+         {% if forloop.index == 1 -%}
+--- a/layout/theme.liquid
++++ b/layout/theme.liquid
+@@ -60,13 +60,7 @@
+       {{ settings.type_header_font | font_face: font_display: 'swap' }}
+ 
+ 
+-      @font-face {
+-        font-family: 'Roc Grotesk';
+-        src: url('{{ "Fontspring-DEMO-rocgrotesk-regular.otf" | asset_url }}') format('opentype');
+-        font-weight: 400;
+-        font-style: normal;
+-        font-display: swap; 
+-      }
++      
+  
+ 
+ /*=================== Updated Font==============*/
+@@ -120,22 +114,16 @@
+ 
+ 
+ /* Roc Grotesk Condensed Medium */
+-@font-face {
+-  font-family: 'Roc Grotesk Condensed';
+-  src: url('{{ "FONTSPRINGDEMO-RocGroteskCondensedMediumRegular.woff2" | asset_url }}') format('woff2'),
+-       url('{{ "FONTSPRINGDEMO-RocGroteskCondensedMediumRegular.woff" | asset_url }}') format('woff');
+-  font-weight: 500;
+-  font-style: normal;
+-  font-display: swap;
+-}
+-
+-
+-
+-
+-
+-
+-
+-
++
++
++
++
++
++
++
++
++
++      {% assign scheme_classes = '' %}
+       {% for scheme in settings.color_schemes -%}
+         {% assign scheme_classes = scheme_classes | append: ', .color-' | append: scheme.id %}
+         {% if forloop.index == 1 -%}
+--- a/sections/clean-living-banner.liquid
++++ b/sections/clean-living-banner.liquid
+@@ -135,7 +135,6 @@
+ 
+ {%- assign images = section.blocks | where: "type", "image" -%}
+ {%- assign headings = section.blocks | where: "type", "heading" -%}
+-{%- assign texts = section.blocks | where: "type", "text" -%}
+ 
+ <div class="clean-living-banner-{{ section.id }}">
+   <div class="clean-living-banner__container">
+--- a/sections/custom-product-section.liquid
++++ b/sections/custom-product-section.liquid
+@@ -2538,7 +2538,6 @@
+           "type": "text",
+           "id": "subscribe_benefits",
+           "label": "Subscribe benefits",
+-          "default": "Save 25% Every Month|Cancel Anytime|Free Shipping",
+           "info": "Separate benefits with | character"
+         },
+         {
+@@ -2548,9 +2547,9 @@
+           "max": 50,
+           "step": 5,
+           "unit": "%",
+-          "label": "Placeholder discount (before plans are set up)",
++          "label": "Legacy placeholder discount (unused)",
+           "default": 20,
+-          "info": "Used to calculate subscription price when no selling plans exist yet"
++          "info": "Unused. Subscription prices come from eligible Shopify selling-plan allocations."
+         }
+       ]
+     },
+@@ -2620,7 +2619,7 @@
+         },
+         {
+           "type": "paragraph",
+-          "content": "Tab 3: ingredients_title (Single line text), ingredients (Multi-line text)"
++          "content": "Tab 3: ingredients_title (Single line text), ingredients (Rich text)"
+         },
+         {
+           "type": "paragraph",
+--- a/sections/custom-related-products.liquid
++++ b/sections/custom-related-products.liquid
+@@ -1017,6 +1017,6 @@
+       "name": "Custom Related Products"
+     }
+   ],
+-  "templates": ["product"]
++  "enabled_on": { "templates": ["product"] }
+ }
+ {% endschema %}
+--- a/sections/featured-product.liquid
++++ b/sections/featured-product.liquid
+@@ -483,14 +483,6 @@
+     <script src="{{ 'product-model.js' | asset_url }}" defer></script>
+   {%- endif -%}
+ 
+-  {%- liquid
+-    if product.selected_or_first_available_variant.featured_media
+-      assign seo_media = product.selected_or_first_available_variant.featured_media
+-    else
+-      assign seo_media = product.featured_media
+-    endif
+-  -%}
+-
+   <script type="application/ld+json">
+     {{ product | structured_data }}
+   </script>
+@@ -740,8 +732,8 @@
+         },
+         {
+           "type": "header",
+-          "content": "t:sections.main-product.blocks.icon_with_text.settings.content.label",
+-          "info": "t:sections.main-product.blocks.icon_with_text.settings.content.info"
++          "content": "t:sections.main-product.blocks.icon_with_text.settings.pairing_1.label",
++          "info": "t:sections.main-product.blocks.icon_with_text.settings.pairing_1.info"
+         },
+         {
+           "type": "select",
+--- a/sections/main-article.liquid
++++ b/sections/main-article.liquid
+@@ -99,7 +99,7 @@
+         class="page-width page-width--narrow{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+       >
+         {%- if article.comments_count > 0 -%}
+-          {%- assign anchorId = '#Comments-' | append: article.id -%}
++          {%- assign anchor_id = '#Comments-' | append: article.id -%}
+ 
+           <h2 id="Comments-{{ article.id }}" tabindex="-1">
+             {{ 'blogs.article.comments' | t: count: article.comments_count }}
+@@ -126,7 +126,7 @@
+                   </footer>
+                 </article>
+               {%- endfor -%}
+-              {% render 'pagination', paginate: paginate, anchor: anchorId %}
++              {% render 'pagination', paginate: paginate, anchor: anchor_id %}
+             </div>
+           {% endpaginate %}
+         {%- endif -%}
+--- a/sections/main-collection-product-grid.liquid
++++ b/sections/main-collection-product-grid.liquid
+@@ -517,8 +517,9 @@
+                     ============================================================
+                   {%- endcomment -%}
+ 
+-                  {%- if product.metafields.custom.card_color != blank -%}
+-                    {%- assign card_color_class = 'custom-product-card--color-' | append: product.metafields.custom.card_color -%}
++                  {%- assign card_color_token = product.metafields.custom.card_color.value | append: '' -%}
++                  {%- if card_color_token == '1' or card_color_token == '2' or card_color_token == '3' or card_color_token == '4' -%}
++                    {%- assign card_color_class = 'custom-product-card--color-' | append: card_color_token -%}
+                   {%- else -%}
+                     {%- assign card_color_class = 'custom-product-card--color-default' -%}
+                   {%- endif -%}
+--- a/sections/main-list-collections.liquid
++++ b/sections/main-list-collections.liquid
+@@ -17,9 +17,9 @@
+       assign collections = collections | reverse
+     endif
+ 
+-    assign moduloResult = 28 | modulo: section.settings.columns_desktop
++    assign modulo_result = 28 | modulo: section.settings.columns_desktop
+     assign paginate_by = 30
+-    if moduloResult == 0
++    if modulo_result == 0
+       assign paginate_by = 28
+     endif
+   -%}
+--- a/sections/main-product.liquid
++++ b/sections/main-product.liquid
+@@ -724,14 +724,6 @@
+       <script src="{{ 'product-model.js' | asset_url }}" defer></script>
+     {%- endif -%}
+ 
+-    {%- liquid
+-      if product.selected_or_first_available_variant.featured_media
+-        assign seo_media = product.selected_or_first_available_variant.featured_media
+-      else
+-        assign seo_media = product.featured_media
+-      endif
+-    -%}
+-
+     <script type="application/ld+json">
+       {{ product | structured_data }}
+     </script>
+--- a/sections/main-search.liquid
++++ b/sections/main-search.liquid
+@@ -271,7 +271,6 @@
+                   >
+                     {%- case item.object_type -%}
+                       {%- when 'product' -%}
+-                        {%- capture product_settings -%}{%- if section.settings.product_show_vendor -%}vendor,{%- endif -%}title,price{%- endcapture -%}
+                         {% render 'card-product',
+                           card_product: item,
+                           media_aspect_ratio: section.settings.image_ratio,
+--- a/snippets/custom-product-block.liquid
++++ b/snippets/custom-product-block.liquid
+@@ -97,7 +97,7 @@
+     {%- comment -%} Corey Fix - No subscriptions allowed on Bundles {%- endcomment -%}
+     {%- unless product.tags contains 'bundle' -%}
+     {%- assign has_selling_plans = false -%}
+-    {%- if product.selling_plan_groups.size > 0 -%}
++    {%- if product.selected_or_first_available_variant.selling_plan_allocations.size > 0 -%}
+       {%- assign has_selling_plans = true -%}
+     {%- endif -%}
+ 
+@@ -117,18 +117,22 @@
+ 
+       {%- if has_selling_plans -%}
+         {%- comment -%} Real selling plans from Shopify Subscriptions {%- endcomment -%}
+-        {%- for group in product.selling_plan_groups -%}
+-          {%- for plan in group.selling_plans -%}
+-            {%- assign discount_amount = product.selected_or_first_available_variant.price | times: plan.price_adjustments[0].value | divided_by: 100 -%}
+-            {%- assign plan_price = product.selected_or_first_available_variant.price | minus: discount_amount -%}
+-            {%- assign savings_percent = plan.price_adjustments[0].value -%}
++        {%- for allocation in product.selected_or_first_available_variant.selling_plan_allocations -%}
++            {%- assign plan = allocation.selling_plan -%}
++            {%- assign plan_price = allocation.price -%}
++            {%- assign savings_percent = 0 -%}
++            {%- if allocation.compare_at_price > plan_price and allocation.compare_at_price > 0 -%}
++              {%- assign savings_percent = allocation.compare_at_price | minus: plan_price | times: 100.0 | divided_by: allocation.compare_at_price | round -%}
++            {%- endif -%}
+             {%- comment -%} <div class="custom-product__purchase-option is-selected" data-purchase-type="subscription" data-selling-plan="{{ plan.id }}">{%- endcomment -%}
+             <div class="custom-product__purchase-option" data-purchase-type="subscription" data-selling-plan="{{ plan.id }}">
+               <div class="custom-product__purchase-radio"></div>
+               <div class="custom-product__purchase-content">
+                 <div class="custom-product__purchase-title">
+                   {{ block.settings.subscribe_label }}
+-                  <span class="custom-product__purchase-badge">{{ block.settings.subscribe_badge_text | replace: '[percent]', savings_percent }}</span>
++                  {%- if savings_percent > 0 -%}
++                    <span class="custom-product__purchase-badge">{{ block.settings.subscribe_badge_text | replace: '[percent]', savings_percent }}</span>
++                  {%- endif -%}
+                 </div>
+                 <div class="custom-product__purchase-benefits">
+                   {%- assign benefits = block.settings.subscribe_benefits | split: '|' -%}
+@@ -146,38 +150,7 @@
+                 {{ plan_price | money }}
+               </div>
+             </div>
+-          {%- endfor -%}
+         {%- endfor -%}
+-      {%- else -%}
+-        {%- comment -%} Placeholder subscribe row (no selling plans yet) {%- endcomment -%}
+-        {%- assign placeholder_discount = block.settings.placeholder_discount | default: 20 -%}
+-        {%- assign discount_amount = product.selected_or_first_available_variant.price | times: placeholder_discount | divided_by: 100 -%}
+-        {%- assign placeholder_price = product.selected_or_first_available_variant.price | minus: discount_amount -%}
+-        {%- comment -%} BUGFIX: Corey changed is-selected to be the one time purchase option {%- endcomment -%}
+-        {%- comment -%}<div class="custom-product__purchase-option is-selected" data-purchase-type="subscription" data-selling-plan="">{%- endcomment -%}
+-        <div class="custom-product__purchase-option" data-purchase-type="subscription" data-selling-plan="">
+-          <div class="custom-product__purchase-radio"></div>
+-          <div class="custom-product__purchase-content">
+-            <div class="custom-product__purchase-title">
+-              {{ block.settings.subscribe_label }}
+-              <span class="custom-product__purchase-badge">{{ block.settings.subscribe_badge_text | replace: '[percent]', placeholder_discount }}</span>
+-            </div>
+-            <div class="custom-product__purchase-benefits">
+-              {%- assign benefits = block.settings.subscribe_benefits | split: '|' -%}
+-              {%- for benefit in benefits -%}
+-                <span class="custom-product__purchase-benefit">
+-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+-                    <polyline points="20 6 9 17 4 12"></polyline>
+-                  </svg>
+-                  {{ benefit | strip }}
+-                </span>
+-              {%- endfor -%}
+-            </div>
+-          </div>
+-          <div class="custom-product__purchase-price" data-subscribe-price>
+-            {{ placeholder_price | money }}
+-          </div>
+-        </div>
+       {%- endif -%}
+     </div>
+     {%- comment -%} Corey Fix - No subscriptions allowed on Bundles {%- endcomment -%}
+@@ -246,7 +219,7 @@
+ 
+   {%- when 'dynamic_description_tabs' -%}
+     {%- assign has_tabs = false -%}
+-    {%- if product.metafields.custom.how_to_use != blank or product.metafields.custom.ingredients != blank or product.metafields.custom.shipping != blank -%}
++    {%- if product.metafields.custom.how_to_use != blank or product.metafields.custom.whats_inside_description != blank or product.metafields.custom.ingredients != blank or product.metafields.custom.shipping != blank -%}
+       {%- assign has_tabs = true -%}
+     {%- endif -%}
+ 

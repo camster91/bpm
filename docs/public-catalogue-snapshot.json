@@ -1,0 +1,160 @@
+{
+  "retrieved_at": "2026-10-07T02:00:41.568633+00:00",
+  "source": "https://bpmdeodorant.com/products.json?limit=250",
+  "scope": "Public catalogue, not stock-on-hand or complete Admin inventory",
+  "products": [
+    {
+      "handle": "four-on-the-floor-mixed-scent-4-tube-deodorant-bundle",
+      "title": "Four on the Floor \u2014 Mixed Scent Natural Deodorant Bundle",
+      "variant_count": 1,
+      "options": [
+        {
+          "name": "Title",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ],
+      "prices": [
+        "74.98"
+      ]
+    },
+    {
+      "handle": "citrus-on-repeat-family-pack-4-tube-bergamot-lime-deodorant-bundle",
+      "title": "Citrus on Repeat: Family Pack \u2014 Bergamot & Lime Natural Deodorant Bundle",
+      "variant_count": 1,
+      "options": [
+        {
+          "name": "Title",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ],
+      "prices": [
+        "74.98"
+      ]
+    },
+    {
+      "handle": "silent-on-repeat-family-pack-4-tube-unscented-deodorant-bundle",
+      "title": "Silent on Repeat: Family Pack \u2014 Unscented Natural Deodorant Bundle",
+      "variant_count": 1,
+      "options": [
+        {
+          "name": "Title",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ],
+      "prices": [
+        "74.98"
+      ]
+    },
+    {
+      "handle": "3-4-time",
+      "title": "3/4 Time \u2014 Mixed Scent Natural Deodorant Bundle",
+      "variant_count": 1,
+      "options": [
+        {
+          "name": "Title",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ],
+      "prices": [
+        "74.98"
+      ]
+    },
+    {
+      "handle": "silent-repeat",
+      "title": "Silent on Repeat \u2014 Unscented Natural Deodorant Duo",
+      "variant_count": 1,
+      "options": [
+        {
+          "name": "Title",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ],
+      "prices": [
+        "39.99"
+      ]
+    },
+    {
+      "handle": "citrus-repeat",
+      "title": "Citrus on Repeat \u2014 Bergamot & Lime Natural Deodorant Duo",
+      "variant_count": 1,
+      "options": [
+        {
+          "name": "Title",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ],
+      "prices": [
+        "39.99"
+      ]
+    },
+    {
+      "handle": "side-a-side-b",
+      "title": "Side A / Side B \u2014 Mixed Scent Natural Deodorant Duo",
+      "variant_count": 1,
+      "options": [
+        {
+          "name": "Title",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ],
+      "prices": [
+        "39.99"
+      ]
+    },
+    {
+      "handle": "bpm-natural-deodorant-unscented",
+      "title": "Unscented \u2014 Natural Deodorant",
+      "variant_count": 1,
+      "options": [
+        {
+          "name": "Size",
+          "position": 1,
+          "values": [
+            "76g"
+          ]
+        }
+      ],
+      "prices": [
+        "23.99"
+      ]
+    },
+    {
+      "handle": "bpm-natural-deodorant-bergamot-lime",
+      "title": "Bergamot & Lime \u2014 Natural Deodorant",
+      "variant_count": 1,
+      "options": [
+        {
+          "name": "Size",
+          "position": 1,
+          "values": [
+            "76g"
+          ]
+        }
+      ],
+      "prices": [
+        "23.99"
+      ]
+    }
+  ]
+}

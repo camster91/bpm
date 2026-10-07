@@ -1,0 +1,12 @@
+{
+  "name": "bpm-recovery",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22.13" },
+  "scripts": {
+    "build": "node reference-site/build.mjs",
+    "dev": "node reference-site/dev.mjs",
+    "test": "node --test reference-site/tests/*.test.mjs",
+    "check": "node scripts/check-reference.mjs && npm run build && npm test && node reference-site/verify-pages.mjs"
+  }
+}
