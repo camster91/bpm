@@ -1,3 +1,7 @@
+# Current access update
+
+Browser verification succeeded on 7 October 2026 UTC. See [authenticated inventory and content definitions](authenticated-audit.md). The earlier access-blocker statements below are historical; file export and complete configuration/compatibility checks remain pending.
+
 # Current storefront audit — #13
 
 ## Scope and access

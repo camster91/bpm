@@ -1,3 +1,7 @@
+# Current access update
+
+Browser verification succeeded on 7 October 2026 UTC. See [authenticated inventory and content definitions](authenticated-audit.md). The earlier access-blocker statements below are historical; file export and complete configuration/compatibility checks remain pending.
+
 # App and integration audit — #4
 
 Installed-app inventory is blocked on authenticated Shopify access. Browser passkey verification and connector reauthentication are unresolved. This register records public leads only.

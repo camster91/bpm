@@ -23,3 +23,7 @@ No Phase 0/1 issue is represented as completed solely by these documents. No Git
 ## Expanded audit continuation
 
 Public URL audit now covers 45 responding routes, including nine articles and nine collections. The ninth article is not in the frozen preview. Agentic discovery exists publicly but does not identify the installed app. See `public-audit-findings.md`. Connector reauthentication and browser passkey verification were rechecked and remain blocked. No authenticated audit completion is claimed.
+
+## Authenticated access restored
+
+7 October 2026 UTC: user completed the authenticator flow. The BPM Admin browser is authenticated. See `authenticated-audit.md` for live theme confirmation, installed apps/channels, existing product fields and Judge.me market-driven-shipping warning. The prior passkey blocker is cleared for this browser session; connector reconnection is separate. Next: protected read-only theme export and full integration/content-definition audit. No store configuration changed.

@@ -1,3 +1,7 @@
+# Current access update
+
+Browser verification succeeded on 7 October 2026 UTC. See [authenticated inventory and content definitions](authenticated-audit.md). The earlier access-blocker statements below are historical; file export and complete configuration/compatibility checks remain pending.
+
 # Content ownership and editor strategy — #14
 
 Provisional mapping based on recovered reference and public storefront evidence. Final model depends on #13 authenticated audit and #6 section architecture. No fields or definitions were created.
