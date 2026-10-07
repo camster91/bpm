@@ -1,0 +1,142 @@
+{
+  "retrieved_at": "2026-10-07T02:34:51.769197+00:00",
+  "admin_source": "Authenticated BPM Content > Menus > URL redirects; 1-15, Next disabled",
+  "public_method": "GET curl follow redirects, max 8; no forms/cart/orders",
+  "rules": [
+    {
+      "from": "/blogs/news/the-math-behind-our-metal-tube",
+      "configured_to": "/blogs/news/the-math-behind-our-metal-tube-bpm-vs-native",
+      "owner_issue": "#22",
+      "decision": "preserve existing rule until approved change",
+      "final_status": 200,
+      "final_url": "https://bpmdeodorant.com/blogs/news/the-math-behind-our-metal-tube-bpm-vs-native",
+      "redirect_count": 1
+    },
+    {
+      "from": "/products/four-on-the-floor-mixed-groove-4-tube-deodorant-bundle-2-bergamot-lime-2-unscented",
+      "configured_to": "/products/four-on-the-floor-mixed-scent-4-tube-deodorant-bundle",
+      "owner_issue": "#22",
+      "decision": "preserve existing rule until approved change",
+      "final_status": 200,
+      "final_url": "https://bpmdeodorant.com/products/four-on-the-floor-mixed-scent-4-tube-deodorant-bundle",
+      "redirect_count": 1
+    },
+    {
+      "from": "/products/four-on-the-floor-citrus-groove-4-tube-bergamot-lime-deodorant-bundle",
+      "configured_to": "/products/citrus-on-repeat-family-pack-4-tube-bergamot-lime-deodorant-bundle",
+      "owner_issue": "#22",
+      "decision": "preserve existing rule until approved change",
+      "final_status": 200,
+      "final_url": "https://bpmdeodorant.com/products/citrus-on-repeat-family-pack-4-tube-bergamot-lime-deodorant-bundle",
+      "redirect_count": 1
+    },
+    {
+      "from": "/products/four-on-the-floor-silent-groove-4-tube-unscented-deodorant-bundle",
+      "configured_to": "/products/silent-on-repeat-family-pack-4-tube-unscented-deodorant-bundle",
+      "owner_issue": "#22",
+      "decision": "preserve existing rule until approved change",
+      "final_status": 200,
+      "final_url": "https://bpmdeodorant.com/products/silent-on-repeat-family-pack-4-tube-unscented-deodorant-bundle",
+      "redirect_count": 1
+    },
+    {
+      "from": "/products/the-crossfade-pre-order-ships-july-2026",
+      "configured_to": "/products/side-a-side-b",
+      "owner_issue": "#22",
+      "decision": "preserve existing rule until approved change",
+      "final_status": 200,
+      "final_url": "https://bpmdeodorant.com/products/side-a-side-b",
+      "redirect_count": 1
+    },
+    {
+      "from": "/collections/shop-all",
+      "configured_to": "/collections/all",
+      "owner_issue": "#22",
+      "decision": "preserve existing rule until approved change",
+      "final_status": 200,
+      "final_url": "https://bpmdeodorant.com/collections/all",
+      "redirect_count": 1
+    },
+    {
+      "from": "/pages/baking-soda-free",
+      "configured_to": "/pages/300-applicationsa",
+      "owner_issue": "#22",
+      "decision": "preserve existing rule until approved change",
+      "final_status": 404,
+      "final_url": "https://bpmdeodorant.com/pages/300-applicationsa",
+      "redirect_count": 1
+    },
+    {
+      "from": "/tiktok",
+      "configured_to": "/?utm_source=tiktok&utm_medium=social&utm_campaign=profile&utm_content=bio_link",
+      "owner_issue": "#22",
+      "decision": "preserve existing rule until approved change",
+      "final_status": 200,
+      "final_url": "https://bpmdeodorant.com/?utm_source=tiktok&utm_medium=social&utm_campaign=profile&utm_content=bio_link",
+      "redirect_count": 1
+    },
+    {
+      "from": "/instagram",
+      "configured_to": "/?utm_source=instagram&utm_medium=social&utm_campaign=profile&utm_content=bio_link",
+      "owner_issue": "#22",
+      "decision": "preserve existing rule until approved change",
+      "final_status": 200,
+      "final_url": "https://bpmdeodorant.com/?utm_source=instagram&utm_medium=social&utm_campaign=profile&utm_content=bio_link",
+      "redirect_count": 1
+    },
+    {
+      "from": "/collections/unscented-deodorants",
+      "configured_to": "/collections/unscented-deodorant",
+      "owner_issue": "#22",
+      "decision": "preserve existing rule until approved change",
+      "final_status": 200,
+      "final_url": "https://bpmdeodorant.com/collections/unscented-deodorant",
+      "redirect_count": 1
+    },
+    {
+      "from": "/collections/natural-deodorants",
+      "configured_to": "/collections/natural-deodorant",
+      "owner_issue": "#22",
+      "decision": "preserve existing rule until approved change",
+      "final_status": 200,
+      "final_url": "https://bpmdeodorant.com/collections/natural-deodorant",
+      "redirect_count": 1
+    },
+    {
+      "from": "/products/bpm-natural-deodorant-bergamot-lime-2",
+      "configured_to": "/products/bpm-natural-deodorant-unscented",
+      "owner_issue": "#22",
+      "decision": "preserve existing rule until approved change",
+      "final_status": 200,
+      "final_url": "https://bpmdeodorant.com/products/bpm-natural-deodorant-unscented",
+      "redirect_count": 1
+    },
+    {
+      "from": "/products/bergamot-lime-copy",
+      "configured_to": "/products/bergamot-lime-2",
+      "owner_issue": "#22",
+      "decision": "preserve existing rule until approved change",
+      "final_status": 404,
+      "final_url": "https://bpmdeodorant.com/products/bergamot-lime-2",
+      "redirect_count": 1
+    },
+    {
+      "from": "/products/unscented-copy",
+      "configured_to": "/products/unscented-2",
+      "owner_issue": "#22",
+      "decision": "preserve existing rule until approved change",
+      "final_status": 404,
+      "final_url": "https://bpmdeodorant.com/products/unscented-2",
+      "redirect_count": 1
+    },
+    {
+      "from": "/products/bpm-natural-deodorant-bergamot-lime-4",
+      "configured_to": "/products/bergamot-lime-2",
+      "owner_issue": "#22",
+      "decision": "preserve existing rule until approved change",
+      "final_status": 404,
+      "final_url": "https://bpmdeodorant.com/products/bergamot-lime-2",
+      "redirect_count": 1
+    }
+  ]
+}

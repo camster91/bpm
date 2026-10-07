@@ -48,3 +48,26 @@ The selector also exposes Home page (#16), Collections/Collections list/Search (
 Default product currently uses Star Ratings and Review Widget app blocks around Custom Product and Product Showcase, plus Testimonial Slider. App embeds/settings and current footer/header evidence are in `app-audit.md`. Existing Product Tabs help references the verified editorial fields but has a type mismatch for Ingredients. Current custom Purchase Options explains a placeholder discount; source eligibility and native selling-plan submission remain mandatory verification, not assumed compatibility.
 
 Remaining #13 evidence: export/source inventory, remaining editor-template variants/assignments, menus, Markets/localisation, redirects, forms/providers, full app/source bindings and rendered journey checks in an approved isolated environment. No live commerce/form submission was performed.
+
+## Additional template assignments
+
+The editor selector displays Default collection assigned to nine collections and Default blog assigned to one blog. Default blog post shows zero assigned posts, despite nine current public articles. Pages selector shows Default page assigned to zero; campaign-300applications, campaign-texture, contact, indigenous-owned and wholesale each assigned to one page, despite nine public page URLs. These are exact UI counts, not reconciled complete template ownership. The export/source and native page/article assignment audit must explain the discrepancy before migration. Preserve all public URLs; don't infer unused content from these counts or delete templates.
+
+## Native menus and redirects
+
+Authenticated Content > Menus displays three menus: Main menu (`main-menu`, ID 313728303476), Footer menu (313728336244), Customer account main menu (313728369012). Main menu has Home, Products, Bundles, Collections, About Us, Indigenous Owned, The Breakdown, Contact Us and Policy Pages. Expanded Bundles has The Two Track/The Four Count; Collections has Shop All Tracks, Unscented, Bergamot & Lime, The Two Track, The Four Count and Sensitive Skin. Policies has all seven existing policy links. Footer includes Search, Privacy Policy, Terms of Service, Your Privacy Choices and Indian Status Tax Exemption. Customer account menu includes Orders, Profile, Manage Subscriptions, Indian Status Tax Exemption and seven policies. Preserve native ownership and required access to privacy/tax/subscription surfaces under #5/#20; exact resource destinations and candidate rendering remain to verify. No menu item was edited or saved.
+
+URL redirects lists 15 entries with both pagination controls disabled. Exact configured pairs and public GET results are in `redirect-audit.json` (#22). Eleven reach HTTP 200; four reach HTTP 404 after one redirect:
+
+- `/pages/baking-soda-free` → `/pages/300-applicationsa`
+- `/products/bergamot-lime-copy` → `/products/bergamot-lime-2`
+- `/products/unscented-copy` → `/products/unscented-2`
+- `/products/bpm-natural-deodorant-bergamot-lime-4` → `/products/bergamot-lime-2`
+
+These are existing P2 URL/SEO findings under the plan's severity definitions, not defects introduced by the candidate. Owner must confirm intended replacements before any store redirect mutation. Preserve working redirect rules and campaign UTM destinations; a theme switch alone won't repair store-wide redirects.
+
+Top-level Markets screen reports "This feature isn't currently available for your store." This is an access/feature limitation, not evidence that only Canada is enabled. No plan, access or Markets setting was changed.
+
+Customer accounts settings show Show sign-in links checked for the online-store header and checkout, and account URL `https://account.bpmdeodorant.com`. Preserve the native authentication destination, account menu, subscription management and tax-exemption access under #20. No customer record, login or return/cancellation transaction was tested. Self-serve return/cancellation conditions toggle is unchecked; do not change this store-wide operational setting as part of theme work.
+
+Languages lists English as Default/Published on three domains, with French only offered as a suggestion. No additional language was added, published or inferred from that suggestion. Exact enabled Markets/currencies/domain-language mappings remain to verify through an available authenticated surface or owner evidence. The current Settings navigation does not expose a Markets link.
