@@ -1,0 +1,24 @@
+{% if section.blocks.size > 0 %}
+  <section class="bpm-app-region{% if section.settings.constrain_width %} bpm-container{% endif %}" style="--app-padding: {{ section.settings.padding }}px;">
+    {% if section.settings.heading != blank %}<h2>{{ section.settings.heading | escape }}</h2>{% endif %}
+    {% render 'bpm-app-blocks', blocks: section.blocks %}
+  </section>
+{% endif %}
+{% stylesheet %}
+.bpm-app-region{padding-block:var(--app-padding)}
+.bpm-app-region h2{font-size:56px;line-height:1;text-transform:uppercase;margin-bottom:48px;overflow-wrap:anywhere}
+@media(max-width:749px){.bpm-app-region h2{font-size:32px;margin-bottom:32px}}
+{% endstylesheet %}
+{% schema %}
+{
+  "name": "BPM app region",
+  "settings": [
+    { "type": "paragraph", "content": "Add the installed review or integration app block here. The app supplies its own data and controls; adding this region does not configure the app or prove compatibility." },
+    { "type": "text", "id": "heading", "label": "Heading" },
+    { "type": "checkbox", "id": "constrain_width", "label": "Use theme content width", "default": true },
+    { "type": "range", "id": "padding", "label": "Top and bottom spacing", "min": 0, "max": 160, "step": 4, "default": 112, "unit": "px" }
+  ],
+  "blocks": [{ "type": "@app" }],
+  "presets": [{ "name": "BPM app region" }]
+}
+{% endschema %}

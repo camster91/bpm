@@ -1,0 +1,14 @@
+{% if section.blocks.size > 0 %}
+  <div class="bpm-app-wrapper{% if section.settings.constrain_width %} bpm-container{% endif %}" style="padding-block: {{ section.settings.padding }}px;">{% render 'bpm-app-blocks', blocks: section.blocks %}</div>
+{% endif %}
+{% schema %}
+{
+  "name": "BPM app wrapper",
+  "settings": [
+    { "type": "checkbox", "id": "constrain_width", "label": "Use theme content width", "default": true },
+    { "type": "range", "id": "padding", "label": "Top and bottom spacing", "min": 0, "max": 120, "step": 4, "default": 48, "unit": "px" }
+  ],
+  "blocks": [{ "type": "@app" }],
+  "presets": [{ "name": "BPM app wrapper" }]
+}
+{% endschema %}

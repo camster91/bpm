@@ -1,0 +1,66 @@
+<section class="bpm-benefits" style="--benefits-bg: {{ section.settings.background }}; --benefits-panel: {{ section.settings.panel_color }}; --benefits-text: {{ section.settings.text_color }}; --benefits-label: {{ section.settings.label_color }};">
+  <div class="bpm-benefits__panel">
+    <div class="bpm-benefits__copy">
+      {% if section.settings.heading != blank %}<h2>{{ section.settings.heading | escape }}</h2>{% endif %}
+      {% if section.settings.body != blank %}<div>{{ section.settings.body }}</div>{% endif %}
+    </div>
+  </div>
+  {% assign benefit_count = 0 %}
+  {% for block in section.blocks %}{% if block.settings.heading != blank %}{% assign benefit_count = benefit_count | plus: 1 %}{% endif %}{% endfor %}
+  {% if benefit_count > 0 %}
+    <ul class="bpm-benefits__list">
+      {% for block in section.blocks %}
+        {% if block.settings.heading != blank %}
+          <li {{ block.shopify_attributes }}>
+            {% if block.settings.image != blank %}
+              {{ block.settings.image | image_url: width: 270 | image_tag: widths: '90, 180, 270', sizes: '90px', loading: 'lazy', alt: '', class: 'bpm-benefits__icon' }}
+            {% elsif block.settings.icon != 'none' %}
+              {% assign icon_asset = 'bpm-benefit-' | append: block.settings.icon | append: '.png' %}
+              <img class="bpm-benefits__icon{% if block.settings.icon == 'flask' %} bpm-benefits__icon--flask{% endif %}" src="{{ icon_asset | asset_url }}" width="{% if block.settings.icon == 'flask' %}89{% else %}90{% endif %}" height="96" loading="lazy" alt="">
+            {% endif %}
+            <h3>{{ block.settings.heading | escape }}</h3>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  {% endif %}
+</section>
+{% stylesheet %}
+.bpm-benefits{background:var(--benefits-bg);color:var(--benefits-text);padding:21px 27px 45px}
+.bpm-benefits__panel{min-height:616px;background:var(--benefits-panel);border-radius:var(--bpm-radius);display:flex;align-items:center;justify-content:center;padding:28px 24px 0}
+.bpm-benefits__copy{width:1034px;max-width:100%;text-align:center}
+.bpm-benefits h2{font-size:56px;text-transform:uppercase;margin-bottom:30px;overflow-wrap:anywhere}
+.bpm-benefits__copy>div{font-size:40px;line-height:1.5;letter-spacing:-.2px}
+.bpm-benefits__copy p+p{margin-top:1em}
+.bpm-benefits__list{display:grid;grid-template-columns:repeat(3,309px);justify-content:space-between;row-gap:32px;padding-inline:86px;margin-top:39px}
+.bpm-benefits__list>li{display:flex;gap:13px;align-items:center;color:var(--benefits-label);min-width:0}
+.bpm-benefits__icon{width:90px;height:96px;object-fit:cover;flex-shrink:0}
+.bpm-benefits__icon--flask{width:89px}
+.bpm-benefits h3{font-size:23px;line-height:1;overflow-wrap:anywhere}
+@media(max-width:1300px){.bpm-benefits__list{padding-inline:24px;grid-template-columns:repeat(3,minmax(0,1fr));column-gap:32px}.bpm-benefits__icon{width:70px;height:75px}.bpm-benefits h3{font-size:20px}}
+@media(max-width:1000px){.bpm-benefits__panel{min-height:440px;padding:56px 24px}.bpm-benefits h2{font-size:40px}.bpm-benefits__copy>div{font-size:28px}.bpm-benefits__list{padding:0;column-gap:24px}.bpm-benefits__list>li{flex-direction:column;text-align:center}}
+@media(max-width:640px){.bpm-benefits{padding:16px 16px 32px}.bpm-benefits__panel{min-height:0;padding:64px 20px}.bpm-benefits h2{font-size:32px;margin-bottom:24px}.bpm-benefits__copy>div{font-size:22px}.bpm-benefits__list{grid-template-columns:1fr;gap:24px;margin-top:32px}.bpm-benefits__list>li{flex-direction:row;text-align:left;max-width:309px;margin-inline:auto;width:100%}.bpm-benefits__icon{width:70px;height:75px}.bpm-benefits h3{font-size:22px}}
+{% endstylesheet %}
+{% schema %}
+{
+  "name": "BPM benefit panel",
+  "max_blocks": 9,
+  "settings": [
+    { "type": "paragraph", "content": "Publish only approved ingredient, skin and performance claims. Benefits remain empty until you add approved content." },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Made for every body" },
+    { "type": "richtext", "id": "body", "label": "Description" },
+    { "type": "color", "id": "background", "label": "Background", "default": "#f157b7" },
+    { "type": "color", "id": "panel_color", "label": "Panel", "default": "#ffffff" },
+    { "type": "color", "id": "text_color", "label": "Panel text", "default": "#231f20" },
+    { "type": "color", "id": "label_color", "label": "Benefit text", "default": "#ffffff" }
+  ],
+  "blocks": [{
+    "type": "benefit", "name": "Benefit", "settings": [
+      { "type": "text", "id": "heading", "label": "Approved benefit" },
+      { "type": "select", "id": "icon", "label": "Original Figma icon", "options": [{ "value": "flask", "label": "Flask" }, { "value": "leaf", "label": "Leaf" }, { "value": "fresh", "label": "Freshness" }, { "value": "none", "label": "No icon" }], "default": "none" },
+      { "type": "image_picker", "id": "image", "label": "Icon override" }
+    ]
+  }],
+  "presets": [{ "name": "BPM benefit panel" }]
+}
+{% endschema %}

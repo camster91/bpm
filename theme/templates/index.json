@@ -25,10 +25,30 @@
         "bergamot",
         "unscented"
       ]
+    },
+    "benefits": {
+      "type": "bpm-benefits",
+      "disabled": true,
+      "settings": {}
+    },
+    "faq": {
+      "type": "bpm-faq",
+      "disabled": true,
+      "settings": {}
+    },
+    "reviews": {
+      "type": "bpm-app-region",
+      "disabled": true,
+      "settings": {
+        "heading": "Customer reviews"
+      }
     }
   },
   "order": [
     "hero",
-    "lineup"
+    "lineup",
+    "benefits",
+    "reviews",
+    "faq"
   ]
 }

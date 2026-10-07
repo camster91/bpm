@@ -33,14 +33,21 @@ async function section(name, overrides = {}, blocks = []) {
   const source = await readFile(join(theme, 'sections', `${name}.liquid`), 'utf8');
   const schema = JSON.parse(source.match(/{%\s*schema\s*%}([\s\S]*?){%\s*endschema\s*%}/)[1]);
   const values = Object.fromEntries(schema.settings.filter(field => field.id).map(field => [field.id, field.default]));
-  return engine.parseAndRender(clean(source), { ...common, section: { settings: { ...values, ...overrides }, blocks } });
+  return engine.parseAndRender(clean(source), { ...common, section: { id: `preview-${name}`, settings: { ...values, ...overrides }, blocks } });
 }
 const header = await section('bpm-announcement', { text: 'Now Shipping Canada Wide | Hand Made' }) + await section('bpm-header', { menu });
 const footer = await section('bpm-footer', { menu });
 const hero = await section('bpm-hero', { heading: 'Elevated', accent_heading: 'Protection', final_heading: 'for Every Day.', body: '<p>Clean, dependable protection designed for daily wear, combining skin-safe ingredients with long-lasting freshness you can trust.</p>', button_label: 'Shop Deodorants' });
 const lineup = await section('bpm-product-lineup', {}, [{ settings: { product: { title: 'Bergamot + Lime — fixture', url: '/products/fixture-bergamot', price: 1800, available: true, featured_image: {src: '/assets/bpm-footer-bergamot.png'} }, image_treatment: 'figma', background: '#acb228' } }, { settings: { product: { title: 'Unscented — fixture', url: '/products/fixture-unscented', price: 2000, available: false, featured_image: {src: '/assets/bpm-footer-unscented.png'} }, image_treatment: 'figma', background: '#228782' } }]);
-common.content_for_layout = hero + lineup;
+const benefits = await section('bpm-benefits', { body: '<p>BPM is for everyone. Whether you’re heading to work, hitting the gym, chasing deadlines, or juggling family life, BPM fits seamlessly into your day.</p>' }, [{ settings: {heading:'Free From Harmful Chemicals', icon:'flask'} }, {settings:{heading:'Skin-Safe Ingredients',icon:'leaf'}}, {settings:{heading:'Long-Lasting Freshness',icon:'fresh'}}]);
+const faq = await section('bpm-faq', {}, [
+  { settings: { question: 'Is BPM Deodorant aluminum-free?', answer: '<p>Yes. All BPM formulas are 100% aluminum-free and designed to fight odor without blocking your body’s natural sweat process.</p>' } },
+  ...['Is BPM safe for sensitive skin?', 'Is BPM vegan and cruelty-free?', 'Does it actually last all day?'].map(question => ({settings:{question, answer:'<p>Draft answer awaiting merchant approval.</p>'}}))
+]);
+common.content_for_layout = hero + lineup + benefits + faq;
 const layout = await readFile(join(theme, 'layout/theme.liquid'), 'utf8');
 const code = layout.replace(/{%\s*sections 'header-group'\s*%}/, '{{ preview_header }}').replace(/{%\s*sections 'footer-group'\s*%}/, '{{ preview_footer }}').replace(/{%\s*style\s*%}/g, '<style>').replace(/{%\s*endstyle\s*%}/g, '</style>');
 await writeFile(join(output, 'index.html'), (await engine.parseAndRender(code, { ...common, preview_header: header, preview_footer: footer })).replace('</head>', `<style>${styles.join('\n')}</style></head>`));
+const isolated = (await engine.parseAndRender(code, { ...common, content_for_layout: benefits + faq, preview_header: '', preview_footer: '', page_title: 'BPM section comparison — draft fixtures' })).replace('</head>', `<style>${styles.join('\n')}</style></head>`);
+await writeFile(join(output, 'sections.html'), isolated);
 console.log(`Local fabricated-data chrome preview: ${output}/index.html. This does not emulate Shopify commerce or editor APIs.`);
