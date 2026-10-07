@@ -1,5 +1,7 @@
 # Latest audit checkpoint
 
+Local repair update: `theme-baseline-fixes.md` and `patches/theme-baseline-fixes.patch`. Separate protected candidate now passes Theme Check (0 errors, 3 documented warnings) and 15 fabricated rendering cases. Original backup hashes unchanged; patch applies cleanly. No remote action. Next gate is isolated rendered/commerce preview QA and #28 owner decisions; static checks do not establish those outcomes.
+
 Export approval received and executed: 404 source files, verified protected archive/manifest, Dawn 15.4.1 confirmed. Actual local Theme Check fails on the unchanged baseline (9 errors/11 warnings). `theme-export-audit.md` records backup/source/CI evidence and next gaps. The previous export-confirmation blockers below are superseded. No development upload, push, merge, live edit or client acceptance occurred. Next: separate local candidate preparation/source remediation, complete app/source mappings and resolve #28 client decisions before template sign-off.
 
 Local work remains on `work/recover-original-source`, unpushed; draft PR #12 does not include these audit commits. Latest work reconciles native page/article assignments and inspects narrow product source dependencies.

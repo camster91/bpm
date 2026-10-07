@@ -1,5 +1,7 @@
 # Static checks — #15
 
+Authorized local candidate repairs now pass full Theme Check: zero errors/three explicit warnings. Fifteen rendering fixtures pass; see `theme-baseline-fixes.md` and `scripts/test-theme-baseline-fixes.mjs`. The original baseline failure report below is retained for comparison. Theme Check CI and remote preview/commerce verification remain open.
+
 Protected exported Dawn 15.4.1 now has an actual local Theme Check baseline: exit 1, 9 errors/11 warnings, no auto-correction/source edits. See `theme-export-audit.md`. This supersedes the earlier no-source status below. Candidate remediation and GitHub Theme Check CI remain open.
 
 `npm run check` verifies recovered-file hashes, JavaScript syntax, builds the reference Worker, tests the comment API and checks page/internal-target responses. `.github/workflows/reference-checks.yml` runs the same command on PRs and relevant branches, with read-only repository permissions and no Shopify credentials or deployment step.
