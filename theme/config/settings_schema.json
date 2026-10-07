@@ -1,0 +1,75 @@
+[
+  {
+    "name": "theme_info",
+    "theme_name": "BPM Custom",
+    "theme_version": "0.1.0",
+    "theme_author": "BPM",
+    "theme_documentation_url": "https://github.com/camster91/bpm",
+    "theme_support_url": "https://github.com/camster91/bpm/issues"
+  },
+  {
+    "name": "Brand and layout",
+    "settings": [
+      {
+        "type": "paragraph",
+        "content": "Changes affect the whole store. This custom theme is in development; design and content acceptance are still required."
+      },
+      {
+        "type": "color",
+        "id": "ink",
+        "label": "Text and dark background",
+        "default": "#231f20"
+      },
+      {
+        "type": "color",
+        "id": "pink",
+        "label": "Pink accent",
+        "default": "#f157b7"
+      },
+      {
+        "type": "color",
+        "id": "cream",
+        "label": "Cream accent",
+        "default": "#fff9b3"
+      },
+      {
+        "type": "color",
+        "id": "lime",
+        "label": "Bergamot palette",
+        "default": "#acb228"
+      },
+      {
+        "type": "color",
+        "id": "teal",
+        "label": "Unscented palette",
+        "default": "#228782"
+      },
+      {
+        "type": "color",
+        "id": "surface",
+        "label": "Page background",
+        "default": "#ffffff"
+      },
+      {
+        "type": "range",
+        "id": "content_width",
+        "label": "Content width",
+        "min": 960,
+        "max": 1600,
+        "step": 16,
+        "default": 1312,
+        "unit": "px"
+      },
+      {
+        "type": "range",
+        "id": "card_radius",
+        "label": "Card corner radius",
+        "min": 0,
+        "max": 32,
+        "step": 2,
+        "default": 16,
+        "unit": "px"
+      }
+    ]
+  }
+]

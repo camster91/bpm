@@ -1,5 +1,7 @@
 # Development-theme upload review — 7 October 2026
 
+Superseded for the new custom-theme objective: the command below targets the repaired existing Dawn baseline, not the custom theme now being built in `theme/`. It was never executed. Do not use this command as evidence that the full Figma redesign is upload-ready; prepare a new bounded command for the custom theme after its readiness review.
+
 Cameron requested code review and authorised a development theme as the intended upload environment. The candidate is the existing Dawn 15.4.1 theme with thirteen local baseline repairs, not the recovered full-site HTML redesign converted to Shopify sections. The full protected candidate remains outside Git.
 
 ## Verified in this review
