@@ -7,7 +7,7 @@ const output = resolve(process.argv[2] || '/tmp/bpm-chrome-preview');
 await mkdir(output, { recursive: true });
 await symlink(join(theme, 'assets'), join(output, 'assets')).catch(error => { if (error.code !== 'EEXIST') throw error; });
 const styles = [];
-const clean = text => text.replace(/{%\s*(schema|doc)\s*%}[\s\S]*?{%\s*end\1\s*%}/g, '').replace(/{%\s*stylesheet\s*%}([\s\S]*?){%\s*endstylesheet\s*%}/g, (_, css) => { styles.push(css); return ''; });
+const clean = text => text.replace(/{%\s*form[^%]*%}/g, '<form class="preview-form" method="post" action="/local-fixture-newsletter">').replace(/{%\s*endform\s*%}/g, '</form>').replace(/{%\s*(schema|doc)\s*%}[\s\S]*?{%\s*end\1\s*%}/g, '').replace(/{%\s*stylesheet\s*%}([\s\S]*?){%\s*endstylesheet\s*%}/g, (_, css) => { styles.push(css); return ''; });
 for (const name of ['bpm-navigation', 'bpm-product-card', 'bpm-sites-links', 'bpm-sites-card']) await writeFile(join(output, `${name}.liquid`), clean(await readFile(join(theme, 'snippets', `${name}.liquid`), 'utf8')));
 const engine = new Liquid({ root: output, extname: '.liquid' });
 const locale = JSON.parse(await readFile(join(theme, 'locales/en.default.json'), 'utf8'));
@@ -29,7 +29,7 @@ for (const group of JSON.parse(await readFile(join(theme, 'config/settings_schem
   for (const field of group.settings || []) if (field.id) settings[field.id] = field.default;
 }
 const menu = { links: [{ title: 'Home', url: '/' }, { title: 'Shop', url: '/collections/all' }, { title: 'About Us', url: '/pages/about-us' }, { title: 'Contact Us', url: '/pages/contact' }] };
-const common = { settings, shop: { name: 'BPM Deodorant', customer_accounts_enabled: true }, routes: { root_url: '/', account_url: '/account', cart_url: '/cart', all_products_collection_url: '/collections/all' }, cart: { item_count: 0 }, request: { page_type: 'index', locale: { iso_code: 'en' } }, page_title: 'BPM chrome preview', current_page: 1, canonical_url: 'http://127.0.0.1:8892/', content_for_header: '', content_for_layout: '' };
+const common = { settings, shop: { name: 'BPM Deodorant', customer_accounts_enabled: true }, routes: { root_url: '/', account_url: '/account', cart_url: '/cart', all_products_collection_url: '/collections/all' }, cart: { item_count: 0, currency: {iso_code: 'CAD'} }, request: { page_type: 'index', locale: { iso_code: 'en' } }, page_title: 'BPM chrome preview', current_page: 1, canonical_url: 'http://127.0.0.1:8892/', content_for_header: '', content_for_layout: '' };
 async function section(name, overrides = {}, blocks = []) {
   const source = await readFile(join(theme, 'sections', `${name}.liquid`), 'utf8');
   const schema = JSON.parse(source.match(/{%\s*schema\s*%}([\s\S]*?){%\s*endschema\s*%}/)[1]);
@@ -78,10 +78,12 @@ await writeFile(join(output,'sites-home.html'), sitesHome);
 
 const homeTemplate = JSON.parse(await readFile(join(theme,'templates/index.json'),'utf8'));
 let sitesContent = sitesHero + sitesRhythm + sitesTracks + sitesTexture;
-for (const id of ['bundles','formula','story','ownership','journal','faq','closing']) {
+for (const id of ['bundles','formula','story','ownership','value','journal','faq','newsletter','closing']) {
  const configured = homeTemplate.sections[id];
  const blocks = (configured.block_order || []).map(key=>configured.blocks[key]);
  const previewBlocks = id === 'bundles' ? blocks.map((block,i)=>({...block,settings:{...block.settings,...Object.fromEntries(Array.from({length:i===0?2:4},(_,n)=>["image_"+(n+1),{src:n<(i===0?1:2)?"/fixture-bergamot.svg":"/fixture-unscented.svg",alt: n<(i===0?1:2)?"Bergamot & Lime carton":"Unscented carton"}])),product:{title:`Bundle ${i+1} — fixture`,url:`/products/fixture-bundle-${i}`,price:i===0?3999:7498,available:true,featured_image:{src:'/fixture-bergamot.svg'}}}})) : id === 'journal' ? blocks.map((block,i)=>({...block,settings:{...block.settings,article:{title:`Article ${i+1} — fixture`,url:`/blogs/fixture/article-${i}`,published_at:'2026-09-26T12:00:00-04:00'}}})) : blocks;
- sitesContent += await section(configured.type,configured.settings,previewBlocks);
+ sitesContent += await section(configured.type,id === 'value' ? {...configured.settings,product:{title:'Single tube — fixture',price:2399,price_varies:false}} : configured.settings,previewBlocks);
 }
 await writeFile(join(output,'sites-home.html'), await engine.parseAndRender(code,{...common,content_for_layout:sitesContent,preview_header:sitesHeader,preview_footer:sitesFooter,page_title:'Sites homepage migration — local fixture'}));
+const newsletterPreview = await section('bpm-sites-newsletter',{mode:'shopify'});
+await writeFile(join(output,'sites-newsletter.html'),await engine.parseAndRender(code,{...common,content_for_layout:'<section class="section wrap"><h1>Local newsletter fixture</h1><p>No provider is connected in this local preview. Do not enter real contact details.</p></section>'+newsletterPreview,preview_header:sitesHeader,preview_footer:sitesFooter,page_title:'Newsletter fixture'}));

@@ -1,0 +1,83 @@
+<section class="section butter-band"><div class="wrap split"><div><div class="intro-copy">
+{% if section.settings.eyebrow != blank %}<p class="eyebrow">{{ section.settings.eyebrow | escape }}</p>{% endif %}{% if section.settings.heading != blank %}<h2>{{ section.settings.heading | escape | newline_to_br }}</h2>{% endif %}
+{% if section.settings.product != blank %}<p class="lead">{{ section.settings.product.title | escape }} · {% if section.settings.product.price_varies %}{% assign price = section.settings.product.price | money_with_currency %}{{ 'products.price_from' | t: price: price }}{% else %}{{ section.settings.product.price | money_with_currency }}{% endif %}</p>{% endif %}
+{% if section.settings.body != blank %}<p class="lead">{{ section.settings.body | escape }}</p>{% endif %}</div></div>
+<div class="pricing-notes">{% if section.settings.quantity != blank %}<div><strong>{{ section.settings.quantity | escape }}</strong><span>{{ section.settings.quantity_label | escape }}</span></div>{% endif %}
+{% if section.settings.applications > 0 %}<div><strong>≈ {{ section.settings.applications }}</strong><span>{{ section.settings.applications_label | escape }}</span></div>
+{% if section.settings.product != blank and section.settings.product.price_varies == false %}{% assign divisor = section.settings.applications | times: 1.0 %}{% assign estimate = section.settings.product.price | divided_by: divisor %}<div><strong>≈ {% if cart.currency.iso_code == 'CAD' or cart.currency.iso_code == 'USD' %}{{ estimate | times: 10 | round | divided_by: 10.0 }}¢{% else %}{{ estimate | money }}{% endif %}</strong><span>{{ section.settings.estimate_label | escape }}{% if cart.currency.iso_code != blank %} ({{ cart.currency.iso_code | escape }}){% endif %}</span></div>{% endif %}{% endif %}
+{% if section.settings.note != blank %}<p class="fine">{{ section.settings.note | escape }}</p>{% endif %}</div></div></section>
+{% schema %}
+{
+  "name": "BPM Sites value",
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "Select a single-size product and verify quantity/application estimates. Price comes from Shopify. A range-priced product cannot imply one application cost."
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "TRANSPARENT PRICING"
+    },
+    {
+      "type": "textarea",
+      "id": "heading",
+      "label": "Heading",
+      "default": "No green tax.\nNo mystery markup."
+    },
+    {
+      "type": "text",
+      "id": "body",
+      "label": "Copy",
+      "default": "Buying direct keeps more of the sale with the company and the product."
+    },
+    {
+      "type": "product",
+      "id": "product",
+      "label": "Single tube product"
+    },
+    {
+      "type": "text",
+      "id": "quantity",
+      "label": "Verified quantity",
+      "default": "76 g"
+    },
+    {
+      "type": "text",
+      "id": "quantity_label",
+      "label": "Quantity description",
+      "default": "in every single tube"
+    },
+    {
+      "type": "number",
+      "id": "applications",
+      "label": "Verified estimated applications",
+      "default": 304
+    },
+    {
+      "type": "text",
+      "id": "applications_label",
+      "label": "Applications description",
+      "default": "pea-sized applications"
+    },
+    {
+      "type": "text",
+      "id": "estimate_label",
+      "label": "Cost description",
+      "default": "per application"
+    },
+    {
+      "type": "text",
+      "id": "note",
+      "label": "Estimate caveat",
+      "default": "BPM\u2019s published estimates. Your amount and frequency of use may vary."
+    }
+  ],
+  "presets": [
+    {
+      "name": "BPM Sites value"
+    }
+  ]
+}
+{% endschema %}

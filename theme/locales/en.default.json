@@ -14,7 +14,8 @@
     "social_links": "Social links",
     "policies": "Policies",
     "bag": "Bag",
-    "bag_count": "Shopping bag, {{ count }} items"
+    "bag_count": "Shopping bag, {{ count }} items",
+    "privacy": "Privacy policy"
   },
   "accessibility": {
     "new_window": "Opens in a new window"
@@ -22,5 +23,8 @@
   "products": {
     "price_from": "From {{ price }}",
     "sold_out": "Sold out"
+  },
+  "newsletter": {
+    "success": "Thanks for signing up. Check your inbox for any confirmation required."
   }
 }

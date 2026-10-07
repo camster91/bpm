@@ -223,6 +223,16 @@
         "1",
         "2"
       ]
+    },
+    "value": {
+      "type": "bpm-sites-value",
+      "settings": {}
+    },
+    "newsletter": {
+      "type": "bpm-sites-newsletter",
+      "settings": {
+        "mode": "disabled"
+      }
     }
   },
   "order": [
@@ -234,8 +244,10 @@
     "formula",
     "story",
     "ownership",
+    "value",
     "journal",
     "faq",
+    "newsletter",
     "closing"
   ]
 }
