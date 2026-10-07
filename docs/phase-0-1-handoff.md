@@ -7,7 +7,8 @@ Local work remains on `work/recover-original-source`, unpushed; draft PR #12 doe
 - Still pending: #28 accepted design/version/editor expectations; #3 protected source export/backup and isolated development setup; #4/#13 exact source/app dependencies, remaining settings/values and journey verification; #14 final per-element model/help/fallback contract; #15 actual Liquid Theme Check and GitHub CI evidence. No phase is declared complete.
 - Immediate dependency: explicit confirmation for the exact read-only theme pull in `theme-workflow.md`, required by the Shopify CLI skill. Automatic goal continuation has not supplied that confirmation. Owner: Cameron. Do not run or broaden it silently.
 - Newly resolved: nine pages = four Default page plus five custom templates; all nine public articles = Default blog post. The theme editor's default counts are misleading. About Us native body is empty, so trace its visible content in source. `source-dependency-audit.md` records observed product subscription wiring and its limits.
-- Safe remaining research: product/metaobject values and remaining app/form settings. Full source and candidate-dependent checks must wait for their real prerequisites.
+- Product-value coverage: all ten editorial fields populated on all nine public products; scent/ingredients/directions differ by product. `card_color` uses tokens `1`/`2`, requiring source palette mapping. Native list includes two additional Active retailer testers with zero channels; preserve that boundary. Category labels/missing values are observed configuration, not substantiated claims.
+- Safe remaining research: remaining app/form settings. Full source and candidate-dependent checks must wait for their real prerequisites.
 
 The historical records below preserve earlier evidence and access states; use current audit documents for resolved blockers.
 
