@@ -12,7 +12,9 @@
     "copyright": "\u00a9 {{ year }} {{ shop }}. All rights reserved.",
     "search": "Search",
     "social_links": "Social links",
-    "policies": "Policies"
+    "policies": "Policies",
+    "bag": "Bag",
+    "bag_count": "Shopping bag, {{ count }} items"
   },
   "accessibility": {
     "new_window": "Opens in a new window"

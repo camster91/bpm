@@ -8,7 +8,7 @@ await mkdir(output, { recursive: true });
 await symlink(join(theme, 'assets'), join(output, 'assets')).catch(error => { if (error.code !== 'EEXIST') throw error; });
 const styles = [];
 const clean = text => text.replace(/{%\s*(schema|doc)\s*%}[\s\S]*?{%\s*end\1\s*%}/g, '').replace(/{%\s*stylesheet\s*%}([\s\S]*?){%\s*endstylesheet\s*%}/g, (_, css) => { styles.push(css); return ''; });
-for (const name of ['bpm-navigation', 'bpm-product-card']) await writeFile(join(output, `${name}.liquid`), clean(await readFile(join(theme, 'snippets', `${name}.liquid`), 'utf8')));
+for (const name of ['bpm-navigation', 'bpm-product-card', 'bpm-sites-links']) await writeFile(join(output, `${name}.liquid`), clean(await readFile(join(theme, 'snippets', `${name}.liquid`), 'utf8')));
 const engine = new Liquid({ root: output, extname: '.liquid' });
 const locale = JSON.parse(await readFile(join(theme, 'locales/en.default.json'), 'utf8'));
 engine.registerFilter('asset_url', value => `/assets/${value}`);
@@ -51,3 +51,8 @@ await writeFile(join(output, 'index.html'), (await engine.parseAndRender(code, {
 const isolated = (await engine.parseAndRender(code, { ...common, content_for_layout: benefits + faq, preview_header: '', preview_footer: '', page_title: 'BPM section comparison — draft fixtures' })).replace('</head>', `<style>${styles.join('\n')}</style></head>`);
 await writeFile(join(output, 'sections.html'), isolated);
 console.log(`Local fabricated-data chrome preview: ${output}/index.html. This does not emulate Shopify commerce or editor APIs.`);
+const sitesMenu = {links:[{title:'Shop',url:'/collections/all',current:true},{title:'Our story',url:'/pages/about'},{title:'Indigenous-owned',url:'/pages/indigenous-owned'},{title:'The Breakdown',url:'/blogs/the-breakdown'},{title:'Contact',url:'/pages/contact'}]};
+const sitesHeader = await section('bpm-sites-header', {menu:sitesMenu});
+const sitesFooter = await section('bpm-sites-footer', {menu:sitesMenu, legal_name:'Fabricated legal entity — local fixture',show_market:false});
+const sitesLayout = await engine.parseAndRender(code, {...common, content_for_layout:'<section class="section wrap"><p class="eyebrow">Local theme fixture</p><h1>Sites chrome migration</h1><p>Shared navigation and footer only. Homepage implementation is pending.</p></section>',preview_header:sitesHeader, preview_footer:sitesFooter,page_title:'Sites chrome — local fixture'});
+await writeFile(join(output,'sites-chrome.html'), sitesLayout);

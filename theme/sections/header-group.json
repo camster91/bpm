@@ -7,7 +7,7 @@
       "settings": {}
     },
     "header": {
-      "type": "bpm-header",
+      "type": "bpm-sites-header",
       "settings": {
         "menu": "main-menu"
       }

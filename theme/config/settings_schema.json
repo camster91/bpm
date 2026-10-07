@@ -30,7 +30,7 @@
         "type": "color",
         "id": "cream",
         "label": "Cream accent",
-        "default": "#fff9b3"
+        "default": "#fffde9"
       },
       {
         "type": "color",
@@ -48,7 +48,7 @@
         "type": "color",
         "id": "surface",
         "label": "Page background",
-        "default": "#ffffff"
+        "default": "#fffde9"
       },
       {
         "type": "range",
@@ -69,6 +69,18 @@
         "step": 2,
         "default": 16,
         "unit": "px"
+      },
+      {
+        "type": "color",
+        "id": "butter",
+        "label": "Butter accent",
+        "default": "#f3e4b7"
+      },
+      {
+        "type": "color",
+        "id": "orange",
+        "label": "Orange accent",
+        "default": "#ffb268"
       }
     ]
   }

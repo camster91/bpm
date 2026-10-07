@@ -3,7 +3,7 @@
   "name": "Footer",
   "sections": {
     "footer": {
-      "type": "bpm-footer",
+      "type": "bpm-sites-footer",
       "settings": {
         "menu": "main-menu"
       }

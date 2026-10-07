@@ -1,5 +1,7 @@
 > **Source correction — 7 October 2026:** Cameron selected the Sites review and `reference-site/` code and instructed not to use Figma. The foundation below is historical, incomplete work; its visual implementation is superseded. Follow `docs/shopify-redesign-plan.md` and rebuild presentation against Sites. Prior tests remain evidence for those earlier components, not proof of Sites fidelity or theme readiness. No upload/publication occurred.
 
+Current Sites migration: native editable header/footer section groups and source logo/display font/shared styles are ported. See `docs/qa/sites-foundation.md` for 24 passing local render checks, browser evidence and remaining limits. The homepage body and other templates still need migration; this is not an upload-ready complete theme.
+
 # BPM Custom theme — foundation in development
 
 This is the new repository-owned custom Shopify implementation path. It is not the recovered HTML reference or the protected repaired-Dawn candidate. Layout, global tokens, editable announcement/header/footer, photo hero, native product lineup/card, benefit panel, FAQ and native app regions are implemented. The homepage JSON enables hero and lineup, with disabled benefit/review/FAQ authoring regions pending approved content/configuration; remaining homepage sections, other page templates and commerce modules are pending. Do not publish this incomplete foundation.

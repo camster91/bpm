@@ -10,6 +10,7 @@ const locale = JSON.parse(await readFile(join(theme, 'locales/en.default.json'),
 const clean = source => source.replace(/{%\s*(schema|doc|stylesheet)\s*%}[\s\S]*?{%\s*end\1\s*%}/g, '');
 const navigation = clean(await readFile(join(theme, 'snippets/bpm-navigation.liquid'), 'utf8'));
 await writeFile(join(scratch, 'bpm-navigation.liquid'), navigation);
+await writeFile(join(scratch, 'bpm-sites-links.liquid'), clean(await readFile(join(theme, 'snippets/bpm-sites-links.liquid'), 'utf8')));
 await writeFile(join(scratch, 'bpm-product-card.liquid'), clean(await readFile(join(theme, 'snippets/bpm-product-card.liquid'), 'utf8')));
 const engine = new Liquid({ root: scratch, extname: '.liquid' });
 engine.registerFilter('money', value => '$' + (Number(value) / 100).toFixed(2));
@@ -60,6 +61,10 @@ try {
   await check('all blank benefits render no empty icon row', 'sections/bpm-benefits.liquid', {...benefits,section:{...benefits.section,blocks:[{settings:{heading:'',icon:'leaf'}}]}}, html=>assert.doesNotMatch(html,/<ul|bpm-benefit-leaf.png/));
   await check('unconfigured review app region renders no fake reviews or empty heading', 'sections/bpm-app-region.liquid', {section:{blocks:[],settings:{heading:'Customer reviews'}}}, html=>assert.equal(html.trim(),''));
   await check('empty automatic app wrapper creates no dead content region', 'sections/apps.liquid', {section:{blocks:[],settings:{}}}, html=>assert.equal(html.trim(),''));
+  await check('Sites header preserves native cart count, escaped store name and account setting', 'sections/bpm-sites-header.liquid', header, html => {assert.match(html, /Shopping bag, 5 items/);assert.match(html, /href="\/account"/);assert.match(html, /BPM &lt;draft&gt;/);assert.doesNotMatch(html,/bag.html|localStorage/);});
+  await check('Sites header omits disabled accounts and renders zero bag count', 'sections/bpm-sites-header.liquid', {...header,shop:{...shop,customer_accounts_enabled:false},cart:{item_count:0}}, html => {assert.doesNotMatch(html,/href="\/account"/);assert.match(html,/Shopping bag, 0 items/);});
+  await check('Sites nested menu preserves three levels and current state safely', 'snippets/bpm-sites-links.liquid', {menu:{links:[{title:'<unsafe>',url:'/collections/all',links:[{title:'Single',url:'/products/single',current:true,links:[{title:'Details',url:'/pages/details'}]}]}]}}, html => {assert.match(html,/&lt;unsafe&gt;/);assert.doesNotMatch(html,/<unsafe>/);assert.match(html,/aria-current="page"/);assert.match(html,/href="\/pages\/details"/);});
+  await check('Sites footer uses current market and omits unconfigured legal entity', 'sections/bpm-sites-footer.liquid', {section:{settings:{menu:{links:[]},show_market:true}},shop,routes,localization:{country:{name:'United States',currency:{iso_code:'USD'}}}}, html => {assert.match(html,/United States \/ USD/);assert.doesNotMatch(html,/Canada \/ CAD|Naturels Bold/);});
   console.log(`${passed} chrome rendering checks passed; Shopify runtime and visual geometry remain unverified.`);
 } finally {
   await rm(scratch, { recursive: true, force: true });

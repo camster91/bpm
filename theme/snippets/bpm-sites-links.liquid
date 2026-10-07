@@ -1,0 +1,24 @@
+{% doc %}
+Renders native menu links and nested disclosures using the Sites design.
+@param {linklist} menu - Native navigation menu
+@example
+{% render 'bpm-sites-links', menu: section.settings.menu %}
+{% enddoc %}
+{% for link in menu.links %}
+  <li>
+    {% if link.links != blank %}
+      <details class="bpm-nav-disclosure">
+        <summary>{{ link.title | escape }}</summary>
+        <ul><li><a href="{{ link.url }}"{% if link.current %} aria-current="page"{% endif %}>{{ link.title | escape }}</a></li>
+          {% for child in link.links %}
+            <li><a href="{{ child.url }}"{% if child.current %} aria-current="page"{% endif %}>{{ child.title | escape }}</a>
+              {% if child.links != blank %}<ul>{% for grandchild in child.links %}<li><a href="{{ grandchild.url }}"{% if grandchild.current %} aria-current="page"{% endif %}>{{ grandchild.title | escape }}</a></li>{% endfor %}</ul>{% endif %}
+            </li>
+          {% endfor %}
+        </ul>
+      </details>
+    {% else %}
+      <a href="{{ link.url }}"{% if link.current %} aria-current="page"{% endif %}>{{ link.title | escape }}{{ link.data_sharing_opt_out_icon }}</a>
+    {% endif %}
+  </li>
+{% endfor %}
