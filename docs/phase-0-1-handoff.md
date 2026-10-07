@@ -19,3 +19,7 @@ Cameron: complete Shopify passkey verification or reconnect the Shopify connecto
 Cameron/Corey: agree #28 design reference/version, outstanding copy/design feedback and editor expectations. Positive feedback has not been treated as final acceptance. No message sent.
 
 No Phase 0/1 issue is represented as completed solely by these documents. No GitHub issues or canonical Notion status were edited. Notion access discovery remains unavailable in the exposed connector tools; locate the existing canonical BPM record when available. Push/PR changes, merging and production publication remain separate actions. Next internal work while access is pending: extend public URL/content coverage and record source conflicts; avoid turning incomplete public evidence into installed-app or backend claims.
+
+## Expanded audit continuation
+
+Public URL audit now covers 45 responding routes, including nine articles and nine collections. The ninth article is not in the frozen preview. Agentic discovery exists publicly but does not identify the installed app. See `public-audit-findings.md`. Connector reauthentication and browser passkey verification were rechecked and remain blocked. No authenticated audit completion is claimed.

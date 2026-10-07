@@ -30,3 +30,7 @@ No public `available` value is treated as stock-on-hand. No add-to-cart, order, 
 ## Still required for #13 completion
 
 Authenticated template/file inventory, menus, metafields/metaobjects, selling plans, Markets, app embeds/blocks, redirects, forms/providers and policy configuration. Public page coverage is preliminary; every live template must be classified after theme export. Keep/change/remove decisions remain preserve-by-default until approved changes exist. Current HTML and speculative script matches do not prove feature functionality.
+
+## Expanded public URL inventory
+
+45 public routes now recorded with owner issues and preserve-by-default decisions. Nine current articles include one absent from the frozen reference. See [public reconciliation findings](public-audit-findings.md) and `public-url-inventory.json`; authenticated template coverage remains unverified.
