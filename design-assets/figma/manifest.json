@@ -1,0 +1,1657 @@
+{
+  "file_key": "REGkhZvykpOP4XmN7EKSnh",
+  "retrieved_date": "2026-10-07",
+  "assets": [
+    {
+      "context": "contact-42-1518.txt",
+      "variable": "imgUnscented2",
+      "local_path": "design-assets/figma/sources/766bf59c1b4fd2f7d0e40b3bf01b56fc365b97646392ce85539455182bdab622.png",
+      "status": "downloaded",
+      "bytes": 6392068,
+      "sha256": "766bf59c1b4fd2f7d0e40b3bf01b56fc365b97646392ce85539455182bdab622",
+      "source_dimensions": {
+        "format": "png",
+        "width": 4096,
+        "height": 4096
+      }
+    },
+    {
+      "context": "contact-42-1518.txt",
+      "variable": "imgTubeV2",
+      "local_path": "design-assets/figma/sources/c95dadf82130e8ecc6b327d49cc191cfd1d2a5db6aac3951df4837f612eda52e.png",
+      "status": "downloaded",
+      "bytes": 1442639,
+      "sha256": "c95dadf82130e8ecc6b327d49cc191cfd1d2a5db6aac3951df4837f612eda52e",
+      "source_dimensions": {
+        "format": "png",
+        "width": 4000,
+        "height": 4000
+      }
+    },
+    {
+      "context": "contact-42-1518.txt",
+      "variable": "img54241KraftBoxMockup2",
+      "local_path": "design-assets/figma/sources/7f3bfec3a6402163303d6de498a2ab1e1d30211b4fd1a7033c9ead50218770fa.png",
+      "status": "downloaded",
+      "bytes": 6359552,
+      "sha256": "7f3bfec3a6402163303d6de498a2ab1e1d30211b4fd1a7033c9ead50218770fa",
+      "source_dimensions": {
+        "format": "png",
+        "width": 4096,
+        "height": 4096
+      }
+    },
+    {
+      "context": "contact-42-1518.txt",
+      "variable": "imgRectangle46",
+      "local_path": "design-assets/figma/sources/007044678ac1520fed5b7b0a64ac2a6ed0b00c06ed6f7aa032f748c22a413e3b.png",
+      "status": "downloaded",
+      "bytes": 8223073,
+      "sha256": "007044678ac1520fed5b7b0a64ac2a6ed0b00c06ed6f7aa032f748c22a413e3b",
+      "source_dimensions": {
+        "format": "png",
+        "width": 1952,
+        "height": 2208
+      }
+    },
+    {
+      "context": "contact-42-1518.txt",
+      "variable": "imgLayer1",
+      "local_path": "design-assets/figma/sources/ab23715734df742d6b7a6798797323170caff179634d0a34473670d2559c60a7.svg",
+      "status": "downloaded",
+      "bytes": 1506,
+      "sha256": "ab23715734df742d6b7a6798797323170caff179634d0a34473670d2559c60a7",
+      "source_dimensions": {
+        "format": "svg",
+        "width": "85.4239",
+        "height": "84",
+        "viewBox": "0 0 85.4239 84"
+      }
+    },
+    {
+      "context": "contact-42-1518.txt",
+      "variable": "imgMdiUserOutline",
+      "local_path": "design-assets/figma/sources/b1bbb28a0bc051a3a8ee26f705e6400b6c75eea230aa7074a6fbda7c5aaeb2db.svg",
+      "status": "downloaded",
+      "bytes": 1181,
+      "sha256": "b1bbb28a0bc051a3a8ee26f705e6400b6c75eea230aa7074a6fbda7c5aaeb2db",
+      "source_dimensions": {
+        "format": "svg",
+        "width": "32",
+        "height": "32",
+        "viewBox": "0 0 32 32"
+      }
+    },
+    {
+      "context": "contact-42-1518.txt",
+      "variable": "imgMdiCartOutline",
+      "local_path": "design-assets/figma/sources/0a2f1a4672e297062785c296e7c19d8c37f529186744e2f2e6c8465913452d85.svg",
+      "status": "downloaded",
+      "bytes": 1536,
+      "sha256": "0a2f1a4672e297062785c296e7c19d8c37f529186744e2f2e6c8465913452d85",
+      "source_dimensions": {
+        "format": "svg",
+        "width": "32",
+        "height": "32",
+        "viewBox": "0 0 32 32"
+      }
+    },
+    {
+      "context": "contact-42-1518.txt",
+      "variable": "imgVector1",
+      "local_path": "design-assets/figma/sources/205de8dd40154f3d3b42bc2662dd7d910bf1d4dbc3562411f65970729031cde2.svg",
+      "status": "downloaded",
+      "bytes": 367,
+      "sha256": "205de8dd40154f3d3b42bc2662dd7d910bf1d4dbc3562411f65970729031cde2",
+      "source_dimensions": {
+        "format": "svg",
+        "width": "1043.47",
+        "height": "506.017",
+        "viewBox": "0 0 1043.47 506.017"
+      }
+    },
+    {
+      "context": "contact-42-1518.txt",
+      "variable": "imgVector2",
+      "local_path": "design-assets/figma/sources/16e7f3c865d103f258fe2d7fe85e057c6c3b146b4b2cddbe8860e30e65b35e70.svg",
+      "status": "downloaded",
+      "bytes": 367,
+      "sha256": "16e7f3c865d103f258fe2d7fe85e057c6c3b146b4b2cddbe8860e30e65b35e70",
+      "source_dimensions": {
+        "format": "svg",
+        "width": "1043.47",
+        "height": "506.017",
+        "viewBox": "0 0 1043.47 506.017"
+      }
+    },
+    {
+      "context": "contact-42-1518.txt",
+      "variable": "imgSolarArrowUpOutline",
+      "local_path": "design-assets/figma/sources/183c58cbb7b4e44bf7f9a52eab20477f4bac99b41f3097c93f5ff9280e1d1540.svg",
+      "status": "downloaded",
+      "bytes": 1431,
+      "sha256": "183c58cbb7b4e44bf7f9a52eab20477f4bac99b41f3097c93f5ff9280e1d1540",
+      "source_dimensions": {
+        "format": "svg",
+        "width": "24",
+        "height": "24",
+        "viewBox": "0 0 24 24"
+      }
+    },
+    {
+      "context": "contact-42-1518.txt",
+      "variable": "imgLayer2",
+      "local_path": "design-assets/figma/sources/2aecb836b0a29a8cf79bf8340cfff02ca02dc6a6faf377d68152bd81f5d1f205.svg",
+      "status": "downloaded",
+      "bytes": 1523,
+      "sha256": "2aecb836b0a29a8cf79bf8340cfff02ca02dc6a6faf377d68152bd81f5d1f205",
+      "source_dimensions": {
+        "format": "svg",
+        "width": "165.763",
+        "height": "163",
+        "viewBox": "0 0 165.763 163"
+      }
+    },
+    {
+      "context": "contact-42-1518.txt",
+      "variable": "imgIconIoniconsLogosLogoFacebook",
+      "local_path": "design-assets/figma/sources/bfb1e83af6f38c7eb8dc9e0ae47e47ee1278f82999f71a5a0d57984509a6e0f1.svg",
+      "status": "downloaded",
+      "bytes": 728,
+      "sha256": "bfb1e83af6f38c7eb8dc9e0ae47e47ee1278f82999f71a5a0d57984509a6e0f1",
+      "source_dimensions": {
+        "format": "svg",
+        "width": "24",
+        "height": "24",
+        "viewBox": "0 0 24 24"
+      }
+    },
+    {
+      "context": "contact-42-1518.txt",
+      "variable": "imgIconIoniconsLogosLogoTwitter",
+      "local_path": "design-assets/figma/sources/fdb830386379b842f88b99cbe8443bceef6b10210c1e0e6dca7e165b92edb459.svg",
+      "status": "downloaded",
+      "bytes": 1297,
+      "sha256": "fdb830386379b842f88b99cbe8443bceef6b10210c1e0e6dca7e165b92edb459",
+      "source_dimensions": {
+        "format": "svg",
+        "width": "24",
+        "height": "24",
+        "viewBox": "0 0 24 24"
+      }
+    },
+    {
+      "context": "contact-42-1518.txt",
+      "variable": "imgIconIoniconsLogosLogoInstagram",
+      "local_path": "design-assets/figma/sources/46d7079a57fc13d0377932a43284b2085bd2fce88a95d34e51cc13f5cace90fc.svg",
+      "status": "downloaded",
+      "bytes": 2526,
+      "sha256": "46d7079a57fc13d0377932a43284b2085bd2fce88a95d34e51cc13f5cace90fc",
+      "source_dimensions": {
+        "format": "svg",
+        "width": "24",
+        "height": "24",
+        "viewBox": "0 0 24 24"
+      }
+    },
+    {
+      "context": "contact-42-1518.txt",
+      "variable": "imgSolarArrowUpOutline1",
+      "local_path": "design-assets/figma/sources/56f8eeca4baf9166c6543cff04cf352f8c15dfe56b0318754f28d94e74246290.svg",
+      "status": "downloaded",
+      "bytes": 1402,
+      "sha256": "56f8eeca4baf9166c6543cff04cf352f8c15dfe56b0318754f28d94e74246290",
+      "source_dimensions": {
+        "format": "svg",
+        "width": "24",
+        "height": "24",
+        "viewBox": "0 0 24 24"
+      }
+    },
+    {
+      "context": "contact-42-1518.txt",
+      "variable": "imgMaterialSymbolsAddRounded",
+      "local_path": "design-assets/figma/sources/bba16c93f2c9bebd4e9d63dc7ce73233b7c21861875d797de8c751434f0bbb46.svg",
+      "status": "downloaded",
+      "bytes": 1139,
+      "sha256": "bba16c93f2c9bebd4e9d63dc7ce73233b7c21861875d797de8c751434f0bbb46",
+      "source_dimensions": {
+        "format": "svg",
+        "width": "24",
+        "height": "24",
+        "viewBox": "0 0 24 24"
+      }
+    },
+    {
+      "context": "contact-42-1518.txt",
+      "variable": "imgMaterialSymbolsAddRounded1",
+      "local_path": "design-assets/figma/sources/76b1cc86eb58e038a63eb381fcbc877fcba5628cf4309e81f991dfbc0f7cf070.svg",
+      "status": "downloaded",
+      "bytes": 997,
+      "sha256": "76b1cc86eb58e038a63eb381fcbc877fcba5628cf4309e81f991dfbc0f7cf070",
+      "source_dimensions": {
+        "format": "svg",
+        "width": "24",
+        "height": "24",
+        "viewBox": "0 0 24 24"
+      }
+    },
+    {
+      "context": "contact-42-1518.txt",
+      "variable": "imgMaterialSymbolsMail",
+      "local_path": "design-assets/figma/sources/46f805c244380605f8087f045dc0ca8bbaf3f77d2615a39f5b6101ff546b9d9d.svg",
+      "status": "downloaded",
+      "bytes": 577,
+      "sha256": "46f805c244380605f8087f045dc0ca8bbaf3f77d2615a39f5b6101ff546b9d9d",
+      "source_dimensions": {
+        "format": "svg",
+        "width": "24",
+        "height": "24",
+        "viewBox": "0 0 24 24"
+      }
+    },
+    {
+      "context": "product-42-1635.txt",
+      "variable": "imgUnscented2",
+      "local_path": "design-assets/figma/sources/766bf59c1b4fd2f7d0e40b3bf01b56fc365b97646392ce85539455182bdab622.png",
+      "status": "downloaded",
+      "bytes": 6392068,
+      "sha256": "766bf59c1b4fd2f7d0e40b3bf01b56fc365b97646392ce85539455182bdab622",
+      "source_dimensions": {
+        "format": "png",
+        "width": 4096,
+        "height": 4096
+      }
+    },
+    {
+      "context": "product-42-1635.txt",
+      "variable": "imgTubeV2",
+      "local_path": "design-assets/figma/sources/c95dadf82130e8ecc6b327d49cc191cfd1d2a5db6aac3951df4837f612eda52e.png",
+      "status": "downloaded",
+      "bytes": 1442639,
+      "sha256": "c95dadf82130e8ecc6b327d49cc191cfd1d2a5db6aac3951df4837f612eda52e",
+      "source_dimensions": {
+        "format": "png",
+        "width": 4000,
+        "height": 4000
+      }
+    },
+    {
+      "context": "product-42-1635.txt",
+      "variable": "img54241KraftBoxMockup2",
+      "local_path": "design-assets/figma/sources/7f3bfec3a6402163303d6de498a2ab1e1d30211b4fd1a7033c9ead50218770fa.png",
+      "status": "downloaded",
+      "bytes": 6359552,
+      "sha256": "7f3bfec3a6402163303d6de498a2ab1e1d30211b4fd1a7033c9ead50218770fa",
+      "source_dimensions": {
+        "format": "png",
+        "width": 4096,
+        "height": 4096
+      }
+    },
+    {
+      "context": "product-42-1635.txt",
+      "variable": "imgEllipse11",
+      "local_path": "design-assets/figma/sources/7ae86e6483d72df088aa9d57a24272d2e8ac5d0a9f3498c22198fc4a77d2c69f.png",
+      "status": "downloaded",
+      "bytes": 22062,
+      "sha256": "7ae86e6483d72df088aa9d57a24272d2e8ac5d0a9f3498c22198fc4a77d2c69f",
+      "source_dimensions": {
+        "format": "png",
+        "width": 112,
+        "height": 112
+      }
+    },
+    {
+      "context": "product-42-1635.txt",
+      "variable": "imgEllipse12",
+      "local_path": "design-assets/figma/sources/401faae002eac52838f1df73b662c1cd294666e45e5c599760ce6f9326decc2e.png",
+      "status": "downloaded",
+      "bytes": 17253,
+      "sha256": "401faae002eac52838f1df73b662c1cd294666e45e5c599760ce6f9326decc2e",
+      "source_dimensions": {
+        "format": "png",
+        "width": 112,
+        "height": 112
+      }
+    },
+    {
+      "context": "product-42-1635.txt",
+      "variable": "imgEllipse13",
+      "local_path": "design-assets/figma/sources/0add938b802c2f435ccc9140480049431f7f1d04c770ff4bbbde90066f0fc514.png",
+      "status": "downloaded",
+      "bytes": 20987,
+      "sha256": "0add938b802c2f435ccc9140480049431f7f1d04c770ff4bbbde90066f0fc514",
+      "source_dimensions": {
+        "format": "png",
+        "width": 112,
+        "height": 112
+      }
+    },
+    {
+      "context": "product-42-1635.txt",
+      "variable": "imgLayer1",
+      "local_path": "design-assets/figma/sources/088f8c052091a7c8ef9c7d1122d98acd2ed7592a520c7bd412bf64af1c470287.svg",
+      "status": "downloaded",
+      "bytes": 1506,
+      "sha256": "088f8c052091a7c8ef9c7d1122d98acd2ed7592a520c7bd412bf64af1c470287",
+      "source_dimensions": {
+        "format": "svg",
+        "width": "85.4239",
+        "height": "84",
+        "viewBox": "0 0 85.4239 84"
+      }
+    },
+    {
+      "context": "product-42-1635.txt",
+      "variable": "imgMdiUserOutline",
+      "local_path": "design-assets/figma/sources/b1bbb28a0bc051a3a8ee26f705e6400b6c75eea230aa7074a6fbda7c5aaeb2db.svg",
+      "status": "downloaded",
+      "bytes": 1181,
+      "sha256": "b1bbb28a0bc051a3a8ee26f705e6400b6c75eea230aa7074a6fbda7c5aaeb2db",
+      "source_dimensions": {
+        "format": "svg",
+        "width": "32",
+        "height": "32",
+        "viewBox": "0 0 32 32"
+      }
+    },
+    {
+      "context": "product-42-1635.txt",
+      "variable": "imgMdiCartOutline",
+      "local_path": "design-assets/figma/sources/0a2f1a4672e297062785c296e7c19d8c37f529186744e2f2e6c8465913452d85.svg",
+      "status": "downloaded",
+      "bytes": 1536,
+      "sha256": "0a2f1a4672e297062785c296e7c19d8c37f529186744e2f2e6c8465913452d85",
+      "source_dimensions": {
+        "format": "svg",
+        "width": "32",
+        "height": "32",
+        "viewBox": "0 0 32 32"
+      }
+    },
+    {
+      "context": "product-42-1635.txt",
+      "variable": "imgSolarArrowUpOutline",
+      "local_path": "design-assets/figma/sources/183c58cbb7b4e44bf7f9a52eab20477f4bac99b41f3097c93f5ff9280e1d1540.svg",
+      "status": "downloaded",
+      "bytes": 1431,
+      "sha256": "183c58cbb7b4e44bf7f9a52eab20477f4bac99b41f3097c93f5ff9280e1d1540",
+      "source_dimensions": {
+        "format": "svg",
+        "width": "24",
+        "height": "24",
+        "viewBox": "0 0 24 24"
+      }
+    },
+    {
+      "context": "product-42-1635.txt",
+      "variable": "imgLayer2",
+      "local_path": "design-assets/figma/sources/ba06e3450239e96edf15390ec622bccc6cd7acc2a974ff0aa90cd13bec34fda5.svg",
+      "status": "downloaded",
+      "bytes": 1523,
+      "sha256": "ba06e3450239e96edf15390ec622bccc6cd7acc2a974ff0aa90cd13bec34fda5",
+      "source_dimensions": {
+        "format": "svg",
+        "width": "165.763",
+        "height": "163",
+        "viewBox": "0 0 165.763 163"
+      }
+    },
+    {
+      "context": "product-42-1635.txt",
+      "variable": "imgIconIoniconsLogosLogoFacebook",
+      "local_path": "design-assets/figma/sources/bfb1e83af6f38c7eb8dc9e0ae47e47ee1278f82999f71a5a0d57984509a6e0f1.svg",
+      "status": "downloaded",
+      "bytes": 728,
+      "sha256": "bfb1e83af6f38c7eb8dc9e0ae47e47ee1278f82999f71a5a0d57984509a6e0f1",
+      "source_dimensions": {
+        "format": "svg",
+        "width": "24",
+        "height": "24",
+        "viewBox": "0 0 24 24"
+      }
+    },
+    {
+      "context": "product-42-1635.txt",
+      "variable": "imgIconIoniconsLogosLogoTwitter",
+      "local_path": "design-assets/figma/sources/fdb830386379b842f88b99cbe8443bceef6b10210c1e0e6dca7e165b92edb459.svg",
+      "status": "downloaded",
+      "bytes": 1297,
+      "sha256": "fdb830386379b842f88b99cbe8443bceef6b10210c1e0e6dca7e165b92edb459",
+      "source_dimensions": {
+        "format": "svg",
+        "width": "24",
+        "height": "24",
+        "viewBox": "0 0 24 24"
+      }
+    },
+    {
+      "context": "product-42-1635.txt",
+      "variable": "imgIconIoniconsLogosLogoInstagram",
+      "local_path": "design-assets/figma/sources/46d7079a57fc13d0377932a43284b2085bd2fce88a95d34e51cc13f5cace90fc.svg",
+      "status": "downloaded",
+      "bytes": 2526,
+      "sha256": "46d7079a57fc13d0377932a43284b2085bd2fce88a95d34e51cc13f5cace90fc",
+      "source_dimensions": {
+        "format": "svg",
+        "width": "24",
+        "height": "24",
+        "viewBox": "0 0 24 24"
+      }
+    },
+    {
+      "context": "product-42-1635.txt",
+      "variable": "imgFrame158",
+      "local_path": "design-assets/figma/sources/bb737298b932bc2dd8e19fb735a2233d3c1dbedb6a1ac019a31d27e316cec91b.svg",
+      "status": "downloaded",
+      "bytes": 1287,
+      "sha256": "bb737298b932bc2dd8e19fb735a2233d3c1dbedb6a1ac019a31d27e316cec91b",
+      "source_dimensions": {
+        "format": "svg",
+        "width": "141",
+        "height": "24",
+        "viewBox": "0 0 141 24"
+      }
+    },
+    {
+      "context": "product-42-1635.txt",
+      "variable": "imgVector4",
+      "local_path": "design-assets/figma/sources/3eadaf8c7ad0d6a32c62afa7c09bc9c171b7472ae438897643527776827593d4.svg",
+      "status": "downloaded",
+      "bytes": 246,
+      "sha256": "3eadaf8c7ad0d6a32c62afa7c09bc9c171b7472ae438897643527776827593d4",
+      "source_dimensions": {
+        "format": "svg",
+        "width": "647",
+        "height": "1",
+        "viewBox": "0 0 647 1"
+      }
+    },
+    {
+      "context": "product-42-1635.txt",
+      "variable": "imgFrame167",
+      "local_path": "design-assets/figma/sources/bd74ada8fad6e9b76e5a81e58992bf9e461aa1cc841e339afda2da0c8241a644.svg",
+      "status": "downloaded",
+      "bytes": 312,
+      "sha256": "bd74ada8fad6e9b76e5a81e58992bf9e461aa1cc841e339afda2da0c8241a644",
+      "source_dimensions": {
+        "format": "svg",
+        "width": "20",
+        "height": "20",
+        "viewBox": "0 0 20 20"
+      }
+    },
+    {
+      "context": "product-42-1635.txt",
+      "variable": "imgVector",
+      "local_path": "design-assets/figma/sources/d20fc8956ee522e87e46d2a237ecbe7b1c4d475dd57a4f7831adef3e386f3ea8.svg",
+      "status": "downloaded",
+      "bytes": 740,
+      "sha256": "d20fc8956ee522e87e46d2a237ecbe7b1c4d475dd57a4f7831adef3e386f3ea8",
+      "source_dimensions": {
+        "format": "svg",
+        "width": "11",
+        "height": "8",
+        "viewBox": "0 0 11 8"
+      }
+    },
+    {
+      "context": "product-42-1635.txt",
+      "variable": "imgDuotoneMinus",
+      "local_path": "design-assets/figma/sources/d40e92f753f6e8b573a1f843c8bc043e79f912f3e772cccfbbc8988fad1afe24.svg",
+      "status": "downloaded",
+      "bytes": 343,
+      "sha256": "d40e92f753f6e8b573a1f843c8bc043e79f912f3e772cccfbbc8988fad1afe24",
+      "source_dimensions": {
+        "format": "svg",
+        "width": "16",
+        "height": "16",
+        "viewBox": "0 0 16 16"
+      }
+    },
+    {
+      "context": "product-42-1635.txt",
+      "variable": "imgDuotonePlus",
+      "local_path": "design-assets/figma/sources/db85eb220e54301bbbe86a6f2c26814a72e66e53beafdbe47db79a76a88f8718.svg",
+      "status": "downloaded",
+      "bytes": 463,
+      "sha256": "db85eb220e54301bbbe86a6f2c26814a72e66e53beafdbe47db79a76a88f8718",
+      "source_dimensions": {
+        "format": "svg",
+        "width": "16",
+        "height": "16",
+        "viewBox": "0 0 16 16"
+      }
+    },
+    {
+      "context": "product-42-1635.txt",
+      "variable": "imgSolarArrowUpOutline1",
+      "local_path": "design-assets/figma/sources/56f8eeca4baf9166c6543cff04cf352f8c15dfe56b0318754f28d94e74246290.svg",
+      "status": "downloaded",
+      "bytes": 1402,
+      "sha256": "56f8eeca4baf9166c6543cff04cf352f8c15dfe56b0318754f28d94e74246290",
+      "source_dimensions": {
+        "format": "svg",
+        "width": "24",
+        "height": "24",
+        "viewBox": "0 0 24 24"
+      }
+    },
+    {
+      "context": "product-42-1635.txt",
+      "variable": "imgTablerChevronUp",
+      "local_path": "design-assets/figma/sources/5e4940735481bf59c127661acea1c4e2ff8b0d1af15671430233cb42a0f8f7bb.svg",
+      "status": "downloaded",
+      "bytes": 327,
+      "sha256": "5e4940735481bf59c127661acea1c4e2ff8b0d1af15671430233cb42a0f8f7bb",
+      "source_dimensions": {
+        "format": "svg",
+        "width": "24",
+        "height": "24",
+        "viewBox": "0 0 24 24"
+      }
+    },
+    {
+      "context": "product-42-1635.txt",
+      "variable": "imgTablerChevronUp1",
+      "local_path": "design-assets/figma/sources/d74f9e7cda1065033a02874a7629a96cbb778ff851283fdd34825920fc8f4b9e.svg",
+      "status": "downloaded",
+      "bytes": 327,
+      "sha256": "d74f9e7cda1065033a02874a7629a96cbb778ff851283fdd34825920fc8f4b9e",
+      "source_dimensions": {
+        "format": "svg",
+        "width": "24",
+        "height": "24",
+        "viewBox": "0 0 24 24"
+      }
+    },
+    {
+      "context": "product-42-1635.txt",
+      "variable": "imgSolarArrowUpOutline2",
+      "local_path": "design-assets/figma/sources/6db267a3c68519dc50d0108f770b5175e98f8290b4db9cd08286f069bf095ae2.svg",
+      "status": "downloaded",
+      "bytes": 1404,
+      "sha256": "6db267a3c68519dc50d0108f770b5175e98f8290b4db9cd08286f069bf095ae2",
+      "source_dimensions": {
+        "format": "svg",
+        "width": "24",
+        "height": "24",
+        "viewBox": "0 0 24 24"
+      }
+    },
+    {
+      "context": "product-42-1635.txt",
+      "variable": "imgSolarArrowUpOutline3",
+      "local_path": "design-assets/figma/sources/899feea24987f0d6dc9e90651bf0f5a908a7536ff3772d5d3ed319dd865979e4.svg",
+      "status": "downloaded",
+      "bytes": 1434,
+      "sha256": "899feea24987f0d6dc9e90651bf0f5a908a7536ff3772d5d3ed319dd865979e4",
+      "source_dimensions": {
+        "format": "svg",
+        "width": "24",
+        "height": "24",
+        "viewBox": "0 0 24 24"
+      }
+    },
+    {
+      "context": "product-42-1635.txt",
+      "variable": "imgSolarArrowUpOutline4",
+      "local_path": "design-assets/figma/sources/7749657f2ee3da7243d054494b15ebf1d2d51da55bc9bd9cd052e82c9161aa81.svg",
+      "status": "downloaded",
+      "bytes": 1432,
+      "sha256": "7749657f2ee3da7243d054494b15ebf1d2d51da55bc9bd9cd052e82c9161aa81",
+      "source_dimensions": {
+        "format": "svg",
+        "width": "24",
+        "height": "24",
+        "viewBox": "0 0 24 24"
+      }
+    },
+    {
+      "context": "home-42-985.txt",
+      "variable": "imgUnscented2",
+      "local_path": "design-assets/figma/sources/766bf59c1b4fd2f7d0e40b3bf01b56fc365b97646392ce85539455182bdab622.png",
+      "status": "downloaded",
+      "bytes": 6392068,
+      "sha256": "766bf59c1b4fd2f7d0e40b3bf01b56fc365b97646392ce85539455182bdab622",
+      "source_dimensions": {
+        "format": "png",
+        "width": 4096,
+        "height": 4096
+      }
+    },
+    {
+      "context": "home-42-985.txt",
+      "variable": "imgTubeV2",
+      "local_path": "design-assets/figma/sources/c95dadf82130e8ecc6b327d49cc191cfd1d2a5db6aac3951df4837f612eda52e.png",
+      "status": "downloaded",
+      "bytes": 1442639,
+      "sha256": "c95dadf82130e8ecc6b327d49cc191cfd1d2a5db6aac3951df4837f612eda52e",
+      "source_dimensions": {
+        "format": "png",
+        "width": 4000,
+        "height": 4000
+      }
+    },
+    {
+      "context": "home-42-985.txt",
+      "variable": "img54241KraftBoxMockup2",
+      "local_path": "design-assets/figma/sources/7f3bfec3a6402163303d6de498a2ab1e1d30211b4fd1a7033c9ead50218770fa.png",
+      "status": "downloaded",
+      "bytes": 6359552,
+      "sha256": "7f3bfec3a6402163303d6de498a2ab1e1d30211b4fd1a7033c9ead50218770fa",
+      "source_dimensions": {
+        "format": "png",
+        "width": 4096,
+        "height": 4096
+      }
+    },
+    {
+      "context": "home-42-985.txt",
+      "variable": "img8Ce9C1493C3F5E2Ee222A030Dfb7A85E2",
+      "local_path": "design-assets/figma/sources/c84ce8ed6654c4bb33ff376e12beae39703e23f9bd1f1a41a4bc075059fab2e1.png",
+      "status": "downloaded",
+      "bytes": 6600358,
+      "sha256": "c84ce8ed6654c4bb33ff376e12beae39703e23f9bd1f1a41a4bc075059fab2e1",
+      "source_dimensions": {
+        "format": "png",
+        "width": 2400,
+        "height": 1792
+      }
+    },
+    {
+      "context": "home-42-985.txt",
+      "variable": "imgRectangle20",
+      "local_path": "design-assets/figma/sources/39a4cf978787c3ba8e234ebf5abf197d6d7026f3de908b997d763154cf0b1b34.jpg",
+      "status": "downloaded",
+      "bytes": 34453,
+      "sha256": "39a4cf978787c3ba8e234ebf5abf197d6d7026f3de908b997d763154cf0b1b34",
+      "source_dimensions": {
+        "format": "jpeg",
+        "width": 72,
+        "height": 72
+      }
+    },
+    {
+      "context": "home-42-985.txt",
+      "variable": "imgRectangle21",
+      "local_path": "design-assets/figma/sources/712d4e1c6a6f3ef81d2c51e807e1bd0415b2c8cf6c8c644a707486f4909c11c3.png",
+      "status": "downloaded",
+      "bytes": 2133110,
+      "sha256": "712d4e1c6a6f3ef81d2c51e807e1bd0415b2c8cf6c8c644a707486f4909c11c3",
+      "source_dimensions": {
+        "format": "png",
+        "width": 1024,
+        "height": 1536
+      }
+    },
+    {
+      "context": "home-42-985.txt",
+      "variable": "imgTubeV3",
+      "local_path": "design-assets/figma/sources/a4fb05a0202dad047b782eefe5fdc49619784205087c43716aacb3084b5c7c09.png",
+      "status": "downloaded",
+      "bytes": 3155662,
+      "sha256": "a4fb05a0202dad047b782eefe5fdc49619784205087c43716aacb3084b5c7c09",
+      "source_dimensions": {
+        "format": "png",
+        "width": 4000,
+        "height": 4000
+      }
+    },
+    {
+      "context": "home-42-985.txt",
+      "variable": "imgEllipse11",
+      "local_path": "design-assets/figma/sources/7ae86e6483d72df088aa9d57a24272d2e8ac5d0a9f3498c22198fc4a77d2c69f.png",
+      "status": "downloaded",
+      "bytes": 22062,
+      "sha256": "7ae86e6483d72df088aa9d57a24272d2e8ac5d0a9f3498c22198fc4a77d2c69f",
+      "source_dimensions": {
+        "format": "png",
+        "width": 112,
+        "height": 112
+      }
+    },
+    {
+      "context": "home-42-985.txt",
+      "variable": "imgEllipse12",
+      "local_path": "design-assets/figma/sources/401faae002eac52838f1df73b662c1cd294666e45e5c599760ce6f9326decc2e.png",
+      "status": "downloaded",
+      "bytes": 17253,
+      "sha256": "401faae002eac52838f1df73b662c1cd294666e45e5c599760ce6f9326decc2e",
+      "source_dimensions": {
+        "format": "png",
+        "width": 112,
+        "height": 112
+      }
+    },
+    {
+      "context": "home-42-985.txt",
+      "variable": "imgEllipse13",
+      "local_path": "design-assets/figma/sources/0add938b802c2f435ccc9140480049431f7f1d04c770ff4bbbde90066f0fc514.png",
+      "status": "downloaded",
+      "bytes": 20987,
+      "sha256": "0add938b802c2f435ccc9140480049431f7f1d04c770ff4bbbde90066f0fc514",
+      "source_dimensions": {
+        "format": "png",
+        "width": 112,
+        "height": 112
+      }
+    },
+    {
+      "context": "home-42-985.txt",
+      "variable": "imgImage1",
+      "local_path": "design-assets/figma/sources/5e86956b0fec6b483e0219c261653e17491079b48a18243387573ffda4e2b1ff.png",
+      "status": "downloaded",
+      "bytes": 12871,
+      "sha256": "5e86956b0fec6b483e0219c261653e17491079b48a18243387573ffda4e2b1ff",
+      "source_dimensions": {
+        "format": "png",
+        "width": 250,
+        "height": 267
+      }
+    },
+    {
+      "context": "home-42-985.txt",
+      "variable": "imgImage2",
+      "local_path": "design-assets/figma/sources/6b9e8437bdb7f0b5c64950a99c1eb28b3106429b5bbd56e0513addf00f96821c.png",
+      "status": "downloaded",
+      "bytes": 10253,
+      "sha256": "6b9e8437bdb7f0b5c64950a99c1eb28b3106429b5bbd56e0513addf00f96821c",
+      "source_dimensions": {
+        "format": "png",
+        "width": 250,
+        "height": 267
+      }
+    },
+    {
+      "context": "home-42-985.txt",
+      "variable": "imgImage4",
+      "local_path": "design-assets/figma/sources/c76e7ef517ce8d583f3e666f9fb3a8b2cd0454a05846f07065ec6c18b4c0d78f.png",
+      "status": "downloaded",
+      "bytes": 13410,
+      "sha256": "c76e7ef517ce8d583f3e666f9fb3a8b2cd0454a05846f07065ec6c18b4c0d78f",
+      "source_dimensions": {
+        "format": "png",
+        "width": 250,
+        "height": 267
+      }
+    },
+    {
+      "context": "home-42-985.txt",
+      "variable": "imgPhotographyHomepage1",
+      "local_path": "design-assets/figma/sources/b68793287ab602f7dba132b5d886b4c604f1829d98128ae79c2890deeea28da3.png",
+      "status": "downloaded",
+      "bytes": 1645478,
+      "sha256": "b68793287ab602f7dba132b5d886b4c604f1829d98128ae79c2890deeea28da3",
+      "source_dimensions": {
+        "format": "png",
+        "width": 1387,
+        "height": 1024
+      }
+    },
+    {
+      "context": "home-42-985.txt",
+      "variable": "imgSolarArrowUpOutline",
+      "local_path": "design-assets/figma/sources/183c58cbb7b4e44bf7f9a52eab20477f4bac99b41f3097c93f5ff9280e1d1540.svg",
+      "status": "downloaded",
+      "bytes": 1431,
+      "sha256": "183c58cbb7b4e44bf7f9a52eab20477f4bac99b41f3097c93f5ff9280e1d1540",
+      "source_dimensions": {
+        "format": "svg",
+        "width": "24",
+        "height": "24",
+        "viewBox": "0 0 24 24"
+      }
+    },
+    {
+      "context": "home-42-985.txt",
+      "variable": "imgLayer1",
+      "local_path": "design-assets/figma/sources/966c67046e3c917b9f9046f43b49c39067df2a64e3040990df71299465294203.svg",
+      "status": "downloaded",
+      "bytes": 1523,
+      "sha256": "966c67046e3c917b9f9046f43b49c39067df2a64e3040990df71299465294203",
+      "source_dimensions": {
+        "format": "svg",
+        "width": "165.763",
+        "height": "163",
+        "viewBox": "0 0 165.763 163"
+      }
+    },
+    {
+      "context": "home-42-985.txt",
+      "variable": "imgIconIoniconsLogosLogoFacebook",
+      "local_path": "design-assets/figma/sources/bfb1e83af6f38c7eb8dc9e0ae47e47ee1278f82999f71a5a0d57984509a6e0f1.svg",
+      "status": "downloaded",
+      "bytes": 728,
+      "sha256": "bfb1e83af6f38c7eb8dc9e0ae47e47ee1278f82999f71a5a0d57984509a6e0f1",
+      "source_dimensions": {
+        "format": "svg",
+        "width": "24",
+        "height": "24",
+        "viewBox": "0 0 24 24"
+      }
+    },
+    {
+      "context": "home-42-985.txt",
+      "variable": "imgIconIoniconsLogosLogoTwitter",
+      "local_path": "design-assets/figma/sources/fdb830386379b842f88b99cbe8443bceef6b10210c1e0e6dca7e165b92edb459.svg",
+      "status": "downloaded",
+      "bytes": 1297,
+      "sha256": "fdb830386379b842f88b99cbe8443bceef6b10210c1e0e6dca7e165b92edb459",
+      "source_dimensions": {
+        "format": "svg",
+        "width": "24",
+        "height": "24",
+        "viewBox": "0 0 24 24"
+      }
+    },
+    {
+      "context": "home-42-985.txt",
+      "variable": "imgIconIoniconsLogosLogoInstagram",
+      "local_path": "design-assets/figma/sources/46d7079a57fc13d0377932a43284b2085bd2fce88a95d34e51cc13f5cace90fc.svg",
+      "status": "downloaded",
+      "bytes": 2526,
+      "sha256": "46d7079a57fc13d0377932a43284b2085bd2fce88a95d34e51cc13f5cace90fc",
+      "source_dimensions": {
+        "format": "svg",
+        "width": "24",
+        "height": "24",
+        "viewBox": "0 0 24 24"
+      }
+    },
+    {
+      "context": "home-42-985.txt",
+      "variable": "img8Ce9C1493C3F5E2Ee222A030Dfb7A85E1",
+      "local_path": "design-assets/figma/sources/ce07150f99e0742c5cf47127ad9e2c1a9d75c47efac90c1fe440b05db166b1b7.svg",
+      "status": "downloaded",
+      "bytes": 274,
+      "sha256": "ce07150f99e0742c5cf47127ad9e2c1a9d75c47efac90c1fe440b05db166b1b7",
+      "source_dimensions": {
+        "format": "svg",
+        "width": "537.066",
+        "height": "279.913",
+        "viewBox": "0 0 537.066 279.913"
+      }
+    },
+    {
+      "context": "home-42-985.txt",
+      "variable": "imgMaterialSymbolsAddRounded",
+      "local_path": "design-assets/figma/sources/bba16c93f2c9bebd4e9d63dc7ce73233b7c21861875d797de8c751434f0bbb46.svg",
+      "status": "downloaded",
+      "bytes": 1139,
+      "sha256": "bba16c93f2c9bebd4e9d63dc7ce73233b7c21861875d797de8c751434f0bbb46",
+      "source_dimensions": {
+        "format": "svg",
+        "width": "24",
+        "height": "24",
+        "viewBox": "0 0 24 24"
+      }
+    },
+    {
+      "context": "home-42-985.txt",
+      "variable": "imgMaterialSymbolsAddRounded1",
+      "local_path": "design-assets/figma/sources/76b1cc86eb58e038a63eb381fcbc877fcba5628cf4309e81f991dfbc0f7cf070.svg",
+      "status": "downloaded",
+      "bytes": 997,
+      "sha256": "76b1cc86eb58e038a63eb381fcbc877fcba5628cf4309e81f991dfbc0f7cf070",
+      "source_dimensions": {
+        "format": "svg",
+        "width": "24",
+        "height": "24",
+        "viewBox": "0 0 24 24"
+      }
+    },
+    {
+      "context": "home-42-985.txt",
+      "variable": "imgFictionalCompanyLogo",
+      "local_path": "design-assets/figma/sources/19f85bc48516bd496cefffd9f7e99b78c8c266388de769f08b91829e77820a32.svg",
+      "status": "downloaded",
+      "bytes": 6409,
+      "sha256": "19f85bc48516bd496cefffd9f7e99b78c8c266388de769f08b91829e77820a32",
+      "source_dimensions": {
+        "format": "svg",
+        "width": "170",
+        "height": "48",
+        "viewBox": "0 0 170 48"
+      }
+    },
+    {
+      "context": "home-42-985.txt",
+      "variable": "imgFictionalCompanyLogo1",
+      "local_path": "design-assets/figma/sources/ba6d5c5f46bab59b7461b0657a5e00ffd5b53811f45c58776137a73a77b21300.svg",
+      "status": "downloaded",
+      "bytes": 7398,
+      "sha256": "ba6d5c5f46bab59b7461b0657a5e00ffd5b53811f45c58776137a73a77b21300",
+      "source_dimensions": {
+        "format": "svg",
+        "width": "167",
+        "height": "48",
+        "viewBox": "0 0 167 48"
+      }
+    },
+    {
+      "context": "home-42-985.txt",
+      "variable": "imgFictionalCompanyLogo2",
+      "local_path": "design-assets/figma/sources/bfac995b583dd55831647d2e2a440bbbde1013dad81a2a3299bf3121637e3529.svg",
+      "status": "downloaded",
+      "bytes": 11445,
+      "sha256": "bfac995b583dd55831647d2e2a440bbbde1013dad81a2a3299bf3121637e3529",
+      "source_dimensions": {
+        "format": "svg",
+        "width": "198",
+        "height": "48",
+        "viewBox": "0 0 198 48"
+      }
+    },
+    {
+      "context": "home-42-985.txt",
+      "variable": "imgFictionalCompanyLogo3",
+      "local_path": "design-assets/figma/sources/c4f254d43198b00d3d09d3ae9e0ac4c04dac1d21fd3b2c845f825d5eea79f091.svg",
+      "status": "downloaded",
+      "bytes": 4160,
+      "sha256": "c4f254d43198b00d3d09d3ae9e0ac4c04dac1d21fd3b2c845f825d5eea79f091",
+      "source_dimensions": {
+        "format": "svg",
+        "width": "166",
+        "height": "48",
+        "viewBox": "0 0 166 48"
+      }
+    },
+    {
+      "context": "home-42-985.txt",
+      "variable": "imgFictionalCompanyLogo4",
+      "local_path": "design-assets/figma/sources/05b8ffed61ac45aaca392817a154b3c2f1a687d90c3a8cd7c1d7eea2ac0d6b2e.svg",
+      "status": "downloaded",
+      "bytes": 4103,
+      "sha256": "05b8ffed61ac45aaca392817a154b3c2f1a687d90c3a8cd7c1d7eea2ac0d6b2e",
+      "source_dimensions": {
+        "format": "svg",
+        "width": "197",
+        "height": "48",
+        "viewBox": "0 0 197 48"
+      }
+    },
+    {
+      "context": "home-42-985.txt",
+      "variable": "imgSolarArrowUpOutline1",
+      "local_path": "design-assets/figma/sources/26f137efeb448ff91b239c821e0bd8e0810e99c6860f3d9dd2d14f24122e5dc1.svg",
+      "status": "downloaded",
+      "bytes": 1356,
+      "sha256": "26f137efeb448ff91b239c821e0bd8e0810e99c6860f3d9dd2d14f24122e5dc1",
+      "source_dimensions": {
+        "format": "svg",
+        "width": "24",
+        "height": "24",
+        "viewBox": "0 0 24 24"
+      }
+    },
+    {
+      "context": "home-42-985.txt",
+      "variable": "imgMeteorIconsArrowUpRight",
+      "local_path": "design-assets/figma/sources/628f087db81aa9e0a5ad9e070a6538ec1526a8f85d7073a21d48bd4ef345874d.svg",
+      "status": "downloaded",
+      "bytes": 341,
+      "sha256": "628f087db81aa9e0a5ad9e070a6538ec1526a8f85d7073a21d48bd4ef345874d",
+      "source_dimensions": {
+        "format": "svg",
+        "width": "24",
+        "height": "24",
+        "viewBox": "0 0 24 24"
+      }
+    },
+    {
+      "context": "home-42-985.txt",
+      "variable": "imgSolarArrowUpOutline2",
+      "local_path": "design-assets/figma/sources/26f137efeb448ff91b239c821e0bd8e0810e99c6860f3d9dd2d14f24122e5dc1.svg",
+      "status": "downloaded",
+      "bytes": 1356,
+      "sha256": "26f137efeb448ff91b239c821e0bd8e0810e99c6860f3d9dd2d14f24122e5dc1",
+      "source_dimensions": {
+        "format": "svg",
+        "width": "24",
+        "height": "24",
+        "viewBox": "0 0 24 24"
+      }
+    },
+    {
+      "context": "home-42-985.txt",
+      "variable": "imgSolarArrowUpOutline3",
+      "local_path": "design-assets/figma/sources/d1e25a8f1c826ac635763175b3a2d3252f0928eca5c78603929ed5d84ba3740d.svg",
+      "status": "downloaded",
+      "bytes": 1354,
+      "sha256": "d1e25a8f1c826ac635763175b3a2d3252f0928eca5c78603929ed5d84ba3740d",
+      "source_dimensions": {
+        "format": "svg",
+        "width": "24",
+        "height": "24",
+        "viewBox": "0 0 24 24"
+      }
+    },
+    {
+      "context": "home-42-985.txt",
+      "variable": "imgStar3",
+      "local_path": "design-assets/figma/sources/b6e8fe731129c07d1324b8998ec9e719423bb17a041924b9ca826952bf570bcc.svg",
+      "status": "downloaded",
+      "bytes": 315,
+      "sha256": "b6e8fe731129c07d1324b8998ec9e719423bb17a041924b9ca826952bf570bcc",
+      "source_dimensions": {
+        "format": "svg",
+        "width": "27",
+        "height": "27",
+        "viewBox": "0 0 27 27"
+      }
+    },
+    {
+      "context": "home-42-985.txt",
+      "variable": "imgStar4",
+      "local_path": "design-assets/figma/sources/9b60a18b3e262dc1e1a4b1000473212f942cf27b11654755c8a13623954e8dbd.svg",
+      "status": "downloaded",
+      "bytes": 315,
+      "sha256": "9b60a18b3e262dc1e1a4b1000473212f942cf27b11654755c8a13623954e8dbd",
+      "source_dimensions": {
+        "format": "svg",
+        "width": "27",
+        "height": "27",
+        "viewBox": "0 0 27 27"
+      }
+    },
+    {
+      "context": "home-42-985.txt",
+      "variable": "imgRectangle23",
+      "local_path": "design-assets/figma/sources/fb3f07824318fae6725c5e32bcded8c81fd2b58c225095a178089788036e3173.svg",
+      "status": "downloaded",
+      "bytes": 243,
+      "sha256": "fb3f07824318fae6725c5e32bcded8c81fd2b58c225095a178089788036e3173",
+      "source_dimensions": {
+        "format": "svg",
+        "width": "543",
+        "height": "79",
+        "viewBox": "0 0 543 79"
+      }
+    },
+    {
+      "context": "home-42-985.txt",
+      "variable": "imgLayer2",
+      "local_path": "design-assets/figma/sources/b60491580db9839adaa502e366f8a143bf3533f1515e4e0031810abd57afabbf.svg",
+      "status": "downloaded",
+      "bytes": 1507,
+      "sha256": "b60491580db9839adaa502e366f8a143bf3533f1515e4e0031810abd57afabbf",
+      "source_dimensions": {
+        "format": "svg",
+        "width": "85.4239",
+        "height": "84",
+        "viewBox": "0 0 85.4239 84"
+      }
+    },
+    {
+      "context": "home-42-985.txt",
+      "variable": "imgMdiUserOutline",
+      "local_path": "design-assets/figma/sources/b1bbb28a0bc051a3a8ee26f705e6400b6c75eea230aa7074a6fbda7c5aaeb2db.svg",
+      "status": "downloaded",
+      "bytes": 1181,
+      "sha256": "b1bbb28a0bc051a3a8ee26f705e6400b6c75eea230aa7074a6fbda7c5aaeb2db",
+      "source_dimensions": {
+        "format": "svg",
+        "width": "32",
+        "height": "32",
+        "viewBox": "0 0 32 32"
+      }
+    },
+    {
+      "context": "home-42-985.txt",
+      "variable": "imgMdiCartOutline",
+      "local_path": "design-assets/figma/sources/97c3d5f25b7a740d91f3b0e1a14eed97e597022058e0fabe58b5e1dbbf18140a.svg",
+      "status": "downloaded",
+      "bytes": 1474,
+      "sha256": "97c3d5f25b7a740d91f3b0e1a14eed97e597022058e0fabe58b5e1dbbf18140a",
+      "source_dimensions": {
+        "format": "svg",
+        "width": "32",
+        "height": "32",
+        "viewBox": "0 0 32 32"
+      }
+    },
+    {
+      "context": "shop-42-1366.txt",
+      "variable": "imgUnscented2",
+      "local_path": "design-assets/figma/sources/766bf59c1b4fd2f7d0e40b3bf01b56fc365b97646392ce85539455182bdab622.png",
+      "status": "downloaded",
+      "bytes": 6392068,
+      "sha256": "766bf59c1b4fd2f7d0e40b3bf01b56fc365b97646392ce85539455182bdab622",
+      "source_dimensions": {
+        "format": "png",
+        "width": 4096,
+        "height": 4096
+      }
+    },
+    {
+      "context": "shop-42-1366.txt",
+      "variable": "imgTubeV2",
+      "local_path": "design-assets/figma/sources/c95dadf82130e8ecc6b327d49cc191cfd1d2a5db6aac3951df4837f612eda52e.png",
+      "status": "downloaded",
+      "bytes": 1442639,
+      "sha256": "c95dadf82130e8ecc6b327d49cc191cfd1d2a5db6aac3951df4837f612eda52e",
+      "source_dimensions": {
+        "format": "png",
+        "width": 4000,
+        "height": 4000
+      }
+    },
+    {
+      "context": "shop-42-1366.txt",
+      "variable": "img54241KraftBoxMockup2",
+      "local_path": "design-assets/figma/sources/7f3bfec3a6402163303d6de498a2ab1e1d30211b4fd1a7033c9ead50218770fa.png",
+      "status": "downloaded",
+      "bytes": 6359552,
+      "sha256": "7f3bfec3a6402163303d6de498a2ab1e1d30211b4fd1a7033c9ead50218770fa",
+      "source_dimensions": {
+        "format": "png",
+        "width": 4096,
+        "height": 4096
+      }
+    },
+    {
+      "context": "shop-42-1366.txt",
+      "variable": "imgSolarArrowUpOutline",
+      "local_path": "design-assets/figma/sources/183c58cbb7b4e44bf7f9a52eab20477f4bac99b41f3097c93f5ff9280e1d1540.svg",
+      "status": "downloaded",
+      "bytes": 1431,
+      "sha256": "183c58cbb7b4e44bf7f9a52eab20477f4bac99b41f3097c93f5ff9280e1d1540",
+      "source_dimensions": {
+        "format": "svg",
+        "width": "24",
+        "height": "24",
+        "viewBox": "0 0 24 24"
+      }
+    },
+    {
+      "context": "shop-42-1366.txt",
+      "variable": "imgLayer1",
+      "local_path": "design-assets/figma/sources/88e78f738b55c20ea17205b2a4491ed3b65e9ac8f3da1463cc5fb43c3982843a.svg",
+      "status": "downloaded",
+      "bytes": 1523,
+      "sha256": "88e78f738b55c20ea17205b2a4491ed3b65e9ac8f3da1463cc5fb43c3982843a",
+      "source_dimensions": {
+        "format": "svg",
+        "width": "165.763",
+        "height": "163",
+        "viewBox": "0 0 165.763 163"
+      }
+    },
+    {
+      "context": "shop-42-1366.txt",
+      "variable": "imgIconIoniconsLogosLogoFacebook",
+      "local_path": "design-assets/figma/sources/bfb1e83af6f38c7eb8dc9e0ae47e47ee1278f82999f71a5a0d57984509a6e0f1.svg",
+      "status": "downloaded",
+      "bytes": 728,
+      "sha256": "bfb1e83af6f38c7eb8dc9e0ae47e47ee1278f82999f71a5a0d57984509a6e0f1",
+      "source_dimensions": {
+        "format": "svg",
+        "width": "24",
+        "height": "24",
+        "viewBox": "0 0 24 24"
+      }
+    },
+    {
+      "context": "shop-42-1366.txt",
+      "variable": "imgIconIoniconsLogosLogoTwitter",
+      "local_path": "design-assets/figma/sources/fdb830386379b842f88b99cbe8443bceef6b10210c1e0e6dca7e165b92edb459.svg",
+      "status": "downloaded",
+      "bytes": 1297,
+      "sha256": "fdb830386379b842f88b99cbe8443bceef6b10210c1e0e6dca7e165b92edb459",
+      "source_dimensions": {
+        "format": "svg",
+        "width": "24",
+        "height": "24",
+        "viewBox": "0 0 24 24"
+      }
+    },
+    {
+      "context": "shop-42-1366.txt",
+      "variable": "imgIconIoniconsLogosLogoInstagram",
+      "local_path": "design-assets/figma/sources/46d7079a57fc13d0377932a43284b2085bd2fce88a95d34e51cc13f5cace90fc.svg",
+      "status": "downloaded",
+      "bytes": 2526,
+      "sha256": "46d7079a57fc13d0377932a43284b2085bd2fce88a95d34e51cc13f5cace90fc",
+      "source_dimensions": {
+        "format": "svg",
+        "width": "24",
+        "height": "24",
+        "viewBox": "0 0 24 24"
+      }
+    },
+    {
+      "context": "shop-42-1366.txt",
+      "variable": "imgSolarArrowUpOutline1",
+      "local_path": "design-assets/figma/sources/1b334d1ba2d592ebfb14685d4a01eb3640601b6a18ca139f09e70c77a79265fd.svg",
+      "status": "downloaded",
+      "bytes": 1404,
+      "sha256": "1b334d1ba2d592ebfb14685d4a01eb3640601b6a18ca139f09e70c77a79265fd",
+      "source_dimensions": {
+        "format": "svg",
+        "width": "24",
+        "height": "24",
+        "viewBox": "0 0 24 24"
+      }
+    },
+    {
+      "context": "shop-42-1366.txt",
+      "variable": "imgSolarArrowUpOutline2",
+      "local_path": "design-assets/figma/sources/7749657f2ee3da7243d054494b15ebf1d2d51da55bc9bd9cd052e82c9161aa81.svg",
+      "status": "downloaded",
+      "bytes": 1432,
+      "sha256": "7749657f2ee3da7243d054494b15ebf1d2d51da55bc9bd9cd052e82c9161aa81",
+      "source_dimensions": {
+        "format": "svg",
+        "width": "24",
+        "height": "24",
+        "viewBox": "0 0 24 24"
+      }
+    },
+    {
+      "context": "shop-42-1366.txt",
+      "variable": "imgLineMdChevronDown",
+      "local_path": "design-assets/figma/sources/a44848d9908042027319830e3b978489762db6fd33d812131abcce0c7bc6ba98.svg",
+      "status": "downloaded",
+      "bytes": 348,
+      "sha256": "a44848d9908042027319830e3b978489762db6fd33d812131abcce0c7bc6ba98",
+      "source_dimensions": {
+        "format": "svg",
+        "width": "16",
+        "height": "16",
+        "viewBox": "0 0 16 16"
+      }
+    },
+    {
+      "context": "shop-42-1366.txt",
+      "variable": "imgVector3",
+      "local_path": "design-assets/figma/sources/7f8dbc2513465af9ec22961dda1976927708a6809e50c92285422cd369719dd7.svg",
+      "status": "downloaded",
+      "bytes": 231,
+      "sha256": "7f8dbc2513465af9ec22961dda1976927708a6809e50c92285422cd369719dd7",
+      "source_dimensions": {
+        "format": "svg",
+        "width": "14",
+        "height": "19",
+        "viewBox": "0 0 14 19"
+      }
+    },
+    {
+      "context": "shop-42-1366.txt",
+      "variable": "imgLayer2",
+      "local_path": "design-assets/figma/sources/0ef3b29d4294e1c524b087203d7f11fe7b72152065476c6d674e4b8b68712815.svg",
+      "status": "downloaded",
+      "bytes": 1507,
+      "sha256": "0ef3b29d4294e1c524b087203d7f11fe7b72152065476c6d674e4b8b68712815",
+      "source_dimensions": {
+        "format": "svg",
+        "width": "85.4239",
+        "height": "84",
+        "viewBox": "0 0 85.4239 84"
+      }
+    },
+    {
+      "context": "shop-42-1366.txt",
+      "variable": "imgMdiUserOutline",
+      "local_path": "design-assets/figma/sources/b1bbb28a0bc051a3a8ee26f705e6400b6c75eea230aa7074a6fbda7c5aaeb2db.svg",
+      "status": "downloaded",
+      "bytes": 1181,
+      "sha256": "b1bbb28a0bc051a3a8ee26f705e6400b6c75eea230aa7074a6fbda7c5aaeb2db",
+      "source_dimensions": {
+        "format": "svg",
+        "width": "32",
+        "height": "32",
+        "viewBox": "0 0 32 32"
+      }
+    },
+    {
+      "context": "shop-42-1366.txt",
+      "variable": "imgMdiCartOutline",
+      "local_path": "design-assets/figma/sources/97c3d5f25b7a740d91f3b0e1a14eed97e597022058e0fabe58b5e1dbbf18140a.svg",
+      "status": "downloaded",
+      "bytes": 1474,
+      "sha256": "97c3d5f25b7a740d91f3b0e1a14eed97e597022058e0fabe58b5e1dbbf18140a",
+      "source_dimensions": {
+        "format": "svg",
+        "width": "32",
+        "height": "32",
+        "viewBox": "0 0 32 32"
+      }
+    },
+    {
+      "context": "about-42-1214.txt",
+      "variable": "imgUnscented2",
+      "local_path": "design-assets/figma/sources/766bf59c1b4fd2f7d0e40b3bf01b56fc365b97646392ce85539455182bdab622.png",
+      "status": "downloaded",
+      "bytes": 6392068,
+      "sha256": "766bf59c1b4fd2f7d0e40b3bf01b56fc365b97646392ce85539455182bdab622",
+      "source_dimensions": {
+        "format": "png",
+        "width": 4096,
+        "height": 4096
+      }
+    },
+    {
+      "context": "about-42-1214.txt",
+      "variable": "imgTubeV2",
+      "local_path": "design-assets/figma/sources/c95dadf82130e8ecc6b327d49cc191cfd1d2a5db6aac3951df4837f612eda52e.png",
+      "status": "downloaded",
+      "bytes": 1442639,
+      "sha256": "c95dadf82130e8ecc6b327d49cc191cfd1d2a5db6aac3951df4837f612eda52e",
+      "source_dimensions": {
+        "format": "png",
+        "width": 4000,
+        "height": 4000
+      }
+    },
+    {
+      "context": "about-42-1214.txt",
+      "variable": "img54241KraftBoxMockup2",
+      "local_path": "design-assets/figma/sources/7f3bfec3a6402163303d6de498a2ab1e1d30211b4fd1a7033c9ead50218770fa.png",
+      "status": "downloaded",
+      "bytes": 6359552,
+      "sha256": "7f3bfec3a6402163303d6de498a2ab1e1d30211b4fd1a7033c9ead50218770fa",
+      "source_dimensions": {
+        "format": "png",
+        "width": 4096,
+        "height": 4096
+      }
+    },
+    {
+      "context": "about-42-1214.txt",
+      "variable": "imgRectangle27",
+      "local_path": "design-assets/figma/sources/dbaec98892e9af9c377c065ece11984006a31233f85b65e762cd21dbe1b41a75.png",
+      "status": "downloaded",
+      "bytes": 8569453,
+      "sha256": "dbaec98892e9af9c377c065ece11984006a31233f85b65e762cd21dbe1b41a75",
+      "source_dimensions": {
+        "format": "png",
+        "width": 1952,
+        "height": 2208
+      }
+    },
+    {
+      "context": "about-42-1214.txt",
+      "variable": "imgRectangle20",
+      "local_path": "design-assets/figma/sources/1e232478a6c0165761ee535ff30ac29ee02470c22b86c837f13db7f65b86362e.png",
+      "status": "downloaded",
+      "bytes": 7077065,
+      "sha256": "1e232478a6c0165761ee535ff30ac29ee02470c22b86c837f13db7f65b86362e",
+      "source_dimensions": {
+        "format": "png",
+        "width": 1856,
+        "height": 2304
+      }
+    },
+    {
+      "context": "about-42-1214.txt",
+      "variable": "imgRectangle34",
+      "local_path": "design-assets/figma/sources/42f8f2f649ba2b5d58bf8dfaa597b66107ffcc51eec1a3a17bea09d74e8833f7.png",
+      "status": "downloaded",
+      "bytes": 3179,
+      "sha256": "42f8f2f649ba2b5d58bf8dfaa597b66107ffcc51eec1a3a17bea09d74e8833f7",
+      "source_dimensions": {
+        "format": "png",
+        "width": 256,
+        "height": 256
+      }
+    },
+    {
+      "context": "about-42-1214.txt",
+      "variable": "imgRectangle35",
+      "local_path": "design-assets/figma/sources/3d1865704b8b1e40841c4f53b02f5a863d34e0d6226c414496df572ac7ed2bb0.jpg",
+      "status": "downloaded",
+      "bytes": 1697658,
+      "sha256": "3d1865704b8b1e40841c4f53b02f5a863d34e0d6226c414496df572ac7ed2bb0",
+      "source_dimensions": {
+        "format": "jpeg",
+        "width": 1,
+        "height": 1
+      }
+    },
+    {
+      "context": "about-42-1214.txt",
+      "variable": "imgRectangle36",
+      "local_path": "design-assets/figma/sources/9317d7a92d74bd12620319a54ead77e6959be6d5298d0720664b47e8e227c2cc.jpg",
+      "status": "downloaded",
+      "bytes": 7494725,
+      "sha256": "9317d7a92d74bd12620319a54ead77e6959be6d5298d0720664b47e8e227c2cc",
+      "source_dimensions": {
+        "format": "jpeg",
+        "width": 1,
+        "height": 1
+      }
+    },
+    {
+      "context": "about-42-1214.txt",
+      "variable": "imgRectangle37",
+      "local_path": "design-assets/figma/sources/3d5b2e23c0d4a549f30ea66653179cdd112e6d22ae86ce1eaa5eb631597fac42.jpg",
+      "status": "downloaded",
+      "bytes": 7849821,
+      "sha256": "3d5b2e23c0d4a549f30ea66653179cdd112e6d22ae86ce1eaa5eb631597fac42",
+      "source_dimensions": {
+        "format": "jpeg",
+        "width": 1,
+        "height": 1
+      }
+    },
+    {
+      "context": "about-42-1214.txt",
+      "variable": "imgRectangle38",
+      "local_path": "design-assets/figma/sources/f0784f13440a0aaf979d79a37c4aafa8311927c9935d2a3ce634136a5a54539a.jpg",
+      "status": "downloaded",
+      "bytes": 8548327,
+      "sha256": "f0784f13440a0aaf979d79a37c4aafa8311927c9935d2a3ce634136a5a54539a",
+      "source_dimensions": {
+        "format": "jpeg",
+        "width": 1,
+        "height": 1
+      }
+    },
+    {
+      "context": "about-42-1214.txt",
+      "variable": "imgRectangle39",
+      "local_path": "design-assets/figma/sources/bcd11f5d6196bfd71c6df849e835e72a8659e0a8ce7c80584c43342dfa7a382c.jpg",
+      "status": "downloaded",
+      "bytes": 6658861,
+      "sha256": "bcd11f5d6196bfd71c6df849e835e72a8659e0a8ce7c80584c43342dfa7a382c",
+      "source_dimensions": {
+        "format": "jpeg",
+        "width": 1,
+        "height": 1
+      }
+    },
+    {
+      "context": "about-42-1214.txt",
+      "variable": "imgRectangle40",
+      "local_path": "design-assets/figma/sources/fcb58164ddc0cb65bfc70966374ee672e5baeb00309ad365a727361cf40d1362.jpg",
+      "status": "downloaded",
+      "bytes": 10616977,
+      "sha256": "fcb58164ddc0cb65bfc70966374ee672e5baeb00309ad365a727361cf40d1362",
+      "source_dimensions": {
+        "format": "jpeg",
+        "width": 1,
+        "height": 1
+      }
+    },
+    {
+      "context": "about-42-1214.txt",
+      "variable": "imgImage4",
+      "local_path": "design-assets/figma/sources/6dea52a79597ba4c870238527ee6931952a882df01a5d350a9a0e820512fe05c.png",
+      "status": "downloaded",
+      "bytes": 8006,
+      "sha256": "6dea52a79597ba4c870238527ee6931952a882df01a5d350a9a0e820512fe05c",
+      "source_dimensions": {
+        "format": "png",
+        "width": 250,
+        "height": 267
+      }
+    },
+    {
+      "context": "about-42-1214.txt",
+      "variable": "imgImage1",
+      "local_path": "design-assets/figma/sources/5e86956b0fec6b483e0219c261653e17491079b48a18243387573ffda4e2b1ff.png",
+      "status": "downloaded",
+      "bytes": 12871,
+      "sha256": "5e86956b0fec6b483e0219c261653e17491079b48a18243387573ffda4e2b1ff",
+      "source_dimensions": {
+        "format": "png",
+        "width": 250,
+        "height": 267
+      }
+    },
+    {
+      "context": "about-42-1214.txt",
+      "variable": "imgImage2",
+      "local_path": "design-assets/figma/sources/6b9e8437bdb7f0b5c64950a99c1eb28b3106429b5bbd56e0513addf00f96821c.png",
+      "status": "downloaded",
+      "bytes": 10253,
+      "sha256": "6b9e8437bdb7f0b5c64950a99c1eb28b3106429b5bbd56e0513addf00f96821c",
+      "source_dimensions": {
+        "format": "png",
+        "width": 250,
+        "height": 267
+      }
+    },
+    {
+      "context": "about-42-1214.txt",
+      "variable": "imgImage5",
+      "local_path": "design-assets/figma/sources/c76e7ef517ce8d583f3e666f9fb3a8b2cd0454a05846f07065ec6c18b4c0d78f.png",
+      "status": "downloaded",
+      "bytes": 13410,
+      "sha256": "c76e7ef517ce8d583f3e666f9fb3a8b2cd0454a05846f07065ec6c18b4c0d78f",
+      "source_dimensions": {
+        "format": "png",
+        "width": 250,
+        "height": 267
+      }
+    },
+    {
+      "context": "about-42-1214.txt",
+      "variable": "imgSolarArrowUpOutline",
+      "local_path": "design-assets/figma/sources/183c58cbb7b4e44bf7f9a52eab20477f4bac99b41f3097c93f5ff9280e1d1540.svg",
+      "status": "downloaded",
+      "bytes": 1431,
+      "sha256": "183c58cbb7b4e44bf7f9a52eab20477f4bac99b41f3097c93f5ff9280e1d1540",
+      "source_dimensions": {
+        "format": "svg",
+        "width": "24",
+        "height": "24",
+        "viewBox": "0 0 24 24"
+      }
+    },
+    {
+      "context": "about-42-1214.txt",
+      "variable": "imgLayer1",
+      "local_path": "design-assets/figma/sources/88dfecc7ca69ab20cf9d5211724f64effabb3399eb99788267b1766c8d6523bf.svg",
+      "status": "downloaded",
+      "bytes": 1523,
+      "sha256": "88dfecc7ca69ab20cf9d5211724f64effabb3399eb99788267b1766c8d6523bf",
+      "source_dimensions": {
+        "format": "svg",
+        "width": "165.763",
+        "height": "163",
+        "viewBox": "0 0 165.763 163"
+      }
+    },
+    {
+      "context": "about-42-1214.txt",
+      "variable": "imgIconIoniconsLogosLogoFacebook",
+      "local_path": "design-assets/figma/sources/bfb1e83af6f38c7eb8dc9e0ae47e47ee1278f82999f71a5a0d57984509a6e0f1.svg",
+      "status": "downloaded",
+      "bytes": 728,
+      "sha256": "bfb1e83af6f38c7eb8dc9e0ae47e47ee1278f82999f71a5a0d57984509a6e0f1",
+      "source_dimensions": {
+        "format": "svg",
+        "width": "24",
+        "height": "24",
+        "viewBox": "0 0 24 24"
+      }
+    },
+    {
+      "context": "about-42-1214.txt",
+      "variable": "imgIconIoniconsLogosLogoTwitter",
+      "local_path": "design-assets/figma/sources/fdb830386379b842f88b99cbe8443bceef6b10210c1e0e6dca7e165b92edb459.svg",
+      "status": "downloaded",
+      "bytes": 1297,
+      "sha256": "fdb830386379b842f88b99cbe8443bceef6b10210c1e0e6dca7e165b92edb459",
+      "source_dimensions": {
+        "format": "svg",
+        "width": "24",
+        "height": "24",
+        "viewBox": "0 0 24 24"
+      }
+    },
+    {
+      "context": "about-42-1214.txt",
+      "variable": "imgIconIoniconsLogosLogoInstagram",
+      "local_path": "design-assets/figma/sources/46d7079a57fc13d0377932a43284b2085bd2fce88a95d34e51cc13f5cace90fc.svg",
+      "status": "downloaded",
+      "bytes": 2526,
+      "sha256": "46d7079a57fc13d0377932a43284b2085bd2fce88a95d34e51cc13f5cace90fc",
+      "source_dimensions": {
+        "format": "svg",
+        "width": "24",
+        "height": "24",
+        "viewBox": "0 0 24 24"
+      }
+    },
+    {
+      "context": "about-42-1214.txt",
+      "variable": "imgSolarArrowUpOutline1",
+      "local_path": "design-assets/figma/sources/d1e25a8f1c826ac635763175b3a2d3252f0928eca5c78603929ed5d84ba3740d.svg",
+      "status": "downloaded",
+      "bytes": 1354,
+      "sha256": "d1e25a8f1c826ac635763175b3a2d3252f0928eca5c78603929ed5d84ba3740d",
+      "source_dimensions": {
+        "format": "svg",
+        "width": "24",
+        "height": "24",
+        "viewBox": "0 0 24 24"
+      }
+    },
+    {
+      "context": "about-42-1214.txt",
+      "variable": "imgLayer2",
+      "local_path": "design-assets/figma/sources/5e8c5e12ee1f7c16fe9bf1b9759a18e7cf99e51186635479d12e17871ac77c69.svg",
+      "status": "downloaded",
+      "bytes": 1507,
+      "sha256": "5e8c5e12ee1f7c16fe9bf1b9759a18e7cf99e51186635479d12e17871ac77c69",
+      "source_dimensions": {
+        "format": "svg",
+        "width": "85.4239",
+        "height": "84",
+        "viewBox": "0 0 85.4239 84"
+      }
+    },
+    {
+      "context": "about-42-1214.txt",
+      "variable": "imgMdiUserOutline",
+      "local_path": "design-assets/figma/sources/b1bbb28a0bc051a3a8ee26f705e6400b6c75eea230aa7074a6fbda7c5aaeb2db.svg",
+      "status": "downloaded",
+      "bytes": 1181,
+      "sha256": "b1bbb28a0bc051a3a8ee26f705e6400b6c75eea230aa7074a6fbda7c5aaeb2db",
+      "source_dimensions": {
+        "format": "svg",
+        "width": "32",
+        "height": "32",
+        "viewBox": "0 0 32 32"
+      }
+    },
+    {
+      "context": "about-42-1214.txt",
+      "variable": "imgMdiCartOutline",
+      "local_path": "design-assets/figma/sources/97c3d5f25b7a740d91f3b0e1a14eed97e597022058e0fabe58b5e1dbbf18140a.svg",
+      "status": "downloaded",
+      "bytes": 1474,
+      "sha256": "97c3d5f25b7a740d91f3b0e1a14eed97e597022058e0fabe58b5e1dbbf18140a",
+      "source_dimensions": {
+        "format": "svg",
+        "width": "32",
+        "height": "32",
+        "viewBox": "0 0 32 32"
+      }
+    }
+  ]
+}
