@@ -1,0 +1,200 @@
+{
+  "source_page": "https://bpmdeodorant.com/products/bpm-natural-deodorant-bergamot-lime",
+  "retrieved": "2026-09-30",
+  "authorization": "User authorized downloading owner-owned product media for BPM mockups. Files retrieved from the brand-controlled Shopify CDN. No third-party ownership inferred.",
+  "assets": [
+    {
+      "name": "gallery-pack",
+      "url": "https://cdn.shopify.com/s/files/1/0960/5778/6740/files/Unscented_2.png?v=1770084423&width=1600",
+      "original_url": "https://cdn.shopify.com/s/files/1/0960/5778/6740/files/Unscented_2.png?v=1770084423",
+      "alt": "BPM Bergamot & Lime natural deodorant packaging",
+      "path": "product-media/gallery-pack.png",
+      "kind": "image",
+      "bytes": 106364,
+      "sha256": "31299fa95176e6b02917a9ed5e183247f2554f11348e0107e1be1a7fc83ef42a"
+    },
+    {
+      "name": "metal-tube",
+      "url": "https://cdn.shopify.com/s/files/1/0960/5778/6740/files/Metal_Tube_copy_2.png?v=1776721242&width=1600",
+      "original_url": "https://cdn.shopify.com/s/files/1/0960/5778/6740/files/Metal_Tube_copy_2.png?v=1776721242",
+      "alt": "BPM natural deodorant in metal tube",
+      "path": "product-media/metal-tube.png",
+      "kind": "image",
+      "bytes": 2157472,
+      "sha256": "a3a208d41d9cb1022c519c863e9a3ec1656cb57ab1d5e9310306ea7edf45c5d8"
+    },
+    {
+      "name": "open-box",
+      "url": "https://cdn.shopify.com/s/files/1/0960/5778/6740/files/Open_box_BL.png?v=1776721242&width=1600",
+      "original_url": "https://cdn.shopify.com/s/files/1/0960/5778/6740/files/Open_box_BL.png?v=1776721242",
+      "alt": "BPM Bergamot & Lime natural deodorant packaging",
+      "path": "product-media/open-box.png",
+      "kind": "image",
+      "bytes": 1934628,
+      "sha256": "d4dbcb6b5ca45ec12326c0d95c5248c5467f76e3c4551cf7fafd589efabf14e0"
+    },
+    {
+      "name": "cream-texture",
+      "url": "https://cdn.shopify.com/s/files/1/0960/5778/6740/files/PXL_20260329_201605488.jpg?v=1776722875&width=1600",
+      "original_url": "https://cdn.shopify.com/s/files/1/0960/5778/6740/files/PXL_20260329_201605488.jpg?v=1776722875",
+      "alt": "Texture of BPM natural deodorant cream",
+      "path": "product-media/cream-texture.jpg",
+      "kind": "image",
+      "bytes": 223613,
+      "sha256": "dc39923ba417f01548924e4071a76e8a4cd5fc5fead47a0ccce746b9c220f880"
+    },
+    {
+      "name": "hand-held",
+      "url": "https://cdn.shopify.com/s/files/1/0960/5778/6740/files/Hand_Photos_beige.png?v=1776721242&width=1600",
+      "original_url": "https://cdn.shopify.com/s/files/1/0960/5778/6740/files/Hand_Photos_beige.png?v=1776721242",
+      "alt": "Hand holding a metal tube of BPM deodorant against a beige background",
+      "path": "product-media/hand-held.png",
+      "kind": "image",
+      "bytes": 1107902,
+      "sha256": "bdb8375e7b60cf8fefdefbcad506772c684b53530aade5804a50aaba9e354e11"
+    },
+    {
+      "name": "turntable-pack",
+      "url": "https://cdn.shopify.com/s/files/1/0960/5778/6740/files/PXL_20260311_221227877.jpg?v=1776721242&width=1600",
+      "original_url": "https://cdn.shopify.com/s/files/1/0960/5778/6740/files/PXL_20260311_221227877.jpg?v=1776721242",
+      "alt": "BPM packaging box on a wooden surface with turntable and books in the background",
+      "path": "product-media/turntable-pack.jpg",
+      "kind": "image",
+      "bytes": 578236,
+      "sha256": "a43487ff7f602006abb433b3f5947a239258c74e386b4b06b3a33332c012ad4f"
+    },
+    {
+      "name": "turntable-tube",
+      "url": "https://cdn.shopify.com/s/files/1/0960/5778/6740/files/PXL_20260312_224936992.jpg?v=1776721242&width=1600",
+      "original_url": "https://cdn.shopify.com/s/files/1/0960/5778/6740/files/PXL_20260312_224936992.jpg?v=1776721242",
+      "alt": "Turntable on a wooden surface with a used tube of BPM deodorant",
+      "path": "product-media/turntable-tube.jpg",
+      "kind": "image",
+      "bytes": 452986,
+      "sha256": "ef743872e2bee879aa30ec378e4fe9d158b8bff1098254d409a7cc2b990f2c75"
+    },
+    {
+      "name": "application-poster",
+      "url": "https://cdn.shopify.com/s/files/1/0960/5778/6740/files/preview_images/af18b156c3864777b8d905edd00e8148.thumbnail.0000000000.jpg?v=1774979744&width=1080",
+      "path": "product-media/application-poster.jpg",
+      "alt": "Video showing pea-sized amount of BPM natural deodorant being applied and absorbed into skin",
+      "kind": "image",
+      "bytes": 72264,
+      "sha256": "b1da4eb24da175a5de25337c061976f2f8d7f46b13a2cb0bc19898bece5552cd"
+    },
+    {
+      "name": "application-video",
+      "url": "https://cdn.shopify.com/videos/c/vp/af18b156c3864777b8d905edd00e8148/af18b156c3864777b8d905edd00e8148.HD-1080p-7.2Mbps-79948390.mp4",
+      "path": "product-media/application-video.mp4",
+      "alt": "Video showing pea-sized amount of BPM natural deodorant being applied and absorbed into skin",
+      "kind": "video",
+      "duration_ms": 15050,
+      "bytes": 13051393,
+      "sha256": "6ae7456fdf4914837a26710f7c589f629e6017538d7db20ce2d1b80a2b0749bd"
+    },
+    {
+      "name": "unscented-pack",
+      "url": "https://cdn.shopify.com/s/files/1/0960/5778/6740/files/Unscented_2_1.png?v=1770084404&width=1600",
+      "original_url": "https://cdn.shopify.com/s/files/1/0960/5778/6740/files/Unscented_2_1.png?v=1770084404",
+      "source_page": "https://bpmdeodorant.com/products/bpm-natural-deodorant-unscented",
+      "alt": "BPM Unscented natural deodorant packaging",
+      "path": "product-media/unscented-pack.png",
+      "kind": "image",
+      "bytes": 106313,
+      "sha256": "4e0ce8d4f55bd0e7c3f1f121199facb7e68d44ea121e9343acfba6471609ca3c"
+    },
+    {
+      "name": "unscented-open-box",
+      "url": "https://cdn.shopify.com/s/files/1/0960/5778/6740/files/Open_Box_UC.png?v=1776721204&width=1600",
+      "original_url": "https://cdn.shopify.com/s/files/1/0960/5778/6740/files/Open_Box_UC.png?v=1776721204",
+      "source_page": "https://bpmdeodorant.com/products/bpm-natural-deodorant-unscented",
+      "alt": "BPM Unscented natural deodorant packaging",
+      "path": "product-media/unscented-open-box.png",
+      "kind": "image",
+      "bytes": 1924483,
+      "sha256": "88b8ebf10985316c943a31ffc6077bc561814d926f70ead41ce5ae8dc26fb01e"
+    },
+    {
+      "name": "duo-pack",
+      "url": "https://cdn.shopify.com/s/files/1/0960/5778/6740/files/Screenshot_2026-08-12_at_5.35.54_PM.png?v=1786570586&width=1600",
+      "original_url": "https://cdn.shopify.com/s/files/1/0960/5778/6740/files/Screenshot_2026-08-12_at_5.35.54_PM.png?v=1786570586",
+      "source_page": "https://bpmdeodorant.com/products/side-a-side-b",
+      "alt": "Two BPM natural deodorant boxes (Unscented and Bergamot & Lime) standing upright on a white background, one with a yellow-green lower section (Bergamot & Lime) and one with a teal lower section (Unscented). ",
+      "path": "product-media/duo-pack.png",
+      "kind": "image",
+      "bytes": 485773,
+      "sha256": "8b42f436752884796be531086a4511661ababaa239ddcfbb1a7ed4c500f85ce8"
+    },
+    {
+      "name": "duo-open-box",
+      "url": "https://cdn.shopify.com/s/files/1/0960/5778/6740/files/Screenshot2026-07-06at3.28.06PM.png?v=1783366111&width=1600",
+      "original_url": "https://cdn.shopify.com/s/files/1/0960/5778/6740/files/Screenshot2026-07-06at3.28.06PM.png?v=1783366111",
+      "source_page": "https://bpmdeodorant.com/products/side-a-side-b",
+      "alt": "Two tubes of BPM Natural Deodorant (Unscented and Bergamot & Lime) shown with their open kraft paper packaging boxes on a white background.",
+      "path": "product-media/duo-open-box.png",
+      "kind": "image",
+      "bytes": 539154,
+      "sha256": "a42b3820005b1c468551a7bcaa378518e1ec8a640eeacbc8585b5efe5365c530"
+    },
+    {
+      "name": "four-on-the-floor-mixed-scent-4-tube-deodorant-bundle-0",
+      "path": "product-media/four-on-the-floor-mixed-scent-4-tube-deodorant-bundle-0.png",
+      "url": "https://cdn.shopify.com/s/files/1/0960/5778/6740/files/Screenshot_2026-08-12_at_5.34.18_PM.png?v=1786570587"
+    },
+    {
+      "name": "four-on-the-floor-mixed-scent-4-tube-deodorant-bundle-1",
+      "path": "product-media/four-on-the-floor-mixed-scent-4-tube-deodorant-bundle-1.png",
+      "url": "https://cdn.shopify.com/s/files/1/0960/5778/6740/files/Screenshot_2026-08-12_at_1.52.58_PM.png?v=1786557203"
+    },
+    {
+      "name": "citrus-on-repeat-family-pack-4-tube-bergamot-lime-deodorant-bundle-0",
+      "path": "product-media/citrus-on-repeat-family-pack-4-tube-bergamot-lime-deodorant-bundle-0.png",
+      "url": "https://cdn.shopify.com/s/files/1/0960/5778/6740/files/Screenshot_2026-08-12_at_5.32.49_PM.png?v=1786570587"
+    },
+    {
+      "name": "citrus-on-repeat-family-pack-4-tube-bergamot-lime-deodorant-bundle-1",
+      "path": "product-media/citrus-on-repeat-family-pack-4-tube-bergamot-lime-deodorant-bundle-1.png",
+      "url": "https://cdn.shopify.com/s/files/1/0960/5778/6740/files/Screenshot2026-08-12at2.02.59PM.png?v=1786557838"
+    },
+    {
+      "name": "silent-on-repeat-family-pack-4-tube-unscented-deodorant-bundle-0",
+      "path": "product-media/silent-on-repeat-family-pack-4-tube-unscented-deodorant-bundle-0.png",
+      "url": "https://cdn.shopify.com/s/files/1/0960/5778/6740/files/Screenshot_2026-08-12_at_5.33.45_PM.png?v=1786570587"
+    },
+    {
+      "name": "silent-on-repeat-family-pack-4-tube-unscented-deodorant-bundle-1",
+      "path": "product-media/silent-on-repeat-family-pack-4-tube-unscented-deodorant-bundle-1.png",
+      "url": "https://cdn.shopify.com/s/files/1/0960/5778/6740/files/Screenshot2026-08-12at1.57.21PM.png?v=1786557491"
+    },
+    {
+      "name": "3-4-time-0",
+      "path": "product-media/3-4-time-0.png",
+      "url": "https://cdn.shopify.com/s/files/1/0960/5778/6740/files/Screenshot2026-08-12at7.03.56PM.png?v=1786575939"
+    },
+    {
+      "name": "3-4-time-1",
+      "path": "product-media/3-4-time-1.png",
+      "url": "https://cdn.shopify.com/s/files/1/0960/5778/6740/files/Screenshot2026-08-12at7.05.18PM.png?v=1786575938"
+    },
+    {
+      "name": "silent-repeat-0",
+      "path": "product-media/silent-repeat-0.png",
+      "url": "https://cdn.shopify.com/s/files/1/0960/5778/6740/files/Screenshot_2026-08-12_at_5.35.42_PM.png?v=1786570587"
+    },
+    {
+      "name": "silent-repeat-1",
+      "path": "product-media/silent-repeat-1.png",
+      "url": "https://cdn.shopify.com/s/files/1/0960/5778/6740/files/Screenshot2026-07-06at2.03.40PM.png?v=1783361046"
+    },
+    {
+      "name": "citrus-repeat-0",
+      "path": "product-media/citrus-repeat-0.png",
+      "url": "https://cdn.shopify.com/s/files/1/0960/5778/6740/files/Screenshot_2026-08-12_at_5.35.35_PM.png?v=1786570587"
+    },
+    {
+      "name": "citrus-repeat-1",
+      "path": "product-media/citrus-repeat-1.png",
+      "url": "https://cdn.shopify.com/s/files/1/0960/5778/6740/files/Screenshot_2026-07-06_at_1.52.43_PM.png?v=1783360394"
+    }
+  ]
+}

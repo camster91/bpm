@@ -1,0 +1,7 @@
+reference-site/dist/
+reference-site/evidence/
+node_modules/
+.env
+.env.*
+!.env.example
+.DS_Store

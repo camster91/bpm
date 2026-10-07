@@ -35,11 +35,7 @@ The Figma file also contains original product/packaging assets used by the desig
 
 The live store is the reference for real catalogue, cart, checkout, localisation, subscriptions, bundles, reviews and app behaviour. The review Site is the reference for the proposed visual/content direction.
 
-## Original local source found
-
-The prior interface limitation below is historical. The original local checkout has now been found and imported into `reference-site/`. See [source recovery](original-source-recovery.md) and its per-file provenance manifest. Metadata above reflects the earlier snapshot, not a fresh live access/version audit.
-
-## Historical recovery limitation
+## Recovery limitation
 
 The available ChatGPT Site/Library interfaces expose the active Site record and rendered text projection, but not the private editable source bundle that generated the deployment. No companion ZIP, HTML/CSS/JS export, GitHub repository, or source archive was found in the user's Library around the original publication time.
 

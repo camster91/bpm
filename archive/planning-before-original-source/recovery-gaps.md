@@ -1,9 +1,3 @@
-# Current recovery update
-
-The original source is now imported in `reference-site/`; see [recovery evidence](original-source-recovery.md). The unavailable-source/style/video/backend notes below describe the earlier reconstruction. The recovered source provides original styles, media mappings and a local testable Worker backend. CDN media portability, hosted authentication/persistence and full comparison QA remain separate checks.
-
-## Historical reconstruction gaps
-
 # Recovery gaps — issue #1
 
 ## Confirmed recovered

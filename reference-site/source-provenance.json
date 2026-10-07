@@ -1,0 +1,247 @@
+{
+  "source_commit": "2f95c940c42b1bc4152790a83f0f455f66ceaaa4",
+  "source_repository": "Local original Sites source checkout",
+  "scope": "Original tracked UI, runtime, media mappings, content snapshots, tests and review documentation; excludes deployment configuration, git metadata, build output and evidence",
+  "files": [
+    {
+      "path": "public/about.html",
+      "sha256": "b88bf1d6b03dea224e8f4b6e4209f783bb657dc42c95fe9d12bd4025489e4d92"
+    },
+    {
+      "path": "public/articles/best-natural-deodorant-for-sensitive-skin-what-to-look-for-and-what-to-avoid.html",
+      "sha256": "269e0fb4009f090dcd0a0324af7488d681496032ae263c45ff7b23980bb9cf71"
+    },
+    {
+      "path": "public/articles/deodorant-is-changing-shape-heres-why-we-chose-cream.html",
+      "sha256": "d68bd92f47476315a60433103667f43f41ea8ef9417f2d48766dddd12bd2fcda"
+    },
+    {
+      "path": "public/articles/how-to-switch-to-natural-deodorant-without-the-awkward-transition-period.html",
+      "sha256": "5c5a395e3fb7f9ee6158a1d644b628bb03346d03fb512c098f05f35592bf0876"
+    },
+    {
+      "path": "public/articles/is-baking-soda-bad-for-sensitive-skin-what-you-need-to-know.html",
+      "sha256": "92b09a76f238657c5e99cafb856b1dcdd63d843d57ca952a0fcc82cc43f592ae"
+    },
+    {
+      "path": "public/articles/the-math-behind-fair-pricing-bpm-vs-native-vs-schmidts.html",
+      "sha256": "4c44ffe493f43a423df8ebcb135b323b19ee19f1e35e4c09769ab5e4395d1349"
+    },
+    {
+      "path": "public/articles/the-name-behind-bpm-indigenous-ownership-and-finding-my-way-back.html",
+      "sha256": "2120afe98854eb6065460d9e8238a988cc82550ba31fb70e4439243007275345"
+    },
+    {
+      "path": "public/articles/underarm-skin-care-ingredients.html",
+      "sha256": "e08c222ac26293c06a4d7f6bf8475b0c49fe8dcc7ce20ff3735de1edc737e159"
+    },
+    {
+      "path": "public/articles/whats-changing-in-deodorant-packaging-right-now-and-why-we-went-with-metal.html",
+      "sha256": "6a30968c7ef9050f3e88f43b0e8fb45e4b8ec171b5cc6d80f93b771da9a43b4a"
+    },
+    {
+      "path": "public/bag.html",
+      "sha256": "3c0b9e765c496aec957c8343a46a26f735976b62e8df0338126531c9e4eb0822"
+    },
+    {
+      "path": "public/breakdown.html",
+      "sha256": "0aad7a40c65a671697d7ce596c82730f3ee9065af00d614f03a94555ba897418"
+    },
+    {
+      "path": "public/catalogue.json",
+      "sha256": "b14f1735f7d86848535d2754a9625b8e103359e883b1e1dbc1280f715027aabf"
+    },
+    {
+      "path": "public/contact.html",
+      "sha256": "8cac0f664bcc0f27b8bab0d7ec976275260525a4e80cbb65ea07497b4eb6feca"
+    },
+    {
+      "path": "public/figma-assets/bpm-logo.svg",
+      "sha256": "8e49558fa477a7f0d93b42bf6002eecca6a427846f61bfbfbe6076ad15f35731"
+    },
+    {
+      "path": "public/figma-assets/brand-display.woff2",
+      "sha256": "dd4c2ebb922586ae6a3e742b69f760ecb1a80429c95845ea278b5ae940803658"
+    },
+    {
+      "path": "public/index.html",
+      "sha256": "4bfb23191a19d25ef6c98891dbb4c2af6005185a23797e86934f0abeda44f084"
+    },
+    {
+      "path": "public/indigenous-owned.html",
+      "sha256": "e06361df9aa6b339ca7fb34bebd946259ef911da953895dd6e88e3027b55a95d"
+    },
+    {
+      "path": "public/policies/contact-information.html",
+      "sha256": "da9bc7e49184416f0caf2545120efeed853d43c2c7dad11dddad43e9e23600a4"
+    },
+    {
+      "path": "public/policies/legal.html",
+      "sha256": "5dbb68bf22d8bb43f520d38cbd86eed69a2e121dff131e26e70d674809e65bbf"
+    },
+    {
+      "path": "public/policies/privacy.html",
+      "sha256": "a8523b3cc527d8b6dc6a329f4d8256577752cec0dfa5f9ae1755bf23cbb0e77f"
+    },
+    {
+      "path": "public/policies/refund.html",
+      "sha256": "087b1ccb68ba81b7bbe8f8f2c6c5e0ee9df16411dbf6a195b0fbbe50f12610e7"
+    },
+    {
+      "path": "public/policies/shipping.html",
+      "sha256": "cc1cf9e712faee553ab574ac84898f8446b81e39a3eed1b373a8e6f010802922"
+    },
+    {
+      "path": "public/policies/subscription.html",
+      "sha256": "f6adfc4acfaeb3dcb1678d32bdfd916f72258b932fefa8c427b9fbe625ffa311"
+    },
+    {
+      "path": "public/policies/terms.html",
+      "sha256": "3a81109c209ce1afa6a1aca9abae300f8d317958bb447e481ac94dabf82753fa"
+    },
+    {
+      "path": "public/policies.html",
+      "sha256": "e4e059038563880dfaa9edfefed6dda26f86f38a4c8eec79c1b970ec5375e488"
+    },
+    {
+      "path": "public/product-media/application-description.vtt",
+      "sha256": "b3c7e6462d05c02a51e3351df76ae04ece4f97c99d66a71054b326672f82f0cb"
+    },
+    {
+      "path": "public/product-media/catalogue-extra.js",
+      "sha256": "6c5be9de10c731601625fcc0150cb3b13b25caaefa487363e17f0c04e6a2ea20"
+    },
+    {
+      "path": "public/product-media/cream-texture-retouched-v1.jpg",
+      "sha256": "f64342d28fc82d1e3811de62ef9d8f191bf2fb0dcd58668584fe1851dfd352fd"
+    },
+    {
+      "path": "public/product-media/formula-still-life-v1.jpg",
+      "sha256": "a9a287288cac4d921c3be05a4f3d965b3448d68ed050a11b316b3e0304e3cc60"
+    },
+    {
+      "path": "public/product-media/preview.css",
+      "sha256": "c92cc5064adfa9717f6b58d2cff3cb2ed28a1cb63fd9ced17537900e881b9791"
+    },
+    {
+      "path": "public/product-media/preview.html",
+      "sha256": "2b88862d5fbba7b12c20c2f382d827cf72d6ee4fcc841aeec6cd99200e7a22e8"
+    },
+    {
+      "path": "public/product-media/preview.js",
+      "sha256": "37010bcee5346cfa0a4f206c1010de716b90766f4aeffab01dd2177ccef20ead"
+    },
+    {
+      "path": "public/product-media/review.css",
+      "sha256": "8b2df42b162964829cc315186eb05ad3aae27a4eb8ab5ff0e03c6ba906736644"
+    },
+    {
+      "path": "public/product-media/review.js",
+      "sha256": "df8148720e4f032413bf2e026503bac3907fc745b315db198cc0db4e45cc6903"
+    },
+    {
+      "path": "public/review.html",
+      "sha256": "e2b2912b564686e285b310d97d343ba547d7314b5115825a50a8dbbc4f2809c0"
+    },
+    {
+      "path": "public/shared-footer.html",
+      "sha256": "13811726a4cbb8741a4e799b2c4eb0a163d7dc96ae6ca879e3a003f3dd0fbd3e"
+    },
+    {
+      "path": "public/shared-header.html",
+      "sha256": "c72dee8fbb33a1df7e8c841b7f3b727ede514594a2292897908aedeabb29f530"
+    },
+    {
+      "path": "public/shop.html",
+      "sha256": "814779b6a4f4c3ae6d828aac16130a34a360fe908e8394ed5252a688e8989f12"
+    },
+    {
+      "path": "public/site-assets/hero-current-source.json",
+      "sha256": "9a40ee53e4e329712e3173d4d6fc073a89a7aa4d1eb496de00dca7a8378d757d"
+    },
+    {
+      "path": "public/site-assets/hero-current.jpg",
+      "sha256": "cb672032586573a9b3f2dfbc252c61d47c0a7f12f9e90993dbe76e748a458c90"
+    },
+    {
+      "path": "public/site-assets/hero.jpg",
+      "sha256": "a6563c6c9591a1aaec7f15e0ae43f51d27a356653274efcd64de0716f5f2dd62"
+    },
+    {
+      "path": "public/site-assets/indigenous-mark.png",
+      "sha256": "05d2623ae8789060a8407720cf9ab47261cb5d06a56773c4edfdc6bd20125e74"
+    },
+    {
+      "path": "public/site.css",
+      "sha256": "6b0b0cfd9aec2ccd86e67c9e6cfa4e8aa3dbe5c8c73ac8fea452f20c0ef826c7"
+    },
+    {
+      "path": "public/site.js",
+      "sha256": "59f5d6ca2ca5beee61c3e3276df8dfba15bb52c1858e3dc7ff8801cba1094a1b"
+    },
+    {
+      "path": "src/comments-api.mjs",
+      "sha256": "28d9098bb249d55062309c172a69909d131b787e32bd2b98eebff683e1f94541"
+    },
+    {
+      "path": "src/content/articles.json",
+      "sha256": "3b14643d5813df02c1391a44a3da2ccfd74314b271df40397f18d3eb93623dc3"
+    },
+    {
+      "path": "src/content/policies.json",
+      "sha256": "4ac1315eff3f6d4016fff1e0b9df1054c594a8213baeef5e584719b8fba80c0f"
+    },
+    {
+      "path": "src/content/products.json",
+      "sha256": "83bd0d34a8d170c6c4b09d956b28e923958018fab9c6735afd564b860c59f7cd"
+    },
+    {
+      "path": "src/crop-settings.json",
+      "sha256": "ae210b22edf4d7db19028f77d74901c334394bc56cf6feb24760acb7d1d9f0d3"
+    },
+    {
+      "path": "src/media-manifest.json",
+      "sha256": "76782c93f0c43a1b46b6a65d26fbda680ce15870ee8ac471823171dba48cda63"
+    },
+    {
+      "path": "src/worker.mjs",
+      "sha256": "73ab83f3342f989ccf59922f8ea848775bfda62c47c2de2743092edb5a2b10f3"
+    },
+    {
+      "path": "tests/comments.test.mjs",
+      "sha256": "ebd09c82f18467090030ebedf8b7aab8434fb6bf64f6b51bacd5a25f2c688f61"
+    },
+    {
+      "path": "build.mjs",
+      "sha256": "e522ed97e6f4c9585bab9b7fb80cab2dc75dd06b2789f329645c5bce8911ecac"
+    },
+    {
+      "path": "dev.mjs",
+      "sha256": "0cede82dab58d2594246da39b91f9f3e237defee3a0e8e46190e701962cadc67"
+    },
+    {
+      "path": "verify-pages.mjs",
+      "sha256": "2b658e50989bf1f5c8b8b94f23405b6ad03b20f613d8a5cd9bdef37c5656349d"
+    },
+    {
+      "path": "package.json",
+      "sha256": "f80e6f861025267eeac75d44f4f2b80d91fdfde305a74a590d40621c569e1d6d"
+    },
+    {
+      "path": "README.md",
+      "sha256": "70a49b8ae3dc9ec606a657050396257a01e83dc59a37e9525e096fceb0712e0f"
+    },
+    {
+      "path": "full-site-review.md",
+      "sha256": "043d0054c0d40ecf5eebace92a4e40c97b33eff116e61add9af62feff080ee6f"
+    },
+    {
+      "path": "responsive-review.md",
+      "sha256": "0e47b9a3966aa8ba3c164f04ef3c2f6c0cb2276c7b3f0cc78215ad1e9dbe49f1"
+    },
+    {
+      "path": "shopify-transfer-plan.md",
+      "sha256": "83620ac6a401bc1e20d6d3e796a20ba86f290a2699905c4a93813b65b5b1a27c"
+    }
+  ]
+}
