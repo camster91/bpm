@@ -74,12 +74,28 @@ Custom data overview displays 22 product and 11 variant metafield definitions, p
 | How to Use Title | Single line text |
 | How to Use | Multi-line text |
 
-The same list shows Product rating (Rating, three products), Product rating count (Integer, three products), and Google: Custom Product (True or false, zero products). Category-assigned definitions remain to inspect; the visible all-products list alone does not cover the overview count of 22.
+The same list shows Product rating (Rating, three products), Product rating count (Integer, three products), and Google: Custom Product (True or false, zero products).
+
+The Assigned to categories tab contains nine Metaobject fields: Usage type (three products); Material, Target gender, Product certifications & standards, Product form and Dispenser type (nine each); Suitable for skin type, Active ingredient and Scent (eight each). Together these nine and the thirteen all-product definitions reconcile the overview count of 22. Category-field namespaces, referenced entries and claim approval remain unverified.
+
+The Variant metafield definitions list contains eleven Single line text fields, all labelled Google: Age Group, Condition, Gender, MPN, Custom Label 0–4, Size System and Size Type. Usage displays a dash, not a verified zero. Preserve these existing feed-related fields; they are not candidate editorial settings.
 
 Ingredients definition inspected directly: `custom.ingredients`, one Rich text value, pinned, Storefront API access checked. Its value/source consumption in theme files still needs verification. No settings were changed. Prefer reusing verified existing definitions over creating duplicate ingredient/use/shipping fields.
+
+Nine additional editorial definition detail pages were inspected directly. Their namespaces and types are in `content-ownership.md`; each has Storefront API access checked. Displayed character-limit minimum/maximum fields were blank on the text definitions; unique-only was unchecked where shown. This does not establish all API validation constraints. In particular, `custom.card_color` is Single line text, not a typed colour field, so candidate rendering needs validated colour handling and a safe default. Source bindings and actual product values remain to inspect after export.
+
+## Subscription and bundle configuration
+
+Shopify is the provider shown for both Subscriptions and Bundles. Subscription plan `80571859316` has customer title Subscribe and Save Monthly, internal description 10% off, delivery every five months and 10% discount, assigned to Bergamot & Lime and Unscented. The title/frequency mismatch requires owner review; nothing was edited. The app's setup guide is 3/7 completed and its dashboard shows four active subscriptions; individual contracts and customers were not opened.
+
+The Bundles app displays seven configured products. Every detail page was inspected for quantities and selected 76g components; the full matrix is in `app-audit.md`. Cart/checkout, component availability, actual variant IDs and fulfilment remain unverified. No Save and continue controls were used.
 
 Metaobject overview shows Knowledge Base Facts (54), Question and Answer Pairs (7), Product form (3), Material (2), Product certifications & standards (22), Suitable for skin type (14), Target gender (4), Dispenser type (1), Usage type (1), Active ingredient (4), and Fragrance (2). These are displayed definition/entry counts; fields, values, permissions and app ownership were not audited. Knowledge Base resources must not be repurposed for theme FAQs without verifying semantics and ownership.
 
 ## Next work
 
-Inspect/export current theme read-only into protected local storage, verify backup checksum and exact theme name, then map templates/settings/app placements to existing definitions. Inspect Subscriptions/Bundles and Google settings without operational changes. Finish category/variant definitions and resource usage before finalizing #14. #28 still needs client decisions; #15 needs actual Liquid source and Theme Check. No issue is closed by this preliminary authenticated pass.
+Inspect/export current theme read-only into protected local storage, verify backup checksum and exact theme name, then map templates/settings/app placements to existing definitions. Subscription/bundle configuration, Google overview and category/variant inventories are now inspected; remaining app settings, extension placements, resource values and source bindings still need verification before finalizing #4/#14. #28 still needs client decisions; #15 needs actual Liquid source and Theme Check. No issue is closed by this preliminary authenticated pass.
+
+## Google overview verification
+
+Google & YouTube installation identifies Google LLC. Overview shows Merchant Center Active, 18 submitted/approved entries and zero Limited/Not Approved/Under Review; counts include variants and do not prove 18 unique Shopify products. Google Analytics tab shows Active, Google Ads shows Inactive. Local inventory has an automatic Google Business Profile connection error. See `app-audit.md` for limitations and owner follow-up. No connection, pixel, advertising, review or account settings were changed.
