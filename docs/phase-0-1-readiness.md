@@ -1,5 +1,7 @@
 # Phase 0/1 requirement audit
 
+Later update: Cameron approved the protected export; it succeeded and actual source/backup verification plus baseline Theme Check are in `theme-export-audit.md`. This supersedes missing-export/source-version items in the snapshot below. Theme Check baseline fails (9 errors/11 warnings); candidate checks/CI, development preview/rollback and client acceptance remain open.
+
 GitHub issue bodies and PR #12 refreshed read-only on 7 October 2026 UTC. Local evidence inspected through commit `147f636`. This is a readiness audit, not client approval or issue closure. All referenced issues remain OPEN.
 
 | Requirement | Evidence now | Still needed / owner |

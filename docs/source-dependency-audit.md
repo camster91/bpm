@@ -1,5 +1,7 @@
 # Narrow authenticated source inspection
 
+Subsequent approved export now verifies actual files and a checksum-backed baseline. `theme-export-audit.md` resolves palette classes, tab rendering/optional-data guard, template and native form inventory. The browser observations below remain valid narrow evidence; their export prerequisite has since been satisfied.
+
 Read-only browser inspection of live theme `190930944372`, 7 October 2026 UTC. Searches and visible editor context are evidence of current source; they are not an exported/checksummed backup, complete code review, or a purchase test. No source was edited, replaced or saved. Files are not copied into the repository here.
 
 ## Product subscriptions — #4/#7/#21

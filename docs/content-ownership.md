@@ -1,5 +1,7 @@
 # Current access update
 
+Approved source export now confirms field consumption and palette classes 1–4/default in `theme-export-audit.md`. PDP tab bodies use `metafield_tag`; the outer tab guard omits explanatory-only content, a candidate fallback case. Existing types/values remain unchanged. Final editor architecture, validation and client expectations are still open.
+
 Browser verification succeeded on 7 October 2026 UTC. See [authenticated inventory and content definitions](authenticated-audit.md). The earlier access-blocker statements below are historical; file export and complete configuration/compatibility checks remain pending.
 
 # Content ownership and editor strategy — #14

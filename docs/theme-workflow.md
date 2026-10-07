@@ -1,6 +1,6 @@
 # Current access update
 
-Browser verification succeeded on 7 October 2026 UTC. See [authenticated inventory and content definitions](authenticated-audit.md). The earlier access-blocker statements below are historical; file export and complete configuration/compatibility checks remain pending.
+Browser verification succeeded on 7 October 2026 UTC. Cameron then approved the exact export below; it succeeded with 404 files and a verified protected archive. Source confirms Dawn 15.4.1. See [export and baseline checks](theme-export-audit.md). The pre-export descriptions below are historical; development preview, complete dependencies and tested rollback remain pending.
 
 # Theme workflow and rollback — #3
 
@@ -10,7 +10,7 @@ Current theme `190930944372` is now confirmed in authenticated Admin, matching p
 
 ## Prepared read-only export
 
-Destination is an empty owner-only directory outside the tracked repository. Proposed command, not executed:
+Destination is owner-only outside the tracked repository. This approved command was executed successfully:
 
 ```sh
 CI=1 SHOPIFY_CLI_FORCE_AUTO_UPGRADE=0 shopify theme pull --store qef4ye-yg.myshopify.com --theme 190930944372 --path /Users/Cameron/Documents/Codex/bpm-private-audit/theme-190930944372-20261007 --nodelete

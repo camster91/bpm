@@ -1,5 +1,7 @@
 # Latest audit checkpoint
 
+Export approval received and executed: 404 source files, verified protected archive/manifest, Dawn 15.4.1 confirmed. Actual local Theme Check fails on the unchanged baseline (9 errors/11 warnings). `theme-export-audit.md` records backup/source/CI evidence and next gaps. The previous export-confirmation blockers below are superseded. No development upload, push, merge, live edit or client acceptance occurred. Next: separate local candidate preparation/source remediation, complete app/source mappings and resolve #28 client decisions before template sign-off.
+
 Local work remains on `work/recover-original-source`, unpushed; draft PR #12 does not include these audit commits. Latest work reconciles native page/article assignments and inspects narrow product source dependencies.
 
 Requirement-by-requirement readiness audit: `phase-0-1-readiness.md`. GitHub issue bodies and draft PR state refreshed read-only on 7 October 2026 UTC. PR head is unchanged and only GitGuardian is reported; no local workflow execution on GitHub is implied. Independent Phase 0 recovery comparisons and original-asset coverage also remain open.
