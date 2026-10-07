@@ -6,7 +6,7 @@ Browser verification succeeded on 7 October 2026 UTC. See [authenticated invento
 
 ## Scope and access
 
-Read-only public audit, captured during this goal continuation. Exact retrieval time and catalogue URLs are in `public-catalogue-snapshot.json`. This is not a complete Admin audit. Shopify connector returned reauthentication required; the browser reached a passkey verification checkpoint. Owner: Cameron. Resume: complete verification or reconnect the connector to BPM, then verify the selected store before any authenticated inspection.
+Read-only public audit expanded with authenticated browser evidence in `authenticated-audit.md` and `app-audit.md`. Exact public retrieval time and catalogue URLs are in `public-catalogue-snapshot.json`. Browser verification is cleared; Shopify connector reconnection is separate. This remains an incomplete Admin/source audit, with the protected theme export awaiting confirmation.
 
 Homepage JavaScript identifies `qef4ye-yg.myshopify.com`, live theme `190930944372`, role `main`, schema Dawn `15.4.1`, and a truncated theme name beginning `Final 2026 Site - description-above-buybox`. These are publicly emitted metadata; verify exact name, files, version and configuration in Admin. No backup exists in this checkout yet.
 
@@ -38,3 +38,13 @@ Authenticated template/file inventory, menus, metafields/metaobjects, selling pl
 ## Expanded public URL inventory
 
 45 public routes now recorded with owner issues and preserve-by-default decisions. Nine current articles include one absent from the frozen reference. See [public reconciliation findings](public-audit-findings.md) and `public-url-inventory.json`; authenticated template coverage remains unverified.
+
+## Authenticated editor evidence
+
+Current theme `190930944372` is confirmed in Admin. Product template selector displays Default product assigned to seven products, bergamot-lime assigned to one, and unscented assigned to one. This reconciles the nine-product catalogue; exact JSON filenames and per-product assignment records still need source/Admin verification. All three belong to #7, with bundles/subscriptions also #21. Their shared-template editing scope must be clearly explained to Corey: editing Default product can affect seven products, not just the selected preview.
+
+The selector also exposes Home page (#16), Collections/Collections list/Search (#17), Pages/Password/404 (#18/#20), Blogs/Blog posts (#19), Cart/Gift card (#20), and Checkout and customer accounts (#20). These are editor groups, not a complete source-file inventory or proof that each custom template is assigned. Do not create metaobject templates or checkout changes from their presence alone.
+
+Default product currently uses Star Ratings and Review Widget app blocks around Custom Product and Product Showcase, plus Testimonial Slider. App embeds/settings and current footer/header evidence are in `app-audit.md`. Existing Product Tabs help references the verified editorial fields but has a type mismatch for Ingredients. Current custom Purchase Options explains a placeholder discount; source eligibility and native selling-plan submission remain mandatory verification, not assumed compatibility.
+
+Remaining #13 evidence: export/source inventory, remaining editor-template variants/assignments, menus, Markets/localisation, redirects, forms/providers, full app/source bindings and rendered journey checks in an approved isolated environment. No live commerce/form submission was performed.

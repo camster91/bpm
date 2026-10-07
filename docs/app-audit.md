@@ -39,6 +39,27 @@ Authenticated Bundles list and each of its seven detail pages were inspected rea
 
 No component selections, quantities, prices or product records were changed; Save and continue was not used. These mappings verify configuration, not stock-on-hand, native cart grouping, checkout or order fulfilment. Keep bundle composition app-owned and test all seven mappings under #21 rather than implementing pseudo-bundles from section text.
 
+## Current theme embeds and default-product insertion points
+
+Inspected live theme `190930944372` in Admin's app-embed and section panels. Save remained disabled; no switch, setting, block or ordering was changed.
+
+| Embed | Observed state |
+|---|---|
+| Tax exemption banner — IndianStatusCheckout | Disabled (Enable control) |
+| Store widget — Google & YouTube | Disabled (Enable control) |
+| Klaviyo Onsite Javascript — Klaviyo | Disabled (Enable control) |
+| Subscription widget — Subscriptions | Disabled (Enable control) |
+| Judge.me — Judge.me Reviews | Enabled (pressed Disable control) |
+| Reviews in Cart Drawer — Judge.me Reviews | Enabled (pressed Disable control) |
+
+Disabled embed state alone does not establish feature absence: custom code, app blocks or platform integrations can supply behaviour. Source inspection is still required. Do not enable currently disabled embeds speculatively; that could duplicate scripts/UI or alter tax behaviour.
+
+Default product template order is Apps (Star Ratings), Custom Product, Product Showcase, Apps (Review Widget), Testimonial Slider. Header uses Announcement bar and Header; footer uses Footer Banner and Custom Footer, with the standard Footer hidden. Review Widget identifies Judge.me Reviews, preview data Real data, show-store-reviews toggle off and empty-state Show empty widget. Its current preview product is Citrus on Repeat duo; it shows an empty review widget while the separate editor preview star-rating area shows sample data. Neither preview sample data nor the separate Testimonial Slider establishes product-specific review evidence.
+
+Custom Product contains its own Purchase Options block with configurable One Time Purchase, Subscribe & Save, SAVE [percent]%, benefits separated by `|`, and a placeholder discount of 20% described as calculating a subscription price before selling plans exist. This is a configuration risk to investigate, not a proven live failure: verify source eligibility and selling-plan submission under #7/#21. Candidate behaviour must never invent a subscription option/price for a product without a real eligible selling plan.
+
+Subscriptions settings show payment-failure retries 3 with 7 days between, then cancel and notify; inventory-failure retries 5 with 1 day between, then skip and notify; staff notifications weekly. These store-wide settings were only read and must remain outside theme changes. The app provides a subscription-management link on `account.bpmdeodorant.com`; source link placement/customer-account behaviour remains to verify. No contract, billing attempt or notification was triggered.
+
 ## Historical public leads
 
 Google & YouTube overview inspection: Merchant Center shows Total 18 and Approved 18, with Limited, Not Approved and Under Review all 0. The UI defines its count as including variants; do not equate it to eighteen unique Shopify products. Google Analytics tab shows Active, which verifies connection status only, not event accuracy. Local inventory shows Error: trouble automatically connecting to Google Business Profile, with an instruction to link manually. No Manage/Get started controls were used, account linkage changed, ads started or review collection enabled. This is an existing operational finding for owner review, not a theme-caused defect; #4/#25 still require feed mapping, consent and event verification.
