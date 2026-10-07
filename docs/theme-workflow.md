@@ -6,7 +6,17 @@ Browser verification succeeded on 7 October 2026 UTC. See [authenticated invento
 
 ## Current evidence
 
-Public theme metadata: `190930944372`, main, Dawn `15.4.1`; authenticated confirmation pending. Repo branch `work/recover-original-source` preserves the recovered reference. No Shopify theme files, production export, development theme or tested rollback exists yet. Do not mark #3 complete.
+Current theme `190930944372` is now confirmed in authenticated Admin, matching public metadata. Dawn `15.4.1` remains public schema evidence pending source verification. Repo branch `work/recover-original-source` preserves the recovered reference. No Shopify theme files, production export, development theme or tested rollback exists yet. Do not mark #3 complete.
+
+## Prepared read-only export
+
+Destination is an empty owner-only directory outside the tracked repository. Proposed command, not executed:
+
+```sh
+CI=1 SHOPIFY_CLI_FORCE_AUTO_UPGRADE=0 shopify theme pull --store qef4ye-yg.myshopify.com --theme 190930944372 --path /Users/Cameron/Documents/Codex/bpm-private-audit/theme-190930944372-20261007 --nodelete
+```
+
+This sends the store/theme identifiers and authenticated theme-file read requests to Shopify, then saves returned files locally. It does not upload, edit, publish or duplicate a remote theme. CLI authentication may be required separately from the existing browser session; stop for any unexpected access expansion. The CLI skill requires showing the command and receiving explicit confirmation in a separate turn before execution. After a successful export, record checksums and retrieval metadata without exposing private configuration; inspect app placements and content bindings before choosing an implementation base.
 
 ## Next sequence after access is restored
 

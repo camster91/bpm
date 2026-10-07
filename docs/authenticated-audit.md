@@ -41,7 +41,17 @@ App identity is now authenticated inventory evidence. Versions, configured featu
 
 ## Sales channels and Agentic
 
-Settings displays Online Store, Facebook & Instagram, Google & YouTube, Faire: Sell Wholesale, Shop and Point of Sale. Agentic also exists as a top-level Admin navigation entry at `/apps/agentic`; its settings/state have not yet been inspected. This resolves the earlier unidentified Admin surface while preserving the need to verify exact channel configuration and the relationship to public discovery/UCP endpoints.
+Settings displays Online Store, Facebook & Instagram, Google & YouTube, Faire: Sell Wholesale, Shop and Point of Sale. Agentic also exists as a top-level Admin navigation entry at `/apps/agentic`.
+
+The authenticated Agentic panel displays nine products synced, policy status completed, and "Allow Shopify to manage for me" checked. ChatGPT, Meta AI and Muse, Microsoft Copilot, Shop and Other channels each show Active. ChatGPT and Other channels say customers check out on the online store; Meta AI and Muse, Microsoft Copilot and Shop say customers can check out directly on their surfaces. Knowledge Base is installed and Shopify Catalog shows nine products. These are displayed configuration/status signals, not verified purchase outcomes or independent policy/claims approval. No settings were changed, search submitted or terms accepted. Preserve the online-store checkout journey and catalog/product data when designing the candidate theme; test channel-specific compatibility before release.
+
+## Source access and export preparation
+
+The current theme's Edit code link opens the source editor at `/store/qef4ye-yg/themes/190930944372`. Its Explorer displays assets, blocks, config, layout, locales, sections, snippets and templates; no source file was edited or saved. Folder expansion could not be reliably inspected through the browser controls, so filenames and source contents are not claimed verified.
+
+The Admin Download theme file dialog explicitly says files will be emailed to the account email. It was cancelled without sending. A direct CLI pull is prepared instead, subject to the CLI skill's separate-turn confirmation requirement. Local destination `/Users/Cameron/Documents/Codex/bpm-private-audit/theme-190930944372-20261007` exists outside this repository with owner-only directory permissions. It is empty, not yet a backup.
+
+Installed CLI reports 4.5.1. The version check unexpectedly attempted an automatic Homebrew upgrade; it failed on permissions and an untrusted-tap check. No permissions or tap trust were changed. Use `CI=1` and `SHOPIFY_CLI_FORCE_AUTO_UPGRADE=0` for the proposed pull to suppress automatic upgrade, as confirmed in the installed CLI source. Do not treat browser authentication as proof that CLI authentication is ready.
 
 ## Judge.me warning
 
@@ -72,4 +82,4 @@ Metaobject overview shows Knowledge Base Facts (54), Question and Answer Pairs (
 
 ## Next work
 
-Inspect/export current theme read-only into protected local storage, verify backup checksum and exact theme name, then map templates/settings/app placements to existing definitions. Inspect Subscriptions/Bundles, Agentic and Google settings without operational changes. Finish category/variant definitions and resource usage before finalizing #14. #28 still needs client decisions; #15 needs actual Liquid source and Theme Check. No issue is closed by this preliminary authenticated pass.
+Inspect/export current theme read-only into protected local storage, verify backup checksum and exact theme name, then map templates/settings/app placements to existing definitions. Inspect Subscriptions/Bundles and Google settings without operational changes. Finish category/variant definitions and resource usage before finalizing #14. #28 still needs client decisions; #15 needs actual Liquid source and Theme Check. No issue is closed by this preliminary authenticated pass.

@@ -27,3 +27,7 @@ Public URL audit now covers 45 responding routes, including nine articles and ni
 ## Authenticated access restored
 
 7 October 2026 UTC: user completed the authenticator flow. The BPM Admin browser is authenticated. See `authenticated-audit.md` for live theme confirmation, installed apps/channels, existing product fields and Judge.me market-driven-shipping warning. The prior passkey blocker is cleared for this browser session; connector reconnection is separate. Next: protected read-only theme export and full integration/content-definition audit. No store configuration changed.
+
+## Export preparation and Agentic verification
+
+Authenticated Agentic configuration shows nine synced products and active channels; see `authenticated-audit.md`. Theme source editor access was observed but no source files were modified. Admin export uses email and was cancelled without sending. Protected local destination is prepared; the exact read-only CLI pull is in `theme-workflow.md` and awaits the CLI skill-required separate-turn confirmation. CLI 4.5.1 auto-upgrade was attempted unexpectedly by the version check and failed; no trust/permission changes were made. The proposed pull disables automatic upgrade. Browser access is available; CLI authentication and the export remain unverified. No theme implementation, issue closure, push, publication or client acceptance is claimed.
