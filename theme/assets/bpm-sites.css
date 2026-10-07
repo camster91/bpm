@@ -233,3 +233,5 @@ h3{font-family:inherit}
 @media(max-width:760px){.closing{padding:48px 0}.closing .button{min-width:0}.closing h2{font-size:34px}}
 
 .bpm-newsletter-consent{display:flex!important;align-items:start;gap:12px;margin:0 0 24px;font-size:14px!important}.preview-form .bpm-newsletter-consent input{width:18px;height:18px;flex-shrink:0;margin:3px 0 0;accent-color:var(--ink)}
+
+.bpm-article-opening{display:block;max-width:var(--frame-width);margin:auto}.bpm-article-opening .eyebrow{margin-top:24px}.bpm-article-opening h1{margin-top:24px}.bpm-pagination{display:flex;flex-wrap:wrap;gap:12px;margin-top:48px}.bpm-pagination .page,.bpm-pagination .prev,.bpm-pagination .next{display:inline-flex;align-items:center;min-height:44px;min-width:44px;justify-content:center;border:1px solid var(--line);padding:8px}.bpm-pagination .current{background:var(--ink);color:var(--cream)}.prose iframe,.prose video{max-width:100%}

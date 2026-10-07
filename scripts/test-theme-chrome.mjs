@@ -7,13 +7,14 @@ import { Liquid } from 'liquidjs';
 const theme = resolve(import.meta.dirname, '../theme');
 const scratch = await mkdtemp(join(tmpdir(), 'bpm-chrome-fixtures-'));
 const locale = JSON.parse(await readFile(join(theme, 'locales/en.default.json'), 'utf8'));
-const clean = source => source.replace(/{%\s*form[^%]*%}/g, '<form class="preview-form" method="post" action="/local-fixture-newsletter">').replace(/{%\s*endform\s*%}/g, '</form>').replace(/{%\s*(schema|doc|stylesheet)\s*%}[\s\S]*?{%\s*end\1\s*%}/g, '');
+const clean = source => source.replace(/{%\s*form[^%]*%}/g, '<form class="preview-form" method="post" action="/local-fixture-newsletter">').replace(/{%\s*endform\s*%}/g, '</form>').replace(/{%\s*paginate[^%]*%}/g, '').replace(/{%\s*endpaginate\s*%}/g, '').replace(/{%\s*(schema|doc|stylesheet)\s*%}[\s\S]*?{%\s*end\1\s*%}/g, '');
 const navigation = clean(await readFile(join(theme, 'snippets/bpm-navigation.liquid'), 'utf8'));
 await writeFile(join(scratch, 'bpm-navigation.liquid'), navigation);
 await writeFile(join(scratch, 'bpm-sites-links.liquid'), clean(await readFile(join(theme, 'snippets/bpm-sites-links.liquid'), 'utf8')));
 await writeFile(join(scratch, 'bpm-sites-card.liquid'), clean(await readFile(join(theme, 'snippets/bpm-sites-card.liquid'), 'utf8')));
 await writeFile(join(scratch, 'bpm-app-blocks.liquid'), clean(await readFile(join(theme, 'snippets/bpm-app-blocks.liquid'), 'utf8')));
 await writeFile(join(scratch, 'bpm-product-card.liquid'), clean(await readFile(join(theme, 'snippets/bpm-product-card.liquid'), 'utf8')));
+await writeFile(join(scratch, 'bpm-sites-article-card.liquid'), clean(await readFile(join(theme, 'snippets/bpm-sites-article-card.liquid'), 'utf8')));
 const engine = new Liquid({ root: scratch, extname: '.liquid' });
 engine.registerFilter('money', value => '$' + (Number(value) / 100).toFixed(2));
 engine.registerFilter('money_with_currency', value => '$' + (Number(value) / 100).toFixed(2) + ' CAD');
@@ -95,6 +96,11 @@ try {
   await check('Native newsletter requires email and unchecked explicit consent','sections/bpm-sites-newsletter.liquid',newsletter,html=>{assert.match(html,/name="contact\[email\]"/);assert.match(html,/type="checkbox" required/);assert.doesNotMatch(html,/ checked/);assert.match(html,/href="\/policies\/privacy-policy"/);});
   await check('Newsletter error preserves email and labels invalid field','sections/bpm-sites-newsletter.liquid',{...newsletter,form:{email:'person@example.test',errors:'Invalid input'}},html=>{assert.match(html,/aria-invalid="true"/);assert.match(html,/aria-describedby="Newsletter-newsletter-a-errors"/);assert.match(html,/value="person@example.test"/);});
   await check('Newsletter success emits status without repeated signup controls','sections/bpm-sites-newsletter.liquid',{...newsletter,form:{'posted_successfully?':true}},html=>{assert.match(html,/role="status"/);assert.doesNotMatch(html,/name="contact\[email\]"|type="submit"/);});
+  const nativeBlog = {title:'The <Breakdown>',url:'/blogs/the-breakdown',articles:[{id:1,title:'First <article>',url:'/blogs/the-breakdown/first',published_at:'2026-09-26T12:00:00-04:00'}]};
+  await check('Native blog renders articles with actual title URL and configured imagery','sections/bpm-sites-blog.liquid',{section:{settings:{page_size:12},blocks:[{settings:{article:{id:1},source_art:'texture'}}]},blog:nativeBlog,paginate:{pages:1}},html=>{assert.match(html,/The &lt;Breakdown&gt;/);assert.match(html,/First &lt;article&gt;/);assert.match(html,/href="\/blogs\/the-breakdown\/first"/);assert.match(html,/bpm-sites-texture.jpg/);});
+  await check('Empty native blog shows an honest empty state','sections/bpm-sites-blog.liquid',{section:{settings:{page_size:12},blocks:[]},blog:{title:'Blog',articles:[]},paginate:{pages:1}},html=>{assert.match(html,/No articles have been published yet/);assert.doesNotMatch(html,/<article/);});
+  await check('Native article preserves rich body and heading while using actual blog return link','sections/bpm-sites-article.liquid',{section:{settings:{show_back_link:true}},article:{title:'Article <test>',published_at:'2026-09-26T12:00:00-04:00',content:'<h2>Original section</h2><p>Source body.</p>'},blog:nativeBlog},html=>{assert.match(html,/Article &lt;test&gt;/);assert.match(html,/<h2>Original section<\/h2><p>Source body.<\/p>/);assert.match(html,/href="\/blogs\/the-breakdown"/);assert.equal((html.match(/<h1>/g)||[]).length,1);});
+  await check('Native general page preserves Admin rich text and escapes title','sections/bpm-sites-page.liquid',{page:{title:'About <BPM>',content:'<p>Original page body.</p>'}},html=>{assert.match(html,/About &lt;BPM&gt;/);assert.match(html,/<p>Original page body.<\/p>/);});
   console.log(`${passed} chrome rendering checks passed; Shopify runtime and visual geometry remain unverified.`);
 } finally {
   await rm(scratch, { recursive: true, force: true });

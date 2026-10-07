@@ -15,7 +15,8 @@
     "policies": "Policies",
     "bag": "Bag",
     "bag_count": "Shopping bag, {{ count }} items",
-    "privacy": "Privacy policy"
+    "privacy": "Privacy policy",
+    "pagination": "Pagination"
   },
   "accessibility": {
     "new_window": "Opens in a new window"
@@ -26,5 +27,8 @@
   },
   "newsletter": {
     "success": "Thanks for signing up. Check your inbox for any confirmation required."
+  },
+  "editorial": {
+    "no_articles": "No articles have been published yet."
   }
 }

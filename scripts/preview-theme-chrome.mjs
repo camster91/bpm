@@ -7,8 +7,8 @@ const output = resolve(process.argv[2] || '/tmp/bpm-chrome-preview');
 await mkdir(output, { recursive: true });
 await symlink(join(theme, 'assets'), join(output, 'assets')).catch(error => { if (error.code !== 'EEXIST') throw error; });
 const styles = [];
-const clean = text => text.replace(/{%\s*form[^%]*%}/g, '<form class="preview-form" method="post" action="/local-fixture-newsletter">').replace(/{%\s*endform\s*%}/g, '</form>').replace(/{%\s*(schema|doc)\s*%}[\s\S]*?{%\s*end\1\s*%}/g, '').replace(/{%\s*stylesheet\s*%}([\s\S]*?){%\s*endstylesheet\s*%}/g, (_, css) => { styles.push(css); return ''; });
-for (const name of ['bpm-navigation', 'bpm-product-card', 'bpm-sites-links', 'bpm-sites-card']) await writeFile(join(output, `${name}.liquid`), clean(await readFile(join(theme, 'snippets', `${name}.liquid`), 'utf8')));
+const clean = text => text.replace(/{%\s*form[^%]*%}/g, '<form class="preview-form" method="post" action="/local-fixture-newsletter">').replace(/{%\s*endform\s*%}/g, '</form>').replace(/{%\s*paginate[^%]*%}/g, '').replace(/{%\s*endpaginate\s*%}/g, '').replace(/{%\s*(schema|doc)\s*%}[\s\S]*?{%\s*end\1\s*%}/g, '').replace(/{%\s*stylesheet\s*%}([\s\S]*?){%\s*endstylesheet\s*%}/g, (_, css) => { styles.push(css); return ''; });
+for (const name of ['bpm-navigation', 'bpm-product-card', 'bpm-sites-links', 'bpm-sites-card', 'bpm-sites-article-card']) await writeFile(join(output, `${name}.liquid`), clean(await readFile(join(theme, 'snippets', `${name}.liquid`), 'utf8')));
 const engine = new Liquid({ root: output, extname: '.liquid' });
 const locale = JSON.parse(await readFile(join(theme, 'locales/en.default.json'), 'utf8'));
 engine.registerFilter('asset_url', value => `/assets/${value}`);
@@ -30,11 +30,11 @@ for (const group of JSON.parse(await readFile(join(theme, 'config/settings_schem
 }
 const menu = { links: [{ title: 'Home', url: '/' }, { title: 'Shop', url: '/collections/all' }, { title: 'About Us', url: '/pages/about-us' }, { title: 'Contact Us', url: '/pages/contact' }] };
 const common = { settings, shop: { name: 'BPM Deodorant', customer_accounts_enabled: true }, routes: { root_url: '/', account_url: '/account', cart_url: '/cart', all_products_collection_url: '/collections/all' }, cart: { item_count: 0, currency: {iso_code: 'CAD'} }, request: { page_type: 'index', locale: { iso_code: 'en' } }, page_title: 'BPM chrome preview', current_page: 1, canonical_url: 'http://127.0.0.1:8892/', content_for_header: '', content_for_layout: '' };
-async function section(name, overrides = {}, blocks = []) {
+async function section(name, overrides = {}, blocks = [], context = {}) {
   const source = await readFile(join(theme, 'sections', `${name}.liquid`), 'utf8');
   const schema = JSON.parse(source.match(/{%\s*schema\s*%}([\s\S]*?){%\s*endschema\s*%}/)[1]);
   const values = Object.fromEntries(schema.settings.filter(field => field.id).map(field => [field.id, field.default]));
-  return engine.parseAndRender(clean(source), { ...common, section: { id: `preview-${name}`, settings: { ...values, ...overrides }, blocks } });
+  return engine.parseAndRender(clean(source), { ...common, ...context, section: { id: `preview-${name}`, settings: { ...values, ...overrides }, blocks } });
 }
 const header = await section('bpm-announcement', { text: 'Now Shipping Canada Wide | Hand Made' }) + await section('bpm-header', { menu });
 const footer = await section('bpm-footer', { menu });
@@ -87,3 +87,13 @@ for (const id of ['bundles','formula','story','ownership','value','journal','faq
 await writeFile(join(output,'sites-home.html'), await engine.parseAndRender(code,{...common,content_for_layout:sitesContent,preview_header:sitesHeader,preview_footer:sitesFooter,page_title:'Sites homepage migration — local fixture'}));
 const newsletterPreview = await section('bpm-sites-newsletter',{mode:'shopify'});
 await writeFile(join(output,'sites-newsletter.html'),await engine.parseAndRender(code,{...common,content_for_layout:'<section class="section wrap"><h1>Local newsletter fixture</h1><p>No provider is connected in this local preview. Do not enter real contact details.</p></section>'+newsletterPreview,preview_header:sitesHeader,preview_footer:sitesFooter,page_title:'Newsletter fixture'}));
+const sourceArticles = JSON.parse(await readFile(resolve(theme,'../reference-site/src/content/articles.json'),'utf8'));
+const fixtureArticles = sourceArticles.map((value,i)=>({...value,id:i+1,url:`/sites-article-${i}.html`,published_at:`${value.date}T12:00:00-04:00`}));
+const fixtureBlog = {title:'The Breakdown',url:'/sites-blog.html',articles:fixtureArticles};
+const artBlocks = fixtureArticles.map((article,i)=>({settings:{article,source_art:i===0?'texture':i===1?'ownership':'story'}}));
+const blogBody = await section('bpm-sites-blog',{heading:'The\nBreakdown.'},artBlocks,{blog:fixtureBlog,paginate:{pages:1}});
+await writeFile(join(output,'sites-blog.html'),await engine.parseAndRender(code,{...common,content_for_layout:blogBody,preview_header:sitesHeader,preview_footer:sitesFooter,page_title:'Blog fixture'}));
+for (const [i,article] of fixtureArticles.entries()) {
+ const articleBody = await section('bpm-sites-article',{},[],{blog:fixtureBlog,article});
+ await writeFile(join(output,`sites-article-${i}.html`),await engine.parseAndRender(code,{...common,content_for_layout:articleBody,preview_header:sitesHeader,preview_footer:sitesFooter,page_title:article.title}));
+}
