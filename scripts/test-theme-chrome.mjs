@@ -11,9 +11,11 @@ const clean = source => source.replace(/{%\s*(schema|doc|stylesheet)\s*%}[\s\S]*
 const navigation = clean(await readFile(join(theme, 'snippets/bpm-navigation.liquid'), 'utf8'));
 await writeFile(join(scratch, 'bpm-navigation.liquid'), navigation);
 await writeFile(join(scratch, 'bpm-sites-links.liquid'), clean(await readFile(join(theme, 'snippets/bpm-sites-links.liquid'), 'utf8')));
+await writeFile(join(scratch, 'bpm-sites-card.liquid'), clean(await readFile(join(theme, 'snippets/bpm-sites-card.liquid'), 'utf8')));
 await writeFile(join(scratch, 'bpm-product-card.liquid'), clean(await readFile(join(theme, 'snippets/bpm-product-card.liquid'), 'utf8')));
 const engine = new Liquid({ root: scratch, extname: '.liquid' });
 engine.registerFilter('money', value => '$' + (Number(value) / 100).toFixed(2));
+engine.registerFilter('money_with_currency', value => '$' + (Number(value) / 100).toFixed(2) + ' CAD');
 engine.registerFilter('image_url', value => value.src);
 engine.registerFilter('image_tag', src => `<img src="${src}">`);
 engine.registerFilter('asset_url', value => `/assets/${value}`);
@@ -65,6 +67,12 @@ try {
   await check('Sites header omits disabled accounts and renders zero bag count', 'sections/bpm-sites-header.liquid', {...header,shop:{...shop,customer_accounts_enabled:false},cart:{item_count:0}}, html => {assert.doesNotMatch(html,/href="\/account"/);assert.match(html,/Shopping bag, 0 items/);});
   await check('Sites nested menu preserves three levels and current state safely', 'snippets/bpm-sites-links.liquid', {menu:{links:[{title:'<unsafe>',url:'/collections/all',links:[{title:'Single',url:'/products/single',current:true,links:[{title:'Details',url:'/pages/details'}]}]}]}}, html => {assert.match(html,/&lt;unsafe&gt;/);assert.doesNotMatch(html,/<unsafe>/);assert.match(html,/aria-current="page"/);assert.match(html,/href="\/pages\/details"/);});
   await check('Sites footer uses current market and omits unconfigured legal entity', 'sections/bpm-sites-footer.liquid', {section:{settings:{menu:{links:[]},show_market:true}},shop,routes,localization:{country:{name:'United States',currency:{iso_code:'USD'}}}}, html => {assert.match(html,/United States \/ USD/);assert.doesNotMatch(html,/Canada \/ CAD|Naturels Bold/);});
+  const sitesHero = {section:{settings:{heading:'This is\ndeodorant. <test>',subheading:'Natural.',image_alt:'Model',button_label:'Choose',collection:{url:'/collections/selected'}}},routes};
+  await check('Sites hero escapes copy, preserves line breaks and renders eagerly in editor', 'sections/bpm-sites-hero.liquid',sitesHero, html=>{assert.match(html,/deodorant. &lt;test&gt;/);assert.match(html,/<br/);assert.match(html,/loading="eager"/);assert.match(html,/fetchpriority="high"/);assert.match(html,/bpm-sites-hero.jpg/);assert.match(html,/href="\/collections\/selected"/);assert.doesNotMatch(html,/hero-small/);});
+  await check('Sites hero below fold renders with lazy source photo', 'sections/bpm-sites-hero.liquid',{...sitesHero,section:{...sitesHero.section,index:3}},html=>{assert.match(html,/loading="lazy"/);assert.doesNotMatch(html,/fetchpriority="high"/);});
+  await check('Sites card with no selected product emits no demo price or link', 'snippets/bpm-sites-card.liquid',{},html=>assert.equal(html.trim(),''));
+  await check('Sites card uses native currency price and availability rather than preview data', 'snippets/bpm-sites-card.liquid',{...card,button_label:'Meet',summary:'<safe>',pack_label:'2 × 76 g'},html=>{assert.match(html,/From \$23.50 CAD/);assert.match(html,/Sold out/);assert.match(html,/&lt;safe&gt;/);assert.match(html,/href="\/products\/real"/);assert.doesNotMatch(html,/preview.html|23.99/);});
+  await check('Sites image-text hides unselected product link and preserves original texture', 'sections/bpm-sites-image-text.liquid',{section:{settings:{heading:'Small squeeze.',button_label:'Get to know'}}},html=>{assert.match(html,/bpm-sites-texture.jpg/);assert.doesNotMatch(html,/<a/);});
   console.log(`${passed} chrome rendering checks passed; Shopify runtime and visual geometry remain unverified.`);
 } finally {
   await rm(scratch, { recursive: true, force: true });

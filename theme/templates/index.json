@@ -1,11 +1,40 @@
 {
   "sections": {
     "hero": {
-      "type": "bpm-hero",
+      "type": "bpm-sites-hero",
       "settings": {}
     },
-    "lineup": {
-      "type": "bpm-product-lineup",
+    "rhythm": {
+      "type": "bpm-sites-rhythm",
+      "settings": {},
+      "blocks": {
+        "0": {
+          "type": "message",
+          "settings": {
+            "text": "Performance first."
+          }
+        },
+        "1": {
+          "type": "message",
+          "settings": {
+            "text": "Nothing extra."
+          }
+        },
+        "2": {
+          "type": "message",
+          "settings": {
+            "text": "A little goes a long way."
+          }
+        }
+      },
+      "block_order": [
+        "0",
+        "1",
+        "2"
+      ]
+    },
+    "tracks": {
+      "type": "bpm-sites-tracks",
       "settings": {},
       "blocks": {
         "bergamot": {
@@ -26,29 +55,15 @@
         "unscented"
       ]
     },
-    "benefits": {
-      "type": "bpm-benefits",
-      "disabled": true,
+    "texture": {
+      "type": "bpm-sites-image-text",
       "settings": {}
-    },
-    "faq": {
-      "type": "bpm-faq",
-      "disabled": true,
-      "settings": {}
-    },
-    "reviews": {
-      "type": "bpm-app-region",
-      "disabled": true,
-      "settings": {
-        "heading": "Customer reviews"
-      }
     }
   },
   "order": [
     "hero",
-    "lineup",
-    "benefits",
-    "reviews",
-    "faq"
+    "rhythm",
+    "tracks",
+    "texture"
   ]
 }

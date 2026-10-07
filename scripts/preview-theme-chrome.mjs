@@ -8,12 +8,13 @@ await mkdir(output, { recursive: true });
 await symlink(join(theme, 'assets'), join(output, 'assets')).catch(error => { if (error.code !== 'EEXIST') throw error; });
 const styles = [];
 const clean = text => text.replace(/{%\s*(schema|doc)\s*%}[\s\S]*?{%\s*end\1\s*%}/g, '').replace(/{%\s*stylesheet\s*%}([\s\S]*?){%\s*endstylesheet\s*%}/g, (_, css) => { styles.push(css); return ''; });
-for (const name of ['bpm-navigation', 'bpm-product-card', 'bpm-sites-links']) await writeFile(join(output, `${name}.liquid`), clean(await readFile(join(theme, 'snippets', `${name}.liquid`), 'utf8')));
+for (const name of ['bpm-navigation', 'bpm-product-card', 'bpm-sites-links', 'bpm-sites-card']) await writeFile(join(output, `${name}.liquid`), clean(await readFile(join(theme, 'snippets', `${name}.liquid`), 'utf8')));
 const engine = new Liquid({ root: output, extname: '.liquid' });
 const locale = JSON.parse(await readFile(join(theme, 'locales/en.default.json'), 'utf8'));
 engine.registerFilter('asset_url', value => `/assets/${value}`);
 engine.registerFilter('stylesheet_tag', value => `<link rel="stylesheet" href="${value}">`);
 engine.registerFilter('money', value => new Intl.NumberFormat('en-CA', { style: 'currency', currency: 'CAD' }).format(value / 100));
+engine.registerFilter('money_with_currency', value => new Intl.NumberFormat('en-CA', { style: 'currency', currency: 'CAD' }).format(value / 100) + ' CAD');
 engine.registerFilter('image_url', value => value.src);
 engine.registerFilter('image_tag', (src, ...pairs) => { const props = Object.fromEntries(pairs.filter(Array.isArray)); const alt = String(props.alt || '').replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;'); return `<img src="${src}" alt="${alt}" width="4096" height="4096" loading="${props.loading || 'lazy'}">`; });
 engine.registerFilter('handle', value => String(value).toLowerCase().replace(/[^a-z0-9-]/g, '-'));
@@ -56,3 +57,21 @@ const sitesHeader = await section('bpm-sites-header', {menu:sitesMenu});
 const sitesFooter = await section('bpm-sites-footer', {menu:sitesMenu, legal_name:'Fabricated legal entity — local fixture',show_market:false});
 const sitesLayout = await engine.parseAndRender(code, {...common, content_for_layout:'<section class="section wrap"><p class="eyebrow">Local theme fixture</p><h1>Sites chrome migration</h1><p>Shared navigation and footer only. Homepage implementation is pending.</p></section>',preview_header:sitesHeader, preview_footer:sitesFooter,page_title:'Sites chrome — local fixture'});
 await writeFile(join(output,'sites-chrome.html'), sitesLayout);
+
+const sitesHero = await section('bpm-sites-hero');
+const siteCrops = JSON.parse(await readFile(resolve(theme,'../reference-site/src/crop-settings.json'),'utf8'));
+for (const [source, name] of [['gallery-pack.png','bergamot'],['unscented-pack.png','unscented']]) {
+  const crop = siteCrops.find(value => value.source === source);
+  const [sw,sh] = crop.source_dimensions;
+  const [x,y,w,h] = crop.crop_xywh;
+  const original = await readFile(resolve(theme,'../design-assets/sites',source));
+  await writeFile(join(output,`fixture-${name}.svg`),`<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" viewBox="${x} ${y} ${w} ${h}"><image x="0" y="0" width="${sw}" height="${sh}" href="data:image/png;base64,${original.toString('base64')}"/></svg>`);
+}
+const sitesRhythm = await section('bpm-sites-rhythm',{},['Performance first.','Nothing extra.','A little goes a long way.'].map(text=>({settings:{text}})));
+const sitesTracks = await section('bpm-sites-tracks',{},[
+ {settings:{product:{title:'Bergamot & Lime — fixture',url:'/products/fixture-bergamot',price:2399,available:true,featured_image:{src:'/fixture-bergamot.svg'}},pack_label:'1 × 76 g',summary:'Bergamot & Lime.',background:'#acb228'}},
+ {settings:{product:{title:'Unscented — fixture',url:'/products/fixture-unscented',price:2399,available:true,featured_image:{src:'/fixture-unscented.svg'}},pack_label:'1 × 76 g',summary:'Unscented.',background:'#228782'}}
+]);
+const sitesTexture = await section('bpm-sites-image-text');
+const sitesHome = await engine.parseAndRender(code,{...common,content_for_layout:sitesHero+sitesRhythm+sitesTracks+sitesTexture,preview_header:sitesHeader,preview_footer:sitesFooter,page_title:'Sites homepage migration — local fixture'});
+await writeFile(join(output,'sites-home.html'), sitesHome);
