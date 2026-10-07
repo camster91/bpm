@@ -75,3 +75,12 @@ const sitesTracks = await section('bpm-sites-tracks',{},[
 const sitesTexture = await section('bpm-sites-image-text');
 const sitesHome = await engine.parseAndRender(code,{...common,content_for_layout:sitesHero+sitesRhythm+sitesTracks+sitesTexture,preview_header:sitesHeader,preview_footer:sitesFooter,page_title:'Sites homepage migration — local fixture'});
 await writeFile(join(output,'sites-home.html'), sitesHome);
+
+const homeTemplate = JSON.parse(await readFile(join(theme,'templates/index.json'),'utf8'));
+let sitesContent = sitesHero + sitesRhythm + sitesTracks + sitesTexture;
+for (const id of ['formula','story','ownership','faq','closing']) {
+ const configured = homeTemplate.sections[id];
+ const blocks = (configured.block_order || []).map(key=>configured.blocks[key]);
+ sitesContent += await section(configured.type,configured.settings,blocks);
+}
+await writeFile(join(output,'sites-home.html'), await engine.parseAndRender(code,{...common,content_for_layout:sitesContent,preview_header:sitesHeader,preview_footer:sitesFooter,page_title:'Sites homepage migration — local fixture'}));

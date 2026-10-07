@@ -228,3 +228,6 @@ textarea:focus-visible,select:focus-visible{outline:3px solid var(--teal);outlin
 h3{font-family:inherit}
 
 @media(min-width:761px) and (max-width:1100px){.bpm-sites-mobile{display:block}.bpm-sites-mobile .bpm-sites-menu{display:block}.bpm-sites-mobile .bpm-sites-menu a,.bpm-sites-mobile .bpm-sites-menu summary{display:block;padding:12px 0;font-size:21px}.bpm-sites-mobile .bpm-sites-menu ul{position:static;border:0;padding:0 0 0 16px;margin:0;min-width:0}}
+
+.closing{background:var(--ink);color:var(--cream);padding:72px 0}.closing .button{min-width:290px}.closing h2{max-width:750px}.bpm-sites-answer{padding-top:16px}.bpm-sites-answer p{margin-top:0}.bpm-sites-answer p+p{margin-top:16px}.questions summary::-webkit-details-marker{display:none}.questions details[open] summary>span{transform:rotate(45deg)}
+@media(max-width:760px){.closing{padding:48px 0}.closing .button{min-width:0}.closing h2{font-size:34px}}

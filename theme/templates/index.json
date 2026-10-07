@@ -58,12 +58,125 @@
     "texture": {
       "type": "bpm-sites-image-text",
       "settings": {}
+    },
+    "formula": {
+      "type": "bpm-sites-formula",
+      "settings": {
+        "note": "No baking soda. No waxes. No synthetic fragrance."
+      },
+      "blocks": {
+        "0": {
+          "type": "ingredient",
+          "settings": {
+            "heading": "Magnesium hydroxide",
+            "role": "Odour control"
+          }
+        },
+        "1": {
+          "type": "ingredient",
+          "settings": {
+            "heading": "Tapioca starch + kaolin",
+            "role": "Moisture absorption"
+          }
+        },
+        "2": {
+          "type": "ingredient",
+          "settings": {
+            "heading": "Coconut + sunflower oils",
+            "role": "Glide and skin feel"
+          }
+        },
+        "3": {
+          "type": "ingredient",
+          "settings": {
+            "heading": "Zinc ricinoleate",
+            "role": "Helps trap odour"
+          }
+        }
+      },
+      "block_order": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    "story": {
+      "type": "bpm-sites-story",
+      "settings": {
+        "layout": "story",
+        "eyebrow": "THE PEOPLE BEHIND THE PRODUCT",
+        "heading": "Made with purpose.\nAnd a soundtrack.",
+        "body": "Corey Goss started making deodorants in his kitchen in 2020. His standard: performance, skin feel, thoughtful packaging and fair pricing.",
+        "image_alt": "BPM beside a turntable",
+        "button_label": "Meet BPM"
+      }
+    },
+    "ownership": {
+      "type": "bpm-sites-story",
+      "settings": {
+        "layout": "ownership",
+        "eyebrow": "INDIGENOUS-OWNED",
+        "heading": "A personal story.\nA real responsibility.",
+        "body": "Founded by Corey Goss, a member of the Algonquins of Pikwàkanagàn First Nation. The mark connects family, identity and BPM’s musical roots.",
+        "image_alt": "BPM’s original owl and drum-inspired Indigenous-owned mark",
+        "button_label": "The story behind the mark"
+      }
+    },
+    "faq": {
+      "type": "bpm-sites-questions",
+      "settings": {},
+      "blocks": {
+        "0": {
+          "type": "question",
+          "settings": {
+            "question": "How much should I use?",
+            "answer": "<p>Start with a pea-sized amount and massage it into your underarms. Adjust if needed.</p>"
+          }
+        },
+        "1": {
+          "type": "question",
+          "settings": {
+            "question": "Is BPM baking soda free?",
+            "answer": "<p>Yes. Both scents are formulated without baking soda or waxes.</p>"
+          }
+        },
+        "2": {
+          "type": "question",
+          "settings": {
+            "question": "How long does a tube last?",
+            "answer": "<p>BPM estimates approximately 304 pea-sized applications per 76 g tube. Your amount and frequency affect how long it lasts.</p>"
+          }
+        },
+        "3": {
+          "type": "question",
+          "settings": {
+            "question": "Where do you ship?",
+            "answer": "<p>Canada and the United States. See the shipping policy for current thresholds and delivery details.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    "closing": {
+      "type": "bpm-sites-closing",
+      "settings": {}
     }
   },
   "order": [
     "hero",
     "rhythm",
     "tracks",
-    "texture"
+    "texture",
+    "formula",
+    "story",
+    "ownership",
+    "faq",
+    "closing"
   ]
 }
