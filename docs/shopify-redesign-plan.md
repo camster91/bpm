@@ -1,244 +1,73 @@
-# BPM Shopify redesign implementation plan
+# BPM custom Shopify theme — Sites-source plan
 
-## Objective
+Revised 7 October 2026 following Cameron's explicit correction: “dont use figma”; use the Sites link and existing code. This plan supersedes the previous Figma-based design hierarchy. Previous documents are preserved in `plan-history/2026-10-07-before-sites-correction/`.
 
-Rebuild BPM's storefront around the approved product-design direction while preserving current Shopify commerce behaviour, installed app integrations, SEO foundations, analytics, accessibility, performance and merchant editability.
+## Goal and authority
 
-The published ChatGPT Site is a **design/recovery reference**, not a production data source. Shopify remains the source of truth for live products, pricing, availability, selling plans, cart/checkout behaviour and store configuration.
+Complete the custom Shopify Online Store 2.0 theme using https://bpm-product-design-review.cameron91.chatgpt.site/index.html and the recovered `reference-site/` code as the visual and interaction target. Preserve its softness, typography, colours, imagery, layout, motion and responsive treatments. Do not consult Figma for new design decisions or mix the previous Figma theme into this target. Assets already present in Sites code remain valid source assets regardless of their directory names.
 
-## Source hierarchy
+Shopify and verified installed apps govern products, variants, prices, stock, bundles, selling plans, reviews, cart and checkout. Preview content is a migration source; historical claims, policies, estimates and proposed copy still require current verification and client acceptance. Cameron's design-source selection authorizes development, not final client acceptance or live publication.
 
-Use sources in this order when they conflict:
+Existing tracker #11 and design acceptance #28 retain their roles. Issue mappings below preserve the existing backlog; this local revision does not claim GitHub issue descriptions have been updated or issues closed.
 
-1. **Current Shopify data/configuration** — products, prices, selling plans, inventory, shipping/markets, policies and live commerce behaviour.
-2. **Client-approved decisions/feedback** — especially issue #28.
-3. **Original BPM Figma file** — visual design and owned design assets.
-4. **Published ChatGPT Site recovery** — design/content direction and comparison evidence.
-5. **Current public storefront** — behavioural/reference evidence pending authenticated audit.
+## Current state and immediate action
 
-Do not silently resolve conflicts by guessing. Record the conflict and block the affected implementation decision.
+- Original Sites source is recovered with provenance in `reference-site/source-provenance.json`; source commit `2f95c940c42b1bc4152790a83f0f455f66ceaaa4`.
+- Recovery PR #12 was merged previously. That recovery is separate from theme completeness.
+- `theme/` is an incomplete Figma-based foundation. Its generic native links, app rendering and tests may be reused after review; its current visuals are superseded and cannot qualify as Sites fidelity.
+- Protected live-theme export and local repaired-Dawn candidate are rollback/audit evidence, not the final custom theme.
+- No custom theme upload, production publication or new custom branch merge has occurred.
+- First implementation action: inventory the built Sites pages, assets and interactive states; map each into a merchant-editable section/template; rebuild shared chrome and homepage against Sites code. Record side-by-side rendered comparisons before expanding templates.
 
-## Non-negotiables
+## Source verification at plan reset
 
-- No production-theme change without explicit approval for that exact action.
-- Never develop directly against the live Shopify theme.
-- Preserve a rollback path before production release.
-- Routine copy/image/link edits must be possible in Shopify Admin/theme editor.
-- Product, price, availability, selling-plan and bundle truth must remain Shopify/app-driven.
-- Do not hard-code shipping thresholds/rates when they can vary by market/configuration.
-- Preserve app-block/app-embed support.
-- Do not replace available original BPM assets with generated or stock substitutes.
-- Accessibility, SEO, performance, analytics and mobile QA are launch scope.
-- Prototype/research copy is not automatically approved production copy.
+The published homepage was retrieved successfully on 7 October 2026 with title “Home — BPM”. Its response differs byte-for-byte from the tracked source; visual/runtime equivalence remains to be checked, rather than assuming deployment wrappers or source drift explain the difference. Local `npm run check` passed: 60 source files verified, 10 scripts parsed, build completed, 5 isolated comments tests passed, and 25 routes/40 internal targets had zero broken targets. This verifies recovered source integrity and local routing, not Shopify functionality or current hosted design acceptance.
 
-## Target architecture
+## Delivery sequence and dependencies
 
-### Theme foundations
-Centralise:
-- colour
-- typography
-- spacing
-- container widths
-- buttons/links
-- borders/radii
-- cards
-- focus states
-- motion/reduced motion
+| Phase | Work and outputs | Dependency / exit gate | Existing issues |
+|---|---|---|---|
+| 0 — Source recovery and acceptance | Freeze Sites source/version, verify code/routes/assets against hosted review, classify demo controls and pending copy/media decisions, consolidate client feedback | Traceable source and differences register; final client acceptance recorded separately | #1, #2, #28, #29 |
+| 1 — Shopify audit and safe workflow | Reconcile existing audit/export with current apps and commerce; define content/editor model, native data, static CI, backup and rollback | Every commerce/app dependency has an owner; no production configuration in Git; missing decisions block only affected features | #3, #4, #13, #14, #15 |
+| 2 — Foundations and reusable sections | Port Sites CSS tokens, fonts, original media/crops, header/mobile menu/footer, motion/reduced motion and common cards; create editable sections | Sites visual comparison at representative widths; add/reorder/remove/edit sections without whole-site regeneration | #5, #6 |
+| 3 — Complete pages and commerce | Home, shop/collection, PDP for all nine products, About, Indigenous ownership, Contact, blog/articles, policies, search, cart, accounts/localisation; actual bundles/subscriptions/reviews; newsletter and creator slots | Native data/actions, persisted editor controls, success/error/empty states and real app compatibility verified in isolated dev theme | #7, #16–#21 |
+| 4 — Hardening | URLs/redirects, metadata/schema, accessibility, image/video delivery, performance, analytics/consent, approved claims/policies | No unresolved P0/P1; evidence covers actual rendered theme and event/data paths | #9, #22–#25, #29 |
+| 5 — Cross-device QA and controlled release | Full page/state regression, purchase journeys, candidate commit/theme freeze, approval packet, backup/rollback rehearsal; approved launch and post-launch smoke | Dev QA → client acceptance → explicit publication approval → verified launch; stages recorded separately | #10, #26, #27 |
 
-Prefer theme settings/tokens and reusable CSS over page-specific overrides.
+Phases 0/1 feed foundations; foundations and content model feed templates; templates and actual app behaviour feed hardening/QA; all launch gates feed release. Independent local implementation may proceed while business decisions remain pending, using hidden/unconfigured optional slots.
 
-### Sections and blocks
-Design sections should:
-- be reusable across templates;
-- expose only useful merchant controls;
-- have safe defaults;
-- support app blocks where integration is expected;
-- use semantic HTML;
-- avoid hard-coded product handles, prices or shipping promises;
-- degrade cleanly when optional content is missing.
+## Sites-to-Shopify coverage
 
-### Content ownership
-Use the simplest correct Shopify source:
+| Source surface | Implementation and merchant control |
+|---|---|
+| Shared header/footer, mobile navigation | Section groups, menus, logo/image controls, native account/cart and market links; shared Sites styling |
+| Home | Editable hero, benefits, singles/duos/four-packs, texture/image-text, ingredients, founder/music/ownership, value chart, blog, FAQ, newsletter and CTA |
+| Shop and nine product views | Collection/search/filter/cards plus product template using actual variant media, prices, availability and native cart forms |
+| PDP detail | Reusable gallery, video/application, scent/formula, INCI/allergens, directions/cautions/storage, estimates/comparisons, FAQ and real Judge.me blocks |
+| About / Indigenous ownership | Native page templates and reusable story/pillar/media sections; preserve attribution |
+| Breakdown and eight articles | Native blog/article templates; approved content migration and URL mapping |
+| Contact / policies | Native supported contact form with error/success states; existing native policy content and URLs |
+| Bag | Native Shopify cart add/update/remove, quantity validation, discounts and checkout handoff; replace browser-local preview state |
+| Welcome offer / subscriptions | Verified existing provider and selling-plan integrations; owner-approved discount eligibility and consent; no demo coupon in operational UI |
+| Reviews / creator videos | Preserve actual Judge.me data; editable approved creator sources, permissions, attribution/captions and consent loading; empty slots hidden |
+| Review/comments tools | Internal design-feedback tooling stays in the reference; do not migrate it into the customer storefront |
 
-- Native product/collection fields for native product truth.
-- Metafields for structured product/collection attributes.
-- Metaobjects for repeatable/shared structured content.
-- Menus for navigation.
-- Pages/blog for editorial content that benefits from native publishing.
-- Theme settings for presentation/content that genuinely belongs to one section/template.
-- App blocks/embeds for app-owned UI/data.
+`reference-site/shopify-transfer-plan.md` supplies detailed review/creator/welcome requirements. Preserve source imagery and framing. Do not assume static product snapshots or local preview interactions establish production readiness. Scope includes Shopify states absent from the preview, styled consistently with its code.
 
-Issue #14 owns the final content-model decisions.
+## PR and verification requirements
 
-## Delivery phases
+Each implementation PR links its issues, describes the user-visible change, includes Sites/source comparison and mobile/tablet/desktop evidence where visual, affected checks and integration dependencies, and revert/rollback notes. Preserve unrelated work. Passing compilation or LiquidJS fixtures alone does not prove Shopify editor persistence, apps or checkout.
 
-### Phase 0 — Evidence and approval
-Issues: #1, #2, #28
+Run affected source/runtime tests and installed Shopify Theme Check; keep CI checks enabled. Render major templates at 320–375, 390–430, 768, 1024, 1280–1440 and 1600+ widths, plus meaningful layout transitions. Check images/crops, typography, wrapping, spacing, motion/reduced motion, keyboard/focus and overflow. Record justified native-platform differences against Sites.
 
-Outcome:
-- recovery baseline documented;
-- original assets inventoried;
-- approved design direction distinguished from exploratory prototype content.
+Critical journeys: home → PDP → one-time cart → checkout handoff; subscription eligibility/selling-plan cart state; bundle representation; cart update/remove/error; collection filters/sort/search; search/no results; mobile navigation; contact validation/success/error; real review listing/write flow; consent/newsletter duplicate/error/offer handling; account/market flows where enabled. Use isolated test data and avoid real purchases, outbound campaigns or review requests.
 
-Gate:
-Do not call the design production-approved until #28 is complete.
+Severity: P0 purchase/checkout/data-loss/security failure; P1 major navigation/app/accessibility failure or incorrect price/product/claim; P2 significant visual/usability/SEO/performance defect with workaround; P3 minor polish. P0/P1 block release; P2 requires resolution or explicit acceptance; P3 may remain documented.
 
-### Phase 1 — Store audit and safe development
-Issues: #3, #4, #13, #14, #15
+## Completion and approval gates
 
-Outcome:
-- safe development theme/workflow;
-- current behaviour/content/app inventory;
-- merchant editing/data model;
-- static CI.
+A development-review candidate requires all planned templates/sections implemented, source comparisons recorded, meaningful checks passing, migration/setup instructions and a verified archive/rollback path. Authenticated development-theme upload requires a prepared exact command and its confirmation under the CLI workflow.
 
-Gate:
-No page implementation should knowingly remove or bypass a current commerce/app requirement.
+A release candidate additionally requires actual Shopify/app/editor/purchase QA, approved content and legal/offer decisions, no unresolved P0/P1, documented accepted P2/P3, representative device evidence, and a frozen commit/theme ID. Final client acceptance and explicit live publication approval are separate. Project completion requires approved publication and post-launch verification, or a verified rollback if launch fails. Until then report the exact implementation, local QA, dev-theme, acceptance and release states rather than “100% ready”.
 
-### Phase 2 — Foundations
-Issues: #5, #6
-
-Outcome:
-- reusable BPM design system;
-- reusable Shopify section/block library.
-
-Gate:
-Avoid duplicating a design pattern inside a page template if it belongs in the shared system.
-
-### Phase 3 — Templates and commerce
-Issues: #7, #8, #16, #17, #18, #19, #20, #21
-
-Outcome:
-- PDP;
-- homepage;
-- collections/search/product cards;
-- content pages;
-- blog/article;
-- cart/search/account/localisation;
-- bundles/subscriptions/offers.
-
-Gate:
-Every template must pass its functional acceptance criteria before being considered visually complete.
-
-### Phase 4 — Hardening
-Issues: #9, #22, #23, #24, #25, #29
-
-Outcome:
-- SEO/schema;
-- accessibility;
-- performance;
-- analytics;
-- claims/content validation.
-
-Gate:
-No known P0/P1 issue in these areas may remain undocumented at release-candidate stage.
-
-### Phase 5 — QA and release
-Issues: #10, #26, #27
-
-Outcome:
-- cross-device regression evidence;
-- approved release candidate;
-- reversible production launch;
-- post-launch smoke verification.
-
-Gate:
-Publishing/switching the production theme requires separate explicit approval.
-
-## Issue dependency map
-
-| Issue | Work | Blocks / feeds |
-| --- | --- | --- |
-| #1 | Recovery baseline | #28, visual comparison |
-| #2 | Figma asset preservation | #5, #6, page templates |
-| #28 | Client/design acceptance | all production design decisions |
-| #3 | Dev + rollback workflow | implementation work |
-| #4 | App audit | #7, #20, #21, #25, QA |
-| #13 | Current storefront audit | #14, templates, SEO |
-| #14 | Content model | #6, #7, #16–#21 |
-| #15 | CI/static checks | all implementation PRs |
-| #5 | Design foundations | #6, #7, #16–#20 |
-| #6 | Reusable sections | #7, #16, #18, #19 |
-| #7 | PDP | #21, commerce QA |
-| #16 | Homepage | #26 |
-| #17 | Collection/search/cards | #26 |
-| #18 | Content pages/forms | #26 |
-| #19 | Blog/article | #22, #26 |
-| #20 | Cart/search/account/localisation | #26 |
-| #21 | Bundle/subscription offers | commerce QA |
-| #22 | SEO/schema | #27 |
-| #23 | Accessibility | #26, #27 |
-| #24 | Performance | #27 |
-| #25 | Analytics/events | #27 |
-| #29 | Claims/policies | #27 |
-| #26 | Cross-device QA | #27 |
-| #27 | Release/rollback | project completion |
-
-## Pull-request rules
-
-Every implementation PR should include:
-- linked issue(s);
-- summary of requested vs optional changes;
-- screenshots or preview evidence where visual;
-- mobile/tablet/desktop impact;
-- accessibility considerations;
-- analytics/SEO impact where relevant;
-- test/Theme Check results;
-- Shopify/app dependencies touched;
-- rollback/revert notes if the change has migration risk.
-
-Do not merge simply because visual screenshots look correct if the commerce/data path has not been tested.
-
-## QA breakpoint classes
-
-Representative classes, not device-specific pixel perfection:
-
-- **Mobile narrow:** ~320–375 px
-- **Mobile large:** ~390–430 px
-- **Tablet portrait:** ~768 px
-- **Tablet landscape/small laptop:** ~1024 px
-- **Desktop:** ~1280–1440 px
-- **Wide desktop:** ~1600 px+
-
-Test at least one representative viewport in each required class for major templates. Use additional widths where a layout visibly changes.
-
-## Critical user journeys
-
-1. Land on homepage → browse product → PDP → one-time add to cart → cart → checkout handoff.
-2. PDP → subscription option → add to cart → confirm selling plan representation.
-3. Bundle/offer → add bundle → cart representation → checkout handoff.
-4. Collection → filter/sort/search as applicable → PDP.
-5. Search → result → PDP.
-6. Read About/Indigenous-owned/contact content → contact form submission state.
-7. Mobile navigation → product → cart.
-8. Currency/market/account entry points where enabled.
-9. Review/Judge.me interaction where enabled.
-
-## Severity model
-
-- **P0:** Purchase/checkout/data-loss/security failure; launch blocker.
-- **P1:** Major broken navigation, app integration, accessibility blocker, incorrect price/product/claim; launch blocker.
-- **P2:** Significant visual/usability/SEO/performance issue with workaround; resolve before launch where practical or explicitly accept.
-- **P3:** Minor polish or follow-up improvement; may ship if documented.
-
-## Release candidate definition
-
-A commit/theme can be called a release candidate only when:
-- required PR checks pass;
-- blocking template issues are complete;
-- #22–#25 and #29 have no undocumented launch blockers;
-- #26 has recorded cross-device evidence;
-- production backup/rollback is ready;
-- the candidate theme/commit is frozen for final approval.
-
-## Project done
-
-The project is complete only when:
-- the approved BPM direction is implemented;
-- merchant editing works for routine updates;
-- current commerce/app behaviour has no known blocking regression;
-- mobile/tablet/desktop QA evidence exists;
-- SEO/accessibility/performance/analytics have been verified;
-- claims/content are approved/current;
-- production was launched with explicit approval;
-- post-launch verification passed or a rollback was executed.
+No push, merge, upload, email activation, customer communication or production publication is implied by this plan revision.

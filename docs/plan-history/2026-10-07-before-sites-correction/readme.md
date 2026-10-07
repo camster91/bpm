@@ -18,6 +18,6 @@ Open http://127.0.0.1:8878/index.html after building. Node 22.13+ required. Comm
 - [QA matrix](docs/qa-matrix.md)
 - Published reference: https://bpm-product-design-review.cameron91.chatgpt.site/index.html
 - Live commerce reference: https://bpmdeodorant.com/
-- Authoritative design/code source: the published Sites review and recovered `reference-site/` (selected by Cameron on 7 October 2026). Figma is no longer the implementation target.
+- Figma source: BPM - Updates (`REGkhZvykpOP4XmN7EKSnh`)
 
 Current Shopify data/configuration and approved client decisions govern implementation. Historical preview copy is not production truth. Preserve the published review, verify app/commerce behaviour, and use merchant-editable Shopify sections. Store writes and production publication are separate stages.
