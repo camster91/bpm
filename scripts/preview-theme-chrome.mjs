@@ -78,9 +78,10 @@ await writeFile(join(output,'sites-home.html'), sitesHome);
 
 const homeTemplate = JSON.parse(await readFile(join(theme,'templates/index.json'),'utf8'));
 let sitesContent = sitesHero + sitesRhythm + sitesTracks + sitesTexture;
-for (const id of ['formula','story','ownership','faq','closing']) {
+for (const id of ['bundles','formula','story','ownership','journal','faq','closing']) {
  const configured = homeTemplate.sections[id];
  const blocks = (configured.block_order || []).map(key=>configured.blocks[key]);
- sitesContent += await section(configured.type,configured.settings,blocks);
+ const previewBlocks = id === 'bundles' ? blocks.map((block,i)=>({...block,settings:{...block.settings,...Object.fromEntries(Array.from({length:i===0?2:4},(_,n)=>["image_"+(n+1),{src:n<(i===0?1:2)?"/fixture-bergamot.svg":"/fixture-unscented.svg",alt: n<(i===0?1:2)?"Bergamot & Lime carton":"Unscented carton"}])),product:{title:`Bundle ${i+1} — fixture`,url:`/products/fixture-bundle-${i}`,price:i===0?3999:7498,available:true,featured_image:{src:'/fixture-bergamot.svg'}}}})) : id === 'journal' ? blocks.map((block,i)=>({...block,settings:{...block.settings,article:{title:`Article ${i+1} — fixture`,url:`/blogs/fixture/article-${i}`,published_at:'2026-09-26T12:00:00-04:00'}}})) : blocks;
+ sitesContent += await section(configured.type,configured.settings,previewBlocks);
 }
 await writeFile(join(output,'sites-home.html'), await engine.parseAndRender(code,{...common,content_for_layout:sitesContent,preview_header:sitesHeader,preview_footer:sitesFooter,page_title:'Sites homepage migration — local fixture'}));

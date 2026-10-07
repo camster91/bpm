@@ -1,6 +1,6 @@
 > **Source correction — 7 October 2026:** Cameron selected the Sites review and `reference-site/` code and instructed not to use Figma. The foundation below is historical, incomplete work; its visual implementation is superseded. Follow `docs/shopify-redesign-plan.md` and rebuild presentation against Sites. Prior tests remain evidence for those earlier components, not proof of Sites fidelity or theme readiness. No upload/publication occurred.
 
-Current Sites migration: native editable header/footer, hero, rhythm strip, product tracks, texture image/text, formula, story/ownership, FAQ and closing sections are ported. Source logo/display font/shared styles are retained. See `docs/qa/sites-editorial.md` for 34 passing local render checks, browser evidence and remaining limits; earlier checkpoints are in `docs/qa/sites-homepage.md` and `docs/qa/sites-foundation.md`. Bundle/value/blog/newsletter sections and other templates still need migration; this is not an upload-ready complete theme.
+Current Sites migration: native editable header/footer, hero, rhythm strip, product tracks, texture image/text, bundles, formula, story/ownership, journal cards, FAQ and closing sections are ported. Source logo/display font/shared styles are retained. See `docs/qa/sites-bundles-journal.md` for 39 passing local render checks, browser evidence and remaining limits; earlier checkpoints remain in `docs/qa/`. Value/newsletter sections and other templates still need migration; this is not an upload-ready complete theme.
 
 # BPM Custom theme — foundation in development
 

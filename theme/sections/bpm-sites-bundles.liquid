@@ -1,0 +1,132 @@
+<section class="section wrap"><div class="section-heading"><div class="intro-copy">{% if section.settings.eyebrow != blank %}<p class="eyebrow">{{ section.settings.eyebrow | escape }}</p>{% endif %}{% if section.settings.heading != blank %}<h2>{{ section.settings.heading | escape | newline_to_br }}</h2>{% endif %}{% if section.settings.body != blank %}<p class="lead">{{ section.settings.body | escape }}</p>{% endif %}</div></div><div class="bundle-spotlights">
+{% for block in section.blocks %}{% assign bundle = block.settings.product %}{% if bundle != blank %}
+<article class="bundle-spotlight" style="background:{{ block.settings.background }}" {{ block.shopify_attributes }}>
+{% if block.settings.eyebrow != blank %}<p class="eyebrow">{{ block.settings.eyebrow | escape }}</p>{% endif %}
+{% liquid
+ assign photo_count = 0
+ for i in (1..4)
+   assign field = 'image_' | append: i
+   if block.settings[field] != blank
+     assign photo_count = photo_count | plus: 1
+   endif
+ endfor
+%}
+<div class="pack-line count-{% if photo_count > 0 %}{{ photo_count }}{% else %}1{% endif %}">
+{% if photo_count > 0 %}{% for i in (1..4) %}{% assign field = 'image_' | append: i %}{% if block.settings[field] != blank %}{{ block.settings[field] | image_url: width: 750 | image_tag: widths: '250,500,750', sizes: '(max-width:760px) 25vw,12vw', loading: 'lazy', alt: block.settings[field].alt }}{% endif %}{% endfor %}
+{% elsif bundle.featured_image != blank %}{{ bundle.featured_image | image_url: width: 1000 | image_tag: widths: '400,700,1000', sizes: '(max-width:760px) 70vw,35vw', loading: 'lazy', alt: bundle.title }}{% endif %}</div>
+<h3>{{ block.settings.heading | default: bundle.title | escape }}</h3>
+<p>{% if bundle.price_varies %}{% assign price = bundle.price | money_with_currency %}{{ 'products.price_from' | t: price: price }}{% else %}{{ bundle.price | money_with_currency }}{% endif %}{% if block.settings.note != blank %} · {{ block.settings.note | escape }}{% endif %}</p>
+{% unless bundle.available %}<p>{{ 'products.sold_out' | t }}</p>{% endunless %}
+{% if block.settings.button_label != blank %}{% assign destination = block.settings.collection.url | default: bundle.url %}<a class="button" href="{{ destination }}">{{ block.settings.button_label | escape }}<span aria-hidden="true">→</span></a>{% endif %}
+</article>{% endif %}{% endfor %}</div></section>
+{% schema %}
+{
+  "name": "BPM Sites bundles",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "SHARE THE ROTATION"
+    },
+    {
+      "type": "textarea",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Two tracks.\nOr a full four count."
+    },
+    {
+      "type": "text",
+      "id": "body",
+      "label": "Copy",
+      "default": "Keep one. Gift one. Stock the shelf. Your call."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "bundle",
+      "name": "Bundle spotlight",
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "Select the actual bundle product for native price and availability. Add approved component photos in order for the source composition; otherwise the product featured image is used."
+        },
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Bundle product"
+        },
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Optional bundle collection destination"
+        },
+        {
+          "type": "text",
+          "id": "eyebrow",
+          "label": "Eyebrow"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading override"
+        },
+        {
+          "type": "text",
+          "id": "note",
+          "label": "Verified pricing note"
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": "Button label",
+          "default": "Explore bundles"
+        },
+        {
+          "type": "color",
+          "id": "background",
+          "label": "Background",
+          "default": "#f157b7"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_1",
+          "label": "Component photo 1"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_2",
+          "label": "Component photo 2"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_3",
+          "label": "Component photo 3"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_4",
+          "label": "Component photo 4"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 4,
+  "presets": [
+    {
+      "name": "BPM Sites bundles",
+      "blocks": [
+        {
+          "type": "bundle"
+        },
+        {
+          "type": "bundle",
+          "settings": {
+            "background": "#f3e4b7"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

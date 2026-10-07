@@ -166,6 +166,63 @@
     "closing": {
       "type": "bpm-sites-closing",
       "settings": {}
+    },
+    "bundles": {
+      "type": "bpm-sites-bundles",
+      "settings": {},
+      "blocks": {
+        "duo": {
+          "type": "bundle",
+          "settings": {
+            "eyebrow": "THE TWO TRACK",
+            "heading": "Two tubes. Find your mix.",
+            "button_label": "Explore duos",
+            "background": "#f157b7"
+          }
+        },
+        "four": {
+          "type": "bundle",
+          "settings": {
+            "eyebrow": "THE FOUR COUNT",
+            "heading": "Four tubes. Everyone covered.",
+            "button_label": "Explore four-packs",
+            "background": "#f3e4b7"
+          }
+        }
+      },
+      "block_order": [
+        "duo",
+        "four"
+      ]
+    },
+    "journal": {
+      "type": "bpm-sites-journal",
+      "settings": {},
+      "blocks": {
+        "0": {
+          "type": "article",
+          "settings": {
+            "source_art": "texture"
+          }
+        },
+        "1": {
+          "type": "article",
+          "settings": {
+            "source_art": "ownership"
+          }
+        },
+        "2": {
+          "type": "article",
+          "settings": {
+            "source_art": "story"
+          }
+        }
+      },
+      "block_order": [
+        "0",
+        "1",
+        "2"
+      ]
     }
   },
   "order": [
@@ -173,9 +230,11 @@
     "rhythm",
     "tracks",
     "texture",
+    "bundles",
     "formula",
     "story",
     "ownership",
+    "journal",
     "faq",
     "closing"
   ]
