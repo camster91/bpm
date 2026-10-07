@@ -16,5 +16,9 @@
   },
   "accessibility": {
     "new_window": "Opens in a new window"
+  },
+  "products": {
+    "price_from": "From {{ price }}",
+    "sold_out": "Sold out"
   }
 }

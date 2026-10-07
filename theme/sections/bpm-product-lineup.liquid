@@ -1,0 +1,46 @@
+<section class="bpm-lineup bpm-container">
+  {% if section.settings.heading != blank %}<h2>{{ section.settings.heading | escape }}</h2>{% endif %}
+  <div class="bpm-lineup__grid">
+    {% for block in section.blocks %}
+      <div {{ block.shopify_attributes }}>{% render 'bpm-product-card', product: block.settings.product, image: block.settings.image, image_treatment: block.settings.image_treatment, label: block.settings.label, button_label: section.settings.button_label, background: block.settings.background, text_color: block.settings.text_color %}</div>
+    {% endfor %}
+  </div>
+</section>
+{% stylesheet %}
+.bpm-lineup{padding-top:65px;padding-bottom:130px}
+.bpm-lineup h2{font-size:56px;text-transform:uppercase;text-align:center;margin-bottom:76px}
+.bpm-lineup__grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.bpm-lineup__grid>div:empty{display:none}
+.bpm-product-card{background:var(--card-bg);color:var(--card-ink);border-radius:var(--bpm-radius);padding:8px;min-width:0}
+.bpm-product-card__image{display:flex;align-items:center;justify-content:center;aspect-ratio:630/459;background:white;border-radius:8px;padding:12px 24px;overflow:hidden}
+.bpm-product-card__media{position:relative;width:100%;aspect-ratio:581/432;overflow:hidden}
+.bpm-product-card__media>img{width:100%;height:100%;object-fit:contain}
+.bpm-product-card__media--figma>img{position:absolute;width:92.2%;max-width:none;height:124%;left:3.9%;top:-12%;object-fit:fill}
+.bpm-product-card__details{display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center;padding:22px 8px 0}
+.bpm-product-card h3{font-size:26px;text-transform:uppercase;overflow-wrap:anywhere}
+.bpm-product-card__price{font:23px/1.1 var(--bpm-heading);opacity:.7;letter-spacing:.46px}
+.bpm-product-card__details>.bpm-button{margin-top:8px}
+.bpm-product-card__status{font-size:16px}
+@media(max-width:749px){.bpm-lineup{padding-top:56px;padding-bottom:56px}.bpm-lineup h2{font-size:32px;margin-bottom:32px}.bpm-lineup__grid{grid-template-columns:1fr;gap:24px}.bpm-product-card h3{font-size:22px}.bpm-product-card__price{font-size:20px}}
+{% endstylesheet %}
+{% schema %}
+{
+  "name": "BPM product lineup",
+  "max_blocks": 12,
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Our line up" },
+    { "type": "text", "id": "button_label", "label": "Product button label", "default": "Shop deodorants" }
+  ],
+  "blocks": [{
+    "type": "product", "name": "Product", "settings": [
+      { "type": "product", "id": "product", "label": "Product" },
+      { "type": "image_picker", "id": "image", "label": "Product photo override" },
+      { "type": "select", "id": "image_treatment", "label": "Product photo treatment", "options": [{ "value": "figma", "label": "Original Figma crop" }, { "value": "contain", "label": "Show full photo" }], "default": "figma" },
+      { "type": "text", "id": "label", "label": "Display name override" },
+      { "type": "color", "id": "background", "label": "Card background", "default": "#228782" },
+      { "type": "color", "id": "text_color", "label": "Card text", "default": "#ffffff" }
+    ]
+  }],
+  "presets": [{ "name": "BPM product lineup", "blocks": [{ "type": "product", "settings": { "background": "#acb228" } }, { "type": "product" }] }]
+}
+{% endschema %}
