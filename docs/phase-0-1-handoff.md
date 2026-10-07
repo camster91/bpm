@@ -1,12 +1,13 @@
 # Latest audit checkpoint
 
-Local work remains on `work/recover-original-source`, unpushed; draft PR #12 does not include these audit commits. The previous goal turn yielded new authoritative evidence; this turn extends template/menu/account/redirect coverage.
+Local work remains on `work/recover-original-source`, unpushed; draft PR #12 does not include these audit commits. Latest work reconciles native page/article assignments and inspects narrow product source dependencies.
 
 - Verified: recovery reference and local checks; installed app inventory; seven bundle mappings; subscription plan configuration; ten editorial field namespaces; app-embed states and default-product app blocks; displayed product/collection/page/blog assignments; native menu structure; fifteen redirect rules/public outcomes; account URL/sign-in-links and English language status.
-- Findings for owner review: Monthly subscription title versus five-month delivery; four existing redirects end at 404; Google local-inventory connection error; Judge.me shipping warning; custom placeholder subscription discount and incorrect Ingredients help text need source review.
+- Findings for owner review: Monthly subscription title versus five-month delivery; four existing redirects end at 404; Google local-inventory connection error; Judge.me shipping warning; confirmed no-plan subscription discount fallback (future-product risk), percentage-only pricing assumption and incorrect Ingredients help text.
 - Still pending: #28 accepted design/version/editor expectations; #3 protected source export/backup and isolated development setup; #4/#13 exact source/app dependencies, remaining settings/values and journey verification; #14 final per-element model/help/fallback contract; #15 actual Liquid Theme Check and GitHub CI evidence. No phase is declared complete.
 - Immediate dependency: explicit confirmation for the exact read-only theme pull in `theme-workflow.md`, required by the Shopify CLI skill. Automatic goal continuation has not supplied that confirmation. Owner: Cameron. Do not run or broaden it silently.
-- Safe remaining research: native page/article assignment reconciliation, product/metaobject values, remaining app/form settings. Source and candidate-dependent checks must wait for their real prerequisites.
+- Newly resolved: nine pages = four Default page plus five custom templates; all nine public articles = Default blog post. The theme editor's default counts are misleading. About Us native body is empty, so trace its visible content in source. `source-dependency-audit.md` records observed product subscription wiring and its limits.
+- Safe remaining research: product/metaobject values and remaining app/form settings. Full source and candidate-dependent checks must wait for their real prerequisites.
 
 The historical records below preserve earlier evidence and access states; use current audit documents for resolved blockers.
 

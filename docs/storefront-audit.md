@@ -51,7 +51,27 @@ Remaining #13 evidence: export/source inventory, remaining editor-template varia
 
 ## Additional template assignments
 
-The editor selector displays Default collection assigned to nine collections and Default blog assigned to one blog. Default blog post shows zero assigned posts, despite nine current public articles. Pages selector shows Default page assigned to zero; campaign-300applications, campaign-texture, contact, indigenous-owned and wholesale each assigned to one page, despite nine public page URLs. These are exact UI counts, not reconciled complete template ownership. The export/source and native page/article assignment audit must explain the discrepancy before migration. Preserve all public URLs; don't infer unused content from these counts or delete templates.
+The editor selector displays Default collection assigned to nine collections and Default blog assigned to one blog. Its zero counts for Default blog post and Default page are contradicted by the native content records below; use the records for migration coverage. Preserve all public URLs and templates.
+
+### Native page and public article reconciliation — 7 October 2026 UTC
+
+All nine visible native pages were opened read-only. Each selected template was verified in the dropdown grid; no option was selected or saved.
+
+| Page | Native record ID | Selected template |
+|---|---|---|
+| About Us | 705670807924 | Default page |
+| Your Privacy Choices | 708561764724 | Default page |
+| What Indigenous Owned Means at BPM | 715065426292 | indigenous-owned |
+| wholesale | 714997039476 | wholesale |
+| Polished Texture | 712836907380 | campaign-texture |
+| 300+ Applications | 712832287092 | campaign-300applications |
+| Privacy Policy | 706719089012 | Default page |
+| Terms of Service | 706719318388 | Default page |
+| Contact | 702804590964 | contact |
+
+Four Default page records plus five custom assignments reconcile all nine public pages. About Us has an empty native content body; its visible content must be traced in theme source rather than inferred to be absent. Native Privacy Policy/Terms pages and platform `/policies/` routes are distinct surfaces; preserve both until an approved consolidation exists.
+
+All nine visible public articles use **Default blog post**, verified through each native record's selected template grid: 1005408616820 (Fair Pricing), 1005565280628 (Metal Tube), 1005514195316 (Underarms Are Skin), 1005453869428 (Indigenous Ownership), 1005365231988 (Packaging), 1005365133684 (Sensitive Skin), 1005365100916 (Switching), 1005365297524 (Cream), and 1005365035380 (Baking Soda). The list also contains one hidden draft; it was left unopened and unchanged. Save remained disabled throughout. This resolves native assignment coverage, not article rendering, claim approval or source export.
 
 ## Native menus and redirects
 
