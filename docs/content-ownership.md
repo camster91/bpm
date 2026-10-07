@@ -1,5 +1,7 @@
 # Current access update
 
+Local repair evidence now supersedes the explanatory-only tab defect and candidate-help work below: the protected candidate handles explanatory-only content, uses supported palette tokens 1–4/default and corrects Ingredients help to Rich text. Fifteen fabricated rendering fixtures passed; source patch is in `patches/theme-baseline-fixes.patch`. The live theme and field definitions were not changed. Existing field types/value coverage are audit evidence; proposed editor rules below remain provisional until #6/#14 architecture and editor demonstration are complete.
+
 Approved source export now confirms field consumption and palette classes 1–4/default in `theme-export-audit.md`. PDP tab bodies use `metafield_tag`; the outer tab guard omits explanatory-only content, a candidate fallback case. Existing types/values remain unchanged. Final editor architecture, validation and client expectations are still open.
 
 Browser verification succeeded on 7 October 2026 UTC. See [authenticated inventory and content definitions](authenticated-audit.md). The earlier access-blocker statements below are historical; file export and complete configuration/compatibility checks remain pending.
