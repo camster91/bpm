@@ -20,7 +20,9 @@
     "table_scroll": "Scroll horizontally to see every column."
   },
   "accessibility": {
-    "new_window": "Opens in a new window"
+    "new_window": "Opens in a new window",
+    "pause_motion": "Pause motion",
+    "resume_motion": "Resume motion"
   },
   "products": {
     "price_from": "From {{ price }}",

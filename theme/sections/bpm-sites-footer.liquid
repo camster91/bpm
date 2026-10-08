@@ -5,7 +5,7 @@
   </div>
   <nav aria-label="{{ 'general.footer_navigation' | t }}"><ul class="footer-links">{% render 'bpm-sites-links', menu: section.settings.menu %}</ul></nav>
   {% if section.settings.policy_menu != blank %}<nav aria-label="{{ 'general.policies' | t }}"><ul class="footer-links">{% render 'bpm-sites-links', menu: section.settings.policy_menu %}</ul></nav>{% endif %}
-  <div class="footer-bottom"><span>© {{ 'now' | date: '%Y' }} {{ shop.name | escape }}{% if section.settings.show_market %} · {{ localization.country.name | escape }} / {{ localization.country.currency.iso_code | escape }}{% endif %}</span>{% if section.settings.legal_name != blank %}<span>{{ section.settings.legal_name | escape }}</span>{% endif %}</div>
+  <div class="footer-bottom">{% render 'bpm-motion-toggle' %}<span>© {{ 'now' | date: '%Y' }} {{ shop.name | escape }}{% if section.settings.show_market %} · {{ localization.country.name | escape }} / {{ localization.country.currency.iso_code | escape }}{% endif %}</span>{% if section.settings.legal_name != blank %}<span>{{ section.settings.legal_name | escape }}</span>{% endif %}</div>
 {% if section.settings.show_localization %}{% assign localization_id = 'Localization-' | append: section.id %}{% render 'bpm-localization', id: localization_id, localization: localization %}{% endif %}
 </footer>
 {% schema %}

@@ -15,7 +15,7 @@ await writeFile(join(scratch, 'bpm-sites-card.liquid'), clean(await readFile(joi
 await writeFile(join(scratch, 'bpm-app-blocks.liquid'), clean(await readFile(join(theme, 'snippets/bpm-app-blocks.liquid'), 'utf8')));
 await writeFile(join(scratch, 'bpm-product-card.liquid'), clean(await readFile(join(theme, 'snippets/bpm-product-card.liquid'), 'utf8')));
 await writeFile(join(scratch, 'bpm-sites-article-card.liquid'), clean(await readFile(join(theme, 'snippets/bpm-sites-article-card.liquid'), 'utf8')));
-for (const name of ['bpm-sites-filters','bpm-sites-catalogue-card','bpm-sites-media','bpm-localization','bpm-sites-collection-card','bpm-sites-pack-art','bpm-sites-gallery-art','bpm-meta-tags','bpm-structured-data']) await writeFile(join(scratch,`${name}.liquid`),clean(await readFile(join(theme,'snippets',`${name}.liquid`),'utf8')));
+for (const name of ['bpm-sites-filters','bpm-sites-catalogue-card','bpm-sites-media','bpm-localization','bpm-sites-collection-card','bpm-sites-pack-art','bpm-sites-gallery-art','bpm-meta-tags','bpm-structured-data','bpm-motion-toggle']) await writeFile(join(scratch,`${name}.liquid`),clean(await readFile(join(theme,'snippets',`${name}.liquid`),'utf8')));
 const engine = new Liquid({ root: scratch, extname: '.liquid' });
 engine.registerFilter('default_pagination', p => p.fixtureHtml);
 engine.registerFilter('money', value => '$' + (Number(value) / 100).toFixed(2));
@@ -48,6 +48,9 @@ async function check(name, relative, context, verify) {
   console.log(`PASS ${name}`);
 }
 try {
+  await check('Motion control is hidden until enhancement and has translated actions','snippets/bpm-motion-toggle.liquid',{},html=>{assert.match(html,/type="button"/);assert.match(html,/hidden/);assert.match(html,/data-pause-label="Pause motion"/);assert.match(html,/data-resume-label="Resume motion"/);assert.doesNotMatch(html,/bpm-motion-skip/);});
+  await check('Keyboard motion control uses skip-control placement','snippets/bpm-motion-toggle.liquid',{skip:true},html=>assert.match(html,/bpm-motion-skip/));
+  await check('Merchant motion preference reaches native layout','layout/theme.liquid',{settings:{enable_motion:false},request:{page_type:'index'},shop:{name:'BPM'},page_title:'BPM'},html=>{assert.match(html,/data-bpm-motion-enabled="false"/);assert.equal((html.match(/bpm-motion.js/g)||[]).length,1);});
   const meta = {settings:{development_noindex:true},request:{page_type:'product'},shop:{name:'BPM',url:'https://example.test'},page_title:'Citrus <lime>',canonical_url:'https://example.test/products/citrus?a=1&b=2',page_description:'Native "description"',current_page:1,page_image:{src:'//cdn.example.test/citrus.png?v=1&width=1200',alt:'Citrus <carton>'}};
   const metaCheck = (name, context, verify) => check(name,'snippets/bpm-meta-tags.liquid',{...meta,...context},verify);
   await metaCheck('Development metadata uses escaped native canonical/title/description and normalized sharing image',{},html=>{assert.match(html,/noindex,follow/);assert.match(html,/Citrus &lt;lime&gt; — BPM<\/title>/);assert.match(html,/citrus\?a=1&amp;b=2/);assert.match(html,/Native (?:&quot;|&#34;)description(?:&quot;|&#34;)/);assert.match(html,/https:\/\/cdn.example.test\/citrus.png\?v=1&amp;width=1200/);assert.match(html,/twitter:card" content="summary_large_image/);assert.match(html,/Citrus &lt;carton&gt;/);assert.doesNotMatch(html,/https:https/);});

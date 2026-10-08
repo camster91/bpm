@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="{{ request.locale.iso_code }}">
+<html lang="{{ request.locale.iso_code }}" data-bpm-motion-enabled="{{ settings.enable_motion }}">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,12 +15,14 @@
     {% style %}
       :root { --ink: {{ settings.ink }}; --cream: {{ settings.cream }}; --butter: {{ settings.butter }}; --pink: {{ settings.pink }}; --olive: {{ settings.lime }}; --teal: {{ settings.teal }}; --orange: {{ settings.orange }}; --line: {{ settings.ink | color_modify: 'alpha', 0.24 }}; }
     {% endstyle %}
+    <script src="{{ 'bpm-motion.js' | asset_url }}" defer></script>
     <script src="{{ 'bpm-chrome.js' | asset_url }}" defer></script>
     {% render 'bpm-structured-data', request: request, product: product, article: article, settings: settings %}
     {{ content_for_header }}
   </head>
   <body class="bpm-page bpm-page--{{ request.page_type | handle }}">
     <a class="bpm-skip-link" href="#MainContent">{{ 'general.skip_content' | t }}</a>
+    {% render 'bpm-motion-toggle', skip: true %}
     {% sections 'header-group' %}
     <main id="MainContent" tabindex="-1">{{ content_for_layout }}</main>
     {% sections 'footer-group' %}

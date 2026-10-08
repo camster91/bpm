@@ -115,5 +115,17 @@
         "info": "Uses Shopify article data. Disable if another verified integration supplies article schema."
       }
     ]
+  },
+  {
+    "name": "Motion",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "enable_motion",
+        "label": "Enable Sites decorative motion",
+        "default": true,
+        "info": "Visitors can pause motion. Reduced-motion preferences are always respected. Motion is paused in the theme editor."
+      }
+    ]
   }
 ]
