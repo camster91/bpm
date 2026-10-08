@@ -1,0 +1,59 @@
+[
+  {
+    "template": "campaign-texture",
+    "source": "Protected native theme 190930944372 export on 2026-10-07",
+    "omitted_or_replaced": [
+      {
+        "section": "image_with_text_baQxUw",
+        "reason": "Generic Pair text with an image placeholder; superseded by source artwork and native discovery modules"
+      },
+      {
+        "section": "image_with_text_7kCEch",
+        "reason": "Generic Pair text with an image placeholder; superseded by source artwork and native discovery modules"
+      },
+      {
+        "question": "What does shipping cost?",
+        "prior_answer": "Single-tube orders ship for a flat $1.50. Shipping is free on all two-tube bundles.",
+        "reason": "Historical operational copy replaced by native current shipping-policy destination"
+      },
+      {
+        "section": "image_with_text_tjWE4e",
+        "reason": "Generic Pair text with an image placeholder; superseded by source artwork and native discovery modules"
+      }
+    ],
+    "remaining": "Native video resolution/captions/playback, current claims acceptance, assigned page rendering and purchase journey QA"
+  },
+  {
+    "template": "campaign-300applications",
+    "source": "Protected native theme 190930944372 export on 2026-10-07",
+    "omitted_or_replaced": [
+      {
+        "section": "image_with_text_QPG9Jh",
+        "reason": "Generic Pair text with an image placeholder; superseded by source artwork and native discovery modules"
+      },
+      {
+        "section": "image_with_text_baQxUw",
+        "reason": "Generic Pair text with an image placeholder; superseded by source artwork and native discovery modules"
+      },
+      {
+        "section": "image_with_text_7kCEch",
+        "reason": "Generic Pair text with an image placeholder; superseded by source artwork and native discovery modules"
+      },
+      {
+        "question": "When will my order ship?",
+        "prior_answer": "Orders are typically shipped the day after reception. You’ll receive a confirmation email with tracking as soon as your order is on its way.",
+        "reason": "Historical operational copy replaced by native current shipping-policy destination"
+      },
+      {
+        "question": "What does shipping cost?",
+        "prior_answer": "Shipping is free on all bundles. Single-tube orders ship for a flat $1.50.",
+        "reason": "Historical operational copy replaced by native current shipping-policy destination"
+      },
+      {
+        "section": "image_with_text_tjWE4e",
+        "reason": "Generic Pair text with an image placeholder; superseded by source artwork and native discovery modules"
+      }
+    ],
+    "remaining": "Native video resolution/captions/playback, current claims acceptance, assigned page rendering and purchase journey QA"
+  }
+]

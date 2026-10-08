@@ -99,7 +99,8 @@
     "no_results": "No results found. Try another search or clear the filters.",
     "collections": "Collections",
     "explore_collection": "Explore the collection",
-    "no_collections": "No collections are available yet."
+    "no_collections": "No collections are available yet.",
+    "empty_collection": "No products are available in this collection yet."
   },
   "contact": {
     "name": "Your name",

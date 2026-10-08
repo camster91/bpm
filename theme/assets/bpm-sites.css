@@ -262,3 +262,10 @@ h3{font-family:inherit}
 .bpm-data-table-wrap thead th { background: var(--butter); }
 .bpm-data-table-wrap tbody th { font-weight: 700; }
 .bpm-table-section + .bpm-table-section { padding-top: 0; }
+
+.bpm-campaign-video h2{margin-bottom:28px}.bpm-campaign-video figure{margin:0}.bpm-campaign-video video{display:block;width:100%;max-height:640px;background:var(--ink)}.bpm-campaign-video figcaption{font-size:15px;margin-top:16px}.bpm-campaign-video details{margin-top:24px}.bpm-campaign-video summary{padding:16px 0;cursor:pointer}
+
+/* Extended campaign traits remain readable without hiding or overflowing items. */
+.rhythm-strip--extended{flex-wrap:wrap}
+.rhythm-strip--extended span{min-width:0;overflow-wrap:anywhere}
+@media(max-width:600px){.rhythm-strip--extended{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;text-align:center}.rhythm-strip--extended span:last-child{display:block;grid-column:1 / -1}.rhythm-strip--extended b{display:none}}

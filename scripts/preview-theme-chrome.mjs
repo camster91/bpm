@@ -13,6 +13,7 @@ const engine = new Liquid({ root: output, extname: '.liquid' });
 const locale = JSON.parse(await readFile(join(theme, 'locales/en.default.json'), 'utf8'));
 // Local fixture HTML stands in for Shopify's native rich-text serializer.
 engine.registerFilter('metafield_tag', field => `<div class="metafield-rich_text_field">${field.fixtureHtml}</div>`);
+engine.registerFilter('video_tag', () => '<video controls playsinline preload="none" aria-label="Local video binding fixture"></video>');
 engine.registerFilter('format_code', value => String(value).replace(/(.{4})/g, '$1 ').trim());
 engine.registerFilter('shopify_asset_url', value => `/shopify-native/${value}`);
 engine.registerFilter('asset_url', value => `/assets/${value}`);
@@ -35,7 +36,9 @@ for (const group of JSON.parse(await readFile(join(theme, 'config/settings_schem
 const menu = { links: [{ title: 'Home', url: '/' }, { title: 'Shop', url: '/collections/all' }, { title: 'About Us', url: '/pages/about-us' }, { title: 'Contact Us', url: '/pages/contact' }] };
 const common = { settings, shop: { name: 'BPM Deodorant', customer_accounts_enabled: true }, routes: { root_url: '/', account_url: '/account', cart_url: '/cart', all_products_collection_url: '/collections/all' }, cart: { item_count: 0, currency: {iso_code: 'CAD'} }, request: { page_type: 'index', locale: { iso_code: 'en' } }, page_title: 'BPM chrome preview', current_page: 1, canonical_url: 'http://127.0.0.1:8892/', content_for_header: '', content_for_layout: '' };
 // Resource-picker emulation for local snapshots only; Shopify resolution is not verified.
+// Collection membership is a fabricated pack-count fixture, not authenticated native membership.
 const mappedProducts=JSON.parse(await readFile(resolve(theme,'../reference-site/src/content/products.json'),'utf8'));
+const fixtureResourceBindings=JSON.parse(await readFile(resolve(theme,'../docs/theme-resource-bindings.json'),'utf8'));
 const mappedArticles=JSON.parse(await readFile(resolve(theme,'../reference-site/src/content/articles.json'),'utf8'));
 function pickerFixture(type, handle) {
  if(typeof handle !== 'string' || !handle) return handle;
@@ -43,7 +46,8 @@ function pickerFixture(type, handle) {
  if(type==='article') {const n=mappedArticles.findIndex(a=>a.url.endsWith('/blogs/'+handle));return n<0?null:{title:mappedArticles[n].title+' — fixture',url:`/sites-article-${n}.html`,published_at:mappedArticles[n].date+'T12:00:00-04:00'};}
  if(type==='blog') return {title:'The Breakdown — fixture',url:'/sites-blog.html'};
  if(type==='page' && handle==='about-us') return {title:'About — fixture',url:'/sites-about.html'};
- if(type==='collection') return {title:handle+' — fixture',url:'/sites-collection.html'};
+ if(type==='collection') return {title:handle+' — fixture',url:'/sites-collection.html',products:fixtureResourceBindings.products.filter(p=>p.pack_count===(handle==='the-two-track-collection'?2:4)).map(p=>pickerFixture('product',p.handle))};
+ if(type==='video') return {fixture:true};
  return handle;
 }
 function pickerSettings(fields, values) {return Object.fromEntries(Object.entries(values).map(([key,value])=>[key,pickerFixture(fields.find(f=>f.id===key)?.type,value)]));}
@@ -221,3 +225,10 @@ const wholesaleTemplate=JSON.parse(await readFile(join(theme,'templates/page.who
 let wholesaleBody='<p class="wrap fine">Local wholesale migration fixture. Terms are preserved from the September 15, 2026 source sheet and require current owner acceptance.</p>';
 for(const key of wholesaleTemplate.order){const config=wholesaleTemplate.sections[key];wholesaleBody+=await section(config.type,config.settings,(config.block_order||[]).map(id=>config.blocks[id]),{page:{title:'Wholesale'},preview_section_id:'wholesale-'+key});}
 await writeFile(join(output,'sites-wholesale.html'),await engine.parseAndRender(code,{...common,content_for_layout:wholesaleBody,preview_header:sitesHeader,preview_footer:sitesFooter,page_title:'Wholesale migration fixture'}));
+
+for(const suffix of ['campaign-texture','campaign-300applications']){
+ const template=JSON.parse(await readFile(join(theme,'templates/page.'+suffix+'.json'),'utf8'));
+ let body='<p class="wrap fine">Local campaign migration fixture. Native media and operational policy are mocked; claims require acceptance.</p>';
+ for(const key of template.order){const config=template.sections[key];body+=await section(config.type,config.settings,(config.block_order||[]).map(id=>config.blocks[id]),{page:{title:suffix},preview_section_id:suffix+'-'+key,shop:{...common.shop,shipping_policy:{url:'/sites-policies.html'}}});}
+ await writeFile(join(output,'sites-'+suffix+'.html'),await engine.parseAndRender(code,{...common,content_for_layout:body,preview_header:sitesHeader,preview_footer:sitesFooter,page_title:suffix+' fixture'}));
+}

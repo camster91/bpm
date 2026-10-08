@@ -21,3 +21,5 @@ Open http://127.0.0.1:8878/index.html after building. Node 22.13+ required. Comm
 - Authoritative design/code source: the published Sites review and recovered `reference-site/` (selected by Cameron on 7 October 2026). Figma is no longer the implementation target.
 
 Current Shopify data/configuration and approved client decisions govern implementation. Historical preview copy is not production truth. Preserve the published review, verify app/commerce behaviour, and use merchant-editable Shopify sections. Store writes and production publication are separate stages.
+
+Campaign suffixes and editable native discovery/media modules are implemented locally. [Campaign QA checkpoint](docs/qa/sites-campaign-pages.md) records 171 passing rendering checks and responsive fixture evidence; Shopify runtime, media, claims, apps and purchase journeys remain open.
