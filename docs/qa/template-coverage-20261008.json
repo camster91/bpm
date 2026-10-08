@@ -1,0 +1,305 @@
+{
+  "sourceCommit": "596714557c95e0352b234d3db0ccb17ceccde915",
+  "themeTree": "b1b46a6553c276c090544966da5c85ed7e934095",
+  "scope": "Local source classification, template presence and ordered-section file resolution only",
+  "counts": {
+    "sourcePages": 25,
+    "templates": 22,
+    "orderedSections": 109,
+    "catalogueProducts": 9
+  },
+  "sources": [
+    {
+      "source": "about.html",
+      "templates": [
+        "page.about.json"
+      ],
+      "state": "local-template-present-native-assignment-unverified"
+    },
+    {
+      "source": "articles/best-natural-deodorant-for-sensitive-skin-what-to-look-for-and-what-to-avoid.html",
+      "templates": [
+        "article.json"
+      ],
+      "nativeHandle": "news/best-natural-deodorant-for-sensitive-skin-what-to-look-for-and-what-to-avoid",
+      "state": "prepared-content-not-applied-native-id-unverified"
+    },
+    {
+      "source": "articles/deodorant-is-changing-shape-heres-why-we-chose-cream.html",
+      "templates": [
+        "article.json"
+      ],
+      "nativeHandle": "news/deodorant-is-changing-shape-heres-why-we-chose-cream",
+      "state": "prepared-content-not-applied-native-id-unverified"
+    },
+    {
+      "source": "articles/how-to-switch-to-natural-deodorant-without-the-awkward-transition-period.html",
+      "templates": [
+        "article.json"
+      ],
+      "nativeHandle": "news/how-to-switch-to-natural-deodorant-without-the-awkward-transition-period",
+      "state": "prepared-content-not-applied-native-id-unverified"
+    },
+    {
+      "source": "articles/is-baking-soda-bad-for-sensitive-skin-what-you-need-to-know.html",
+      "templates": [
+        "article.json"
+      ],
+      "nativeHandle": "news/is-baking-soda-bad-for-sensitive-skin-what-you-need-to-know",
+      "state": "prepared-content-not-applied-native-id-unverified"
+    },
+    {
+      "source": "articles/the-math-behind-fair-pricing-bpm-vs-native-vs-schmidts.html",
+      "templates": [
+        "article.json"
+      ],
+      "nativeHandle": "news/the-math-behind-fair-pricing-bpm-vs-native-vs-schmidts",
+      "state": "prepared-content-not-applied-native-id-unverified"
+    },
+    {
+      "source": "articles/the-name-behind-bpm-indigenous-ownership-and-finding-my-way-back.html",
+      "templates": [
+        "article.json"
+      ],
+      "nativeHandle": "news/the-name-behind-bpm-indigenous-ownership-and-finding-my-way-back",
+      "state": "prepared-content-not-applied-native-id-unverified"
+    },
+    {
+      "source": "articles/underarm-skin-care-ingredients.html",
+      "templates": [
+        "article.json"
+      ],
+      "nativeHandle": "news/underarm-skin-care-ingredients",
+      "state": "prepared-content-not-applied-native-id-unverified"
+    },
+    {
+      "source": "articles/whats-changing-in-deodorant-packaging-right-now-and-why-we-went-with-metal.html",
+      "templates": [
+        "article.json"
+      ],
+      "nativeHandle": "news/whats-changing-in-deodorant-packaging-right-now-and-why-we-went-with-metal",
+      "state": "prepared-content-not-applied-native-id-unverified"
+    },
+    {
+      "source": "bag.html",
+      "templates": [
+        "cart.json"
+      ],
+      "state": "local-template-present-native-assignment-unverified"
+    },
+    {
+      "source": "breakdown.html",
+      "templates": [
+        "blog.json"
+      ],
+      "state": "local-template-present-native-assignment-unverified"
+    },
+    {
+      "source": "contact.html",
+      "templates": [
+        "page.contact.json"
+      ],
+      "state": "local-template-present-native-assignment-unverified"
+    },
+    {
+      "source": "index.html",
+      "templates": [
+        "index.json"
+      ],
+      "state": "local-template-present-native-assignment-unverified"
+    },
+    {
+      "source": "indigenous-owned.html",
+      "templates": [
+        "page.indigenous-owned.json"
+      ],
+      "state": "local-template-present-native-assignment-unverified"
+    },
+    {
+      "source": "policies.html",
+      "templates": [
+        "page.policies.json"
+      ],
+      "state": "local-template-present-native-assignment-unverified"
+    },
+    {
+      "source": "policies/contact-information.html",
+      "templates": [],
+      "state": "native-policy-or-page-resolution-and-source-layout-unverified",
+      "boundary": "Current approved policy body, route and native policy layout must be verified; theme upload does not migrate policy data."
+    },
+    {
+      "source": "policies/legal.html",
+      "templates": [],
+      "state": "native-policy-or-page-resolution-and-source-layout-unverified",
+      "boundary": "Current approved policy body, route and native policy layout must be verified; theme upload does not migrate policy data."
+    },
+    {
+      "source": "policies/privacy.html",
+      "templates": [],
+      "state": "native-policy-or-page-resolution-and-source-layout-unverified",
+      "boundary": "Current approved policy body, route and native policy layout must be verified; theme upload does not migrate policy data."
+    },
+    {
+      "source": "policies/refund.html",
+      "templates": [],
+      "state": "native-policy-or-page-resolution-and-source-layout-unverified",
+      "boundary": "Current approved policy body, route and native policy layout must be verified; theme upload does not migrate policy data."
+    },
+    {
+      "source": "policies/shipping.html",
+      "templates": [],
+      "state": "native-policy-or-page-resolution-and-source-layout-unverified",
+      "boundary": "Current approved policy body, route and native policy layout must be verified; theme upload does not migrate policy data."
+    },
+    {
+      "source": "policies/subscription.html",
+      "templates": [],
+      "state": "native-policy-or-page-resolution-and-source-layout-unverified",
+      "boundary": "Current approved policy body, route and native policy layout must be verified; theme upload does not migrate policy data."
+    },
+    {
+      "source": "policies/terms.html",
+      "templates": [],
+      "state": "native-policy-or-page-resolution-and-source-layout-unverified",
+      "boundary": "Current approved policy body, route and native policy layout must be verified; theme upload does not migrate policy data."
+    },
+    {
+      "source": "product-media/preview.html",
+      "templates": [
+        "product.json",
+        "product.bergamot-lime.json",
+        "product.unscented.json"
+      ],
+      "state": "nine-local-compositions-native-commerce-unverified"
+    },
+    {
+      "source": "review.html",
+      "templates": [],
+      "state": "intentional-internal-tool-exclusion",
+      "boundary": "Design review/comments tooling is not a customer storefront feature."
+    },
+    {
+      "source": "shop.html",
+      "templates": [
+        "collection.json"
+      ],
+      "state": "local-template-present-native-assignment-unverified"
+    }
+  ],
+  "products": [
+    {
+      "handle": "bpm-natural-deodorant-bergamot-lime",
+      "sourceKey": "bergamot",
+      "template": "product.bergamot-lime.json",
+      "nativeVerified": false
+    },
+    {
+      "handle": "bpm-natural-deodorant-unscented",
+      "sourceKey": "unscented",
+      "template": "product.unscented.json",
+      "nativeVerified": false
+    },
+    {
+      "handle": "side-a-side-b",
+      "sourceKey": "duo",
+      "template": "product.json",
+      "nativeVerified": false
+    },
+    {
+      "handle": "citrus-repeat",
+      "sourceKey": "citrus-repeat",
+      "template": "product.json",
+      "nativeVerified": false
+    },
+    {
+      "handle": "silent-repeat",
+      "sourceKey": "silent-repeat",
+      "template": "product.json",
+      "nativeVerified": false
+    },
+    {
+      "handle": "3-4-time",
+      "sourceKey": "3-4-time",
+      "template": "product.json",
+      "nativeVerified": false
+    },
+    {
+      "handle": "silent-on-repeat-family-pack-4-tube-unscented-deodorant-bundle",
+      "sourceKey": "silent-on-repeat-family-pack-4-tube-unscented-deodorant-bundle",
+      "template": "product.json",
+      "nativeVerified": false
+    },
+    {
+      "handle": "citrus-on-repeat-family-pack-4-tube-bergamot-lime-deodorant-bundle",
+      "sourceKey": "citrus-on-repeat-family-pack-4-tube-bergamot-lime-deodorant-bundle",
+      "template": "product.json",
+      "nativeVerified": false
+    },
+    {
+      "handle": "four-on-the-floor-mixed-scent-4-tube-deodorant-bundle",
+      "sourceKey": "four-on-the-floor-mixed-scent-4-tube-deodorant-bundle",
+      "template": "product.json",
+      "nativeVerified": false
+    }
+  ],
+  "templates": [
+    "404.json",
+    "article.json",
+    "blog.json",
+    "cart.json",
+    "collection.json",
+    "collection.rotation.json",
+    "gift_card.liquid",
+    "index.json",
+    "list-collections.json",
+    "page.about.json",
+    "page.campaign-300applications.json",
+    "page.campaign-texture.json",
+    "page.contact.json",
+    "page.indigenous-owned.json",
+    "page.json",
+    "page.policies.json",
+    "page.wholesale.json",
+    "password.json",
+    "product.bergamot-lime.json",
+    "product.json",
+    "product.unscented.json",
+    "search.json"
+  ],
+  "legacyCustomerTemplates": [
+    {
+      "template": "customers/login.json",
+      "present": false
+    },
+    {
+      "template": "customers/register.json",
+      "present": false
+    },
+    {
+      "template": "customers/account.json",
+      "present": false
+    },
+    {
+      "template": "customers/order.json",
+      "present": false
+    },
+    {
+      "template": "customers/addresses.json",
+      "present": false
+    },
+    {
+      "template": "customers/activate_account.json",
+      "present": false
+    },
+    {
+      "template": "customers/reset_password.json",
+      "present": false
+    }
+  ],
+  "accountDocumentation": "https://shopify.dev/docs/storefronts/themes/architecture/templates#legacy-customer-account-templates",
+  "accountDecision": "Current customer-account mode is unverified. Shopify documents legacy account templates as deprecated and publishing a theme without them as automatically upgrading customer accounts. Before publication, verify the active account mode, existing customizations and apps, obtain explicit migration acceptance if applicable, and verify native account journeys. Do not switch account mode or add deprecated templates without resolving this boundary.",
+  "provesVisualFidelity": false,
+  "provesNativeAssignment": false,
+  "provesReleaseReadiness": false
+}
