@@ -7,11 +7,10 @@
       }
     },
     "reviews": {
-      "type": "bpm-app-region",
-      "settings": {
-        "constrain_width": true,
-        "padding": 72
-      }
+      "type": "bpm-sites-pdp-reviews",
+      "settings": {},
+      "blocks": {},
+      "block_order": []
     },
     "benefits": {
       "type": "bpm-sites-pdp-benefits",
@@ -211,6 +210,12 @@
     "closing": {
       "type": "bpm-sites-pdp-closing",
       "settings": {}
+    },
+    "creators": {
+      "type": "bpm-sites-pdp-creators",
+      "settings": {},
+      "blocks": {},
+      "block_order": []
     }
   },
   "order": [
@@ -224,6 +229,7 @@
     "lifestyle",
     "compare",
     "reviews",
+    "creators",
     "faq",
     "notes",
     "closing"

@@ -47,7 +47,11 @@
     "pack": "Pack",
     "fragrance": "Fragrance",
     "shipping_question": "Where do you ship?",
-    "shipping_policy": "View current shipping destinations and rates"
+    "shipping_policy": "View current shipping destinations and rates",
+    "review_source": "View original review",
+    "creator_original": "Watch the original post",
+    "creator_transcript": "Transcript and visual description",
+    "jump_navigation": "Product section links"
   },
   "newsletter": {
     "success": "Thanks for signing up. Check your inbox for any confirmation required."

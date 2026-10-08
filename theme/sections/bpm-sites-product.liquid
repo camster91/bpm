@@ -53,6 +53,8 @@
       {% if product.requires_selling_plan and allocation == nil %}<p role="status">{{ 'products.plan_unavailable' | t }}</p>{% endif %}
       <p class="shipping">{% if cart.taxes_included %}{{ 'cart.taxes_included' | t }}{% else %}{{ 'cart.taxes_checkout' | t }}{% endif %}{% if variant.requires_shipping %} {{ 'cart.shipping_checkout' | t }}{% endif %}</p>
     {% endform %}
+    {% if section.settings.fact_1 != blank or section.settings.fact_2 != blank or section.settings.fact_3 != blank %}<ul class="quick-facts">{% if section.settings.fact_1 != blank %}<li>{{ section.settings.fact_1 | escape }}</li>{% endif %}{% if section.settings.fact_2 != blank %}<li>{{ section.settings.fact_2 | escape }}</li>{% endif %}{% if section.settings.fact_3 != blank %}<li>{{ section.settings.fact_3 | escape }}</li>{% endif %}</ul>{% endif %}
+    {% if section.settings.jump_menu.links.size > 0 %}<nav class="jump" aria-label="{{ 'products.jump_navigation' | t }}">{% for link in section.settings.jump_menu.links %}<a href="{{ link.url }}">{{ link.title | escape }} <span aria-hidden="true">↓</span></a>{% endfor %}</nav>{% endif %}
     {% render 'bpm-app-blocks', blocks: section.blocks %}
   </div>
 </section>
@@ -64,6 +66,10 @@
  {"type":"text","id":"pack_label","label":"Verified pack description"},
  {"type":"text","id":"intro","label":"Approved scent introduction"},
  {"type":"checkbox","id":"show_description","label":"Show product description immediately after purchase","default":true},
- {"type":"link_list","id":"rotation","label":"Related rotation menu"}
+ {"type":"link_list","id":"rotation","label":"Related rotation menu"},
+ {"type":"link_list","id":"jump_menu","label":"Product section links","info":"Configure fragment links to the actual sections in this product template; verify destinations after rearranging sections."},
+ {"type":"text","id":"fact_1","label":"Approved quick fact 1"},
+ {"type":"text","id":"fact_2","label":"Approved quick fact 2"},
+ {"type":"text","id":"fact_3","label":"Approved quick fact 3"}
 ],"blocks":[{"type":"@app"}]}
 {% endschema %}
