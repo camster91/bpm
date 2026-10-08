@@ -1,4 +1,5 @@
-{% assign purchase_pack = section.settings.pack_label %}{% assign matched_pack = nil %}{% if purchase_pack == blank %}{% for item in section.blocks %}{% if item.type == 'product_pack' and item.settings.product != blank and item.settings.product.id != blank and product.id != blank and item.settings.product.id == product.id %}{% assign purchase_pack = item.settings.pack_label %}{% assign matched_pack = item %}{% break %}{% endif %}{% endfor %}{% endif %}
+{% assign matched_pack = nil %}{% for item in section.blocks %}{% if item.type == 'product_pack' and item.settings.product != blank and item.settings.product.id != blank and product.id != blank and item.settings.product.id == product.id %}{% assign matched_pack = item %}{% break %}{% endif %}{% endfor %}{% assign purchase_pack = section.settings.pack_label | default: matched_pack.settings.pack_label %}
+{% assign gallery_override = section.settings.image | default: matched_pack.settings.image %}{% assign gallery_key = section.settings.source_gallery %}{% if gallery_key == blank or gallery_key == 'native' %}{% assign gallery_key = matched_pack.settings.source_gallery %}{% endif %}{% assign gallery_keys = '15222327476596,15222328361332,15222329180532,15222739599732,15141686444404,15141668815220,15141732581748,14925587775860,14880059228532' | split: ',' %}{% assign use_override = false %}{% if gallery_override != blank or gallery_keys contains gallery_key %}{% assign use_override = true %}{% endif %}{% assign override_initial = use_override %}{% if gallery_override == blank and product.selected_variant != blank and product.selected_variant.featured_media != blank %}{% assign override_initial = false %}{% endif %}
 {{ 'bpm-product.css' | asset_url | stylesheet_tag }}
 {% liquid
   assign variant = product.selected_or_first_available_variant
@@ -14,21 +15,21 @@
   if product.requires_selling_plan and allocation == nil
     assign purchasable = false
   endif
-  if section.settings.image != blank
+  if use_override
     assign media_count = media_count | plus: 1
   endif
 %}
 <div class="crumb wrap"><a href="{{ routes.all_products_collection_url }}">{{ 'products.shop' | t }}</a> / {{ product.title | escape }}</div>
 <section id="ProductPurchase-{{ product.id }}" tabindex="-1" class="purchase wrap bpm-product" data-bpm-product aria-labelledby="Title-{{ section.id }}">
   <div class="gallery" data-bpm-gallery>
-    {% if section.settings.image != blank %}<div class="main-image" id="Media-{{ section.id }}-override" data-bpm-media data-initial-media>{{ section.settings.image | image_url: width: 1600 | image_tag: loading: 'eager', widths: '500,800,1200,1600', sizes: '(max-width:760px) 90vw,45vw', alt: product.title }}<span class="image-count">1 / {{ media_count }}</span></div>{% endif %}
+    {% if use_override %}<div class="main-image" id="Media-{{ section.id }}-override" data-bpm-media{% if override_initial %} data-initial-media{% endif %}>{% if gallery_override != blank %}{{ gallery_override | image_url: width: 1600 | image_tag: loading: 'eager', widths: '500,800,1200,1600', sizes: '(max-width:760px) 90vw,45vw', alt: product.title }}{% else %}{% render 'bpm-sites-gallery-art', key: gallery_key, alt: product.title, loading: 'eager' %}{% endif %}<span class="image-count">1 / {{ media_count }}</span></div>{% endif %}
     {% for media in product.media %}
-      {% assign loading = 'lazy' %}{% if section.settings.image == blank and media.id == chosen_media.id %}{% assign loading = 'eager' %}{% endif %}
-      <div class="main-image" id="Media-{{ section.id }}-{{ media.id }}" data-bpm-media{% if section.settings.image == blank and media.id == chosen_media.id %} data-initial-media{% endif %}>{% render 'bpm-sites-media', media: media, loading: loading %}<span class="image-count">{% if section.settings.image != blank %}{{ forloop.index | plus: 1 }}{% else %}{{ forloop.index }}{% endif %} / {{ media_count }}</span></div>
+      {% assign loading = 'lazy' %}{% if override_initial == false and media.id == chosen_media.id %}{% assign loading = 'eager' %}{% endif %}
+      <div class="main-image" id="Media-{{ section.id }}-{{ media.id }}" data-bpm-media{% if override_initial == false and media.id == chosen_media.id %} data-initial-media{% endif %}>{% render 'bpm-sites-media', media: media, loading: loading %}<span class="image-count">{% if use_override %}{{ forloop.index | plus: 1 }}{% else %}{{ forloop.index }}{% endif %} / {{ media_count }}</span></div>
     {% endfor %}
     {% if media_count > 1 %}<div class="thumbs" aria-label="{{ 'products.gallery' | t }}">
-      {% if section.settings.image != blank %}<a class="thumb" href="#Media-{{ section.id }}-override" data-bpm-thumb aria-label="{{ 'products.media_number' | t: number: 1 }}">{{ section.settings.image | image_url: width: 150 | image_tag: loading: 'lazy', alt: '' }}</a>{% endif %}
-      {% for media in product.media %}{% assign number = forloop.index %}{% if section.settings.image != blank %}{% assign number = number | plus: 1 %}{% endif %}<a class="thumb" href="#Media-{{ section.id }}-{{ media.id }}" data-bpm-thumb aria-label="{{ 'products.media_number' | t: number: number }}">{{ media.preview_image | image_url: width: 150 | image_tag: loading: 'lazy', alt: '' }}{% unless media.media_type == 'image' %}<span class="play" aria-hidden="true">▶</span>{% endunless %}</a>{% endfor %}
+      {% if use_override %}<a class="thumb" href="#Media-{{ section.id }}-override" data-bpm-thumb aria-label="{{ 'products.media_number' | t: number: 1 }}">{% if gallery_override != blank %}{{ gallery_override | image_url: width: 150 | image_tag: loading: 'lazy', alt: '' }}{% else %}{% render 'bpm-sites-gallery-art', key: gallery_key, alt: '', loading: 'lazy' %}{% endif %}</a>{% endif %}
+      {% for media in product.media %}{% assign number = forloop.index %}{% if use_override %}{% assign number = number | plus: 1 %}{% endif %}<a class="thumb" href="#Media-{{ section.id }}-{{ media.id }}" data-bpm-thumb aria-label="{{ 'products.media_number' | t: number: number }}">{{ media.preview_image | image_url: width: 150 | image_tag: loading: 'lazy', alt: '' }}{% unless media.media_type == 'image' %}<span class="play" aria-hidden="true">▶</span>{% endunless %}</a>{% endfor %}
     </div>{% endif %}
   </div>
   <div class="summary">
@@ -70,6 +71,55 @@
       "id": "image",
       "label": "First gallery image override",
       "info": "Use original Sites framed product artwork for matching presentation. Native media remains available in the gallery."
+    },
+    {
+      "type": "select",
+      "id": "source_gallery",
+      "label": "Original Sites first gallery artwork",
+      "default": "native",
+      "options": [
+        {
+          "value": "native",
+          "label": "Native media only"
+        },
+        {
+          "value": "15222327476596",
+          "label": "four-on-the-floor-mixed-scent-4-tube-deodorant-bun"
+        },
+        {
+          "value": "15222328361332",
+          "label": "citrus-on-repeat-family-pack-4-tube-bergamot-lime-"
+        },
+        {
+          "value": "15222329180532",
+          "label": "silent-on-repeat-family-pack-4-tube-unscented-deod"
+        },
+        {
+          "value": "15222739599732",
+          "label": "3-4-time"
+        },
+        {
+          "value": "15141686444404",
+          "label": "silent-repeat"
+        },
+        {
+          "value": "15141668815220",
+          "label": "citrus-repeat"
+        },
+        {
+          "value": "15141732581748",
+          "label": "side-a-side-b"
+        },
+        {
+          "value": "14925587775860",
+          "label": "bpm-natural-deodorant-unscented"
+        },
+        {
+          "value": "14880059228532",
+          "label": "bpm-natural-deodorant-bergamot-lime"
+        }
+      ],
+      "info": "Use only for the matching product. Uploaded image overrides take priority; native media remains in the gallery."
     },
     {
       "type": "text",
@@ -131,6 +181,60 @@
           "type": "text",
           "id": "pack_label",
           "label": "Verified pack description"
+        },
+        {
+          "type": "select",
+          "id": "source_gallery",
+          "label": "Original Sites first gallery artwork",
+          "default": "native",
+          "options": [
+            {
+              "value": "native",
+              "label": "Native media only"
+            },
+            {
+              "value": "15222327476596",
+              "label": "four-on-the-floor-mixed-scent-4-tube-deodorant-bun"
+            },
+            {
+              "value": "15222328361332",
+              "label": "citrus-on-repeat-family-pack-4-tube-bergamot-lime-"
+            },
+            {
+              "value": "15222329180532",
+              "label": "silent-on-repeat-family-pack-4-tube-unscented-deod"
+            },
+            {
+              "value": "15222739599732",
+              "label": "3-4-time"
+            },
+            {
+              "value": "15141686444404",
+              "label": "silent-repeat"
+            },
+            {
+              "value": "15141668815220",
+              "label": "citrus-repeat"
+            },
+            {
+              "value": "15141732581748",
+              "label": "side-a-side-b"
+            },
+            {
+              "value": "14925587775860",
+              "label": "bpm-natural-deodorant-unscented"
+            },
+            {
+              "value": "14880059228532",
+              "label": "bpm-natural-deodorant-bergamot-lime"
+            }
+          ],
+          "info": "Use only for the matching product. Uploaded image overrides take priority; native media remains in the gallery."
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Product first-image override"
         }
       ]
     }

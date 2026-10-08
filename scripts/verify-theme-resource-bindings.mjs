@@ -56,3 +56,18 @@ for(const record of await readJSON('docs/source-open-pack-art-provenance.json'))
  assert.doesNotMatch(svg,/<script|https?:\/\/(?!www.w3.org)/);
 }
 console.log('All nine open-pack artworks match recorded source bytes, dimensions and crop viewports; six lack historical source hashes.');
+
+for(const record of await readJSON('docs/source-gallery-art-provenance.json')) {
+ const source=media.assets.find(a=>a.path===record.source);
+ const crop=crops.find(c=>record.source.endsWith('/'+c.source));
+ const svg=await readFile(join(root,record.asset),'utf8');
+ assert.equal(record.source_url,source.url);
+ assert.deepEqual(record.crop,crop.crop_xywh);
+ assert.ok(svg.includes(`viewBox="${crop.crop_xywh.join(' ')}"`));
+ const embedded=Buffer.from(svg.match(/href="data:image\/png;base64,([^"]+)"/)[1],'base64');
+ assert.equal(createHash('sha256').update(embedded).digest('hex'),source.sha256 || record.sha256);
+ assert.equal(embedded.readUInt32BE(16),crop.source_dimensions[0]);
+ assert.equal(embedded.readUInt32BE(20),crop.source_dimensions[1]);
+ assert.doesNotMatch(svg,/<script|https?:\/\/(?!www.w3.org)/);
+}
+console.log('Nine first-gallery crops match source mappings, recorded bytes and dimensions; six lack historical hashes.');

@@ -15,7 +15,7 @@ await writeFile(join(scratch, 'bpm-sites-card.liquid'), clean(await readFile(joi
 await writeFile(join(scratch, 'bpm-app-blocks.liquid'), clean(await readFile(join(theme, 'snippets/bpm-app-blocks.liquid'), 'utf8')));
 await writeFile(join(scratch, 'bpm-product-card.liquid'), clean(await readFile(join(theme, 'snippets/bpm-product-card.liquid'), 'utf8')));
 await writeFile(join(scratch, 'bpm-sites-article-card.liquid'), clean(await readFile(join(theme, 'snippets/bpm-sites-article-card.liquid'), 'utf8')));
-for (const name of ['bpm-sites-filters','bpm-sites-catalogue-card','bpm-sites-media','bpm-localization','bpm-sites-collection-card','bpm-sites-pack-art']) await writeFile(join(scratch,`${name}.liquid`),clean(await readFile(join(theme,'snippets',`${name}.liquid`),'utf8')));
+for (const name of ['bpm-sites-filters','bpm-sites-catalogue-card','bpm-sites-media','bpm-localization','bpm-sites-collection-card','bpm-sites-pack-art','bpm-sites-gallery-art']) await writeFile(join(scratch,`${name}.liquid`),clean(await readFile(join(theme,'snippets',`${name}.liquid`),'utf8')));
 const engine = new Liquid({ root: scratch, extname: '.liquid' });
 engine.registerFilter('default_pagination', p => p.fixtureHtml);
 engine.registerFilter('money', value => '$' + (Number(value) / 100).toFixed(2));
@@ -297,6 +297,18 @@ try {
   await check('Unknown product never inherits bundle application math','sections/bpm-sites-pdp-value.liquid',{product:{id:999},section:hydratedBundleSection('value')},html=>assert.equal(html.trim(),''));
   await check('Explicit template scent settings override matching product story','sections/bpm-sites-pdp-scent.liquid',{product:{id:bundleBindings[0].product_id},section:{...hydratedBundleSection('scent'),settings:{heading:'Merchant template override',intro:'Approved replacement'}}},html=>{assert.match(html,/Merchant template override/);assert.doesNotMatch(html,/Two tracks/);});
   await check('Explicit template value settings override matching product pack','sections/bpm-sites-pdp-value.liquid',{product:{id:bundleBindings[0].product_id},section:{...hydratedBundleSection('value'),settings:{pack:'Merchant override',applications:100}}},html=>{assert.match(html,/Merchant override/);assert.match(html,/≈ 100/);assert.doesNotMatch(html,/1216/);});
+  const galleryRecords=JSON.parse(await readFile(join(theme,'../docs/source-gallery-art-provenance.json'),'utf8'));
+  const galleryResourceMap=JSON.parse(await readFile(join(theme,'../docs/theme-resource-bindings.json'),'utf8')).products;
+  const hydrateGallery=config=>({id:'product-a',settings:config.settings,blocks:(config.block_order||[]).map(id=>{const block=config.blocks[id];const match=galleryResourceMap.find(p=>p.handle===block.settings.product);return {...block,settings:{...block.settings,...(match?{product:{id:match.id}}:{})}};})});
+  for(const record of galleryRecords){
+    const suffix=record.product_id===14880059228532?'.bergamot-lime':record.product_id===14925587775860?'.unscented':'';
+    const config=JSON.parse(await readFile(join(theme,'templates/product'+suffix+'.json'),'utf8')).sections.main;
+    await check(record.product_id+' source first image retains native media and thumbnails','sections/bpm-sites-product.liquid',{...nativeProduct,product:{...nativeProduct.product,id:record.product_id},section:hydrateGallery(config)},html=>{assert.ok(html.includes(record.asset.replace('theme/','/')));assert.match(html,/id="Media-product-a-override" data-bpm-media data-initial-media/);assert.match(html,/id="Media-product-a-10"/);assert.match(html,/id="Media-product-a-11"/);assert.match(html,/1 \/ 3/);assert.equal((html.match(/data-initial-media/g)||[]).length,1);});
+  }
+  const galleryConfig=JSON.parse(await readFile(join(theme,'templates/product.bergamot-lime.json'),'utf8')).sections.main;
+  await check('Explicit selected variant keeps native featured media initially visible','sections/bpm-sites-product.liquid',{...nativeProduct,product:{...nativeProduct.product,id:14880059228532,selected_variant:productVariant},section:hydrateGallery(galleryConfig)},html=>{assert.match(html,/id="Media-product-a-10" data-bpm-media data-initial-media/);assert.doesNotMatch(html,/id="Media-product-a-override" data-bpm-media data-initial-media/);assert.equal((html.match(/data-initial-media/g)||[]).length,1);});
+  await check('Uploaded first image wins over source first gallery artwork','sections/bpm-sites-product.liquid',{...nativeProduct,product:{...nativeProduct.product,id:14880059228532},section:{...hydrateGallery(galleryConfig),settings:{...galleryConfig.settings,image:{src:'merchant-first-image.jpg'}}}},html=>{assert.match(html,/merchant-first-image.jpg/);assert.doesNotMatch(html,/bpm-sites-carton-bergamot/);});
+  await check('Unknown source key falls back to native selected media without phantom frame','sections/bpm-sites-product.liquid',{...nativeProduct,section:{settings:{source_gallery:'unknown'},blocks:[]}},html=>{assert.doesNotMatch(html,/Media-product-a-override/);assert.match(html,/data-initial-media/);});
   console.log(`${passed} chrome rendering checks passed; Shopify runtime and visual geometry remain unverified.`);
 } finally {
   await rm(scratch, { recursive: true, force: true });

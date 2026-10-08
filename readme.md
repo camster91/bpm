@@ -31,3 +31,5 @@ Existing single-product suffixes now have product-specific editable source scent
 Seven bundle products now have independent editable native-product pack, scent, value and source-art bindings on the shared default template. [Bundle QA](docs/qa/sites-bundle-product-bindings.md) records 222 checks and native/runtime limits.
 
 Judge.me native product blocks/core embed and cart-page review placement are prepared locally from the protected export. [App migration QA](docs/qa/sites-review-app-migration.md) records 224 rendering checks, nine configuration bindings and pending native integration.
+
+Original first-gallery framing covers all nine products with merchant overrides and native media retained. [Gallery QA](docs/qa/sites-source-purchase-gallery.md) records 236 checks and responsive local navigation; native Shopify and Phase 4/5 gates remain open.

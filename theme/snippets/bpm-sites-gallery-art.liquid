@@ -1,0 +1,17 @@
+{% doc %}
+Original Sites first-gallery crop for a selected product presentation.
+@param {string} key - Allowlisted native product artwork key
+@param {string} alt - Image description
+@param {string} loading - eager or lazy
+{% enddoc %}
+{% assign artwork = nil %}{% case key %}
+{% when '15222327476596' %}{% assign artwork = 'bpm-sites-gallery-15222327476596.svg' %}{% assign art_width = 1051 %}{% assign art_height = 701 %}
+{% when '15222328361332' %}{% assign artwork = 'bpm-sites-gallery-15222328361332.svg' %}{% assign art_width = 983 %}{% assign art_height = 668 %}
+{% when '15222329180532' %}{% assign artwork = 'bpm-sites-gallery-15222329180532.svg' %}{% assign art_width = 1064 %}{% assign art_height = 699 %}
+{% when '15222739599732' %}{% assign artwork = 'bpm-sites-gallery-15222739599732.svg' %}{% assign art_width = 994 %}{% assign art_height = 668 %}
+{% when '15141686444404' %}{% assign artwork = 'bpm-sites-gallery-15141686444404.svg' %}{% assign art_width = 536 %}{% assign art_height = 724 %}
+{% when '15141668815220' %}{% assign artwork = 'bpm-sites-gallery-15141668815220.svg' %}{% assign art_width = 553 %}{% assign art_height = 719 %}
+{% when '15141732581748' %}{% assign artwork = 'bpm-sites-gallery-15141732581748.svg' %}{% assign art_width = 581 %}{% assign art_height = 734 %}
+{% when '14925587775860' %}{% assign artwork = 'bpm-sites-carton-unscented.svg' %}{% assign art_width = 213 %}{% assign art_height = 430 %}
+{% when '14880059228532' %}{% assign artwork = 'bpm-sites-carton-bergamot.svg' %}{% assign art_width = 193 %}{% assign art_height = 430 %}
+{% endcase %}{% if artwork != blank %}<img src="{{ artwork | asset_url }}" width="{{ art_width }}" height="{{ art_height }}" alt="{{ alt | escape }}" loading="{{ loading | default: 'lazy' }}">{% endif %}
