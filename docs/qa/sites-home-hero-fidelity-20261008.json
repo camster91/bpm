@@ -1,0 +1,219 @@
+{
+  "scope": "Live Sites vs local fabricated native candidate hero; same tab, verified viewport per navigation",
+  "rows": [
+    {
+      "width": 375,
+      "source": {
+        "heading": {
+          "height": 153,
+          "width": 327
+        },
+        "headingStyle": {
+          "font": "BPMDisplay, Arial, sans-serif",
+          "lineHeight": "42.12px",
+          "size": "40.5px"
+        },
+        "hero": {
+          "height": 849,
+          "width": 375
+        },
+        "heroGap": "28px",
+        "heroPadding": "32px 24px",
+        "image": {
+          "loaded": true,
+          "naturalWidth": 1919,
+          "naturalHeight": 1024,
+          "position": "50% 50%"
+        },
+        "photo": {
+          "height": 345,
+          "width": 327
+        },
+        "photoStyle": {
+          "radius": "0px 76px 0px 0px"
+        },
+        "smallLink": "Indigenous-owned. Independently verified. ↗",
+        "viewport": 375
+      },
+      "candidate": {
+        "heading": {
+          "height": 153,
+          "width": 327
+        },
+        "headingStyle": {
+          "font": "BPMDisplay, Arial, sans-serif",
+          "lineHeight": "42.12px",
+          "size": "40.5px"
+        },
+        "hero": {
+          "height": 812,
+          "width": 375
+        },
+        "heroGap": "28px",
+        "heroPadding": "32px 24px",
+        "image": {
+          "loaded": true,
+          "naturalHeight": 1024,
+          "naturalWidth": 1919,
+          "position": "50% 50%"
+        },
+        "photo": {
+          "height": 345,
+          "width": 327
+        },
+        "photoStyle": {
+          "radius": "0px 76px 0px 0px"
+        },
+        "smallLink": null,
+        "viewport": 375
+      }
+    },
+    {
+      "width": 820,
+      "source": {
+        "heading": {
+          "height": 205,
+          "width": 746
+        },
+        "headingStyle": {
+          "font": "BPMDisplay, Arial, sans-serif",
+          "lineHeight": "58.24px",
+          "size": "56px"
+        },
+        "hero": {
+          "height": 1030,
+          "width": 820
+        },
+        "heroGap": "32px",
+        "heroPadding": "40px 36.9px",
+        "image": {
+          "loaded": true,
+          "naturalHeight": 1024,
+          "naturalWidth": 1919,
+          "position": "70% 50%"
+        },
+        "photo": {
+          "height": 460,
+          "width": 746
+        },
+        "photoStyle": {
+          "radius": "0px 88px 0px 0px"
+        },
+        "smallLink": "Indigenous-owned. Independently verified. ↗",
+        "viewport": 820
+      },
+      "candidate": {
+        "heading": {
+          "height": 205,
+          "width": 746
+        },
+        "headingStyle": {
+          "font": "BPMDisplay, Arial, sans-serif",
+          "lineHeight": "58.24px",
+          "size": "56px"
+        },
+        "hero": {
+          "height": 983,
+          "width": 820
+        },
+        "heroGap": "32px",
+        "heroPadding": "40px 36.9px",
+        "image": {
+          "loaded": true,
+          "naturalHeight": 1024,
+          "naturalWidth": 1919,
+          "position": "70% 50%"
+        },
+        "photo": {
+          "height": 460,
+          "width": 746
+        },
+        "photoStyle": {
+          "radius": "0px 88px 0px 0px"
+        },
+        "smallLink": null,
+        "viewport": 820
+      }
+    },
+    {
+      "width": 1440,
+      "source": {
+        "heading": {
+          "height": 232,
+          "width": 610
+        },
+        "headingStyle": {
+          "font": "BPMDisplay, Arial, sans-serif",
+          "lineHeight": "66.56px",
+          "size": "64px"
+        },
+        "hero": {
+          "height": 660,
+          "width": 1440
+        },
+        "heroGap": "43.2px",
+        "heroPadding": "48px 64px 56px",
+        "image": {
+          "loaded": true,
+          "naturalHeight": 1024,
+          "naturalWidth": 1919,
+          "position": "70% 50%"
+        },
+        "photo": {
+          "height": 556,
+          "width": 659
+        },
+        "photoStyle": {
+          "radius": "0px 112px 0px 0px"
+        },
+        "smallLink": "Indigenous-owned. Independently verified. ↗",
+        "viewport": 1440
+      },
+      "candidate": {
+        "heading": {
+          "height": 232,
+          "width": 610
+        },
+        "headingStyle": {
+          "font": "BPMDisplay, Arial, sans-serif",
+          "lineHeight": "66.56px",
+          "size": "64px"
+        },
+        "hero": {
+          "height": 651,
+          "width": 1440
+        },
+        "heroGap": "43.2px",
+        "heroPadding": "48px 64px 56px",
+        "image": {
+          "loaded": true,
+          "naturalHeight": 1024,
+          "naturalWidth": 1919,
+          "position": "70% 50%"
+        },
+        "photo": {
+          "height": 547,
+          "width": 659
+        },
+        "photoStyle": {
+          "radius": "0px 112px 0px 0px"
+        },
+        "smallLink": null,
+        "viewport": 1440
+      }
+    }
+  ],
+  "loadedSource375": {
+    "fontsStatus": "loaded",
+    "loaded": true,
+    "naturalHeight": 1024,
+    "naturalWidth": 1919,
+    "photo": {
+      "height": 345,
+      "width": 327
+    },
+    "position": "50% 50%",
+    "viewport": 375
+  },
+  "limits": "Missing secondary native page binding and claim acceptance remain unresolved. This is not whole-homepage, motion, native-editor or full-device fidelity proof."
+}
