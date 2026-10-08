@@ -1,0 +1,85 @@
+{
+  "scope": "Local fabricated fixture only; no submission or backend validation",
+  "association": {
+    "alerts": [
+      {
+        "id": "CartLineError-preview-bpm-sites-cart-1",
+        "text": "Fabricated availability error: please review the quantity."
+      }
+    ],
+    "disabledSubmits": [
+      {
+        "disabled": true,
+        "name": "update"
+      },
+      {
+        "disabled": true,
+        "name": "checkout"
+      }
+    ],
+    "quantities": [
+      {
+        "describedBy": "CartLineError-preview-bpm-sites-cart-1",
+        "id": "Quantity-preview-bpm-sites-cart-1",
+        "max": "",
+        "message": "Fabricated availability error: please review the quantity.",
+        "min": "1",
+        "step": "1",
+        "value": "2"
+      },
+      {
+        "describedBy": null,
+        "id": "Quantity-preview-bpm-sites-cart-2",
+        "max": "5",
+        "message": null,
+        "min": "1",
+        "step": "1",
+        "value": "1"
+      }
+    ],
+    "scrollWidth": 375,
+    "width": 375
+  },
+  "quantityValidity": [
+    {
+      "max": "5",
+      "min": "1",
+      "rangeOverflow": false,
+      "rangeUnderflow": true,
+      "step": "1",
+      "stepMismatch": false,
+      "valid": false,
+      "value": "0"
+    },
+    {
+      "max": "5",
+      "min": "1",
+      "rangeOverflow": true,
+      "rangeUnderflow": false,
+      "step": "1",
+      "stepMismatch": false,
+      "valid": false,
+      "value": "6"
+    },
+    {
+      "max": "5",
+      "min": "1",
+      "rangeOverflow": false,
+      "rangeUnderflow": false,
+      "step": "1",
+      "stepMismatch": true,
+      "valid": false,
+      "value": "2.5"
+    },
+    {
+      "max": "5",
+      "min": "1",
+      "rangeOverflow": false,
+      "rangeUnderflow": false,
+      "step": "1",
+      "stepMismatch": false,
+      "valid": true,
+      "value": "4"
+    }
+  ]
+}

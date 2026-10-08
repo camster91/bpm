@@ -1,3 +1,5 @@
+Subsequent cart error-description corrections exceed the preserved f750619 snapshot below. Refresh before uploading. See `qa/cart-line-error-association-20261008.md`.
+
 # Custom Sites theme — development upload review
 
 The frozen f750619 candidate includes the latest responsive PDP module corrections and matches the current theme, including the corrected mobile native price filter. See `qa/mobile-price-filter-20261008.md` for local UI evidence. See `qa/sites-all-pdp-modules-20261008.md` for measured comparisons and pending content differences. Earlier snapshots remain preserved. No upload command has been executed.
