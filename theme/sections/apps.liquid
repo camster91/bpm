@@ -1,5 +1,6 @@
-{% if section.blocks.size > 0 %}
-  <div class="bpm-app-wrapper{% if section.settings.constrain_width %} bpm-container{% endif %}" style="padding-block: {{ section.settings.padding }}px;">{% render 'bpm-app-blocks', blocks: section.blocks %}</div>
+{% capture app_content %}{% render 'bpm-app-blocks', blocks: section.blocks %}{% endcapture %}{% assign app_content = app_content | strip %}
+{% if app_content != blank %}
+  <div class="bpm-app-wrapper{% if section.settings.constrain_width %} wrap{% endif %}" style="padding-block: {{ section.settings.padding }}px;">{{ app_content }}</div>
 {% endif %}
 {% schema %}
 {

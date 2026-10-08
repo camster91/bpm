@@ -54,6 +54,10 @@
             "product": "side-a-side-b",
             "pack_label": "THE TWO-TRACK / 2 \u00d7 76 g"
           }
+        },
+        "judge_me_reviews_preview_badge_F7Bi3V": {
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
         }
       },
       "block_order": [
@@ -63,14 +67,27 @@
         "15222739599732",
         "15141686444404",
         "15141668815220",
-        "15141732581748"
+        "15141732581748",
+        "judge_me_reviews_preview_badge_F7Bi3V"
       ]
     },
     "reviews": {
       "type": "bpm-sites-pdp-reviews",
       "settings": {},
-      "blocks": {},
-      "block_order": []
+      "blocks": {
+        "judge_me_reviews_review_widget_GYRzxQ": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "real_data",
+            "max_width": 1200,
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget"
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_GYRzxQ"
+      ]
     },
     "benefits": {
       "type": "bpm-sites-pdp-benefits",

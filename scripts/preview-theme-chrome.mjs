@@ -9,6 +9,9 @@ await symlink(join(theme, 'assets'), join(output, 'assets')).catch(error => { if
 const styles = [];
 const clean = text => text.replace(/{%\s*layout[^%]*%}/g, '').replace(/{%\s*form\s+'storefront_password'[^%]*%}/g, '<form method="post" action="/local-fixture-password">').replace(/{%\s*form\s+'product'[^%]*%}/g, '<form class="bpm-product-form" method="post" action="/local-fixture-product">').replace(/{%\s*form\s+'localization'[^%]*%}/g, '<form class="bpm-localization" method="post" action="/local-fixture-localization">').replace(/{%\s*form\s+'contact'[^%]*%}/g, '<form class="preview-form bpm-contact-form" method="post" action="/local-fixture-contact">').replace(/{%\s*form[^%]*%}/g, '<form class="preview-form" method="post" action="/local-fixture-newsletter">').replace(/{%\s*endform\s*%}/g, '</form>').replace(/{%\s*paginate[^%]*%}/g, '').replace(/{%\s*endpaginate\s*%}/g, '').replace(/{%\s*(schema|doc)\s*%}[\s\S]*?{%\s*end\1\s*%}/g, '').replace(/{%\s*stylesheet\s*%}([\s\S]*?){%\s*endstylesheet\s*%}/g, (_, css) => { styles.push(css); return ''; });
 for (const name of ['bpm-navigation', 'bpm-product-card', 'bpm-sites-links', 'bpm-sites-card', 'bpm-sites-article-card', 'bpm-sites-filters', 'bpm-sites-catalogue-card', 'bpm-sites-media', 'bpm-app-blocks', 'bpm-localization','bpm-sites-collection-card','bpm-sites-pack-art']) await writeFile(join(output, `${name}.liquid`), clean(await readFile(join(theme, 'snippets', `${name}.liquid`), 'utf8')));
+// Explicit local-only substitute for Shopify's native app-block renderer.
+const localAppRenderer=join(output,'bpm-app-blocks.liquid');
+await writeFile(localAppRenderer,(await readFile(localAppRenderer,'utf8')).replace(/{% render block %}/g,'{{ block.fixture_html }}'));
 const engine = new Liquid({ root: output, extname: '.liquid' });
 const locale = JSON.parse(await readFile(join(theme, 'locales/en.default.json'), 'utf8'));
 // Local fixture HTML stands in for Shopify's native rich-text serializer.
@@ -55,7 +58,7 @@ async function section(name, overrides = {}, blocks = [], context = {}) {
   const source = await readFile(join(theme, 'sections', `${name}.liquid`), 'utf8');
   const schema = JSON.parse(source.match(/{%\s*schema\s*%}([\s\S]*?){%\s*endschema\s*%}/)[1]);
   const values = Object.fromEntries(schema.settings.filter(field => field.id).map(field => [field.id, field.default]));
-  return engine.parseAndRender(clean(source), { ...common, ...context, section: { id: context.preview_section_id || `preview-${name}`, settings: pickerSettings(schema.settings,{ ...values, ...overrides }), blocks: blocks.map(block=>({...block,settings:pickerSettings(schema.blocks?.find(b=>b.type===block.type)?.settings || [],block.settings)})) } });
+  return engine.parseAndRender(clean(source), { ...common, ...context, section: { id: context.preview_section_id || `preview-${name}`, settings: pickerSettings(schema.settings,{ ...values, ...overrides }), blocks: blocks.map(block=>({...block,...(block.type?.startsWith('shopify://apps/')?{type:'@app',fixture_html:block.type.includes('/preview_badge/')?'<p class="fine">MOCK JUDGE.ME BADGE — no live rating or review count.</p>':'<div class="local-review-fixture"><h3>MOCK JUDGE.ME WIDGET</h3><p>Fabricated app output for wrapper layout only. No live review data or app runtime.</p></div>'}:{}),settings:pickerSettings(schema.blocks?.find(b=>b.type===block.type)?.settings || [],block.settings)})) } });
 }
 const header = await section('bpm-announcement', { text: 'Now Shipping Canada Wide | Hand Made' }) + await section('bpm-header', { menu });
 const footer = await section('bpm-footer', { menu });
@@ -127,8 +130,10 @@ const fixtureCart = {
  ]
 };
 for (const empty of [false,true]) {
- const body = await section('bpm-sites-cart',{},[],{cart:empty?{item_count:0,items:[]}:fixtureCart,routes:{...common.routes,cart_url:'/local-fixture-cart',all_products_collection_url:'/sites-home.html'}});
+ let body = await section('bpm-sites-cart',{},[],{cart:empty?{item_count:0,items:[]}:fixtureCart,routes:{...common.routes,cart_url:'/local-fixture-cart',all_products_collection_url:'/sites-home.html'}});
  const banner = '<div class="wrap"><p>Local cart fixture. No Shopify backend is connected; update, removal and checkout submissions are disabled.</p></div>';
+ const cartReview=JSON.parse(await readFile(join(theme,'templates/cart.json'),'utf8')).sections.reviews;
+ body+=await section(cartReview.type,cartReview.settings,cartReview.block_order.map(id=>cartReview.blocks[id]),{cart:empty?{item_count:0,items:[]}:fixtureCart});
  const safeBody = body.replace(/(<button[^>]*type="submit")/g,'$1 disabled').replace(/href="\/local-fixture-cart\/change[^\"]*"/g,'aria-disabled="true"');
  const cartHeader = await section('bpm-sites-header',{menu:sitesMenu},[],{cart:empty?{item_count:0}:fixtureCart});
  await writeFile(join(output,empty?'sites-cart-empty.html':'sites-cart.html'),await engine.parseAndRender(code,{...common,cart:empty?{item_count:0}:fixtureCart,content_for_layout:banner+safeBody,preview_header:cartHeader,preview_footer:sitesFooter,page_title:'Cart fixture'}));

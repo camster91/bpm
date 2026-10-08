@@ -74,3 +74,7 @@ Google & YouTube overview inspection: Merchant Center shows Total 18 and Approve
 | Other apps | Unknown | Full installed list, embeds/blocks/scripts, checkout extensions and ownership | Map each dependency to owner issue and regression test |
 
 Record app version/configuration and source insertion points after a protected theme export. Store-wide feed, pixel, discount and email settings are not isolated by an unpublished theme. Do not trigger outbound campaigns, real review requests or live purchases during audit.
+
+## Local custom candidate configuration checkpoint
+
+Judge.me product badge/review payloads and core embed from the protected native export are now prepared in all three custom product templates. The local candidate migrates the drawer review surface to its full cart page; production configuration is unchanged. [Migration evidence](qa/sites-review-app-migration.md) and theme-app-bindings.json preserve source/settings and native verification gates. This is prepared configuration, not verified compatibility or resolution of the existing shipping warning.
