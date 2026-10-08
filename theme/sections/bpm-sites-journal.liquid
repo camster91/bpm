@@ -1,9 +1,15 @@
 <section class="section wrap"><div class="section-heading"><div class="intro-copy">{% if section.settings.eyebrow != blank %}<p class="eyebrow">{{ section.settings.eyebrow | escape }}</p>{% endif %}{% if section.settings.heading != blank %}<h2>{{ section.settings.heading | escape | newline_to_br }}</h2>{% endif %}{% if section.settings.body != blank %}<p class="lead">{{ section.settings.body | escape }}</p>{% endif %}</div>{% if section.settings.blog != blank and section.settings.button_label != blank %}<a class="button" href="{{ section.settings.blog.url }}">{{ section.settings.button_label | escape }}<span aria-hidden="true">→</span></a>{% endif %}</div>
-<div class="editorial-grid">{% for block in section.blocks %}{% assign story = block.settings.article %}{% if story != blank %}{% render 'bpm-sites-article-card', story: story, blog: section.settings.blog, image: block.settings.image, source_art: block.settings.source_art, label: section.settings.article_label, attributes: block.shopify_attributes %}{% endif %}{% endfor %}</div></section>
+<div class="editorial-grid">{% for block in section.blocks %}{% assign story = block.settings.article %}{% assign hide_story = false %}{% if section.settings.hide_current_article and article != blank and story.url == article.url %}{% assign hide_story = true %}{% endif %}{% if story != blank and hide_story == false %}{% render 'bpm-sites-article-card', story: story, blog: section.settings.blog, image: block.settings.image, source_art: block.settings.source_art, label: section.settings.article_label, attributes: block.shopify_attributes %}{% endif %}{% endfor %}</div></section>
 {% schema %}
 {
   "name": "BPM Sites journal cards",
   "settings": [
+    {
+      "type": "checkbox",
+      "id": "hide_current_article",
+      "label": "Hide the article currently being read",
+      "default": false
+    },
     {
       "type": "text",
       "id": "eyebrow",

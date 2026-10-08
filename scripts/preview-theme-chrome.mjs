@@ -124,7 +124,12 @@ const artBlocks = fixtureArticles.map((article,i)=>({settings:{article,source_ar
 const blogBody = await section('bpm-sites-blog',{heading:'The\nBreakdown.'},artBlocks,{blog:fixtureBlog,paginate:{pages:1}});
 await writeFile(join(output,'sites-blog.html'),await engine.parseAndRender(code,{...common,content_for_layout:blogBody,preview_header:sitesHeader,preview_footer:sitesFooter,page_title:'Blog fixture'}));
 for (const [i,article] of fixtureArticles.entries()) {
- const articleBody = await section('bpm-sites-article',{},[],{blog:fixtureBlog,article});
+ const articleTemplate = JSON.parse(await readFile(join(theme,'templates/article.json'),'utf8'));
+ const mainConfig = articleTemplate.sections.main;
+ const relatedConfig = articleTemplate.sections.related;
+ const articleContext = {blog:fixtureBlog,article};
+ const relatedBlocks = relatedConfig.block_order.map(id=>({id,...relatedConfig.blocks[id]}));
+ const articleBody = await section(mainConfig.type,mainConfig.settings,[],articleContext) + await section(relatedConfig.type,relatedConfig.settings,relatedBlocks,articleContext);
  await writeFile(join(output,`sites-article-${i}.html`),await engine.parseAndRender(code,{...common,content_for_layout:articleBody,preview_header:sitesHeader,preview_footer:sitesFooter,page_title:article.title,article,request:{...common.request,page_type:'article'},canonical_url:`http://127.0.0.1:8892/sites-article-${i}.html`}));
 }
 const fixtureCart = {
