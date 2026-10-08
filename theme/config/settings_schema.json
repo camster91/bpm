@@ -89,5 +89,17 @@
         "info": "Leave blank to retain the original Sites BPM mark."
       }
     ]
+  },
+  {
+    "name": "Search and sharing",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "development_noindex",
+        "label": "Keep this theme out of search results",
+        "default": true,
+        "info": "Leave enabled for development and review. Disable only as part of an approved production release."
+      }
+    ]
   }
 ]

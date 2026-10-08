@@ -8,7 +8,7 @@ await mkdir(output, { recursive: true });
 await symlink(join(theme, 'assets'), join(output, 'assets')).catch(error => { if (error.code !== 'EEXIST') throw error; });
 const styles = [];
 const clean = text => text.replace(/{%\s*layout[^%]*%}/g, '').replace(/{%\s*form\s+'storefront_password'[^%]*%}/g, '<form method="post" action="/local-fixture-password">').replace(/{%\s*form\s+'product'[^%]*%}/g, '<form class="bpm-product-form" method="post" action="/local-fixture-product">').replace(/{%\s*form\s+'localization'[^%]*%}/g, '<form class="bpm-localization" method="post" action="/local-fixture-localization">').replace(/{%\s*form\s+'contact'[^%]*%}/g, '<form class="preview-form bpm-contact-form" method="post" action="/local-fixture-contact">').replace(/{%\s*form[^%]*%}/g, '<form class="preview-form" method="post" action="/local-fixture-newsletter">').replace(/{%\s*endform\s*%}/g, '</form>').replace(/{%\s*paginate[^%]*%}/g, '').replace(/{%\s*endpaginate\s*%}/g, '').replace(/{%\s*(schema|doc)\s*%}[\s\S]*?{%\s*end\1\s*%}/g, '').replace(/{%\s*stylesheet\s*%}([\s\S]*?){%\s*endstylesheet\s*%}/g, (_, css) => { styles.push(css); return ''; });
-for (const name of ['bpm-navigation', 'bpm-product-card', 'bpm-sites-links', 'bpm-sites-card', 'bpm-sites-article-card', 'bpm-sites-filters', 'bpm-sites-catalogue-card', 'bpm-sites-media', 'bpm-app-blocks', 'bpm-localization','bpm-sites-collection-card','bpm-sites-pack-art','bpm-sites-gallery-art']) await writeFile(join(output, `${name}.liquid`), clean(await readFile(join(theme, 'snippets', `${name}.liquid`), 'utf8')));
+for (const name of ['bpm-navigation', 'bpm-product-card', 'bpm-sites-links', 'bpm-sites-card', 'bpm-sites-article-card', 'bpm-sites-filters', 'bpm-sites-catalogue-card', 'bpm-sites-media', 'bpm-app-blocks', 'bpm-localization','bpm-sites-collection-card','bpm-sites-pack-art','bpm-sites-gallery-art','bpm-meta-tags']) await writeFile(join(output, `${name}.liquid`), clean(await readFile(join(theme, 'snippets', `${name}.liquid`), 'utf8')));
 // Explicit local-only substitute for Shopify's native app-block renderer.
 const localAppRenderer=join(output,'bpm-app-blocks.liquid');
 await writeFile(localAppRenderer,(await readFile(localAppRenderer,'utf8')).replace(/{% render block %}/g,'{{ block.fixture_html }}'));
@@ -189,7 +189,7 @@ for(const [suffix,handle] of [['bergamot-lime','bpm-natural-deodorant-bergamot-l
  let body='<p class="wrap fine">Local assigned-product template fixture. Native media, variant and backend resolution are mocked; claims require acceptance. Purchase submissions disabled.</p>';
  for(const key of template.order){const item=template.sections[key];if(item.disabled)continue;body+=await section(item.type,item.settings,(item.block_order||[]).map(id=>item.blocks[id]),{product:productFixture,preview_section_id:suffix+'-'+key,form:{}});}
  body=body.replace(/(<button[^>]*type="submit")/g,'$1 disabled').replace(/<select id="Variant-/g,'<select disabled id="Variant-');
- await writeFile(join(output,'sites-product-'+suffix+'.html'),await engine.parseAndRender(code,{...common,content_for_layout:body,preview_header:sitesHeader,preview_footer:sitesFooter,page_title:suffix+' — local fixture'}));
+ await writeFile(join(output,'sites-product-'+suffix+'.html'),await engine.parseAndRender(code,{...common,content_for_layout:body,preview_header:sitesHeader,preview_footer:sitesFooter,page_title:suffix+' — local fixture',request:{...common.request,page_type:'product'},canonical_url:'http://127.0.0.1:8892/sites-product-'+suffix+'.html',page_image:productFixture.featured_image,page_description:'Fabricated local metadata fixture; native Shopify SEO content remains unverified.'}));
 }
 
 const bundleProfiles=JSON.parse(await readFile(resolve(theme,'../docs/bundle-product-content-bindings.json'),'utf8')).profiles;
@@ -201,7 +201,7 @@ for(const profile of bundleProfiles) {
  let body='<p class="wrap fine">Local bundle binding fixture. Native resource and backend resolution mocked; source first artwork restored; native gallery/backend and claims remain unverified. Purchase submissions disabled.</p>';
  for(const key of bundleTemplate.order){const item=bundleTemplate.sections[key];if(item.disabled)continue;body+=await section(item.type,item.settings,(item.block_order||[]).map(id=>item.blocks[id]),{product:productFixture,preview_section_id:profile.handle+'-'+key,form:{}});}
  body=body.replace(/(<button[^>]*type="submit")/g,'$1 disabled').replace(/<select id="Variant-/g,'<select disabled id="Variant-');
- await writeFile(join(output,'sites-bundle-'+profile.handle+'.html'),await engine.parseAndRender(code,{...common,content_for_layout:body,preview_header:sitesHeader,preview_footer:sitesFooter,page_title:profile.handle+' — local fixture'}));
+ await writeFile(join(output,'sites-bundle-'+profile.handle+'.html'),await engine.parseAndRender(code,{...common,content_for_layout:body,preview_header:sitesHeader,preview_footer:sitesFooter,page_title:profile.handle+' — local fixture',request:{...common.request,page_type:'product'},canonical_url:'http://127.0.0.1:8892/sites-bundle-'+profile.handle+'.html',page_image:productFixture.featured_image,page_description:'Fabricated local metadata fixture; native Shopify SEO content remains unverified.'}));
 }
 
 for (const pageName of ['about','indigenous-owned','contact']) {

@@ -13,7 +13,8 @@
           "widget_type": "review-widget"
         }
       }
-    }
+    },
+    "development_noindex": true
   },
   "presets": {}
 }
