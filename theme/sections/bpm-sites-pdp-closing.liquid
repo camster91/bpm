@@ -1,0 +1,4 @@
+{% if product != blank %}<section class="bpm-pdp closing"><div class="wrap closing-inner"><h2>{{ section.settings.heading | escape | newline_to_br }}</h2><a href="#ProductPurchase-{{ product.id }}" class="button">{{ section.settings.button_label | escape }} <span aria-hidden="true">↑</span></a></div></section>{% endif %}
+{% schema %}
+{"name": "Bpm Product closing", "settings": [{"type": "textarea", "id": "heading", "label": "Heading", "default": "Find your\neveryday BPM."}, {"type": "text", "id": "button_label", "label": "Back link", "default": "Back to the tube"}], "presets": [{"name": "Bpm Product closing"}]}
+{% endschema %}

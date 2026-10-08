@@ -1,0 +1,5 @@
+{% assign has_text = false %}{% for block in section.blocks %}{% if block.settings.text != blank %}{% assign has_text = true %}{% endif %}{% endfor %}
+{% if has_text %}{{ 'bpm-pdp.css' | asset_url | stylesheet_tag }}<section class="bpm-pdp truths" aria-label="{{ section.settings.label | escape }}"><div class="wrap">{% assign shown = 0 %}{% for block in section.blocks %}{% if block.settings.text != blank %}{% if shown > 0 %}<b aria-hidden="true">✦</b>{% endif %}<span {{ block.shopify_attributes }}>{{ block.settings.text | escape }}</span>{% assign shown = shown | plus: 1 %}{% endif %}{% endfor %}</div></section>{% endif %}
+{% schema %}
+{"name": "Bpm Product essentials", "settings": [{"type": "text", "id": "label", "label": "Accessible label", "default": "Product essentials"}], "blocks": [{"type": "text", "name": "Essential", "settings": [{"type": "text", "id": "text", "label": "Approved statement"}]}], "max_blocks": 3, "presets": [{"name": "Bpm Product essentials"}]}
+{% endschema %}

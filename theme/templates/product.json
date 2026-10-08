@@ -170,17 +170,62 @@
         "1",
         "2"
       ]
+    },
+    "essentials": {
+      "type": "bpm-sites-pdp-essentials",
+      "settings": {},
+      "blocks": {
+        "0": {
+          "type": "text",
+          "settings": {
+            "text": "Performance first."
+          }
+        },
+        "1": {
+          "type": "text",
+          "settings": {
+            "text": "A little goes a long way."
+          }
+        },
+        "2": {
+          "type": "text",
+          "settings": {
+            "text": "Nothing extra."
+          }
+        }
+      },
+      "block_order": [
+        "0",
+        "1",
+        "2"
+      ]
+    },
+    "value": {
+      "type": "bpm-sites-pdp-value",
+      "settings": {}
+    },
+    "lifestyle": {
+      "type": "bpm-sites-pdp-lifestyle",
+      "settings": {}
+    },
+    "closing": {
+      "type": "bpm-sites-pdp-closing",
+      "settings": {}
     }
   },
   "order": [
     "main",
+    "essentials",
     "benefits",
     "application",
     "scent",
     "formula",
+    "value",
+    "lifestyle",
     "compare",
     "reviews",
     "faq",
-    "notes"
+    "notes",
+    "closing"
   ]
 }

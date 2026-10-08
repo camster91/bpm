@@ -18,7 +18,7 @@
   endif
 %}
 <div class="crumb wrap"><a href="{{ routes.all_products_collection_url }}">{{ 'products.shop' | t }}</a> / {{ product.title | escape }}</div>
-<section class="purchase wrap bpm-product" data-bpm-product aria-labelledby="Title-{{ section.id }}">
+<section id="ProductPurchase-{{ product.id }}" tabindex="-1" class="purchase wrap bpm-product" data-bpm-product aria-labelledby="Title-{{ section.id }}">
   <div class="gallery" data-bpm-gallery>
     {% if section.settings.image != blank %}<div class="main-image" id="Media-{{ section.id }}-override" data-bpm-media data-initial-media>{{ section.settings.image | image_url: width: 1600 | image_tag: loading: 'eager', widths: '500,800,1200,1600', sizes: '(max-width:760px) 90vw,45vw', alt: product.title }}<span class="image-count">1 / {{ media_count }}</span></div>{% endif %}
     {% for media in product.media %}
