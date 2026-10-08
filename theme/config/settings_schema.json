@@ -99,6 +99,20 @@
         "label": "Keep this theme out of search results",
         "default": true,
         "info": "Leave enabled for development and review. Disable only as part of an approved production release."
+      },
+      {
+        "type": "checkbox",
+        "id": "product_structured_data",
+        "label": "Native product structured data",
+        "default": true,
+        "info": "Uses Shopify product data. Disable only if another verified integration supplies the complete product schema."
+      },
+      {
+        "type": "checkbox",
+        "id": "article_structured_data",
+        "label": "Native article structured data",
+        "default": true,
+        "info": "Uses Shopify article data. Disable if another verified integration supplies article schema."
       }
     ]
   }

@@ -16,6 +16,7 @@
       :root { --ink: {{ settings.ink }}; --cream: {{ settings.cream }}; --butter: {{ settings.butter }}; --pink: {{ settings.pink }}; --olive: {{ settings.lime }}; --teal: {{ settings.teal }}; --orange: {{ settings.orange }}; --line: {{ settings.ink | color_modify: 'alpha', 0.24 }}; }
     {% endstyle %}
     <script src="{{ 'bpm-chrome.js' | asset_url }}" defer></script>
+    {% render 'bpm-structured-data', request: request, product: product, article: article, settings: settings %}
     {{ content_for_header }}
   </head>
   <body class="bpm-page bpm-page--{{ request.page_type | handle }}">
