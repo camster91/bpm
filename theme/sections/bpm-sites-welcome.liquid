@@ -1,0 +1,39 @@
+{% assign provider_present = false %}{% for block in section.blocks %}{% if block.type == '@app' %}{% assign provider_present = true %}{% endif %}{% endfor %}
+{% if section.settings.enabled and section.settings.provider_verified and provider_present %}{% unless customer.accepts_marketing %}
+<div data-bpm-welcome {{ section.shopify_attributes }}>
+  <button hidden class="bpm-welcome-launch" type="button" aria-haspopup="dialog" aria-controls="Welcome-{{ section.id }}"><span aria-hidden="true">✦</span>{{ section.settings.launch_label | escape }}</button>
+  <dialog class="bpm-welcome-panel" id="Welcome-{{ section.id }}" aria-labelledby="Welcome-title-{{ section.id }}">
+    <button class="bpm-welcome-close" type="button" aria-label="{{ 'general.close' | t | escape }}">×</button>
+    <div class="bpm-welcome-art" aria-hidden="true"><span>{{ section.settings.offer_label | escape }}</span><b>✦</b></div>
+    <div class="bpm-welcome-content">
+      <p class="eyebrow">{{ section.settings.eyebrow | escape }}</p>
+      <h2 id="Welcome-title-{{ section.id }}">{{ section.settings.heading | escape | newline_to_br }}</h2>
+      {% if section.settings.body != blank %}<p>{{ section.settings.body | escape }}</p>{% endif %}
+      {% render 'bpm-app-blocks', blocks: section.blocks %}
+      {% if section.settings.terms != blank %}<p class="fine">{{ section.settings.terms | escape }}</p>{% endif %}
+      {% if shop.privacy_policy.url != blank %}<p class="fine"><a href="{{ shop.privacy_policy.url }}">{{ 'general.privacy' | t }}</a></p>{% endif %}
+    </div>
+  </dialog>
+</div>
+{% endunless %}{% endif %}
+{% schema %}
+{
+  "name": "BPM welcome offer",
+  "limit": 1,
+  "enabled_on": {"groups": ["footer"]},
+  "settings": [
+    {"type":"paragraph","content":"Keep disabled until existing provider routing, consent, double opt-in, duplicate handling, discount terms and email delivery are verified. This wrapper does not create discounts, store emails or subscribe visitors. Test the actual provider block inside the dialog before activation."},
+    {"type":"checkbox","id":"enabled","label":"Show welcome launcher","default":false},
+    {"type":"checkbox","id":"provider_verified","label":"Provider and offer verified","default":false},
+    {"type":"text","id":"launch_label","label":"Launcher label","default":"Get 10% off"},
+    {"type":"text","id":"offer_label","label":"Approved offer display","default":"10%"},
+    {"type":"text","id":"eyebrow","label":"Eyebrow","default":"A LITTLE SOMETHING FOR YOUR FIRST TRACK"},
+    {"type":"textarea","id":"heading","label":"Heading","default":"Good things.\nOn beat."},
+    {"type":"textarea","id":"body","label":"Approved signup copy","default":"Join the BPM email list for 10% off, scent drops and the occasional good thing."},
+    {"type":"textarea","id":"terms","label":"Approved offer terms"}
+  ],
+  "blocks":[{"type":"@app"}],
+  "max_blocks":1,
+  "presets":[{"name":"BPM welcome offer"}]
+}
+{% endschema %}

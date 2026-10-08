@@ -2,6 +2,7 @@
   "type": "footer",
   "name": "Footer",
   "sections": {
+    "welcome": {"type":"bpm-sites-welcome","settings":{"enabled":false,"provider_verified":false}},
     "footer": {
       "type": "bpm-sites-footer",
       "settings": {
@@ -10,6 +11,7 @@
     }
   },
   "order": [
-    "footer"
+    "footer",
+    "welcome"
   ]
 }

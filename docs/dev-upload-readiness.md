@@ -1,5 +1,7 @@
 # Custom Sites theme — development upload review
 
+The local disabled welcome-launcher shell now exceeds the c173abb snapshot below. Refresh the current candidate before upload; no provider/discount/signup is configured or activated.
+
 The current frozen candidate includes the ownership-page alignment/About-link and readable dark-section CTA corrections. Earlier snapshots and command reviews remain preserved. No prior upload command has been executed.
 
 The current frozen candidate includes native cart bundle components and line-error presentation. Previous candidate snapshots and commands remain preserved historical evidence. No upload has occurred; confirmation must refer to the revised command below.

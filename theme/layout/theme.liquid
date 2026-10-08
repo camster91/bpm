@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://use.typekit.net/tqf6rez.css">
     {{ 'bpm-base.css' | asset_url | stylesheet_tag }}
     {{ 'bpm-sites.css' | asset_url | stylesheet_tag }}
+    {{ 'bpm-welcome.css' | asset_url | stylesheet_tag }}
     {% style %}
       @font-face { font-family: 'BPM Extended'; src: url('{{ 'HelveticaNeueLT-BoldExt.woff2' | asset_url }}') format('woff2'); font-weight: 700; font-style: normal; font-display: swap; }
       @font-face { font-family: 'BPM Extended'; src: url('{{ 'HelveticaNeueLTStd-Ex.woff2' | asset_url }}') format('woff2'); font-weight: 400; font-style: normal; font-display: swap; }
@@ -17,6 +18,7 @@
     {% endstyle %}
     <script src="{{ 'bpm-motion.js' | asset_url }}" defer></script>
     <script src="{{ 'bpm-chrome.js' | asset_url }}" defer></script>
+    <script src="{{ 'bpm-welcome.js' | asset_url }}" defer></script>
     {% render 'bpm-structured-data', request: request, product: product, article: article, settings: settings %}
     {{ content_for_header }}
   </head>

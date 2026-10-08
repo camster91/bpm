@@ -66,3 +66,7 @@ Product-track and catalogue mapping blocks expose **Display title override**. It
 ## Value-section price narration
 
 **Price sentence introduction** adds optional escaped words before the selected product’s current Shopify price and joins **Copy** into that paragraph. The homepage uses “BPM prices a single tube at”. Verify the introduction describes the picked product; leave blank for the native product-title presentation with separate copy. Range prices retain the native From label and suppress per-application estimates. Missing products omit the price introduction and retain body copy. This control changes theme presentation only; native editor persistence and current store prices still require dev-theme verification.
+
+## Site-wide welcome offer
+
+Footer-group **BPM welcome offer** exposes launcher, approved offer display, heading/copy and terms. Configure the supported provider app block, verify its native dialog behavior/consent/duplicate/double-opt-in/offer delivery, then record approval before checking **Provider and offer verified** and **Show welcome launcher**. Both default off. Native dialog support is required; the shell does not manage provider success, email lists or discounts. Known signed-in marketing subscribers are hidden; anonymous subscriber suppression belongs to the provider. No native setup or activation is proved by a local fixture.
