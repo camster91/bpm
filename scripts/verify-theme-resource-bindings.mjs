@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
 import { readFile, readdir } from 'node:fs/promises';
+import { createHash } from 'node:crypto';
 import { resolve, join } from 'node:path';
 const root=resolve(import.meta.dirname,'..');
 const readJSON=async file=>JSON.parse(await readFile(join(root,file),'utf8'));
@@ -24,7 +25,19 @@ for(const file of await readdir(join(root,'theme/templates'))) {
 for(const file of ['collection.json','collection.rotation.json']) {
  const main=(await readJSON('theme/templates/'+file)).sections.main;
  assert.equal(main.block_order.length,9);
- for(const p of map.products) assert.equal(main.blocks[String(p.id)].settings.pack_label,`${p.pack_count} × 76 g`);
+ for(const p of map.products) { assert.equal(main.blocks[String(p.id)].settings.pack_label,`${p.pack_count} × 76 g`); assert.equal(main.blocks[String(p.id)].settings.source_pack,p.source_pack); assert.equal(p.source_pack.split('-').reduce((sum,n)=>sum+Number(n),0),p.pack_count); }
 }
 assert.equal((await readJSON('theme/sections/header-group.json')).sections.header.settings.show_account,true);
 console.log(`${checked} resource-picker references match recovered/audited mappings; all nine collection product packs and native account entry preserved. Current Shopify resolution remains unverified.`);
+
+const crops=await readJSON('reference-site/src/crop-settings.json');
+const media=await readJSON('reference-site/src/media-manifest.json');
+for(const [scent,source] of [['bergamot','gallery-pack.png'],['unscented','unscented-pack.png']]) {
+ const svg=await readFile(join(root,`theme/assets/bpm-sites-carton-${scent}.svg`),'utf8');
+ const crop=crops.find(c=>c.source===source);
+ assert.ok(svg.includes(`viewBox="${crop.crop_xywh.join(' ')}"`));
+ const original=Buffer.from(svg.match(/href="data:image\/png;base64,([^"]+)"/)[1],'base64');
+ assert.equal(createHash('sha256').update(original).digest('hex'),media.assets.find(a=>a.path.endsWith('/'+source)).sha256);
+ assert.doesNotMatch(svg,/<script|https?:\/\/(?!www.w3.org)/);
+}
+console.log('Both source carton SVG viewports retain the exact manifest crop and original embedded PNG SHA; no external image requests.');

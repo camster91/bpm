@@ -44,7 +44,8 @@
           "settings": {
             "background": "#acb228",
             "product": "bpm-natural-deodorant-bergamot-lime",
-            "pack_label": "1 × 76 g"
+            "pack_label": "1 × 76 g",
+            "source_pack": "1-0"
           }
         },
         "unscented": {
@@ -52,7 +53,8 @@
           "settings": {
             "background": "#228782",
             "product": "bpm-natural-deodorant-unscented",
-            "pack_label": "1 × 76 g"
+            "pack_label": "1 × 76 g",
+            "source_pack": "0-1"
           }
         }
       },
@@ -189,7 +191,8 @@
             "button_label": "Explore duos",
             "background": "#f157b7",
             "product": "side-a-side-b",
-            "collection": "the-two-track-collection"
+            "collection": "the-two-track-collection",
+            "source_pack": "1-1"
           }
         },
         "four": {
@@ -200,7 +203,8 @@
             "button_label": "Explore four-packs",
             "background": "#f3e4b7",
             "product": "four-on-the-floor-mixed-scent-4-tube-deodorant-bundle",
-            "collection": "the-four-count"
+            "collection": "the-four-count",
+            "source_pack": "2-2"
           }
         }
       },

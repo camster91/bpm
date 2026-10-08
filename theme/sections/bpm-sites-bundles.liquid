@@ -11,9 +11,10 @@
    endif
  endfor
 %}
-<div class="pack-line count-{% if photo_count > 0 %}{{ photo_count }}{% else %}1{% endif %}">
+{% assign source_mixes = '1-0,0-1,2-0,0-2,1-1,4-0,0-4,2-2,3-1' | split: ',' %}
+{% if photo_count == 0 and source_mixes contains block.settings.source_pack %}{% render 'bpm-sites-pack-art', mix: block.settings.source_pack %}{% else %}<div class="pack-line count-{% if photo_count > 0 %}{{ photo_count }}{% else %}1{% endif %}">
 {% if photo_count > 0 %}{% for i in (1..4) %}{% assign field = 'image_' | append: i %}{% if block.settings[field] != blank %}{{ block.settings[field] | image_url: width: 750 | image_tag: widths: '250,500,750', sizes: '(max-width:760px) 25vw,12vw', loading: 'lazy', alt: block.settings[field].alt }}{% endif %}{% endfor %}
-{% elsif bundle.featured_image != blank %}{{ bundle.featured_image | image_url: width: 1000 | image_tag: widths: '400,700,1000', sizes: '(max-width:760px) 70vw,35vw', loading: 'lazy', alt: bundle.title }}{% endif %}</div>
+{% elsif bundle.featured_image != blank %}{{ bundle.featured_image | image_url: width: 1000 | image_tag: widths: '400,700,1000', sizes: '(max-width:760px) 70vw,35vw', loading: 'lazy', alt: bundle.title }}{% endif %}</div>{% endif %}
 <h3>{{ block.settings.heading | default: bundle.title | escape }}</h3>
 <p>{% if bundle.price_varies %}{% assign price = bundle.price | money_with_currency %}{{ 'products.price_from' | t: price: price }}{% else %}{{ bundle.price | money_with_currency }}{% endif %}{% if block.settings.note != blank %} · {{ block.settings.note | escape }}{% endif %}</p>
 {% unless bundle.available %}<p>{{ 'products.sold_out' | t }}</p>{% endunless %}
@@ -50,6 +51,55 @@
         {
           "type": "paragraph",
           "content": "Select the actual bundle product for native price and availability. Add approved component photos in order for the source composition; otherwise the product featured image is used."
+        },
+        {
+          "type": "select",
+          "id": "source_pack",
+          "label": "Original Sites carton composition",
+          "default": "native",
+          "options": [
+            {
+              "value": "native",
+              "label": "Native product media"
+            },
+            {
+              "value": "1-0",
+              "label": "One citrus carton"
+            },
+            {
+              "value": "0-1",
+              "label": "One unscented carton"
+            },
+            {
+              "value": "2-0",
+              "label": "Two citrus cartons"
+            },
+            {
+              "value": "0-2",
+              "label": "Two unscented cartons"
+            },
+            {
+              "value": "1-1",
+              "label": "One of each scent"
+            },
+            {
+              "value": "4-0",
+              "label": "Four citrus cartons"
+            },
+            {
+              "value": "0-4",
+              "label": "Four unscented cartons"
+            },
+            {
+              "value": "2-2",
+              "label": "Two of each scent"
+            },
+            {
+              "value": "3-1",
+              "label": "Three citrus, one unscented"
+            }
+          ],
+          "info": "Use only for the matching product pack. Uploaded image overrides take priority."
         },
         {
           "type": "product",

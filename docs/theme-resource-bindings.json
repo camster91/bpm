@@ -4,47 +4,56 @@
     {
       "id": 15222327476596,
       "handle": "four-on-the-floor-mixed-scent-4-tube-deodorant-bundle",
-      "pack_count": 4
+      "pack_count": 4,
+      "source_pack": "2-2"
     },
     {
       "id": 15222328361332,
       "handle": "citrus-on-repeat-family-pack-4-tube-bergamot-lime-deodorant-bundle",
-      "pack_count": 4
+      "pack_count": 4,
+      "source_pack": "4-0"
     },
     {
       "id": 15222329180532,
       "handle": "silent-on-repeat-family-pack-4-tube-unscented-deodorant-bundle",
-      "pack_count": 4
+      "pack_count": 4,
+      "source_pack": "0-4"
     },
     {
       "id": 15222739599732,
       "handle": "3-4-time",
-      "pack_count": 4
+      "pack_count": 4,
+      "source_pack": "3-1"
     },
     {
       "id": 15141686444404,
       "handle": "silent-repeat",
-      "pack_count": 2
+      "pack_count": 2,
+      "source_pack": "0-2"
     },
     {
       "id": 15141668815220,
       "handle": "citrus-repeat",
-      "pack_count": 2
+      "pack_count": 2,
+      "source_pack": "2-0"
     },
     {
       "id": 15141732581748,
       "handle": "side-a-side-b",
-      "pack_count": 2
+      "pack_count": 2,
+      "source_pack": "1-1"
     },
     {
       "id": 14925587775860,
       "handle": "bpm-natural-deodorant-unscented",
-      "pack_count": 1
+      "pack_count": 1,
+      "source_pack": "0-1"
     },
     {
       "id": 14880059228532,
       "handle": "bpm-natural-deodorant-bergamot-lime",
-      "pack_count": 1
+      "pack_count": 1,
+      "source_pack": "1-0"
     }
   ],
   "articles": [

@@ -4,7 +4,7 @@
     {% if section.settings.heading != blank %}<h2>{{ section.settings.heading | escape | newline_to_br }}</h2>{% endif %}
     {% if section.settings.body != blank %}<p class="lead">{{ section.settings.body | escape }}</p>{% endif %}
   </div>{% if section.settings.button_label != blank %}{% assign destination = section.settings.collection.url | default: routes.all_products_collection_url %}<a class="button" href="{{ destination }}">{{ section.settings.button_label | escape }}<span aria-hidden="true">→</span></a>{% endif %}</div>
-  <div class="track-grid two">{% for block in section.blocks %}{% if block.settings.product != blank %}<div {{ block.shopify_attributes }}>{% render 'bpm-sites-card', product: block.settings.product, image: block.settings.image, pack_label: block.settings.pack_label, summary: block.settings.summary, background: block.settings.background, button_label: section.settings.product_label %}</div>{% endif %}{% endfor %}</div>
+  <div class="track-grid two">{% for block in section.blocks %}{% if block.settings.product != blank %}<div {{ block.shopify_attributes }}>{% render 'bpm-sites-card', product: block.settings.product, source_pack: block.settings.source_pack, image: block.settings.image, pack_label: block.settings.pack_label, summary: block.settings.summary, background: block.settings.background, button_label: section.settings.product_label %}</div>{% endif %}{% endfor %}</div>
 </section>
 {% schema %}
 {
@@ -55,6 +55,55 @@
           "type": "product",
           "id": "product",
           "label": "Product"
+        },
+        {
+          "type": "select",
+          "id": "source_pack",
+          "label": "Original Sites carton composition",
+          "default": "native",
+          "options": [
+            {
+              "value": "native",
+              "label": "Native product media"
+            },
+            {
+              "value": "1-0",
+              "label": "One citrus carton"
+            },
+            {
+              "value": "0-1",
+              "label": "One unscented carton"
+            },
+            {
+              "value": "2-0",
+              "label": "Two citrus cartons"
+            },
+            {
+              "value": "0-2",
+              "label": "Two unscented cartons"
+            },
+            {
+              "value": "1-1",
+              "label": "One of each scent"
+            },
+            {
+              "value": "4-0",
+              "label": "Four citrus cartons"
+            },
+            {
+              "value": "0-4",
+              "label": "Four unscented cartons"
+            },
+            {
+              "value": "2-2",
+              "label": "Two of each scent"
+            },
+            {
+              "value": "3-1",
+              "label": "Three citrus, one unscented"
+            }
+          ],
+          "info": "Use only for the matching product pack. Uploaded image overrides take priority."
         },
         {
           "type": "image_picker",

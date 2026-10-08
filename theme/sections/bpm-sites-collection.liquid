@@ -14,21 +14,144 @@
   {% endpaginate %}
 </section>
 {% schema %}
-{"name":"Bpm Collection","settings":[
- {"type":"text","id":"eyebrow","label":"Eyebrow"},
- {"type":"textarea","id":"heading","label":"Heading override"},
- {"type":"textarea","id":"intro","label":"Introduction"},
- {"type":"checkbox","id":"show_description","label":"Show native collection description","default":true},
- {"type":"text","id":"product_label","label":"Product link label","default":"Meet your track"},
- {"type":"range","id":"page_size","label":"Products per page","min":3,"max":48,"step":3,"default":12}
-],"blocks":[{"type":"product_art","name":"Product presentation","settings":[
- {"type":"product","id":"product","label":"Product"},
- {"type":"image_picker","id":"image","label":"First framed carton / image override"},
- {"type":"image_picker","id":"image_2","label":"Second framed carton"},
- {"type":"image_picker","id":"image_3","label":"Third framed carton"},
- {"type":"image_picker","id":"image_4","label":"Fourth framed carton"},
- {"type":"text","id":"pack_label","label":"Verified pack description"},
- {"type":"text","id":"summary","label":"Approved product summary"},
- {"type":"color","id":"background","label":"Image background","default":"#f3e4b7"}
-]}],"max_blocks":50}
+{
+  "name": "Bpm Collection",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow"
+    },
+    {
+      "type": "textarea",
+      "id": "heading",
+      "label": "Heading override"
+    },
+    {
+      "type": "textarea",
+      "id": "intro",
+      "label": "Introduction"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_description",
+      "label": "Show native collection description",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "product_label",
+      "label": "Product link label",
+      "default": "Meet your track"
+    },
+    {
+      "type": "range",
+      "id": "page_size",
+      "label": "Products per page",
+      "min": 3,
+      "max": 48,
+      "step": 3,
+      "default": 12
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product_art",
+      "name": "Product presentation",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Product"
+        },
+        {
+          "type": "select",
+          "id": "source_pack",
+          "label": "Original Sites carton composition",
+          "default": "native",
+          "options": [
+            {
+              "value": "native",
+              "label": "Native product media"
+            },
+            {
+              "value": "1-0",
+              "label": "One citrus carton"
+            },
+            {
+              "value": "0-1",
+              "label": "One unscented carton"
+            },
+            {
+              "value": "2-0",
+              "label": "Two citrus cartons"
+            },
+            {
+              "value": "0-2",
+              "label": "Two unscented cartons"
+            },
+            {
+              "value": "1-1",
+              "label": "One of each scent"
+            },
+            {
+              "value": "4-0",
+              "label": "Four citrus cartons"
+            },
+            {
+              "value": "0-4",
+              "label": "Four unscented cartons"
+            },
+            {
+              "value": "2-2",
+              "label": "Two of each scent"
+            },
+            {
+              "value": "3-1",
+              "label": "Three citrus, one unscented"
+            }
+          ],
+          "info": "Use only for the matching product pack. Uploaded image overrides take priority."
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "First framed carton / image override"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_2",
+          "label": "Second framed carton"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_3",
+          "label": "Third framed carton"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_4",
+          "label": "Fourth framed carton"
+        },
+        {
+          "type": "text",
+          "id": "pack_label",
+          "label": "Verified pack description"
+        },
+        {
+          "type": "text",
+          "id": "summary",
+          "label": "Approved product summary"
+        },
+        {
+          "type": "color",
+          "id": "background",
+          "label": "Image background",
+          "default": "#f3e4b7"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 50
+}
 {% endschema %}

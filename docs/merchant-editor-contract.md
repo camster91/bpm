@@ -54,3 +54,7 @@ In an authorised isolated theme, Cameron/Corey must be able to change a heading/
 Use an isolated fabricated future product with no editorial fields, only one tab body, invalid palette, missing media and no eligible plan. Verify hidden empty modules, neutral defaults, correct price/availability and absence of copied scent/claims. Then test eligible/ineligible variant switching, bundle data and cart selling-plan transport separately. Those cases exceed the current 15 Liquid fixtures and remain unverified.
 
 #14 completion still requires final schemas/constraints, architecture under #6 and the rendered editor demonstration. #28 requires Cameron/Corey's accepted reference and agreement with these editing limits. This specification supplies concrete review material for those decisions; it does not satisfy acceptance on their behalf.
+
+## Original Sites carton compositions
+
+Product track, collection presentation and homepage bundle blocks can select the original carton mix. Choose the mix matching the selected native product; new blocks default to native product media. Uploaded card images (including secondary images) or any configured bundle component image supersede original artwork. Existing defaults map all nine public products; no ingredient, price or availability data comes from artwork. Original carton pixels/crops are preserved in shared theme assets. This control requires a native editor demonstration before merchant acceptance.

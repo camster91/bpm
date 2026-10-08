@@ -1,0 +1,12 @@
+{% doc %}
+Composes original non-destructive Sites carton crops. Unknown mixes emit nothing.
+@param {string} mix - Allowlisted citrus-unscented carton counts
+@example
+{% render 'bpm-sites-pack-art', mix: '1-1' %}
+{% enddoc %}
+{% assign allowed = '1-0,0-1,2-0,0-2,1-1,4-0,0-4,2-2,3-1' | split: ',' %}
+{% if allowed contains mix %}{% assign counts = mix | split: '-' %}{% assign citrus = counts.first | plus: 0 %}{% assign unscented = counts.last | plus: 0 %}{% assign total = citrus | plus: unscented %}
+<div class="pack-line count-{{ total }} bpm-source-pack">
+{% if citrus > 0 %}{% for i in (1..citrus) %}<img src="{{ 'bpm-sites-carton-bergamot.svg' | asset_url }}" width="193" height="430" alt="" loading="lazy">{% endfor %}{% endif %}
+{% if unscented > 0 %}{% for i in (1..unscented) %}<img src="{{ 'bpm-sites-carton-unscented.svg' | asset_url }}" width="213" height="430" alt="" loading="lazy">{% endfor %}{% endif %}
+</div>{% endif %}
