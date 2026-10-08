@@ -48,3 +48,7 @@ Subsequent local changes now match purchase display titles, introductions and ta
 ## Latest prepared client-content candidate
 
 415e242 now includes current client homepage additions and the prior purchase-source alignment. See `client-content-dev-upload-20261008.md` for the exact new command, frozen file identity, review evidence and effects. 168 files / 45,111,695 bytes are verified, with explicit noindex and zero Theme Check errors. a17ef61 remains the latest uploaded candidate on dev theme 194480669044. The new client-content snapshot has not been uploaded and requires separate exact-command confirmation.
+
+## Consolidated local candidate
+
+3d296aa supersedes the prepared 415e242 snapshot for the next upload review. It includes the ingredient heading repair alongside all client-content changes. Immutable theme path: /tmp/bpm-sites-dev-candidate-20261008-3d296aa/theme. See client-content-dev-upload-20261008.md for command, target, data, effects and approval requirement. 168 deployable files, 45,111,958 bytes; repository README excluded. Full check:theme passes (355 chrome checks); frozen-candidate Theme Check has zero errors and one existing warning. No upload or native verification of this candidate has occurred. The most recent recorded uploaded candidate remains a17ef61.

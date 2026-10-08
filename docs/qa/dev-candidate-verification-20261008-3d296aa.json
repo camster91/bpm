@@ -1,0 +1,12 @@
+{
+  "verified": true,
+  "files": 168,
+  "bytes": 45111958,
+  "commit": "3d296aaf5f4e0819a5bbb78299f3e98cbe6f161c",
+  "themeTree": "b0fe9ad70354ee931e2624e0f2e74104ff3de522",
+  "matchesCurrentTheme": true,
+  "uploaded": false,
+  "excludedDocumentation": [
+    "README.md"
+  ]
+}
