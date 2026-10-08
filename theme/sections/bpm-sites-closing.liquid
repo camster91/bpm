@@ -1,0 +1,45 @@
+{% assign display_section = true %}{% if section.settings.limit_to_page %}{% assign display_section = false %}{% if section.settings.visible_on_page != blank and section.settings.visible_on_page.id == page.id %}{% assign display_section = true %}{% endif %}{% endif %}
+{% if display_section %}
+<section class="closing"><div class="wrap closing-inner">{% if section.settings.heading != blank %}<h2>{{ section.settings.heading | escape | newline_to_br }}</h2>{% endif %}{% if section.settings.button_label != blank %}{% assign destination = section.settings.collection.url | default: routes.all_products_collection_url %}<a class="button" href="{{ destination }}">{{ section.settings.button_label | escape }}<span aria-hidden="true">→</span></a>{% endif %}</div></section>
+{% endif %}
+{% schema %}
+{
+  "name": "Bpm Closing",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "limit_to_page",
+      "label": "Show only on the selected page",
+      "default": false
+    },
+    {
+      "type": "page",
+      "id": "visible_on_page",
+      "label": "Page to display this section",
+      "info": "When page restriction is enabled, no selection hides the section."
+    },
+    {
+      "type": "textarea",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Find your\neveryday BPM."
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Collection link",
+      "default": "Shop all tracks"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Destination"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Bpm Closing"
+    }
+  ]
+}
+{% endschema %}

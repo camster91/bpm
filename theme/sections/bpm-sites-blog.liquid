@@ -1,0 +1,94 @@
+<section class="section wrap journal-opening">{% if section.settings.eyebrow != blank %}<p class="eyebrow">{{ section.settings.eyebrow | escape }}</p>{% endif %}<h1>{{ section.settings.heading | default: blog.title | escape | newline_to_br }}</h1>{% if section.settings.intro != blank %}<p class="lead">{{ section.settings.intro | escape | newline_to_br }}</p>{% endif %}</section>
+<section class="section wrap">{% paginate blog.articles by section.settings.page_size %}<div class="editorial-grid">{% for story in blog.articles %}{% liquid
+ assign selected_image = nil
+ assign treatment = 'none'
+ for block in section.blocks
+   if block.settings.article.id == story.id
+     assign selected_image = block.settings.image
+     assign treatment = block.settings.source_art
+     break
+   endif
+ endfor
+%}{% render 'bpm-sites-article-card', story: story, blog: blog, image: selected_image, source_art: treatment, label: section.settings.article_label %}{% else %}<p>{{ 'editorial.no_articles' | t }}</p>{% endfor %}</div>{% if paginate.pages > 1 %}<nav class="bpm-pagination" aria-label="{{ 'general.pagination' | t }}">{{ paginate | default_pagination }}</nav>{% endif %}{% endpaginate %}</section>
+{% schema %}
+{
+  "name": "Bpm Blog",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "FORMULA / PACKAGING / PEOPLE / PERSPECTIVE"
+    },
+    {
+      "type": "textarea",
+      "id": "heading",
+      "label": "Heading override"
+    },
+    {
+      "type": "textarea",
+      "id": "intro",
+      "label": "Introduction",
+      "default": "Useful context. A founder\u2019s perspective.\nA closer look at the things that make BPM."
+    },
+    {
+      "type": "text",
+      "id": "article_label",
+      "label": "Article link label",
+      "default": "Read the story"
+    },
+    {
+      "type": "range",
+      "id": "page_size",
+      "label": "Articles per page",
+      "min": 3,
+      "max": 24,
+      "step": 3,
+      "default": 12
+    }
+  ],
+  "blocks": [
+    {
+      "type": "art",
+      "name": "Article imagery",
+      "settings": [
+        {
+          "type": "article",
+          "id": "article",
+          "label": "Article"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image override"
+        },
+        {
+          "type": "select",
+          "id": "source_art",
+          "label": "Sites editorial treatment",
+          "options": [
+            {
+              "value": "none",
+              "label": "Native article image"
+            },
+            {
+              "value": "texture",
+              "label": "Cream texture"
+            },
+            {
+              "value": "ownership",
+              "label": "Ownership mark"
+            },
+            {
+              "value": "story",
+              "label": "Turntable packaging"
+            }
+          ],
+          "default": "none"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 50
+}
+{% endschema %}

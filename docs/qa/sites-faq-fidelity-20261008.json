@@ -1,0 +1,611 @@
+{
+  "scope": "Local fabricated-resource preview against live source; closed geometry and native details keyboard interaction only.",
+  "rows": [
+    {
+      "width": 375,
+      "kind": "source",
+      "closed": {
+        "questions": {
+          "height": 480.1875,
+          "width": 327
+        },
+        "rows": [
+          {
+            "box": {
+              "height": 78.796875,
+              "width": 327
+            },
+            "fontWeight": "700",
+            "open": false,
+            "padding": "22px 0px",
+            "text": "How much should I use?+"
+          },
+          {
+            "box": {
+              "height": 78.796875,
+              "width": 327
+            },
+            "fontWeight": "700",
+            "open": false,
+            "padding": "22px 0px",
+            "text": "Is BPM baking soda free?+"
+          },
+          {
+            "box": {
+              "height": 78.796875,
+              "width": 327
+            },
+            "fontWeight": "700",
+            "open": false,
+            "padding": "22px 0px",
+            "text": "How long does a tube last?+"
+          },
+          {
+            "box": {
+              "height": 78.796875,
+              "width": 327
+            },
+            "fontWeight": "700",
+            "open": false,
+            "padding": "22px 0px",
+            "text": "Where do you ship?+"
+          }
+        ],
+        "section": {
+          "height": 758.5546875,
+          "width": 375
+        },
+        "viewport": 375
+      }
+    },
+    {
+      "width": 375,
+      "kind": "candidate",
+      "closed": {
+        "questions": {
+          "height": 480.1875,
+          "width": 327
+        },
+        "rows": [
+          {
+            "box": {
+              "height": 78.796875,
+              "width": 327
+            },
+            "fontWeight": "700",
+            "open": false,
+            "padding": "22px 0px",
+            "text": "How much should I use?+"
+          },
+          {
+            "box": {
+              "height": 78.796875,
+              "width": 327
+            },
+            "fontWeight": "700",
+            "open": false,
+            "padding": "22px 0px",
+            "text": "Is BPM baking soda free?+"
+          },
+          {
+            "box": {
+              "height": 78.796875,
+              "width": 327
+            },
+            "fontWeight": "700",
+            "open": false,
+            "padding": "22px 0px",
+            "text": "How long does a tube last?+"
+          },
+          {
+            "box": {
+              "height": 78.796875,
+              "width": 327
+            },
+            "fontWeight": "700",
+            "open": false,
+            "padding": "22px 0px",
+            "text": "Where do you ship?+"
+          }
+        ],
+        "section": {
+          "height": 758.5546875,
+          "width": 375
+        },
+        "viewport": 375
+      }
+    },
+    {
+      "width": 820,
+      "kind": "source",
+      "closed": {
+        "questions": {
+          "height": 480.1875,
+          "width": 746.203125
+        },
+        "rows": [
+          {
+            "box": {
+              "height": 78.796875,
+              "width": 746.203125
+            },
+            "fontWeight": "700",
+            "open": false,
+            "padding": "22px 0px",
+            "text": "How much should I use?+"
+          },
+          {
+            "box": {
+              "height": 78.796875,
+              "width": 746.203125
+            },
+            "fontWeight": "700",
+            "open": false,
+            "padding": "22px 0px",
+            "text": "Is BPM baking soda free?+"
+          },
+          {
+            "box": {
+              "height": 78.796875,
+              "width": 746.203125
+            },
+            "fontWeight": "700",
+            "open": false,
+            "padding": "22px 0px",
+            "text": "How long does a tube last?+"
+          },
+          {
+            "box": {
+              "height": 78.796875,
+              "width": 746.203125
+            },
+            "fontWeight": "700",
+            "open": false,
+            "padding": "22px 0px",
+            "text": "Where do you ship?+"
+          }
+        ],
+        "section": {
+          "height": 819.2578125,
+          "width": 820
+        },
+        "viewport": 820
+      }
+    },
+    {
+      "width": 820,
+      "kind": "candidate",
+      "closed": {
+        "questions": {
+          "height": 480.1875,
+          "width": 746.203125
+        },
+        "rows": [
+          {
+            "box": {
+              "height": 78.796875,
+              "width": 746.203125
+            },
+            "fontWeight": "700",
+            "open": false,
+            "padding": "22px 0px",
+            "text": "How much should I use?+"
+          },
+          {
+            "box": {
+              "height": 78.796875,
+              "width": 746.203125
+            },
+            "fontWeight": "700",
+            "open": false,
+            "padding": "22px 0px",
+            "text": "Is BPM baking soda free?+"
+          },
+          {
+            "box": {
+              "height": 78.796875,
+              "width": 746.203125
+            },
+            "fontWeight": "700",
+            "open": false,
+            "padding": "22px 0px",
+            "text": "How long does a tube last?+"
+          },
+          {
+            "box": {
+              "height": 78.796875,
+              "width": 746.203125
+            },
+            "fontWeight": "700",
+            "open": false,
+            "padding": "22px 0px",
+            "text": "Where do you ship?+"
+          }
+        ],
+        "section": {
+          "height": 819.2578125,
+          "width": 820
+        },
+        "viewport": 820
+      }
+    },
+    {
+      "width": 1440,
+      "kind": "source",
+      "closed": {
+        "questions": {
+          "height": 480.1875,
+          "width": 620
+        },
+        "rows": [
+          {
+            "box": {
+              "height": 78.796875,
+              "width": 620
+            },
+            "fontWeight": "700",
+            "open": false,
+            "padding": "22px 0px",
+            "text": "How much should I use?+"
+          },
+          {
+            "box": {
+              "height": 78.796875,
+              "width": 620
+            },
+            "fontWeight": "700",
+            "open": false,
+            "padding": "22px 0px",
+            "text": "Is BPM baking soda free?+"
+          },
+          {
+            "box": {
+              "height": 78.796875,
+              "width": 620
+            },
+            "fontWeight": "700",
+            "open": false,
+            "padding": "22px 0px",
+            "text": "How long does a tube last?+"
+          },
+          {
+            "box": {
+              "height": 78.796875,
+              "width": 620
+            },
+            "fontWeight": "700",
+            "open": false,
+            "padding": "22px 0px",
+            "text": "Where do you ship?+"
+          }
+        ],
+        "section": {
+          "height": 656.1875,
+          "width": 1440
+        },
+        "viewport": 1440
+      }
+    },
+    {
+      "width": 1440,
+      "kind": "candidate",
+      "closed": {
+        "questions": {
+          "height": 480.1875,
+          "width": 620
+        },
+        "rows": [
+          {
+            "box": {
+              "height": 78.796875,
+              "width": 620
+            },
+            "fontWeight": "700",
+            "open": false,
+            "padding": "22px 0px",
+            "text": "How much should I use?+"
+          },
+          {
+            "box": {
+              "height": 78.796875,
+              "width": 620
+            },
+            "fontWeight": "700",
+            "open": false,
+            "padding": "22px 0px",
+            "text": "Is BPM baking soda free?+"
+          },
+          {
+            "box": {
+              "height": 78.796875,
+              "width": 620
+            },
+            "fontWeight": "700",
+            "open": false,
+            "padding": "22px 0px",
+            "text": "How long does a tube last?+"
+          },
+          {
+            "box": {
+              "height": 78.796875,
+              "width": 620
+            },
+            "fontWeight": "700",
+            "open": false,
+            "padding": "22px 0px",
+            "text": "Where do you ship?+"
+          }
+        ],
+        "section": {
+          "height": 656.1875,
+          "width": 1440
+        },
+        "viewport": 1440
+      }
+    }
+  ],
+  "initialDiagnosis": [
+    {
+      "kind": "source",
+      "data": {
+        "details": [
+          {
+            "box": {
+              "contentVisibility": "visible",
+              "display": "block",
+              "height": 120.796875,
+              "margin": "0px",
+              "padding": "20px 0px",
+              "tag": "DETAILS"
+            },
+            "children": [
+              {
+                "contentVisibility": "visible",
+                "display": "flex",
+                "height": 78.796875,
+                "margin": "0px",
+                "padding": "22px 0px",
+                "tag": "SUMMARY"
+              },
+              {
+                "contentVisibility": "visible",
+                "display": "block",
+                "height": 0,
+                "margin": "16px 0px 0px",
+                "padding": "0px",
+                "tag": "P"
+              }
+            ],
+            "open": false
+          },
+          {
+            "box": {
+              "contentVisibility": "visible",
+              "display": "block",
+              "height": 119.796875,
+              "margin": "0px",
+              "padding": "20px 0px",
+              "tag": "DETAILS"
+            },
+            "children": [
+              {
+                "contentVisibility": "visible",
+                "display": "flex",
+                "height": 78.796875,
+                "margin": "0px",
+                "padding": "22px 0px",
+                "tag": "SUMMARY"
+              },
+              {
+                "contentVisibility": "visible",
+                "display": "block",
+                "height": 0,
+                "margin": "16px 0px 0px",
+                "padding": "0px",
+                "tag": "P"
+              }
+            ],
+            "open": false
+          },
+          {
+            "box": {
+              "contentVisibility": "visible",
+              "display": "block",
+              "height": 119.796875,
+              "margin": "0px",
+              "padding": "20px 0px",
+              "tag": "DETAILS"
+            },
+            "children": [
+              {
+                "contentVisibility": "visible",
+                "display": "flex",
+                "height": 78.796875,
+                "margin": "0px",
+                "padding": "22px 0px",
+                "tag": "SUMMARY"
+              },
+              {
+                "contentVisibility": "visible",
+                "display": "block",
+                "height": 0,
+                "margin": "16px 0px 0px",
+                "padding": "0px",
+                "tag": "P"
+              }
+            ],
+            "open": false
+          },
+          {
+            "box": {
+              "contentVisibility": "visible",
+              "display": "block",
+              "height": 119.796875,
+              "margin": "0px",
+              "padding": "20px 0px",
+              "tag": "DETAILS"
+            },
+            "children": [
+              {
+                "contentVisibility": "visible",
+                "display": "flex",
+                "height": 78.796875,
+                "margin": "0px",
+                "padding": "22px 0px",
+                "tag": "SUMMARY"
+              },
+              {
+                "contentVisibility": "visible",
+                "display": "block",
+                "height": 0,
+                "margin": "16px 0px 0px",
+                "padding": "0px",
+                "tag": "P"
+              }
+            ],
+            "open": false
+          }
+        ],
+        "questions": {
+          "contentVisibility": "visible",
+          "display": "block",
+          "height": 480.1875,
+          "margin": "0px",
+          "padding": "0px",
+          "tag": "DIV"
+        }
+      }
+    },
+    {
+      "kind": "candidate",
+      "data": {
+        "details": [
+          {
+            "box": {
+              "contentVisibility": "visible",
+              "display": "block",
+              "height": 72.4453125,
+              "margin": "0px",
+              "padding": "20px 0px",
+              "tag": "DETAILS"
+            },
+            "children": [
+              {
+                "contentVisibility": "visible",
+                "display": "flex",
+                "height": 30.4453125,
+                "margin": "0px",
+                "padding": "0px",
+                "tag": "SUMMARY"
+              },
+              {
+                "contentVisibility": "visible",
+                "display": "block",
+                "height": 68.1875,
+                "margin": "0px",
+                "padding": "16px 0px 0px",
+                "tag": "DIV"
+              }
+            ],
+            "open": false
+          },
+          {
+            "box": {
+              "contentVisibility": "visible",
+              "display": "block",
+              "height": 71.4453125,
+              "margin": "0px",
+              "padding": "20px 0px",
+              "tag": "DETAILS"
+            },
+            "children": [
+              {
+                "contentVisibility": "visible",
+                "display": "flex",
+                "height": 30.4453125,
+                "margin": "0px",
+                "padding": "0px",
+                "tag": "SUMMARY"
+              },
+              {
+                "contentVisibility": "visible",
+                "display": "block",
+                "height": 42.09375,
+                "margin": "0px",
+                "padding": "16px 0px 0px",
+                "tag": "DIV"
+              }
+            ],
+            "open": false
+          },
+          {
+            "box": {
+              "contentVisibility": "visible",
+              "display": "block",
+              "height": 71.4453125,
+              "margin": "0px",
+              "padding": "20px 0px",
+              "tag": "DETAILS"
+            },
+            "children": [
+              {
+                "contentVisibility": "visible",
+                "display": "flex",
+                "height": 30.4453125,
+                "margin": "0px",
+                "padding": "0px",
+                "tag": "SUMMARY"
+              },
+              {
+                "contentVisibility": "visible",
+                "display": "block",
+                "height": 68.1875,
+                "margin": "0px",
+                "padding": "16px 0px 0px",
+                "tag": "DIV"
+              }
+            ],
+            "open": false
+          },
+          {
+            "box": {
+              "contentVisibility": "visible",
+              "display": "block",
+              "height": 71.4453125,
+              "margin": "0px",
+              "padding": "20px 0px",
+              "tag": "DETAILS"
+            },
+            "children": [
+              {
+                "contentVisibility": "visible",
+                "display": "flex",
+                "height": 30.4453125,
+                "margin": "0px",
+                "padding": "0px",
+                "tag": "SUMMARY"
+              },
+              {
+                "contentVisibility": "visible",
+                "display": "block",
+                "height": 68.1875,
+                "margin": "0px",
+                "padding": "16px 0px 0px",
+                "tag": "DIV"
+              }
+            ],
+            "open": false
+          }
+        ],
+        "questions": {
+          "contentVisibility": "visible",
+          "display": "block",
+          "height": 286.78125,
+          "margin": "0px",
+          "padding": "0px",
+          "tag": "DIV"
+        }
+      }
+    }
+  ]
+}

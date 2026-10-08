@@ -1,0 +1,49 @@
+<section class="section wrap"><div class="split"><div><div class="intro-copy">{% if section.settings.eyebrow != blank %}<p class="eyebrow">{{ section.settings.eyebrow | escape }}</p>{% endif %}{% if section.settings.heading != blank %}<h2>{{ section.settings.heading | escape | newline_to_br }}</h2>{% endif %}{% if section.settings.body != blank %}<p class="lead">{{ section.settings.body | escape }}</p>{% endif %}</div></div><div class="questions">{% for block in section.blocks %}{% if block.settings.question != blank and block.settings.answer != blank %}<details {{ block.shopify_attributes }}><summary>{{ block.settings.question | escape }}<span aria-hidden="true">+</span></summary><div class="bpm-sites-answer">{{ block.settings.answer }}</div></details>{% endif %}{% endfor %}</div></div></section>
+{% schema %}
+{
+  "name": "Bpm Questions",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "GOOD QUESTIONS"
+    },
+    {
+      "type": "textarea",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Let\u2019s clear\na few things up."
+    },
+    {
+      "type": "text",
+      "id": "body",
+      "label": "Copy"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Bpm Questions"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "question",
+      "name": "Question",
+      "settings": [
+        {
+          "type": "text",
+          "id": "question",
+          "label": "Question"
+        },
+        {
+          "type": "richtext",
+          "id": "answer",
+          "label": "Answer"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 24
+}
+{% endschema %}

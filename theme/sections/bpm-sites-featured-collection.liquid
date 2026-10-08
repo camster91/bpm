@@ -1,0 +1,150 @@
+{% assign featured = section.settings.collection %}{% if featured != blank %}<section class="section wrap bpm-client-collection{% if section.settings.limit == 4 %} bpm-client-collection--four{% endif %}"><div class="section-heading"><h2>{{ section.settings.heading | default: featured.title | escape }}</h2><a class="button" href="{{ featured.url }}">{{ 'catalogue.explore_collection' | t }} <span aria-hidden="true">→</span></a></div>
+{% if section.settings.description != blank %}<div class="bpm-client-copy bpm-collection-intro">{{ section.settings.description }}</div>{% endif %}
+<div class="track-grid three">{% for product in featured.products limit: section.settings.limit %}{% render 'bpm-sites-catalogue-card', product: product, blocks: section.blocks, label: section.settings.product_label, images: images, native_delivery: settings.native_source_delivery %}{% else %}<p>{{ 'catalogue.empty_collection' | t }}</p>{% endfor %}</div></section>{% endif %}
+{% schema %}
+{
+  "name": "Bpm Featured collection",
+  "settings": [
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Collection"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Collection introduction"
+    },
+    {
+      "type": "range",
+      "id": "limit",
+      "label": "Products shown",
+      "min": 2,
+      "max": 12,
+      "step": 1,
+      "default": 4
+    },
+    {
+      "type": "text",
+      "id": "product_label",
+      "label": "Product link label",
+      "default": "Meet your track"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product_art",
+      "name": "Product presentation",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Product"
+        },
+        {
+          "type": "text",
+          "id": "display_title",
+          "label": "Display title override",
+          "info": "Optional short card heading. Leave blank to use the native product title. Does not change the product record."
+        },
+        {
+          "type": "select",
+          "id": "source_pack",
+          "label": "Original Sites carton composition",
+          "default": "native",
+          "options": [
+            {
+              "value": "native",
+              "label": "Native product media"
+            },
+            {
+              "value": "1-0",
+              "label": "One citrus carton"
+            },
+            {
+              "value": "0-1",
+              "label": "One unscented carton"
+            },
+            {
+              "value": "2-0",
+              "label": "Two citrus cartons"
+            },
+            {
+              "value": "0-2",
+              "label": "Two unscented cartons"
+            },
+            {
+              "value": "1-1",
+              "label": "One of each scent"
+            },
+            {
+              "value": "4-0",
+              "label": "Four citrus cartons"
+            },
+            {
+              "value": "0-4",
+              "label": "Four unscented cartons"
+            },
+            {
+              "value": "2-2",
+              "label": "Two of each scent"
+            },
+            {
+              "value": "3-1",
+              "label": "Three citrus, one unscented"
+            }
+          ],
+          "info": "Use only for the matching product pack. Uploaded image overrides take priority."
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "First framed carton / image override"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_2",
+          "label": "Second framed carton"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_3",
+          "label": "Third framed carton"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_4",
+          "label": "Fourth framed carton"
+        },
+        {
+          "type": "text",
+          "id": "pack_label",
+          "label": "Verified pack description"
+        },
+        {
+          "type": "text",
+          "id": "summary",
+          "label": "Approved product summary"
+        },
+        {
+          "type": "color",
+          "id": "background",
+          "label": "Image background",
+          "default": "#f3e4b7"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 50,
+  "presets": [
+    {
+      "name": "Bpm Featured collection"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,7 @@
+{% doc %}
+  Progressive control for the decorative Sites motion.
+  @param {boolean} [skip] - Show in the keyboard skip-control position
+  @example
+  {% render 'bpm-motion-toggle', skip: true %}
+{% enddoc %}
+<button type="button" class="bpm-motion-toggle{% if skip %} bpm-motion-skip{% endif %}" data-bpm-motion-toggle data-pause-label="{{ 'accessibility.pause_motion' | t | escape }}" data-resume-label="{{ 'accessibility.resume_motion' | t | escape }}" hidden>{{ 'accessibility.pause_motion' | t }}</button>

@@ -1,0 +1,88 @@
+{% assign display_section = true %}{% if section.settings.limit_to_page %}{% assign display_section = false %}{% if section.settings.visible_on_page != blank and section.settings.visible_on_page.id == page.id %}{% assign display_section = true %}{% endif %}{% endif %}
+{% if display_section %}
+<section class="section wrap"><div{% if section.settings.art != 'none' or section.settings.image != blank %} class="split"{% endif %}><div><p class="eyebrow">{{ section.settings.eyebrow | escape }}</p><h1>{{ section.settings.heading | default: page.title | escape | newline_to_br }}</h1><p class="lead">{{ section.settings.intro | escape | newline_to_br }}</p>{% if section.settings.button_label != blank %}{% assign destination = section.settings.page.url | default: section.settings.collection.url | default: routes.all_products_collection_url %}{% if destination != blank %}<a class="button" href="{{ destination }}">{{ section.settings.button_label | escape }}<span aria-hidden="true">→</span></a>{% endif %}{% endif %}</div>{% if section.settings.art != 'none' or section.settings.image != blank %}<div class="{% if section.settings.art == 'ownership' %}ownership-art{% else %}story-photo{% endif %}">{% if section.settings.image != blank %}{{ section.settings.image | image_url: width: 1400 | image_tag: widths: '400,700,1000,1400', sizes: '(max-width:760px) 90vw,45vw', loading: 'eager', alt: section.settings.image_alt }}{% elsif section.settings.art == 'hand' %}<img src="{{ 'bpm-sites-hand.png' | asset_url }}" width="1024" height="1024" alt="{{ section.settings.image_alt | escape }}" loading="eager">{% elsif section.settings.art == 'ownership' %}<img src="{{ 'bpm-sites-ownership.png' | asset_url }}" width="864" height="847" alt="{{ section.settings.image_alt | escape }}" loading="eager">{% endif %}</div>{% endif %}</div></section>
+{% endif %}
+{% schema %}
+{
+  "name": "Bpm Page opening",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "limit_to_page",
+      "label": "Show only on the selected page",
+      "default": false
+    },
+    {
+      "type": "page",
+      "id": "visible_on_page",
+      "label": "Page to display this section",
+      "info": "When page restriction is enabled, no selection hides the section."
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow"
+    },
+    {
+      "type": "textarea",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "textarea",
+      "id": "intro",
+      "label": "Introduction"
+    },
+    {
+      "type": "select",
+      "id": "art",
+      "label": "Original artwork",
+      "options": [
+        {
+          "value": "none",
+          "label": "Text only"
+        },
+        {
+          "value": "hand",
+          "label": "Hand-held tube"
+        },
+        {
+          "value": "ownership",
+          "label": "Indigenous mark"
+        }
+      ],
+      "default": "none"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image override"
+    },
+    {
+      "type": "text",
+      "id": "image_alt",
+      "label": "Image description"
+    },
+    {
+      "type": "page",
+      "id": "page",
+      "label": "Linked page"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Linked collection"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Link label"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Bpm Page opening"
+    }
+  ]
+}
+{% endschema %}

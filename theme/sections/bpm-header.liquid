@@ -1,0 +1,50 @@
+{% liquid
+  assign overlay = false
+  if request.page_type == 'index' and section.settings.overlay_home
+    assign overlay = true
+  endif
+  assign nav_label = 'general.navigation' | t
+%}
+<header class="bpm-header{% if overlay %} bpm-header--overlay{% endif %}" style="--header-color: {% if overlay %}{{ section.settings.overlay_color }}{% else %}{{ section.settings.text_color }}{% endif %}; --header-bg: {{ section.settings.background }};">
+  <div class="bpm-header__inner bpm-container">
+    <div class="bpm-header__navigation">
+      <div class="bpm-header__desktop">{% render 'bpm-navigation', menu: section.settings.menu, label: nav_label %}</div>
+      <details class="bpm-mobile-menu">
+        <summary>{{ 'general.menu' | t }}</summary>
+        <div class="bpm-mobile-menu__content">{% render 'bpm-navigation', menu: section.settings.menu, label: nav_label %}</div>
+      </details>
+    </div>
+    <a class="bpm-header__logo" href="{{ routes.root_url }}" aria-label="{{ shop.name | escape }}">
+      {% if section.settings.logo != blank %}
+        {{ section.settings.logo | image_url: width: 256 | image_tag: widths: '85, 170, 256', sizes: '85px', loading: 'eager', alt: shop.name }}
+      {% else %}
+        <img src="{{ 'bpm-logo-header.svg' | asset_url }}" width="85" height="84" alt="{{ shop.name | escape }}">
+      {% endif %}
+    </a>
+    <div class="bpm-header__actions">
+      {% if shop.customer_accounts_enabled and section.settings.show_account %}
+        <a href="{{ routes.account_url }}" aria-label="{{ 'general.account' | t }}"><img src="{{ 'bpm-account.svg' | asset_url }}" width="32" height="32" alt=""></a>
+      {% endif %}
+      <a href="{{ routes.cart_url }}" aria-label="{{ 'general.cart_count' | t: count: cart.item_count }}">
+        <img src="{{ 'bpm-cart.svg' | asset_url }}" width="32" height="32" alt="">
+        {% if cart.item_count > 0 %}<span class="bpm-cart-count" data-bpm-cart-count>{{ cart.item_count }}</span>{% endif %}
+      </a>
+    </div>
+  </div>
+</header>
+{% schema %}
+{
+  "name": "BPM header",
+  "enabled_on": { "groups": ["header"] },
+  "settings": [
+    { "type": "paragraph", "content": "Changes affect the whole store. Menu links are managed in Shopify Navigation." },
+    { "type": "link_list", "id": "menu", "label": "Main navigation", "default": "main-menu" },
+    { "type": "image_picker", "id": "logo", "label": "Logo override", "info": "Leave empty to use the original BPM Figma logo." },
+    { "type": "checkbox", "id": "show_account", "label": "Show account link when enabled", "default": true },
+    { "type": "checkbox", "id": "overlay_home", "label": "Place header over homepage hero", "default": true },
+    { "type": "color", "id": "overlay_color", "label": "Homepage navigation color", "default": "#fff9b3" },
+    { "type": "color", "id": "text_color", "label": "Navigation color", "default": "#231f20" },
+    { "type": "color", "id": "background", "label": "Background", "default": "#ffffff" }
+  ]
+}
+{% endschema %}

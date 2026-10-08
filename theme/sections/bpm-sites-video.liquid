@@ -1,0 +1,8 @@
+{% if section.settings.video != blank %}<section class="section wrap bpm-campaign-video">
+{% if section.settings.heading != blank %}<h2>{{ section.settings.heading | escape }}</h2>{% endif %}
+<figure>{{ section.settings.video | video_tag: controls: true, autoplay: false, loop: false, preload: 'none' }}{% if section.settings.description != blank %}<figcaption>{{ section.settings.description | escape }}</figcaption>{% endif %}</figure>
+{% if section.settings.transcript != blank %}<details><summary>{{ 'products.creator_transcript' | t }}</summary><div class="prose">{{ section.settings.transcript }}</div></details>{% endif %}
+</section>{% endif %}
+{% schema %}
+{"name":"Bpm Campaign video","settings":[{"type":"text","id":"heading","label":"Heading"},{"type":"video","id":"video","label":"Shopify-hosted video"},{"type":"textarea","id":"description","label":"Visual description"},{"type":"richtext","id":"transcript","label":"Approved transcript / visual description","info":"Verify captions and any spoken audio in the actual media before release."}],"presets":[{"name":"Bpm Campaign video"}]}
+{% endschema %}

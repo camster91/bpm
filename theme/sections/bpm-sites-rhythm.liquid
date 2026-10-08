@@ -1,0 +1,46 @@
+{% if section.blocks.size > 0 %}<section class="rhythm-strip{% if section.blocks.size > 3 %} rhythm-strip--extended{% endif %}">{% assign first = true %}{% for block in section.blocks %}{% if block.settings.text != blank %}{% unless first %}<b aria-hidden="true">✦</b>{% endunless %}<span {{ block.shopify_attributes }}>{{ block.settings.text | escape }}</span>{% assign first = false %}{% endif %}{% endfor %}</section>{% endif %}
+{% schema %}
+{
+  "name": "BPM Sites rhythm strip",
+  "settings": [],
+  "max_blocks": 5,
+  "blocks": [
+    {
+      "type": "message",
+      "name": "Message",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Message"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "BPM Sites rhythm strip",
+      "blocks": [
+        {
+          "type": "message",
+          "settings": {
+            "text": "Performance first."
+          }
+        },
+        {
+          "type": "message",
+          "settings": {
+            "text": "Nothing extra."
+          }
+        },
+        {
+          "type": "message",
+          "settings": {
+            "text": "A little goes a long way."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

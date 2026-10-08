@@ -1,0 +1,124 @@
+[
+  {
+    "asset": "theme/assets/bpm-sites-open-bergamot.svg",
+    "source": "product-media/open-box.png",
+    "sha256": "d4dbcb6b5ca45ec12326c0d95c5248c5467f76e3c4551cf7fafd589efabf14e0",
+    "crop": [
+      177,
+      120,
+      1255,
+      1375
+    ],
+    "method": "Original pixels embedded unchanged; non-destructive source SVG viewport"
+  },
+  {
+    "asset": "theme/assets/bpm-sites-open-unscented.svg",
+    "source": "product-media/unscented-open-box.png",
+    "sha256": "88b8ebf10985316c943a31ffc6077bc561814d926f70ead41ce5ae8dc26fb01e",
+    "crop": [
+      177,
+      120,
+      1255,
+      1375
+    ],
+    "method": "Original pixels embedded unchanged; non-destructive source SVG viewport"
+  },
+  {
+    "asset": "theme/assets/bpm-sites-open-15222327476596.svg",
+    "source": "product-media/four-on-the-floor-mixed-scent-4-tube-deodorant-bundle-1.png",
+    "source_url": "https://cdn.shopify.com/s/files/1/0960/5778/6740/files/Screenshot_2026-08-12_at_1.52.58_PM.png?v=1786557203",
+    "sha256": "f68d1d4258d1fc3dcfd98424c14183ae1cdeb96a420024f182fba5be3f4ffc44",
+    "historical_hash_verified": false,
+    "crop": [
+      112,
+      61,
+      757,
+      1203
+    ],
+    "method": "Owner CDN source bytes unchanged; source crop viewport. Missing historical hash recorded as current retrieval hash."
+  },
+  {
+    "asset": "theme/assets/bpm-sites-open-15222328361332.svg",
+    "source": "product-media/citrus-on-repeat-family-pack-4-tube-bergamot-lime-deodorant-bundle-1.png",
+    "source_url": "https://cdn.shopify.com/s/files/1/0960/5778/6740/files/Screenshot2026-08-12at2.02.59PM.png?v=1786557838",
+    "sha256": "263ea9416c7a4e78313b38c3c345739932a8633dbd54018c55f6d54878421e46",
+    "historical_hash_verified": false,
+    "crop": [
+      124,
+      67,
+      768,
+      1166
+    ],
+    "method": "Owner CDN source bytes unchanged; source crop viewport. Missing historical hash recorded as current retrieval hash."
+  },
+  {
+    "asset": "theme/assets/bpm-sites-open-15222329180532.svg",
+    "source": "product-media/silent-on-repeat-family-pack-4-tube-unscented-deodorant-bundle-1.png",
+    "source_url": "https://cdn.shopify.com/s/files/1/0960/5778/6740/files/Screenshot2026-08-12at1.57.21PM.png?v=1786557491",
+    "sha256": "177df346e4340375eff11c8dd2bc3390aee9dc5990368806bf1c1fcf492797b9",
+    "historical_hash_verified": false,
+    "crop": [
+      103,
+      14,
+      756,
+      1258
+    ],
+    "method": "Owner CDN source bytes unchanged; source crop viewport. Missing historical hash recorded as current retrieval hash."
+  },
+  {
+    "asset": "theme/assets/bpm-sites-open-15222739599732.svg",
+    "source": "product-media/3-4-time-1.png",
+    "source_url": "https://cdn.shopify.com/s/files/1/0960/5778/6740/files/Screenshot2026-08-12at7.05.18PM.png?v=1786575938",
+    "sha256": "01bcf9bc9922dc96e73adc1243a6738e84d95165dfd233f88cac2f47f53fc776",
+    "historical_hash_verified": false,
+    "crop": [
+      160,
+      51,
+      773,
+      1175
+    ],
+    "method": "Owner CDN source bytes unchanged; source crop viewport. Missing historical hash recorded as current retrieval hash."
+  },
+  {
+    "asset": "theme/assets/bpm-sites-open-15141686444404.svg",
+    "source": "product-media/silent-repeat-1.png",
+    "source_url": "https://cdn.shopify.com/s/files/1/0960/5778/6740/files/Screenshot2026-07-06at2.03.40PM.png?v=1783361046",
+    "sha256": "c4618a00ed55c63057c38648712ba40c7e62e41d477b387be3db57e662045d50",
+    "historical_hash_verified": false,
+    "crop": [
+      89,
+      60,
+      920,
+      642
+    ],
+    "method": "Owner CDN source bytes unchanged; source crop viewport. Missing historical hash recorded as current retrieval hash."
+  },
+  {
+    "asset": "theme/assets/bpm-sites-open-15141668815220.svg",
+    "source": "product-media/citrus-repeat-1.png",
+    "source_url": "https://cdn.shopify.com/s/files/1/0960/5778/6740/files/Screenshot_2026-07-06_at_1.52.43_PM.png?v=1783360394",
+    "sha256": "af6af3af747e107b6d3a6478ad81c1f06c468f4f51eba62eb4cc602fc8082d27",
+    "historical_hash_verified": false,
+    "crop": [
+      17,
+      13,
+      957,
+      634
+    ],
+    "method": "Owner CDN source bytes unchanged; source crop viewport. Missing historical hash recorded as current retrieval hash."
+  },
+  {
+    "asset": "theme/assets/bpm-sites-open-15141732581748.svg",
+    "source": "product-media/duo-open-box.png",
+    "source_url": "https://cdn.shopify.com/s/files/1/0960/5778/6740/files/Screenshot2026-07-06at3.28.06PM.png?v=1783366111&width=1600",
+    "sha256": "a42b3820005b1c468551a7bcaa378518e1ec8a640eeacbc8585b5efe5365c530",
+    "historical_hash_verified": true,
+    "crop": [
+      33,
+      22,
+      910,
+      638
+    ],
+    "method": "Owner CDN source bytes unchanged; source crop viewport. Missing historical hash recorded as current retrieval hash."
+  }
+]

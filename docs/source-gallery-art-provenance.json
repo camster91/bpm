@@ -1,0 +1,128 @@
+[
+  {
+    "product_id": 15222327476596,
+    "asset": "theme/assets/bpm-sites-gallery-15222327476596.svg",
+    "source": "product-media/four-on-the-floor-mixed-scent-4-tube-deodorant-bundle-0.png",
+    "source_url": "https://cdn.shopify.com/s/files/1/0960/5778/6740/files/Screenshot_2026-08-12_at_5.34.18_PM.png?v=1786570587",
+    "sha256": "a23d74d357230556dc88f40c0041e15a025d7c609756829c61f55927cbe69f86",
+    "historical_hash_verified": false,
+    "crop": [
+      193,
+      292,
+      1051,
+      701
+    ]
+  },
+  {
+    "product_id": 15222328361332,
+    "asset": "theme/assets/bpm-sites-gallery-15222328361332.svg",
+    "source": "product-media/citrus-on-repeat-family-pack-4-tube-bergamot-lime-deodorant-bundle-0.png",
+    "source_url": "https://cdn.shopify.com/s/files/1/0960/5778/6740/files/Screenshot_2026-08-12_at_5.32.49_PM.png?v=1786570587",
+    "sha256": "f3b77974f0187704422c29e3d9a3f445f851661623e0cf2393376f6ce95fd6e5",
+    "historical_hash_verified": false,
+    "crop": [
+      256,
+      314,
+      983,
+      668
+    ]
+  },
+  {
+    "product_id": 15222329180532,
+    "asset": "theme/assets/bpm-sites-gallery-15222329180532.svg",
+    "source": "product-media/silent-on-repeat-family-pack-4-tube-unscented-deodorant-bundle-0.png",
+    "source_url": "https://cdn.shopify.com/s/files/1/0960/5778/6740/files/Screenshot_2026-08-12_at_5.33.45_PM.png?v=1786570587",
+    "sha256": "4dbc037b996e103eb729fbd3a22b81b7190c1bfc51298f8c98a4b1b5dd1d697d",
+    "historical_hash_verified": false,
+    "crop": [
+      196,
+      293,
+      1064,
+      699
+    ]
+  },
+  {
+    "product_id": 15222739599732,
+    "asset": "theme/assets/bpm-sites-gallery-15222739599732.svg",
+    "source": "product-media/3-4-time-0.png",
+    "source_url": "https://cdn.shopify.com/s/files/1/0960/5778/6740/files/Screenshot2026-08-12at7.03.56PM.png?v=1786575939",
+    "sha256": "2624e192f082f4baef111e7ba71fddee4171a3ec5ff1363d0c7e0eb6795838e1",
+    "historical_hash_verified": false,
+    "crop": [
+      231,
+      282,
+      994,
+      668
+    ]
+  },
+  {
+    "product_id": 15141686444404,
+    "asset": "theme/assets/bpm-sites-gallery-15141686444404.svg",
+    "source": "product-media/silent-repeat-0.png",
+    "source_url": "https://cdn.shopify.com/s/files/1/0960/5778/6740/files/Screenshot_2026-08-12_at_5.35.42_PM.png?v=1786570587",
+    "sha256": "9d3ecbe6cbfc972d64395d4e395ea9cca981c38d34fa7363a244f274738aa854",
+    "historical_hash_verified": false,
+    "crop": [
+      307,
+      254,
+      536,
+      724
+    ]
+  },
+  {
+    "product_id": 15141668815220,
+    "asset": "theme/assets/bpm-sites-gallery-15141668815220.svg",
+    "source": "product-media/citrus-repeat-0.png",
+    "source_url": "https://cdn.shopify.com/s/files/1/0960/5778/6740/files/Screenshot_2026-08-12_at_5.35.35_PM.png?v=1786570587",
+    "sha256": "4f27e449bd0e2f3507d12a44e09b1ab12a200c9c2a22a5c413ae9990d8522a9c",
+    "historical_hash_verified": false,
+    "crop": [
+      257,
+      261,
+      553,
+      719
+    ]
+  },
+  {
+    "product_id": 15141732581748,
+    "asset": "theme/assets/bpm-sites-gallery-15141732581748.svg",
+    "source": "product-media/duo-pack.png",
+    "source_url": "https://cdn.shopify.com/s/files/1/0960/5778/6740/files/Screenshot_2026-08-12_at_5.35.54_PM.png?v=1786570586&width=1600",
+    "sha256": "8b42f436752884796be531086a4511661ababaa239ddcfbb1a7ed4c500f85ce8",
+    "historical_hash_verified": true,
+    "crop": [
+      230,
+      265,
+      581,
+      734
+    ]
+  },
+  {
+    "product_id": 14925587775860,
+    "asset": "theme/assets/bpm-sites-carton-unscented.svg",
+    "source": "product-media/unscented-pack.png",
+    "source_url": "https://cdn.shopify.com/s/files/1/0960/5778/6740/files/Unscented_2_1.png?v=1770084404&width=1600",
+    "sha256": "4e0ce8d4f55bd0e7c3f1f121199facb7e68d44ea121e9343acfba6471609ca3c",
+    "historical_hash_verified": true,
+    "crop": [
+      187,
+      1,
+      213,
+      430
+    ]
+  },
+  {
+    "product_id": 14880059228532,
+    "asset": "theme/assets/bpm-sites-carton-bergamot.svg",
+    "source": "product-media/gallery-pack.png",
+    "source_url": "https://cdn.shopify.com/s/files/1/0960/5778/6740/files/Unscented_2.png?v=1770084423&width=1600",
+    "sha256": "31299fa95176e6b02917a9ed5e183247f2554f11348e0107e1be1a7fc83ef42a",
+    "historical_hash_verified": true,
+    "crop": [
+      197,
+      1,
+      193,
+      430
+    ]
+  }
+]

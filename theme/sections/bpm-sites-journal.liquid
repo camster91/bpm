@@ -1,0 +1,108 @@
+<section class="section wrap"><div class="section-heading"><div class="intro-copy">{% if section.settings.eyebrow != blank %}<p class="eyebrow">{{ section.settings.eyebrow | escape }}</p>{% endif %}{% if section.settings.heading != blank %}<h2>{{ section.settings.heading | escape | newline_to_br }}</h2>{% endif %}{% if section.settings.body != blank %}<p class="lead">{{ section.settings.body | escape }}</p>{% endif %}</div>{% if section.settings.blog != blank and section.settings.button_label != blank %}<a class="button" href="{{ section.settings.blog.url }}">{{ section.settings.button_label | escape }}<span aria-hidden="true">→</span></a>{% endif %}</div>
+<div class="editorial-grid">{% for block in section.blocks %}{% assign story = block.settings.article %}{% assign hide_story = false %}{% if section.settings.hide_current_article and article != blank and story.url == article.url %}{% assign hide_story = true %}{% endif %}{% if story != blank and hide_story == false %}{% render 'bpm-sites-article-card', story: story, blog: section.settings.blog, image: block.settings.image, source_art: block.settings.source_art, label: section.settings.article_label, attributes: block.shopify_attributes %}{% endif %}{% endfor %}</div></section>
+{% schema %}
+{
+  "name": "BPM Sites journal cards",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "hide_current_article",
+      "label": "Hide the article currently being read",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "THE BREAKDOWN"
+    },
+    {
+      "type": "textarea",
+      "id": "heading",
+      "label": "Heading",
+      "default": "A little more\nbehind the beat."
+    },
+    {
+      "type": "text",
+      "id": "body",
+      "label": "Copy"
+    },
+    {
+      "type": "blog",
+      "id": "blog",
+      "label": "Blog destination"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Blog link label",
+      "default": "Read The Breakdown"
+    },
+    {
+      "type": "text",
+      "id": "article_label",
+      "label": "Article link label",
+      "default": "Read the story"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "article",
+      "name": "Article card",
+      "settings": [
+        {
+          "type": "article",
+          "id": "article",
+          "label": "Article"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image override"
+        },
+        {
+          "type": "select",
+          "id": "source_art",
+          "label": "Original Sites editorial treatment",
+          "options": [
+            {
+              "value": "none",
+              "label": "Article image"
+            },
+            {
+              "value": "texture",
+              "label": "Cream texture"
+            },
+            {
+              "value": "ownership",
+              "label": "Ownership mark"
+            },
+            {
+              "value": "story",
+              "label": "Turntable packaging photo"
+            }
+          ],
+          "default": "none"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 12,
+  "presets": [
+    {
+      "name": "BPM Sites journal cards",
+      "blocks": [
+        {
+          "type": "article"
+        },
+        {
+          "type": "article"
+        },
+        {
+          "type": "article"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

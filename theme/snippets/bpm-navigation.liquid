@@ -1,0 +1,31 @@
+{% doc %}
+  Renders a Shopify navigation menu with accessible nested disclosures.
+  @param {linklist} menu - Merchant-selected navigation menu
+  @param {string} label - Accessible navigation label
+{% enddoc %}
+<nav aria-label="{{ label | escape }}">
+  <ul class="bpm-nav-list">
+    {% for link in menu.links %}
+      <li>
+        {% if link.links != blank %}
+          <details class="bpm-nav-disclosure">
+            <summary>{{ link.title | escape }}</summary>
+            <ul class="bpm-nav-children">
+              <li><a href="{{ link.url }}">{{ 'general.view_item' | t: title: link.title | escape }}</a></li>
+              {% for child in link.links %}
+                <li>
+                  <a href="{{ child.url }}"{% if child.current %} aria-current="page"{% endif %}>{{ child.title | escape }}</a>
+                  {% if child.links != blank %}
+                    <ul>{% for grandchild in child.links %}<li><a href="{{ grandchild.url }}"{% if grandchild.current %} aria-current="page"{% endif %}>{{ grandchild.title | escape }}</a></li>{% endfor %}</ul>
+                  {% endif %}
+                </li>
+              {% endfor %}
+            </ul>
+          </details>
+        {% else %}
+          <a href="{{ link.url }}"{% if link.current %} aria-current="page"{% endif %}>{{ link.title | escape }}</a>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+</nav>

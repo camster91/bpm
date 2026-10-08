@@ -1,0 +1,24 @@
+{
+  "candidate": "3d296aaf5f4e0819a5bbb78299f3e98cbe6f161c",
+  "command": "CI=1 SHOPIFY_CLI_FORCE_AUTO_UPGRADE=0 shopify theme push --store qef4ye-yg.myshopify.com --path /tmp/bpm-sites-dev-candidate-20261008-3d296aa/theme --development --development-context bpm-sites-custom-qa-20261008-5daa4af --strict --json",
+  "authorization": "User explicitly approved the 3d296aa dev upload in this turn",
+  "exitCode": 0,
+  "uploadErrors": [],
+  "themeCheckErrors": 0,
+  "themeCheckWarnings": [
+    {
+      "check": "RemoteAsset",
+      "path": "layout/theme.liquid",
+      "message": "Asset should be served by the Shopify CDN for better performance."
+    }
+  ],
+  "theme": {
+    "id": 194480669044,
+    "name": "bpm-sites-custom-qa-20261008-5daa4af",
+    "role": "development",
+    "shop": "qef4ye-yg.myshopify.com",
+    "editor_url": "https://qef4ye-yg.myshopify.com/admin/themes/194480669044/editor",
+    "preview_url": "https://qef4ye-yg.myshopify.com?preview_theme_id=194480669044"
+  },
+  "published": false
+}

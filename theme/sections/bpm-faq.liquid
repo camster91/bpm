@@ -1,0 +1,73 @@
+<section class="bpm-faq bpm-container" style="--faq-ink: {{ section.settings.text_color }}; --faq-open: {{ section.settings.open_background }}; --faq-border: {{ section.settings.border_color }};">
+  <div class="bpm-faq__layout">
+    <div class="bpm-faq__intro">
+      {% if section.settings.heading != blank %}<h2>{{ section.settings.heading | escape }}</h2>{% endif %}
+      {% if section.settings.show_image %}
+        {% if section.settings.image != blank %}
+          <div class="bpm-faq__photo bpm-faq__photo--custom">{{ section.settings.image | image_url: width: 1200 | image_tag: widths: '320, 540, 810, 1200', sizes: '(min-width: 1100px) 540px, 90vw', loading: 'lazy', alt: section.settings.image_alt }}</div>
+        {% else %}
+          <div class="bpm-faq__photo"><div class="bpm-faq__crop" style="mask-image: url('{{ 'bpm-faq-mask.svg' | asset_url }}');"><img src="{{ 'bpm-faq-photo.png' | asset_url }}" width="2400" height="1792" loading="lazy" alt="{{ section.settings.image_alt | escape }}"></div></div>
+        {% endif %}
+      {% endif %}
+    </div>
+    <div class="bpm-faq__questions">
+      {% assign first_question = true %}
+      {% for block in section.blocks %}
+        {% if block.settings.question != blank and block.settings.answer != blank %}
+          <details class="bpm-faq__item" name="bpm-faq-{{ section.id }}"{% if first_question and section.settings.open_first %} open{% endif %} {{ block.shopify_attributes }}>
+            <summary>{{ block.settings.question | escape }}<img class="bpm-faq__plus" src="{{ 'bpm-faq-plus.svg' | asset_url }}" width="24" height="24" alt=""><img class="bpm-faq__close" src="{{ 'bpm-faq-close.svg' | asset_url }}" width="24" height="24" alt=""></summary>
+            <div class="bpm-faq__answer">{{ block.settings.answer }}</div>
+          </details>
+          {% assign first_question = false %}
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% stylesheet %}
+.bpm-faq{padding-top:138px;padding-bottom:177px;color:var(--faq-ink);min-height:807px}
+.bpm-faq__layout{display:grid;grid-template-columns:minmax(0,561fr) minmax(0,649fr);gap:109px;width:calc(100% + 7px)}
+.bpm-faq__layout>div{min-width:0}
+.bpm-faq h2{font-size:56px;line-height:1;text-transform:uppercase;max-width:550px;overflow-wrap:anywhere}
+.bpm-faq__photo{position:relative;width:541px;max-width:100%;aspect-ratio:537/280;margin-top:44px;margin-left:-3px;overflow:hidden}
+.bpm-faq__crop{position:absolute;top:0;left:0;width:100%;aspect-ratio:590/506;mask-repeat:no-repeat;mask-position:4.498px .087px;mask-size:99.17% auto}
+.bpm-faq__crop>img{position:absolute;width:100%;height:87.06%;max-width:none;top:-16.46%;left:0;object-fit:fill}
+.bpm-faq__photo--custom{border-radius:var(--bpm-radius);margin-left:0}
+.bpm-faq__photo--custom>img{width:100%;height:100%;object-fit:cover}
+.bpm-faq__questions{padding-top:35px;display:flex;flex-direction:column;gap:24px}
+.bpm-faq__item{border:1px solid var(--faq-border);border-radius:var(--bpm-radius);padding:8px}
+.bpm-faq__item>summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:54px;padding:12px 14px;font:500 20px/1.2 var(--bpm-heading)}
+.bpm-faq__item>summary::-webkit-details-marker{display:none}
+.bpm-faq__item>summary>img{flex-shrink:0}
+.bpm-faq__item[open]{background:var(--faq-open);border-color:transparent}
+.bpm-faq__item>summary>.bpm-faq__close{display:none}
+.bpm-faq__item[open]>summary>.bpm-faq__plus{display:none}
+.bpm-faq__item[open]>summary>.bpm-faq__close{display:block}
+.bpm-faq__answer{font-size:18px;line-height:1.5;padding:12px 16px;background:var(--bpm-surface);border-radius:8px;margin-top:8px;overflow-wrap:anywhere}
+.bpm-faq__answer p+p{margin-top:1em}
+.bpm-faq__answer a{text-decoration:underline;text-underline-offset:.2em}
+@media(max-width:1100px){.bpm-faq{padding-block:80px;min-height:0}.bpm-faq__layout{width:100%;gap:40px;grid-template-columns:repeat(2,minmax(0,1fr))}.bpm-faq h2{font-size:40px}.bpm-faq__questions{padding-top:0}.bpm-faq__item>summary{font-size:18px}.bpm-faq__crop{mask-position:.83% 0}}
+@media(max-width:749px){.bpm-faq{padding-block:64px}.bpm-faq__layout{grid-template-columns:minmax(0,1fr);gap:32px}.bpm-faq h2{font-size:32px;max-width:100%}.bpm-faq__photo{margin-top:24px;margin-left:0}.bpm-faq__questions{gap:16px}.bpm-faq__item>summary{font-size:16px;padding:12px 8px}.bpm-faq__answer{font-size:18px;padding:16px 12px}}
+{% endstylesheet %}
+{% schema %}
+{
+  "name": "BPM FAQ",
+  "max_blocks": 24,
+  "settings": [
+    { "type": "paragraph", "content": "Questions and answers must reflect approved current product information. Blank questions or answers are omitted." },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Frequently asked questions" },
+    { "type": "checkbox", "id": "open_first", "label": "Open first complete question", "default": true },
+    { "type": "checkbox", "id": "show_image", "label": "Show photo", "default": true },
+    { "type": "image_picker", "id": "image", "label": "Photo override" },
+    { "type": "text", "id": "image_alt", "label": "Photo description", "default": "BPM deodorant tube tossed above two hands against a blue sky" },
+    { "type": "color", "id": "text_color", "label": "Text", "default": "#231f20" },
+    { "type": "color", "id": "open_background", "label": "Open question", "default": "#f3f3f3" },
+    { "type": "color", "id": "border_color", "label": "Border", "default": "#ebebeb" }
+  ],
+  "blocks": [{ "type": "question", "name": "Question", "settings": [
+    { "type": "text", "id": "question", "label": "Question" },
+    { "type": "richtext", "id": "answer", "label": "Approved answer" }
+  ] }],
+  "presets": [{ "name": "BPM FAQ" }]
+}
+{% endschema %}

@@ -1,0 +1,21 @@
+{
+  "type": "header",
+  "name": "Header",
+  "sections": {
+    "announcement": {
+      "type": "bpm-announcement",
+      "settings": {}
+    },
+    "header": {
+      "type": "bpm-sites-header",
+      "settings": {
+        "menu": "main-menu",
+        "show_account": true
+      }
+    }
+  },
+  "order": [
+    "announcement",
+    "header"
+  ]
+}

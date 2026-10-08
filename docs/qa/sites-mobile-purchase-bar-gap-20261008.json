@@ -1,0 +1,130 @@
+[
+  {
+    "site": "source",
+    "width": 375,
+    "buttonHeight": 50.296875,
+    "display": "flex",
+    "label": "Bergamot & LimeAdd to bag →",
+    "position": "fixed",
+    "present": true,
+    "rect": {
+      "bottom": 812,
+      "height": 71.296875,
+      "left": 0,
+      "right": 375,
+      "top": 740.703125,
+      "width": 375,
+      "x": 0,
+      "y": 740.703125
+    }
+  },
+  {
+    "site": "candidate",
+    "width": 375,
+    "nativeProductForm": true,
+    "present": false,
+    "purchaseButtons": [
+      {
+        "disabled": true,
+        "text": "Add to bag→"
+      }
+    ],
+    "viewport": 375
+  },
+  {
+    "site": "source",
+    "width": 680,
+    "buttonHeight": 50.296875,
+    "display": "flex",
+    "label": "Bergamot & LimeAdd to bag →",
+    "position": "fixed",
+    "present": true,
+    "rect": {
+      "bottom": 812,
+      "height": 71.296875,
+      "left": 0,
+      "right": 680,
+      "top": 740.703125,
+      "width": 680,
+      "x": 0,
+      "y": 740.703125
+    }
+  },
+  {
+    "site": "candidate",
+    "width": 680,
+    "nativeProductForm": true,
+    "present": false,
+    "purchaseButtons": [
+      {
+        "disabled": true,
+        "text": "Add to bag→"
+      }
+    ],
+    "viewport": 680
+  },
+  {
+    "site": "source",
+    "width": 681,
+    "buttonHeight": 0,
+    "display": "none",
+    "label": "Bergamot & LimeAdd to bag →",
+    "position": "static",
+    "present": true,
+    "rect": {
+      "bottom": 0,
+      "height": 0,
+      "left": 0,
+      "right": 0,
+      "top": 0,
+      "width": 0,
+      "x": 0,
+      "y": 0
+    }
+  },
+  {
+    "site": "candidate",
+    "width": 681,
+    "nativeProductForm": true,
+    "present": false,
+    "purchaseButtons": [
+      {
+        "disabled": true,
+        "text": "Add to bag→"
+      }
+    ],
+    "viewport": 681
+  },
+  {
+    "site": "source",
+    "width": 820,
+    "buttonHeight": 0,
+    "display": "none",
+    "label": "Bergamot & LimeAdd to bag →",
+    "position": "static",
+    "present": true,
+    "rect": {
+      "bottom": 0,
+      "height": 0,
+      "left": 0,
+      "right": 0,
+      "top": 0,
+      "width": 0,
+      "x": 0,
+      "y": 0
+    }
+  },
+  {
+    "site": "candidate",
+    "width": 820,
+    "nativeProductForm": true,
+    "present": false,
+    "purchaseButtons": [
+      {
+        "disabled": true,
+        "text": "Add to bag→"
+      }
+    ],
+    "viewport": 820
+  }
+]

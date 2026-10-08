@@ -18,6 +18,18 @@ Open http://127.0.0.1:8878/index.html after building. Node 22.13+ required. Comm
 - [QA matrix](docs/qa-matrix.md)
 - Published reference: https://bpm-product-design-review.cameron91.chatgpt.site/index.html
 - Live commerce reference: https://bpmdeodorant.com/
-- Figma source: BPM - Updates (`REGkhZvykpOP4XmN7EKSnh`)
+- Authoritative design/code source: the published Sites review and recovered `reference-site/` (selected by Cameron on 7 October 2026). Figma is no longer the implementation target.
 
 Current Shopify data/configuration and approved client decisions govern implementation. Historical preview copy is not production truth. Preserve the published review, verify app/commerce behaviour, and use merchant-editable Shopify sections. Store writes and production publication are separate stages.
+
+Campaign suffixes and editable native discovery/media modules are implemented locally. [Campaign QA checkpoint](docs/qa/sites-campaign-pages.md) records 171 passing rendering checks and responsive fixture evidence; Shopify runtime, media, claims, apps and purchase journeys remain open.
+
+The existing default About-page assignment now renders scoped, editable Sites sections locally while other native page content is preserved. [Assignment QA](docs/qa/sites-about-default-assignment.md) records 189 passing rendering checks and the remaining native Shopify verification.
+
+Existing single-product suffixes now have product-specific editable source scent/value sections and native comparisons. [Single-product QA](docs/qa/sites-assigned-single-product-templates.md) records 196 checks and remaining native/runtime requirements.
+
+Seven bundle products now have independent editable native-product pack, scent, value and source-art bindings on the shared default template. [Bundle QA](docs/qa/sites-bundle-product-bindings.md) records 222 checks and native/runtime limits.
+
+Judge.me native product blocks/core embed and cart-page review placement are prepared locally from the protected export. [App migration QA](docs/qa/sites-review-app-migration.md) records 224 rendering checks, nine configuration bindings and pending native integration.
+
+Original first-gallery framing covers all nine products with merchant overrides and native media retained. [Gallery QA](docs/qa/sites-source-purchase-gallery.md) records 236 checks and responsive local navigation; native Shopify and Phase 4/5 gates remain open.

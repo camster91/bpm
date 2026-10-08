@@ -1,0 +1,212 @@
+{% assign story = section.settings %}{% assign matched_story = nil %}{% if section.settings.heading == blank %}{% for item in section.blocks %}{% if item.type == 'product_story' and item.settings.product != blank and item.settings.product.id != blank and product.id != blank and item.settings.product.id == product.id %}{% assign story = item.settings %}{% assign matched_story = item %}{% break %}{% endif %}{% endfor %}{% endif %}
+{% if story.heading != blank %}
+{{ 'bpm-pdp.css' | asset_url | stylesheet_tag }}
+<section class="bpm-pdp scent-story wrap" {{ matched_story.shopify_attributes }}>
+  {% if story.image != blank %}<div class="scent-photo">{{ story.image | image_url: width: 1200 | image_tag: widths: '500,800,1200', sizes: '(max-width:760px) 90vw,45vw', loading: 'lazy', alt: story.image.alt }}</div>{% else %}{% assign source_art_file = nil %}{% assign source_art_width = 1255 %}{% assign source_art_height = 1375 %}{% case story.source_art %}{% when 'bergamot' %}{% assign source_art_file = 'bpm-sites-open-bergamot.svg' %}{% when 'unscented' %}{% assign source_art_file = 'bpm-sites-open-unscented.svg' %}{% when '15222327476596' %}{% assign source_art_file = 'bpm-sites-open-15222327476596.svg' %}{% assign source_art_width = 757 %}{% assign source_art_height = 1203 %}{% when '15222328361332' %}{% assign source_art_file = 'bpm-sites-open-15222328361332.svg' %}{% assign source_art_width = 768 %}{% assign source_art_height = 1166 %}{% when '15222329180532' %}{% assign source_art_file = 'bpm-sites-open-15222329180532.svg' %}{% assign source_art_width = 756 %}{% assign source_art_height = 1258 %}{% when '15222739599732' %}{% assign source_art_file = 'bpm-sites-open-15222739599732.svg' %}{% assign source_art_width = 773 %}{% assign source_art_height = 1175 %}{% when '15141686444404' %}{% assign source_art_file = 'bpm-sites-open-15141686444404.svg' %}{% assign source_art_width = 920 %}{% assign source_art_height = 642 %}{% when '15141668815220' %}{% assign source_art_file = 'bpm-sites-open-15141668815220.svg' %}{% assign source_art_width = 957 %}{% assign source_art_height = 634 %}{% when '15141732581748' %}{% assign source_art_file = 'bpm-sites-open-15141732581748.svg' %}{% assign source_art_width = 910 %}{% assign source_art_height = 638 %}{% endcase %}{% if source_art_file != blank %}<div class="scent-photo"><img src="{{ source_art_file | asset_url }}" width="{{ source_art_width }}" height="{{ source_art_height }}" loading="lazy" alt="{{ story.source_art_alt | escape }}"></div>{% endif %}{% endif %}
+  <div><p class="eyebrow">{{ section.settings.eyebrow | escape }}</p><h2>{{ story.heading | escape | newline_to_br }}</h2><p class="lead">{{ story.intro | escape }}</p><div class="scent-notes">{% if matched_story != nil %}{% for i in (1..3) %}{% assign note_key = 'note_' | append: i %}{% if story[note_key] != blank %}<span>{{ story[note_key] | escape }}</span>{% endif %}{% endfor %}{% else %}{% for block in section.blocks %}{% if block.settings.note != blank %}<span {{ block.shopify_attributes }}>{{ block.settings.note | escape }}</span>{% endif %}{% endfor %}{% endif %}</div>{% if story.fine != blank %}<p class="fine">{{ story.fine | escape }}</p>{% endif %}</div>
+</section>
+{% endif %}
+{% schema %}
+{
+  "name": "Bpm Scent story",
+  "settings": [
+    {
+      "type": "select",
+      "id": "source_art",
+      "label": "Original Sites open-pack artwork",
+      "default": "native",
+      "options": [
+        {
+          "value": "native",
+          "label": "Uploaded image only"
+        },
+        {
+          "value": "bergamot",
+          "label": "Bergamot & Lime open pack"
+        },
+        {
+          "value": "unscented",
+          "label": "Unscented open pack"
+        },
+        {
+          "value": "15222327476596",
+          "label": "four-on-the-floor-mixed-scent-4-tube-deodorant-bun"
+        },
+        {
+          "value": "15222328361332",
+          "label": "citrus-on-repeat-family-pack-4-tube-bergamot-lime-"
+        },
+        {
+          "value": "15222329180532",
+          "label": "silent-on-repeat-family-pack-4-tube-unscented-deod"
+        },
+        {
+          "value": "15222739599732",
+          "label": "3-4-time"
+        },
+        {
+          "value": "15141686444404",
+          "label": "silent-repeat"
+        },
+        {
+          "value": "15141668815220",
+          "label": "citrus-repeat"
+        },
+        {
+          "value": "15141732581748",
+          "label": "side-a-side-b"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "source_art_alt",
+      "label": "Original artwork description"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Original framed open-pack image"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "THE SCENT STORY"
+    },
+    {
+      "type": "textarea",
+      "id": "heading",
+      "label": "Product-specific heading"
+    },
+    {
+      "type": "textarea",
+      "id": "intro",
+      "label": "Approved scent description"
+    },
+    {
+      "type": "textarea",
+      "id": "fine",
+      "label": "Approved fragrance note"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "note",
+      "name": "Scent note",
+      "settings": [
+        {
+          "type": "text",
+          "id": "note",
+          "label": "Note"
+        }
+      ]
+    },
+    {
+      "type": "product_story",
+      "name": "Product scent story",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Product"
+        },
+        {
+          "type": "select",
+          "id": "source_art",
+          "label": "Original Sites open-pack artwork",
+          "default": "native",
+          "options": [
+            {
+              "value": "native",
+              "label": "Uploaded image only"
+            },
+            {
+              "value": "bergamot",
+              "label": "Bergamot & Lime open pack"
+            },
+            {
+              "value": "unscented",
+              "label": "Unscented open pack"
+            },
+            {
+              "value": "15222327476596",
+              "label": "four-on-the-floor-mixed-scent-4-tube-deodorant-bun"
+            },
+            {
+              "value": "15222328361332",
+              "label": "citrus-on-repeat-family-pack-4-tube-bergamot-lime-"
+            },
+            {
+              "value": "15222329180532",
+              "label": "silent-on-repeat-family-pack-4-tube-unscented-deod"
+            },
+            {
+              "value": "15222739599732",
+              "label": "3-4-time"
+            },
+            {
+              "value": "15141686444404",
+              "label": "silent-repeat"
+            },
+            {
+              "value": "15141668815220",
+              "label": "citrus-repeat"
+            },
+            {
+              "value": "15141732581748",
+              "label": "side-a-side-b"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "source_art_alt",
+          "label": "Original artwork description"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Original framed open-pack image"
+        },
+        {
+          "type": "textarea",
+          "id": "heading",
+          "label": "Product-specific heading"
+        },
+        {
+          "type": "textarea",
+          "id": "intro",
+          "label": "Approved scent description"
+        },
+        {
+          "type": "textarea",
+          "id": "fine",
+          "label": "Approved fragrance note"
+        },
+        {
+          "type": "text",
+          "id": "note_1",
+          "label": "Scent note 1"
+        },
+        {
+          "type": "text",
+          "id": "note_2",
+          "label": "Scent note 2"
+        },
+        {
+          "type": "text",
+          "id": "note_3",
+          "label": "Scent note 3"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 30,
+  "presets": [
+    {
+      "name": "Bpm Scent story"
+    }
+  ]
+}
+{% endschema %}

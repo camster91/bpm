@@ -1,0 +1,14 @@
+<article><header class="section wrap article-opening bpm-article-opening"><a href="{{ blog.url }}">← {{ blog.title | escape }}</a><p class="eyebrow"><time datetime="{{ article.published_at | date: '%Y-%m-%d' }}">{{ article.published_at | date: '%Y-%m-%d' }}</time></p><h1>{{ article.title | escape }}</h1></header><div class="section wrap article-body prose">{{ article.content }}</div>{% if section.settings.show_back_link %}<div class="section wrap"><a href="{{ blog.url }}">← {{ blog.title | escape }}</a></div>{% endif %}</article>
+{% schema %}
+{
+  "name": "Bpm Article",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_back_link",
+      "label": "Show return link after article",
+      "default": true
+    }
+  ]
+}
+{% endschema %}

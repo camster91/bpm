@@ -1,0 +1,215 @@
+{
+  "repository": "camster91/bpm",
+  "inspectedDate": "2026-10-08",
+  "issues": [
+    {
+      "number": 1,
+      "title": "Recover and validate the published BPM design-review baseline",
+      "state": "OPEN",
+      "url": "https://github.com/camster91/bpm/issues/1"
+    },
+    {
+      "number": 2,
+      "title": "Inventory and preserve BPM Figma assets",
+      "state": "OPEN",
+      "url": "https://github.com/camster91/bpm/issues/2"
+    },
+    {
+      "number": 3,
+      "title": "Establish Shopify theme development and rollback workflow",
+      "state": "OPEN",
+      "url": "https://github.com/camster91/bpm/issues/3"
+    },
+    {
+      "number": 4,
+      "title": "Audit Shopify apps and theme integration requirements",
+      "state": "OPEN",
+      "url": "https://github.com/camster91/bpm/issues/4"
+    },
+    {
+      "number": 5,
+      "title": "Implement BPM theme tokens and global chrome",
+      "state": "OPEN",
+      "url": "https://github.com/camster91/bpm/issues/5"
+    },
+    {
+      "number": 6,
+      "title": "Build reusable merchant-editable BPM Shopify sections",
+      "state": "OPEN",
+      "url": "https://github.com/camster91/bpm/issues/6"
+    },
+    {
+      "number": 7,
+      "title": "Rebuild the BPM product-detail template in Shopify",
+      "state": "OPEN",
+      "url": "https://github.com/camster91/bpm/issues/7"
+    },
+    {
+      "number": 8,
+      "title": "Epic: Rebuild BPM storefront templates and commerce UI",
+      "state": "OPEN",
+      "url": "https://github.com/camster91/bpm/issues/8"
+    },
+    {
+      "number": 9,
+      "title": "Epic: SEO, accessibility, performance, analytics and content hardening",
+      "state": "OPEN",
+      "url": "https://github.com/camster91/bpm/issues/9"
+    },
+    {
+      "number": 10,
+      "title": "Epic: Regression QA, release and rollback",
+      "state": "OPEN",
+      "url": "https://github.com/camster91/bpm/issues/10"
+    },
+    {
+      "number": 11,
+      "title": "BPM Shopify redesign \u2014 master implementation tracker",
+      "state": "OPEN",
+      "url": "https://github.com/camster91/bpm/issues/11"
+    },
+    {
+      "number": 13,
+      "title": "Audit current Shopify templates, content models and storefront behaviours",
+      "state": "OPEN",
+      "url": "https://github.com/camster91/bpm/issues/13"
+    },
+    {
+      "number": 14,
+      "title": "Define BPM content model, metafields and merchant editing strategy",
+      "state": "OPEN",
+      "url": "https://github.com/camster91/bpm/issues/14"
+    },
+    {
+      "number": 15,
+      "title": "Add Shopify Theme Check, linting and pull-request CI",
+      "state": "OPEN",
+      "url": "https://github.com/camster91/bpm/issues/15"
+    },
+    {
+      "number": 16,
+      "title": "Build BPM homepage template from reusable Shopify sections",
+      "state": "OPEN",
+      "url": "https://github.com/camster91/bpm/issues/16"
+    },
+    {
+      "number": 17,
+      "title": "Build collection, search and reusable product-card experience",
+      "state": "OPEN",
+      "url": "https://github.com/camster91/bpm/issues/17"
+    },
+    {
+      "number": 18,
+      "title": "Build About, Indigenous-owned, Contact and standard content templates",
+      "state": "OPEN",
+      "url": "https://github.com/camster91/bpm/issues/18"
+    },
+    {
+      "number": 19,
+      "title": "Build blog and article templates",
+      "state": "OPEN",
+      "url": "https://github.com/camster91/bpm/issues/19"
+    },
+    {
+      "number": 20,
+      "title": "Rebuild cart, cart drawer, search, account and localisation UI",
+      "state": "OPEN",
+      "url": "https://github.com/camster91/bpm/issues/20"
+    },
+    {
+      "number": 21,
+      "title": "Implement bundle, subscription and offer presentation",
+      "state": "OPEN",
+      "url": "https://github.com/camster91/bpm/issues/21"
+    },
+    {
+      "number": 22,
+      "title": "SEO and structured-data implementation",
+      "state": "OPEN",
+      "url": "https://github.com/camster91/bpm/issues/22"
+    },
+    {
+      "number": 23,
+      "title": "Accessibility pass to WCAG 2.2 AA basics",
+      "state": "OPEN",
+      "url": "https://github.com/camster91/bpm/issues/23"
+    },
+    {
+      "number": 24,
+      "title": "Performance and Core Web Vitals hardening",
+      "state": "OPEN",
+      "url": "https://github.com/camster91/bpm/issues/24"
+    },
+    {
+      "number": 25,
+      "title": "Analytics, pixels and conversion-event verification",
+      "state": "OPEN",
+      "url": "https://github.com/camster91/bpm/issues/25"
+    },
+    {
+      "number": 26,
+      "title": "Cross-device visual and interaction QA",
+      "state": "OPEN",
+      "url": "https://github.com/camster91/bpm/issues/26"
+    },
+    {
+      "number": 27,
+      "title": "Production release, rollback and post-launch verification",
+      "state": "OPEN",
+      "url": "https://github.com/camster91/bpm/issues/27"
+    },
+    {
+      "number": 28,
+      "title": "Reconcile Corey feedback and define design acceptance baseline",
+      "state": "OPEN",
+      "url": "https://github.com/camster91/bpm/issues/28"
+    },
+    {
+      "number": 29,
+      "title": "Verify product copy, claims, shipping and policy content before launch",
+      "state": "OPEN",
+      "url": "https://github.com/camster91/bpm/issues/29"
+    }
+  ],
+  "pullRequests": [
+    {
+      "headRefName": "recovery/chatgpt-site-baseline",
+      "isDraft": false,
+      "mergedAt": "2026-10-07T22:34:17Z",
+      "number": 12,
+      "state": "MERGED",
+      "title": "Recover BPM reference, audit Phase 0/1 and prepare theme baseline fixes",
+      "url": "https://github.com/camster91/bpm/pull/12"
+    }
+  ],
+  "recentCI": [
+    {
+      "conclusion": "success",
+      "databaseId": 37697028021,
+      "headBranch": "main",
+      "headSha": "168a5f2eff7afdd5f9bfb82e5ef053c44f315137",
+      "status": "completed",
+      "url": "https://github.com/camster91/bpm/actions/runs/37697028021",
+      "workflowName": "Reference checks"
+    },
+    {
+      "conclusion": "success",
+      "databaseId": 37696981844,
+      "headBranch": "recovery/chatgpt-site-baseline",
+      "headSha": "7d3e69456852332255849a973081a5bd044858c5",
+      "status": "completed",
+      "url": "https://github.com/camster91/bpm/actions/runs/37696981844",
+      "workflowName": "Reference checks"
+    },
+    {
+      "conclusion": "success",
+      "databaseId": 37696981777,
+      "headBranch": "recovery/chatgpt-site-baseline",
+      "headSha": "7d3e69456852332255849a973081a5bd044858c5",
+      "status": "completed",
+      "url": "https://github.com/camster91/bpm/actions/runs/37696981777",
+      "workflowName": "Reference checks"
+    }
+  ],
+  "remoteMutations": false
+}

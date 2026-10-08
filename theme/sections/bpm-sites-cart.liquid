@@ -1,0 +1,75 @@
+<section class="section wrap">
+  {% if section.settings.eyebrow != blank %}<p class="eyebrow">{{ section.settings.eyebrow | escape }}</p>{% endif %}
+  <h1>{{ section.settings.heading | escape }}</h1>
+</section>
+<section class="section wrap bpm-cart-body" aria-label="{{ 'general.bag' | t | escape }}">
+  {% if cart.item_count == 0 %}
+    <p>{{ 'cart.empty' | t }}</p>
+    <a class="button" href="{{ routes.all_products_collection_url }}">{{ 'cart.continue' | t }} <span aria-hidden="true">→</span></a>
+  {% else %}
+    <form action="{{ routes.cart_url }}" method="post" class="bag-layout">
+      <div>
+        {% for item in cart.items %}
+          <article class="cart-line">
+            <a class="bpm-cart-image" href="{{ item.url }}" aria-label="{{ item.product.title | escape }}">
+              {% if item.image %}{{ item.image | image_url: width: 300 | image_tag: loading: 'lazy', widths: '120,180,240,300', sizes: '(max-width: 760px) 90px, 120px', alt: item.product.title }}{% endif %}
+            </a>
+            <div>
+              <h3><a href="{{ item.url }}">{{ item.product.title | escape }}</a></h3>
+              {% unless item.product.has_only_default_variant %}<p>{{ item.variant.title | escape }}</p>{% endunless %}
+              {% if item.selling_plan_allocation %}<p>{{ item.selling_plan_allocation.selling_plan.name | escape }}</p>{% endif %}
+              {% if item.item_components.size > 0 %}
+                <ul class="bpm-cart-components" aria-label="{{ 'cart.bundle_contents' | t | escape }}">
+                  {% for component in item.item_components %}
+                    <li>{{ component.quantity }} × {{ component.product.title | escape }}{% unless component.product.has_only_default_variant %} — {{ component.variant.title | escape }}{% endunless %}</li>
+                  {% endfor %}
+                </ul>
+              {% endif %}
+              {% if item.error_message != blank %}<p id="CartLineError-{{ section.id }}-{{ forloop.index }}" class="bpm-cart-error" role="alert">{{ item.error_message | escape }}</p>{% endif %}
+              {% for property in item.properties %}
+                {% assign property_prefix = property.first | slice: 0 %}
+                {% if property.last != blank and property_prefix != '_' %}<p>{{ property.first | escape }}: {{ property.last | escape }}</p>{% endif %}
+              {% endfor %}
+              <p class="bpm-cart-price">
+                <span class="bpm-visually-hidden">{{ 'cart.line_total' | t }} </span>
+                {% if item.original_line_price > item.final_line_price %}<s><span class="bpm-visually-hidden">{{ 'cart.original_total' | t }} </span>{{ item.original_line_price | money_with_currency }}</s> {% endif %}
+                {{ item.final_line_price | money_with_currency }}
+              </p>
+              {% if item.line_level_discount_allocations.size > 0 %}
+                <ul class="bpm-cart-discounts" aria-label="{{ 'cart.discounts' | t | escape }}">
+                  {% for discount in item.line_level_discount_allocations %}<li>{{ discount.discount_application.title | escape }} (−{{ discount.amount | money_with_currency }})</li>{% endfor %}
+                </ul>
+              {% endif %}
+              <div class="cart-controls">
+                <label for="Quantity-{{ section.id }}-{{ forloop.index }}">{{ 'cart.quantity' | t }}</label>
+                <input id="Quantity-{{ section.id }}-{{ forloop.index }}" type="number" name="updates[]" value="{{ item.quantity }}" min="{{ item.variant.quantity_rule.min | default: 1 }}" step="{{ item.variant.quantity_rule.increment | default: 1 }}"{% if item.variant.quantity_rule.max %} max="{{ item.variant.quantity_rule.max }}"{% endif %}{% if item.error_message != blank %} aria-describedby="CartLineError-{{ section.id }}-{{ forloop.index }}"{% endif %} aria-label="{{ 'cart.quantity_for' | t: title: item.product.title | escape }}">
+                <a href="{{ item.url_to_remove }}" aria-label="{{ 'cart.remove_item' | t: title: item.product.title | escape }}">{{ 'cart.remove' | t }}</a>
+              </div>
+            </div>
+          </article>
+        {% endfor %}
+        <button class="button" type="submit" name="update" value="update">{{ 'cart.update' | t }}</button>
+      </div>
+      <aside class="cart-summary" aria-label="{{ 'cart.summary' | t | escape }}">
+        <h2>{{ 'cart.summary' | t }}</h2>
+        <dl class="bpm-cart-totals">
+          <div><dt>{{ 'cart.subtotal' | t }}</dt><dd>{{ cart.items_subtotal_price | money_with_currency }}</dd></div>
+          {% for discount in cart.cart_level_discount_applications %}<div><dt>{{ discount.title | escape }}</dt><dd>−{{ discount.total_allocated_amount | money_with_currency }}</dd></div>{% endfor %}
+          <div class="bpm-cart-grand-total"><dt>{{ 'cart.total' | t }}</dt><dd>{{ cart.total_price | money_with_currency }}</dd></div>
+        </dl>
+        <p>{% if cart.taxes_included %}{{ 'cart.taxes_included' | t }}{% else %}{{ 'cart.taxes_checkout' | t }}{% endif %}{% if cart.requires_shipping %} {{ 'cart.shipping_checkout' | t }}{% endif %}</p>
+        <button class="button dark" type="submit" name="checkout" value="checkout">{{ 'cart.checkout' | t }} <span aria-hidden="true">→</span></button>
+        <a class="button" href="{{ routes.all_products_collection_url }}">{{ 'cart.continue' | t }} <span aria-hidden="true">→</span></a>
+      </aside>
+    </form>
+  {% endif %}
+</section>
+{% schema %}
+{
+  "name": "Bpm Bag",
+  "settings": [
+    {"type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "YOUR ROTATION"},
+    {"type": "text", "id": "heading", "label": "Heading", "default": "In the bag."}
+  ]
+}
+{% endschema %}

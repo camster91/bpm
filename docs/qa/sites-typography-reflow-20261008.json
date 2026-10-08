@@ -1,0 +1,840 @@
+{
+  "scope": "Local fabricated-data reflow following section lead typography correction, not full visual/native/device acceptance",
+  "themeCommit": "460c33811a6c4fb7e8272845968ea11b645be30a",
+  "rows": [
+    {
+      "page": "/sites-home-bindings.html",
+      "width": 320,
+      "h1Count": 1,
+      "leads": [
+        {
+          "fontSize": "21px",
+          "width": 272
+        },
+        {
+          "fontSize": "21px",
+          "width": 272
+        },
+        {
+          "fontSize": "21px",
+          "width": 272
+        },
+        {
+          "fontSize": "21px",
+          "width": 272
+        },
+        {
+          "fontSize": "21px",
+          "width": 272
+        },
+        {
+          "fontSize": "21px",
+          "width": 272
+        },
+        {
+          "fontSize": "21px",
+          "width": 272
+        }
+      ],
+      "outsideFields": [],
+      "scrollWidth": 320,
+      "viewport": 320
+    },
+    {
+      "page": "/sites-home-bindings.html",
+      "width": 375,
+      "h1Count": 1,
+      "leads": [
+        {
+          "fontSize": "21px",
+          "width": 327
+        },
+        {
+          "fontSize": "21px",
+          "width": 327
+        },
+        {
+          "fontSize": "21px",
+          "width": 327
+        },
+        {
+          "fontSize": "21px",
+          "width": 327
+        },
+        {
+          "fontSize": "21px",
+          "width": 327
+        },
+        {
+          "fontSize": "21px",
+          "width": 327
+        },
+        {
+          "fontSize": "21px",
+          "width": 327
+        }
+      ],
+      "outsideFields": [],
+      "scrollWidth": 375,
+      "viewport": 375
+    },
+    {
+      "page": "/sites-home-bindings.html",
+      "width": 680,
+      "h1Count": 1,
+      "leads": [
+        {
+          "fontSize": "21px",
+          "width": 618.8125
+        },
+        {
+          "fontSize": "21px",
+          "width": 618.8125
+        },
+        {
+          "fontSize": "21px",
+          "width": 618.8125
+        },
+        {
+          "fontSize": "21px",
+          "width": 618.8125
+        },
+        {
+          "fontSize": "21px",
+          "width": 618.8125
+        },
+        {
+          "fontSize": "21px",
+          "width": 618.8125
+        },
+        {
+          "fontSize": "21px",
+          "width": 618.8125
+        }
+      ],
+      "outsideFields": [],
+      "scrollWidth": 680,
+      "viewport": 680
+    },
+    {
+      "page": "/sites-home-bindings.html",
+      "width": 820,
+      "h1Count": 1,
+      "leads": [
+        {
+          "fontSize": "20px",
+          "width": 502.203125
+        },
+        {
+          "fontSize": "20px",
+          "width": 640
+        },
+        {
+          "fontSize": "20px",
+          "width": 615.5546875
+        },
+        {
+          "fontSize": "20px",
+          "width": 640
+        },
+        {
+          "fontSize": "20px",
+          "width": 640
+        },
+        {
+          "fontSize": "20px",
+          "width": 640
+        },
+        {
+          "fontSize": "20px",
+          "width": 640
+        }
+      ],
+      "outsideFields": [],
+      "scrollWidth": 820,
+      "viewport": 820
+    },
+    {
+      "page": "/sites-home-bindings.html",
+      "width": 1000,
+      "h1Count": 1,
+      "leads": [
+        {
+          "fontSize": "20px",
+          "width": 594.6015625
+        },
+        {
+          "fontSize": "20px",
+          "width": 435
+        },
+        {
+          "fontSize": "20px",
+          "width": 640
+        },
+        {
+          "fontSize": "20px",
+          "width": 435
+        },
+        {
+          "fontSize": "20px",
+          "width": 435
+        },
+        {
+          "fontSize": "20px",
+          "width": 527.6328125
+        },
+        {
+          "fontSize": "20px",
+          "width": 435
+        }
+      ],
+      "outsideFields": [],
+      "scrollWidth": 1000,
+      "viewport": 1000
+    },
+    {
+      "page": "/sites-home-bindings.html",
+      "width": 1440,
+      "h1Count": 1,
+      "leads": [
+        {
+          "fontSize": "23px",
+          "width": 640
+        },
+        {
+          "fontSize": "23px",
+          "width": 620
+        },
+        {
+          "fontSize": "23px",
+          "width": 640
+        },
+        {
+          "fontSize": "23px",
+          "width": 620
+        },
+        {
+          "fontSize": "23px",
+          "width": 620
+        },
+        {
+          "fontSize": "23px",
+          "width": 640
+        },
+        {
+          "fontSize": "23px",
+          "width": 620
+        }
+      ],
+      "outsideFields": [],
+      "scrollWidth": 1440,
+      "viewport": 1440
+    },
+    {
+      "page": "/sites-about.html",
+      "width": 320,
+      "h1Count": 1,
+      "leads": [
+        {
+          "fontSize": "21px",
+          "width": 272
+        }
+      ],
+      "outsideFields": [],
+      "scrollWidth": 320,
+      "viewport": 320
+    },
+    {
+      "page": "/sites-about.html",
+      "width": 375,
+      "h1Count": 1,
+      "leads": [
+        {
+          "fontSize": "21px",
+          "width": 327
+        }
+      ],
+      "outsideFields": [],
+      "scrollWidth": 375,
+      "viewport": 375
+    },
+    {
+      "page": "/sites-about.html",
+      "width": 680,
+      "h1Count": 1,
+      "leads": [
+        {
+          "fontSize": "21px",
+          "width": 618.8125
+        }
+      ],
+      "outsideFields": [],
+      "scrollWidth": 680,
+      "viewport": 680
+    },
+    {
+      "page": "/sites-about.html",
+      "width": 820,
+      "h1Count": 1,
+      "leads": [
+        {
+          "fontSize": "20px",
+          "width": 640
+        }
+      ],
+      "outsideFields": [],
+      "scrollWidth": 820,
+      "viewport": 820
+    },
+    {
+      "page": "/sites-about.html",
+      "width": 1000,
+      "h1Count": 1,
+      "leads": [
+        {
+          "fontSize": "20px",
+          "width": 435
+        }
+      ],
+      "outsideFields": [],
+      "scrollWidth": 1000,
+      "viewport": 1000
+    },
+    {
+      "page": "/sites-about.html",
+      "width": 1440,
+      "h1Count": 1,
+      "leads": [
+        {
+          "fontSize": "23px",
+          "width": 620
+        }
+      ],
+      "outsideFields": [],
+      "scrollWidth": 1440,
+      "viewport": 1440
+    },
+    {
+      "page": "/sites-article-0.html",
+      "width": 320,
+      "h1Count": 1,
+      "leads": [],
+      "outsideFields": [],
+      "scrollWidth": 320,
+      "viewport": 320
+    },
+    {
+      "page": "/sites-article-0.html",
+      "width": 375,
+      "h1Count": 1,
+      "leads": [],
+      "outsideFields": [],
+      "scrollWidth": 375,
+      "viewport": 375
+    },
+    {
+      "page": "/sites-article-0.html",
+      "width": 680,
+      "h1Count": 1,
+      "leads": [],
+      "outsideFields": [],
+      "scrollWidth": 680,
+      "viewport": 680
+    },
+    {
+      "page": "/sites-article-0.html",
+      "width": 820,
+      "h1Count": 1,
+      "leads": [],
+      "outsideFields": [],
+      "scrollWidth": 820,
+      "viewport": 820
+    },
+    {
+      "page": "/sites-article-0.html",
+      "width": 1000,
+      "h1Count": 1,
+      "leads": [],
+      "outsideFields": [],
+      "scrollWidth": 1000,
+      "viewport": 1000
+    },
+    {
+      "page": "/sites-article-0.html",
+      "width": 1440,
+      "h1Count": 1,
+      "leads": [],
+      "outsideFields": [],
+      "scrollWidth": 1440,
+      "viewport": 1440
+    },
+    {
+      "page": "/sites-cart-empty.html",
+      "width": 320,
+      "h1Count": 1,
+      "leads": [],
+      "outsideFields": [],
+      "scrollWidth": 320,
+      "viewport": 320
+    },
+    {
+      "page": "/sites-cart-empty.html",
+      "width": 375,
+      "h1Count": 1,
+      "leads": [],
+      "outsideFields": [],
+      "scrollWidth": 375,
+      "viewport": 375
+    },
+    {
+      "page": "/sites-cart-empty.html",
+      "width": 680,
+      "h1Count": 1,
+      "leads": [],
+      "outsideFields": [],
+      "scrollWidth": 680,
+      "viewport": 680
+    },
+    {
+      "page": "/sites-cart-empty.html",
+      "width": 820,
+      "h1Count": 1,
+      "leads": [],
+      "outsideFields": [],
+      "scrollWidth": 820,
+      "viewport": 820
+    },
+    {
+      "page": "/sites-cart-empty.html",
+      "width": 1000,
+      "h1Count": 1,
+      "leads": [],
+      "outsideFields": [],
+      "scrollWidth": 1000,
+      "viewport": 1000
+    },
+    {
+      "page": "/sites-cart-empty.html",
+      "width": 1440,
+      "h1Count": 1,
+      "leads": [],
+      "outsideFields": [],
+      "scrollWidth": 1440,
+      "viewport": 1440
+    },
+    {
+      "page": "/sites-cart.html",
+      "width": 320,
+      "h1Count": 1,
+      "leads": [],
+      "outsideFields": [],
+      "scrollWidth": 320,
+      "viewport": 320
+    },
+    {
+      "page": "/sites-cart.html",
+      "width": 375,
+      "h1Count": 1,
+      "leads": [],
+      "outsideFields": [],
+      "scrollWidth": 375,
+      "viewport": 375
+    },
+    {
+      "page": "/sites-cart.html",
+      "width": 680,
+      "h1Count": 1,
+      "leads": [],
+      "outsideFields": [],
+      "scrollWidth": 680,
+      "viewport": 680
+    },
+    {
+      "page": "/sites-cart.html",
+      "width": 820,
+      "h1Count": 1,
+      "leads": [],
+      "outsideFields": [],
+      "scrollWidth": 820,
+      "viewport": 820
+    },
+    {
+      "page": "/sites-cart.html",
+      "width": 1000,
+      "h1Count": 1,
+      "leads": [],
+      "outsideFields": [],
+      "scrollWidth": 1000,
+      "viewport": 1000
+    },
+    {
+      "page": "/sites-cart.html",
+      "width": 1440,
+      "h1Count": 1,
+      "leads": [],
+      "outsideFields": [],
+      "scrollWidth": 1440,
+      "viewport": 1440
+    },
+    {
+      "page": "/sites-collection-bindings.html",
+      "width": 320,
+      "h1Count": 1,
+      "leads": [
+        {
+          "fontSize": "21px",
+          "width": 272
+        }
+      ],
+      "outsideFields": [],
+      "scrollWidth": 320,
+      "viewport": 320
+    },
+    {
+      "page": "/sites-collection-bindings.html",
+      "width": 375,
+      "h1Count": 1,
+      "leads": [
+        {
+          "fontSize": "21px",
+          "width": 327
+        }
+      ],
+      "outsideFields": [],
+      "scrollWidth": 375,
+      "viewport": 375
+    },
+    {
+      "page": "/sites-collection-bindings.html",
+      "width": 680,
+      "h1Count": 1,
+      "leads": [
+        {
+          "fontSize": "21px",
+          "width": 618.8125
+        }
+      ],
+      "outsideFields": [],
+      "scrollWidth": 680,
+      "viewport": 680
+    },
+    {
+      "page": "/sites-collection-bindings.html",
+      "width": 820,
+      "h1Count": 1,
+      "leads": [
+        {
+          "fontSize": "20px",
+          "width": 640
+        }
+      ],
+      "outsideFields": [],
+      "scrollWidth": 820,
+      "viewport": 820
+    },
+    {
+      "page": "/sites-collection-bindings.html",
+      "width": 1000,
+      "h1Count": 1,
+      "leads": [
+        {
+          "fontSize": "20px",
+          "width": 640
+        }
+      ],
+      "outsideFields": [],
+      "scrollWidth": 1000,
+      "viewport": 1000
+    },
+    {
+      "page": "/sites-collection-bindings.html",
+      "width": 1440,
+      "h1Count": 1,
+      "leads": [
+        {
+          "fontSize": "23px",
+          "width": 640
+        }
+      ],
+      "outsideFields": [],
+      "scrollWidth": 1440,
+      "viewport": 1440
+    },
+    {
+      "page": "/sites-contact.html",
+      "width": 320,
+      "h1Count": 1,
+      "leads": [
+        {
+          "fontSize": "21px",
+          "width": 272
+        }
+      ],
+      "outsideFields": [],
+      "scrollWidth": 320,
+      "viewport": 320
+    },
+    {
+      "page": "/sites-contact.html",
+      "width": 375,
+      "h1Count": 1,
+      "leads": [
+        {
+          "fontSize": "21px",
+          "width": 327
+        }
+      ],
+      "outsideFields": [],
+      "scrollWidth": 375,
+      "viewport": 375
+    },
+    {
+      "page": "/sites-contact.html",
+      "width": 680,
+      "h1Count": 1,
+      "leads": [
+        {
+          "fontSize": "21px",
+          "width": 618.8125
+        }
+      ],
+      "outsideFields": [],
+      "scrollWidth": 680,
+      "viewport": 680
+    },
+    {
+      "page": "/sites-contact.html",
+      "width": 820,
+      "h1Count": 1,
+      "leads": [
+        {
+          "fontSize": "20px",
+          "width": 640
+        }
+      ],
+      "outsideFields": [],
+      "scrollWidth": 820,
+      "viewport": 820
+    },
+    {
+      "page": "/sites-contact.html",
+      "width": 1000,
+      "h1Count": 1,
+      "leads": [
+        {
+          "fontSize": "20px",
+          "width": 640
+        }
+      ],
+      "outsideFields": [],
+      "scrollWidth": 1000,
+      "viewport": 1000
+    },
+    {
+      "page": "/sites-contact.html",
+      "width": 1440,
+      "h1Count": 1,
+      "leads": [
+        {
+          "fontSize": "23px",
+          "width": 640
+        }
+      ],
+      "outsideFields": [],
+      "scrollWidth": 1440,
+      "viewport": 1440
+    },
+    {
+      "page": "/sites-policies.html",
+      "width": 320,
+      "h1Count": 1,
+      "leads": [
+        {
+          "fontSize": "21px",
+          "width": 272
+        }
+      ],
+      "outsideFields": [],
+      "scrollWidth": 320,
+      "viewport": 320
+    },
+    {
+      "page": "/sites-policies.html",
+      "width": 375,
+      "h1Count": 1,
+      "leads": [
+        {
+          "fontSize": "21px",
+          "width": 327
+        }
+      ],
+      "outsideFields": [],
+      "scrollWidth": 375,
+      "viewport": 375
+    },
+    {
+      "page": "/sites-policies.html",
+      "width": 680,
+      "h1Count": 1,
+      "leads": [
+        {
+          "fontSize": "21px",
+          "width": 618.8125
+        }
+      ],
+      "outsideFields": [],
+      "scrollWidth": 680,
+      "viewport": 680
+    },
+    {
+      "page": "/sites-policies.html",
+      "width": 820,
+      "h1Count": 1,
+      "leads": [
+        {
+          "fontSize": "20px",
+          "width": 640
+        }
+      ],
+      "outsideFields": [],
+      "scrollWidth": 820,
+      "viewport": 820
+    },
+    {
+      "page": "/sites-policies.html",
+      "width": 1000,
+      "h1Count": 1,
+      "leads": [
+        {
+          "fontSize": "20px",
+          "width": 640
+        }
+      ],
+      "outsideFields": [],
+      "scrollWidth": 1000,
+      "viewport": 1000
+    },
+    {
+      "page": "/sites-policies.html",
+      "width": 1440,
+      "h1Count": 1,
+      "leads": [
+        {
+          "fontSize": "23px",
+          "width": 640
+        }
+      ],
+      "outsideFields": [],
+      "scrollWidth": 1440,
+      "viewport": 1440
+    },
+    {
+      "page": "/sites-product-bergamot-lime.html",
+      "width": 320,
+      "h1Count": 1,
+      "leads": [],
+      "outsideFields": [],
+      "scrollWidth": 320,
+      "viewport": 320
+    },
+    {
+      "page": "/sites-product-bergamot-lime.html",
+      "width": 375,
+      "h1Count": 1,
+      "leads": [],
+      "outsideFields": [],
+      "scrollWidth": 375,
+      "viewport": 375
+    },
+    {
+      "page": "/sites-product-bergamot-lime.html",
+      "width": 680,
+      "h1Count": 1,
+      "leads": [],
+      "outsideFields": [],
+      "scrollWidth": 680,
+      "viewport": 680
+    },
+    {
+      "page": "/sites-product-bergamot-lime.html",
+      "width": 820,
+      "h1Count": 1,
+      "leads": [],
+      "outsideFields": [],
+      "scrollWidth": 820,
+      "viewport": 820
+    },
+    {
+      "page": "/sites-product-bergamot-lime.html",
+      "width": 1000,
+      "h1Count": 1,
+      "leads": [],
+      "outsideFields": [],
+      "scrollWidth": 1000,
+      "viewport": 1000
+    },
+    {
+      "page": "/sites-product-bergamot-lime.html",
+      "width": 1440,
+      "h1Count": 1,
+      "leads": [],
+      "outsideFields": [],
+      "scrollWidth": 1440,
+      "viewport": 1440
+    },
+    {
+      "page": "/sites-search.html",
+      "width": 320,
+      "h1Count": 1,
+      "leads": [],
+      "outsideFields": [],
+      "scrollWidth": 320,
+      "viewport": 320
+    },
+    {
+      "page": "/sites-search.html",
+      "width": 375,
+      "h1Count": 1,
+      "leads": [],
+      "outsideFields": [],
+      "scrollWidth": 375,
+      "viewport": 375
+    },
+    {
+      "page": "/sites-search.html",
+      "width": 680,
+      "h1Count": 1,
+      "leads": [],
+      "outsideFields": [],
+      "scrollWidth": 680,
+      "viewport": 680
+    },
+    {
+      "page": "/sites-search.html",
+      "width": 820,
+      "h1Count": 1,
+      "leads": [],
+      "outsideFields": [],
+      "scrollWidth": 820,
+      "viewport": 820
+    },
+    {
+      "page": "/sites-search.html",
+      "width": 1000,
+      "h1Count": 1,
+      "leads": [],
+      "outsideFields": [],
+      "scrollWidth": 1000,
+      "viewport": 1000
+    },
+    {
+      "page": "/sites-search.html",
+      "width": 1440,
+      "h1Count": 1,
+      "leads": [],
+      "outsideFields": [],
+      "scrollWidth": 1440,
+      "viewport": 1440
+    }
+  ]
+}

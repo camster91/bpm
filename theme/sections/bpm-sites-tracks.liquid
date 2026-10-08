@@ -1,0 +1,157 @@
+<section class="section wrap">
+  <div class="section-heading"><div class="intro-copy">
+    {% if section.settings.eyebrow != blank %}<p class="eyebrow">{{ section.settings.eyebrow | escape }}</p>{% endif %}
+    {% if section.settings.heading != blank %}<h2>{{ section.settings.heading | escape | newline_to_br }}</h2>{% endif %}
+    {% if section.settings.body != blank %}<p class="lead">{{ section.settings.body | escape }}</p>{% endif %}
+  </div>{% if section.settings.button_label != blank %}{% assign destination = section.settings.collection.url | default: routes.all_products_collection_url %}<a class="button" href="{{ destination }}">{{ section.settings.button_label | escape }}<span aria-hidden="true">→</span></a>{% endif %}</div>
+  <div class="track-grid two">{% for block in section.blocks %}{% if block.settings.product != blank %}<div {{ block.shopify_attributes }}>{% render 'bpm-sites-card', product: block.settings.product, display_title: block.settings.display_title, source_pack: block.settings.source_pack, image: block.settings.image, pack_label: block.settings.pack_label, summary: block.settings.summary, background: block.settings.background, button_label: section.settings.product_label, images: images, native_delivery: settings.native_source_delivery %}</div>{% endif %}{% endfor %}</div>
+</section>
+{% schema %}
+{
+  "name": "BPM Sites product tracks",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "YOUR DAILY ROTATION"
+    },
+    {
+      "type": "textarea",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Two scents.\nOne standard."
+    },
+    {
+      "type": "text",
+      "id": "body",
+      "label": "Copy",
+      "default": "Bright citrus or quietly unscented. Same considered formula."
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Collection link",
+      "default": "Shop all tracks"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Collection link destination"
+    },
+    {
+      "type": "text",
+      "id": "product_label",
+      "label": "Product link label",
+      "default": "Meet your track"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product",
+      "name": "Product track",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Product"
+        },
+        {
+          "type": "text",
+          "id": "display_title",
+          "label": "Display title override",
+          "info": "Optional short card heading. Leave blank to use the native product title. Does not change the product record."
+        },
+        {
+          "type": "select",
+          "id": "source_pack",
+          "label": "Original Sites carton composition",
+          "default": "native",
+          "options": [
+            {
+              "value": "native",
+              "label": "Native product media"
+            },
+            {
+              "value": "1-0",
+              "label": "One citrus carton"
+            },
+            {
+              "value": "0-1",
+              "label": "One unscented carton"
+            },
+            {
+              "value": "2-0",
+              "label": "Two citrus cartons"
+            },
+            {
+              "value": "0-2",
+              "label": "Two unscented cartons"
+            },
+            {
+              "value": "1-1",
+              "label": "One of each scent"
+            },
+            {
+              "value": "4-0",
+              "label": "Four citrus cartons"
+            },
+            {
+              "value": "0-4",
+              "label": "Four unscented cartons"
+            },
+            {
+              "value": "2-2",
+              "label": "Two of each scent"
+            },
+            {
+              "value": "3-1",
+              "label": "Three citrus, one unscented"
+            }
+          ],
+          "info": "Use only for the matching product pack. Uploaded image overrides take priority."
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Framed photo override",
+          "info": "Use the original crop specified in the Sites source for exact packaging framing."
+        },
+        {
+          "type": "text",
+          "id": "pack_label",
+          "label": "Verified pack description"
+        },
+        {
+          "type": "text",
+          "id": "summary",
+          "label": "Product summary"
+        },
+        {
+          "type": "color",
+          "id": "background",
+          "label": "Image background",
+          "default": "#acb228"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 12,
+  "presets": [
+    {
+      "name": "BPM Sites product tracks",
+      "blocks": [
+        {
+          "type": "product"
+        },
+        {
+          "type": "product",
+          "settings": {
+            "background": "#228782"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

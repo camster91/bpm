@@ -1,0 +1,177 @@
+{
+  "scope": "Local fabricated preview labels, browser validation and keyboard controls only. No form submitted; no native success/error or search result behavior proved.",
+  "themeCommit": "0670942bb64d25493084198f62881fc80eeacf21",
+  "contact": [
+    {
+      "state": "empty",
+      "data": {
+        "fields": [
+          {
+            "labels": [
+              "Your name"
+            ],
+            "missing": true,
+            "name": "contact[name]",
+            "typeMismatch": false,
+            "valid": false
+          },
+          {
+            "labels": [
+              "Email"
+            ],
+            "missing": true,
+            "name": "contact[email]",
+            "typeMismatch": false,
+            "valid": false
+          },
+          {
+            "labels": [
+              "What’s on your mind?"
+            ],
+            "missing": false,
+            "name": "contact[topic]",
+            "typeMismatch": false,
+            "valid": true
+          },
+          {
+            "labels": [
+              "Your message"
+            ],
+            "missing": true,
+            "name": "contact[body]",
+            "typeMismatch": false,
+            "valid": false
+          }
+        ],
+        "submitDisabled": true
+      }
+    },
+    {
+      "state": "invalid-email",
+      "data": {
+        "fields": [
+          {
+            "labels": [
+              "Your name"
+            ],
+            "missing": false,
+            "name": "contact[name]",
+            "typeMismatch": false,
+            "valid": true
+          },
+          {
+            "labels": [
+              "Email"
+            ],
+            "missing": false,
+            "name": "contact[email]",
+            "typeMismatch": true,
+            "valid": false
+          },
+          {
+            "labels": [
+              "What’s on your mind?"
+            ],
+            "missing": false,
+            "name": "contact[topic]",
+            "typeMismatch": false,
+            "valid": true
+          },
+          {
+            "labels": [
+              "Your message"
+            ],
+            "missing": false,
+            "name": "contact[body]",
+            "typeMismatch": false,
+            "valid": true
+          }
+        ],
+        "submitDisabled": true
+      }
+    },
+    {
+      "state": "valid-fields",
+      "data": {
+        "fields": [
+          {
+            "labels": [
+              "Your name"
+            ],
+            "missing": false,
+            "name": "contact[name]",
+            "typeMismatch": false,
+            "valid": true
+          },
+          {
+            "labels": [
+              "Email"
+            ],
+            "missing": false,
+            "name": "contact[email]",
+            "typeMismatch": false,
+            "valid": true
+          },
+          {
+            "labels": [
+              "What’s on your mind?"
+            ],
+            "missing": false,
+            "name": "contact[topic]",
+            "typeMismatch": false,
+            "valid": true
+          },
+          {
+            "labels": [
+              "Your message"
+            ],
+            "missing": false,
+            "name": "contact[body]",
+            "typeMismatch": false,
+            "valid": true
+          }
+        ],
+        "submitDisabled": true
+      }
+    },
+    {
+      "state": "name-tab",
+      "focus": "contact[email]"
+    },
+    {
+      "state": "email-tab",
+      "focus": "contact[topic]"
+    },
+    {
+      "state": "topic-tab",
+      "focus": "contact[body]"
+    }
+  ],
+  "search": [
+    {
+      "state": "empty",
+      "data": {
+        "action": "/sites-search.html",
+        "labels": [
+          "Find a scent, track or story"
+        ],
+        "method": "get",
+        "missing": true,
+        "submitDisabled": true,
+        "valid": false
+      }
+    },
+    {
+      "state": "query",
+      "data": {
+        "method": "get",
+        "valid": true,
+        "value": "citrus & lime"
+      }
+    },
+    {
+      "state": "sort",
+      "value": "sort_by"
+    }
+  ]
+}

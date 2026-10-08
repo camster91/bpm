@@ -1,0 +1,68 @@
+{
+  "scope": "Isolated shell with mocked provider note, no real form/provider/discount/email",
+  "rows": [
+    {
+      "width": 375,
+      "opened": {
+        "fits": true,
+        "focus": "bpm-welcome-close",
+        "forms": 0,
+        "labelledBy": "Welcome-title-preview-bpm-sites-welcome",
+        "modal": true,
+        "open": true,
+        "rect": {
+          "h": 521.1484375,
+          "w": 351,
+          "x": 12,
+          "y": 398.8515625
+        }
+      },
+      "closed": {
+        "focus": "bpm-welcome-launch",
+        "open": false
+      }
+    },
+    {
+      "width": 820,
+      "opened": {
+        "fits": true,
+        "focus": "bpm-welcome-close",
+        "forms": 0,
+        "labelledBy": "Welcome-title-preview-bpm-sites-welcome",
+        "modal": true,
+        "open": true,
+        "rect": {
+          "h": 551.078125,
+          "w": 370,
+          "x": 20,
+          "y": 366.921875
+        }
+      },
+      "closed": {
+        "focus": "bpm-welcome-launch",
+        "open": false
+      }
+    },
+    {
+      "width": 1440,
+      "opened": {
+        "fits": true,
+        "focus": "bpm-welcome-close",
+        "forms": 0,
+        "labelledBy": "Welcome-title-preview-bpm-sites-welcome",
+        "modal": true,
+        "open": true,
+        "rect": {
+          "h": 551.078125,
+          "w": 370,
+          "x": 20,
+          "y": 366.921875
+        }
+      },
+      "closed": {
+        "focus": "bpm-welcome-launch",
+        "open": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+<footer class="site-footer bpm-sites-footer" style="background:{{ section.settings.background }};color:{{ section.settings.text_color }}">
+  <div class="footer-top">
+    <a href="{{ routes.root_url }}" aria-label="{{ shop.name | escape }}">{% if section.settings.logo != blank %}{{ section.settings.logo | image_url: width: 344 | image_tag: widths: '86,172,344', sizes: '86px', loading: 'lazy', alt: shop.name }}{% else %}<img src="{{ 'bpm-sites-logo.svg' | asset_url }}" width="86" height="90" loading="lazy" alt="{{ shop.name | escape }}">{% endif %}</a>
+    {% if section.settings.heading != blank %}<h2>{{ section.settings.heading | escape }}{% if section.settings.second_line != blank %}<br>{{ section.settings.second_line | escape }}{% endif %}</h2>{% endif %}
+  </div>
+  <nav aria-label="{{ 'general.footer_navigation' | t }}"><ul class="footer-links">{% render 'bpm-sites-links', menu: section.settings.menu %}</ul></nav>
+  {% if section.settings.policy_menu != blank %}<nav aria-label="{{ 'general.policies' | t }}"><ul class="footer-links">{% render 'bpm-sites-links', menu: section.settings.policy_menu %}</ul></nav>{% endif %}
+  <div class="footer-bottom">{% render 'bpm-motion-toggle' %}<span>© {{ 'now' | date: '%Y' }} {{ shop.name | escape }}{% if section.settings.show_market %} · {{ localization.country.name | escape }} / {{ localization.country.currency.iso_code | escape }}{% endif %}</span>{% if section.settings.legal_name != blank %}<span>{{ section.settings.legal_name | escape }}</span>{% endif %}</div>
+{% if section.settings.show_localization %}{% assign localization_id = 'Localization-' | append: section.id %}{% render 'bpm-localization', id: localization_id, localization: localization %}{% endif %}
+</footer>
+{% schema %}
+{
+  "name": "BPM Sites footer",
+  "enabled_on": {
+    "groups": [
+      "footer"
+    ]
+  },
+  "settings": [
+    {"type":"checkbox","id":"show_localization","label":"Show available market and language selectors","default":true},
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo override"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Nothing extra."
+    },
+    {
+      "type": "text",
+      "id": "second_line",
+      "label": "Second line",
+      "default": "Everything intentional."
+    },
+    {
+      "type": "link_list",
+      "id": "menu",
+      "label": "Footer navigation",
+      "default": "main-menu"
+    },
+    {
+      "type": "link_list",
+      "id": "policy_menu",
+      "label": "Policy links"
+    },
+    {
+      "type": "text",
+      "id": "legal_name",
+      "label": "Legal entity",
+      "info": "Use the verified store legal name."
+    },
+    {
+      "type": "checkbox",
+      "id": "show_market",
+      "label": "Show current country and currency",
+      "default": true
+    },
+    {
+      "type": "color",
+      "id": "background",
+      "label": "Background",
+      "default": "#231f20"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text",
+      "default": "#fffde9"
+    }
+  ]
+}
+{% endschema %}

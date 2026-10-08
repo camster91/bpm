@@ -1,0 +1,36 @@
+{
+  "candidate": "5daa4af35ac9b7006904c944260cb224c2538e05",
+  "store": "qef4ye-yg.myshopify.com",
+  "developmentContext": "bpm-sites-custom-qa-20261008-5daa4af",
+  "themeId": 194480669044,
+  "role": "development",
+  "name": "bpm-sites-custom-qa-20261008-5daa4af",
+  "editorUrl": "https://qef4ye-yg.myshopify.com/admin/themes/194480669044/editor",
+  "previewUrl": "https://qef4ye-yg.myshopify.com?preview_theme_id=194480669044",
+  "status": "partial upload with errors",
+  "errors": {
+    "sections/bpm-sites-product.liquid": [
+      "Invalid schema: setting link_list type can only be inserted once in the settings."
+    ],
+    "templates/product.unscented.json": [
+      "Section type bpm-sites-product does not refer to an existing section file"
+    ],
+    "templates/product.bergamot-lime.json": [
+      "Section type bpm-sites-product does not refer to an existing section file"
+    ],
+    "templates/product.json": [
+      "Section type bpm-sites-product does not refer to an existing section file"
+    ]
+  },
+  "published": false,
+  "nativeObservation": {
+    "previewBar": "bpm-sites-custom-qa-20261008-5daa4af Draft",
+    "robots": "noindex,follow",
+    "mainCount": 1,
+    "viewport": 1280,
+    "documentScrollWidth": 1280,
+    "homepageRendered": true,
+    "purchaseSectionUploaded": false
+  },
+  "screenshot": "dev-upload-partial-home-20261008.png"
+}

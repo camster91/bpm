@@ -1,0 +1,101 @@
+<section class="section wrap shop-opening"><h1>{{ section.settings.heading | escape | newline_to_br }}</h1>
+  <form class="bpm-store-search" action="{{ routes.search_url }}" method="get" role="search"><label for="Query-{{ section.id }}">{{ 'catalogue.find' | t }}<input id="Query-{{ section.id }}" type="search" name="q" value="{{ search.terms | escape }}" required></label><button class="button" type="submit">{{ 'general.search' | t }}</button></form>
+</section>
+{% if search.performed %}<section class="section wrap bpm-catalogue">
+  {% render 'bpm-sites-filters', resource: search, action: routes.search_url, prefix: section.id, terms: search.terms %}
+  {% paginate search.results by section.settings.page_size %}
+    <p class="fine bpm-results-count">{{ 'catalogue.result_count' | t: count: search.results_count, terms: search.terms | escape }}</p>
+    <div class="track-grid three">{% for item in search.results %}
+      {% case item.object_type %}
+        {% when 'product' %}{% render 'bpm-sites-catalogue-card', product: item, blocks: section.blocks, label: section.settings.product_label, images: images, native_delivery: settings.native_source_delivery %}
+        {% when 'article' %}{% assign article_label = 'catalogue.read_article' | t %}{% render 'bpm-sites-article-card', story: item, label: article_label %}
+        {% when 'page' %}<article class="bpm-page-result"><p class="eyebrow">{{ 'catalogue.page' | t }}</p><h2><a href="{{ item.url }}">{{ item.title | escape }}</a></h2><p>{{ item.content | strip_html | truncatewords: 30 | escape }}</p><a class="track-link" href="{{ item.url }}">{{ 'catalogue.read_page' | t }} <span aria-hidden="true">↗</span></a></article>
+      {% endcase %}
+    {% else %}<p>{{ 'catalogue.no_results' | t }}</p>{% endfor %}</div>
+    {% if paginate.pages > 1 %}<nav class="bpm-pagination" aria-label="{{ 'general.pagination' | t }}">{{ paginate | default_pagination }}</nav>{% endif %}
+  {% endpaginate %}
+</section>{% endif %}
+{% schema %}
+{
+  "name": "Bpm Search",
+  "settings": [
+    {
+      "type": "textarea",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Find your\nrotation."
+    },
+    {
+      "type": "text",
+      "id": "product_label",
+      "label": "Product link label",
+      "default": "Meet your track"
+    },
+    {
+      "type": "range",
+      "id": "page_size",
+      "label": "Results per page",
+      "min": 3,
+      "max": 48,
+      "step": 3,
+      "default": 12
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product_art",
+      "name": "Product presentation",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Product"
+        },
+        {
+          "type": "text",
+          "id": "display_title",
+          "label": "Display title override",
+          "info": "Optional short card heading. Leave blank to use the native product title. Does not change the product record."
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "First framed carton / image override"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_2",
+          "label": "Second framed carton"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_3",
+          "label": "Third framed carton"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_4",
+          "label": "Fourth framed carton"
+        },
+        {
+          "type": "text",
+          "id": "pack_label",
+          "label": "Verified pack description"
+        },
+        {
+          "type": "text",
+          "id": "summary",
+          "label": "Approved product summary"
+        },
+        {
+          "type": "color",
+          "id": "background",
+          "label": "Image background",
+          "default": "#f3e4b7"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 50
+}
+{% endschema %}

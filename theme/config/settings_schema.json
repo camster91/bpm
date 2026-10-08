@@ -1,0 +1,143 @@
+[
+  {
+    "name": "theme_info",
+    "theme_name": "BPM Custom",
+    "theme_version": "0.1.0",
+    "theme_author": "BPM",
+    "theme_documentation_url": "https://github.com/camster91/bpm",
+    "theme_support_url": "https://github.com/camster91/bpm/issues"
+  },
+  {
+    "name": "Brand and layout",
+    "settings": [
+      {
+        "type": "paragraph",
+        "content": "Changes affect the whole store. This custom theme is in development; design and content acceptance are still required."
+      },
+      {
+        "type": "color",
+        "id": "ink",
+        "label": "Text and dark background",
+        "default": "#231f20"
+      },
+      {
+        "type": "color",
+        "id": "pink",
+        "label": "Pink accent",
+        "default": "#f157b7"
+      },
+      {
+        "type": "color",
+        "id": "cream",
+        "label": "Cream accent",
+        "default": "#fffde9"
+      },
+      {
+        "type": "color",
+        "id": "lime",
+        "label": "Bergamot palette",
+        "default": "#acb228"
+      },
+      {
+        "type": "color",
+        "id": "teal",
+        "label": "Unscented palette",
+        "default": "#228782"
+      },
+      {
+        "type": "color",
+        "id": "surface",
+        "label": "Page background",
+        "default": "#fffde9"
+      },
+      {
+        "type": "range",
+        "id": "content_width",
+        "label": "Content width",
+        "min": 960,
+        "max": 1600,
+        "step": 16,
+        "default": 1312,
+        "unit": "px"
+      },
+      {
+        "type": "range",
+        "id": "card_radius",
+        "label": "Card corner radius",
+        "min": 0,
+        "max": 32,
+        "step": 2,
+        "default": 16,
+        "unit": "px"
+      },
+      {
+        "type": "color",
+        "id": "butter",
+        "label": "Butter accent",
+        "default": "#f3e4b7"
+      },
+      {
+        "type": "color",
+        "id": "orange",
+        "label": "Orange accent",
+        "default": "#ffb268"
+      },
+      {
+        "type": "image_picker",
+        "id": "utility_logo",
+        "label": "Password and gift-card logo",
+        "info": "Leave blank to retain the original Sites BPM mark."
+      }
+    ]
+  },
+  {
+    "name": "Search and sharing",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "development_noindex",
+        "label": "Keep this theme out of search results",
+        "default": true,
+        "info": "Leave enabled for development and review. Disable only as part of an approved production release."
+      },
+      {
+        "type": "checkbox",
+        "id": "product_structured_data",
+        "label": "Native product structured data",
+        "default": true,
+        "info": "Uses Shopify product data. Disable only if another verified integration supplies the complete product schema."
+      },
+      {
+        "type": "checkbox",
+        "id": "article_structured_data",
+        "label": "Native article structured data",
+        "default": true,
+        "info": "Uses Shopify article data. Disable if another verified integration supplies article schema."
+      }
+    ]
+  },
+  {
+    "name": "Motion",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "enable_motion",
+        "label": "Enable Sites decorative motion",
+        "default": true,
+        "info": "Visitors can pause motion. Reduced-motion preferences are always respected. Motion is paused in the theme editor."
+      }
+    ]
+  },
+  {
+    "name": "Source artwork delivery",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "native_source_delivery",
+        "label": "Use responsive native source artwork",
+        "default": true,
+        "info": "Uses matching existing Files images with the original crop. Disable to force recovered SVG artwork. Verify all nine source images in the development theme."
+      }
+    ]
+  }
+]

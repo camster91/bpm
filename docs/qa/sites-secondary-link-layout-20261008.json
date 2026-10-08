@@ -1,0 +1,44 @@
+{
+  "scope": "Hypothetical source configuration only; not actual native page binding or approved claim",
+  "rows": [
+    {
+      "destination": "/sites-indigenous-owned.html",
+      "hero": {
+        "height": 849,
+        "width": 375
+      },
+      "label": "Indigenous-owned. Independently verified. ↗",
+      "photo": {
+        "height": 345,
+        "width": 327
+      },
+      "viewport": 375
+    },
+    {
+      "destination": "/sites-indigenous-owned.html",
+      "hero": {
+        "height": 1030,
+        "width": 820
+      },
+      "label": "Indigenous-owned. Independently verified. ↗",
+      "photo": {
+        "height": 460,
+        "width": 746
+      },
+      "viewport": 820
+    },
+    {
+      "destination": "/sites-indigenous-owned.html",
+      "hero": {
+        "height": 660,
+        "width": 1440
+      },
+      "label": "Indigenous-owned. Independently verified. ↗",
+      "photo": {
+        "height": 556,
+        "width": 659
+      },
+      "viewport": 1440
+    }
+  ]
+}

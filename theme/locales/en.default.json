@@ -1,0 +1,151 @@
+{
+  "general": {
+    "skip_content": "Skip to content",
+    "menu": "Menu",
+    "close": "Close",
+    "account": "Account",
+    "cart": "Cart",
+    "cart_count": "Cart, {{ count }} items",
+    "navigation": "Main navigation",
+    "footer_navigation": "Footer navigation",
+    "view_item": "View {{ title }}",
+    "copyright": "© {{ year }} {{ shop }}. All rights reserved.",
+    "search": "Search",
+    "social_links": "Social links",
+    "policies": "Policies",
+    "bag": "Bag",
+    "bag_count": "Shopping bag, {{ count }} items",
+    "privacy": "Privacy policy",
+    "pagination": "Pagination",
+    "table_scroll": "Scroll horizontally to see every column."
+  },
+  "accessibility": {
+    "new_window": "Opens in a new window",
+    "pause_motion": "Pause motion",
+    "resume_motion": "Resume motion"
+  },
+  "products": {
+    "price_from": "From {{ price }}",
+    "sold_out": "Sold out",
+    "watch_video": "Watch video",
+    "shop": "Shop",
+    "gallery": "Product gallery",
+    "media_number": "View media {{ number }}",
+    "price": "Price",
+    "rotation": "Choose your rotation",
+    "variant": "Choose a variant",
+    "update_selection": "Update selection",
+    "purchase_option": "Purchase option",
+    "one_time": "One-time purchase",
+    "checkout_charge": "Charge at checkout",
+    "per_delivery": "Per delivery",
+    "add_bag": "Add to bag",
+    "plan_unavailable": "A compatible purchase plan is not available for this variant.",
+    "full_notes": "THE FULL PRODUCT NOTES",
+    "details": "The details, in full.",
+    "texture_alt": "Close-up of BPM cream texture",
+    "formula_alt": "Editorial still life of golden oil and fine pale powder on a warm yellow surface",
+    "metal_alt": "BPM metal deodorant tube",
+    "video_description": "English visual description",
+    "pack": "Pack",
+    "fragrance": "Fragrance",
+    "shipping_question": "Where do you ship?",
+    "shipping_policy": "View current shipping destinations and rates",
+    "review_source": "View original review",
+    "creator_original": "Watch the original post",
+    "creator_transcript": "Transcript and visual description",
+    "jump_navigation": "Product section links",
+    "directions": "Directions for this product",
+    "whats_inside": "What’s inside",
+    "shipping_notes": "Shipping notes"
+  },
+  "newsletter": {
+    "success": "Thanks for signing up. Check your inbox for any confirmation required."
+  },
+  "editorial": {
+    "no_articles": "No articles have been published yet."
+  },
+  "cart": {
+    "empty": "Your bag is empty.",
+    "continue": "Keep looking",
+    "line_total": "Line total",
+    "original_total": "Original line total",
+    "discounts": "Discounts",
+    "quantity": "Quantity",
+    "quantity_for": "Quantity for {{ title }}",
+    "remove": "Remove",
+    "remove_item": "Remove {{ title }}",
+    "update": "Update bag",
+    "summary": "Your total",
+    "subtotal": "Subtotal",
+    "total": "Total",
+    "taxes_included": "Taxes included.",
+    "taxes_checkout": "Taxes calculated at checkout.",
+    "shipping_checkout": "Shipping calculated at checkout.",
+    "checkout": "Checkout",
+    "bundle_contents": "Bundle contents"
+  },
+  "catalogue": {
+    "price_min": "From",
+    "price_max": "To",
+    "sort": "Sort by",
+    "apply": "Apply",
+    "remove_filter": "Remove filter",
+    "clear": "Clear filters",
+    "find": "Find a scent, track or story",
+    "product_count": "Products: {{ count }}",
+    "result_count": "Results: {{ count }} for “{{ terms }}”",
+    "empty": "No products match these filters.",
+    "read_article": "Read the story",
+    "page": "Page",
+    "read_page": "Read the page",
+    "no_results": "No results found. Try another search or clear the filters.",
+    "collections": "Collections",
+    "explore_collection": "Explore the collection",
+    "no_collections": "No collections are available yet.",
+    "empty_collection": "No products are available in this collection yet."
+  },
+  "contact": {
+    "name": "Your name",
+    "email": "Email",
+    "topic": "What’s on your mind?",
+    "message": "Your message",
+    "submit": "Send message",
+    "success": "Thanks for your message. We’ll get back to you."
+  },
+  "policies": {
+    "empty": "Published policies will appear here."
+  },
+  "not_found": {
+    "heading": "Page not found",
+    "body": "The page you’re looking for isn’t available. Browse the shop or search for what you need.",
+    "shop": "Browse the shop",
+    "search": "Search BPM"
+  },
+  "localization": {
+    "country": "Country / region",
+    "language": "Language",
+    "apply": "Apply"
+  },
+  "password": {
+    "heading": "Enter the store.",
+    "label": "Store password",
+    "enter": "Enter"
+  },
+  "gift_card": {
+    "heading": "Your gift card.",
+    "balance": "Remaining balance",
+    "original": "Original value:",
+    "disabled": "This gift card is disabled.",
+    "expired": "This gift card has expired.",
+    "redeemed": "This gift card has been fully redeemed.",
+    "redeem": "Use this code at checkout.",
+    "expires": "Expires:",
+    "qr": "Gift card redemption QR code",
+    "wallet": "Add to Apple Wallet",
+    "copy": "Copy code",
+    "copied": "Code copied.",
+    "copy_failed": "Copy failed. Select the visible code and copy it manually.",
+    "print": "Print gift card"
+  }
+}

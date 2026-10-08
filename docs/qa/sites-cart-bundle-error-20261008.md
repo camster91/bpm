@@ -1,0 +1,11 @@
+# Native cart bundle and line-error presentation — 2026-10-08
+
+Purchase-journey code review found that the custom cart omitted `line_item.item_components` and `line_item.error_message`. These are documented native cart fields: [Shopify Liquid line_item](https://shopify.dev/docs/api/liquid/objects/line_item). Missing components hid the bundle contents; omitted errors could hide availability guidance supplied by Shopify.
+
+The cart now lists native component quantities, product titles and non-default variant titles with escaped text, using a translated list label. Components have no independent update/removal controls: the existing parent updates and native line-key removal remain authoritative. Prices and discounts remain on the parent. Nonblank native line errors are escaped and exposed as alerts. Ordinary lines produce no extra list or alert. No editorial metafield or preview composition is used as native bundle truth.
+
+Three new rendering checks cover native components/identity/escaping, single parent quantity control, native error escaping and ordinary-line omission. Total: 332 rendering checks plus existing lifecycle and resource/app checks. Installed Shopify Theme Check: zero errors, one existing Adobe Typekit RemoteAsset warning. The Liquid skill's search helper found the official fields, but its required validation helper fails before validation due to missing `@shopify/theme-check-common`; the plugin cache remains untouched. CLI validation supplies static verification, not native runtime proof.
+
+`sites-cart-bundle-error.html` is a new fabricated preview, with submissions and removals disabled. Browser checks at 375/820/1440px verified component text, visible alert, no component controls and no horizontal overflow. Raw evidence: `sites-cart-bundle-error-20261008.json`; screenshot: `sites-cart-bundle-error-20261008.png`. This is not a successful native bundle cart, stock update or checkout test. Real grouped/separate app line representation and native errors remain development QA requirements.
+
+No Shopify/GitHub mutation. The prior 460c338 snapshot remains valid historical evidence but omits this change. Refresh the current candidate and command approval before transmitting new bytes.

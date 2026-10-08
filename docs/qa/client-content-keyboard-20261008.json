@@ -1,0 +1,21 @@
+{
+  "clientMenuOpen": {
+    "open": true,
+    "topLevelLinks": 9
+  },
+  "clientMenuClosed": {
+    "focusReturned": true,
+    "open": false
+  },
+  "clientFaqKeyboard": {
+    "openCount": 5,
+    "qualifiedUsageVisible": true
+  },
+  "clientFormProof": {
+    "consentChecked": true,
+    "consentRequired": true,
+    "emailValid": true,
+    "submitDisabled": true
+  },
+  "submitted": false
+}

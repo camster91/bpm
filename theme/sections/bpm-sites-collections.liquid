@@ -1,0 +1,26 @@
+<section class="section wrap shop-opening bpm-collections-opening"><div class="shop-title">
+  {% if section.settings.eyebrow != blank %}<p class="eyebrow">{{ section.settings.eyebrow | escape }}</p>{% endif %}
+  <h1>{% if section.settings.heading != blank %}{{ section.settings.heading | escape | newline_to_br }}{% else %}{{ 'catalogue.collections' | t }}{% endif %}</h1>
+  {% if section.settings.intro != blank %}<p class="lead">{{ section.settings.intro | escape | newline_to_br }}</p>{% endif %}
+</div></section>
+<section class="section wrap bpm-catalogue">
+  {% if section.settings.collections != blank %}
+    <div class="editorial-grid">{% for group in section.settings.collections %}{% render 'bpm-sites-collection-card', group: group, label: section.settings.link_label %}{% endfor %}</div>
+  {% else %}
+    {% paginate collections by section.settings.page_size %}
+      <div class="editorial-grid">{% for group in collections %}{% render 'bpm-sites-collection-card', group: group, label: section.settings.link_label %}{% else %}<p>{{ 'catalogue.no_collections' | t }}</p>{% endfor %}</div>
+      {% if paginate.pages > 1 %}<nav class="bpm-pagination" aria-label="{{ 'general.pagination' | t }}">{{ paginate | default_pagination }}</nav>{% endif %}
+    {% endpaginate %}
+  {% endif %}
+  <a class="button" href="{{ routes.all_products_collection_url }}">{{ 'products.shop' | t }} <span aria-hidden="true">→</span></a>
+</section>
+{% schema %}
+{"name":"Bpm Collections","settings":[
+ {"type":"text","id":"eyebrow","label":"Eyebrow"},
+ {"type":"textarea","id":"heading","label":"Heading override"},
+ {"type":"textarea","id":"intro","label":"Introduction"},
+ {"type":"collection_list","id":"collections","label":"Selected collections in display order","limit":50,"info":"Leave blank to show all storefront collections with native pagination."},
+ {"type":"text","id":"link_label","label":"Collection link label"},
+ {"type":"range","id":"page_size","label":"Collections per page","min":3,"max":48,"step":3,"default":12}
+],"presets":[{"name":"Bpm Collections"}]}
+{% endschema %}

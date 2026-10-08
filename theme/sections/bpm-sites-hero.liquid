@@ -1,0 +1,90 @@
+{% liquid
+  assign image_loading = 'eager'
+  assign image_priority = 'high'
+  if section.index > 1
+    assign image_loading = 'lazy'
+    assign image_priority = 'auto'
+  endif
+  assign button_url = section.settings.collection.url | default: routes.all_products_collection_url
+%}
+<section class="home-hero">
+  <div class="hero-copy">
+    {% if section.settings.eyebrow != blank %}<p class="eyebrow">{{ section.settings.eyebrow | escape }}</p>{% endif %}
+    <h1>{{ section.settings.heading | escape | newline_to_br }}{% if section.settings.subheading != blank %}<span>{{ section.settings.subheading | escape | newline_to_br }}</span>{% endif %}</h1>
+    {% if section.settings.body != blank %}<p>{{ section.settings.body | escape | newline_to_br }}</p>{% endif %}
+    {% if section.settings.button_label != blank %}<a class="button dark" href="{{ button_url }}">{{ section.settings.button_label | escape }}<span aria-hidden="true">→</span></a>{% endif %}
+    {% if section.settings.secondary_page != blank and section.settings.secondary_label != blank %}<a class="hero-small" href="{{ section.settings.secondary_page.url }}">{{ section.settings.secondary_label | escape }} <span aria-hidden="true">↗</span></a>{% endif %}
+  </div>
+  <div class="hero-photo">
+    {% if section.settings.image != blank %}{{ section.settings.image | image_url: width: 1920 | image_tag: widths: '480,768,1024,1440,1920', sizes: '(max-width:900px) 100vw,50vw', loading: image_loading, fetchpriority: image_priority, alt: section.settings.image_alt }}{% else %}<img src="{{ 'bpm-sites-hero.jpg' | asset_url }}" width="1919" height="1024" alt="{{ section.settings.image_alt | escape }}" loading="{{ image_loading }}" fetchpriority="{{ image_priority }}">{% endif %}
+    <span class="hero-star" aria-hidden="true">✦</span>
+  </div>
+</section>
+{% schema %}
+{
+  "name": "BPM Sites hero",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "ON BEAT. ON YOU."
+    },
+    {
+      "type": "textarea",
+      "id": "heading",
+      "label": "Heading",
+      "default": "This is\ndeodorant."
+    },
+    {
+      "type": "textarea",
+      "id": "subheading",
+      "label": "Supporting heading",
+      "default": "It just happens\nto be natural."
+    },
+    {
+      "type": "textarea",
+      "id": "body",
+      "label": "Copy",
+      "default": "Performance first. Effective ingredients.\nA metal tube. Made in Canada."
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Shop button",
+      "default": "Choose your BPM"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Shop destination"
+    },
+    {
+      "type": "page",
+      "id": "secondary_page",
+      "label": "Secondary destination"
+    },
+    {
+      "type": "text",
+      "id": "secondary_label",
+      "label": "Secondary link label"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Hero image override"
+    },
+    {
+      "type": "text",
+      "id": "image_alt",
+      "label": "Image description",
+      "default": "BPM model holding the current metal deodorant tube with a white cap against an orange background"
+    }
+  ],
+  "presets": [
+    {
+      "name": "BPM Sites hero"
+    }
+  ]
+}
+{% endschema %}

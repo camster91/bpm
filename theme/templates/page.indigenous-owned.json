@@ -1,0 +1,56 @@
+{
+  "sections": {
+    "opening": {
+      "type": "bpm-sites-page-opening",
+      "settings": {
+        "eyebrow": "CCIB CERTIFIED INDIGENOUS BUSINESS",
+        "heading": "Owned\nwith purpose.",
+        "intro": "Indigenous-owned describes who owns the business, makes the decisions and is accountable for what BPM puts into the world.",
+        "art": "ownership",
+        "image_alt": "Original BPM owl and drum-inspired Indigenous-owned mark"
+      }
+    },
+    "ownership": {
+      "type": "bpm-sites-rich-split",
+      "settings": {
+        "eyebrow": "THE PERSON BEHIND IT",
+        "heading": "Rooted\nin who we are.",
+        "body": "<p>Naturels Bold Egg Naturals Inc., owner of the BPM brand, is a CCIB Certified Indigenous Business, founded by Corey Goss, a member of the Algonquins of Pikwàkanagàn First Nation. Indigenous ownership and control have been independently verified.</p><p>Before starting BPM, Corey spent years in technology and product development: understanding problems, questioning the usual approach, setting requirements and building something better.</p>",
+        "band": false,
+        "quote": "“My Indigenous identity isn’t pasted onto the brand. It is part of the person behind it—and part of how I approach the business: carefully, resourcefully and with respect for what we use, what we waste and what we leave behind.”",
+        "attribution": "Corey Goss · Founder, BPM"
+      }
+    },
+    "mark": {
+      "type": "bpm-sites-rich-split",
+      "settings": {
+        "eyebrow": "THE STORY BEHIND OUR MARK",
+        "heading": "Family.\nHeritage.\nRhythm.",
+        "body": "<p>Corey’s family’s original last name is Kohoko, meaning owl. The owl at the centre of the mark represents that connection to family and identity.</p><p>The surrounding design draws inspiration from the lacing on the back of an Indigenous hand drum, connecting heritage to BPM’s musical roots.</p><p>The meaning is personal to BPM’s story. It is not intended to represent every Indigenous Nation, community or tradition.</p>",
+        "band": true
+      }
+    },
+    "giving": {
+      "type": "bpm-sites-rich-split",
+      "settings": {
+        "eyebrow": "THE PRODUCT STILL HAS TO EARN ITS PLACE",
+        "heading": "Care\nin practice.",
+        "body": "<p>BPM has to earn its place on your shelf by working well and offering the right value. Choosing Indigenous-owned can help keep ownership, opportunity and decision-making in Indigenous hands.</p><p>BPM has committed 5% of net profits to great causes, including those in the Indigenous community. As it grows, the company intends to build direct relationships with First Nations communities and be transparent about where that support goes.</p>",
+        "band": false,
+        "button_label": "Meet the people and principles",
+        "page": "about-us"
+      }
+    },
+    "closing": {
+      "type": "bpm-sites-closing",
+      "settings": {}
+    }
+  },
+  "order": [
+    "opening",
+    "ownership",
+    "mark",
+    "giving",
+    "closing"
+  ]
+}

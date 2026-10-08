@@ -1,0 +1,122 @@
+{
+  "source": "Protected native theme 190930944372 export dated 2026-10-07",
+  "native_runtime_verified": false,
+  "sources": {
+    "templates/product.json": "f188d10505399784de737a318f5108879ce2a170c0774af421b1cf34c680cbfe",
+    "templates/product.bergamot-lime.json": "65ca2f0e3aa8d4839036b17efbbb24df1313621281ee04e1e3ba0bc80c95adf5",
+    "templates/product.unscented.json": "9c3aa5b6ec97619643696e041a3d454ac0cbf79dddefd752ff5a3210877d2c6c",
+    "config/settings_data.json": "327876810ff8c0ae3df05a24c5c0d23e094edce99163e31012a4918bcad91289"
+  },
+  "product_blocks": {
+    "templates/product.json": {
+      "badge": {
+        "id": "judge_me_reviews_preview_badge_F7Bi3V",
+        "block": {
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        }
+      },
+      "reviews": {
+        "id": "judge_me_reviews_review_widget_GYRzxQ",
+        "block": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "real_data",
+            "max_width": 1200,
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget"
+          }
+        }
+      }
+    },
+    "templates/product.bergamot-lime.json": {
+      "badge": {
+        "id": "judge_me_reviews_preview_badge_F7Bi3V",
+        "block": {
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        }
+      },
+      "reviews": {
+        "id": "judge_me_reviews_review_widget_GYRzxQ",
+        "block": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "real_data",
+            "max_width": 1200,
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget"
+          }
+        }
+      }
+    },
+    "templates/product.unscented.json": {
+      "badge": {
+        "id": "judge_me_reviews_preview_badge_F7Bi3V",
+        "block": {
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        }
+      },
+      "reviews": {
+        "id": "judge_me_reviews_review_widget_GYRzxQ",
+        "block": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "real_data",
+            "max_width": 1200,
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget"
+          }
+        }
+      }
+    }
+  },
+  "embeds": {
+    "14060646107696862457": {
+      "original": {
+        "type": "shopify://apps/judge-me-reviews/blocks/judgeme_core/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+        "disabled": false,
+        "settings": {}
+      },
+      "candidate": {
+        "type": "shopify://apps/judge-me-reviews/blocks/judgeme_core/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+        "disabled": false,
+        "settings": {}
+      },
+      "decision": "Preserve active Judge.me core embed exactly."
+    },
+    "13047258039897440615": {
+      "original": {
+        "type": "shopify://apps/judge-me-reviews/blocks/cart_drawer_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+        "disabled": false,
+        "settings": {
+          "widget_type": "review-widget"
+        }
+      },
+      "candidate": {
+        "type": "shopify://apps/judge-me-reviews/blocks/cart_drawer_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+        "disabled": true,
+        "settings": {
+          "widget_type": "review-widget"
+        }
+      },
+      "decision": "Drawer embed disabled in local candidate; full cart page uses native review block."
+    }
+  },
+  "cart_widget_basis": "https://judge.me/help/en/articles/15359911-adding-judge-me-widgets-on-your-cart-page",
+  "drawer_basis": "https://judge.me/help/en/articles/15565450-adding-judge-me-widgets-to-your-cart-drawer",
+  "cart_block": {
+    "id": "judge_me_reviews_review_widget_GYRzxQ",
+    "block": {
+      "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+      "settings": {
+        "review_data": "real_data",
+        "max_width": 1200,
+        "show_shop_reviews": false,
+        "empty_state": "empty_widget"
+      }
+    },
+    "decision": "Vendor native Review Widget switches to cart mode per vendor docs; actual cart-product selection pending runtime QA."
+  }
+}

@@ -1,0 +1,163 @@
+<section class="section wrap shop-opening"><div class="shop-title">
+  {% if section.settings.eyebrow != blank %}<p class="eyebrow">{{ section.settings.eyebrow | escape }}</p>{% endif %}
+  <h1>{{ section.settings.heading | default: collection.title | escape | newline_to_br }}</h1>
+  {% if section.settings.intro != blank %}<p class="lead">{{ section.settings.intro | escape | newline_to_br }}</p>{% endif %}
+  {% if section.settings.show_description and collection.description != blank %}<div class="prose">{{ collection.description }}</div>{% endif %}
+</div></section>
+<section class="section wrap bpm-catalogue">
+  <details class="shop-search"><summary>{{ 'general.search' | t }}</summary><form action="{{ routes.search_url }}" method="get" role="search"><label for="Search-{{ section.id }}">{{ 'catalogue.find' | t }}<input id="Search-{{ section.id }}" type="search" name="q" required></label><button class="button" type="submit">{{ 'general.search' | t }}</button></form></details>
+  {% render 'bpm-sites-filters', resource: collection, action: collection.url, prefix: section.id %}
+  {% paginate collection.products by section.settings.page_size %}
+    <p class="fine bpm-results-count">{{ 'catalogue.product_count' | t: count: collection.products_count }}</p>
+    <div class="track-grid three">{% for product in collection.products %}{% render 'bpm-sites-catalogue-card', product: product, blocks: section.blocks, label: section.settings.product_label, images: images, native_delivery: settings.native_source_delivery %}{% else %}<p>{{ 'catalogue.empty' | t }}</p>{% endfor %}</div>
+    {% if paginate.pages > 1 %}<nav class="bpm-pagination" aria-label="{{ 'general.pagination' | t }}">{{ paginate | default_pagination }}</nav>{% endif %}
+  {% endpaginate %}
+</section>
+{% schema %}
+{
+  "name": "Bpm Collection",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow"
+    },
+    {
+      "type": "textarea",
+      "id": "heading",
+      "label": "Heading override"
+    },
+    {
+      "type": "textarea",
+      "id": "intro",
+      "label": "Introduction"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_description",
+      "label": "Show native collection description",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "product_label",
+      "label": "Product link label",
+      "default": "Meet your track"
+    },
+    {
+      "type": "range",
+      "id": "page_size",
+      "label": "Products per page",
+      "min": 3,
+      "max": 48,
+      "step": 3,
+      "default": 12
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product_art",
+      "name": "Product presentation",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Product"
+        },
+        {
+          "type": "text",
+          "id": "display_title",
+          "label": "Display title override",
+          "info": "Optional short card heading. Leave blank to use the native product title. Does not change the product record."
+        },
+        {
+          "type": "select",
+          "id": "source_pack",
+          "label": "Original Sites carton composition",
+          "default": "native",
+          "options": [
+            {
+              "value": "native",
+              "label": "Native product media"
+            },
+            {
+              "value": "1-0",
+              "label": "One citrus carton"
+            },
+            {
+              "value": "0-1",
+              "label": "One unscented carton"
+            },
+            {
+              "value": "2-0",
+              "label": "Two citrus cartons"
+            },
+            {
+              "value": "0-2",
+              "label": "Two unscented cartons"
+            },
+            {
+              "value": "1-1",
+              "label": "One of each scent"
+            },
+            {
+              "value": "4-0",
+              "label": "Four citrus cartons"
+            },
+            {
+              "value": "0-4",
+              "label": "Four unscented cartons"
+            },
+            {
+              "value": "2-2",
+              "label": "Two of each scent"
+            },
+            {
+              "value": "3-1",
+              "label": "Three citrus, one unscented"
+            }
+          ],
+          "info": "Use only for the matching product pack. Uploaded image overrides take priority."
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "First framed carton / image override"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_2",
+          "label": "Second framed carton"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_3",
+          "label": "Third framed carton"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_4",
+          "label": "Fourth framed carton"
+        },
+        {
+          "type": "text",
+          "id": "pack_label",
+          "label": "Verified pack description"
+        },
+        {
+          "type": "text",
+          "id": "summary",
+          "label": "Approved product summary"
+        },
+        {
+          "type": "color",
+          "id": "background",
+          "label": "Image background",
+          "default": "#f3e4b7"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 50
+}
+{% endschema %}

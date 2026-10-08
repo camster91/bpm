@@ -1,0 +1,45 @@
+[
+  {
+    "bar": {
+      "bottom": 812,
+      "height": 71.296875,
+      "left": 0,
+      "right": 375,
+      "top": 740.703125,
+      "width": 375,
+      "x": 0,
+      "y": 740.703125
+    },
+    "case": "closed",
+    "launcher": {
+      "bottom": 724,
+      "height": 46,
+      "left": 12,
+      "right": 136.296875,
+      "top": 678,
+      "width": 124.296875,
+      "x": 12,
+      "y": 678
+    }
+  },
+  {
+    "case": "open",
+    "focus": "Close",
+    "modal": true,
+    "panel": {
+      "bottom": 732,
+      "height": 520.109375,
+      "left": 12,
+      "right": 363,
+      "top": 211.890625,
+      "width": 351,
+      "x": 12,
+      "y": 211.890625
+    }
+  },
+  {
+    "case": "escape",
+    "focus": "✦Get 10% off",
+    "open": false
+  }
+]

@@ -1,5 +1,7 @@
 # Latest audit checkpoint
 
+Verified GitHub integration: PR #12 merged into `main` at `168a5f2eff7afdd5f9bfb82e5ef053c44f315137` on 7 October 2026. Both PR reference workflow runs and GitGuardian passed. Local checks and 15 rendering fixtures passed again before merge. Only GitHub was changed; no Shopify upload, publication or configuration change. The older unpushed/draft and missing-export statements below are superseded historical checkpoints. Current requirements are reconciled at the top of `phase-0-1-readiness.md`; reference CI evidence is in `static-checks.md`.
+
 GitHub integration authorization (7 October 2026): Cameron requested committing and merging this work, explicitly limited to GitHub. PR #12 will include the recovered reference, audit documents, reference CI and portable theme repair patch after checks pass. This authorization does not include Shopify uploads, publication or configuration changes. Earlier unpushed/draft descriptions below are historical checkpoints; use the PR's current state for integration status. Design acceptance and Shopify runtime/commerce QA remain open.
 
 Local repair update: `theme-baseline-fixes.md` and `patches/theme-baseline-fixes.patch`. Separate protected candidate now passes Theme Check (0 errors, 3 documented warnings) and 15 fabricated rendering cases. Original backup hashes unchanged; patch applies cleanly. No remote action. Next gate is isolated rendered/commerce preview QA and #28 owner decisions; static checks do not establish those outcomes.

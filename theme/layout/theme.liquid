@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="{{ request.locale.iso_code }}" data-bpm-motion-enabled="{{ settings.enable_motion }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% render 'bpm-meta-tags', canonical_url: canonical_url, page_title: page_title, page_description: page_description, page_image: page_image, current_tags: current_tags, current_page: current_page, request: request, shop: shop, settings: settings %}
+    <link rel="stylesheet" href="https://use.typekit.net/tqf6rez.css">
+    {{ 'bpm-base.css' | asset_url | stylesheet_tag }}
+    {{ 'bpm-sites.css' | asset_url | stylesheet_tag }}
+    {{ 'bpm-client-content.css' | asset_url | stylesheet_tag }}
+    {{ 'bpm-welcome.css' | asset_url | stylesheet_tag }}
+    {% style %}
+      @font-face { font-family: 'BPM Extended'; src: url('{{ 'HelveticaNeueLT-BoldExt.woff2' | asset_url }}') format('woff2'); font-weight: 700; font-style: normal; font-display: swap; }
+      @font-face { font-family: 'BPM Extended'; src: url('{{ 'HelveticaNeueLTStd-Ex.woff2' | asset_url }}') format('woff2'); font-weight: 400; font-style: normal; font-display: swap; }
+      :root { --bpm-ink: {{ settings.ink }}; --bpm-pink: {{ settings.pink }}; --bpm-cream: {{ settings.cream }}; --bpm-lime: {{ settings.lime }}; --bpm-teal: {{ settings.teal }}; --bpm-surface: {{ settings.surface }}; --bpm-content: {{ settings.content_width }}px; --bpm-radius: {{ settings.card_radius }}px; }
+    {% endstyle %}
+    {% style %}
+      :root { --ink: {{ settings.ink }}; --cream: {{ settings.cream }}; --butter: {{ settings.butter }}; --pink: {{ settings.pink }}; --olive: {{ settings.lime }}; --teal: {{ settings.teal }}; --orange: {{ settings.orange }}; --line: {{ settings.ink | color_modify: 'alpha', 0.24 }}; }
+    {% endstyle %}
+    <script src="{{ 'bpm-motion.js' | asset_url }}" defer></script>
+    <script src="{{ 'bpm-chrome.js' | asset_url }}" defer></script>
+    <script src="{{ 'bpm-welcome.js' | asset_url }}" defer></script>
+    {% render 'bpm-structured-data', request: request, product: product, article: article, settings: settings %}
+    {{ content_for_header }}
+  </head>
+  <body class="bpm-page bpm-page--{{ request.page_type | handle }}">
+    <a class="bpm-skip-link" href="#MainContent">{{ 'general.skip_content' | t }}</a>
+    {% render 'bpm-motion-toggle', skip: true %}
+    {% sections 'header-group' %}
+    <main id="MainContent" tabindex="-1">{{ content_for_layout }}</main>
+    {% sections 'footer-group' %}
+  </body>
+</html>

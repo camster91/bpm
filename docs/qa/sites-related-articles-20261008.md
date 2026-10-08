@@ -1,0 +1,11 @@
+# Related article section
+
+The article template previously omitted the recovered Sites “KEEP READING / Another track.” section. It now includes the existing reusable journal section with the three captured native article pickers, original texture/ownership/story artwork, source labels, and source order. The current article is suppressed by native URL comparison, leaving two cards on the first three articles and three cards on the other five, exactly as the source. The extra bottom return-link section is disabled in this template; its merchant option remains available. A named copy of the prior template is preserved in `docs/plan-history/article-template-before-related-cards-20261008.json`.
+
+Merchants can change headings, labels, selected articles, images, art treatments, and card order through existing section/block controls. The new current-article checkbox defaults off for other journal instances. Blank or unavailable selected articles remain omitted. No native article body is changed.
+
+The browser comparison covers all eight articles at widths 375, 820, and 1440: 48 source/candidate observations. Titles, card order/count, and related-section heights match in all 24 pairs; no horizontal document overflow was observed. Raw evidence includes card destinations and dates in `sites-related-articles-20261008.json`. Keyboard Enter on the first related link from article 7 reached the local underarm article with its expected H1. `sites-related-articles-desktop-20261008.png` shows the local section with active source motion.
+
+Three rendering checks cover current-article exclusion, no article context, and the merchant opt-out. The 340 render checks, lifecycle/resource/app checks, and source article integrity check pass. Installed Shopify CLI Theme Check reports zero errors and one existing RemoteAsset warning. The managed Liquid skill validator cannot load its missing `@shopify/theme-check-common` dependency; its cache was not modified. The installed official CLI provided theme validation.
+
+Local fixture geometry and one keyboard navigation do not establish native Shopify article resolution, editor save/reload, full screen-reader/device acceptance, native app/schema behavior, source content approval, or readiness to publish. No upload, push, merge, native-content write, or production change occurred.

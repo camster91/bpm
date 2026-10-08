@@ -1,0 +1,26 @@
+name: Custom theme checks
+on:
+  pull_request:
+  push:
+    branches: [main, 'work/**']
+permissions:
+  contents: read
+jobs:
+  theme:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.13.1'
+          cache: npm
+      - run: npm ci --ignore-scripts --no-audit --no-fund
+      - run: npm run check:coverage
+      - run: npm run check:policy-content
+      - run: npm run check:article-content
+      - run: npm run check:theme
+      - name: Shopify Theme Check
+        uses: shopify/theme-check-action@v2
+        with:
+          theme_root: './theme'
+          version: '4.5.1'

@@ -1,0 +1,70 @@
+<section class="section" style="background:{{ section.settings.background }}"><div class="wrap split"><div><div class="intro-copy">
+  {% if section.settings.eyebrow != blank %}<p class="eyebrow">{{ section.settings.eyebrow | escape }}</p>{% endif %}
+  {% if section.settings.heading != blank %}<h2>{{ section.settings.heading | escape | newline_to_br }}</h2>{% endif %}
+  {% if section.settings.body != blank %}<p class="lead">{{ section.settings.body | escape }}</p>{% endif %}
+  </div>{% if section.settings.product != blank and section.settings.button_label != blank %}<a class="button" href="{{ section.settings.product.url }}">{{ section.settings.button_label | escape }}<span aria-hidden="true">→</span></a>{% endif %}
+  </div><figure class="texture-figure">{% if section.settings.image != blank %}{{ section.settings.image | image_url: width: 1200 | image_tag: widths: '400,600,900,1200', sizes: '(max-width:900px) 90vw,45vw', loading: 'lazy', alt: section.settings.image_alt }}{% else %}<img src="{{ 'bpm-sites-texture.jpg' | asset_url }}" width="1254" height="1254" alt="{{ section.settings.image_alt | escape }}" loading="lazy">{% endif %}{% if section.settings.caption != blank %}<figcaption>{{ section.settings.caption | escape }}</figcaption>{% endif %}</figure></div></section>
+{% schema %}
+{
+  "name": "BPM Sites image and text",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "BUILT FOR REAL LIFE"
+    },
+    {
+      "type": "textarea",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Small squeeze.\nSmooth moves."
+    },
+    {
+      "type": "text",
+      "id": "body",
+      "label": "Copy",
+      "default": "Easy to spread. Quick to absorb. A clean finish without a waxy coating."
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Product link",
+      "default": "Get to know the tube"
+    },
+    {
+      "type": "product",
+      "id": "product",
+      "label": "Linked product"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image override"
+    },
+    {
+      "type": "text",
+      "id": "image_alt",
+      "label": "Image description",
+      "default": "Close-up of the cream\u2019s spread texture"
+    },
+    {
+      "type": "text",
+      "id": "caption",
+      "label": "Caption",
+      "default": "A pea-sized amount. Your daily rhythm."
+    },
+    {
+      "type": "color",
+      "id": "background",
+      "label": "Background",
+      "default": "#f3e4b7"
+    }
+  ],
+  "presets": [
+    {
+      "name": "BPM Sites image and text"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,74 @@
+<footer class="bpm-footer" style="--footer-bg: {{ section.settings.background }}; --footer-panel: {{ section.settings.panel_color }}; --footer-color: {{ section.settings.text_color }};">
+  {% if section.settings.show_cta %}
+    <div class="bpm-footer__cta bpm-container">
+      <div class="bpm-footer__copy">
+        <h2>{{ section.settings.heading | escape }} <span>{{ section.settings.accent_heading | escape }}</span></h2>
+        {% if section.settings.button_label != blank %}
+          {% assign cta_url = section.settings.collection.url | default: routes.all_products_collection_url %}
+          <a class="bpm-button" href="{{ cta_url }}">{{ section.settings.button_label | escape }}<img src="{{ 'bpm-arrow.svg' | asset_url }}" width="24" height="24" alt=""></a>
+        {% endif %}
+      </div>
+      <div class="bpm-footer__art" aria-hidden="true">
+        <div class="bpm-footer__pack bpm-footer__pack--left"><img src="{{ 'bpm-footer-unscented.png' | asset_url }}" width="4096" height="4096" alt="" loading="lazy"></div>
+        <div class="bpm-footer__tube"><img src="{{ 'bpm-footer-tube.png' | asset_url }}" width="4000" height="4000" alt="" loading="lazy"></div>
+        <div class="bpm-footer__pack bpm-footer__pack--right"><img src="{{ 'bpm-footer-bergamot.png' | asset_url }}" width="4096" height="4096" alt="" loading="lazy"></div>
+      </div>
+    </div>
+  {% endif %}
+  <div class="bpm-footer__panel">
+    <a class="bpm-footer__logo" href="{{ routes.root_url }}" aria-label="{{ shop.name | escape }}">
+      {% if section.settings.logo != blank %}
+        {{ section.settings.logo | image_url: width: 500 | image_tag: widths: '166, 332, 500', sizes: '166px', loading: 'lazy', alt: shop.name }}
+      {% else %}<img src="{{ 'bpm-logo-footer.svg' | asset_url }}" width="166" height="163" loading="lazy" alt="{{ shop.name | escape }}">{% endif %}
+    </a>
+    {% assign nav_label = 'general.footer_navigation' | t %}
+    {% render 'bpm-navigation', menu: section.settings.menu, label: nav_label %}
+    <div class="bpm-footer__legal">
+      {% assign year = 'now' | date: '%Y' %}
+      <small>{{ 'general.copyright' | t: year: year, shop: shop.name | escape }}</small>
+      {% if section.settings.policy_menu != blank %}
+        <nav aria-label="{{ 'general.policies' | t }}"><ul class="bpm-footer__policies">{% for link in section.settings.policy_menu.links %}<li><a href="{{ link.url }}">{{ link.title | escape }}</a></li>{% endfor %}</ul></nav>
+      {% endif %}
+      {% if section.blocks.size > 0 %}
+        <ul class="bpm-footer__social" aria-label="{{ 'general.social_links' | t }}">
+          {% for block in section.blocks %}
+            {% if block.settings.url != blank %}
+              {% assign icon_asset = 'bpm-social-' | append: block.settings.platform | append: '.svg' %}
+              <li {{ block.shopify_attributes }}><a href="{{ block.settings.url }}" aria-label="{{ block.settings.label | default: block.settings.platform | escape }}"><img src="{{ icon_asset | asset_url }}" width="24" height="24" alt="" loading="lazy"></a></li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </div>
+  </div>
+</footer>
+{% schema %}
+{
+  "name": "BPM footer",
+  "enabled_on": { "groups": ["footer"] },
+  "settings": [
+    { "type": "paragraph", "content": "Changes affect the whole store. Add only real social destinations and approved copy. Empty links are hidden." },
+    { "type": "checkbox", "id": "show_cta", "label": "Show product call to action", "default": true },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Upgrade your daily routine" },
+    { "type": "text", "id": "accent_heading", "label": "Accent heading", "default": "With BPM" },
+    { "type": "text", "id": "button_label", "label": "Button label", "default": "Shop Deodorants" },
+    { "type": "collection", "id": "collection", "label": "Button collection", "info": "If empty, the button opens all products." },
+    { "type": "image_picker", "id": "logo", "label": "Logo override", "info": "Leave empty to use the original BPM Figma logo." },
+    { "type": "link_list", "id": "menu", "label": "Footer navigation", "default": "main-menu" },
+    { "type": "link_list", "id": "policy_menu", "label": "Policy links" },
+    { "type": "color", "id": "background", "label": "Background", "default": "#231f20" },
+    { "type": "color", "id": "panel_color", "label": "Navigation panel", "default": "#414041" },
+    { "type": "color", "id": "text_color", "label": "Text color", "default": "#ffffff" }
+  ],
+  "blocks": [{
+    "type": "social",
+    "name": "Social link",
+    "settings": [
+      { "type": "select", "id": "platform", "label": "Icon", "options": [{ "value": "facebook", "label": "Facebook" }, { "value": "twitter", "label": "Twitter" }, { "value": "instagram", "label": "Instagram" }], "default": "instagram" },
+      { "type": "text", "id": "label", "label": "Accessible name" },
+      { "type": "url", "id": "url", "label": "Destination" }
+    ]
+  }],
+  "max_blocks": 3
+}
+{% endschema %}

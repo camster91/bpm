@@ -1,0 +1,97 @@
+{% assign display_section = true %}{% if section.settings.limit_to_page %}{% assign display_section = false %}{% if section.settings.visible_on_page != blank and section.settings.visible_on_page.id == page.id %}{% assign display_section = true %}{% endif %}{% endif %}
+{% if display_section %}
+<section class="section wrap"><div class="split"><div><div class="intro-copy"><p class="eyebrow">{{ section.settings.eyebrow | escape }}</p><h2>{{ section.settings.heading | escape | newline_to_br }}</h2><p class="lead">{{ section.settings.intro | escape }}</p></div></div><div class="operations-chart"><p class="eyebrow">{{ section.settings.chart_label | escape }}</p>{% for block in section.blocks %}<div {{ block.shopify_attributes }}><span>{{ block.settings.label | escape }}</span><strong>{{ block.settings.amount | escape }}</strong><i style="--bar:{{ block.settings.width | at_least: 0 | at_most: 100 }}%" aria-hidden="true"></i></div>{% endfor %}<p class="fine">{{ section.settings.note | escape }}</p></div></div>{% if section.settings.image != blank %}<details class="source-chart"><summary>{{ section.settings.disclosure | escape }}<span aria-hidden="true">+</span></summary>{{ section.settings.image | image_url: width: 3200 | image_tag: widths: '800,1600,2400,3200', loading: 'lazy', alt: section.settings.image_alt }}</details>{% endif %}</section>
+{% endif %}
+{% schema %}
+{
+  "name": "Bpm Cost comparison",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "limit_to_page",
+      "label": "Show only on the selected page",
+      "default": false
+    },
+    {
+      "type": "page",
+      "id": "visible_on_page",
+      "label": "Page to display this section",
+      "info": "When page restriction is enabled, no selection hides the section."
+    },
+    {
+      "type": "paragraph",
+      "content": "Historical source cost comparison. Confirm the dated CAD benchmark, underlying cost model and claims before enabling. Values are merchant estimates, not live store prices."
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow"
+    },
+    {
+      "type": "textarea",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "textarea",
+      "id": "intro",
+      "label": "Introduction"
+    },
+    {
+      "type": "text",
+      "id": "chart_label",
+      "label": "Chart label"
+    },
+    {
+      "type": "textarea",
+      "id": "note",
+      "label": "Estimate caveat"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Approved source cost chart"
+    },
+    {
+      "type": "text",
+      "id": "disclosure",
+      "label": "Chart disclosure label"
+    },
+    {
+      "type": "text",
+      "id": "image_alt",
+      "label": "Chart description"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "route",
+      "name": "Sales route",
+      "settings": [
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Label"
+        },
+        {
+          "type": "text",
+          "id": "amount",
+          "label": "Dated CAD estimate"
+        },
+        {
+          "type": "number",
+          "id": "width",
+          "label": "Illustrative bar percentage",
+          "default": 100
+        }
+      ]
+    }
+  ],
+  "max_blocks": 2,
+  "presets": [
+    {
+      "name": "Bpm Cost comparison"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,22 @@
+{
+  "scope": "Local 430px fixture; no navigation or backend submission",
+  "openMenuLinks": [
+    "Shop",
+    "Our story",
+    "Indigenous-owned",
+    "The Breakdown",
+    "Contact"
+  ],
+  "escapeFromSummary": {
+    "focusReturned": true,
+    "menuOpen": false,
+    "scrollWidth": 430,
+    "width": 430
+  },
+  "escapeFromMenuLink": {
+    "focusReturned": true,
+    "menuOpen": false,
+    "scrollWidth": 430,
+    "width": 430
+  }
+}

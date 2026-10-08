@@ -1,0 +1,176 @@
+{
+  "page": {
+    "id": "0:1",
+    "name": "Page 1"
+  },
+  "topLevel": [
+    {
+      "id": "2:1688",
+      "name": "Layer_1",
+      "type": "FRAME",
+      "width": 55.416202545166016,
+      "height": 54.492462158203125
+    },
+    {
+      "id": "2:1694",
+      "name": "Now Shipping Canada Wide | Hand Made",
+      "type": "TEXT",
+      "width": 279.2259826660156,
+      "height": 14.532206535339355
+    },
+    {
+      "id": "42:985",
+      "name": "Home",
+      "type": "FRAME",
+      "width": 1440,
+      "height": 7166
+    },
+    {
+      "id": "42:1214",
+      "name": "About Us",
+      "type": "FRAME",
+      "width": 1440,
+      "height": 6039
+    },
+    {
+      "id": "505:49",
+      "name": "Metal_Tube copy 1",
+      "type": "RECTANGLE",
+      "width": 1348,
+      "height": 3644
+    },
+    {
+      "id": "476:49",
+      "name": "Group 25",
+      "type": "GROUP",
+      "width": 1312,
+      "height": 633
+    },
+    {
+      "id": "42:1366",
+      "name": "Shop",
+      "type": "FRAME",
+      "width": 1440,
+      "height": 3958
+    },
+    {
+      "id": "42:1518",
+      "name": "Contact Us",
+      "type": "FRAME",
+      "width": 1440,
+      "height": 3124
+    },
+    {
+      "id": "42:1635",
+      "name": "Product Detail",
+      "type": "FRAME",
+      "width": 1440,
+      "height": 3885
+    },
+    {
+      "id": "765:49",
+      "name": "BPM_BM",
+      "type": "RECTANGLE",
+      "width": 2003,
+      "height": 2003
+    },
+    {
+      "id": "765:50",
+      "name": "BPM_UC",
+      "type": "RECTANGLE",
+      "width": 2002,
+      "height": 2003
+    },
+    {
+      "id": "765:51",
+      "name": "Open_box_BL",
+      "type": "RECTANGLE",
+      "width": 2003,
+      "height": 2003
+    },
+    {
+      "id": "765:52",
+      "name": "Open_Box_UC",
+      "type": "RECTANGLE",
+      "width": 2003,
+      "height": 2003
+    },
+    {
+      "id": "765:53",
+      "name": "ChatGPT Image Apr 27, 2025, 03_14_20 PM 1",
+      "type": "RECTANGLE",
+      "width": 1533,
+      "height": 1669
+    },
+    {
+      "id": "765:54",
+      "name": "Metal_Tube copy 2",
+      "type": "RECTANGLE",
+      "width": 658,
+      "height": 1778
+    }
+  ],
+  "components": [],
+  "frames": [
+    {
+      "id": "42:985",
+      "name": "Home",
+      "width": 1440,
+      "height": 7166
+    },
+    {
+      "id": "42:1209",
+      "name": "mdi:cart-outline",
+      "width": 32,
+      "height": 32
+    },
+    {
+      "id": "42:1214",
+      "name": "About Us",
+      "width": 1440,
+      "height": 6039
+    },
+    {
+      "id": "42:1364",
+      "name": "mdi:cart-outline",
+      "width": 32,
+      "height": 32
+    },
+    {
+      "id": "42:1366",
+      "name": "Shop",
+      "width": 1440,
+      "height": 3958
+    },
+    {
+      "id": "42:1516",
+      "name": "mdi:cart-outline",
+      "width": 32,
+      "height": 32
+    },
+    {
+      "id": "42:1518",
+      "name": "Contact Us",
+      "width": 1440,
+      "height": 3124
+    },
+    {
+      "id": "42:1536",
+      "name": "mdi:cart-outline",
+      "width": 32,
+      "height": 32
+    },
+    {
+      "id": "42:1635",
+      "name": "Product Detail",
+      "width": 1440,
+      "height": 3885
+    },
+    {
+      "id": "42:1652",
+      "name": "mdi:cart-outline",
+      "width": 32,
+      "height": 32
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{% doc %}
+Renders a native article card with optional original Sites editorial imagery.
+@param {article} story - Native article
+@param {blog} [blog] - Parent blog for label
+@param {image} [image] - Merchant image override
+@param {string} [source_art] - Source editorial treatment
+@param {string} [label] - Article action label
+@param {string} [attributes] - Shopify editor attributes
+@example
+{% render 'bpm-sites-article-card', story: article %}
+{% enddoc %}
+{% if story != blank %}<article class="editorial-card" {{ attributes }}><a href="{{ story.url }}">
+{% assign photo = image | default: story.image %}{% assign source_art = source_art | default: 'none' %}
+{% if photo != blank or source_art != 'none' %}<div class="editorial-image{% if source_art == 'ownership' %} mark-image{% endif %}">
+{% if image != blank %}{{ image | image_url: width: 1000 | image_tag: widths: '320,600,1000', sizes: '(max-width:760px) 90vw,30vw', loading: 'lazy', alt: image.alt }}
+{% elsif source_art != 'none' %}{% case source_art %}{% when 'texture' %}<img src="{{ 'bpm-sites-texture.jpg' | asset_url }}" width="1254" height="1254" alt="" loading="lazy">{% when 'ownership' %}<img src="{{ 'bpm-sites-ownership.png' | asset_url }}" width="864" height="847" alt="" loading="lazy">{% when 'story' %}<img src="{{ 'bpm-sites-story.jpg' | asset_url }}" width="1600" height="2844" alt="" loading="lazy">{% endcase %}
+{% elsif photo != blank %}{{ photo | image_url: width: 1000 | image_tag: widths: '320,600,1000', sizes: '(max-width:760px) 90vw,30vw', loading: 'lazy', alt: photo.alt }}{% endif %}</div>{% endif %}
+<p class="eyebrow">{{ story.published_at | date: '%Y-%m-%d' }}{% if blog != blank %} / {{ blog.title | escape }}{% endif %}</p><h3>{{ story.title | escape }}</h3>{% if label != blank %}<span class="track-link">{{ label | escape }} <span aria-hidden="true">↗</span></span>{% endif %}</a></article>{% endif %}

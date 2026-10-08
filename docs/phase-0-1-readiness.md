@@ -1,5 +1,9 @@
 # Phase 0/1 requirement audit
 
+Current integration checkpoint — 7 October 2026: PR #12 is MERGED into `main` at `168a5f2eff7afdd5f9bfb82e5ef053c44f315137`. The recovered reference, audit documents, portable theme patch and credential-free reference workflow are now in GitHub. Both PR reference checks and GitGuardian passed. The protected source export/backup and separate repaired candidate exist; candidate Theme Check passed with 0 errors/3 documented warnings and 15 rendering fixtures passed. These facts supersede the snapshot's missing-export, unpushed/draft and candidate-check blockers. No Shopify upload or live mutation occurred.
+
+Remaining gates: #28 accepted reference/version and agreed editor limits (Cameron/Corey); #1 complete visual coverage and #2 asset masters (implementation/source owners); #3 isolated environment and demonstrated rollback; #4/#13 remaining app/provider/operational dependencies and rendered journeys; #14 final architecture, constraints/help/fallbacks and editor demonstration; #15 theme CI and required checks. GitHub integration closes none of those issues by itself. Previous export confirmation has been satisfied and must not be requested again.
+
 Later update: Cameron approved the protected export; it succeeded and actual source/backup verification plus baseline Theme Check are in `theme-export-audit.md`. This supersedes missing-export/source-version items in the snapshot below. Theme Check baseline fails (9 errors/11 warnings); candidate checks/CI, development preview/rollback and client acceptance remain open.
 
 GitHub issue bodies and PR #12 refreshed read-only on 7 October 2026 UTC. Local evidence inspected through commit `147f636`. This is a readiness audit, not client approval or issue closure. All referenced issues remain OPEN.

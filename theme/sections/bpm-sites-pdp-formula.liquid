@@ -1,0 +1,16 @@
+{{ 'bpm-pdp.css' | asset_url | stylesheet_tag }}
+<section class="bpm-pdp formula" id="ProductFormula-{{ product.id }}"><div class="wrap">
+  <div class="section-intro"><p class="eyebrow">{{ section.settings.eyebrow | escape }}</p><h2>{{ section.settings.heading | escape }}</h2><p>{{ section.settings.intro | escape }}</p></div>
+  <div class="formula-grid">{% for block in section.blocks %}{% if block.settings.heading != blank %}<article {{ block.shopify_attributes }}><span aria-hidden="true">{{ forloop.index | prepend: '0' }}</span><h3>{{ block.settings.heading | escape }}</h3><p>{{ block.settings.body | escape }}</p></article>{% endif %}{% endfor %}</div>
+  {% assign native_ingredients = product.metafields.custom.ingredients %}
+  {% if section.settings.inci != blank %}<details class="inci"><summary>{{ section.settings.inci_label | escape }} <span aria-hidden="true">+</span></summary><div class="prose">{{ section.settings.inci }}</div></details>{% elsif native_ingredients.value != blank %}<details class="inci"><summary>{{ product.metafields.custom.ingredients_title.value | default: section.settings.inci_label | escape }} <span aria-hidden="true">+</span></summary><div class="prose">{{ native_ingredients | metafield_tag }}</div></details>{% endif %}
+</div></section>
+{% schema %}
+{"name":"Bpm Product formula","settings":[
+ {"type":"text","id":"eyebrow","label":"Eyebrow","default":"NOTHING EXTRA. EVERYTHING INTENTIONAL."},
+ {"type":"text","id":"heading","label":"Heading","default":"Good chemistry."},
+ {"type":"text","id":"intro","label":"Introduction","default":"Here’s what the ingredients do, in plain language."},
+ {"type":"text","id":"inci_label","label":"Ingredient disclosure label","default":"Full ingredient list"},
+ {"type":"richtext","id":"inci","label":"Verified product-specific INCI / allergens","info":"Optional template override. When blank, the current product’s custom.ingredients field supplies the full list, including allergens."}
+],"blocks":[{"type":"role","name":"Ingredient role","settings":[{"type":"text","id":"heading","label":"Heading"},{"type":"textarea","id":"body","label":"Approved copy"}]}],"max_blocks":4,"presets":[{"name":"Bpm Product formula"}]}
+{% endschema %}

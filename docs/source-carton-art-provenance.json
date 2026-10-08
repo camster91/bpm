@@ -1,0 +1,17 @@
+{
+  "method": "Non-destructive SVG viewport wraps the unmodified original PNG bytes; no raster resampling or generated imagery",
+  "crop_source": "reference-site/src/crop-settings.json",
+  "pixel_source": "reference-site/src/media-manifest.json",
+  "assets": [
+    {
+      "path": "theme/assets/bpm-sites-carton-bergamot.svg",
+      "sha256": "7b83b3613d4cbedf956384ce444df14d6b2a496b2ecc2932dd061f90d44a7bb5",
+      "source": "design-assets/sites/gallery-pack.png"
+    },
+    {
+      "path": "theme/assets/bpm-sites-carton-unscented.svg",
+      "sha256": "d0c78bd628dac47da3a64fce57a91977606cf385e87523526d9f912161f8204a",
+      "source": "design-assets/sites/unscented-pack.png"
+    }
+  ]
+}

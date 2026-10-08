@@ -1,0 +1,100 @@
+{% if section.settings.mode != 'disabled' %}
+<section class="section pink-band"><div class="wrap split"><div><div class="intro-copy">
+{% if section.settings.eyebrow != blank %}<p class="eyebrow">{{ section.settings.eyebrow | escape }}</p>{% endif %}{% if section.settings.heading != blank %}<h2>{{ section.settings.heading | escape | newline_to_br }}</h2>{% endif %}{% if section.settings.body != blank %}<p class="lead">{{ section.settings.body | escape }}</p>{% endif %}</div></div>
+<div class="bpm-newsletter">
+{% if section.settings.mode == 'shopify' %}{% assign form_id = 'Newsletter-' | append: section.id %}
+{% form 'customer', id: form_id, class: 'preview-form' %}
+<input type="hidden" name="contact[tags]" value="newsletter">
+{% if form.posted_successfully? %}<p role="status" tabindex="-1">{{ 'newsletter.success' | t }}</p>{% else %}
+{% if form.errors %}<div id="{{ form_id }}-errors" role="alert">{{ form.errors | default_errors }}</div>{% endif %}
+<label for="{{ form_id }}-email">{{ section.settings.email_label | escape }}</label>
+<input id="{{ form_id }}-email" type="email" name="contact[email]" value="{{ form.email | escape }}" autocomplete="email" autocapitalize="off" required{% if form.errors %} aria-invalid="true" aria-describedby="{{ form_id }}-errors"{% endif %}>
+<label class="bpm-newsletter-consent"><input type="checkbox" required name="contact[accepts_marketing]" value="true"> <span>{{ section.settings.consent | escape }}</span></label>
+<button class="button dark" type="submit">{{ section.settings.button_label | escape }}<span aria-hidden="true">→</span></button>
+{% if section.settings.note != blank %}<p class="fine">{{ section.settings.note | escape }}</p>{% endif %}
+{% if shop.privacy_policy != blank %}<p class="fine"><a href="{{ shop.privacy_policy.url }}">{{ 'general.privacy' | t }}</a></p>{% endif %}
+{% endif %}{% endform %}
+{% elsif section.settings.mode == 'app' %}{% render 'bpm-app-blocks', blocks: section.blocks %}{% endif %}
+</div></div></section>{% endif %}
+{% schema %}
+{
+  "name": "BPM Sites newsletter",
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "Keep disabled until the existing Klaviyo/Messaging routing, consent, duplicate handling and sends are verified. Choosing native Shopify can create marketing customers and trigger configured automations. App mode renders the selected provider block."
+    },
+    {
+      "type": "select",
+      "id": "mode",
+      "label": "Verified signup integration",
+      "options": [
+        {
+          "value": "disabled",
+          "label": "Disabled pending provider verification"
+        },
+        {
+          "value": "shopify",
+          "label": "Native Shopify customer form"
+        },
+        {
+          "value": "app",
+          "label": "Existing provider app block"
+        }
+      ],
+      "default": "disabled"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "QUIET BPM UPDATES"
+    },
+    {
+      "type": "textarea",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Put me\nin the mix."
+    },
+    {
+      "type": "text",
+      "id": "body",
+      "label": "Copy",
+      "default": "Event information, scent drops and the occasional good thing."
+    },
+    {
+      "type": "text",
+      "id": "email_label",
+      "label": "Email label",
+      "default": "Your email, on beat"
+    },
+    {
+      "type": "text",
+      "id": "consent",
+      "label": "Explicit consent label",
+      "default": "I agree to receive BPM marketing emails. I can unsubscribe at any time."
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label",
+      "default": "Put me in the mix"
+    },
+    {
+      "type": "text",
+      "id": "note",
+      "label": "Approved provider/consent note"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "@app"
+    }
+  ],
+  "presets": [
+    {
+      "name": "BPM Sites newsletter"
+    }
+  ]
+}
+{% endschema %}

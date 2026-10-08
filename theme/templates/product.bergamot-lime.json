@@ -1,0 +1,337 @@
+{
+  "sections": {
+    "main": {
+      "type": "bpm-sites-product",
+      "settings": {
+        "show_description": false,
+        "pack_label": "NATURAL DEODORANT / 1 \u00d7 76 g",
+        "source_gallery": "14880059228532",
+        "display_title": "Bergamot & Lime",
+        "intro": "Bright bergamot. Fresh lime. A quiet cedarwood finish."
+      },
+      "blocks": {
+        "judge_me_reviews_preview_badge_F7Bi3V": {
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_preview_badge_F7Bi3V"
+      ]
+    },
+    "reviews": {
+      "type": "bpm-sites-pdp-reviews",
+      "settings": {},
+      "blocks": {
+        "judge_me_reviews_review_widget_GYRzxQ": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "real_data",
+            "max_width": 1200,
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget"
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_GYRzxQ"
+      ]
+    },
+    "benefits": {
+      "type": "bpm-sites-pdp-benefits",
+      "settings": {},
+      "blocks": {
+        "0": {
+          "type": "benefit",
+          "settings": {
+            "source_art": "texture",
+            "eyebrow": "01 / THE FEEL",
+            "heading": "Smooth moves.",
+            "body": "A cream that spreads easily and absorbs quickly, without a waxy coating."
+          }
+        },
+        "1": {
+          "type": "benefit",
+          "settings": {
+            "source_art": "formula",
+            "eyebrow": "02 / THE FORMULA",
+            "heading": "Every ingredient has a job.",
+            "body": "Odour control, moisture absorption and skin feel. No baking soda, waxes or fillers."
+          }
+        },
+        "2": {
+          "type": "benefit",
+          "settings": {
+            "source_art": "metal",
+            "eyebrow": "03 / THE FORMAT",
+            "heading": "A different kind of tube.",
+            "body": "Metal packaging and a small squeeze. A considered alternative to the usual plastic stick."
+          }
+        }
+      },
+      "block_order": [
+        "0",
+        "1",
+        "2"
+      ]
+    },
+    "application": {
+      "type": "bpm-sites-pdp-application",
+      "settings": {},
+      "blocks": {
+        "0": {
+          "type": "step",
+          "settings": {
+            "heading": "Squeeze a little.",
+            "body": "Start with a pea-sized amount on your fingertip or a small spoon."
+          }
+        },
+        "1": {
+          "type": "step",
+          "settings": {
+            "heading": "Swipe it on.",
+            "body": "Apply to your underarms, then massage it in."
+          }
+        },
+        "2": {
+          "type": "step",
+          "settings": {
+            "heading": "Find your rhythm.",
+            "body": "Start small and adjust the amount if needed."
+          }
+        }
+      },
+      "block_order": [
+        "0",
+        "1",
+        "2"
+      ]
+    },
+    "scent": {
+      "type": "bpm-sites-pdp-scent",
+      "settings": {
+        "source_art": "bergamot",
+        "source_art_alt": "Bergamot & Lime open carton and metal tube",
+        "heading": "Bright citrus.\nClean finish.",
+        "intro": "Bergamot and lime bring the brightness. Cedarwood adds a quiet woody finish underneath.",
+        "fine": "Scented with essential oils. No synthetic fragrance."
+      },
+      "blocks": {
+        "0": {
+          "type": "note",
+          "settings": {
+            "note": "Bergamot"
+          }
+        },
+        "1": {
+          "type": "note",
+          "settings": {
+            "note": "Lime"
+          }
+        },
+        "2": {
+          "type": "note",
+          "settings": {
+            "note": "Cedarwood"
+          }
+        }
+      },
+      "block_order": [
+        "0",
+        "1",
+        "2"
+      ]
+    },
+    "formula": {
+      "type": "bpm-sites-pdp-formula",
+      "settings": {},
+      "blocks": {
+        "0": {
+          "type": "role",
+          "settings": {
+            "heading": "Control odour.",
+            "body": "Magnesium hydroxide helps neutralise odour. Zinc ricinoleate helps trap it."
+          }
+        },
+        "1": {
+          "type": "role",
+          "settings": {
+            "heading": "Absorb moisture.",
+            "body": "Tapioca starch and kaolin help absorb moisture and give the cream a drier feel."
+          }
+        },
+        "2": {
+          "type": "role",
+          "settings": {
+            "heading": "Keep it smooth.",
+            "body": "Fractionated coconut oil gives the formula glide. Sunflower oil helps soften skin."
+          }
+        },
+        "3": {
+          "type": "role",
+          "settings": {
+            "heading": "Hold it together.",
+            "body": "Plant-based thickeners and olive-derived ingredients help keep the texture creamy and even."
+          }
+        }
+      },
+      "block_order": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    "notes": {
+      "type": "bpm-sites-product-notes",
+      "settings": {}
+    },
+    "compare": {
+      "type": "bpm-sites-pdp-compare",
+      "settings": {},
+      "blocks": {
+        "bergamot": {
+          "type": "product",
+          "settings": {
+            "product": "bpm-natural-deodorant-bergamot-lime",
+            "source_pack": "1-0",
+            "background": "#a9aa29",
+            "summary": "Bright citrus + quiet cedarwood.",
+            "pack": "1 \u00d7 76 g",
+            "fragrance": "Essential oils",
+            "button_label": "Choose citrus"
+          }
+        },
+        "unscented": {
+          "type": "product",
+          "settings": {
+            "product": "bpm-natural-deodorant-unscented",
+            "source_pack": "0-1",
+            "background": "#228782",
+            "summary": "No added essential oils or masking fragrance.",
+            "pack": "1 \u00d7 76 g",
+            "fragrance": "No added fragrance",
+            "button_label": "Choose unscented"
+          }
+        },
+        "duo": {
+          "type": "product",
+          "settings": {
+            "product": "side-a-side-b",
+            "source_pack": "1-1",
+            "background": "#f3e4b7",
+            "summary": "One of each. Try both sides of BPM.",
+            "pack": "2 \u00d7 76 g",
+            "fragrance": "One of each scent",
+            "button_label": "Choose the duo"
+          }
+        }
+      },
+      "block_order": [
+        "bergamot",
+        "unscented",
+        "duo"
+      ]
+    },
+    "faq": {
+      "type": "bpm-sites-pdp-faq",
+      "settings": {},
+      "blocks": {
+        "0": {
+          "type": "question",
+          "settings": {
+            "question": "How much should I use?",
+            "answer": "<p>Start with a pea-sized amount and massage it into your underarms. Adjust the amount if needed.</p>"
+          }
+        },
+        "1": {
+          "type": "question",
+          "settings": {
+            "question": "Is BPM baking soda free?",
+            "answer": "<p>Yes. Both Bergamot &amp; Lime and Unscented are formulated without baking soda or waxes.</p>"
+          }
+        },
+        "2": {
+          "type": "question",
+          "settings": {
+            "question": "How long does a tube last?",
+            "answer": "<p>BPM estimates approximately 304 pea-sized applications per 76 g tube, or around five months for one person. Your use may vary.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "0",
+        "1",
+        "2"
+      ]
+    },
+    "essentials": {
+      "type": "bpm-sites-pdp-essentials",
+      "settings": {},
+      "blocks": {
+        "0": {
+          "type": "text",
+          "settings": {
+            "text": "Performance first."
+          }
+        },
+        "1": {
+          "type": "text",
+          "settings": {
+            "text": "A little goes a long way."
+          }
+        },
+        "2": {
+          "type": "text",
+          "settings": {
+            "text": "Nothing extra."
+          }
+        }
+      },
+      "block_order": [
+        "0",
+        "1",
+        "2"
+      ]
+    },
+    "value": {
+      "type": "bpm-sites-pdp-value",
+      "settings": {
+        "pack": "76 g",
+        "applications": 304
+      }
+    },
+    "lifestyle": {
+      "type": "bpm-sites-pdp-lifestyle",
+      "settings": {
+        "page": "about-us"
+      }
+    },
+    "closing": {
+      "type": "bpm-sites-pdp-closing",
+      "settings": {}
+    },
+    "creators": {
+      "type": "bpm-sites-pdp-creators",
+      "settings": {},
+      "blocks": {},
+      "block_order": []
+    }
+  },
+  "order": [
+    "main",
+    "essentials",
+    "benefits",
+    "application",
+    "scent",
+    "formula",
+    "value",
+    "lifestyle",
+    "compare",
+    "reviews",
+    "creators",
+    "faq",
+    "notes",
+    "closing"
+  ]
+}

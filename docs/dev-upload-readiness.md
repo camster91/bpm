@@ -1,0 +1,62 @@
+# Custom Sites theme — development upload review
+
+The frozen a17ef61 candidate repairs the product schema rejected by Shopify during the approved 5daa4af upload, retaining the previous responsive PDP, native price filter and per-line cart accessibility work. See `qa/cart-line-error-association-20261008.md` for the scoped browser and quantity-validity evidence. See `qa/mobile-price-filter-20261008.md` for local UI evidence. See `qa/sites-all-pdp-modules-20261008.md` for measured comparisons and pending content differences. Earlier snapshots remain preserved. The approved 5daa4af command created development theme 194480669044 with four upload errors. The homepage renders in native draft preview, but the product section and three dependent templates were rejected. See `qa/dev-upload-result-20261008-5daa4af.json` and `qa/dev-schema-repair-20261008.md`. The user confirmed development-only upload. The corrected a17ef61 command succeeded on the same development theme 194480669044 with no upload errors. See `qa/dev-upload-result-20261008-a17ef61.json`. No publishing command was run.
+
+## Current frozen candidate
+
+Prepared locally from commit `a17ef61e62439e88503c3963aaf9167dfcec2056`; theme tree `f94f3d577b0c5bd30d41f9c7f4d37fa2309b6ff4`. Snapshot: `/tmp/bpm-sites-dev-candidate-20261008-a17ef61/theme`. It contains 163 files and 45,083,821 bytes. The verifier confirms the exact file set, every hash and byte against the source commit, current theme-tree identity, and explicit development noindex. The frozen-path installed CLI Theme Check reports zero errors and one existing Adobe Typekit RemoteAsset warning. This is prepared upload evidence, not native validation or client acceptance.
+
+Manifest: `qa/dev-candidate-manifest-20261008-5daa4af.json`. Verification: `qa/dev-candidate-verification-20261008-5daa4af.json`. Earlier snapshots and reviews remain preserved; the preceding review is in `plan-history/dev-upload-readiness-before-5daa4af-20261008.md`. None of the custom-theme upload commands has been executed.
+
+This snapshot includes the disabled welcome/provider shell, native bundle components and line errors, source price/FAQ/CTA corrections, article list/image alignment, merchant-editable related articles, the native-form mobile purchase bar, responsive scent/brand modules, and the generic About resource selection. All 81 compared product-module heading texts and heights match at 375/820/1440px; the two accurate four-pack introductions and explicit one-time/currency cost label still require client acceptance. Local checks include 345 rendering cases, lifecycle checks, 102 historical resource references, nine app bindings, and eight prepared article bodies. Native commerce/apps/editor behavior is unverified. The local inventory has 22 templates and no legacy customer-account templates; verify the current account mode and obtain an accepted migration decision before publication if applicable. Shopify now documents legacy templates as deprecated and publication without them as automatically upgrading accounts; no account migration is approved by a development upload. See `qa/template-coverage-20261008.md`. Prepared source article and policy bodies are repository documents excluded from theme upload; native article and policy data remain unchanged. Seven policy detail pages are now packaged with source hashes and text/link integrity checks; current policy destinations and operational/legal acceptance remain unverified. See `qa/source-policy-content-20261008.md`.
+
+## Executed development-only command
+
+```sh
+CI=1 SHOPIFY_CLI_FORCE_AUTO_UPGRADE=0 shopify theme push --store qef4ye-yg.myshopify.com --path /tmp/bpm-sites-dev-candidate-20261008-a17ef61/theme --development --development-context bpm-sites-custom-qa-20261008-5daa4af --strict --json
+```
+
+Target: BPM store `qef4ye-yg.myshopify.com`, development context `bpm-sites-custom-qa-20261008-5daa4af`. The context already maps to development theme 194480669044 named bpm-sites-custom-qa-20261008-5daa4af. This updates that same development theme with the corrected a17ef61 snapshot; the context retains its original name. If its CLI mapping expires, the development command can recreate the context, so verify the returned identity before any later writes. It sends the 163 frozen theme files: Liquid/JSON/CSS/JS/fonts/images, merchant settings, resource handles and app references. It excludes repository docs, article content package, reference-site, tests, protected audits, manifests and Git history. No environment `SHOPIFY_FLAG_*` overrides were present during preparation; recheck before execution. Do not substitute a mutable checkout or earlier snapshot.
+
+The command may start Shopify authentication. It does not publish or target the live theme. The dev storefront shares the store's products, articles, apps, customer data and service backends: preview interactions can have real effects. Newsletter/welcome activation, content edits, review/form submission, real purchases and store-wide settings remain separately gated. No provider, discount or subscriber flow is activated by this candidate.
+
+Approval requirement: Shopify CLI skill states, “Before executing a Shopify CLI command that authenticates, requests access scopes, transmits queries, variables, files, configuration, or identifiers, installs or upgrades software, deploys, deletes resources, or runs a mutation, show the exact command, target, transmitted data, and side effects, then obtain the user's explicit confirmation in a separate turn.” Automatic goal continuations do not satisfy this confirmation. Source: `/Users/Cameron/.codex/plugins/cache/openai-curated-remote/shopify/4.1.1/skills/shopify-use-shopify-cli/SKILL.md`.
+
+## After approved upload
+
+1. Record the returned theme ID, role, context, editor and preview URL. Verify it is the intended development target; stop before further writes on conflicting state. Retain partial-upload evidence if the command fails.
+2. Inspect actual native resource/template assignments, images and app blocks. Capture representative phone/tablet/desktop source comparisons. Fixture mappings are historical leads, not authenticated resolution.
+3. Verify heading/image/button edits, section add/reorder/remove, app block configuration and save/reload persistence in the dev theme. Undo bounded theme-only test edits and retain candidate identity. Shared product/article fields require their separate approved test boundary.
+4. Verify Judge.me attribution/listing, combined structured data, subscription cadence/price/availability, bundle components/stock, account model and markets. Do not change store-wide settings to fit fixtures.
+5. Establish an isolated, approved commerce test boundary before cart/checkout or provider submissions. Verify native one-time/subscription/bundle/error journeys and checkout handoff within that boundary.
+6. Complete source/state/device QA, accessibility, performance, analytics/consent, claims/provider decisions, client acceptance and release/rollback evidence against the full Phase 0–5 plan and `acceptance-gates-20261008.md`.
+
+## Release and rollback boundary
+
+A failed development upload does not authorise production replacement. Restore/re-upload/delete commands require their exact bounded approval. Before production release, resolve current account mode and the documented automatic account-upgrade side effect of publishing without legacy templates, confirm current live theme identity, preserve a fresh named backup, validate the approved candidate and exact publication/rollback commands, record approvals, and rehearse recovery. The historical October export is not a current release backup. No publication or completed rollback rehearsal is claimed.
+
+## Native product observation after corrected upload
+
+The Bergamot & Lime page renders the repaired main section, nine gallery entries, $23.99 CAD one-time price, five-month 10% subscription at $21.59 CAD, native /cart/add form action, and Judge.me review region. These are rendered read-only observations; no cart, checkout, review or provider submission was performed. The preview bar identifies the intended theme as Draft and metadata remains noindex,follow.
+
+Native data disproves the local fixture's single-H1 assumption: this product has 16 main H1 elements, with extra headings inside existing product metafield HTML. Preserve store content; scope a local theme rendering correction or separately approved data change after auditing all products. Purchase lead resolves natively from the product metafield even though several bound local fixtures left it blank. Header labels wrap badly at 1280px; the consent banner remains visible and needs its own native QA. Source purchase-title and tablet layout fidelity gaps remain open. See `qa/dev-upload-native-product-20261008-a17ef61.json` and its screenshot. Successful development upload is not completed Phase 0–5 QA or publication readiness.
+
+## Local source-alignment follow-up
+
+Subsequent local changes now match purchase display titles, introductions and tablet column rules to the authoritative source. See `qa/purchase-source-alignment-20261008.md` and the 27-pair measured matrix. The uploaded a17ef61 archive remains intact and identifies the current dev upload, but no longer matches the current local theme. These changes have not been uploaded. Prepare a new frozen candidate after the remaining local repairs; obtain exact-command approval before the next development upload.
+
+## Latest prepared client-content candidate
+
+415e242 now includes current client homepage additions and the prior purchase-source alignment. See `client-content-dev-upload-20261008.md` for the exact new command, frozen file identity, review evidence and effects. 168 files / 45,111,695 bytes are verified, with explicit noindex and zero Theme Check errors. a17ef61 remains the latest uploaded candidate on dev theme 194480669044. The new client-content snapshot has not been uploaded and requires separate exact-command confirmation.
+
+## Consolidated local candidate
+
+3d296aa supersedes the prepared 415e242 snapshot for the next upload review. It includes the ingredient heading repair alongside all client-content changes. Immutable theme path: /tmp/bpm-sites-dev-candidate-20261008-3d296aa/theme. See client-content-dev-upload-20261008.md for command, target, data, effects and approval requirement. 168 deployable files, 45,111,958 bytes; repository README excluded. Full check:theme passes (355 chrome checks); frozen-candidate Theme Check has zero errors and one existing warning. No upload or native verification of this candidate has occurred. The most recent recorded uploaded candidate remains a17ef61.
+
+## Approved client-content upload completed
+
+Human explicitly approved 3d296aa. The exact reviewed command completed with exit 0, no upload errors, zero Theme Check errors and one RemoteAsset warning. Returned identity is development theme 194480669044, unchanged name/context. The browser preview bar shows Draft. See qa/dev-upload-result-20261008-3d296aa.json. No publication command ran.
+
+Native read-only homepage QA now covers 375/820/1440px: 17 active sections, one main H1, no duplicate IDs or document/cost-card overflow, two genuine Judge.me regions, five FAQ controls and compact navigation. The nine-entry menu opens by keyboard and Escape closes it; all five FAQs open by keyboard with the sensitive-area qualifier retained. The certification badge and original pricing image load after scrolling/disclosure; initial lazy-load observations were not image failures. The newsletter has a native customer-form action, required consent and privacy link; it was not submitted and provider automation remains unverified. Bergamot & Lime renders one main H1, 15 lowered ingredient headings, $23.99 CAD one-time / $21.59 CAD five-month subscription and native /cart/add action. No purchase/provider submission occurred. Evidence: qa/client-content-native-responsive-20261008.json and client-content-native-desktop-20261008.png.
+
+Editor save/reload/restoration, other product states, account mode, isolated commerce/provider tests, full source/device QA, claims, analytics/performance and release/rollback remain open. This is development verification, not client acceptance or release completion. The previous pending-approval statements above are historical and superseded by this result.

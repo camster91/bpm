@@ -1,0 +1,25 @@
+{
+  "candidate": "a17ef61e62439e88503c3963aaf9167dfcec2056",
+  "themeTree": "f94f3d577b0c5bd30d41f9c7f4d37fa2309b6ff4",
+  "files": 163,
+  "bytes": 45083821,
+  "store": "qef4ye-yg.myshopify.com",
+  "context": "bpm-sites-custom-qa-20261008-5daa4af",
+  "theme": {
+    "id": 194480669044,
+    "name": "bpm-sites-custom-qa-20261008-5daa4af",
+    "role": "development",
+    "editor_url": "https://qef4ye-yg.myshopify.com/admin/themes/194480669044/editor",
+    "preview_url": "https://qef4ye-yg.myshopify.com?preview_theme_id=194480669044"
+  },
+  "exitCode": 0,
+  "uploadErrors": [],
+  "themeCheck": {
+    "errors": 0,
+    "warnings": 1,
+    "warning": "RemoteAsset: Adobe font stylesheet"
+  },
+  "published": false,
+  "scope": "development files/settings only",
+  "nativeProductProof": "dev-upload-native-product-20261008-a17ef61.json"
+}

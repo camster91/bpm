@@ -1,0 +1,44 @@
+{
+  "scope": "Fabricated bundle-component/line-error local rendering, no native cart mutation or purchase",
+  "rows": [
+    {
+      "width": 375,
+      "componentControls": 0,
+      "components": [
+        "2 × Bergamot & Lime — fixture",
+        "2 × Unscented — fixture — 76 g"
+      ],
+      "disabledSubmits": true,
+      "error": "Fabricated availability error: please review the quantity.",
+      "overflow": false,
+      "quantityControls": 2,
+      "viewport": 375
+    },
+    {
+      "width": 820,
+      "componentControls": 0,
+      "components": [
+        "2 × Bergamot & Lime — fixture",
+        "2 × Unscented — fixture — 76 g"
+      ],
+      "disabledSubmits": true,
+      "error": "Fabricated availability error: please review the quantity.",
+      "overflow": false,
+      "quantityControls": 2,
+      "viewport": 820
+    },
+    {
+      "width": 1440,
+      "componentControls": 0,
+      "components": [
+        "2 × Bergamot & Lime — fixture",
+        "2 × Unscented — fixture — 76 g"
+      ],
+      "disabledSubmits": true,
+      "error": "Fabricated availability error: please review the quantity.",
+      "overflow": false,
+      "quantityControls": 2,
+      "viewport": 1440
+    }
+  ]
+}

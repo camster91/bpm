@@ -1,0 +1,15 @@
+{% doc %}
+  Emits Shopify's native resource schema once in the main layout.
+  Review data remains owned by the review app.
+  @param {object} request - Native request context
+  @param {product} [product] - Current native product
+  @param {article} [article] - Current native article
+  @param {object} settings - Merchant theme settings
+  @example
+  {% render 'bpm-structured-data', request: request, product: product, article: article, settings: settings %}
+{% enddoc %}
+{%- if request.page_type == 'product' and product != blank and settings.product_structured_data != false -%}
+  <script type="application/ld+json" data-bpm-structured-data="product">{{ product | structured_data }}</script>
+{%- elsif request.page_type == 'article' and article != blank and settings.article_structured_data != false -%}
+  <script type="application/ld+json" data-bpm-structured-data="article">{{ article | structured_data }}</script>
+{%- endif -%}

@@ -1,0 +1,29 @@
+{
+  "sections": {
+    "main": {
+      "type": "bpm-sites-article",
+      "settings": { "show_back_link": false }
+    },
+    "related": {
+      "type": "bpm-sites-journal",
+      "settings": {
+        "hide_current_article": true,
+        "eyebrow": "KEEP READING",
+        "heading": "Another track.",
+        "blog": "news",
+        "button_label": "",
+        "article_label": "Read the story"
+      },
+      "blocks": {
+        "underarms": { "type": "article", "settings": { "article": "news/underarm-skin-care-ingredients", "source_art": "texture" } },
+        "ownership": { "type": "article", "settings": { "article": "news/the-name-behind-bpm-indigenous-ownership-and-finding-my-way-back", "source_art": "ownership" } },
+        "pricing": { "type": "article", "settings": { "article": "news/the-math-behind-fair-pricing-bpm-vs-native-vs-schmidts", "source_art": "story" } }
+      },
+      "block_order": ["underarms", "ownership", "pricing"]
+    }
+  },
+  "order": [
+    "main",
+    "related"
+  ]
+}

@@ -1,0 +1,4 @@
+<section class="section wrap"><div class="policy-list">{% assign listed = 0 %}{% for policy in shop.policies %}{% if policy.url != blank and policy.body != blank %}<a href="{{ policy.url }}"><span>{{ policy.title | escape }}</span><span aria-hidden="true">↗</span></a>{% assign listed = listed | plus: 1 %}{% endif %}{% endfor %}{% for link in section.settings.additional_menu.links %}<a href="{{ link.url }}"><span>{{ link.title | escape }}</span><span aria-hidden="true">↗</span></a>{% assign listed = listed | plus: 1 %}{% endfor %}</div>{% if listed == 0 %}<p>{{ 'policies.empty' | t }}</p>{% endif %}</section>
+{% schema %}
+{"name":"Bpm Policy index","settings":[{"type":"link_list","id":"additional_menu","label":"Additional published policy pages","info":"Use for verified subscription, legal and contact-information pages not included in Shopify's native policy list. Avoid duplicate links."}],"presets":[{"name":"Bpm Policy index"}]}
+{% endschema %}

@@ -1,0 +1,15 @@
+# Sites-source foundation checkpoint — 7 October 2026
+
+The authoritative source is the published Sites review and recovered `reference-site/`; Figma was not consulted for this implementation. New `bpm-sites-header` and `bpm-sites-footer` sections replace the prior section-group chrome. Their native menu resource, logo override, colours, account visibility, footer copy/policy menu/legal entity and current market presentation are merchant controlled. Bag links/counts use Shopify routes/cart state. Nested menus preserve three native levels and current-page labels. Empty legal entity does not invent a company name; footer market uses actual localization rather than fixed Canada/CAD.
+
+`bpm-sites-logo.svg` and `bpm-sites-display.woff2` are copies of the recovered Sites dependencies. `bpm-sites.css` carries the source product stylesheet's shared foundation before `.crumb`, followed by the source `site.css`, with native menu disclosure styles and a heading-family conflict fix. No internal comments/review API or preview cart JavaScript is included. The inherited `bpm-base.css`, older font faces and earlier homepage sections remain transitional; consolidate them as remaining pages are ported. Source styles include later page components, but those components are not implemented merely because CSS exists. Root Sites colours are configurable; source cream is restored to `#fffde9`.
+
+Local LiquidJS preview: `node scripts/preview-theme-chrome.mjs` → `/tmp/bpm-chrome-preview/sites-chrome.html`, served at `http://127.0.0.1:8892/sites-chrome.html`. The central heading/legal text is explicitly fabricated fixture content. Existing index/sections previews remain historical fixtures. This is not Shopify runtime or a complete migrated homepage.
+
+Verification: 24 rendered checks pass, including native Sites cart/account state, safe nested links and current country/currency output. Installed CLI Theme Check reports zero errors and one RemoteAsset warning for the existing Adobe kit. The skill validator was attempted and cannot run because its bundled `@shopify/theme-check-common` is missing; plugin files and checks were not modified/disabled.
+
+Browser: native mobile disclosure opened at 390px viewport (375px content width), then Escape closed it with focus on SUMMARY. Scroll width equalled content width at mobile 375, tablet 768 and desktop 1455; both visible logos loaded. Desktop and mobile proof is in `sites-chrome-desktop-local.png` / `sites-chrome-mobile-local.png`. Temporary viewport overrides were reset. No new browser-wide colour/display settings changed.
+
+Limits: this is source-derived shared chrome, not a full hosted-versus-theme fidelity verdict. Real Shopify editor persistence, current apps, market changes, actual cart updates and all commerce journeys remain unverified. Source design selection is not final client acceptance. No GitHub push/merge, theme upload or publication occurred.
+
+Next: port the Sites homepage hero and reusable content/product sections, then all route templates and native commerce. Preserve actual product truth and approved copy/media; replace demo functionality rather than copying it into commerce.

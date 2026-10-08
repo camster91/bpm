@@ -1,0 +1,59 @@
+<header class="site-header bpm-sites-header{% if section.settings.menu.links.size > 6 %} bpm-sites-header--extended{% endif %}" style="background:{{ section.settings.background }};color:{{ section.settings.text_color }}">
+  <a class="site-logo" href="{{ routes.root_url }}" aria-label="{{ shop.name | escape }}">
+    {% if section.settings.logo != blank %}{{ section.settings.logo | image_url: width: 264 | image_tag: widths: '66,132,264', sizes: '(max-width:760px) 52px,66px', loading: 'eager', alt: shop.name }}{% else %}<img src="{{ 'bpm-sites-logo.svg' | asset_url }}" width="66" height="68" alt="{{ shop.name | escape }}">{% endif %}
+  </a>
+  <nav class="desktop-nav" aria-label="{{ 'general.navigation' | t }}"><ul class="bpm-sites-menu">{% render 'bpm-sites-links', menu: section.settings.menu %}</ul></nav>
+  <div class="header-actions">
+    <details class="bpm-sites-mobile bpm-mobile-menu">
+      <summary>{{ 'general.menu' | t }} <span aria-hidden="true">☰</span></summary>
+      <nav aria-label="{{ 'general.navigation' | t }}"><ul class="bpm-sites-menu">{% render 'bpm-sites-links', menu: section.settings.menu %}</ul></nav>
+    </details>
+    {% if shop.customer_accounts_enabled and section.settings.show_account %}<a href="{{ routes.account_url }}">{{ 'general.account' | t }}</a>{% endif %}
+    <a class="site-bag" href="{{ routes.cart_url }}" aria-label="{{ 'general.bag_count' | t: count: cart.item_count }}">{{ 'general.bag' | t }} <span data-bpm-cart-count>{{ cart.item_count }}</span></a>
+  </div>
+</header>
+{% schema %}
+{
+  "name": "BPM Sites header",
+  "enabled_on": {
+    "groups": [
+      "header"
+    ]
+  },
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "Store-wide header based on the Sites review. Links are managed in Shopify navigation."
+    },
+    {
+      "type": "link_list",
+      "id": "menu",
+      "label": "Main navigation",
+      "default": "main-menu"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo override"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_account",
+      "label": "Show account link when enabled",
+      "default": true
+    },
+    {
+      "type": "color",
+      "id": "background",
+      "label": "Background",
+      "default": "#fffde9"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text",
+      "default": "#231f20"
+    }
+  ]
+}
+{% endschema %}

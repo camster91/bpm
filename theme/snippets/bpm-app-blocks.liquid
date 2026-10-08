@@ -1,0 +1,7 @@
+{% doc %}
+  Renders installed Shopify theme app blocks without replacing vendor data or markup.
+  @param {object[]} blocks - App blocks selected in the theme editor
+{% enddoc %}
+{% for block in blocks %}
+  {% if block.type == '@app' %}{% render block %}{% endif %}
+{% endfor %}

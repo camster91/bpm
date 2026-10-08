@@ -1,0 +1,22 @@
+[
+  {
+    "barForm": "Product-preview-bpm-sites-product",
+    "case": "subscription",
+    "focus": "<button type=\"submit\" name=\"add\" form=\"Product-preview-bpm-sites-product\" class=\"button dark add-bag\">Add to bag<span aria-hidden=\"true\">→</span></button>",
+    "nativeForm": "Product-preview-bpm-sites-product",
+    "price": "$21.60 CAD",
+    "result": "{\"id\":\"101\",\"selling_plan\":\"501\",\"quantity\":\"4\",\"add\":\"\"}",
+    "sameForm": true
+  },
+  {
+    "case": "one-time",
+    "price": "$23.99 CAD",
+    "result": "{\"id\":\"101\",\"selling_plan\":\"\",\"quantity\":\"3\",\"add\":\"\"}"
+  },
+  {
+    "case": "invalid-quantity",
+    "focus": "quantity",
+    "invalid": true,
+    "result": "{\"id\":\"101\",\"selling_plan\":\"\",\"quantity\":\"3\",\"add\":\"\"}"
+  }
+]

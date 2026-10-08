@@ -1,0 +1,248 @@
+{
+  "scope": "Source vs local fixture; source presentation only, native resources/prices are mocked",
+  "rows": [
+    {
+      "width": 375,
+      "source": {
+        "cards": [
+          {
+            "card": {
+              "height": 455,
+              "width": 327
+            },
+            "heading": {
+              "height": 29,
+              "width": 311
+            },
+            "image": {
+              "height": 284,
+              "width": 327
+            },
+            "price": "1 × 76 g$23.99 CAD",
+            "summary": "Bergamot & Lime.",
+            "title": "Bergamot & Lime"
+          },
+          {
+            "card": {
+              "height": 455,
+              "width": 327
+            },
+            "heading": {
+              "height": 29,
+              "width": 311
+            },
+            "image": {
+              "height": 284,
+              "width": 327
+            },
+            "price": "1 × 76 g$23.99 CAD",
+            "summary": "Unscented.",
+            "title": "Unscented"
+          }
+        ],
+        "viewport": 375
+      },
+      "candidate": {
+        "cards": [
+          {
+            "card": {
+              "height": 455,
+              "width": 327
+            },
+            "heading": {
+              "height": 29,
+              "width": 311
+            },
+            "image": {
+              "height": 284,
+              "width": 327
+            },
+            "price": "1 × 76 g$23.99 CAD",
+            "summary": "Bergamot & Lime.",
+            "title": "Bergamot & Lime"
+          },
+          {
+            "card": {
+              "height": 455,
+              "width": 327
+            },
+            "heading": {
+              "height": 29,
+              "width": 311
+            },
+            "image": {
+              "height": 284,
+              "width": 327
+            },
+            "price": "1 × 76 g$23.99 CAD",
+            "summary": "Unscented.",
+            "title": "Unscented"
+          }
+        ],
+        "viewport": 375
+      }
+    },
+    {
+      "width": 820,
+      "source": {
+        "cards": [
+          {
+            "card": {
+              "height": 493,
+              "width": 359
+            },
+            "heading": {
+              "height": 30,
+              "width": 341
+            },
+            "image": {
+              "height": 294,
+              "width": 359
+            },
+            "price": "1 × 76 g$23.99 CAD",
+            "summary": "Bergamot & Lime.",
+            "title": "Bergamot & Lime"
+          },
+          {
+            "card": {
+              "height": 493,
+              "width": 359
+            },
+            "heading": {
+              "height": 30,
+              "width": 341
+            },
+            "image": {
+              "height": 294,
+              "width": 359
+            },
+            "price": "1 × 76 g$23.99 CAD",
+            "summary": "Unscented.",
+            "title": "Unscented"
+          }
+        ],
+        "viewport": 820
+      },
+      "candidate": {
+        "cards": [
+          {
+            "card": {
+              "height": 493,
+              "width": 359
+            },
+            "heading": {
+              "height": 30,
+              "width": 341
+            },
+            "image": {
+              "height": 294,
+              "width": 359
+            },
+            "price": "1 × 76 g$23.99 CAD",
+            "summary": "Bergamot & Lime.",
+            "title": "Bergamot & Lime"
+          },
+          {
+            "card": {
+              "height": 493,
+              "width": 359
+            },
+            "heading": {
+              "height": 30,
+              "width": 341
+            },
+            "image": {
+              "height": 294,
+              "width": 359
+            },
+            "price": "1 × 76 g$23.99 CAD",
+            "summary": "Unscented.",
+            "title": "Unscented"
+          }
+        ],
+        "viewport": 820
+      }
+    },
+    {
+      "width": 1440,
+      "source": {
+        "cards": [
+          {
+            "card": {
+              "height": 725,
+              "width": 642
+            },
+            "heading": {
+              "height": 30,
+              "width": 610
+            },
+            "image": {
+              "height": 526,
+              "width": 642
+            },
+            "price": "1 × 76 g$23.99 CAD",
+            "summary": "Bergamot & Lime.",
+            "title": "Bergamot & Lime"
+          },
+          {
+            "card": {
+              "height": 725,
+              "width": 642
+            },
+            "heading": {
+              "height": 30,
+              "width": 610
+            },
+            "image": {
+              "height": 526,
+              "width": 642
+            },
+            "price": "1 × 76 g$23.99 CAD",
+            "summary": "Unscented.",
+            "title": "Unscented"
+          }
+        ],
+        "viewport": 1440
+      },
+      "candidate": {
+        "cards": [
+          {
+            "card": {
+              "height": 725,
+              "width": 642
+            },
+            "heading": {
+              "height": 30,
+              "width": 610
+            },
+            "image": {
+              "height": 526,
+              "width": 642
+            },
+            "price": "1 × 76 g$23.99 CAD",
+            "summary": "Bergamot & Lime.",
+            "title": "Bergamot & Lime"
+          },
+          {
+            "card": {
+              "height": 725,
+              "width": 642
+            },
+            "heading": {
+              "height": 30,
+              "width": 610
+            },
+            "image": {
+              "height": 526,
+              "width": 642
+            },
+            "price": "1 × 76 g$23.99 CAD",
+            "summary": "Unscented.",
+            "title": "Unscented"
+          }
+        ],
+        "viewport": 1440
+      }
+    }
+  ]
+}

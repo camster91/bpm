@@ -1,0 +1,16 @@
+{
+  "formAction": "/cart/add",
+  "judgeMePresent": true,
+  "mainH1Count": 16,
+  "planLabels": [
+    "One-time purchase$23.99 CAD",
+    "Deliver every 5 months, 10% off$21.59 CAD"
+  ],
+  "price": "$23.99 CAD",
+  "productId": "ProductPurchase-14880059228532",
+  "purchaseHeading": "Bergamot & Lime — Natural Deodorant",
+  "purchaseLead": "Bright citrus. Clean finish.",
+  "robots": "noindex,follow",
+  "scrollWidth": 1280,
+  "viewport": 1280
+}

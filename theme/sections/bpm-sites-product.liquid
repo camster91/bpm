@@ -1,0 +1,281 @@
+{% assign matched_pack = nil %}{% for item in section.blocks %}{% if item.type == 'product_pack' and item.settings.product != blank and item.settings.product.id != blank and product.id != blank and item.settings.product.id == product.id %}{% assign matched_pack = item %}{% break %}{% endif %}{% endfor %}{% assign purchase_pack = section.settings.pack_label | default: matched_pack.settings.pack_label %}{% assign display_title = section.settings.display_title | default: matched_pack.settings.display_title | default: product.title %}
+{% assign gallery_override = section.settings.image | default: matched_pack.settings.image %}{% assign gallery_key = section.settings.source_gallery %}{% if gallery_key == blank or gallery_key == 'native' %}{% assign gallery_key = matched_pack.settings.source_gallery %}{% endif %}{% assign gallery_keys = '15222327476596,15222328361332,15222329180532,15222739599732,15141686444404,15141668815220,15141732581748,14925587775860,14880059228532' | split: ',' %}{% assign use_override = false %}{% if gallery_override != blank or gallery_keys contains gallery_key %}{% assign use_override = true %}{% endif %}{% assign override_initial = use_override %}{% if gallery_override == blank and product.selected_variant != blank and product.selected_variant.featured_media != blank %}{% assign override_initial = false %}{% endif %}
+{{ 'bpm-product.css' | asset_url | stylesheet_tag }}
+{% liquid
+  assign variant = product.selected_or_first_available_variant
+  assign allocation = product.selected_selling_plan_allocation
+  if product.requires_selling_plan and allocation == nil
+    assign allocation = variant.selling_plan_allocations.first
+  endif
+  assign shown_price = allocation.price | default: variant.price
+  assign chosen_media = variant.featured_media | default: product.featured_media
+  assign form_id = 'Product-' | append: section.id
+  assign media_count = product.media.size
+  assign purchasable = variant.available
+  if product.requires_selling_plan and allocation == nil
+    assign purchasable = false
+  endif
+  if use_override
+    assign media_count = media_count | plus: 1
+  endif
+%}
+<div class="crumb wrap"><a href="{{ routes.all_products_collection_url }}">{{ 'products.shop' | t }}</a> / {{ product.title | escape }}</div>
+<section id="ProductPurchase-{{ product.id }}" tabindex="-1" class="purchase wrap bpm-product" data-bpm-product aria-labelledby="Title-{{ section.id }}">
+  <div class="gallery" data-bpm-gallery>
+    {% assign override_loading = 'lazy' %}{% assign override_priority = 'auto' %}{% if override_initial %}{% assign override_loading = 'eager' %}{% assign override_priority = 'high' %}{% endif %}
+    {% if use_override %}<div class="main-image" id="Media-{{ section.id }}-override" data-bpm-media{% if override_initial %} data-initial-media{% endif %}>{% if gallery_override != blank %}{{ gallery_override | image_url: width: 1600 | image_tag: loading: override_loading, fetchpriority: override_priority, widths: '500,800,1200,1600', sizes: '(max-width:760px) 90vw,45vw', alt: product.title }}{% else %}{% render 'bpm-sites-gallery-art', key: gallery_key, alt: product.title, loading: override_loading, images: images, native_delivery: settings.native_source_delivery %}{% endif %}<span class="image-count">1 / {{ media_count }}</span></div>{% endif %}
+    {% for media in product.media %}
+      {% assign loading = 'lazy' %}{% if override_initial == false and media.id == chosen_media.id %}{% assign loading = 'eager' %}{% endif %}
+      <div class="main-image" id="Media-{{ section.id }}-{{ media.id }}" data-bpm-media{% if override_initial == false and media.id == chosen_media.id %} data-initial-media{% endif %}>{% render 'bpm-sites-media', media: media, loading: loading %}<span class="image-count">{% if use_override %}{{ forloop.index | plus: 1 }}{% else %}{{ forloop.index }}{% endif %} / {{ media_count }}</span></div>
+    {% endfor %}
+    {% if media_count > 1 %}<div class="thumbs" aria-label="{{ 'products.gallery' | t }}">
+      {% if use_override %}<a class="thumb" href="#Media-{{ section.id }}-override" data-bpm-thumb aria-label="{{ 'products.media_number' | t: number: 1 }}">{% if gallery_override != blank %}{{ gallery_override | image_url: width: 150 | image_tag: loading: 'lazy', alt: '' }}{% else %}{% render 'bpm-sites-gallery-art', key: gallery_key, alt: '', loading: 'lazy', thumbnail: true, images: images, native_delivery: settings.native_source_delivery %}{% endif %}</a>{% endif %}
+      {% for media in product.media %}{% assign number = forloop.index %}{% if use_override %}{% assign number = number | plus: 1 %}{% endif %}<a class="thumb" href="#Media-{{ section.id }}-{{ media.id }}" data-bpm-thumb aria-label="{{ 'products.media_number' | t: number: number }}">{{ media.preview_image | image_url: width: 150 | image_tag: loading: 'lazy', alt: '' }}{% unless media.media_type == 'image' %}<span class="play" aria-hidden="true">▶</span>{% endunless %}</a>{% endfor %}
+    </div>{% endif %}
+  </div>
+  <div class="summary">
+    {% if purchase_pack != blank %}<p class="eyebrow" {{ matched_pack.shopify_attributes }}>{{ purchase_pack | escape }}</p>{% endif %}
+    <h1 id="Title-{{ section.id }}">{{ display_title | escape }}</h1>
+    {% assign scent_intro = section.settings.intro | default: matched_pack.settings.intro | default: product.metafields.custom.scent_tagline.value %}{% if scent_intro != blank %}<p class="lead">{{ scent_intro | escape }}</p>{% endif %}
+    <p class="price" aria-live="polite"><span class="bpm-visually-hidden">{{ 'products.price' | t }} </span><span data-bpm-product-price>{{ shown_price | money_with_currency }}</span></p>
+    {% if variant.compare_at_price > variant.price and allocation == nil %}<p><s>{{ variant.compare_at_price | money_with_currency }}</s></p>{% endif %}
+    {% if section.settings.rotation.links.size > 0 %}<div class="scent-controls"><p class="label">{{ 'products.rotation' | t }}</p><div class="choices">{% for link in section.settings.rotation.links %}<a href="{{ link.url }}"{% if link.current %} aria-current="page"{% endif %}>{{ link.title | escape }}</a>{% endfor %}</div></div>{% endif %}
+    {% unless product.has_only_default_variant %}<form action="{{ product.url }}" method="get" class="bpm-variant-form" data-bpm-variant-form><label for="Variant-{{ section.id }}">{{ 'products.variant' | t }}</label><select id="Variant-{{ section.id }}" name="variant">{% for option in product.variants %}<option value="{{ option.id }}"{% if option.id == variant.id %} selected{% endif %}>{{ option.title | escape }}{% unless option.available %} — {{ 'products.sold_out' | t }}{% endunless %}</option>{% endfor %}</select><button type="submit" class="button">{{ 'products.update_selection' | t }}</button></form>{% endunless %}
+    {% form 'product', product, id: form_id, class: 'bpm-product-form' %}
+      {% if form.errors %}<div role="alert">{{ form.errors | default_errors }}</div>{% endif %}
+      <input type="hidden" name="id" value="{{ variant.id }}">
+      {% if variant.selling_plan_allocations.size > 0 %}<fieldset class="bpm-purchase-plans"><legend class="label">{{ 'products.purchase_option' | t }}</legend>
+        {% unless product.requires_selling_plan %}<label class="plan"><input type="radio" name="selling_plan" value=""{% if allocation == nil %} checked{% endif %} data-price="{{ variant.price | money_with_currency | escape }}"><span>{{ 'products.one_time' | t }}</span><strong>{{ variant.price | money_with_currency }}</strong></label>{% endunless %}
+        {% for plan in variant.selling_plan_allocations %}<label class="plan"><input type="radio" name="selling_plan" value="{{ plan.selling_plan.id }}"{% if plan.selling_plan.id == allocation.selling_plan.id %} checked{% endif %} data-price="{{ plan.price | money_with_currency | escape }}"><span>{{ plan.selling_plan.name | escape }}</span><strong>{{ plan.price | money_with_currency }}</strong></label>
+          <div class="bpm-plan-terms"><p>{{ plan.selling_plan.description | strip_html | escape }}</p><p class="fine">{{ 'products.checkout_charge' | t }}: {{ plan.checkout_charge_amount | money_with_currency }} · {{ 'products.per_delivery' | t }}: {{ plan.per_delivery_price | money_with_currency }}</p></div>
+        {% endfor %}
+      </fieldset>{% endif %}
+      <div class="buy-row"><label class="bpm-product-quantity" for="Qty-{{ section.id }}">{{ 'cart.quantity' | t }}<input id="Qty-{{ section.id }}" type="number" name="quantity" value="{{ variant.quantity_rule.min | default: 1 }}" min="{{ variant.quantity_rule.min | default: 1 }}" step="{{ variant.quantity_rule.increment | default: 1 }}"{% if variant.quantity_rule.max %} max="{{ variant.quantity_rule.max }}"{% endif %} required></label>
+        <button type="submit" name="add" class="button dark add-bag"{% unless purchasable %} disabled{% endunless %}>{% unless variant.available %}{{ 'products.sold_out' | t }}{% else %}{{ 'products.add_bag' | t }}{% endunless %}<span aria-hidden="true">→</span></button>
+      </div>
+      {% if product.requires_selling_plan and allocation == nil %}<p role="status">{{ 'products.plan_unavailable' | t }}</p>{% endif %}
+      <p class="shipping">{% if cart.taxes_included %}{{ 'cart.taxes_included' | t }}{% else %}{{ 'cart.taxes_checkout' | t }}{% endif %}{% if variant.requires_shipping %} {{ 'cart.shipping_checkout' | t }}{% endif %}</p>
+    {% endform %}
+    {% if section.settings.fact_1 != blank or section.settings.fact_2 != blank or section.settings.fact_3 != blank %}<ul class="quick-facts">{% if section.settings.fact_1 != blank %}<li>{{ section.settings.fact_1 | escape }}</li>{% endif %}{% if section.settings.fact_2 != blank %}<li>{{ section.settings.fact_2 | escape }}</li>{% endif %}{% if section.settings.fact_3 != blank %}<li>{{ section.settings.fact_3 | escape }}</li>{% endif %}</ul>{% endif %}
+    {% capture jump_links %}{% for block in section.blocks %}{% if block.type == 'jump_link' and block.settings.url != blank and block.settings.title != blank %}<a href="{{ block.settings.url | escape }}" {{ block.shopify_attributes }}>{{ block.settings.title | escape }} <span aria-hidden="true">↓</span></a>{% endif %}{% endfor %}{% endcapture %}{% if jump_links != blank %}<nav class="jump" aria-label="{{ 'products.jump_navigation' | t }}">{{ jump_links }}</nav>{% endif %}
+    {% render 'bpm-app-blocks', blocks: section.blocks %}
+  </div>
+  {% unless section.settings.show_mobile_purchase_bar == false %}<div class="bpm-mobile-buy"><span>{{ display_title | escape }}</span><button type="submit" name="add" form="{{ form_id }}" class="button dark add-bag"{% unless purchasable %} disabled{% endunless %}>{% unless variant.available %}{{ 'products.sold_out' | t }}{% else %}{{ 'products.add_bag' | t }}{% endunless %}<span aria-hidden="true">→</span></button></div>{% endunless %}
+</section>
+{% unless section.settings.show_description == false %}{% if product.description != blank %}<section class="section wrap"><p class="eyebrow">{{ 'products.full_notes' | t }}</p><h2>{{ 'products.details' | t }}</h2><div class="prose bpm-product-description">{{ product.description }}</div></section>{% endif %}{% endunless %}
+<script src="{{ 'bpm-product.js' | asset_url }}" defer></script>
+{% schema %}
+{
+  "name": "Bpm Product",
+  "settings": [
+    {
+      "type": "text",
+      "id": "display_title",
+      "label": "Display title",
+      "info": "Optional short storefront heading. The native product title remains unchanged."
+    },
+    {
+      "type": "checkbox",
+      "id": "show_mobile_purchase_bar",
+      "label": "Show mobile purchase bar",
+      "default": true
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "First gallery image override",
+      "info": "Use original Sites framed product artwork for matching presentation. Native media remains available in the gallery."
+    },
+    {
+      "type": "select",
+      "id": "source_gallery",
+      "label": "Original Sites first gallery artwork",
+      "default": "native",
+      "options": [
+        {
+          "value": "native",
+          "label": "Native media only"
+        },
+        {
+          "value": "15222327476596",
+          "label": "four-on-the-floor-mixed-scent-4-tube-deodorant-bun"
+        },
+        {
+          "value": "15222328361332",
+          "label": "citrus-on-repeat-family-pack-4-tube-bergamot-lime-"
+        },
+        {
+          "value": "15222329180532",
+          "label": "silent-on-repeat-family-pack-4-tube-unscented-deod"
+        },
+        {
+          "value": "15222739599732",
+          "label": "3-4-time"
+        },
+        {
+          "value": "15141686444404",
+          "label": "silent-repeat"
+        },
+        {
+          "value": "15141668815220",
+          "label": "citrus-repeat"
+        },
+        {
+          "value": "15141732581748",
+          "label": "side-a-side-b"
+        },
+        {
+          "value": "14925587775860",
+          "label": "bpm-natural-deodorant-unscented"
+        },
+        {
+          "value": "14880059228532",
+          "label": "bpm-natural-deodorant-bergamot-lime"
+        }
+      ],
+      "info": "Use only for the matching product. Uploaded image overrides take priority; native media remains in the gallery."
+    },
+    {
+      "type": "text",
+      "id": "pack_label",
+      "label": "Verified pack description"
+    },
+    {
+      "type": "text",
+      "id": "intro",
+      "label": "Approved scent introduction"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_description",
+      "label": "Show product description immediately after purchase",
+      "default": true
+    },
+    {
+      "type": "link_list",
+      "id": "rotation",
+      "label": "Related rotation menu"
+    },
+    {
+      "type": "text",
+      "id": "fact_1",
+      "label": "Approved quick fact 1"
+    },
+    {
+      "type": "text",
+      "id": "fact_2",
+      "label": "Approved quick fact 2"
+    },
+    {
+      "type": "text",
+      "id": "fact_3",
+      "label": "Approved quick fact 3"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "@app"
+    },
+    {
+      "type": "product_pack",
+      "name": "Product pack label",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Product"
+        },
+        {
+          "type": "text",
+          "id": "pack_label",
+          "label": "Verified pack description"
+        },
+        {
+          "type": "select",
+          "id": "source_gallery",
+          "label": "Original Sites first gallery artwork",
+          "default": "native",
+          "options": [
+            {
+              "value": "native",
+              "label": "Native media only"
+            },
+            {
+              "value": "15222327476596",
+              "label": "four-on-the-floor-mixed-scent-4-tube-deodorant-bun"
+            },
+            {
+              "value": "15222328361332",
+              "label": "citrus-on-repeat-family-pack-4-tube-bergamot-lime-"
+            },
+            {
+              "value": "15222329180532",
+              "label": "silent-on-repeat-family-pack-4-tube-unscented-deod"
+            },
+            {
+              "value": "15222739599732",
+              "label": "3-4-time"
+            },
+            {
+              "value": "15141686444404",
+              "label": "silent-repeat"
+            },
+            {
+              "value": "15141668815220",
+              "label": "citrus-repeat"
+            },
+            {
+              "value": "15141732581748",
+              "label": "side-a-side-b"
+            },
+            {
+              "value": "14925587775860",
+              "label": "bpm-natural-deodorant-unscented"
+            },
+            {
+              "value": "14880059228532",
+              "label": "bpm-natural-deodorant-bergamot-lime"
+            }
+          ],
+          "info": "Use only for the matching product. Uploaded image overrides take priority; native media remains in the gallery."
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Product first-image override"
+        },
+        {
+          "type": "text",
+          "id": "display_title",
+          "label": "Display title",
+          "info": "Optional short storefront heading. The native product title remains unchanged."
+        },
+        {
+          "type": "textarea",
+          "id": "intro",
+          "label": "Approved scent introduction"
+        }
+      ]
+    },
+    {
+      "type": "jump_link",
+      "name": "Product section link",
+      "limit": 8,
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Link label"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "Section destination",
+          "info": "Use a fragment link to an actual section in this template; verify the destination after rearranging sections."
+        }
+      ]
+    }
+  ],
+  "max_blocks": 30
+}
+{% endschema %}

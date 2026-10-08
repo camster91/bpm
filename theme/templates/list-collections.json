@@ -1,0 +1,11 @@
+{
+  "sections": {
+    "main": {
+      "type": "bpm-sites-collections",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

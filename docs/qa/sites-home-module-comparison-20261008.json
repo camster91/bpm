@@ -1,0 +1,1058 @@
+{
+  "scope": "Live source vs local fixture module geometry; absent gated newsletter is recorded, not ignored",
+  "rows": [
+    {
+      "width": 375,
+      "source": {
+        "modules": [
+          {
+            "heading": "TWO SCENTS. ONE STANDARD.",
+            "headingBox": {
+              "height": 67,
+              "width": 327
+            },
+            "links": [
+              "Shop all nine tracks→"
+            ],
+            "paragraphs": [
+              "Bright citrus or quietly unscented. Same considered formula."
+            ],
+            "section": {
+              "height": 1370,
+              "width": 375
+            }
+          },
+          {
+            "heading": "SMALL SQUEEZE. SMOOTH MOVES.",
+            "headingBox": {
+              "height": 135,
+              "width": 327
+            },
+            "links": [
+              "Get to know the tube→"
+            ],
+            "paragraphs": [
+              "Easy to spread. Quick to absorb. A clean finish without a waxy coating."
+            ],
+            "section": {
+              "height": 879,
+              "width": 375
+            }
+          },
+          {
+            "heading": "TWO TRACKS. OR A FULL FOUR COUNT.",
+            "headingBox": {
+              "height": 101,
+              "width": 327
+            },
+            "links": [
+              "Explore duos→",
+              "Explore four-packs→"
+            ],
+            "paragraphs": [
+              "Keep one. Gift one. Stock the shelf. Your call."
+            ],
+            "section": {
+              "height": 1429,
+              "width": 375
+            }
+          },
+          {
+            "heading": "EVERY INGREDIENT HAS A JOB.",
+            "headingBox": {
+              "height": 101,
+              "width": 327
+            },
+            "links": [
+              "Meet the formula→"
+            ],
+            "paragraphs": [
+              "Odour control. Moisture absorption. A smooth glide. Nothing added just to fill the tube."
+            ],
+            "section": {
+              "height": 971,
+              "width": 375
+            }
+          },
+          {
+            "heading": "MADE WITH PURPOSE. AND A SOUNDTRACK.",
+            "headingBox": {
+              "height": 135,
+              "width": 327
+            },
+            "links": [
+              "Meet BPM→"
+            ],
+            "paragraphs": [
+              "Corey Goss started making deodorants in his kitchen in 2020. His standard: performance, skin feel, thoughtful packaging and fair pricing."
+            ],
+            "section": {
+              "height": 962,
+              "width": 375
+            }
+          },
+          {
+            "heading": "A PERSONAL STORY. A REAL RESPONSIBILITY.",
+            "headingBox": {
+              "height": 168,
+              "width": 327
+            },
+            "links": [
+              "The story behind the mark→"
+            ],
+            "paragraphs": [
+              "Founded by Corey Goss, a member of the Algonquins of Pikwàkanagàn First Nation. The mark connects family, identity and BPM’s musical roots."
+            ],
+            "section": {
+              "height": 903,
+              "width": 375
+            }
+          },
+          {
+            "heading": "NO GREEN TAX. NO MYSTERY MARKUP.",
+            "headingBox": {
+              "height": 101,
+              "width": 327
+            },
+            "links": [],
+            "paragraphs": [
+              "BPM prices a single tube at $23.99 CAD. Buying direct keeps more of the sale with the company and the product."
+            ],
+            "section": {
+              "height": 723,
+              "width": 375
+            }
+          },
+          {
+            "heading": "A LITTLE MORE BEHIND THE BEAT.",
+            "headingBox": {
+              "height": 101,
+              "width": 327
+            },
+            "links": [
+              "Read The Breakdown→"
+            ],
+            "paragraphs": [],
+            "section": {
+              "height": 1803,
+              "width": 375
+            }
+          },
+          {
+            "heading": "LET’S CLEAR A FEW THINGS UP.",
+            "headingBox": {
+              "height": 101,
+              "width": 327
+            },
+            "links": [],
+            "paragraphs": [],
+            "section": {
+              "height": 759,
+              "width": 375
+            }
+          },
+          {
+            "heading": "PUT ME IN THE MIX.",
+            "headingBox": {
+              "height": 67,
+              "width": 327
+            },
+            "links": [
+              "Put me in the mix →"
+            ],
+            "paragraphs": [
+              "Event information, scent drops and the occasional good thing."
+            ],
+            "section": {
+              "height": 530,
+              "width": 375
+            }
+          },
+          {
+            "heading": "FIND YOUR EVERYDAY BPM.",
+            "headingBox": {
+              "height": 104,
+              "width": 327
+            },
+            "links": [
+              "Shop all tracks→"
+            ],
+            "paragraphs": [],
+            "section": {
+              "height": 284,
+              "width": 375
+            }
+          }
+        ],
+        "viewport": 375
+      },
+      "candidate": {
+        "modules": [
+          {
+            "heading": "TWO SCENTS. ONE STANDARD.",
+            "headingBox": {
+              "height": 67,
+              "width": 327
+            },
+            "links": [
+              "Shop all tracks→"
+            ],
+            "paragraphs": [
+              "Bright citrus or quietly unscented. Same considered formula."
+            ],
+            "section": {
+              "height": 1378,
+              "width": 375
+            }
+          },
+          {
+            "heading": "SMALL SQUEEZE. SMOOTH MOVES.",
+            "headingBox": {
+              "height": 135,
+              "width": 327
+            },
+            "links": [
+              "Get to know the tube→"
+            ],
+            "paragraphs": [
+              "Easy to spread. Quick to absorb. A clean finish without a waxy coating."
+            ],
+            "section": {
+              "height": 887,
+              "width": 375
+            }
+          },
+          {
+            "heading": "TWO TRACKS. OR A FULL FOUR COUNT.",
+            "headingBox": {
+              "height": 101,
+              "width": 327
+            },
+            "links": [
+              "Explore duos→",
+              "Explore four-packs→"
+            ],
+            "paragraphs": [
+              "Keep one. Gift one. Stock the shelf. Your call."
+            ],
+            "section": {
+              "height": 1385,
+              "width": 375
+            }
+          },
+          {
+            "heading": "EVERY INGREDIENT HAS A JOB.",
+            "headingBox": {
+              "height": 101,
+              "width": 327
+            },
+            "links": [
+              "Meet the formula→"
+            ],
+            "paragraphs": [
+              "Odour control. Moisture absorption. A smooth glide. Nothing added just to fill the tube."
+            ],
+            "section": {
+              "height": 981,
+              "width": 375
+            }
+          },
+          {
+            "heading": "MADE WITH PURPOSE. AND A SOUNDTRACK.",
+            "headingBox": {
+              "height": 135,
+              "width": 327
+            },
+            "links": [
+              "Meet BPM→"
+            ],
+            "paragraphs": [
+              "Corey Goss started making deodorants in his kitchen in 2020. His standard: performance, skin feel, thoughtful packaging and fair pricing."
+            ],
+            "section": {
+              "height": 978,
+              "width": 375
+            }
+          },
+          {
+            "heading": "A PERSONAL STORY. A REAL RESPONSIBILITY.",
+            "headingBox": {
+              "height": 168,
+              "width": 327
+            },
+            "links": [],
+            "paragraphs": [
+              "Founded by Corey Goss, a member of the Algonquins of Pikwàkanagàn First Nation. The mark connects family, identity and BPM’s musical roots."
+            ],
+            "section": {
+              "height": 864,
+              "width": 375
+            }
+          },
+          {
+            "heading": "NO GREEN TAX. NO MYSTERY MARKUP.",
+            "headingBox": {
+              "height": 101,
+              "width": 327
+            },
+            "links": [],
+            "paragraphs": [
+              "Bergamot & Lime — Natural Deodorant — fixture · $23.99 CAD",
+              "Buying direct keeps more of the sale with the company and the product."
+            ],
+            "section": {
+              "height": 811,
+              "width": 375
+            }
+          },
+          {
+            "heading": "A LITTLE MORE BEHIND THE BEAT.",
+            "headingBox": {
+              "height": 101,
+              "width": 327
+            },
+            "links": [
+              "Read The Breakdown→"
+            ],
+            "paragraphs": [],
+            "section": {
+              "height": 1803,
+              "width": 375
+            }
+          },
+          {
+            "heading": "LET’S CLEAR A FEW THINGS UP.",
+            "headingBox": {
+              "height": 101,
+              "width": 327
+            },
+            "links": [],
+            "paragraphs": [],
+            "section": {
+              "height": 554,
+              "width": 375
+            }
+          },
+          {
+            "heading": "FIND YOUR EVERYDAY BPM.",
+            "headingBox": {
+              "height": 104,
+              "width": 327
+            },
+            "links": [
+              "Shop all tracks→"
+            ],
+            "paragraphs": [],
+            "section": {
+              "height": 284,
+              "width": 375
+            }
+          }
+        ],
+        "viewport": 375
+      }
+    },
+    {
+      "width": 820,
+      "source": {
+        "modules": [
+          {
+            "heading": "TWO SCENTS. ONE STANDARD.",
+            "headingBox": {
+              "height": 86,
+              "width": 484
+            },
+            "links": [
+              "Shop all nine tracks→"
+            ],
+            "paragraphs": [
+              "Bright citrus or quietly unscented. Same considered formula."
+            ],
+            "section": {
+              "height": 906,
+              "width": 820
+            }
+          },
+          {
+            "heading": "SMALL SQUEEZE. SMOOTH MOVES.",
+            "headingBox": {
+              "height": 86,
+              "width": 746
+            },
+            "links": [
+              "Get to know the tube→"
+            ],
+            "paragraphs": [
+              "Easy to spread. Quick to absorb. A clean finish without a waxy coating."
+            ],
+            "section": {
+              "height": 977,
+              "width": 820
+            }
+          },
+          {
+            "heading": "TWO TRACKS. OR A FULL FOUR COUNT.",
+            "headingBox": {
+              "height": 86,
+              "width": 616
+            },
+            "links": [
+              "Explore duos→",
+              "Explore four-packs→"
+            ],
+            "paragraphs": [
+              "Keep one. Gift one. Stock the shelf. Your call."
+            ],
+            "section": {
+              "height": 1002,
+              "width": 820
+            }
+          },
+          {
+            "heading": "EVERY INGREDIENT HAS A JOB.",
+            "headingBox": {
+              "height": 86,
+              "width": 746
+            },
+            "links": [
+              "Meet the formula→"
+            ],
+            "paragraphs": [
+              "Odour control. Moisture absorption. A smooth glide. Nothing added just to fill the tube."
+            ],
+            "section": {
+              "height": 957,
+              "width": 820
+            }
+          },
+          {
+            "heading": "MADE WITH PURPOSE. AND A SOUNDTRACK.",
+            "headingBox": {
+              "height": 86,
+              "width": 746
+            },
+            "links": [
+              "Meet BPM→"
+            ],
+            "paragraphs": [
+              "Corey Goss started making deodorants in his kitchen in 2020. His standard: performance, skin feel, thoughtful packaging and fair pricing."
+            ],
+            "section": {
+              "height": 1040,
+              "width": 820
+            }
+          },
+          {
+            "heading": "A PERSONAL STORY. A REAL RESPONSIBILITY.",
+            "headingBox": {
+              "height": 86,
+              "width": 746
+            },
+            "links": [
+              "The story behind the mark→"
+            ],
+            "paragraphs": [
+              "Founded by Corey Goss, a member of the Algonquins of Pikwàkanagàn First Nation. The mark connects family, identity and BPM’s musical roots."
+            ],
+            "section": {
+              "height": 634,
+              "width": 820
+            }
+          },
+          {
+            "heading": "NO GREEN TAX. NO MYSTERY MARKUP.",
+            "headingBox": {
+              "height": 86,
+              "width": 746
+            },
+            "links": [],
+            "paragraphs": [
+              "BPM prices a single tube at $23.99 CAD. Buying direct keeps more of the sale with the company and the product."
+            ],
+            "section": {
+              "height": 733,
+              "width": 820
+            }
+          },
+          {
+            "heading": "A LITTLE MORE BEHIND THE BEAT.",
+            "headingBox": {
+              "height": 86,
+              "width": 461
+            },
+            "links": [
+              "Read The Breakdown→"
+            ],
+            "paragraphs": [],
+            "section": {
+              "height": 1253,
+              "width": 820
+            }
+          },
+          {
+            "heading": "LET’S CLEAR A FEW THINGS UP.",
+            "headingBox": {
+              "height": 86,
+              "width": 746
+            },
+            "links": [],
+            "paragraphs": [],
+            "section": {
+              "height": 819,
+              "width": 820
+            }
+          },
+          {
+            "heading": "PUT ME IN THE MIX.",
+            "headingBox": {
+              "height": 86,
+              "width": 746
+            },
+            "links": [
+              "Put me in the mix →"
+            ],
+            "paragraphs": [
+              "Event information, scent drops and the occasional good thing."
+            ],
+            "section": {
+              "height": 595,
+              "width": 820
+            }
+          },
+          {
+            "heading": "FIND YOUR EVERYDAY BPM.",
+            "headingBox": {
+              "height": 73,
+              "width": 350
+            },
+            "links": [
+              "Shop all tracks→"
+            ],
+            "paragraphs": [],
+            "section": {
+              "height": 217,
+              "width": 820
+            }
+          }
+        ],
+        "viewport": 820
+      },
+      "candidate": {
+        "modules": [
+          {
+            "heading": "TWO SCENTS. ONE STANDARD.",
+            "headingBox": {
+              "height": 86,
+              "width": 502
+            },
+            "links": [
+              "Shop all tracks→"
+            ],
+            "paragraphs": [
+              "Bright citrus or quietly unscented. Same considered formula."
+            ],
+            "section": {
+              "height": 914,
+              "width": 820
+            }
+          },
+          {
+            "heading": "SMALL SQUEEZE. SMOOTH MOVES.",
+            "headingBox": {
+              "height": 86,
+              "width": 746
+            },
+            "links": [
+              "Get to know the tube→"
+            ],
+            "paragraphs": [
+              "Easy to spread. Quick to absorb. A clean finish without a waxy coating."
+            ],
+            "section": {
+              "height": 985,
+              "width": 820
+            }
+          },
+          {
+            "heading": "TWO TRACKS. OR A FULL FOUR COUNT.",
+            "headingBox": {
+              "height": 86,
+              "width": 616
+            },
+            "links": [
+              "Explore duos→",
+              "Explore four-packs→"
+            ],
+            "paragraphs": [
+              "Keep one. Gift one. Stock the shelf. Your call."
+            ],
+            "section": {
+              "height": 981,
+              "width": 820
+            }
+          },
+          {
+            "heading": "EVERY INGREDIENT HAS A JOB.",
+            "headingBox": {
+              "height": 86,
+              "width": 746
+            },
+            "links": [
+              "Meet the formula→"
+            ],
+            "paragraphs": [
+              "Odour control. Moisture absorption. A smooth glide. Nothing added just to fill the tube."
+            ],
+            "section": {
+              "height": 965,
+              "width": 820
+            }
+          },
+          {
+            "heading": "MADE WITH PURPOSE. AND A SOUNDTRACK.",
+            "headingBox": {
+              "height": 86,
+              "width": 746
+            },
+            "links": [
+              "Meet BPM→"
+            ],
+            "paragraphs": [
+              "Corey Goss started making deodorants in his kitchen in 2020. His standard: performance, skin feel, thoughtful packaging and fair pricing."
+            ],
+            "section": {
+              "height": 1052,
+              "width": 820
+            }
+          },
+          {
+            "heading": "A PERSONAL STORY. A REAL RESPONSIBILITY.",
+            "headingBox": {
+              "height": 86,
+              "width": 746
+            },
+            "links": [],
+            "paragraphs": [
+              "Founded by Corey Goss, a member of the Algonquins of Pikwàkanagàn First Nation. The mark connects family, identity and BPM’s musical roots."
+            ],
+            "section": {
+              "height": 842,
+              "width": 820
+            }
+          },
+          {
+            "heading": "NO GREEN TAX. NO MYSTERY MARKUP.",
+            "headingBox": {
+              "height": 86,
+              "width": 746
+            },
+            "links": [],
+            "paragraphs": [
+              "Bergamot & Lime — Natural Deodorant — fixture · $23.99 CAD",
+              "Buying direct keeps more of the sale with the company and the product."
+            ],
+            "section": {
+              "height": 819,
+              "width": 820
+            }
+          },
+          {
+            "heading": "A LITTLE MORE BEHIND THE BEAT.",
+            "headingBox": {
+              "height": 86,
+              "width": 461
+            },
+            "links": [
+              "Read The Breakdown→"
+            ],
+            "paragraphs": [],
+            "section": {
+              "height": 1253,
+              "width": 820
+            }
+          },
+          {
+            "heading": "LET’S CLEAR A FEW THINGS UP.",
+            "headingBox": {
+              "height": 86,
+              "width": 746
+            },
+            "links": [],
+            "paragraphs": [],
+            "section": {
+              "height": 626,
+              "width": 820
+            }
+          },
+          {
+            "heading": "FIND YOUR EVERYDAY BPM.",
+            "headingBox": {
+              "height": 73,
+              "width": 350
+            },
+            "links": [
+              "Shop all tracks→"
+            ],
+            "paragraphs": [],
+            "section": {
+              "height": 217,
+              "width": 820
+            }
+          }
+        ],
+        "viewport": 820
+      }
+    },
+    {
+      "width": 1440,
+      "source": {
+        "modules": [
+          {
+            "heading": "TWO SCENTS. ONE STANDARD.",
+            "headingBox": {
+              "height": 129,
+              "width": 640
+            },
+            "links": [
+              "Shop all nine tracks→"
+            ],
+            "paragraphs": [
+              "Bright citrus or quietly unscented. Same considered formula."
+            ],
+            "section": {
+              "height": 1190,
+              "width": 1440
+            }
+          },
+          {
+            "heading": "SMALL SQUEEZE. SMOOTH MOVES.",
+            "headingBox": {
+              "height": 259,
+              "width": 620
+            },
+            "links": [
+              "Get to know the tube→"
+            ],
+            "paragraphs": [
+              "Easy to spread. Quick to absorb. A clean finish without a waxy coating."
+            ],
+            "section": {
+              "height": 660,
+              "width": 1440
+            }
+          },
+          {
+            "heading": "TWO TRACKS. OR A FULL FOUR COUNT.",
+            "headingBox": {
+              "height": 194,
+              "width": 750
+            },
+            "links": [
+              "Explore duos→",
+              "Explore four-packs→"
+            ],
+            "paragraphs": [
+              "Keep one. Gift one. Stock the shelf. Your call."
+            ],
+            "section": {
+              "height": 1056,
+              "width": 1440
+            }
+          },
+          {
+            "heading": "EVERY INGREDIENT HAS A JOB.",
+            "headingBox": {
+              "height": 194,
+              "width": 620
+            },
+            "links": [
+              "Meet the formula→"
+            ],
+            "paragraphs": [
+              "Odour control. Moisture absorption. A smooth glide. Nothing added just to fill the tube."
+            ],
+            "section": {
+              "height": 640,
+              "width": 1440
+            }
+          },
+          {
+            "heading": "MADE WITH PURPOSE. AND A SOUNDTRACK.",
+            "headingBox": {
+              "height": 259,
+              "width": 620
+            },
+            "links": [
+              "Meet BPM→"
+            ],
+            "paragraphs": [
+              "Corey Goss started making deodorants in his kitchen in 2020. His standard: performance, skin feel, thoughtful packaging and fair pricing."
+            ],
+            "section": {
+              "height": 696,
+              "width": 1440
+            }
+          },
+          {
+            "heading": "A PERSONAL STORY. A REAL RESPONSIBILITY.",
+            "headingBox": {
+              "height": 194,
+              "width": 781
+            },
+            "links": [
+              "The story behind the mark→"
+            ],
+            "paragraphs": [
+              "Founded by Corey Goss, a member of the Algonquins of Pikwàkanagàn First Nation. The mark connects family, identity and BPM’s musical roots."
+            ],
+            "section": {
+              "height": 718,
+              "width": 1440
+            }
+          },
+          {
+            "heading": "NO GREEN TAX. NO MYSTERY MARKUP.",
+            "headingBox": {
+              "height": 194,
+              "width": 620
+            },
+            "links": [],
+            "paragraphs": [
+              "BPM prices a single tube at $23.99 CAD. Buying direct keeps more of the sale with the company and the product."
+            ],
+            "section": {
+              "height": 520,
+              "width": 1440
+            }
+          },
+          {
+            "heading": "A LITTLE MORE BEHIND THE BEAT.",
+            "headingBox": {
+              "height": 129,
+              "width": 695
+            },
+            "links": [
+              "Read The Breakdown→"
+            ],
+            "paragraphs": [],
+            "section": {
+              "height": 841,
+              "width": 1440
+            }
+          },
+          {
+            "heading": "LET’S CLEAR A FEW THINGS UP.",
+            "headingBox": {
+              "height": 194,
+              "width": 620
+            },
+            "links": [],
+            "paragraphs": [],
+            "section": {
+              "height": 656,
+              "width": 1440
+            }
+          },
+          {
+            "heading": "PUT ME IN THE MIX.",
+            "headingBox": {
+              "height": 129,
+              "width": 620
+            },
+            "links": [
+              "Put me in the mix →"
+            ],
+            "paragraphs": [
+              "Event information, scent drops and the occasional good thing."
+            ],
+            "section": {
+              "height": 425,
+              "width": 1440
+            }
+          },
+          {
+            "heading": "FIND YOUR EVERYDAY BPM.",
+            "headingBox": {
+              "height": 118,
+              "width": 559
+            },
+            "links": [
+              "Shop all tracks→"
+            ],
+            "paragraphs": [],
+            "section": {
+              "height": 262,
+              "width": 1440
+            }
+          }
+        ],
+        "viewport": 1440
+      },
+      "candidate": {
+        "modules": [
+          {
+            "heading": "TWO SCENTS. ONE STANDARD.",
+            "headingBox": {
+              "height": 129,
+              "width": 640
+            },
+            "links": [
+              "Shop all tracks→"
+            ],
+            "paragraphs": [
+              "Bright citrus or quietly unscented. Same considered formula."
+            ],
+            "section": {
+              "height": 1190,
+              "width": 1440
+            }
+          },
+          {
+            "heading": "SMALL SQUEEZE. SMOOTH MOVES.",
+            "headingBox": {
+              "height": 259,
+              "width": 620
+            },
+            "links": [
+              "Get to know the tube→"
+            ],
+            "paragraphs": [
+              "Easy to spread. Quick to absorb. A clean finish without a waxy coating."
+            ],
+            "section": {
+              "height": 660,
+              "width": 1440
+            }
+          },
+          {
+            "heading": "TWO TRACKS. OR A FULL FOUR COUNT.",
+            "headingBox": {
+              "height": 194,
+              "width": 750
+            },
+            "links": [
+              "Explore duos→",
+              "Explore four-packs→"
+            ],
+            "paragraphs": [
+              "Keep one. Gift one. Stock the shelf. Your call."
+            ],
+            "section": {
+              "height": 1056,
+              "width": 1440
+            }
+          },
+          {
+            "heading": "EVERY INGREDIENT HAS A JOB.",
+            "headingBox": {
+              "height": 194,
+              "width": 620
+            },
+            "links": [
+              "Meet the formula→"
+            ],
+            "paragraphs": [
+              "Odour control. Moisture absorption. A smooth glide. Nothing added just to fill the tube."
+            ],
+            "section": {
+              "height": 640,
+              "width": 1440
+            }
+          },
+          {
+            "heading": "MADE WITH PURPOSE. AND A SOUNDTRACK.",
+            "headingBox": {
+              "height": 259,
+              "width": 620
+            },
+            "links": [
+              "Meet BPM→"
+            ],
+            "paragraphs": [
+              "Corey Goss started making deodorants in his kitchen in 2020. His standard: performance, skin feel, thoughtful packaging and fair pricing."
+            ],
+            "section": {
+              "height": 696,
+              "width": 1440
+            }
+          },
+          {
+            "heading": "A PERSONAL STORY. A REAL RESPONSIBILITY.",
+            "headingBox": {
+              "height": 194,
+              "width": 781
+            },
+            "links": [],
+            "paragraphs": [
+              "Founded by Corey Goss, a member of the Algonquins of Pikwàkanagàn First Nation. The mark connects family, identity and BPM’s musical roots."
+            ],
+            "section": {
+              "height": 634,
+              "width": 1440
+            }
+          },
+          {
+            "heading": "NO GREEN TAX. NO MYSTERY MARKUP.",
+            "headingBox": {
+              "height": 194,
+              "width": 620
+            },
+            "links": [],
+            "paragraphs": [
+              "Bergamot & Lime — Natural Deodorant — fixture · $23.99 CAD",
+              "Buying direct keeps more of the sale with the company and the product."
+            ],
+            "section": {
+              "height": 567,
+              "width": 1440
+            }
+          },
+          {
+            "heading": "A LITTLE MORE BEHIND THE BEAT.",
+            "headingBox": {
+              "height": 129,
+              "width": 695
+            },
+            "links": [
+              "Read The Breakdown→"
+            ],
+            "paragraphs": [],
+            "section": {
+              "height": 841,
+              "width": 1440
+            }
+          },
+          {
+            "heading": "LET’S CLEAR A FEW THINGS UP.",
+            "headingBox": {
+              "height": 194,
+              "width": 620
+            },
+            "links": [],
+            "paragraphs": [],
+            "section": {
+              "height": 463,
+              "width": 1440
+            }
+          },
+          {
+            "heading": "FIND YOUR EVERYDAY BPM.",
+            "headingBox": {
+              "height": 118,
+              "width": 559
+            },
+            "links": [
+              "Shop all tracks→"
+            ],
+            "paragraphs": [],
+            "section": {
+              "height": 262,
+              "width": 1440
+            }
+          }
+        ],
+        "viewport": 1440
+      }
+    }
+  ]
+}

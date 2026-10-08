@@ -1,0 +1,28 @@
+
+> check
+> node scripts/check-reference.mjs && npm run build && npm test && node reference-site/verify-pages.mjs
+
+{"sourceFilesVerified":60,"scriptsParsed":10}
+
+> build
+> node reference-site/build.mjs
+
+{"assetCount":44,"workerBytes":2364687,"gzipBytes":1576695}
+
+> test
+> node --test reference-site/tests/*.test.mjs
+
+✔ shared comments persist and support addressed/reopen with bound text (13.249791ms)
+✔ missing identity and foreign-origin writes are rejected (0.270875ms)
+✔ invalid context, oversized text and nonexistent updates fail clearly (0.449333ms)
+✔ whole-site contexts persist with page-specific section references (1.060334ms)
+✔ pins persist alongside existing comments, including new creator section (0.807041ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 56.423875
+{"pages":25,"internalTargets":40,"brokenTargets":0}

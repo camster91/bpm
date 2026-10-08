@@ -1,0 +1,63 @@
+{
+  "source": "reference-site/public/product-media/preview.js + catalogue-extra.js; audited native product IDs",
+  "claims_acceptance": "pending",
+  "profiles": [
+    {
+      "product_id": 15222327476596,
+      "handle": "four-on-the-floor-mixed-scent-4-tube-deodorant-bundle",
+      "pack_count": 4,
+      "citrus": 2,
+      "unscented": 2,
+      "applications": 1216
+    },
+    {
+      "product_id": 15222328361332,
+      "handle": "citrus-on-repeat-family-pack-4-tube-bergamot-lime-deodorant-bundle",
+      "pack_count": 4,
+      "citrus": 4,
+      "unscented": 0,
+      "applications": 1216
+    },
+    {
+      "product_id": 15222329180532,
+      "handle": "silent-on-repeat-family-pack-4-tube-unscented-deodorant-bundle",
+      "pack_count": 4,
+      "citrus": 0,
+      "unscented": 4,
+      "applications": 1216
+    },
+    {
+      "product_id": 15222739599732,
+      "handle": "3-4-time",
+      "pack_count": 4,
+      "citrus": 3,
+      "unscented": 1,
+      "applications": 1216
+    },
+    {
+      "product_id": 15141686444404,
+      "handle": "silent-repeat",
+      "pack_count": 2,
+      "citrus": 0,
+      "unscented": 2,
+      "applications": 608
+    },
+    {
+      "product_id": 15141668815220,
+      "handle": "citrus-repeat",
+      "pack_count": 2,
+      "citrus": 2,
+      "unscented": 0,
+      "applications": 608
+    },
+    {
+      "product_id": 15141732581748,
+      "handle": "side-a-side-b",
+      "pack_count": 2,
+      "citrus": 1,
+      "unscented": 1,
+      "applications": 608
+    }
+  ],
+  "remaining": "Native gallery framing, app integration and authenticated runtime QA"
+}

@@ -1,0 +1,104 @@
+<section class="section butter-band bpm-pricing-breakdown"><div class="wrap"><div class="bpm-pricing-intro"><div class="intro-copy"><p class="eyebrow">{{ section.settings.eyebrow | escape }}</p><h2>{{ section.settings.heading | escape | newline_to_br }}</h2></div><div class="bpm-client-copy">{{ section.settings.body }}</div></div>
+<div class="bpm-cost-grid">{% for channel in (1..2) %}{% if channel == 1 %}{% assign cost_key = 'website_cents' %}{% assign heading = section.settings.website_title %}{% else %}{% assign cost_key = 'amazon_cents' %}{% assign heading = section.settings.amazon_title %}{% endif %}<article class="bpm-cost-card"><h3>{{ heading | escape }}</h3><dl>{% for block in section.blocks %}{% assign amount = block.settings[cost_key] %}{% if amount > 0 %}<div class="bpm-cost-row" {{ block.shopify_attributes }}><dt>{{ block.settings.label | escape }}{% if block.settings.description != blank %}<small>{{ block.settings.description | escape }}</small>{% endif %}</dt><dd>{{ amount | money_with_currency }}</dd></div>{% endif %}{% endfor %}</dl><p class="bpm-cost-total"><span>{{ section.settings.total_label | escape }}</span><strong>{{ section.settings.total_cents | money_with_currency }}</strong></p></article>{% endfor %}</div>
+{% if section.settings.note != blank %}<p class="fine bpm-cost-note">{{ section.settings.note | escape }}</p>{% endif %}
+{% if section.settings.original_image != blank %}<details class="bpm-original-pricing"><summary>{{ section.settings.original_label | escape }}</summary>{{ section.settings.original_image | image_url: width: 2300 | image_tag: widths: '600,1100,1600,2300', sizes: '90vw', loading: 'lazy', alt: section.settings.original_alt }}</details>{% endif %}
+</div></section>
+{% schema %}
+{
+  "name": "BPM pricing breakdown",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow"
+    },
+    {
+      "type": "textarea",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "body",
+      "label": "Client explanation"
+    },
+    {
+      "type": "text",
+      "id": "website_title",
+      "label": "Website card title"
+    },
+    {
+      "type": "text",
+      "id": "amazon_title",
+      "label": "Amazon card title"
+    },
+    {
+      "type": "text",
+      "id": "total_label",
+      "label": "Total label"
+    },
+    {
+      "type": "number",
+      "id": "total_cents",
+      "label": "Client estimated total in cents",
+      "default": 2399
+    },
+    {
+      "type": "text",
+      "id": "note",
+      "label": "Estimate note"
+    },
+    {
+      "type": "image_picker",
+      "id": "original_image",
+      "label": "Original client chart"
+    },
+    {
+      "type": "text",
+      "id": "original_label",
+      "label": "Original chart link label"
+    },
+    {
+      "type": "text",
+      "id": "original_alt",
+      "label": "Original chart image description"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "cost",
+      "name": "Cost line",
+      "settings": [
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Cost label"
+        },
+        {
+          "type": "text",
+          "id": "description",
+          "label": "Description"
+        },
+        {
+          "type": "number",
+          "id": "website_cents",
+          "label": "Website amount in cents",
+          "default": 0
+        },
+        {
+          "type": "number",
+          "id": "amazon_cents",
+          "label": "Amazon amount in cents",
+          "default": 0
+        }
+      ]
+    }
+  ],
+  "max_blocks": 16,
+  "presets": [
+    {
+      "name": "BPM pricing breakdown"
+    }
+  ]
+}
+{% endschema %}

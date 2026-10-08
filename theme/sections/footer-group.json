@@ -1,0 +1,17 @@
+{
+  "type": "footer",
+  "name": "Footer",
+  "sections": {
+    "welcome": {"type":"bpm-sites-welcome","settings":{"enabled":false,"provider_verified":false}},
+    "footer": {
+      "type": "bpm-sites-footer",
+      "settings": {
+        "menu": "main-menu"
+      }
+    }
+  },
+  "order": [
+    "footer",
+    "welcome"
+  ]
+}
