@@ -1,0 +1,4 @@
+{
+  "sections": {"main": {"type": "bpm-sites-cart", "settings": {}}},
+  "order": ["main"]
+}

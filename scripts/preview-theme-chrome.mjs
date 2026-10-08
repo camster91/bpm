@@ -97,3 +97,18 @@ for (const [i,article] of fixtureArticles.entries()) {
  const articleBody = await section('bpm-sites-article',{},[],{blog:fixtureBlog,article});
  await writeFile(join(output,`sites-article-${i}.html`),await engine.parseAndRender(code,{...common,content_for_layout:articleBody,preview_header:sitesHeader,preview_footer:sitesFooter,page_title:article.title}));
 }
+const fixtureCart = {
+ item_count:3,items_subtotal_price:6497,total_price:5997,taxes_included:false,requires_shipping:true,
+ cart_level_discount_applications:[{title:'Fabricated cart offer',total_allocated_amount:500}],
+ items:[
+  {product:{title:'Bergamot & Lime — fixture',has_only_default_variant:true},variant:{title:'Default Title',quantity_rule:{min:1,increment:1,max:null}},quantity:2,url:'/sites-cart.html',url_to_remove:'/local-fixture-cart/change?id=42%3Aone-time&quantity=0',image:{src:'/fixture-bergamot.svg'},original_line_price:4798,final_line_price:4498,properties:{'Gift message':'A small daily upgrade.'},line_level_discount_allocations:[{amount:300,discount_application:{title:'Fabricated line offer'}}]},
+  {product:{title:'Unscented — fixture',has_only_default_variant:true},variant:{title:'Default Title',quantity_rule:{min:1,increment:1,max:5}},quantity:1,url:'/sites-cart.html',url_to_remove:'/local-fixture-cart/change?id=43%3Aplan&quantity=0',image:{src:'/fixture-unscented.svg'},original_line_price:1999,final_line_price:1999,selling_plan_allocation:{selling_plan:{name:'Every five months — fixture'}},properties:{},line_level_discount_allocations:[]}
+ ]
+};
+for (const empty of [false,true]) {
+ const body = await section('bpm-sites-cart',{},[],{cart:empty?{item_count:0,items:[]}:fixtureCart,routes:{...common.routes,cart_url:'/local-fixture-cart',all_products_collection_url:'/sites-home.html'}});
+ const banner = '<div class="wrap"><p>Local cart fixture. No Shopify backend is connected; update, removal and checkout submissions are disabled.</p></div>';
+ const safeBody = body.replace(/(<button[^>]*type="submit")/g,'$1 disabled').replace(/href="\/local-fixture-cart\/change[^\"]*"/g,'aria-disabled="true"');
+ const cartHeader = await section('bpm-sites-header',{menu:sitesMenu},[],{cart:empty?{item_count:0}:fixtureCart});
+ await writeFile(join(output,empty?'sites-cart-empty.html':'sites-cart.html'),await engine.parseAndRender(code,{...common,cart:empty?{item_count:0}:fixtureCart,content_for_layout:banner+safeBody,preview_header:cartHeader,preview_footer:sitesFooter,page_title:'Cart fixture'}));
+}

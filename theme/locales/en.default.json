@@ -30,5 +30,24 @@
   },
   "editorial": {
     "no_articles": "No articles have been published yet."
+  },
+  "cart": {
+    "empty": "Your bag is empty.",
+    "continue": "Keep looking",
+    "line_total": "Line total",
+    "original_total": "Original line total",
+    "discounts": "Discounts",
+    "quantity": "Quantity",
+    "quantity_for": "Quantity for {{ title }}",
+    "remove": "Remove",
+    "remove_item": "Remove {{ title }}",
+    "update": "Update bag",
+    "summary": "Your total",
+    "subtotal": "Subtotal",
+    "total": "Total",
+    "taxes_included": "Taxes included.",
+    "taxes_checkout": "Taxes calculated at checkout.",
+    "shipping_checkout": "Shipping calculated at checkout.",
+    "checkout": "Checkout"
   }
 }
