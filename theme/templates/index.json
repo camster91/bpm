@@ -44,8 +44,10 @@
           "settings": {
             "background": "#acb228",
             "product": "bpm-natural-deodorant-bergamot-lime",
-            "pack_label": "1 × 76 g",
-            "source_pack": "1-0"
+            "pack_label": "1 \u00d7 76 g",
+            "source_pack": "1-0",
+            "display_title": "Bergamot & Lime",
+            "summary": "Bergamot & Lime."
           }
         },
         "unscented": {
@@ -53,8 +55,10 @@
           "settings": {
             "background": "#228782",
             "product": "bpm-natural-deodorant-unscented",
-            "pack_label": "1 × 76 g",
-            "source_pack": "0-1"
+            "pack_label": "1 \u00d7 76 g",
+            "source_pack": "0-1",
+            "display_title": "Unscented",
+            "summary": "Unscented."
           }
         }
       },
@@ -130,8 +134,8 @@
         "layout": "ownership",
         "eyebrow": "INDIGENOUS-OWNED",
         "heading": "A personal story.\nA real responsibility.",
-        "body": "Founded by Corey Goss, a member of the Algonquins of Pikwàkanagàn First Nation. The mark connects family, identity and BPM’s musical roots.",
-        "image_alt": "BPM’s original owl and drum-inspired Indigenous-owned mark",
+        "body": "Founded by Corey Goss, a member of the Algonquins of Pikw\u00e0kanag\u00e0n First Nation. The mark connects family, identity and BPM\u2019s musical roots.",
+        "image_alt": "BPM\u2019s original owl and drum-inspired Indigenous-owned mark",
         "button_label": "The story behind the mark"
       }
     },

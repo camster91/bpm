@@ -64,81 +64,90 @@
           "type": "product_art",
           "settings": {
             "product": "four-on-the-floor-mixed-scent-4-tube-deodorant-bundle",
-            "pack_label": "4 × 76 g",
+            "pack_label": "4 \u00d7 76 g",
             "background": "#acb228",
-            "source_pack": "2-2"
+            "source_pack": "2-2",
+            "display_title": "Four on the Floor"
           }
         },
         "15222328361332": {
           "type": "product_art",
           "settings": {
             "product": "citrus-on-repeat-family-pack-4-tube-bergamot-lime-deodorant-bundle",
-            "pack_label": "4 × 76 g",
+            "pack_label": "4 \u00d7 76 g",
             "background": "#acb228",
-            "source_pack": "4-0"
+            "source_pack": "4-0",
+            "display_title": "Citrus on Repeat: Family Pack"
           }
         },
         "15222329180532": {
           "type": "product_art",
           "settings": {
             "product": "silent-on-repeat-family-pack-4-tube-unscented-deodorant-bundle",
-            "pack_label": "4 × 76 g",
+            "pack_label": "4 \u00d7 76 g",
             "background": "#228782",
-            "source_pack": "0-4"
+            "source_pack": "0-4",
+            "display_title": "Silent on Repeat: Family Pack"
           }
         },
         "15222739599732": {
           "type": "product_art",
           "settings": {
             "product": "3-4-time",
-            "pack_label": "4 × 76 g",
+            "pack_label": "4 \u00d7 76 g",
             "background": "#acb228",
-            "source_pack": "3-1"
+            "source_pack": "3-1",
+            "display_title": "3/4 Time"
           }
         },
         "15141686444404": {
           "type": "product_art",
           "settings": {
             "product": "silent-repeat",
-            "pack_label": "2 × 76 g",
+            "pack_label": "2 \u00d7 76 g",
             "background": "#228782",
-            "source_pack": "0-2"
+            "source_pack": "0-2",
+            "display_title": "Silent on Repeat"
           }
         },
         "15141668815220": {
           "type": "product_art",
           "settings": {
             "product": "citrus-repeat",
-            "pack_label": "2 × 76 g",
+            "pack_label": "2 \u00d7 76 g",
             "background": "#acb228",
-            "source_pack": "2-0"
+            "source_pack": "2-0",
+            "display_title": "Citrus on Repeat"
           }
         },
         "15141732581748": {
           "type": "product_art",
           "settings": {
             "product": "side-a-side-b",
-            "pack_label": "2 × 76 g",
+            "pack_label": "2 \u00d7 76 g",
             "background": "#acb228",
-            "source_pack": "1-1"
+            "source_pack": "1-1",
+            "display_title": "Side A / Side B"
           }
         },
         "14925587775860": {
           "type": "product_art",
           "settings": {
             "product": "bpm-natural-deodorant-unscented",
-            "pack_label": "1 × 76 g",
+            "pack_label": "1 \u00d7 76 g",
             "background": "#228782",
-            "source_pack": "0-1"
+            "source_pack": "0-1",
+            "display_title": "Unscented"
           }
         },
         "14880059228532": {
           "type": "product_art",
           "settings": {
             "product": "bpm-natural-deodorant-bergamot-lime",
-            "pack_label": "1 × 76 g",
+            "pack_label": "1 \u00d7 76 g",
             "background": "#acb228",
-            "source_pack": "1-0"
+            "source_pack": "1-0",
+            "display_title": "Bergamot & Lime"
           }
         }
       },
@@ -165,8 +174,9 @@
           "settings": {
             "background": "#acb228",
             "product": "bpm-natural-deodorant-bergamot-lime",
-            "pack_label": "1 × 76 g",
-            "source_pack": "1-0"
+            "pack_label": "1 \u00d7 76 g",
+            "source_pack": "1-0",
+            "display_title": "Bergamot & Lime"
           }
         },
         "unscented": {
@@ -174,8 +184,9 @@
           "settings": {
             "background": "#228782",
             "product": "bpm-natural-deodorant-unscented",
-            "pack_label": "1 × 76 g",
-            "source_pack": "0-1"
+            "pack_label": "1 \u00d7 76 g",
+            "source_pack": "0-1",
+            "display_title": "Unscented"
           }
         }
       },

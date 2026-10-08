@@ -58,3 +58,7 @@ Use an isolated fabricated future product with no editorial fields, only one tab
 ## Original Sites carton compositions
 
 Product track, collection presentation and homepage bundle blocks can select the original carton mix. Choose the mix matching the selected native product; new blocks default to native product media. Uploaded card images (including secondary images) or any configured bundle component image supersede original artwork. Existing defaults map all nine public products; no ingredient, price or availability data comes from artwork. Original carton pixels/crops are preserved in shared theme assets. This control requires a native editor demonstration before merchant acceptance.
+
+## Product-card presentation heading
+
+Product-track and catalogue mapping blocks expose **Display title override**. It changes only the visible card heading, is escaped, and falls back to the native product title when blank. Source short names are configured for existing mapped products. The product picker controls native identity, price, availability and URL; future unmatched products retain native output. Clear the override if Admin title edits should automatically appear in cards. Native editor save/reload and locale behavior remain development QA requirements.

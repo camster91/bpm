@@ -9,6 +9,7 @@ Renders a native Shopify product using the Sites track-card layout.
 @param {image} [image_4] - Fourth framed carton
 @param {string} [source_pack] - Original Sites carton composition; merchant photo overrides take precedence
 @param {string} [pack_label] - Verified pack description
+@param {string} [display_title] - Optional presentation heading; native title remains the fallback
 @param {string} [summary] - Merchant product summary
 @param {string} [background] - Image panel colour
 @param {string} button_label - Product link text
@@ -17,6 +18,7 @@ Renders a native Shopify product using the Sites track-card layout.
 {% render 'bpm-sites-card', product: block.settings.product, button_label: section.settings.product_label %}
 {% enddoc %}
 {% if product != blank %}
+  {% assign card_title = display_title | default: product.title %}
   {% assign photo = image | default: product.featured_image %}
   {% assign pack_count = 1 %}{% if image_2 %}{% assign pack_count = pack_count | plus: 1 %}{% endif %}{% if image_3 %}{% assign pack_count = pack_count | plus: 1 %}{% endif %}{% if image_4 %}{% assign pack_count = pack_count | plus: 1 %}{% endif %}
   {% assign source_mixes = '1-0,0-1,2-0,0-2,1-1,4-0,0-4,2-2,3-1' | split: ',' %}
@@ -26,7 +28,7 @@ Renders a native Shopify product using the Sites track-card layout.
       {% if use_source_pack %}{% render 'bpm-sites-pack-art', mix: source_pack, images: images, native_delivery: native_delivery %}{% elsif photo != blank %}<div class="pack-line count-{{ pack_count }}">{{ photo | image_url: width: 1000 | image_tag: widths: '320,500,750,1000', sizes: '(max-width:760px) 40vw,20vw', loading: 'lazy', alt: product.title }}{% if image_2 %}{{ image_2 | image_url: width: 500 | image_tag: loading: 'lazy', alt: '' }}{% endif %}{% if image_3 %}{{ image_3 | image_url: width: 500 | image_tag: loading: 'lazy', alt: '' }}{% endif %}{% if image_4 %}{{ image_4 | image_url: width: 500 | image_tag: loading: 'lazy', alt: '' }}{% endif %}</div>{% endif %}
     </a>
     <div class="track-meta"><span>{{ pack_label | escape }}</span><span>{% if product.price_varies %}{% assign formatted_price = product.price | money_with_currency %}{{ 'products.price_from' | t: price: formatted_price }}{% else %}{{ product.price | money_with_currency }}{% endif %}</span></div>
-    <h3><a href="{{ product.url }}">{{ product.title | escape }}</a></h3>
+    <h3><a href="{{ product.url }}">{{ card_title | escape }}</a></h3>
     {% if summary != blank %}<p>{{ summary | escape }}</p>{% endif %}
     {% unless product.available %}<p>{{ 'products.sold_out' | t }}</p>{% endunless %}
     <a class="track-link" href="{{ product.url }}">{{ button_label | escape }} <span aria-hidden="true">↗</span></a>

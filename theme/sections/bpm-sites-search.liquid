@@ -16,18 +16,86 @@
   {% endpaginate %}
 </section>{% endif %}
 {% schema %}
-{"name":"Bpm Search","settings":[
- {"type":"textarea","id":"heading","label":"Heading","default":"Find your\nrotation."},
- {"type":"text","id":"product_label","label":"Product link label","default":"Meet your track"},
- {"type":"range","id":"page_size","label":"Results per page","min":3,"max":48,"step":3,"default":12}
-],"blocks":[{"type":"product_art","name":"Product presentation","settings":[
- {"type":"product","id":"product","label":"Product"},
- {"type":"image_picker","id":"image","label":"First framed carton / image override"},
- {"type":"image_picker","id":"image_2","label":"Second framed carton"},
- {"type":"image_picker","id":"image_3","label":"Third framed carton"},
- {"type":"image_picker","id":"image_4","label":"Fourth framed carton"},
- {"type":"text","id":"pack_label","label":"Verified pack description"},
- {"type":"text","id":"summary","label":"Approved product summary"},
- {"type":"color","id":"background","label":"Image background","default":"#f3e4b7"}
-]}],"max_blocks":50}
+{
+  "name": "Bpm Search",
+  "settings": [
+    {
+      "type": "textarea",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Find your\nrotation."
+    },
+    {
+      "type": "text",
+      "id": "product_label",
+      "label": "Product link label",
+      "default": "Meet your track"
+    },
+    {
+      "type": "range",
+      "id": "page_size",
+      "label": "Results per page",
+      "min": 3,
+      "max": 48,
+      "step": 3,
+      "default": 12
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product_art",
+      "name": "Product presentation",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Product"
+        },
+        {
+          "type": "text",
+          "id": "display_title",
+          "label": "Display title override",
+          "info": "Optional short card heading. Leave blank to use the native product title. Does not change the product record."
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "First framed carton / image override"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_2",
+          "label": "Second framed carton"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_3",
+          "label": "Third framed carton"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_4",
+          "label": "Fourth framed carton"
+        },
+        {
+          "type": "text",
+          "id": "pack_label",
+          "label": "Verified pack description"
+        },
+        {
+          "type": "text",
+          "id": "summary",
+          "label": "Approved product summary"
+        },
+        {
+          "type": "color",
+          "id": "background",
+          "label": "Image background",
+          "default": "#f3e4b7"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 50
+}
 {% endschema %}
