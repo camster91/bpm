@@ -1,0 +1,290 @@
+{
+  "scope": "Local fabricated fixtures; no native backend or submission tested",
+  "observations": [
+    {
+      "page": "sites-collection-bindings.html",
+      "alerts": [],
+      "currency": "CAD",
+      "filterTargets": [
+        {
+          "height": 44,
+          "text": "Pack size\n+"
+        },
+        {
+          "height": 44,
+          "text": "Solo\n(2)"
+        },
+        {
+          "height": 44,
+          "text": "Two track\n(3)"
+        },
+        {
+          "height": 44,
+          "text": "Four count\n(4)"
+        },
+        {
+          "height": 44,
+          "text": "Price\n+"
+        }
+      ],
+      "h1": "PICK YOUR\nROTATION.",
+      "prices": [
+        {
+          "fontSize": "16px",
+          "height": 45.1875,
+          "name": "filter.v.price.gte",
+          "placeholder": "",
+          "width": 115
+        },
+        {
+          "fontSize": "16px",
+          "height": 45.1875,
+          "name": "filter.v.price.lte",
+          "placeholder": "74.98",
+          "width": 115
+        }
+      ],
+      "scrollWidth": 320,
+      "width": 320
+    },
+    {
+      "page": "sites-search.html",
+      "alerts": [],
+      "filterTargets": [],
+      "h1": "FIND YOUR\nROTATION.",
+      "prices": [],
+      "scrollWidth": 320,
+      "width": 320
+    },
+    {
+      "page": "sites-cart-bundle-error.html",
+      "alerts": [
+        "Fabricated availability error: please review the quantity."
+      ],
+      "filterTargets": [],
+      "h1": "IN THE BAG.",
+      "prices": [],
+      "scrollWidth": 320,
+      "width": 320
+    },
+    {
+      "page": "sites-collection-bindings.html",
+      "alerts": [],
+      "currency": "CAD",
+      "filterTargets": [
+        {
+          "height": 44,
+          "text": "Pack size\n+"
+        },
+        {
+          "height": 44,
+          "text": "Solo\n(2)"
+        },
+        {
+          "height": 44,
+          "text": "Two track\n(3)"
+        },
+        {
+          "height": 44,
+          "text": "Four count\n(4)"
+        },
+        {
+          "height": 44,
+          "text": "Price\n+"
+        }
+      ],
+      "h1": "PICK YOUR\nROTATION.",
+      "prices": [
+        {
+          "fontSize": "16px",
+          "height": 45.1875,
+          "name": "filter.v.price.gte",
+          "placeholder": "",
+          "width": 142.5
+        },
+        {
+          "fontSize": "16px",
+          "height": 45.1875,
+          "name": "filter.v.price.lte",
+          "placeholder": "74.98",
+          "width": 142.5
+        }
+      ],
+      "scrollWidth": 375,
+      "width": 375
+    },
+    {
+      "page": "sites-search.html",
+      "alerts": [],
+      "filterTargets": [],
+      "h1": "FIND YOUR\nROTATION.",
+      "prices": [],
+      "scrollWidth": 375,
+      "width": 375
+    },
+    {
+      "page": "sites-cart-bundle-error.html",
+      "alerts": [
+        "Fabricated availability error: please review the quantity."
+      ],
+      "filterTargets": [],
+      "h1": "IN THE BAG.",
+      "prices": [],
+      "scrollWidth": 375,
+      "width": 375
+    },
+    {
+      "page": "sites-collection-bindings.html",
+      "alerts": [],
+      "currency": "CAD",
+      "filterTargets": [
+        {
+          "height": 44,
+          "text": "Pack size\n+"
+        },
+        {
+          "height": 44,
+          "text": "Solo\n(2)"
+        },
+        {
+          "height": 44,
+          "text": "Two track\n(3)"
+        },
+        {
+          "height": 44,
+          "text": "Four count\n(4)"
+        },
+        {
+          "height": 44,
+          "text": "Price\n+"
+        }
+      ],
+      "h1": "PICK YOUR\nROTATION.",
+      "prices": [
+        {
+          "fontSize": "16px",
+          "height": 45.1875,
+          "name": "filter.v.price.gte",
+          "placeholder": "",
+          "width": 109
+        },
+        {
+          "fontSize": "16px",
+          "height": 45.1875,
+          "name": "filter.v.price.lte",
+          "placeholder": "74.98",
+          "width": 109
+        }
+      ],
+      "scrollWidth": 820,
+      "width": 820
+    },
+    {
+      "page": "sites-search.html",
+      "alerts": [],
+      "filterTargets": [],
+      "h1": "FIND YOUR\nROTATION.",
+      "prices": [],
+      "scrollWidth": 820,
+      "width": 820
+    },
+    {
+      "page": "sites-cart-bundle-error.html",
+      "alerts": [
+        "Fabricated availability error: please review the quantity."
+      ],
+      "filterTargets": [],
+      "h1": "IN THE BAG.",
+      "prices": [],
+      "scrollWidth": 820,
+      "width": 820
+    },
+    {
+      "page": "sites-collection-bindings.html",
+      "alerts": [],
+      "currency": "CAD",
+      "filterTargets": [
+        {
+          "height": 44,
+          "text": "Pack size\n+"
+        },
+        {
+          "height": 44,
+          "text": "Solo\n(2)"
+        },
+        {
+          "height": 44,
+          "text": "Two track\n(3)"
+        },
+        {
+          "height": 44,
+          "text": "Four count\n(4)"
+        },
+        {
+          "height": 44,
+          "text": "Price\n+"
+        }
+      ],
+      "h1": "PICK YOUR\nROTATION.",
+      "prices": [
+        {
+          "fontSize": "16px",
+          "height": 45.1875,
+          "name": "filter.v.price.gte",
+          "placeholder": "",
+          "width": 109
+        },
+        {
+          "fontSize": "16px",
+          "height": 45.1875,
+          "name": "filter.v.price.lte",
+          "placeholder": "74.98",
+          "width": 109
+        }
+      ],
+      "scrollWidth": 1440,
+      "width": 1440
+    },
+    {
+      "page": "sites-search.html",
+      "alerts": [],
+      "filterTargets": [],
+      "h1": "FIND YOUR\nROTATION.",
+      "prices": [],
+      "scrollWidth": 1440,
+      "width": 1440
+    },
+    {
+      "page": "sites-cart-bundle-error.html",
+      "alerts": [
+        "Fabricated availability error: please review the quantity."
+      ],
+      "filterTargets": [],
+      "h1": "IN THE BAG.",
+      "prices": [],
+      "scrollWidth": 1440,
+      "width": 1440
+    }
+  ],
+  "keyboardFilterFields": {
+    "applyDisabled": true,
+    "fields": [
+      [
+        "filter.p.m.custom.pack_size",
+        "2"
+      ],
+      [
+        "filter.v.price.gte",
+        "23.99"
+      ],
+      [
+        "filter.v.price.lte",
+        "74.98"
+      ],
+      [
+        "sort_by",
+        "price-ascending"
+      ]
+    ]
+  }
+}

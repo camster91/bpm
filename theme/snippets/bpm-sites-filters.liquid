@@ -14,7 +14,7 @@ Native GET filtering and sorting for collection or search resources.
     <div class="bpm-filter-groups">
       {% for filter in resource.filters %}
         {% assign filter_index = forloop.index %}
-        <details class="bpm-filter"><summary>{{ filter.label | escape }} <span aria-hidden="true">+</span></summary>
+        <details class="bpm-filter{% if filter.type == 'price_range' %} bpm-filter--price{% endif %}"><summary>{{ filter.label | escape }} <span aria-hidden="true">+</span></summary>
           <fieldset><legend class="bpm-visually-hidden">{{ filter.label | escape }}</legend>
             {% case filter.type %}
               {% when 'boolean', 'list' %}

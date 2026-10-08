@@ -64,7 +64,7 @@ async function section(name, overrides = {}, blocks = [], context = {}) {
   const source = await readFile(join(theme, 'sections', `${name}.liquid`), 'utf8');
   const schema = JSON.parse(source.match(/{%\s*schema\s*%}([\s\S]*?){%\s*endschema\s*%}/)[1]);
   const values = Object.fromEntries(schema.settings.filter(field => field.id).map(field => [field.id, field.default]));
-  return engine.parseAndRender(clean(source), { ...common, ...context, section: { id: context.preview_section_id || `preview-${name}`, settings: pickerSettings(schema.settings,{ ...values, ...overrides }), blocks: blocks.map(block=>({...block,...(block.type?.startsWith('shopify://apps/')?{type:'@app',fixture_html:block.type.includes('/preview_badge/')?'<p class="fine">MOCK JUDGE.ME BADGE — no live rating or review count.</p>':'<div class="local-review-fixture"><h3>MOCK JUDGE.ME WIDGET</h3><p>Fabricated app output for wrapper layout only. No live review data or app runtime.</p></div>'}:{}),settings:pickerSettings(schema.blocks?.find(b=>b.type===block.type)?.settings || [],block.settings)})) } });
+  return engine.parseAndRender(clean(source), { ...common, ...context, section: { id: context.preview_section_id || `preview-${name}`, settings: pickerSettings(schema.settings,{ ...values, ...overrides }), blocks: blocks.map(block=>({...block,...(block.type?.startsWith('shopify://apps/')?{type:'@app',fixture_html:block.type.includes('/preview_badge/')?'<p class="fine">MOCK JUDGE.ME BADGE — no live rating or review count.</p>':'<div class="local-review-fixture"><h3>MOCK JUDGE.ME WIDGET</h3><p>Fabricated app output for wrapper layout only. No live review data or app runtime.</p></div>'}:{}),settings:pickerSettings(schema.blocks?.find(b=>b.type===block.type)?.settings || [],block.settings)})) } }, { globals: { cart: context.cart || common.cart } });
 }
 const header = await section('bpm-announcement', { text: 'Now Shipping Canada Wide | Hand Made' }) + await section('bpm-header', { menu });
 const footer = await section('bpm-footer', { menu });
@@ -166,7 +166,7 @@ const fixtureCatalogue = {title:'All tracks',url:'/sites-collection.html',produc
 const catalogueBanner = '<div class="wrap"><p>Local catalogue fixture using recovered product data. Filter, sort and search submissions are disabled; no Shopify backend is connected.</p></div>';
 const previewCatalogueRoutes = {...common.routes,search_url:'/sites-search.html'};
 const rotation = JSON.parse(await readFile(join(theme,'templates/collection.rotation.json'),'utf8')).sections.main.settings;
-const catalogueBody = await section('bpm-sites-collection',rotation,catalogueArt,{collection:fixtureCatalogue,routes:previewCatalogueRoutes,paginate:{pages:1}});
+const catalogueBody = await section('bpm-sites-collection',rotation,catalogueArt,{collection:fixtureCatalogue,cart:common.cart,routes:previewCatalogueRoutes,paginate:{pages:1}});
 await writeFile(join(output,'sites-collection.html'),await engine.parseAndRender(code,{...common,content_for_layout:catalogueBanner+catalogueBody.replace(/(<button[^>]*type="submit")/g,'$1 disabled'),preview_header:sitesHeader,preview_footer:sitesFooter,page_title:'Catalogue fixture'}));
 const searchFixture = {performed:true,terms:'BPM',results_count:3,results:[catalogueProducts[0],{...fixtureArticles[0],object_type:'article',image:{src:'/assets/bpm-sites-texture.jpg'}},{object_type:'page',title:'Our story — fixture',url:'/sites-blog.html',content:'<p>A fabricated page result for local layout review.</p>'}],sort_by:'manual',default_sort_by:'manual',sort_options:sortOptions,filters:[]};
 const searchBody = await section('bpm-sites-search',{},catalogueArt,{search:searchFixture,routes:previewCatalogueRoutes,paginate:{pages:1}});
@@ -272,7 +272,7 @@ await writeFile(join(output,'sites-home-secondary-link.html'),await engine.parse
 
 
 const boundCollection=JSON.parse(await readFile(join(theme,'templates/collection.rotation.json'),'utf8')).sections.main;
-const boundCollectionBody=await section(boundCollection.type,boundCollection.settings,boundCollection.block_order.map(key=>boundCollection.blocks[key]),{collection:fixtureCatalogue,routes:previewCatalogueRoutes,paginate:{pages:1}});
+const boundCollectionBody=await section(boundCollection.type,boundCollection.settings,boundCollection.block_order.map(key=>boundCollection.blocks[key]),{collection:fixtureCatalogue,cart:common.cart,routes:previewCatalogueRoutes,paginate:{pages:1}});
 await writeFile(join(output,'sites-collection-bindings.html'),await engine.parseAndRender(code,{...common,content_for_layout:'<p class="wrap fine">Committed collection mappings with recovered source cartons. Products, prices, filtering and pagination remain local fixtures.</p>'+boundCollectionBody.replace(/(<button[^>]*type="submit")/g,'$1 disabled'),preview_header:sitesHeader,preview_footer:sitesFooter,page_title:'Source carton catalogue fixture'}));
 
 const wholesaleTemplate=JSON.parse(await readFile(join(theme,'templates/page.wholesale.json'),'utf8'));

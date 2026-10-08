@@ -1,0 +1,15 @@
+# Native commerce controls — local responsive verification
+
+A 375px browser inspection of the collection fixture found price inputs only 57.75px wide, clipping the upper-price placeholder. The price disclosure now has its own class and a minimum width of up to 260px; it wraps into a full row on narrow phones. Price inputs retain the native filter names, min/max/step and GET form, use 16px text and at least 44px height. Filter summaries and checkbox labels have at least 44px hit areas. Colours, typefaces and border styling remain from Sites; native filter controls are a Shopify operational adaptation.
+
+The local LiquidJS preview also now supplies its fabricated cart through render globals, matching the global-object visibility needed by nested snippets. CAD appeared correctly after this fixture repair. This is not current native currency verification.
+
+`native-commerce-layout-20261008.json` records collection/search/cart-error observations at 320, 375, 820 and 1440px. All twelve observations have no horizontal overflow. Open filter summaries/checkbox labels measure 44px high. Price inputs measure 115px wide at 320, 142.5px at 375, and 109px at 820/1440, with 16px text and 45.1875px height. The fabricated cart availability message remains in a role=alert region at all four widths; actual backend error delivery is unverified.
+
+Keyboard Enter opens disclosures and Space selects the two-track checkbox. The selected controls preserve native field values: pack_size=2, price.gte=23.99, price.lte=74.98 and sort_by=price-ascending. These fields were inspected without submission. Every fixture Apply/update/remove/checkout control remains disabled or local-only. No Shopify cart, filter, search or checkout request occurred.
+
+`mobile-price-filter-20261008.png` shows both entered prices visible at 375px, including the focused upper-price field. It is an isolated fabricated-data fixture, not the native dev theme or a source-fidelity claim across all storefront states. Search geometry and cart-error geometry are the only search/cart findings covered here; native result/no-result, cart mutation, pagination, subscription/bundle integration and checkout behavior remain open.
+
+All 344 local render checks and lifecycle/resource/app checks pass, including the price-filter class and unchanged native field assertions. Source/template coverage, seven policy bodies and eight article bodies pass their integrity checks. Installed CLI Theme Check reports zero errors and one existing Adobe Typekit RemoteAsset warning. The managed Liquid validator still cannot load @shopify/theme-check-common; the plugin cache was preserved and installed CLI validation was used.
+
+No upload, publication, account change, custom push or merge occurred. This theme correction exceeds the earlier c1655f6 frozen snapshot, which remains preserved. A fresh hash-verified candidate is required before the updated exact upload command is proposed. Native editor, apps, account/migration, consent, commerce, claims, device and release/rollback gates remain open.

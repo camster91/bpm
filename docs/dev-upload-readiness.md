@@ -1,6 +1,8 @@
 # Custom Sites theme — development upload review
 
-The frozen c1655f6 candidate includes the latest responsive PDP module corrections and matches the current committed theme. See `qa/sites-all-pdp-modules-20261008.md` for measured comparisons and pending content differences. Earlier snapshots remain preserved. No upload command has been executed.
+Subsequent local filter corrections exceed this preserved snapshot. Refresh the candidate before executing any upload command. See `qa/mobile-price-filter-20261008.md`.
+
+The frozen c1655f6 candidate includes the latest responsive PDP module corrections and matches its preserved source commit; it no longer matches the current theme after the filter correction. See `qa/sites-all-pdp-modules-20261008.md` for measured comparisons and pending content differences. Earlier snapshots remain preserved. No upload command has been executed.
 
 ## Current frozen candidate
 

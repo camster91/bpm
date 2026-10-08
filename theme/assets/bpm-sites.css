@@ -288,3 +288,8 @@ h3{font-family:inherit}
  .bpm-sites-header .header-actions{gap:8px;font-size:14px}
  .bpm-sites-header .header-actions>a,.bpm-sites-mobile>summary{white-space:nowrap;overflow-wrap:normal;min-width:44px;min-height:44px}
 }
+
+.bpm-filter--price{min-width:min(100%,260px)}
+.bpm-filter summary{align-items:center;min-height:44px}
+.bpm-filter-value{min-height:44px}
+.bpm-price-range input{max-width:none;min-height:44px;font:inherit;font-size:16px;color:var(--ink)}
