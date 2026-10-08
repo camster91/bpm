@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { readFile, writeFile, mkdtemp, rm } from 'node:fs/promises';
+import { readFile, writeFile, mkdtemp, rm, readdir } from 'node:fs/promises';
 import { join, resolve } from 'node:path';
 import { tmpdir } from 'node:os';
 import { Liquid } from 'liquidjs';
@@ -40,6 +40,16 @@ engine.registerFilter('t', (key, ...pairs) => {
   const params = Object.fromEntries(pairs.filter(Array.isArray));
   return value.replace(/{{\s*(\w+)\s*}}/g, (_, name) => params[name] ?? '');
 });
+// Shopify rejects multiple section-level menu pickers when app blocks are supported.
+// Theme Check does not currently catch this server-side schema constraint.
+for (const file of await readdir(join(theme, 'sections'))) {
+  if (!file.endsWith('.liquid')) continue;
+  const source = await readFile(join(theme, 'sections', file), 'utf8');
+  const schema = JSON.parse(source.match(/{%\s*schema\s*%}([\s\S]*?){%\s*endschema\s*%}/)[1]);
+  if ((schema.blocks || []).some(block => block.type === '@app')) {
+    assert.ok((schema.settings || []).filter(field => field.type === 'link_list').length <= 1, `${file}: multiple menu pickers with app blocks`);
+  }
+}
 const routes = { root_url: '/', cart_url: '/cart', account_url: '/account', all_products_collection_url: '/collections/all' };
 const shop = { name: 'BPM <draft>', customer_accounts_enabled: true };
 let passed = 0;
@@ -242,7 +252,8 @@ try {
   await check('Creator original post uses deliberate link transcript attribution and disclosure','sections/bpm-sites-pdp-creators.liquid',{section:{settings:{},blocks:[{settings:creator}]}},html=>{assert.match(html,/approved-poster.png/);assert.match(html,/href="https:\/\/example.test\/original"/);assert.match(html,/&lt;Creator&gt;/);assert.match(html,/&lt;Disclosure&gt;/);assert.match(html,/<p>Supplied transcript.<\/p>/);assert.doesNotMatch(html,/<iframe|autoplay/);});
   await check('Creator story without rights/caption verification stays omitted','sections/bpm-sites-pdp-creators.liquid',{section:{settings:{},blocks:[{settings:{...creator,approved:false}}]}},html=>assert.equal(html.trim(),''));
   await check('Native creator video renders supplied caption track and native source','sections/bpm-sites-pdp-creators.liquid',{section:{settings:{},blocks:[{settings:{...creator,video:{preview_image:{src:'/poster.jpg'},sources:[{url:'/native-video.mp4',mime_type:'video/mp4'}]},captions:'/captions.vtt',caption_language:'en',caption_label:'English'}}]}},html=>{assert.match(html,/controls playsinline preload="none"/);assert.match(html,/src="\/native-video.mp4" type="video\/mp4"/);assert.match(html,/kind="captions" src="\/captions.vtt"/);assert.doesNotMatch(html,/autoplay/);});
-  await check('Product quick facts and jump links are editable safely escaped optional content','sections/bpm-sites-product.liquid',{...nativeProduct,section:{...nativeProduct.section,settings:{fact_1:'<Fact>',jump_menu:{links:[{url:'#formula-native',title:'<Ingredients>'}]}}}},html=>{assert.match(html,/&lt;Fact&gt;/);assert.match(html,/aria-label="Product section links"/);assert.match(html,/href="#formula-native"/);assert.match(html,/&lt;Ingredients&gt;/);});
+  await check('Product quick facts and jump links are editable safely escaped optional content','sections/bpm-sites-product.liquid',{...nativeProduct,section:{...nativeProduct.section,settings:{fact_1:'<Fact>',rotation:{links:[{url:'/products/other',title:'Other track',current:true}]}},blocks:[{type:'jump_link',settings:{url:'#formula-native',title:'<Ingredients>'},shopify_attributes:'data-block="jump"'},{type:'jump_link',settings:{url:'',title:'Blank destination'}}]}},html=>{assert.match(html,/&lt;Fact&gt;/);assert.match(html,/aria-label="Product section links"/);assert.match(html,/href="#formula-native"/);assert.match(html,/&lt;Ingredients&gt;/);assert.match(html,/data-block="jump"/);assert.doesNotMatch(html,/Blank destination/);assert.match(html,/href="\/products\/other" aria-current="page"/);});
+  await check('Incomplete jump blocks emit no empty navigation','sections/bpm-sites-product.liquid',{...nativeProduct,section:{...nativeProduct.section,settings:{},blocks:[{type:'jump_link',settings:{url:'#formula-native',title:''}},{type:'jump_link',settings:{url:'',title:'Missing link'}}]}},html=>assert.doesNotMatch(html,/aria-label="Product section links"/));
   const pageConfigs=Object.fromEntries(await Promise.all(['about','indigenous-owned','contact'].map(async name=>[name,JSON.parse(await readFile(join(theme,`templates/page.${name}.json`),'utf8'))])));
   const pageSection=(name,id)=>{const config=pageConfigs[name].sections[id];return {section:{id:'page-'+id,settings:config.settings,blocks:(config.block_order||[]).map(key=>config.blocks[key])},routes};};
   await check('About opening preserves source heading and original hand-held image','sections/bpm-sites-page-opening.liquid',pageSection('about','opening'),html=>{assert.match(html,/High standards/);assert.match(html,/bpm-sites-hand.png/);assert.match(html,/href="\/collections\/all"/);assert.equal((html.match(/<h1>/g)||[]).length,1);});

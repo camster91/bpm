@@ -57,7 +57,7 @@
       <p class="shipping">{% if cart.taxes_included %}{{ 'cart.taxes_included' | t }}{% else %}{{ 'cart.taxes_checkout' | t }}{% endif %}{% if variant.requires_shipping %} {{ 'cart.shipping_checkout' | t }}{% endif %}</p>
     {% endform %}
     {% if section.settings.fact_1 != blank or section.settings.fact_2 != blank or section.settings.fact_3 != blank %}<ul class="quick-facts">{% if section.settings.fact_1 != blank %}<li>{{ section.settings.fact_1 | escape }}</li>{% endif %}{% if section.settings.fact_2 != blank %}<li>{{ section.settings.fact_2 | escape }}</li>{% endif %}{% if section.settings.fact_3 != blank %}<li>{{ section.settings.fact_3 | escape }}</li>{% endif %}</ul>{% endif %}
-    {% if section.settings.jump_menu.links.size > 0 %}<nav class="jump" aria-label="{{ 'products.jump_navigation' | t }}">{% for link in section.settings.jump_menu.links %}<a href="{{ link.url }}">{{ link.title | escape }} <span aria-hidden="true">↓</span></a>{% endfor %}</nav>{% endif %}
+    {% capture jump_links %}{% for block in section.blocks %}{% if block.type == 'jump_link' and block.settings.url != blank and block.settings.title != blank %}<a href="{{ block.settings.url | escape }}" {{ block.shopify_attributes }}>{{ block.settings.title | escape }} <span aria-hidden="true">↓</span></a>{% endif %}{% endfor %}{% endcapture %}{% if jump_links != blank %}<nav class="jump" aria-label="{{ 'products.jump_navigation' | t }}">{{ jump_links }}</nav>{% endif %}
     {% render 'bpm-app-blocks', blocks: section.blocks %}
   </div>
   {% unless section.settings.show_mobile_purchase_bar == false %}<div class="bpm-mobile-buy"><span>{{ product.title | escape }}</span><button type="submit" name="add" form="{{ form_id }}" class="button dark add-bag"{% unless purchasable %} disabled{% endunless %}>{% unless variant.available %}{{ 'products.sold_out' | t }}{% else %}{{ 'products.add_bag' | t }}{% endunless %}<span aria-hidden="true">→</span></button></div>{% endunless %}
@@ -151,12 +151,6 @@
       "label": "Related rotation menu"
     },
     {
-      "type": "link_list",
-      "id": "jump_menu",
-      "label": "Product section links",
-      "info": "Configure fragment links to the actual sections in this product template; verify destinations after rearranging sections."
-    },
-    {
       "type": "text",
       "id": "fact_1",
       "label": "Approved quick fact 1"
@@ -243,6 +237,24 @@
           "type": "image_picker",
           "id": "image",
           "label": "Product first-image override"
+        }
+      ]
+    },
+    {
+      "type": "jump_link",
+      "name": "Product section link",
+      "limit": 8,
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Link label"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "Section destination",
+          "info": "Use a fragment link to an actual section in this template; verify the destination after rearranging sections."
         }
       ]
     }
