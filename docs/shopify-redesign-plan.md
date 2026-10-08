@@ -24,6 +24,12 @@ Existing tracker #11 and design acceptance #28 retain their roles. Issue mapping
 
 The published homepage was retrieved successfully on 7 October 2026 with title “Home — BPM”. Its response differs byte-for-byte from the tracked source; visual/runtime equivalence remains to be checked, rather than assuming deployment wrappers or source drift explain the difference. Local `npm run check` passed: 60 source files verified, 10 scripts parsed, build completed, 5 isolated comments tests passed, and 25 routes/40 internal targets had zero broken targets. This verifies recovered source integrity and local routing, not Shopify functionality or current hosted design acceptance.
 
+## Published-source reconciliation — 8 October 2026
+
+Fresh public GET comparison now verifies all 25 page HTML files, shared header/footer fragments, stylesheet, runtime and catalogue against recovery: 30 matches, no unexplained differences and no retrieval failures. Deployment-injected Cloudflare footer scripts are identified separately; removal for comparison yields exact recovered bytes. Full raw/normalized hashes and limits are in `qa/hosted-source-byte-audit-20261008.json` and `qa/hosted-source-reconciliation.md`. This resolves the reset-time homepage byte discrepancy; current hosted visual/runtime behavior, external media and client acceptance remain unverified.
+
+Fresh recovered-source checks also pass: 60 source hashes, 10 scripts, build, 5 API tests and 25 routes/40 targets. The source authority is preserved, not regenerated. These checks do not prove native Shopify behavior or complete theme fidelity.
+
 ## Delivery sequence and dependencies
 
 | Phase | Work and outputs | Dependency / exit gate | Existing issues |
