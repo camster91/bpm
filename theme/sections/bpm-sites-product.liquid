@@ -60,6 +60,7 @@
     {% if section.settings.jump_menu.links.size > 0 %}<nav class="jump" aria-label="{{ 'products.jump_navigation' | t }}">{% for link in section.settings.jump_menu.links %}<a href="{{ link.url }}">{{ link.title | escape }} <span aria-hidden="true">↓</span></a>{% endfor %}</nav>{% endif %}
     {% render 'bpm-app-blocks', blocks: section.blocks %}
   </div>
+  {% unless section.settings.show_mobile_purchase_bar == false %}<div class="bpm-mobile-buy"><span>{{ product.title | escape }}</span><button type="submit" name="add" form="{{ form_id }}" class="button dark add-bag"{% unless purchasable %} disabled{% endunless %}>{% unless variant.available %}{{ 'products.sold_out' | t }}{% else %}{{ 'products.add_bag' | t }}{% endunless %}<span aria-hidden="true">→</span></button></div>{% endunless %}
 </section>
 {% unless section.settings.show_description == false %}{% if product.description != blank %}<section class="section wrap"><p class="eyebrow">{{ 'products.full_notes' | t }}</p><h2>{{ 'products.details' | t }}</h2><div class="prose bpm-product-description">{{ product.description }}</div></section>{% endif %}{% endunless %}
 <script src="{{ 'bpm-product.js' | asset_url }}" defer></script>
@@ -67,6 +68,12 @@
 {
   "name": "Bpm Product",
   "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_mobile_purchase_bar",
+      "label": "Show mobile purchase bar",
+      "default": true
+    },
     {
       "type": "image_picker",
       "id": "image",
