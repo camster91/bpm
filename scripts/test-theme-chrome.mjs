@@ -21,7 +21,7 @@ engine.registerFilter('default_pagination', p => p.fixtureHtml);
 engine.registerFilter('money', value => '$' + (Number(value) / 100).toFixed(2));
 engine.registerFilter('money_with_currency', value => '$' + (Number(value) / 100).toFixed(2) + ' CAD');
 engine.registerFilter('structured_data', value => JSON.stringify({fixture_only:true, fixture_resource_id:value.id, fixture_kind:value.fixture_kind || 'resource'}));
-engine.registerFilter('image_url', value => value.src);
+engine.registerFilter('image_url', (value,...pairs) => {const params=Object.fromEntries(pairs.filter(Array.isArray));return value.fixture_resize?value.src+(value.src.includes('?')?'&':'?')+'width='+params.width:value.src;});
 engine.registerFilter('image_tag', (src,...pairs) => {const props=Object.fromEntries(pairs.filter(Array.isArray));return `<img src="${src}"${props.loading?' loading="'+props.loading+'"':''}${props.fetchpriority?' fetchpriority="'+props.fetchpriority+'"':''}>`;});
 engine.registerFilter('format_code', value => String(value).replace(/(.{4})/g, '$1 ').trim());
 engine.registerFilter('shopify_asset_url', value => `/shopify-native/${value}`);
@@ -333,6 +333,17 @@ try {
   await check('Explicit template scent settings override matching product story','sections/bpm-sites-pdp-scent.liquid',{product:{id:bundleBindings[0].product_id},section:{...hydratedBundleSection('scent'),settings:{heading:'Merchant template override',intro:'Approved replacement'}}},html=>{assert.match(html,/Merchant template override/);assert.doesNotMatch(html,/Two tracks/);});
   await check('Explicit template value settings override matching product pack','sections/bpm-sites-pdp-value.liquid',{product:{id:bundleBindings[0].product_id},section:{...hydratedBundleSection('value'),settings:{pack:'Merchant override',applications:100}}},html=>{assert.match(html,/Merchant override/);assert.match(html,/≈ 100/);assert.doesNotMatch(html,/1216/);});
   const galleryRecords=JSON.parse(await readFile(join(theme,'../docs/source-gallery-art-provenance.json'),'utf8'));
+  for(const record of galleryRecords){
+    const originalSvg=await readFile(join(theme,'..',record.asset),'utf8');
+    const [width,height]=originalSvg.match(/<image[^>]*width="(\d+)"[^>]*height="(\d+)"/).slice(1).map(Number);
+    const filename=decodeURIComponent(new URL(record.source_url).pathname.split('/').at(-1));
+    const context={key:String(record.product_id),thumbnail:true,images:{[filename]:{src:'/native-files/'+filename,width,height,fixture_resize:true}}};
+    await check(record.product_id+' thumbnail retains source crop and requests small native file','snippets/bpm-sites-gallery-art.liquid',context,html=>{assert.match(html,/<svg/);assert.ok(html.includes('viewBox="'+record.crop.join(' ')+'"'));assert.ok(html.includes('width="'+width+'" height="'+height+'"'));assert.ok(html.includes('width='+Math.ceil(width*128/record.crop[2])));assert.doesNotMatch(html,/data:image|bpm-sites-gallery-.*svg|<img/);assert.match(html,/aria-hidden="true" focusable="false"/);});
+    if(record.product_id===14880059228532){
+      for(const [name,image] of [['missing',null],['wrong width',{...context.images[filename],width:width+1}],['wrong height',{...context.images[filename],height:height+1}]])await check(name+' native file preserves original thumbnail fallback','snippets/bpm-sites-gallery-art.liquid',{...context,images:{[filename]:image}},html=>{assert.match(html,/bpm-sites-carton-bergamot.svg/);assert.doesNotMatch(html,/<svg/);});
+      await check('Full source artwork never switches to thumbnail delivery','snippets/bpm-sites-gallery-art.liquid',{...context,thumbnail:false,loading:'eager'},html=>{assert.match(html,/bpm-sites-carton-bergamot.svg/);assert.match(html,/fetchpriority="high"/);assert.doesNotMatch(html,/<svg/);});
+    }
+  }
   const galleryResourceMap=JSON.parse(await readFile(join(theme,'../docs/theme-resource-bindings.json'),'utf8')).products;
   const hydrateGallery=config=>({id:'product-a',settings:config.settings,blocks:(config.block_order||[]).map(id=>{const block=config.blocks[id];const match=galleryResourceMap.find(p=>p.handle===block.settings.product);return {...block,settings:{...block.settings,...(match?{product:{id:match.id}}:{})}};})});
   for(const record of galleryRecords){

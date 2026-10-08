@@ -20,13 +20,13 @@ engine.registerFilter('metafield_tag', field => `<div class="metafield-rich_text
 engine.registerFilter('video_tag', () => '<video controls playsinline preload="none" aria-label="Local video binding fixture"></video>');
 engine.registerFilter('format_code', value => String(value).replace(/(.{4})/g, '$1 ').trim());
 engine.registerFilter('shopify_asset_url', value => `/shopify-native/${value}`);
-const assetVersions=Object.fromEntries(await Promise.all(['bpm-base.css','bpm-sites.css','bpm-chrome.js','bpm-product.js','bpm-motion.js'].map(async name=>[name,createHash('sha256').update(await readFile(join(theme,'assets',name))).digest('hex').slice(0,12)])));
+const assetVersions=Object.fromEntries(await Promise.all(['bpm-base.css','bpm-sites.css','bpm-chrome.js','bpm-product.js','bpm-product.css','bpm-motion.js'].map(async name=>[name,createHash('sha256').update(await readFile(join(theme,'assets',name))).digest('hex').slice(0,12)])));
 engine.registerFilter('asset_url', value => `/assets/${value}${assetVersions[value]?'?v='+assetVersions[value]:''}`);
 engine.registerFilter('stylesheet_tag', value => `<link rel="stylesheet" href="${value}">`);
 engine.registerFilter('money', value => new Intl.NumberFormat('en-CA', { style: 'currency', currency: 'CAD' }).format(value / 100));
 engine.registerFilter('money_with_currency', value => new Intl.NumberFormat('en-CA', { style: 'currency', currency: 'CAD' }).format(value / 100) + ' CAD');
 engine.registerFilter('structured_data', value => JSON.stringify({fixture_only:true, fixture_resource_id:value.id, fixture_kind:value.fixture_kind || 'resource'}));
-engine.registerFilter('image_url', value => value.src);
+engine.registerFilter('image_url', (value,...pairs) => {const params=Object.fromEntries(pairs.filter(Array.isArray));return value.fixture_resize?value.src+(value.src.includes('?')?'&':'?')+'width='+params.width:value.src;});
 engine.registerFilter('image_tag', (src, ...pairs) => { const props = Object.fromEntries(pairs.filter(Array.isArray)); const alt = String(props.alt || '').replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;'); return `<img src="${src}" alt="${alt}" width="4096" height="4096" loading="${props.loading || 'lazy'}"${props.fetchpriority?' fetchpriority="'+props.fetchpriority+'"':''}>`; });
 engine.registerFilter('handle', value => String(value).toLowerCase().replace(/[^a-z0-9-]/g, '-'));
 engine.registerFilter('t', (key, ...pairs) => {
@@ -40,7 +40,9 @@ for (const group of JSON.parse(await readFile(join(theme, 'config/settings_schem
   for (const field of group.settings || []) if (field.id) settings[field.id] = field.default;
 }
 const menu = { links: [{ title: 'Home', url: '/' }, { title: 'Shop', url: '/collections/all' }, { title: 'About Us', url: '/pages/about-us' }, { title: 'Contact Us', url: '/pages/contact' }] };
-const common = { settings, shop: { name: 'BPM Deodorant', customer_accounts_enabled: true }, routes: { root_url: '/', account_url: '/account', cart_url: '/cart', all_products_collection_url: '/collections/all' }, cart: { item_count: 0, currency: {iso_code: 'CAD'} }, request: { page_type: 'index', locale: { iso_code: 'en' } }, page_title: 'BPM chrome preview', current_page: 1, canonical_url: 'http://127.0.0.1:8892/', content_for_header: '', content_for_layout: '' };
+const thumbnailFixtures={};
+for(const record of JSON.parse(await readFile(resolve(theme,'../docs/source-gallery-art-provenance.json'),'utf8'))){const svg=await readFile(resolve(theme,'..',record.asset),'utf8');const [width,height]=svg.match(/<image[^>]*width="(\d+)"[^>]*height="(\d+)"/).slice(1).map(Number);thumbnailFixtures[decodeURIComponent(new URL(record.source_url).pathname.split('/').at(-1))]={src:record.source_url,width,height,fixture_resize:true};}
+const common = { settings, images:thumbnailFixtures, shop: { name: 'BPM Deodorant', customer_accounts_enabled: true }, routes: { root_url: '/', account_url: '/account', cart_url: '/cart', all_products_collection_url: '/collections/all' }, cart: { item_count: 0, currency: {iso_code: 'CAD'} }, request: { page_type: 'index', locale: { iso_code: 'en' } }, page_title: 'BPM chrome preview', current_page: 1, canonical_url: 'http://127.0.0.1:8892/', content_for_header: '', content_for_layout: '' };
 // Resource-picker emulation for local snapshots only; Shopify resolution is not verified.
 // Collection membership is a fabricated pack-count fixture, not authenticated native membership.
 const mappedProducts=JSON.parse(await readFile(resolve(theme,'../reference-site/src/content/products.json'),'utf8'));
