@@ -12,7 +12,7 @@
  endfor
 %}
 {% assign source_mixes = '1-0,0-1,2-0,0-2,1-1,4-0,0-4,2-2,3-1' | split: ',' %}
-{% if photo_count == 0 and source_mixes contains block.settings.source_pack %}{% render 'bpm-sites-pack-art', mix: block.settings.source_pack %}{% else %}<div class="pack-line count-{% if photo_count > 0 %}{{ photo_count }}{% else %}1{% endif %}">
+{% if photo_count == 0 and source_mixes contains block.settings.source_pack %}{% render 'bpm-sites-pack-art', mix: block.settings.source_pack, images: images, native_delivery: settings.native_source_delivery %}{% else %}<div class="pack-line count-{% if photo_count > 0 %}{{ photo_count }}{% else %}1{% endif %}">
 {% if photo_count > 0 %}{% for i in (1..4) %}{% assign field = 'image_' | append: i %}{% if block.settings[field] != blank %}{{ block.settings[field] | image_url: width: 750 | image_tag: widths: '250,500,750', sizes: '(max-width:760px) 25vw,12vw', loading: 'lazy', alt: block.settings[field].alt }}{% endif %}{% endfor %}
 {% elsif bundle.featured_image != blank %}{{ bundle.featured_image | image_url: width: 1000 | image_tag: widths: '400,700,1000', sizes: '(max-width:760px) 70vw,35vw', loading: 'lazy', alt: bundle.title }}{% endif %}</div>{% endif %}
 <h3>{{ block.settings.heading | default: bundle.title | escape }}</h3>

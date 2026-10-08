@@ -9,7 +9,7 @@
   {% render 'bpm-sites-filters', resource: collection, action: collection.url, prefix: section.id %}
   {% paginate collection.products by section.settings.page_size %}
     <p class="fine bpm-results-count">{{ 'catalogue.product_count' | t: count: collection.products_count }}</p>
-    <div class="track-grid three">{% for product in collection.products %}{% render 'bpm-sites-catalogue-card', product: product, blocks: section.blocks, label: section.settings.product_label %}{% else %}<p>{{ 'catalogue.empty' | t }}</p>{% endfor %}</div>
+    <div class="track-grid three">{% for product in collection.products %}{% render 'bpm-sites-catalogue-card', product: product, blocks: section.blocks, label: section.settings.product_label, images: images, native_delivery: settings.native_source_delivery %}{% else %}<p>{{ 'catalogue.empty' | t }}</p>{% endfor %}</div>
     {% if paginate.pages > 1 %}<nav class="bpm-pagination" aria-label="{{ 'general.pagination' | t }}">{{ paginate | default_pagination }}</nav>{% endif %}
   {% endpaginate %}
 </section>

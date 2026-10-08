@@ -1,5 +1,5 @@
 {% assign featured = section.settings.collection %}{% if featured != blank %}<section class="section wrap"><div class="section-heading"><h2>{{ section.settings.heading | default: featured.title | escape }}</h2><a class="button" href="{{ featured.url }}">{{ 'catalogue.explore_collection' | t }} <span aria-hidden="true">→</span></a></div>
-<div class="track-grid three">{% for product in featured.products limit: section.settings.limit %}{% render 'bpm-sites-catalogue-card', product: product, blocks: section.blocks, label: section.settings.product_label %}{% else %}<p>{{ 'catalogue.empty_collection' | t }}</p>{% endfor %}</div></section>{% endif %}
+<div class="track-grid three">{% for product in featured.products limit: section.settings.limit %}{% render 'bpm-sites-catalogue-card', product: product, blocks: section.blocks, label: section.settings.product_label, images: images, native_delivery: settings.native_source_delivery %}{% else %}<p>{{ 'catalogue.empty_collection' | t }}</p>{% endfor %}</div></section>{% endif %}
 {% schema %}
 {
   "name": "Bpm Featured collection",

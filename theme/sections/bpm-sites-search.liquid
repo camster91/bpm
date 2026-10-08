@@ -7,7 +7,7 @@
     <p class="fine bpm-results-count">{{ 'catalogue.result_count' | t: count: search.results_count, terms: search.terms | escape }}</p>
     <div class="track-grid three">{% for item in search.results %}
       {% case item.object_type %}
-        {% when 'product' %}{% render 'bpm-sites-catalogue-card', product: item, blocks: section.blocks, label: section.settings.product_label %}
+        {% when 'product' %}{% render 'bpm-sites-catalogue-card', product: item, blocks: section.blocks, label: section.settings.product_label, images: images, native_delivery: settings.native_source_delivery %}
         {% when 'article' %}{% assign article_label = 'catalogue.read_article' | t %}{% render 'bpm-sites-article-card', story: item, label: article_label %}
         {% when 'page' %}<article class="bpm-page-result"><p class="eyebrow">{{ 'catalogue.page' | t }}</p><h2><a href="{{ item.url }}">{{ item.title | escape }}</a></h2><p>{{ item.content | strip_html | truncatewords: 30 | escape }}</p><a class="track-link" href="{{ item.url }}">{{ 'catalogue.read_page' | t }} <span aria-hidden="true">↗</span></a></article>
       {% endcase %}

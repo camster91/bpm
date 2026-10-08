@@ -1,5 +1,7 @@
 {% doc %}
 Renders a native Shopify product using the Sites track-card layout.
+@param {object} [images] - Native Files context
+@param {boolean} [native_delivery] - False forces recovered SVG artwork
 @param {product} product - Selected Shopify product
 @param {image} [image] - Merchant photo override
 @param {image} [image_2] - Second framed carton
@@ -21,7 +23,7 @@ Renders a native Shopify product using the Sites track-card layout.
   {% assign use_source_pack = false %}{% if image == blank and image_2 == blank and image_3 == blank and image_4 == blank and source_mixes contains source_pack %}{% assign use_source_pack = true %}{% assign source_counts = source_pack | split: '-' %}{% assign pack_count = source_counts.first | plus: source_counts.last %}{% endif %}
   <article{% if use_source_pack %} data-pack="{{ pack_count }}"{% endif %} class="track-card" {{ attributes }}>
     <a class="track-image{% if use_source_pack %}{% if source_pack == '0-1' %} teal{% else %} olive{% endif %}{% endif %}" href="{{ product.url }}" style="{% if use_source_pack and pack_count == 1 %}--disc-color:{{ background | default: '#acb228' }}{% else %}background:{{ background | default: '#f3e4b7' }}{% endif %}" aria-label="{{ product.title | escape }}">
-      {% if use_source_pack %}{% render 'bpm-sites-pack-art', mix: source_pack %}{% elsif photo != blank %}<div class="pack-line count-{{ pack_count }}">{{ photo | image_url: width: 1000 | image_tag: widths: '320,500,750,1000', sizes: '(max-width:760px) 40vw,20vw', loading: 'lazy', alt: product.title }}{% if image_2 %}{{ image_2 | image_url: width: 500 | image_tag: loading: 'lazy', alt: '' }}{% endif %}{% if image_3 %}{{ image_3 | image_url: width: 500 | image_tag: loading: 'lazy', alt: '' }}{% endif %}{% if image_4 %}{{ image_4 | image_url: width: 500 | image_tag: loading: 'lazy', alt: '' }}{% endif %}</div>{% endif %}
+      {% if use_source_pack %}{% render 'bpm-sites-pack-art', mix: source_pack, images: images, native_delivery: native_delivery %}{% elsif photo != blank %}<div class="pack-line count-{{ pack_count }}">{{ photo | image_url: width: 1000 | image_tag: widths: '320,500,750,1000', sizes: '(max-width:760px) 40vw,20vw', loading: 'lazy', alt: product.title }}{% if image_2 %}{{ image_2 | image_url: width: 500 | image_tag: loading: 'lazy', alt: '' }}{% endif %}{% if image_3 %}{{ image_3 | image_url: width: 500 | image_tag: loading: 'lazy', alt: '' }}{% endif %}{% if image_4 %}{{ image_4 | image_url: width: 500 | image_tag: loading: 'lazy', alt: '' }}{% endif %}</div>{% endif %}
     </a>
     <div class="track-meta"><span>{{ pack_label | escape }}</span><span>{% if product.price_varies %}{% assign formatted_price = product.price | money_with_currency %}{{ 'products.price_from' | t: price: formatted_price }}{% else %}{{ product.price | money_with_currency }}{% endif %}</span></div>
     <h3><a href="{{ product.url }}">{{ product.title | escape }}</a></h3>

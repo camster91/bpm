@@ -1,12 +1,14 @@
 {% doc %}
 Composes original non-destructive Sites carton crops. Unknown mixes emit nothing.
 @param {string} mix - Allowlisted citrus-unscented carton counts
+@param {object} [images] - Native Files image context
+@param {boolean} [native_delivery] - False forces recovered SVG artwork
 @example
 {% render 'bpm-sites-pack-art', mix: '1-1' %}
 {% enddoc %}
 {% assign allowed = '1-0,0-1,2-0,0-2,1-1,4-0,0-4,2-2,3-1' | split: ',' %}
 {% if allowed contains mix %}{% assign counts = mix | split: '-' %}{% assign citrus = counts.first | plus: 0 %}{% assign unscented = counts.last | plus: 0 %}{% assign total = citrus | plus: unscented %}
 <div class="pack-line count-{{ total }} bpm-source-pack">
-{% if citrus > 0 %}{% for i in (1..citrus) %}<img src="{{ 'bpm-sites-carton-bergamot.svg' | asset_url }}" width="193" height="430" alt="" loading="lazy">{% endfor %}{% endif %}
-{% if unscented > 0 %}{% for i in (1..unscented) %}<img src="{{ 'bpm-sites-carton-unscented.svg' | asset_url }}" width="213" height="430" alt="" loading="lazy">{% endfor %}{% endif %}
+{% if citrus > 0 %}{% for i in (1..citrus) %}{% render 'bpm-sites-gallery-art', key: '14880059228532', alt: '', loading: 'lazy', images: images, native_delivery: native_delivery, sizes: '(max-width:760px) 34vw,17vw' %}{% endfor %}{% endif %}
+{% if unscented > 0 %}{% for i in (1..unscented) %}{% render 'bpm-sites-gallery-art', key: '14925587775860', alt: '', loading: 'lazy', images: images, native_delivery: native_delivery, sizes: '(max-width:760px) 34vw,17vw' %}{% endfor %}{% endif %}
 </div>{% endif %}

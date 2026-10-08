@@ -1,5 +1,7 @@
 {% doc %}
 Applies merchant-selected product presentation to native catalogue results.
+@param {object} [images] - Native Files context
+@param {boolean} [native_delivery] - False forces recovered SVG artwork
 @param {product} product - Actual result product
 @param {object[]} blocks - Section product mappings
 @param {string} label - Product link label
@@ -9,4 +11,4 @@ Applies merchant-selected product presentation to native catalogue results.
 {% assign presentation = nil %}
 {% assign attributes = nil %}
 {% for block in blocks %}{% if block.settings.product.id == product.id %}{% assign presentation = block.settings %}{% assign attributes = block.shopify_attributes %}{% break %}{% endif %}{% endfor %}
-{% render 'bpm-sites-card', product: product, source_pack: presentation.source_pack, image: presentation.image, image_2: presentation.image_2, image_3: presentation.image_3, image_4: presentation.image_4, pack_label: presentation.pack_label, summary: presentation.summary, background: presentation.background, button_label: label, attributes: attributes %}
+{% render 'bpm-sites-card', product: product, source_pack: presentation.source_pack, image: presentation.image, image_2: presentation.image_2, image_3: presentation.image_3, image_4: presentation.image_4, pack_label: presentation.pack_label, summary: presentation.summary, background: presentation.background, button_label: label, attributes: attributes, images: images, native_delivery: native_delivery %}
