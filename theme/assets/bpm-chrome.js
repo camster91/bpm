@@ -1,5 +1,7 @@
 const bindChrome = (root = document) => {
   document.documentElement.style.setProperty('--bpm-announcement-height', `${document.querySelector('[data-bpm-announcement]')?.getBoundingClientRect().height || 0}px`);
+  const header = document.querySelector('.bpm-sites-header');
+  header?.style.setProperty('--bpm-header-height', `${header.getBoundingClientRect().height}px`);
   root.querySelectorAll('.bpm-mobile-menu, .bpm-nav-disclosure').forEach((disclosure) => {
     if (disclosure.dataset.bpmBound) return;
     disclosure.dataset.bpmBound = 'true';
@@ -15,3 +17,5 @@ bindChrome();
 document.addEventListener('shopify:section:load', (event) => bindChrome(event.target));
 document.addEventListener('shopify:section:unload', () => requestAnimationFrame(() => bindChrome()));
 window.addEventListener('resize', () => bindChrome());
+
+document.fonts?.ready.then(() => bindChrome());

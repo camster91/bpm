@@ -10,7 +10,8 @@ img{max-width:100%;height:auto;vertical-align:middle}
 ul{list-style:none;padding:0;margin:0}
 h1,h2,h3,p{margin:0}
 h1,h2,h3{font-family:var(--bpm-heading);font-weight:700;line-height:1}
-:focus-visible{outline:3px solid currentColor;outline-offset:5px}
+:focus-visible{outline:3px solid #231f20;outline-offset:3px;box-shadow:0 0 0 3px #fffde9!important}
+@media(forced-colors:active){:focus-visible{outline-color:Highlight;box-shadow:none!important}}
 [hidden]{display:none!important}
 .bpm-container{width:min(var(--bpm-content),calc(100% - 128px));margin-inline:auto}
 .bpm-skip-link{position:fixed;top:8px;left:8px;z-index:1000;padding:12px 20px;background:var(--bpm-surface);color:var(--bpm-ink);transform:translateY(-150%)}

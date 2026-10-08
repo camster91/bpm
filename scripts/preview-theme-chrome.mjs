@@ -1,3 +1,4 @@
+import { createHash } from 'node:crypto';
 import { readFile, writeFile, mkdir, symlink } from 'node:fs/promises';
 import { resolve, join } from 'node:path';
 import { Liquid } from 'liquidjs';
@@ -19,7 +20,8 @@ engine.registerFilter('metafield_tag', field => `<div class="metafield-rich_text
 engine.registerFilter('video_tag', () => '<video controls playsinline preload="none" aria-label="Local video binding fixture"></video>');
 engine.registerFilter('format_code', value => String(value).replace(/(.{4})/g, '$1 ').trim());
 engine.registerFilter('shopify_asset_url', value => `/shopify-native/${value}`);
-engine.registerFilter('asset_url', value => `/assets/${value}`);
+const assetVersions=Object.fromEntries(await Promise.all(['bpm-base.css','bpm-sites.css','bpm-chrome.js','bpm-product.js'].map(async name=>[name,createHash('sha256').update(await readFile(join(theme,'assets',name))).digest('hex').slice(0,12)])));
+engine.registerFilter('asset_url', value => `/assets/${value}${assetVersions[value]?'?v='+assetVersions[value]:''}`);
 engine.registerFilter('stylesheet_tag', value => `<link rel="stylesheet" href="${value}">`);
 engine.registerFilter('money', value => new Intl.NumberFormat('en-CA', { style: 'currency', currency: 'CAD' }).format(value / 100));
 engine.registerFilter('money_with_currency', value => new Intl.NumberFormat('en-CA', { style: 'currency', currency: 'CAD' }).format(value / 100) + ' CAD');
