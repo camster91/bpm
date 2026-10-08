@@ -11,7 +11,9 @@
           "settings": {
             "product": "four-on-the-floor-mixed-scent-4-tube-deodorant-bundle",
             "pack_label": "THE FOUR COUNT / 4 \u00d7 76 g",
-            "source_gallery": "15222327476596"
+            "source_gallery": "15222327476596",
+            "display_title": "Four on the Floor",
+            "intro": "2 citrus + 2 unscented. 4 tubes, your way."
           }
         },
         "15222328361332": {
@@ -19,7 +21,9 @@
           "settings": {
             "product": "citrus-on-repeat-family-pack-4-tube-bergamot-lime-deodorant-bundle",
             "pack_label": "THE FOUR COUNT / 4 \u00d7 76 g",
-            "source_gallery": "15222328361332"
+            "source_gallery": "15222328361332",
+            "display_title": "Citrus on Repeat: Family Pack",
+            "intro": "Bergamot & Lime. 4 tubes, your way."
           }
         },
         "15222329180532": {
@@ -27,7 +31,9 @@
           "settings": {
             "product": "silent-on-repeat-family-pack-4-tube-unscented-deodorant-bundle",
             "pack_label": "THE FOUR COUNT / 4 \u00d7 76 g",
-            "source_gallery": "15222329180532"
+            "source_gallery": "15222329180532",
+            "display_title": "Silent on Repeat: Family Pack",
+            "intro": "Unscented. 4 tubes, your way."
           }
         },
         "15222739599732": {
@@ -35,7 +41,9 @@
           "settings": {
             "product": "3-4-time",
             "pack_label": "THE FOUR COUNT / 4 \u00d7 76 g",
-            "source_gallery": "15222739599732"
+            "source_gallery": "15222739599732",
+            "display_title": "3/4 Time",
+            "intro": "3 citrus + 1 unscented. 4 tubes, your way."
           }
         },
         "15141686444404": {
@@ -43,7 +51,9 @@
           "settings": {
             "product": "silent-repeat",
             "pack_label": "THE TWO-TRACK / 2 \u00d7 76 g",
-            "source_gallery": "15141686444404"
+            "source_gallery": "15141686444404",
+            "display_title": "Silent on Repeat",
+            "intro": "Unscented. 2 tubes, your way."
           }
         },
         "15141668815220": {
@@ -51,7 +61,9 @@
           "settings": {
             "product": "citrus-repeat",
             "pack_label": "THE TWO-TRACK / 2 \u00d7 76 g",
-            "source_gallery": "15141668815220"
+            "source_gallery": "15141668815220",
+            "display_title": "Citrus on Repeat",
+            "intro": "Bergamot & Lime. 2 tubes, your way."
           }
         },
         "15141732581748": {
@@ -59,7 +71,9 @@
           "settings": {
             "product": "side-a-side-b",
             "pack_label": "THE TWO-TRACK / 2 \u00d7 76 g",
-            "source_gallery": "15141732581748"
+            "source_gallery": "15141732581748",
+            "display_title": "Side A / Side B",
+            "intro": "One bright citrus. One unscented. Choose your side."
           }
         },
         "judge_me_reviews_preview_badge_F7Bi3V": {
@@ -499,7 +513,9 @@
     },
     "lifestyle": {
       "type": "bpm-sites-pdp-lifestyle",
-      "settings": { "page": "about-us" }
+      "settings": {
+        "page": "about-us"
+      }
     },
     "closing": {
       "type": "bpm-sites-pdp-closing",
