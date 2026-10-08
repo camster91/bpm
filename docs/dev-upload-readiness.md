@@ -2,6 +2,10 @@
 
 This review supersedes the repaired-Dawn upload command. Its prior text is preserved in `plan-history/2026-10-07-before-custom-dev-candidate/dev-upload-readiness.md`. The full Phase 0–5 plan remains in `shopify-redesign-plan.md`.
 
+## Current snapshot revision — 8 October 2026
+
+The October 7 snapshot is preserved and superseded for the current upload review. The new snapshot includes the narrow-phone header and purchase-option restoration fixes. The prior manifest is retained as `qa/dev-candidate-manifest-20261007.json`; the updated manifest is `qa/dev-candidate-manifest-20261008.json`. No previous exact command has been executed or newly approved. Use the revised command below only after separate confirmation.
+
 ## Local candidate and freeze
 
 The candidate is committed `theme/`, built against Sites and recovered source. Fresh checks pass: 319 Liquid rendering checks, motion/gift-card checks, 96 captured resource bindings and 9 Judge.me configuration bindings; installed Theme Check has 0 errors and 1 existing Adobe Typekit RemoteAsset warning. Current native data, editor and app runtime are not proved by these tests.
@@ -9,15 +13,21 @@ The candidate is committed `theme/`, built against Sites and recovered source. F
 Prepare the frozen candidate locally:
 
 ```sh
-node scripts/prepare-dev-theme.mjs /tmp/bpm-sites-dev-candidate-20261007
+node scripts/prepare-dev-theme.mjs /tmp/bpm-sites-dev-candidate-20261008
 ```
 
-The script refuses an existing destination or dirty theme, exports committed Shopify directories only, preserves explicit development noindex, rejects non-regular files, makes snapshot files read-only, and writes `manifest.json` outside the upload directory. The manifest records source commit/tree and every transmitted file's SHA-256 and size. README, repository documents, source reference, tests, protected audits and Git history are excluded. Inspect and hash-verify the snapshot before upload. This is local preparation only.
+The script refuses an existing destination or dirty theme, exports committed Shopify directories only, preserves explicit development noindex, rejects non-regular files, makes snapshot files read-only, and writes `manifest.json` outside the upload directory. The manifest records source commit/tree and every transmitted file's SHA-256 and size. README, repository documents, source reference, tests, protected audits and Git history are excluded. Verify it before upload:
+
+```sh
+node scripts/verify-dev-theme.mjs /tmp/bpm-sites-dev-candidate-20261008
+```
+
+The verifier checks the exact file set, sizes, hashes, bytes against the source commit, explicit noindex and current theme-tree identity. A valid historical snapshot can still report `matchesCurrentTheme: false`; do not substitute it for the reviewed current candidate. Preparation and verification are local only.
 
 ## Prepared exact upload command — not executed
 
 ```sh
-CI=1 SHOPIFY_CLI_FORCE_AUTO_UPGRADE=0 shopify theme push --store qef4ye-yg.myshopify.com --path /tmp/bpm-sites-dev-candidate-20261007/theme --development --development-context bpm-sites-custom-qa-20261007 --strict --json
+CI=1 SHOPIFY_CLI_FORCE_AUTO_UPGRADE=0 shopify theme push --store qef4ye-yg.myshopify.com --path /tmp/bpm-sites-dev-candidate-20261008/theme --development --development-context bpm-sites-custom-qa-20261008 --strict --json
 ```
 
 Target must be confirmed as BPM's `qef4ye-yg.myshopify.com` before execution. Transmits that store identifier, authenticated theme requests, and every file in the manifest: Liquid, JSON templates/sections, CSS/JavaScript, images/fonts, locales and theme settings including resource handles and app extension references. It creates a development theme for this context or replaces that context's existing development theme. No live/publish/theme-ID flags are supplied. Development previews share the store's products, apps and store-wide settings; they are not an isolated commerce backend.
