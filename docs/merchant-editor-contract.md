@@ -62,3 +62,7 @@ Product track, collection presentation and homepage bundle blocks can select the
 ## Product-card presentation heading
 
 Product-track and catalogue mapping blocks expose **Display title override**. It changes only the visible card heading, is escaped, and falls back to the native product title when blank. Source short names are configured for existing mapped products. The product picker controls native identity, price, availability and URL; future unmatched products retain native output. Clear the override if Admin title edits should automatically appear in cards. Native editor save/reload and locale behavior remain development QA requirements.
+
+## Value-section price narration
+
+**Price sentence introduction** adds optional escaped words before the selected product’s current Shopify price and joins **Copy** into that paragraph. The homepage uses “BPM prices a single tube at”. Verify the introduction describes the picked product; leave blank for the native product-title presentation with separate copy. Range prices retain the native From label and suppress per-application estimates. Missing products omit the price introduction and retain body copy. This control changes theme presentation only; native editor persistence and current store prices still require dev-theme verification.

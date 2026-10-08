@@ -254,7 +254,8 @@
     "value": {
       "type": "bpm-sites-value",
       "settings": {
-        "product": "bpm-natural-deodorant-bergamot-lime"
+        "product": "bpm-natural-deodorant-bergamot-lime",
+        "price_intro": "BPM prices a single tube at"
       }
     },
     "newsletter": {

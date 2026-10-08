@@ -1,0 +1,133 @@
+{
+  "scope": "Live source vs fabricated native-resource preview, not current Shopify price verification",
+  "before": [
+    {
+      "width": 375,
+      "kind": "source",
+      "data": {
+        "lead": {
+          "height": 113.375,
+          "text": "BPM prices a single tube at $23.99 CAD. Buying direct keeps more of the sale with the company and the product.",
+          "width": 327
+        },
+        "leadCount": 1,
+        "sectionHeight": 722.5234375,
+        "viewport": 375
+      }
+    },
+    {
+      "width": 375,
+      "kind": "candidate",
+      "data": {
+        "lead": {
+          "height": 155.234375,
+          "text": "BPM prices a single tube at $23.99 CAD. Buying direct keeps more of the sale with the company and the product.",
+          "width": 327
+        },
+        "leadCount": 1,
+        "sectionHeight": 764.3828125,
+        "viewport": 375
+      }
+    },
+    {
+      "width": 820,
+      "kind": "source",
+      "data": {
+        "lead": {
+          "height": 54,
+          "text": "BPM prices a single tube at $23.99 CAD. Buying direct keeps more of the sale with the company and the product.",
+          "width": 640
+        },
+        "leadCount": 1,
+        "sectionHeight": 733.15625,
+        "viewport": 820
+      }
+    },
+    {
+      "width": 820,
+      "kind": "candidate",
+      "data": {
+        "lead": {
+          "height": 93.140625,
+          "text": "BPM prices a single tube at $23.99 CAD. Buying direct keeps more of the sale with the company and the product.",
+          "width": 640
+        },
+        "leadCount": 1,
+        "sectionHeight": 772.296875,
+        "viewport": 820
+      }
+    },
+    {
+      "width": 1440,
+      "kind": "source",
+      "data": {
+        "lead": {
+          "height": 93.140625,
+          "text": "BPM prices a single tube at $23.99 CAD. Buying direct keeps more of the sale with the company and the product.",
+          "width": 620
+        },
+        "leadCount": 1,
+        "sectionHeight": 520.4140625,
+        "viewport": 1440
+      }
+    },
+    {
+      "width": 1440,
+      "kind": "candidate",
+      "data": {
+        "lead": {
+          "height": 93.140625,
+          "text": "BPM prices a single tube at $23.99 CAD. Buying direct keeps more of the sale with the company and the product.",
+          "width": 620
+        },
+        "leadCount": 1,
+        "sectionHeight": 520.4140625,
+        "viewport": 1440
+      }
+    }
+  ],
+  "after": [
+    {
+      "width": 375,
+      "data": {
+        "lead": {
+          "height": 113.375,
+          "text": "BPM prices a single tube at $23.99 CAD. Buying direct keeps more of the sale with the company and the product.",
+          "width": 327
+        },
+        "leadCount": 1,
+        "overflow": false,
+        "sectionHeight": 722.5234375,
+        "viewport": 375
+      }
+    },
+    {
+      "width": 820,
+      "data": {
+        "lead": {
+          "height": 54,
+          "text": "BPM prices a single tube at $23.99 CAD. Buying direct keeps more of the sale with the company and the product.",
+          "width": 640
+        },
+        "leadCount": 1,
+        "overflow": false,
+        "sectionHeight": 733.15625,
+        "viewport": 820
+      }
+    },
+    {
+      "width": 1440,
+      "data": {
+        "lead": {
+          "height": 93.140625,
+          "text": "BPM prices a single tube at $23.99 CAD. Buying direct keeps more of the sale with the company and the product.",
+          "width": 620
+        },
+        "leadCount": 1,
+        "overflow": false,
+        "sectionHeight": 520.4140625,
+        "viewport": 1440
+      }
+    }
+  ]
+}

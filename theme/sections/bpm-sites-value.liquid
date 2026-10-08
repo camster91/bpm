@@ -1,7 +1,7 @@
 <section class="section butter-band"><div class="wrap split"><div><div class="intro-copy">
 {% if section.settings.eyebrow != blank %}<p class="eyebrow">{{ section.settings.eyebrow | escape }}</p>{% endif %}{% if section.settings.heading != blank %}<h2>{{ section.settings.heading | escape | newline_to_br }}</h2>{% endif %}
-{% if section.settings.product != blank %}<p class="lead">{{ section.settings.product.title | escape }} · {% if section.settings.product.price_varies %}{% assign price = section.settings.product.price | money_with_currency %}{{ 'products.price_from' | t: price: price }}{% else %}{{ section.settings.product.price | money_with_currency }}{% endif %}</p>{% endif %}
-{% if section.settings.body != blank %}<p class="lead">{{ section.settings.body | escape }}</p>{% endif %}</div></div>
+{% if section.settings.product != blank %}<p class="lead">{% if section.settings.price_intro != blank %}{{ section.settings.price_intro | escape }} {% else %}{{ section.settings.product.title | escape }} · {% endif %}{% if section.settings.product.price_varies %}{% assign price = section.settings.product.price | money_with_currency %}{{ 'products.price_from' | t: price: price }}{% else %}{{ section.settings.product.price | money_with_currency }}{% endif %}{% if section.settings.price_intro != blank %}.{% if section.settings.body != blank %} {{ section.settings.body | escape }}{% endif %}{% endif %}</p>{% endif %}
+{% if section.settings.body != blank %}{% if section.settings.price_intro == blank or section.settings.product == blank %}<p class="lead">{{ section.settings.body | escape }}</p>{% endif %}{% endif %}</div></div>
 <div class="pricing-notes">{% if section.settings.quantity != blank %}<div><strong>{{ section.settings.quantity | escape }}</strong><span>{{ section.settings.quantity_label | escape }}</span></div>{% endif %}
 {% if section.settings.applications > 0 %}<div><strong>≈ {{ section.settings.applications }}</strong><span>{{ section.settings.applications_label | escape }}</span></div>
 {% if section.settings.product != blank and section.settings.product.price_varies == false %}{% assign divisor = section.settings.applications | times: 1.0 %}{% assign estimate = section.settings.product.price | divided_by: divisor %}<div><strong>≈ {% if cart.currency.iso_code == 'CAD' or cart.currency.iso_code == 'USD' %}{{ estimate | times: 10 | round | divided_by: 10.0 }}¢{% else %}{{ estimate | money }}{% endif %}</strong><span>{{ section.settings.estimate_label | escape }}{% if cart.currency.iso_code != blank %} ({{ cart.currency.iso_code | escape }}){% endif %}</span></div>{% endif %}{% endif %}
@@ -36,6 +36,12 @@
       "type": "product",
       "id": "product",
       "label": "Single tube product"
+    },
+    {
+      "type": "text",
+      "id": "price_intro",
+      "label": "Price sentence introduction",
+      "info": "Optional words before the current Shopify price. Verify these describe the selected product. Copy follows in the same paragraph. Leave blank to show the product title and separate copy."
     },
     {
       "type": "text",
