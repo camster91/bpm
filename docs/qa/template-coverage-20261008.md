@@ -4,7 +4,7 @@ The fresh recovered-source suite passes: 60 protected source-file hashes, 10 par
 
 `template-coverage-20261008.json` classifies every recovered public HTML page (excluding the shared header/footer fragments), inventories the actual template files, and resolves every ordered JSON section to a local Liquid file. `npm run check:coverage` repeats the classification and file checks. CI now runs it as a nondeploying check; missing mappings or section files fail. The summary deliberately reports unresolved account coverage and does not claim release readiness.
 
-The inventory contains **22 templates, 109 ordered sections and nine catalogue products**. It is template presence evidence, not rendered fidelity, native resource assignment or merchant editor persistence. All eight article pages have a prepared source-content entry; native IDs and application remain unverified. Seven policy detail pages (plus the policy index) have a prepared source-content package. They require verified current policy/page destinations, approved bodies, and actual native policy layout comparison. See `source-policy-content-20261008.md`. `review.html` is an intentional internal review-tool exclusion, consistent with the plan.
+The inventory contains **22 templates, 115 ordered sections and nine catalogue products**. It is template presence evidence, not rendered fidelity, native resource assignment or merchant editor persistence. All eight article pages have a prepared source-content entry; native IDs and application remain unverified. Seven policy detail pages (plus the policy index) have a prepared source-content package. They require verified current policy/page destinations, approved bodies, and actual native policy layout comparison. See `source-policy-content-20261008.md`. `review.html` is an intentional internal review-tool exclusion, consistent with the plan.
 
 ## Account boundary discovered
 
@@ -19,3 +19,7 @@ Before publication, Cameron/implementation QA must verify the current account mo
 No theme files changed in this audit. The preserved c1655f6 candidate still matches theme tree `b1b46a6553c276c090544966da5c85ed7e934095`, with 163 files, 45,082,931 bytes and explicit development noindex; its hash verifier passed again. No custom push, merge, upload or publication occurred.
 
 The pending next native action remains approval of the exact development upload command in `../dev-upload-readiness.md`, followed by current resource/editor/app/account-mode inspection. Full device, commerce, claims, analytics, accessibility, performance, acceptance and release/rollback gates remain open. This audit changes the account-release assessment and does not close the full goal.
+
+## Client-content consolidation refresh
+
+A fresh check:coverage on 8 October reports 25 recovered source pages, 22 templates, 115 ordered sections and nine catalogue products. New homepage content is reflected in that ordered-section count. Seven legacy customer templates remain absent, account mode is unverified and release readiness is false. The current prepared candidate is 3d296aa; c1655f6 above is historical. See ../acceptance-gates-20261008.md and ../client-content-dev-upload-20261008.md for the current native gate. No upload, account migration or shared content change was performed.
