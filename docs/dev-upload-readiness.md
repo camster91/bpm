@@ -1,30 +1,51 @@
-# Development-theme upload review — 7 October 2026
+# Custom Sites theme — development upload review
 
-Superseded for the new custom-theme objective: the command below targets the repaired existing Dawn baseline, not the custom theme now being built in `theme/`. It was never executed. Do not use this command as evidence that the full Figma redesign is upload-ready; prepare a new bounded command for the custom theme after its readiness review.
+This review supersedes the repaired-Dawn upload command. Its prior text is preserved in `plan-history/2026-10-07-before-custom-dev-candidate/dev-upload-readiness.md`. The full Phase 0–5 plan remains in `shopify-redesign-plan.md`.
 
-Cameron requested code review and authorised a development theme as the intended upload environment. The candidate is the existing Dawn 15.4.1 theme with thirteen local baseline repairs, not the recovered full-site HTML redesign converted to Shopify sections. The full protected candidate remains outside Git.
+## Local candidate and freeze
 
-## Verified in this review
+The candidate is committed `theme/`, built against Sites and recovered source. Fresh checks pass: 319 Liquid rendering checks, motion/gift-card checks, 96 captured resource bindings and 9 Judge.me configuration bindings; installed Theme Check has 0 errors and 1 existing Adobe Typekit RemoteAsset warning. Current native data, editor and app runtime are not proved by these tests.
 
-- Original export: all 404 manifest hashes still match; no files added/removed in the candidate, thirteen source files changed, settings_data unchanged.
-- Fresh installed Theme Check: 0 errors, 3 documented warnings (Adobe RemoteAsset, unused Dawn snippet, `offset: continue`). Report remains protected outside Git.
-- Fifteen Liquid rendering fixtures pass. Recovery source/build/API/route checks also pass, but those validate the separate HTML reference.
-- Limited Shopify-token/private-key pattern scan found no matches; this is not a comprehensive merchant-data review. Upload sends the existing theme/configuration back to the same BPM store. No customer/order records are included in the theme export.
-
-## Verdict
-
-Ready for an isolated development upload to investigate rendering and commerce; incomplete as a redesign or release candidate. Outstanding source risks include stale subscription state after variant changes, incomplete quantity rules, sold-out label restoration, editor reinitialisation, placeholder review output and contact success detection. Native custom product form is not wrapped by Dawn's AJAX component. Tests do not prove actual cart transport, checkout, app compatibility, keyboard/touch behaviour or complete responsive output. Subscription title versus five-month cadence remains an owner decision; store-wide billing/settings must not change during theme QA.
-
-## Prepared command
-
-Installed CLI help confirms `--development-context` creates or reuses a development theme for that context and `--strict` rejects Theme Check errors. The following command is prepared, not executed:
+Prepare the frozen candidate locally:
 
 ```sh
-CI=1 SHOPIFY_CLI_FORCE_AUTO_UPGRADE=0 shopify theme push --store qef4ye-yg.myshopify.com --path /Users/Cameron/Documents/Codex/bpm-private-audit/theme-190930944372-local-fixes --development --development-context bpm-baseline-qa-20261007 --strict --json
+node scripts/prepare-dev-theme.mjs /tmp/bpm-sites-dev-candidate-20261007
 ```
 
-Target: BPM store `qef4ye-yg.myshopify.com`, a separate development context. Transmits the store identifier, authenticated theme requests and all candidate theme files including copied theme settings/app-block references. Creates a development theme if that context is absent, or updates that context's development theme if present. No live target or publish flag is specified. Capture returned ID/role/editor/preview URLs and verify role is development and ID differs from production `190930944372` before further interaction. Unexpected authentication/scopes or a live target require stopping.
+The script refuses an existing destination or dirty theme, exports committed Shopify directories only, preserves explicit development noindex, rejects non-regular files, makes snapshot files read-only, and writes `manifest.json` outside the upload directory. The manifest records source commit/tree and every transmitted file's SHA-256 and size. README, repository documents, source reference, tests, protected audits and Git history are excluded. Inspect and hash-verify the snapshot before upload. This is local preparation only.
 
-The Shopify CLI skill requires exact-command confirmation in a separate user turn before this authenticated upload. General development-upload authorization has been received; this confirmation is the remaining tool-specific requirement. No new design acceptance is inferred. No purchase, outbound contact form, review request, email automation or subscription setting mutation is included.
+## Prepared exact upload command — not executed
 
-After upload: inspect representative homepage/PDP/collection/legal pages, typography, app output and mobile controls; verify controlled native cart transport with bounded isolated data. Forms/purchases that trigger live store-wide effects need their own authorised test boundaries. Development themes still share products/apps/store-wide settings with the store. Keep production theme and protected backup intact. Publication and store-wide changes remain separate decisions.
+```sh
+CI=1 SHOPIFY_CLI_FORCE_AUTO_UPGRADE=0 shopify theme push --store qef4ye-yg.myshopify.com --path /tmp/bpm-sites-dev-candidate-20261007/theme --development --development-context bpm-sites-custom-qa-20261007 --strict --json
+```
+
+Target must be confirmed as BPM's `qef4ye-yg.myshopify.com` before execution. Transmits that store identifier, authenticated theme requests, and every file in the manifest: Liquid, JSON templates/sections, CSS/JavaScript, images/fonts, locales and theme settings including resource handles and app extension references. It creates a development theme for this context or replaces that context's existing development theme. No live/publish/theme-ID flags are supplied. Development previews share the store's products, apps and store-wide settings; they are not an isolated commerce backend.
+
+Installed CLI help confirms development-context behavior and strict error checking. [Shopify CLI theme push documentation](https://shopify.dev/docs/api/shopify-cli/theme/theme-push) describes the upload operation. The [Shopify CLI skill](/Users/Cameron/.codex/plugins/cache/openai-curated-remote/shopify/4.1.1/skills/shopify-use-shopify-cli/SKILL.md) requires: “Before executing a Shopify CLI command that authenticates … show the exact command, target, transmitted data, and side effects, then obtain the user's explicit confirmation in a separate turn.” General dev-theme authorization is already given; exact-command confirmation remains required. Do not reuse historical codes or transmit credentials in arguments or logs.
+
+## Native QA and stop conditions
+
+1. Record returned store, theme ID, role, editor and preview URLs. Confirm BPM, development role and ID different from captured production `190930944372`. That production ID is historical, not current proof. Stop on wrong store, live target or unexpected authentication/scopes. Do not publish.
+2. Check resource handles, all nine products, native Files crop identity, template assignments and original/fallback media; capture real screenshots at plan widths. Compare source framing/layout/motion, not only absence of overflow.
+3. Verify editor edits persist, section add/reorder/remove works, app blocks remain configurable, and editor reload does not duplicate handlers. Undo bounded dev-theme test edits and retain candidate identity.
+4. Check Judge.me product attribution/rating/listing, app embeds, combined structured data, subscription availability/cadence labels, bundle pricing/stock, account model and market links. Do not alter store-wide subscriptions or apps to make fixtures appear correct.
+5. Exercise native one-time/subscription/bundle cart states and checkout handoff only within an explicitly agreed isolated test boundary. Contact, newsletter, review submission, real purchase and email activation can trigger live effects and remain gated.
+6. Record accessibility/device defects, actual loading/performance, consent/event paths, approved claims/policy/offer decisions and P0–P3 findings. No local fixture or mock establishes native correctness.
+
+## Remaining acceptance gates
+
+| Gate | Current evidence | Still required |
+|---|---|---|
+| Source recovery/acceptance | Recovered source and preserved provenance | Current hosted-source reconciliation; complete comparisons; final client acceptance |
+| Theme coverage/editability | Templates, section schemas and local bindings | Native assignments/resources, editor persistence and full source/state matrix |
+| Commerce/apps | Native forms and captured app payloads | Current app behavior, subscription decision, bundle/cart/error/checkout journeys |
+| Content/provider decisions | Existing source/native fields; hidden optional slots | Approved claims/legal, newsletter/provider/offer and creator permissions |
+| Hardening | Local focus/motion/metadata/schema/image checks | Native combined schema, accessibility, measured performance, analytics/consent |
+| Release/rollback | Protected historical export; committed candidate snapshot | Current production identity/backup verification, bounded rollback rehearsal, frozen dev ID and acceptance packet |
+
+## Rollback boundary
+
+For local recovery, retain the frozen snapshot and manifest; verify hashes before reuse. A failed dev upload never authorizes replacing production. Stop, record the returned theme/context state and any partial upload, and resume only against the confirmed development target. Re-uploading a frozen snapshot, deleting a dev theme, or authenticated remote backup work requires its exact bounded command authorization. Never execute the obsolete repaired-Dawn command as a custom-theme rollback.
+
+Before an eventual production release, independently confirm current live theme and preserve a fresh named backup, validate the approved candidate and exact publication/rollback commands, record approvals, and rehearse the bounded recovery procedure. The captured October export alone is not a current release backup. No production release or completed rollback rehearsal is claimed here.

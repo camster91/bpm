@@ -12,13 +12,12 @@ Existing tracker #11 and design acceptance #28 retain their roles. Issue mapping
 
 ## Current state and immediate action
 
-- Sites recovery provenance remains in `reference-site/source-provenance.json`; source commit `2f95c940c42b1bc4152790a83f0f455f66ceaaa4`. Recovery PR #12 is separate from custom-theme readiness.
-- `theme/` now implements the Sites presentation: all thirteen homepage modules, shared chrome, collection/search/cart, nine source product compositions with native purchase forms, About/Indigenous-owned/Contact/policies, blog/articles, utility and customer templates, and assigned campaign/wholesale suffixes. The historical branch name does not change the Sites design authority.
-- Merchant controls, resource-picker mappings, captured Judge.me configuration, source crops, responsive image requests, source motion with pause/reduced-motion controls, native metadata/schema and development noindex are implemented. Tests verify local code and snapshot mappings; actual editor persistence, current resources and app runtime still need native QA.
-- Current local validation: 319 Liquid rendering checks, motion/gift-card checks, 96 resource bindings and 9 Judge.me configuration bindings pass. Installed Theme Check reports 0 errors and 1 Adobe RemoteAsset warning. Earlier QA documents retain narrower historical counts.
-- Protected live-theme export and repaired-Dawn candidate remain separate audit/rollback evidence. They are not the custom candidate. No custom upload, custom branch push/merge or production publication is evidenced here.
-- Next action: freeze the custom candidate with `scripts/prepare-dev-theme.mjs`, review its upload manifest, obtain exact-command confirmation, and upload only into a separate development context. Native QA must verify rendering, resource/Files resolution, app attribution, editor edits, account/market behavior and commerce. See `dev-upload-readiness.md` for the concrete boundary and remaining gates.
-- Source fidelity across the entire required device/page/state matrix, current hosted-source reconciliation, approved content/legal/offer decisions, actual analytics/consent, measurable performance, and critical purchase journeys remain incomplete. These gates retain the complete Phase 0–5 scope below.
+- Original Sites source is recovered with provenance in `reference-site/source-provenance.json`; source commit `2f95c940c42b1bc4152790a83f0f455f66ceaaa4`.
+- Recovery PR #12 was merged previously. That recovery is separate from theme completeness.
+- `theme/` is an incomplete Figma-based foundation. Its generic native links, app rendering and tests may be reused after review; its current visuals are superseded and cannot qualify as Sites fidelity.
+- Protected live-theme export and local repaired-Dawn candidate are rollback/audit evidence, not the final custom theme.
+- No custom theme upload, production publication or new custom branch merge has occurred.
+- First implementation action: inventory the built Sites pages, assets and interactive states; map each into a merchant-editable section/template; rebuild shared chrome and homepage against Sites code. Record side-by-side rendered comparisons before expanding templates.
 
 ## Source verification at plan reset
 
