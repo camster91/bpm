@@ -1,5 +1,7 @@
 # Custom Sites theme — development upload review
 
+Subsequent local PDP module corrections exceed the frozen f716879 snapshot below. It remains a valid preserved historical snapshot, but no longer matches the current theme. Refresh before proposing the updated upload. See `qa/sites-all-pdp-modules-20261008.md` for corrections and pending content differences. No upload command has been executed.
+
 ## Current frozen candidate
 
 Prepared locally from commit `f71687981d552367577a812a70262f267cd8845b`; theme tree `3ddfb8ede03051a8a0baecc6cfac3e5ed3830e7b`. Snapshot: `/tmp/bpm-sites-dev-candidate-20261008-f716879/theme`. It contains 163 files and 45,082,517 bytes. The verifier confirms the exact file set, every hash and byte against the source commit, current theme-tree identity, and explicit development noindex. The frozen-path installed CLI Theme Check reports zero errors and one existing Adobe Typekit RemoteAsset warning. This is prepared upload evidence, not native validation or client acceptance.

@@ -1,0 +1,214 @@
+[
+  {
+    "site": "source",
+    "lifestyle-grid": [
+      {
+        "cls": "eyebrow",
+        "font": "700 12px / 17.4px roc-grotesk, Arial, sans-serif",
+        "height": 17,
+        "margin": "0px",
+        "padding": "0px",
+        "tag": "P",
+        "text": "ON BEAT. ON YOU."
+      },
+      {
+        "cls": "",
+        "font": "700 34px / 34.68px BPMDisplay, Arial, sans-serif",
+        "height": 139,
+        "margin": "22px 0px 0px",
+        "padding": "0px",
+        "tag": "H2",
+        "text": "A DAILY ESSENTIAL. WITH A SOUNDTRACK."
+      },
+      {
+        "cls": "lead",
+        "font": "21px / 28.35px roc-grotesk, Arial, sans-serif",
+        "height": 113,
+        "margin": "16px 0px 0px",
+        "padding": "0px",
+        "tag": "P",
+        "text": "Music is part of BPM’s character, from the founder’s working soundtrack to the names in your rotation."
+      },
+      {
+        "cls": "",
+        "font": "17px / 24.65px roc-grotesk, Arial, sans-serif",
+        "height": 123,
+        "margin": "16px 0px 0px",
+        "padding": "0px",
+        "tag": "P",
+        "text": "Corey Goss started making deodorant in his kitchen in 2020. Performance, ingredients, packaging and fair pricing became the standard behind the product."
+      },
+      {
+        "cls": "button",
+        "font": "700 15px / 21.75px roc-grotesk, Arial, sans-serif",
+        "height": 56,
+        "margin": "32px 0px 0px",
+        "padding": "14px 16px",
+        "tag": "A",
+        "text": "Meet BPM ↗"
+      },
+      {
+        "cls": "signature",
+        "font": "14px / 20.3px roc-grotesk, Arial, sans-serif",
+        "height": 41,
+        "margin": "26px 0px 0px",
+        "padding": "0px",
+        "tag": "P",
+        "text": "Indigenous-owned. Toronto-built. Made to perform."
+      }
+    ],
+    "scent-story": [
+      {
+        "cls": "eyebrow",
+        "font": "700 12px / 17.4px roc-grotesk, Arial, sans-serif",
+        "height": 17,
+        "margin": "0px",
+        "padding": "0px",
+        "tag": "P",
+        "text": "THE SCENT STORY"
+      },
+      {
+        "cls": "",
+        "font": "700 36px / 36.72px BPMDisplay, Arial, sans-serif",
+        "height": 110,
+        "margin": "22px 0px 0px",
+        "padding": "0px",
+        "tag": "H2",
+        "text": "BRIGHT CITRUS. CLEAN FINISH."
+      },
+      {
+        "cls": "lead",
+        "font": "21px / 28.35px roc-grotesk, Arial, sans-serif",
+        "height": 85,
+        "margin": "16px 0px 0px",
+        "padding": "0px",
+        "tag": "P",
+        "text": "Bergamot and lime bring the brightness. Cedarwood adds a quiet woody finish underneath."
+      },
+      {
+        "cls": "scent-notes",
+        "font": "17px / 24.65px roc-grotesk, Arial, sans-serif",
+        "height": 42,
+        "margin": "28px 0px 0px",
+        "padding": "0px",
+        "tag": "DIV",
+        "text": "Bergamot Lime Cedarwood"
+      },
+      {
+        "cls": "fine",
+        "font": "13px / 19.5px roc-grotesk, Arial, sans-serif",
+        "height": 20,
+        "margin": "16px 0px 0px",
+        "padding": "0px",
+        "tag": "P",
+        "text": "Scented with essential oils. No synthetic fragrance."
+      }
+    ]
+  },
+  {
+    "site": "candidate",
+    "lifestyle-grid": [
+      {
+        "cls": "eyebrow",
+        "font": "700 12px / 17.4px roc-grotesk, Arial, sans-serif",
+        "height": 17,
+        "margin": "0px",
+        "padding": "0px",
+        "tag": "P",
+        "text": "ON BEAT. ON YOU."
+      },
+      {
+        "cls": "",
+        "font": "700 34px / 34.68px BPMDisplay, Arial, sans-serif",
+        "height": 139,
+        "margin": "22px 0px 0px",
+        "padding": "0px",
+        "tag": "H2",
+        "text": "A DAILY ESSENTIAL. WITH A SOUNDTRACK."
+      },
+      {
+        "cls": "lead",
+        "font": "23px / 31.05px roc-grotesk, Arial, sans-serif",
+        "height": 155,
+        "margin": "16px 0px 0px",
+        "padding": "0px",
+        "tag": "P",
+        "text": "Music is part of BPM’s character, from the founder’s working soundtrack to the names in your rotation."
+      },
+      {
+        "cls": "",
+        "font": "17px / 24.65px roc-grotesk, Arial, sans-serif",
+        "height": 123,
+        "margin": "16px 0px 0px",
+        "padding": "0px",
+        "tag": "P",
+        "text": "Corey Goss started making deodorant in his kitchen in 2020. Performance, ingredients, packaging and fair pricing became the standard behind the product."
+      },
+      {
+        "cls": "button",
+        "font": "700 16px / 23.2px roc-grotesk, Arial, sans-serif",
+        "height": 56,
+        "margin": "32px 0px 0px",
+        "padding": "14px 20px",
+        "tag": "A",
+        "text": "Meet BPM ↗"
+      },
+      {
+        "cls": "signature",
+        "font": "14px / 20.3px roc-grotesk, Arial, sans-serif",
+        "height": 41,
+        "margin": "26px 0px 0px",
+        "padding": "0px",
+        "tag": "P",
+        "text": "Indigenous-owned. Toronto-built. Made to perform."
+      }
+    ],
+    "scent-story": [
+      {
+        "cls": "eyebrow",
+        "font": "700 12px / 17.4px roc-grotesk, Arial, sans-serif",
+        "height": 17,
+        "margin": "0px",
+        "padding": "0px",
+        "tag": "P",
+        "text": "THE SCENT STORY"
+      },
+      {
+        "cls": "",
+        "font": "700 36px / 36.72px BPMDisplay, Arial, sans-serif",
+        "height": 110,
+        "margin": "22px 0px 0px",
+        "padding": "0px",
+        "tag": "H2",
+        "text": "BRIGHT CITRUS. CLEAN FINISH."
+      },
+      {
+        "cls": "lead",
+        "font": "23px / 31.05px roc-grotesk, Arial, sans-serif",
+        "height": 124,
+        "margin": "16px 0px 0px",
+        "padding": "0px",
+        "tag": "P",
+        "text": "Bergamot and lime bring the brightness. Cedarwood adds a quiet woody finish underneath."
+      },
+      {
+        "cls": "scent-notes",
+        "font": "17px / 24.65px roc-grotesk, Arial, sans-serif",
+        "height": 42,
+        "margin": "28px 0px 0px",
+        "padding": "0px",
+        "tag": "DIV",
+        "text": "Bergamot Lime Cedarwood"
+      },
+      {
+        "cls": "fine",
+        "font": "13px / 19.5px roc-grotesk, Arial, sans-serif",
+        "height": 20,
+        "margin": "16px 0px 0px",
+        "padding": "0px",
+        "tag": "P",
+        "text": "Scented with essential oils. No synthetic fragrance."
+      }
+    ]
+  }
+]

@@ -26,3 +26,6 @@
 
 .bpm-pdp .inci summary { padding-inline-end: 8px; }
 .inci summary > span { flex: 0 0 24px; width: 24px; height: 24px; line-height: 24px; text-align: center; }
+@media(min-width:761px) and (max-width:1100px){.bpm-pdp.scent-story,.bpm-pdp .lifestyle-grid{gap:32px}.bpm-pdp .scent-photo{height:400px}.bpm-pdp .lifestyle-photo{height:440px}}
+@media(max-width:1000px){.bpm-pdp .lead{font-size:20px}}
+@media(max-width:680px){.bpm-pdp .lead{font-size:21px}.bpm-pdp .button{font-size:15px;padding:14px 16px}}

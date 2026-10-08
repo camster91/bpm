@@ -1,0 +1,1946 @@
+[
+  {
+    "key": "bergamot",
+    "width": 375,
+    "site": "source",
+    "modules": [
+      {
+        "copy": "Bergamot and lime bring the brightness. Cedarwood adds a quiet woody finish underneath.",
+        "fontSize": "36px",
+        "heading": "Bright citrus.Clean finish.",
+        "headingHeight": 110,
+        "height": 826,
+        "name": "scent-story",
+        "width": 375
+      },
+      {
+        "copy": null,
+        "fontSize": "36px",
+        "heading": "Small squeeze.Long rotation.",
+        "headingHeight": 147,
+        "height": 607,
+        "name": "value",
+        "width": 375
+      },
+      {
+        "copy": "Music is part of BPM’s character, from the founder’s working soundtrack to the names in your rotation.",
+        "fontSize": "34px",
+        "heading": "A daily essential.With a soundtrack.",
+        "headingHeight": 139,
+        "height": 1189,
+        "name": "lifestyle",
+        "width": 375
+      }
+    ],
+    "overflow": false,
+    "viewport": 375
+  },
+  {
+    "key": "bergamot",
+    "width": 375,
+    "site": "candidate",
+    "modules": [
+      {
+        "copy": "Bergamot and lime bring the brightness. Cedarwood adds a quiet woody finish underneath.",
+        "fontSize": "36px",
+        "heading": "Bright citrus. Clean finish.",
+        "headingHeight": 110,
+        "height": 866,
+        "name": "scent-story",
+        "width": 375
+      },
+      {
+        "copy": null,
+        "fontSize": "36px",
+        "heading": "Small squeeze. Long rotation.",
+        "headingHeight": 147,
+        "height": 607,
+        "name": "value",
+        "width": 375
+      },
+      {
+        "copy": "Music is part of BPM’s character, from the founder’s working soundtrack to the names in your rotation.",
+        "fontSize": "34px",
+        "heading": "A daily essential. With a soundtrack.",
+        "headingHeight": 139,
+        "height": 1231,
+        "name": "lifestyle",
+        "width": 375
+      }
+    ],
+    "overflow": false,
+    "viewport": 375
+  },
+  {
+    "key": "unscented",
+    "width": 375,
+    "site": "source",
+    "modules": [
+      {
+        "copy": "No added essential oils. No masking fragrance. Base ingredients chosen to keep their natural scent as minimal as possible.",
+        "fontSize": "36px",
+        "heading": "Quiet onpurpose.",
+        "headingHeight": 73,
+        "height": 918,
+        "name": "scent-story",
+        "width": 375
+      },
+      {
+        "copy": null,
+        "fontSize": "36px",
+        "heading": "Small squeeze.Long rotation.",
+        "headingHeight": 147,
+        "height": 607,
+        "name": "value",
+        "width": 375
+      },
+      {
+        "copy": "Music is part of BPM’s character, from the founder’s working soundtrack to the names in your rotation.",
+        "fontSize": "34px",
+        "heading": "A daily essential.With a soundtrack.",
+        "headingHeight": 139,
+        "height": 1189,
+        "name": "lifestyle",
+        "width": 375
+      }
+    ],
+    "overflow": false,
+    "viewport": 375
+  },
+  {
+    "key": "unscented",
+    "width": 375,
+    "site": "candidate",
+    "modules": [
+      {
+        "copy": "No added essential oils. No masking fragrance. Base ingredients chosen to keep their natural scent as minimal as possible.",
+        "fontSize": "36px",
+        "heading": "Quiet on purpose.",
+        "headingHeight": 73,
+        "height": 932,
+        "name": "scent-story",
+        "width": 375
+      },
+      {
+        "copy": null,
+        "fontSize": "36px",
+        "heading": "Small squeeze. Long rotation.",
+        "headingHeight": 147,
+        "height": 607,
+        "name": "value",
+        "width": 375
+      },
+      {
+        "copy": "Music is part of BPM’s character, from the founder’s working soundtrack to the names in your rotation.",
+        "fontSize": "34px",
+        "heading": "A daily essential. With a soundtrack.",
+        "headingHeight": 139,
+        "height": 1231,
+        "name": "lifestyle",
+        "width": 375
+      }
+    ],
+    "overflow": false,
+    "viewport": 375
+  },
+  {
+    "key": "duo",
+    "width": 375,
+    "site": "source",
+    "modules": [
+      {
+        "copy": "One Bergamot & Lime. One Unscented. Try both sides of BPM, or switch things up from day to day.",
+        "fontSize": "36px",
+        "heading": "Two tracks.Your call.",
+        "headingHeight": 73,
+        "height": 838,
+        "name": "scent-story",
+        "width": 375
+      },
+      {
+        "copy": null,
+        "fontSize": "36px",
+        "heading": "Small squeeze.Long rotation.",
+        "headingHeight": 147,
+        "height": 607,
+        "name": "value",
+        "width": 375
+      },
+      {
+        "copy": "Music is part of BPM’s character, from the founder’s working soundtrack to the names in your rotation.",
+        "fontSize": "34px",
+        "heading": "A daily essential.With a soundtrack.",
+        "headingHeight": 139,
+        "height": 1189,
+        "name": "lifestyle",
+        "width": 375
+      }
+    ],
+    "overflow": false,
+    "viewport": 375
+  },
+  {
+    "key": "duo",
+    "width": 375,
+    "site": "candidate",
+    "modules": [
+      {
+        "copy": "1 citrus + 1 unscented. 2 tubes, your way.",
+        "fontSize": "36px",
+        "heading": "Two tracks. Your call.",
+        "headingHeight": 73,
+        "height": 786,
+        "name": "scent-story",
+        "width": 375
+      },
+      {
+        "copy": null,
+        "fontSize": "36px",
+        "heading": "Small squeeze. Long rotation.",
+        "headingHeight": 147,
+        "height": 607,
+        "name": "value",
+        "width": 375
+      },
+      {
+        "copy": "Music is part of BPM’s character, from the founder’s working soundtrack to the names in your rotation.",
+        "fontSize": "34px",
+        "heading": "A daily essential. With a soundtrack.",
+        "headingHeight": 139,
+        "height": 1143,
+        "name": "lifestyle",
+        "width": 375
+      }
+    ],
+    "overflow": false,
+    "viewport": 375
+  },
+  {
+    "key": "citrus-repeat",
+    "width": 375,
+    "site": "source",
+    "modules": [
+      {
+        "copy": "Bergamot and lime bring the brightness. Cedarwood adds a quiet woody finish underneath.",
+        "fontSize": "36px",
+        "heading": "Bright citrus.Clean finish.",
+        "headingHeight": 110,
+        "height": 826,
+        "name": "scent-story",
+        "width": 375
+      },
+      {
+        "copy": null,
+        "fontSize": "36px",
+        "heading": "Small squeeze.Long rotation.",
+        "headingHeight": 147,
+        "height": 607,
+        "name": "value",
+        "width": 375
+      },
+      {
+        "copy": "Music is part of BPM’s character, from the founder’s working soundtrack to the names in your rotation.",
+        "fontSize": "34px",
+        "heading": "A daily essential.With a soundtrack.",
+        "headingHeight": 139,
+        "height": 1189,
+        "name": "lifestyle",
+        "width": 375
+      }
+    ],
+    "overflow": false,
+    "viewport": 375
+  },
+  {
+    "key": "citrus-repeat",
+    "width": 375,
+    "site": "candidate",
+    "modules": [
+      {
+        "copy": "Bergamot and lime bring the brightness. Cedarwood adds a quiet woody finish underneath.",
+        "fontSize": "36px",
+        "heading": "Bright citrus. Clean finish.",
+        "headingHeight": 110,
+        "height": 866,
+        "name": "scent-story",
+        "width": 375
+      },
+      {
+        "copy": null,
+        "fontSize": "36px",
+        "heading": "Small squeeze. Long rotation.",
+        "headingHeight": 147,
+        "height": 607,
+        "name": "value",
+        "width": 375
+      },
+      {
+        "copy": "Music is part of BPM’s character, from the founder’s working soundtrack to the names in your rotation.",
+        "fontSize": "34px",
+        "heading": "A daily essential. With a soundtrack.",
+        "headingHeight": 139,
+        "height": 1143,
+        "name": "lifestyle",
+        "width": 375
+      }
+    ],
+    "overflow": false,
+    "viewport": 375
+  },
+  {
+    "key": "silent-repeat",
+    "width": 375,
+    "site": "source",
+    "modules": [
+      {
+        "copy": "No added essential oils. No masking fragrance. Base ingredients chosen to keep their natural scent as minimal as possible.",
+        "fontSize": "36px",
+        "heading": "Quiet onpurpose.",
+        "headingHeight": 73,
+        "height": 918,
+        "name": "scent-story",
+        "width": 375
+      },
+      {
+        "copy": null,
+        "fontSize": "36px",
+        "heading": "Small squeeze.Long rotation.",
+        "headingHeight": 147,
+        "height": 607,
+        "name": "value",
+        "width": 375
+      },
+      {
+        "copy": "Music is part of BPM’s character, from the founder’s working soundtrack to the names in your rotation.",
+        "fontSize": "34px",
+        "heading": "A daily essential.With a soundtrack.",
+        "headingHeight": 139,
+        "height": 1189,
+        "name": "lifestyle",
+        "width": 375
+      }
+    ],
+    "overflow": false,
+    "viewport": 375
+  },
+  {
+    "key": "silent-repeat",
+    "width": 375,
+    "site": "candidate",
+    "modules": [
+      {
+        "copy": "No added essential oils. No masking fragrance. Base ingredients chosen to keep their natural scent as minimal as possible.",
+        "fontSize": "36px",
+        "heading": "Quiet on purpose.",
+        "headingHeight": 73,
+        "height": 932,
+        "name": "scent-story",
+        "width": 375
+      },
+      {
+        "copy": null,
+        "fontSize": "36px",
+        "heading": "Small squeeze. Long rotation.",
+        "headingHeight": 147,
+        "height": 607,
+        "name": "value",
+        "width": 375
+      },
+      {
+        "copy": "Music is part of BPM’s character, from the founder’s working soundtrack to the names in your rotation.",
+        "fontSize": "34px",
+        "heading": "A daily essential. With a soundtrack.",
+        "headingHeight": 139,
+        "height": 1143,
+        "name": "lifestyle",
+        "width": 375
+      }
+    ],
+    "overflow": false,
+    "viewport": 375
+  },
+  {
+    "key": "3-4-time",
+    "width": 375,
+    "site": "source",
+    "modules": [
+      {
+        "copy": "One Bergamot & Lime. One Unscented. Try both sides of BPM, or switch things up from day to day.",
+        "fontSize": "36px",
+        "heading": "Two tracks.Your call.",
+        "headingHeight": 73,
+        "height": 838,
+        "name": "scent-story",
+        "width": 375
+      },
+      {
+        "copy": null,
+        "fontSize": "36px",
+        "heading": "Small squeeze.Long rotation.",
+        "headingHeight": 147,
+        "height": 607,
+        "name": "value",
+        "width": 375
+      },
+      {
+        "copy": "Music is part of BPM’s character, from the founder’s working soundtrack to the names in your rotation.",
+        "fontSize": "34px",
+        "heading": "A daily essential.With a soundtrack.",
+        "headingHeight": 139,
+        "height": 1189,
+        "name": "lifestyle",
+        "width": 375
+      }
+    ],
+    "overflow": false,
+    "viewport": 375
+  },
+  {
+    "key": "3-4-time",
+    "width": 375,
+    "site": "candidate",
+    "modules": [
+      {
+        "copy": "3 citrus + 1 unscented. 4 tubes, your way.",
+        "fontSize": "36px",
+        "heading": "Two tracks. Your call.",
+        "headingHeight": 73,
+        "height": 786,
+        "name": "scent-story",
+        "width": 375
+      },
+      {
+        "copy": null,
+        "fontSize": "36px",
+        "heading": "Small squeeze. Long rotation.",
+        "headingHeight": 147,
+        "height": 607,
+        "name": "value",
+        "width": 375
+      },
+      {
+        "copy": "Music is part of BPM’s character, from the founder’s working soundtrack to the names in your rotation.",
+        "fontSize": "34px",
+        "heading": "A daily essential. With a soundtrack.",
+        "headingHeight": 139,
+        "height": 1143,
+        "name": "lifestyle",
+        "width": 375
+      }
+    ],
+    "overflow": false,
+    "viewport": 375
+  },
+  {
+    "key": "silent-on-repeat-family-pack-4-tube-unscented-deodorant-bundle",
+    "width": 375,
+    "site": "source",
+    "modules": [
+      {
+        "copy": "No added essential oils. No masking fragrance. Base ingredients chosen to keep their natural scent as minimal as possible.",
+        "fontSize": "36px",
+        "heading": "Quiet onpurpose.",
+        "headingHeight": 73,
+        "height": 918,
+        "name": "scent-story",
+        "width": 375
+      },
+      {
+        "copy": null,
+        "fontSize": "36px",
+        "heading": "Small squeeze.Long rotation.",
+        "headingHeight": 147,
+        "height": 607,
+        "name": "value",
+        "width": 375
+      },
+      {
+        "copy": "Music is part of BPM’s character, from the founder’s working soundtrack to the names in your rotation.",
+        "fontSize": "34px",
+        "heading": "A daily essential.With a soundtrack.",
+        "headingHeight": 139,
+        "height": 1189,
+        "name": "lifestyle",
+        "width": 375
+      }
+    ],
+    "overflow": false,
+    "viewport": 375
+  },
+  {
+    "key": "silent-on-repeat-family-pack-4-tube-unscented-deodorant-bundle",
+    "width": 375,
+    "site": "candidate",
+    "modules": [
+      {
+        "copy": "No added essential oils. No masking fragrance. Base ingredients chosen to keep their natural scent as minimal as possible.",
+        "fontSize": "36px",
+        "heading": "Quiet on purpose.",
+        "headingHeight": 73,
+        "height": 932,
+        "name": "scent-story",
+        "width": 375
+      },
+      {
+        "copy": null,
+        "fontSize": "36px",
+        "heading": "Small squeeze. Long rotation.",
+        "headingHeight": 147,
+        "height": 607,
+        "name": "value",
+        "width": 375
+      },
+      {
+        "copy": "Music is part of BPM’s character, from the founder’s working soundtrack to the names in your rotation.",
+        "fontSize": "34px",
+        "heading": "A daily essential. With a soundtrack.",
+        "headingHeight": 139,
+        "height": 1143,
+        "name": "lifestyle",
+        "width": 375
+      }
+    ],
+    "overflow": false,
+    "viewport": 375
+  },
+  {
+    "key": "citrus-on-repeat-family-pack-4-tube-bergamot-lime-deodorant-bundle",
+    "width": 375,
+    "site": "source",
+    "modules": [
+      {
+        "copy": null,
+        "fontSize": "24px",
+        "heading": "",
+        "headingHeight": 0,
+        "height": 52,
+        "name": "scent-story",
+        "width": 359
+      },
+      {
+        "copy": null,
+        "fontSize": "24px",
+        "heading": "Small squeeze.Long rotation.",
+        "headingHeight": 56,
+        "height": 252,
+        "name": "value",
+        "width": 359
+      },
+      {
+        "copy": "Music is part of BPM’s character, from the founder’s working soundtrack to the names in your rotation.",
+        "fontSize": "24px",
+        "heading": "A daily essential.With a soundtrack.",
+        "headingHeight": 56,
+        "height": 326,
+        "name": "lifestyle",
+        "width": 359
+      }
+    ],
+    "overflow": false,
+    "viewport": 375
+  },
+  {
+    "key": "citrus-on-repeat-family-pack-4-tube-bergamot-lime-deodorant-bundle",
+    "width": 375,
+    "site": "candidate",
+    "modules": [
+      {
+        "copy": "Bergamot and lime bring the brightness. Cedarwood adds a quiet woody finish underneath.",
+        "fontSize": "36px",
+        "heading": "Bright citrus. Clean finish.",
+        "headingHeight": 110,
+        "height": 866,
+        "name": "scent-story",
+        "width": 375
+      },
+      {
+        "copy": null,
+        "fontSize": "36px",
+        "heading": "Small squeeze. Long rotation.",
+        "headingHeight": 147,
+        "height": 607,
+        "name": "value",
+        "width": 375
+      },
+      {
+        "copy": "Music is part of BPM’s character, from the founder’s working soundtrack to the names in your rotation.",
+        "fontSize": "34px",
+        "heading": "A daily essential. With a soundtrack.",
+        "headingHeight": 139,
+        "height": 1143,
+        "name": "lifestyle",
+        "width": 375
+      }
+    ],
+    "overflow": false,
+    "viewport": 375
+  },
+  {
+    "key": "four-on-the-floor-mixed-scent-4-tube-deodorant-bundle",
+    "width": 375,
+    "site": "source",
+    "modules": [
+      {
+        "copy": "One Bergamot & Lime. One Unscented. Try both sides of BPM, or switch things up from day to day.",
+        "fontSize": "36px",
+        "heading": "Two tracks.Your call.",
+        "headingHeight": 73,
+        "height": 838,
+        "name": "scent-story",
+        "width": 375
+      },
+      {
+        "copy": null,
+        "fontSize": "36px",
+        "heading": "Small squeeze.Long rotation.",
+        "headingHeight": 147,
+        "height": 607,
+        "name": "value",
+        "width": 375
+      },
+      {
+        "copy": "Music is part of BPM’s character, from the founder’s working soundtrack to the names in your rotation.",
+        "fontSize": "34px",
+        "heading": "A daily essential.With a soundtrack.",
+        "headingHeight": 139,
+        "height": 1189,
+        "name": "lifestyle",
+        "width": 375
+      }
+    ],
+    "overflow": false,
+    "viewport": 375
+  },
+  {
+    "key": "four-on-the-floor-mixed-scent-4-tube-deodorant-bundle",
+    "width": 375,
+    "site": "candidate",
+    "modules": [
+      {
+        "copy": "2 citrus + 2 unscented. 4 tubes, your way.",
+        "fontSize": "36px",
+        "heading": "Two tracks. Your call.",
+        "headingHeight": 73,
+        "height": 786,
+        "name": "scent-story",
+        "width": 375
+      },
+      {
+        "copy": null,
+        "fontSize": "36px",
+        "heading": "Small squeeze. Long rotation.",
+        "headingHeight": 147,
+        "height": 607,
+        "name": "value",
+        "width": 375
+      },
+      {
+        "copy": "Music is part of BPM’s character, from the founder’s working soundtrack to the names in your rotation.",
+        "fontSize": "34px",
+        "heading": "A daily essential. With a soundtrack.",
+        "headingHeight": 139,
+        "height": 1143,
+        "name": "lifestyle",
+        "width": 375
+      }
+    ],
+    "overflow": false,
+    "viewport": 375
+  },
+  {
+    "key": "bergamot",
+    "width": 820,
+    "site": "source",
+    "modules": [
+      {
+        "copy": "Bergamot and lime bring the brightness. Cedarwood adds a quiet woody finish underneath.",
+        "fontSize": "36px",
+        "heading": "Bright citrus.Clean finish.",
+        "headingHeight": 73,
+        "height": 576,
+        "name": "scent-story",
+        "width": 820
+      },
+      {
+        "copy": null,
+        "fontSize": "40px",
+        "heading": "Small squeeze.Long rotation.",
+        "headingHeight": 163,
+        "height": 589,
+        "name": "value",
+        "width": 820
+      },
+      {
+        "copy": "Music is part of BPM’s character, from the founder’s working soundtrack to the names in your rotation.",
+        "fontSize": "36px",
+        "heading": "A daily essential.With a soundtrack.",
+        "headingHeight": 147,
+        "height": 719,
+        "name": "lifestyle",
+        "width": 820
+      }
+    ],
+    "overflow": false,
+    "viewport": 820
+  },
+  {
+    "key": "bergamot",
+    "width": 820,
+    "site": "candidate",
+    "modules": [
+      {
+        "copy": "Bergamot and lime bring the brightness. Cedarwood adds a quiet woody finish underneath.",
+        "fontSize": "36px",
+        "heading": "Bright citrus. Clean finish.",
+        "headingHeight": 110,
+        "height": 716,
+        "name": "scent-story",
+        "width": 820
+      },
+      {
+        "copy": null,
+        "fontSize": "40px",
+        "heading": "Small squeeze. Long rotation.",
+        "headingHeight": 163,
+        "height": 618,
+        "name": "value",
+        "width": 820
+      },
+      {
+        "copy": "Music is part of BPM’s character, from the founder’s working soundtrack to the names in your rotation.",
+        "fontSize": "36px",
+        "heading": "A daily essential. With a soundtrack.",
+        "headingHeight": 147,
+        "height": 780,
+        "name": "lifestyle",
+        "width": 820
+      }
+    ],
+    "overflow": false,
+    "viewport": 820
+  },
+  {
+    "key": "unscented",
+    "width": 820,
+    "site": "source",
+    "modules": [
+      {
+        "copy": "No added essential oils. No masking fragrance. Base ingredients chosen to keep their natural scent as minimal as possible.",
+        "fontSize": "36px",
+        "heading": "Quiet onpurpose.",
+        "headingHeight": 73,
+        "height": 576,
+        "name": "scent-story",
+        "width": 820
+      },
+      {
+        "copy": null,
+        "fontSize": "40px",
+        "heading": "Small squeeze.Long rotation.",
+        "headingHeight": 163,
+        "height": 589,
+        "name": "value",
+        "width": 820
+      },
+      {
+        "copy": "Music is part of BPM’s character, from the founder’s working soundtrack to the names in your rotation.",
+        "fontSize": "36px",
+        "heading": "A daily essential.With a soundtrack.",
+        "headingHeight": 147,
+        "height": 719,
+        "name": "lifestyle",
+        "width": 820
+      }
+    ],
+    "overflow": false,
+    "viewport": 820
+  },
+  {
+    "key": "unscented",
+    "width": 820,
+    "site": "candidate",
+    "modules": [
+      {
+        "copy": "No added essential oils. No masking fragrance. Base ingredients chosen to keep their natural scent as minimal as possible.",
+        "fontSize": "36px",
+        "heading": "Quiet on purpose.",
+        "headingHeight": 73,
+        "height": 716,
+        "name": "scent-story",
+        "width": 820
+      },
+      {
+        "copy": null,
+        "fontSize": "40px",
+        "heading": "Small squeeze. Long rotation.",
+        "headingHeight": 163,
+        "height": 618,
+        "name": "value",
+        "width": 820
+      },
+      {
+        "copy": "Music is part of BPM’s character, from the founder’s working soundtrack to the names in your rotation.",
+        "fontSize": "36px",
+        "heading": "A daily essential. With a soundtrack.",
+        "headingHeight": 147,
+        "height": 780,
+        "name": "lifestyle",
+        "width": 820
+      }
+    ],
+    "overflow": false,
+    "viewport": 820
+  },
+  {
+    "key": "duo",
+    "width": 820,
+    "site": "source",
+    "modules": [
+      {
+        "copy": "One Bergamot & Lime. One Unscented. Try both sides of BPM, or switch things up from day to day.",
+        "fontSize": "36px",
+        "heading": "Two tracks.Your call.",
+        "headingHeight": 73,
+        "height": 576,
+        "name": "scent-story",
+        "width": 820
+      },
+      {
+        "copy": null,
+        "fontSize": "40px",
+        "heading": "Small squeeze.Long rotation.",
+        "headingHeight": 163,
+        "height": 589,
+        "name": "value",
+        "width": 820
+      },
+      {
+        "copy": "Music is part of BPM’s character, from the founder’s working soundtrack to the names in your rotation.",
+        "fontSize": "36px",
+        "heading": "A daily essential.With a soundtrack.",
+        "headingHeight": 147,
+        "height": 719,
+        "name": "lifestyle",
+        "width": 820
+      }
+    ],
+    "overflow": false,
+    "viewport": 820
+  },
+  {
+    "key": "duo",
+    "width": 820,
+    "site": "candidate",
+    "modules": [
+      {
+        "copy": "1 citrus + 1 unscented. 2 tubes, your way.",
+        "fontSize": "36px",
+        "heading": "Two tracks. Your call.",
+        "headingHeight": 73,
+        "height": 716,
+        "name": "scent-story",
+        "width": 820
+      },
+      {
+        "copy": null,
+        "fontSize": "40px",
+        "heading": "Small squeeze. Long rotation.",
+        "headingHeight": 163,
+        "height": 618,
+        "name": "value",
+        "width": 820
+      },
+      {
+        "copy": "Music is part of BPM’s character, from the founder’s working soundtrack to the names in your rotation.",
+        "fontSize": "36px",
+        "heading": "A daily essential. With a soundtrack.",
+        "headingHeight": 147,
+        "height": 692,
+        "name": "lifestyle",
+        "width": 820
+      }
+    ],
+    "overflow": false,
+    "viewport": 820
+  },
+  {
+    "key": "citrus-repeat",
+    "width": 820,
+    "site": "source",
+    "modules": [
+      {
+        "copy": "Bergamot and lime bring the brightness. Cedarwood adds a quiet woody finish underneath.",
+        "fontSize": "36px",
+        "heading": "Bright citrus.Clean finish.",
+        "headingHeight": 73,
+        "height": 576,
+        "name": "scent-story",
+        "width": 820
+      },
+      {
+        "copy": null,
+        "fontSize": "40px",
+        "heading": "Small squeeze.Long rotation.",
+        "headingHeight": 163,
+        "height": 589,
+        "name": "value",
+        "width": 820
+      },
+      {
+        "copy": "Music is part of BPM’s character, from the founder’s working soundtrack to the names in your rotation.",
+        "fontSize": "36px",
+        "heading": "A daily essential.With a soundtrack.",
+        "headingHeight": 147,
+        "height": 719,
+        "name": "lifestyle",
+        "width": 820
+      }
+    ],
+    "overflow": false,
+    "viewport": 820
+  },
+  {
+    "key": "citrus-repeat",
+    "width": 820,
+    "site": "candidate",
+    "modules": [
+      {
+        "copy": "Bergamot and lime bring the brightness. Cedarwood adds a quiet woody finish underneath.",
+        "fontSize": "36px",
+        "heading": "Bright citrus. Clean finish.",
+        "headingHeight": 110,
+        "height": 716,
+        "name": "scent-story",
+        "width": 820
+      },
+      {
+        "copy": null,
+        "fontSize": "40px",
+        "heading": "Small squeeze. Long rotation.",
+        "headingHeight": 163,
+        "height": 618,
+        "name": "value",
+        "width": 820
+      },
+      {
+        "copy": "Music is part of BPM’s character, from the founder’s working soundtrack to the names in your rotation.",
+        "fontSize": "36px",
+        "heading": "A daily essential. With a soundtrack.",
+        "headingHeight": 147,
+        "height": 692,
+        "name": "lifestyle",
+        "width": 820
+      }
+    ],
+    "overflow": false,
+    "viewport": 820
+  },
+  {
+    "key": "silent-repeat",
+    "width": 820,
+    "site": "source",
+    "modules": [
+      {
+        "copy": "No added essential oils. No masking fragrance. Base ingredients chosen to keep their natural scent as minimal as possible.",
+        "fontSize": "36px",
+        "heading": "Quiet onpurpose.",
+        "headingHeight": 73,
+        "height": 576,
+        "name": "scent-story",
+        "width": 820
+      },
+      {
+        "copy": null,
+        "fontSize": "40px",
+        "heading": "Small squeeze.Long rotation.",
+        "headingHeight": 163,
+        "height": 589,
+        "name": "value",
+        "width": 820
+      },
+      {
+        "copy": "Music is part of BPM’s character, from the founder’s working soundtrack to the names in your rotation.",
+        "fontSize": "36px",
+        "heading": "A daily essential.With a soundtrack.",
+        "headingHeight": 147,
+        "height": 719,
+        "name": "lifestyle",
+        "width": 820
+      }
+    ],
+    "overflow": false,
+    "viewport": 820
+  },
+  {
+    "key": "silent-repeat",
+    "width": 820,
+    "site": "candidate",
+    "modules": [
+      {
+        "copy": "No added essential oils. No masking fragrance. Base ingredients chosen to keep their natural scent as minimal as possible.",
+        "fontSize": "36px",
+        "heading": "Quiet on purpose.",
+        "headingHeight": 73,
+        "height": 716,
+        "name": "scent-story",
+        "width": 820
+      },
+      {
+        "copy": null,
+        "fontSize": "40px",
+        "heading": "Small squeeze. Long rotation.",
+        "headingHeight": 163,
+        "height": 618,
+        "name": "value",
+        "width": 820
+      },
+      {
+        "copy": "Music is part of BPM’s character, from the founder’s working soundtrack to the names in your rotation.",
+        "fontSize": "36px",
+        "heading": "A daily essential. With a soundtrack.",
+        "headingHeight": 147,
+        "height": 692,
+        "name": "lifestyle",
+        "width": 820
+      }
+    ],
+    "overflow": false,
+    "viewport": 820
+  },
+  {
+    "key": "3-4-time",
+    "width": 820,
+    "site": "source",
+    "modules": [
+      {
+        "copy": "One Bergamot & Lime. One Unscented. Try both sides of BPM, or switch things up from day to day.",
+        "fontSize": "36px",
+        "heading": "Two tracks.Your call.",
+        "headingHeight": 73,
+        "height": 576,
+        "name": "scent-story",
+        "width": 820
+      },
+      {
+        "copy": null,
+        "fontSize": "40px",
+        "heading": "Small squeeze.Long rotation.",
+        "headingHeight": 163,
+        "height": 589,
+        "name": "value",
+        "width": 820
+      },
+      {
+        "copy": "Music is part of BPM’s character, from the founder’s working soundtrack to the names in your rotation.",
+        "fontSize": "36px",
+        "heading": "A daily essential.With a soundtrack.",
+        "headingHeight": 147,
+        "height": 719,
+        "name": "lifestyle",
+        "width": 820
+      }
+    ],
+    "overflow": false,
+    "viewport": 820
+  },
+  {
+    "key": "3-4-time",
+    "width": 820,
+    "site": "candidate",
+    "modules": [
+      {
+        "copy": "3 citrus + 1 unscented. 4 tubes, your way.",
+        "fontSize": "36px",
+        "heading": "Two tracks. Your call.",
+        "headingHeight": 73,
+        "height": 716,
+        "name": "scent-story",
+        "width": 820
+      },
+      {
+        "copy": null,
+        "fontSize": "40px",
+        "heading": "Small squeeze. Long rotation.",
+        "headingHeight": 163,
+        "height": 618,
+        "name": "value",
+        "width": 820
+      },
+      {
+        "copy": "Music is part of BPM’s character, from the founder’s working soundtrack to the names in your rotation.",
+        "fontSize": "36px",
+        "heading": "A daily essential. With a soundtrack.",
+        "headingHeight": 147,
+        "height": 692,
+        "name": "lifestyle",
+        "width": 820
+      }
+    ],
+    "overflow": false,
+    "viewport": 820
+  },
+  {
+    "key": "silent-on-repeat-family-pack-4-tube-unscented-deodorant-bundle",
+    "width": 820,
+    "site": "source",
+    "modules": [
+      {
+        "copy": null,
+        "fontSize": "24px",
+        "heading": "",
+        "headingHeight": 0,
+        "height": 52,
+        "name": "scent-story",
+        "width": 804
+      },
+      {
+        "copy": null,
+        "fontSize": "24px",
+        "heading": "Small squeeze.Long rotation.",
+        "headingHeight": 56,
+        "height": 234,
+        "name": "value",
+        "width": 804
+      },
+      {
+        "copy": "Music is part of BPM’s character, from the founder’s working soundtrack to the names in your rotation.",
+        "fontSize": "24px",
+        "heading": "A daily essential.With a soundtrack.",
+        "headingHeight": 56,
+        "height": 290,
+        "name": "lifestyle",
+        "width": 804
+      }
+    ],
+    "overflow": false,
+    "viewport": 820
+  },
+  {
+    "key": "silent-on-repeat-family-pack-4-tube-unscented-deodorant-bundle",
+    "width": 820,
+    "site": "candidate",
+    "modules": [
+      {
+        "copy": "No added essential oils. No masking fragrance. Base ingredients chosen to keep their natural scent as minimal as possible.",
+        "fontSize": "36px",
+        "heading": "Quiet on purpose.",
+        "headingHeight": 73,
+        "height": 716,
+        "name": "scent-story",
+        "width": 820
+      },
+      {
+        "copy": null,
+        "fontSize": "40px",
+        "heading": "Small squeeze. Long rotation.",
+        "headingHeight": 163,
+        "height": 618,
+        "name": "value",
+        "width": 820
+      },
+      {
+        "copy": "Music is part of BPM’s character, from the founder’s working soundtrack to the names in your rotation.",
+        "fontSize": "36px",
+        "heading": "A daily essential. With a soundtrack.",
+        "headingHeight": 147,
+        "height": 692,
+        "name": "lifestyle",
+        "width": 820
+      }
+    ],
+    "overflow": false,
+    "viewport": 820
+  },
+  {
+    "key": "citrus-on-repeat-family-pack-4-tube-bergamot-lime-deodorant-bundle",
+    "width": 820,
+    "site": "source",
+    "modules": [
+      {
+        "copy": "Bergamot and lime bring the brightness. Cedarwood adds a quiet woody finish underneath.",
+        "fontSize": "36px",
+        "heading": "Bright citrus.Clean finish.",
+        "headingHeight": 73,
+        "height": 576,
+        "name": "scent-story",
+        "width": 820
+      },
+      {
+        "copy": null,
+        "fontSize": "40px",
+        "heading": "Small squeeze.Long rotation.",
+        "headingHeight": 163,
+        "height": 589,
+        "name": "value",
+        "width": 820
+      },
+      {
+        "copy": "Music is part of BPM’s character, from the founder’s working soundtrack to the names in your rotation.",
+        "fontSize": "36px",
+        "heading": "A daily essential.With a soundtrack.",
+        "headingHeight": 147,
+        "height": 719,
+        "name": "lifestyle",
+        "width": 820
+      }
+    ],
+    "overflow": false,
+    "viewport": 820
+  },
+  {
+    "key": "citrus-on-repeat-family-pack-4-tube-bergamot-lime-deodorant-bundle",
+    "width": 820,
+    "site": "candidate",
+    "modules": [
+      {
+        "copy": "Bergamot and lime bring the brightness. Cedarwood adds a quiet woody finish underneath.",
+        "fontSize": "36px",
+        "heading": "Bright citrus. Clean finish.",
+        "headingHeight": 110,
+        "height": 716,
+        "name": "scent-story",
+        "width": 820
+      },
+      {
+        "copy": null,
+        "fontSize": "40px",
+        "heading": "Small squeeze. Long rotation.",
+        "headingHeight": 163,
+        "height": 618,
+        "name": "value",
+        "width": 820
+      },
+      {
+        "copy": "Music is part of BPM’s character, from the founder’s working soundtrack to the names in your rotation.",
+        "fontSize": "36px",
+        "heading": "A daily essential. With a soundtrack.",
+        "headingHeight": 147,
+        "height": 692,
+        "name": "lifestyle",
+        "width": 820
+      }
+    ],
+    "overflow": false,
+    "viewport": 820
+  },
+  {
+    "key": "four-on-the-floor-mixed-scent-4-tube-deodorant-bundle",
+    "width": 820,
+    "site": "source",
+    "modules": [
+      {
+        "copy": "One Bergamot & Lime. One Unscented. Try both sides of BPM, or switch things up from day to day.",
+        "fontSize": "36px",
+        "heading": "Two tracks.Your call.",
+        "headingHeight": 73,
+        "height": 576,
+        "name": "scent-story",
+        "width": 820
+      },
+      {
+        "copy": null,
+        "fontSize": "40px",
+        "heading": "Small squeeze.Long rotation.",
+        "headingHeight": 163,
+        "height": 589,
+        "name": "value",
+        "width": 820
+      },
+      {
+        "copy": "Music is part of BPM’s character, from the founder’s working soundtrack to the names in your rotation.",
+        "fontSize": "36px",
+        "heading": "A daily essential.With a soundtrack.",
+        "headingHeight": 147,
+        "height": 719,
+        "name": "lifestyle",
+        "width": 820
+      }
+    ],
+    "overflow": false,
+    "viewport": 820
+  },
+  {
+    "key": "four-on-the-floor-mixed-scent-4-tube-deodorant-bundle",
+    "width": 820,
+    "site": "candidate",
+    "modules": [
+      {
+        "copy": "2 citrus + 2 unscented. 4 tubes, your way.",
+        "fontSize": "36px",
+        "heading": "Two tracks. Your call.",
+        "headingHeight": 73,
+        "height": 716,
+        "name": "scent-story",
+        "width": 820
+      },
+      {
+        "copy": null,
+        "fontSize": "40px",
+        "heading": "Small squeeze. Long rotation.",
+        "headingHeight": 163,
+        "height": 618,
+        "name": "value",
+        "width": 820
+      },
+      {
+        "copy": "Music is part of BPM’s character, from the founder’s working soundtrack to the names in your rotation.",
+        "fontSize": "36px",
+        "heading": "A daily essential. With a soundtrack.",
+        "headingHeight": 147,
+        "height": 692,
+        "name": "lifestyle",
+        "width": 820
+      }
+    ],
+    "overflow": false,
+    "viewport": 820
+  },
+  {
+    "key": "bergamot",
+    "width": 1440,
+    "site": "source",
+    "modules": [
+      {
+        "copy": "Bergamot and lime bring the brightness. Cedarwood adds a quiet woody finish underneath.",
+        "fontSize": "57.6px",
+        "heading": "Bright citrus.Clean finish.",
+        "headingHeight": 117,
+        "height": 716,
+        "name": "scent-story",
+        "width": 1440
+      },
+      {
+        "copy": null,
+        "fontSize": "57.6px",
+        "heading": "Small squeeze.Long rotation.",
+        "headingHeight": 117,
+        "height": 516,
+        "name": "value",
+        "width": 1440
+      },
+      {
+        "copy": "Music is part of BPM’s character, from the founder’s working soundtrack to the names in your rotation.",
+        "fontSize": "48px",
+        "heading": "A daily essential.With a soundtrack.",
+        "headingHeight": 147,
+        "height": 780,
+        "name": "lifestyle",
+        "width": 1440
+      }
+    ],
+    "overflow": false,
+    "viewport": 1440
+  },
+  {
+    "key": "bergamot",
+    "width": 1440,
+    "site": "candidate",
+    "modules": [
+      {
+        "copy": "Bergamot and lime bring the brightness. Cedarwood adds a quiet woody finish underneath.",
+        "fontSize": "57.6px",
+        "heading": "Bright citrus. Clean finish.",
+        "headingHeight": 117,
+        "height": 716,
+        "name": "scent-story",
+        "width": 1440
+      },
+      {
+        "copy": null,
+        "fontSize": "57.6px",
+        "heading": "Small squeeze. Long rotation.",
+        "headingHeight": 117,
+        "height": 516,
+        "name": "value",
+        "width": 1440
+      },
+      {
+        "copy": "Music is part of BPM’s character, from the founder’s working soundtrack to the names in your rotation.",
+        "fontSize": "48px",
+        "heading": "A daily essential. With a soundtrack.",
+        "headingHeight": 147,
+        "height": 780,
+        "name": "lifestyle",
+        "width": 1440
+      }
+    ],
+    "overflow": false,
+    "viewport": 1440
+  },
+  {
+    "key": "unscented",
+    "width": 1440,
+    "site": "source",
+    "modules": [
+      {
+        "copy": "No added essential oils. No masking fragrance. Base ingredients chosen to keep their natural scent as minimal as possible.",
+        "fontSize": "57.6px",
+        "heading": "Quiet onpurpose.",
+        "headingHeight": 117,
+        "height": 716,
+        "name": "scent-story",
+        "width": 1440
+      },
+      {
+        "copy": null,
+        "fontSize": "57.6px",
+        "heading": "Small squeeze.Long rotation.",
+        "headingHeight": 117,
+        "height": 516,
+        "name": "value",
+        "width": 1440
+      },
+      {
+        "copy": "Music is part of BPM’s character, from the founder’s working soundtrack to the names in your rotation.",
+        "fontSize": "48px",
+        "heading": "A daily essential.With a soundtrack.",
+        "headingHeight": 147,
+        "height": 780,
+        "name": "lifestyle",
+        "width": 1440
+      }
+    ],
+    "overflow": false,
+    "viewport": 1440
+  },
+  {
+    "key": "unscented",
+    "width": 1440,
+    "site": "candidate",
+    "modules": [
+      {
+        "copy": "No added essential oils. No masking fragrance. Base ingredients chosen to keep their natural scent as minimal as possible.",
+        "fontSize": "57.6px",
+        "heading": "Quiet on purpose.",
+        "headingHeight": 117,
+        "height": 716,
+        "name": "scent-story",
+        "width": 1440
+      },
+      {
+        "copy": null,
+        "fontSize": "57.6px",
+        "heading": "Small squeeze. Long rotation.",
+        "headingHeight": 117,
+        "height": 516,
+        "name": "value",
+        "width": 1440
+      },
+      {
+        "copy": "Music is part of BPM’s character, from the founder’s working soundtrack to the names in your rotation.",
+        "fontSize": "48px",
+        "heading": "A daily essential. With a soundtrack.",
+        "headingHeight": 147,
+        "height": 780,
+        "name": "lifestyle",
+        "width": 1440
+      }
+    ],
+    "overflow": false,
+    "viewport": 1440
+  },
+  {
+    "key": "duo",
+    "width": 1440,
+    "site": "source",
+    "modules": [
+      {
+        "copy": "One Bergamot & Lime. One Unscented. Try both sides of BPM, or switch things up from day to day.",
+        "fontSize": "57.6px",
+        "heading": "Two tracks.Your call.",
+        "headingHeight": 117,
+        "height": 716,
+        "name": "scent-story",
+        "width": 1440
+      },
+      {
+        "copy": null,
+        "fontSize": "57.6px",
+        "heading": "Small squeeze.Long rotation.",
+        "headingHeight": 117,
+        "height": 516,
+        "name": "value",
+        "width": 1440
+      },
+      {
+        "copy": "Music is part of BPM’s character, from the founder’s working soundtrack to the names in your rotation.",
+        "fontSize": "48px",
+        "heading": "A daily essential.With a soundtrack.",
+        "headingHeight": 147,
+        "height": 780,
+        "name": "lifestyle",
+        "width": 1440
+      }
+    ],
+    "overflow": false,
+    "viewport": 1440
+  },
+  {
+    "key": "duo",
+    "width": 1440,
+    "site": "candidate",
+    "modules": [
+      {
+        "copy": "1 citrus + 1 unscented. 2 tubes, your way.",
+        "fontSize": "57.6px",
+        "heading": "Two tracks. Your call.",
+        "headingHeight": 117,
+        "height": 716,
+        "name": "scent-story",
+        "width": 1440
+      },
+      {
+        "copy": null,
+        "fontSize": "57.6px",
+        "heading": "Small squeeze. Long rotation.",
+        "headingHeight": 117,
+        "height": 516,
+        "name": "value",
+        "width": 1440
+      },
+      {
+        "copy": "Music is part of BPM’s character, from the founder’s working soundtrack to the names in your rotation.",
+        "fontSize": "48px",
+        "heading": "A daily essential. With a soundtrack.",
+        "headingHeight": 147,
+        "height": 780,
+        "name": "lifestyle",
+        "width": 1440
+      }
+    ],
+    "overflow": false,
+    "viewport": 1440
+  },
+  {
+    "key": "citrus-repeat",
+    "width": 1440,
+    "site": "source",
+    "modules": [
+      {
+        "copy": "Bergamot and lime bring the brightness. Cedarwood adds a quiet woody finish underneath.",
+        "fontSize": "57.6px",
+        "heading": "Bright citrus.Clean finish.",
+        "headingHeight": 117,
+        "height": 716,
+        "name": "scent-story",
+        "width": 1440
+      },
+      {
+        "copy": null,
+        "fontSize": "57.6px",
+        "heading": "Small squeeze.Long rotation.",
+        "headingHeight": 117,
+        "height": 516,
+        "name": "value",
+        "width": 1440
+      },
+      {
+        "copy": "Music is part of BPM’s character, from the founder’s working soundtrack to the names in your rotation.",
+        "fontSize": "48px",
+        "heading": "A daily essential.With a soundtrack.",
+        "headingHeight": 147,
+        "height": 780,
+        "name": "lifestyle",
+        "width": 1440
+      }
+    ],
+    "overflow": false,
+    "viewport": 1440
+  },
+  {
+    "key": "citrus-repeat",
+    "width": 1440,
+    "site": "candidate",
+    "modules": [
+      {
+        "copy": "Bergamot and lime bring the brightness. Cedarwood adds a quiet woody finish underneath.",
+        "fontSize": "57.6px",
+        "heading": "Bright citrus. Clean finish.",
+        "headingHeight": 117,
+        "height": 716,
+        "name": "scent-story",
+        "width": 1440
+      },
+      {
+        "copy": null,
+        "fontSize": "57.6px",
+        "heading": "Small squeeze. Long rotation.",
+        "headingHeight": 117,
+        "height": 516,
+        "name": "value",
+        "width": 1440
+      },
+      {
+        "copy": "Music is part of BPM’s character, from the founder’s working soundtrack to the names in your rotation.",
+        "fontSize": "48px",
+        "heading": "A daily essential. With a soundtrack.",
+        "headingHeight": 147,
+        "height": 780,
+        "name": "lifestyle",
+        "width": 1440
+      }
+    ],
+    "overflow": false,
+    "viewport": 1440
+  },
+  {
+    "key": "silent-repeat",
+    "width": 1440,
+    "site": "source",
+    "modules": [
+      {
+        "copy": "No added essential oils. No masking fragrance. Base ingredients chosen to keep their natural scent as minimal as possible.",
+        "fontSize": "57.6px",
+        "heading": "Quiet onpurpose.",
+        "headingHeight": 117,
+        "height": 716,
+        "name": "scent-story",
+        "width": 1440
+      },
+      {
+        "copy": null,
+        "fontSize": "57.6px",
+        "heading": "Small squeeze.Long rotation.",
+        "headingHeight": 117,
+        "height": 516,
+        "name": "value",
+        "width": 1440
+      },
+      {
+        "copy": "Music is part of BPM’s character, from the founder’s working soundtrack to the names in your rotation.",
+        "fontSize": "48px",
+        "heading": "A daily essential.With a soundtrack.",
+        "headingHeight": 147,
+        "height": 780,
+        "name": "lifestyle",
+        "width": 1440
+      }
+    ],
+    "overflow": false,
+    "viewport": 1440
+  },
+  {
+    "key": "silent-repeat",
+    "width": 1440,
+    "site": "candidate",
+    "modules": [
+      {
+        "copy": "No added essential oils. No masking fragrance. Base ingredients chosen to keep their natural scent as minimal as possible.",
+        "fontSize": "57.6px",
+        "heading": "Quiet on purpose.",
+        "headingHeight": 117,
+        "height": 716,
+        "name": "scent-story",
+        "width": 1440
+      },
+      {
+        "copy": null,
+        "fontSize": "57.6px",
+        "heading": "Small squeeze. Long rotation.",
+        "headingHeight": 117,
+        "height": 516,
+        "name": "value",
+        "width": 1440
+      },
+      {
+        "copy": "Music is part of BPM’s character, from the founder’s working soundtrack to the names in your rotation.",
+        "fontSize": "48px",
+        "heading": "A daily essential. With a soundtrack.",
+        "headingHeight": 147,
+        "height": 780,
+        "name": "lifestyle",
+        "width": 1440
+      }
+    ],
+    "overflow": false,
+    "viewport": 1440
+  },
+  {
+    "key": "3-4-time",
+    "width": 1440,
+    "site": "source",
+    "modules": [
+      {
+        "copy": "One Bergamot & Lime. One Unscented. Try both sides of BPM, or switch things up from day to day.",
+        "fontSize": "57.6px",
+        "heading": "Two tracks.Your call.",
+        "headingHeight": 117,
+        "height": 716,
+        "name": "scent-story",
+        "width": 1440
+      },
+      {
+        "copy": null,
+        "fontSize": "57.6px",
+        "heading": "Small squeeze.Long rotation.",
+        "headingHeight": 117,
+        "height": 516,
+        "name": "value",
+        "width": 1440
+      },
+      {
+        "copy": "Music is part of BPM’s character, from the founder’s working soundtrack to the names in your rotation.",
+        "fontSize": "48px",
+        "heading": "A daily essential.With a soundtrack.",
+        "headingHeight": 147,
+        "height": 780,
+        "name": "lifestyle",
+        "width": 1440
+      }
+    ],
+    "overflow": false,
+    "viewport": 1440
+  },
+  {
+    "key": "3-4-time",
+    "width": 1440,
+    "site": "candidate",
+    "modules": [
+      {
+        "copy": "3 citrus + 1 unscented. 4 tubes, your way.",
+        "fontSize": "57.6px",
+        "heading": "Two tracks. Your call.",
+        "headingHeight": 117,
+        "height": 716,
+        "name": "scent-story",
+        "width": 1440
+      },
+      {
+        "copy": null,
+        "fontSize": "57.6px",
+        "heading": "Small squeeze. Long rotation.",
+        "headingHeight": 117,
+        "height": 516,
+        "name": "value",
+        "width": 1440
+      },
+      {
+        "copy": "Music is part of BPM’s character, from the founder’s working soundtrack to the names in your rotation.",
+        "fontSize": "48px",
+        "heading": "A daily essential. With a soundtrack.",
+        "headingHeight": 147,
+        "height": 780,
+        "name": "lifestyle",
+        "width": 1440
+      }
+    ],
+    "overflow": false,
+    "viewport": 1440
+  },
+  {
+    "key": "silent-on-repeat-family-pack-4-tube-unscented-deodorant-bundle",
+    "width": 1440,
+    "site": "source",
+    "modules": [
+      {
+        "copy": "No added essential oils. No masking fragrance. Base ingredients chosen to keep their natural scent as minimal as possible.",
+        "fontSize": "57.6px",
+        "heading": "Quiet onpurpose.",
+        "headingHeight": 117,
+        "height": 716,
+        "name": "scent-story",
+        "width": 1440
+      },
+      {
+        "copy": null,
+        "fontSize": "57.6px",
+        "heading": "Small squeeze.Long rotation.",
+        "headingHeight": 117,
+        "height": 516,
+        "name": "value",
+        "width": 1440
+      },
+      {
+        "copy": "Music is part of BPM’s character, from the founder’s working soundtrack to the names in your rotation.",
+        "fontSize": "48px",
+        "heading": "A daily essential.With a soundtrack.",
+        "headingHeight": 147,
+        "height": 780,
+        "name": "lifestyle",
+        "width": 1440
+      }
+    ],
+    "overflow": false,
+    "viewport": 1440
+  },
+  {
+    "key": "silent-on-repeat-family-pack-4-tube-unscented-deodorant-bundle",
+    "width": 1440,
+    "site": "candidate",
+    "modules": [
+      {
+        "copy": "No added essential oils. No masking fragrance. Base ingredients chosen to keep their natural scent as minimal as possible.",
+        "fontSize": "57.6px",
+        "heading": "Quiet on purpose.",
+        "headingHeight": 117,
+        "height": 716,
+        "name": "scent-story",
+        "width": 1440
+      },
+      {
+        "copy": null,
+        "fontSize": "57.6px",
+        "heading": "Small squeeze. Long rotation.",
+        "headingHeight": 117,
+        "height": 516,
+        "name": "value",
+        "width": 1440
+      },
+      {
+        "copy": "Music is part of BPM’s character, from the founder’s working soundtrack to the names in your rotation.",
+        "fontSize": "48px",
+        "heading": "A daily essential. With a soundtrack.",
+        "headingHeight": 147,
+        "height": 780,
+        "name": "lifestyle",
+        "width": 1440
+      }
+    ],
+    "overflow": false,
+    "viewport": 1440
+  },
+  {
+    "key": "citrus-on-repeat-family-pack-4-tube-bergamot-lime-deodorant-bundle",
+    "width": 1440,
+    "site": "source",
+    "modules": [
+      {
+        "copy": "Bergamot and lime bring the brightness. Cedarwood adds a quiet woody finish underneath.",
+        "fontSize": "57.6px",
+        "heading": "Bright citrus.Clean finish.",
+        "headingHeight": 117,
+        "height": 716,
+        "name": "scent-story",
+        "width": 1440
+      },
+      {
+        "copy": null,
+        "fontSize": "57.6px",
+        "heading": "Small squeeze.Long rotation.",
+        "headingHeight": 117,
+        "height": 516,
+        "name": "value",
+        "width": 1440
+      },
+      {
+        "copy": "Music is part of BPM’s character, from the founder’s working soundtrack to the names in your rotation.",
+        "fontSize": "48px",
+        "heading": "A daily essential.With a soundtrack.",
+        "headingHeight": 147,
+        "height": 780,
+        "name": "lifestyle",
+        "width": 1440
+      }
+    ],
+    "overflow": false,
+    "viewport": 1440
+  },
+  {
+    "key": "citrus-on-repeat-family-pack-4-tube-bergamot-lime-deodorant-bundle",
+    "width": 1440,
+    "site": "candidate",
+    "modules": [
+      {
+        "copy": "Bergamot and lime bring the brightness. Cedarwood adds a quiet woody finish underneath.",
+        "fontSize": "57.6px",
+        "heading": "Bright citrus. Clean finish.",
+        "headingHeight": 117,
+        "height": 716,
+        "name": "scent-story",
+        "width": 1440
+      },
+      {
+        "copy": null,
+        "fontSize": "57.6px",
+        "heading": "Small squeeze. Long rotation.",
+        "headingHeight": 117,
+        "height": 516,
+        "name": "value",
+        "width": 1440
+      },
+      {
+        "copy": "Music is part of BPM’s character, from the founder’s working soundtrack to the names in your rotation.",
+        "fontSize": "48px",
+        "heading": "A daily essential. With a soundtrack.",
+        "headingHeight": 147,
+        "height": 780,
+        "name": "lifestyle",
+        "width": 1440
+      }
+    ],
+    "overflow": false,
+    "viewport": 1440
+  },
+  {
+    "key": "four-on-the-floor-mixed-scent-4-tube-deodorant-bundle",
+    "width": 1440,
+    "site": "source",
+    "modules": [
+      {
+        "copy": "One Bergamot & Lime. One Unscented. Try both sides of BPM, or switch things up from day to day.",
+        "fontSize": "57.6px",
+        "heading": "Two tracks.Your call.",
+        "headingHeight": 117,
+        "height": 716,
+        "name": "scent-story",
+        "width": 1440
+      },
+      {
+        "copy": null,
+        "fontSize": "57.6px",
+        "heading": "Small squeeze.Long rotation.",
+        "headingHeight": 117,
+        "height": 516,
+        "name": "value",
+        "width": 1440
+      },
+      {
+        "copy": "Music is part of BPM’s character, from the founder’s working soundtrack to the names in your rotation.",
+        "fontSize": "48px",
+        "heading": "A daily essential.With a soundtrack.",
+        "headingHeight": 147,
+        "height": 780,
+        "name": "lifestyle",
+        "width": 1440
+      }
+    ],
+    "overflow": false,
+    "viewport": 1440
+  },
+  {
+    "key": "four-on-the-floor-mixed-scent-4-tube-deodorant-bundle",
+    "width": 1440,
+    "site": "candidate",
+    "modules": [
+      {
+        "copy": "2 citrus + 2 unscented. 4 tubes, your way.",
+        "fontSize": "57.6px",
+        "heading": "Two tracks. Your call.",
+        "headingHeight": 117,
+        "height": 716,
+        "name": "scent-story",
+        "width": 1440
+      },
+      {
+        "copy": null,
+        "fontSize": "57.6px",
+        "heading": "Small squeeze. Long rotation.",
+        "headingHeight": 117,
+        "height": 516,
+        "name": "value",
+        "width": 1440
+      },
+      {
+        "copy": "Music is part of BPM’s character, from the founder’s working soundtrack to the names in your rotation.",
+        "fontSize": "48px",
+        "heading": "A daily essential. With a soundtrack.",
+        "headingHeight": 147,
+        "height": 780,
+        "name": "lifestyle",
+        "width": 1440
+      }
+    ],
+    "overflow": false,
+    "viewport": 1440
+  }
+]

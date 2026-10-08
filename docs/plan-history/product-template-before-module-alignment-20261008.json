@@ -255,7 +255,7 @@
           "settings": {
             "product": "side-a-side-b",
             "heading": "Two tracks.\nYour call.",
-            "intro": "One Bergamot & Lime. One Unscented. Try both sides of BPM, or switch things up from day to day.",
+            "intro": "1 citrus + 1 unscented. 2 tubes, your way.",
             "fine": "The same smooth application and baking-soda-free formula, in two scent options.",
             "source_art": "15141732581748",
             "source_art_alt": "Side A / Side B \u2014 Mixed Scent Natural Deodorant Duo open packaging",
@@ -499,7 +499,7 @@
     },
     "lifestyle": {
       "type": "bpm-sites-pdp-lifestyle",
-      "settings": { "page": "about-us" }
+      "settings": {}
     },
     "closing": {
       "type": "bpm-sites-pdp-closing",
