@@ -1,0 +1,98 @@
+{
+  "scope": "Computed local/live-source button contrast, three viewport sizes; no native Shopify or full accessibility certification",
+  "before": [
+    {
+      "kind": "candidate",
+      "data": [
+        {
+          "background": "rgb(255, 253, 233)",
+          "band": "ink",
+          "color": "rgb(255, 253, 233)",
+          "text": "Meet the formula→"
+        },
+        {
+          "background": "rgb(255, 253, 233)",
+          "band": "closing",
+          "color": "rgb(255, 253, 233)",
+          "text": "Shop all tracks→"
+        }
+      ]
+    },
+    {
+      "kind": "source",
+      "data": [
+        {
+          "background": "rgb(255, 253, 233)",
+          "band": "ink",
+          "color": "rgb(255, 253, 233)",
+          "text": "Meet the formula→"
+        },
+        {
+          "background": "rgb(255, 253, 233)",
+          "band": "closing",
+          "color": "rgb(35, 31, 32)",
+          "text": "Shop all tracks→"
+        }
+      ]
+    }
+  ],
+  "after": [
+    {
+      "width": 375,
+      "data": [
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "band": "ink",
+          "color": "rgb(255, 253, 233)",
+          "opacity": "1",
+          "text": "Meet the formula→"
+        },
+        {
+          "background": "rgb(255, 253, 233)",
+          "band": "closing",
+          "color": "rgb(35, 31, 32)",
+          "opacity": "1",
+          "text": "Shop all tracks→"
+        }
+      ]
+    },
+    {
+      "width": 820,
+      "data": [
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "band": "ink",
+          "color": "rgb(255, 253, 233)",
+          "opacity": "1",
+          "text": "Meet the formula→"
+        },
+        {
+          "background": "rgb(255, 253, 233)",
+          "band": "closing",
+          "color": "rgb(35, 31, 32)",
+          "opacity": "1",
+          "text": "Shop all tracks→"
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "data": [
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "band": "ink",
+          "color": "rgb(255, 253, 233)",
+          "opacity": "1",
+          "text": "Meet the formula→"
+        },
+        {
+          "background": "rgb(255, 253, 233)",
+          "band": "closing",
+          "color": "rgb(35, 31, 32)",
+          "opacity": "1",
+          "text": "Shop all tracks→"
+        }
+      ]
+    }
+  ]
+}
