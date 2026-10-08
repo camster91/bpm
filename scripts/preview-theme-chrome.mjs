@@ -26,7 +26,7 @@ engine.registerFilter('stylesheet_tag', value => `<link rel="stylesheet" href="$
 engine.registerFilter('money', value => new Intl.NumberFormat('en-CA', { style: 'currency', currency: 'CAD' }).format(value / 100));
 engine.registerFilter('money_with_currency', value => new Intl.NumberFormat('en-CA', { style: 'currency', currency: 'CAD' }).format(value / 100) + ' CAD');
 engine.registerFilter('structured_data', value => JSON.stringify({fixture_only:true, fixture_resource_id:value.id, fixture_kind:value.fixture_kind || 'resource'}));
-engine.registerFilter('image_url', (value,...pairs) => {const params=Object.fromEntries(pairs.filter(Array.isArray));return value.fixture_resize?value.src+(value.src.includes('?')?'&':'?')+'width='+params.width:value.src;});
+engine.registerFilter('image_url', (value,...pairs) => {const params=Object.fromEntries(pairs.filter(Array.isArray));if(!value.fixture_resize)return value.src;const [path,query='']=value.src.split('?');const search=new URLSearchParams(query);for(const [key,param] of Object.entries(params))search.set(key,param);return path+'?'+search.toString();});
 engine.registerFilter('image_tag', (src, ...pairs) => { const props = Object.fromEntries(pairs.filter(Array.isArray)); const alt = String(props.alt || '').replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;'); return `<img src="${src}" alt="${alt}" width="4096" height="4096" loading="${props.loading || 'lazy'}"${props.fetchpriority?' fetchpriority="'+props.fetchpriority+'"':''}>`; });
 engine.registerFilter('handle', value => String(value).toLowerCase().replace(/[^a-z0-9-]/g, '-'));
 engine.registerFilter('t', (key, ...pairs) => {

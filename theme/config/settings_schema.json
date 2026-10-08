@@ -127,5 +127,17 @@
         "info": "Visitors can pause motion. Reduced-motion preferences are always respected. Motion is paused in the theme editor."
       }
     ]
+  },
+  {
+    "name": "Source artwork delivery",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "native_source_delivery",
+        "label": "Use responsive native source artwork",
+        "default": true,
+        "info": "Uses matching existing Files images with the original crop. Disable to force recovered SVG artwork. Verify all nine source images in the development theme."
+      }
+    ]
   }
 ]
