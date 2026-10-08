@@ -1,0 +1,1112 @@
+{
+  "browser": "Codex in-app browser",
+  "scope": "Local fabricated-data layout only; no native commerce or whole-design fidelity proof",
+  "header": [
+    {
+      "actions": [
+        {
+          "height": 44,
+          "text": "Account",
+          "width": 56.984375
+        },
+        {
+          "height": 44,
+          "text": "Bag 0",
+          "width": 63.375
+        }
+      ],
+      "mainHeading": "This is\ndeodorant.It just happens\nto be natural.",
+      "page": "/sites-home-bindings.html",
+      "scroll": 320,
+      "width": 320
+    },
+    {
+      "actions": [
+        {
+          "height": 44,
+          "text": "Account",
+          "width": 69.1953125
+        },
+        {
+          "height": 44,
+          "text": "Bag 0",
+          "width": 63.375
+        }
+      ],
+      "mainHeading": "This is\ndeodorant.It just happens\nto be natural.",
+      "page": "/sites-home-bindings.html",
+      "scroll": 375,
+      "width": 375
+    },
+    {
+      "actions": [
+        {
+          "height": 44,
+          "text": "Account",
+          "width": 69.1953125
+        },
+        {
+          "height": 44,
+          "text": "Bag 0",
+          "width": 63.375
+        }
+      ],
+      "mainHeading": "This is\ndeodorant.It just happens\nto be natural.",
+      "page": "/sites-home-bindings.html",
+      "scroll": 430,
+      "width": 430
+    },
+    {
+      "actions": [
+        {
+          "height": 44,
+          "text": "Account",
+          "width": 69.1953125
+        },
+        {
+          "height": 44,
+          "text": "Bag 0",
+          "width": 63.375
+        }
+      ],
+      "mainHeading": "This is\ndeodorant.It just happens\nto be natural.",
+      "page": "/sites-home-bindings.html",
+      "scroll": 768,
+      "width": 768
+    },
+    {
+      "actions": [
+        {
+          "height": 44,
+          "text": "Account",
+          "width": 69.1953125
+        },
+        {
+          "height": 44,
+          "text": "Bag 0",
+          "width": 63.375
+        }
+      ],
+      "mainHeading": "This is\ndeodorant.It just happens\nto be natural.",
+      "page": "/sites-home-bindings.html",
+      "scroll": 1024,
+      "width": 1024
+    },
+    {
+      "actions": [
+        {
+          "height": 44,
+          "text": "Account",
+          "width": 69.1953125
+        },
+        {
+          "height": 44,
+          "text": "Bag 0",
+          "width": 63.375
+        }
+      ],
+      "mainHeading": "This is\ndeodorant.It just happens\nto be natural.",
+      "page": "/sites-home-bindings.html",
+      "scroll": 1440,
+      "width": 1440
+    },
+    {
+      "actions": [
+        {
+          "height": 44,
+          "text": "Account",
+          "width": 69.1953125
+        },
+        {
+          "height": 44,
+          "text": "Bag 0",
+          "width": 63.375
+        }
+      ],
+      "mainHeading": "This is\ndeodorant.It just happens\nto be natural.",
+      "page": "/sites-home-bindings.html",
+      "scroll": 1600,
+      "width": 1600
+    }
+  ],
+  "templates": [
+    {
+      "page": "/sites-product-bergamot-lime.html",
+      "scroll": 320,
+      "title": "Bergamot & Lime — Natural Deodorant — fixture",
+      "visibleFields": [
+        {
+          "left": 24,
+          "name": "variant",
+          "right": 296
+        },
+        {
+          "left": 42,
+          "name": "selling_plan",
+          "right": 55
+        },
+        {
+          "left": 42,
+          "name": "selling_plan",
+          "right": 55
+        },
+        {
+          "left": 24,
+          "name": "quantity",
+          "right": 114
+        }
+      ],
+      "width": 320
+    },
+    {
+      "page": "/sites-product-bergamot-lime.html",
+      "scroll": 430,
+      "title": "Bergamot & Lime — Natural Deodorant — fixture",
+      "visibleFields": [
+        {
+          "left": 24,
+          "name": "variant",
+          "right": 406
+        },
+        {
+          "left": 42,
+          "name": "selling_plan",
+          "right": 55
+        },
+        {
+          "left": 42,
+          "name": "selling_plan",
+          "right": 55
+        },
+        {
+          "left": 24,
+          "name": "quantity",
+          "right": 114
+        }
+      ],
+      "width": 430
+    },
+    {
+      "page": "/sites-product-bergamot-lime.html",
+      "scroll": 768,
+      "title": "Bergamot & Lime — Natural Deodorant — fixture",
+      "visibleFields": [
+        {
+          "left": 400,
+          "name": "variant",
+          "right": 733.4453125
+        },
+        {
+          "left": 420,
+          "name": "selling_plan",
+          "right": 433
+        },
+        {
+          "left": 420,
+          "name": "selling_plan",
+          "right": 433
+        },
+        {
+          "left": 400,
+          "name": "quantity",
+          "right": 490
+        }
+      ],
+      "width": 768
+    },
+    {
+      "page": "/sites-product-bergamot-lime.html",
+      "scroll": 1024,
+      "title": "Bergamot & Lime — Natural Deodorant — fixture",
+      "visibleFields": [
+        {
+          "left": 528,
+          "name": "variant",
+          "right": 977.921875
+        },
+        {
+          "left": 548,
+          "name": "selling_plan",
+          "right": 561
+        },
+        {
+          "left": 548,
+          "name": "selling_plan",
+          "right": 561
+        },
+        {
+          "left": 528,
+          "name": "quantity",
+          "right": 618
+        }
+      ],
+      "width": 1024
+    },
+    {
+      "page": "/sites-product-bergamot-lime.html",
+      "scroll": 1440,
+      "title": "Bergamot & Lime — Natural Deodorant — fixture",
+      "visibleFields": [
+        {
+          "left": 752,
+          "name": "variant",
+          "right": 1376
+        },
+        {
+          "left": 772,
+          "name": "selling_plan",
+          "right": 785
+        },
+        {
+          "left": 772,
+          "name": "selling_plan",
+          "right": 785
+        },
+        {
+          "left": 752,
+          "name": "quantity",
+          "right": 842
+        }
+      ],
+      "width": 1440
+    },
+    {
+      "page": "/sites-product-bergamot-lime.html",
+      "scroll": 1600,
+      "title": "Bergamot & Lime — Natural Deodorant — fixture",
+      "visibleFields": [
+        {
+          "left": 832,
+          "name": "variant",
+          "right": 1456
+        },
+        {
+          "left": 852,
+          "name": "selling_plan",
+          "right": 865
+        },
+        {
+          "left": 852,
+          "name": "selling_plan",
+          "right": 865
+        },
+        {
+          "left": 832,
+          "name": "quantity",
+          "right": 922
+        }
+      ],
+      "width": 1600
+    },
+    {
+      "page": "/sites-collection-bindings.html",
+      "scroll": 320,
+      "title": "Pick your\nrotation.",
+      "visibleFields": [
+        {
+          "left": 24,
+          "name": "q",
+          "right": 228.5
+        },
+        {
+          "left": 43,
+          "name": "filter.p.m.custom.pack_size",
+          "right": 63
+        },
+        {
+          "left": 43,
+          "name": "filter.p.m.custom.pack_size",
+          "right": 63
+        },
+        {
+          "left": 43,
+          "name": "filter.p.m.custom.pack_size",
+          "right": 63
+        },
+        {
+          "left": 39,
+          "name": "filter.v.price.gte",
+          "right": 154
+        },
+        {
+          "left": 166,
+          "name": "filter.v.price.lte",
+          "right": 281
+        },
+        {
+          "left": 70.5546875,
+          "name": "sort_by",
+          "right": 215.5546875
+        }
+      ],
+      "width": 320
+    },
+    {
+      "page": "/sites-collection-bindings.html",
+      "scroll": 430,
+      "title": "Pick your\nrotation.",
+      "visibleFields": [
+        {
+          "left": 24,
+          "name": "q",
+          "right": 228.5
+        },
+        {
+          "left": 43,
+          "name": "filter.p.m.custom.pack_size",
+          "right": 63
+        },
+        {
+          "left": 43,
+          "name": "filter.p.m.custom.pack_size",
+          "right": 63
+        },
+        {
+          "left": 43,
+          "name": "filter.p.m.custom.pack_size",
+          "right": 63
+        },
+        {
+          "left": 236,
+          "name": "filter.v.price.gte",
+          "right": 307.5
+        },
+        {
+          "left": 319.5,
+          "name": "filter.v.price.lte",
+          "right": 391
+        },
+        {
+          "left": 70.5546875,
+          "name": "sort_by",
+          "right": 215.5546875
+        }
+      ],
+      "width": 430
+    },
+    {
+      "page": "/sites-collection-bindings.html",
+      "scroll": 768,
+      "title": "Pick your\nrotation.",
+      "visibleFields": [
+        {
+          "left": 258.703125,
+          "name": "q",
+          "right": 463.203125
+        },
+        {
+          "left": 53.5546875,
+          "name": "filter.p.m.custom.pack_size",
+          "right": 73.5546875
+        },
+        {
+          "left": 53.5546875,
+          "name": "filter.p.m.custom.pack_size",
+          "right": 73.5546875
+        },
+        {
+          "left": 53.5546875,
+          "name": "filter.p.m.custom.pack_size",
+          "right": 73.5546875
+        },
+        {
+          "left": 201.71875,
+          "name": "filter.v.price.gte",
+          "right": 250.71875
+        },
+        {
+          "left": 262.71875,
+          "name": "filter.v.price.lte",
+          "right": 311.71875
+        },
+        {
+          "left": 483.734375,
+          "name": "sort_by",
+          "right": 628.734375
+        }
+      ],
+      "width": 768
+    },
+    {
+      "page": "/sites-collection-bindings.html",
+      "scroll": 1024,
+      "title": "Pick your\nrotation.",
+      "visibleFields": [
+        {
+          "left": 270.2265625,
+          "name": "q",
+          "right": 474.7265625
+        },
+        {
+          "left": 65.078125,
+          "name": "filter.p.m.custom.pack_size",
+          "right": 85.078125
+        },
+        {
+          "left": 65.078125,
+          "name": "filter.p.m.custom.pack_size",
+          "right": 85.078125
+        },
+        {
+          "left": 65.078125,
+          "name": "filter.p.m.custom.pack_size",
+          "right": 85.078125
+        },
+        {
+          "left": 213.2421875,
+          "name": "filter.v.price.gte",
+          "right": 262.2421875
+        },
+        {
+          "left": 274.2421875,
+          "name": "filter.v.price.lte",
+          "right": 323.2421875
+        },
+        {
+          "left": 728.2109375,
+          "name": "sort_by",
+          "right": 873.2109375
+        }
+      ],
+      "width": 1024
+    },
+    {
+      "page": "/sites-collection-bindings.html",
+      "scroll": 1440,
+      "title": "Pick your\nrotation.",
+      "visibleFields": [
+        {
+          "left": 288.1484375,
+          "name": "q",
+          "right": 492.6484375
+        },
+        {
+          "left": 83,
+          "name": "filter.p.m.custom.pack_size",
+          "right": 103
+        },
+        {
+          "left": 83,
+          "name": "filter.p.m.custom.pack_size",
+          "right": 103
+        },
+        {
+          "left": 83,
+          "name": "filter.p.m.custom.pack_size",
+          "right": 103
+        },
+        {
+          "left": 231.1640625,
+          "name": "filter.v.price.gte",
+          "right": 280.1640625
+        },
+        {
+          "left": 292.1640625,
+          "name": "filter.v.price.lte",
+          "right": 341.1640625
+        },
+        {
+          "left": 1126.2890625,
+          "name": "sort_by",
+          "right": 1271.2890625
+        }
+      ],
+      "width": 1440
+    },
+    {
+      "page": "/sites-collection-bindings.html",
+      "scroll": 1600,
+      "title": "Pick your\nrotation.",
+      "visibleFields": [
+        {
+          "left": 368.1484375,
+          "name": "q",
+          "right": 572.6484375
+        },
+        {
+          "left": 163,
+          "name": "filter.p.m.custom.pack_size",
+          "right": 183
+        },
+        {
+          "left": 163,
+          "name": "filter.p.m.custom.pack_size",
+          "right": 183
+        },
+        {
+          "left": 163,
+          "name": "filter.p.m.custom.pack_size",
+          "right": 183
+        },
+        {
+          "left": 311.1640625,
+          "name": "filter.v.price.gte",
+          "right": 360.1640625
+        },
+        {
+          "left": 372.1640625,
+          "name": "filter.v.price.lte",
+          "right": 421.1640625
+        },
+        {
+          "left": 1206.2890625,
+          "name": "sort_by",
+          "right": 1351.2890625
+        }
+      ],
+      "width": 1600
+    },
+    {
+      "page": "/sites-search.html",
+      "scroll": 320,
+      "title": "Find your\nrotation.",
+      "visibleFields": [
+        {
+          "left": 24,
+          "name": "q",
+          "right": 296
+        },
+        {
+          "left": 70.5546875,
+          "name": "sort_by",
+          "right": 215.5546875
+        }
+      ],
+      "width": 320
+    },
+    {
+      "page": "/sites-search.html",
+      "scroll": 430,
+      "title": "Find your\nrotation.",
+      "visibleFields": [
+        {
+          "left": 24,
+          "name": "q",
+          "right": 406
+        },
+        {
+          "left": 70.5546875,
+          "name": "sort_by",
+          "right": 215.5546875
+        }
+      ],
+      "width": 430
+    },
+    {
+      "page": "/sites-search.html",
+      "scroll": 768,
+      "title": "Find your\nrotation.",
+      "visibleFields": [
+        {
+          "left": 34.5546875,
+          "name": "q",
+          "right": 618.078125
+        },
+        {
+          "left": 483.734375,
+          "name": "sort_by",
+          "right": 628.734375
+        }
+      ],
+      "width": 768
+    },
+    {
+      "page": "/sites-search.html",
+      "scroll": 1024,
+      "title": "Find your\nrotation.",
+      "visibleFields": [
+        {
+          "left": 46.078125,
+          "name": "q",
+          "right": 630.7109375
+        },
+        {
+          "left": 728.2109375,
+          "name": "sort_by",
+          "right": 873.2109375
+        }
+      ],
+      "width": 1024
+    },
+    {
+      "page": "/sites-search.html",
+      "scroll": 1440,
+      "title": "Find your\nrotation.",
+      "visibleFields": [
+        {
+          "left": 64,
+          "name": "q",
+          "right": 648.6328125
+        },
+        {
+          "left": 1126.2890625,
+          "name": "sort_by",
+          "right": 1271.2890625
+        }
+      ],
+      "width": 1440
+    },
+    {
+      "page": "/sites-search.html",
+      "scroll": 1600,
+      "title": "Find your\nrotation.",
+      "visibleFields": [
+        {
+          "left": 144,
+          "name": "q",
+          "right": 728.6328125
+        },
+        {
+          "left": 1206.2890625,
+          "name": "sort_by",
+          "right": 1351.2890625
+        }
+      ],
+      "width": 1600
+    },
+    {
+      "page": "/sites-cart.html",
+      "scroll": 320,
+      "title": "In the bag.",
+      "visibleFields": [
+        {
+          "left": 211.234375,
+          "name": "updates[]",
+          "right": 287.234375
+        },
+        {
+          "left": 211.234375,
+          "name": "updates[]",
+          "right": 287.234375
+        }
+      ],
+      "width": 320
+    },
+    {
+      "page": "/sites-cart.html",
+      "scroll": 430,
+      "title": "In the bag.",
+      "visibleFields": [
+        {
+          "left": 211.234375,
+          "name": "updates[]",
+          "right": 287.234375
+        },
+        {
+          "left": 211.234375,
+          "name": "updates[]",
+          "right": 287.234375
+        }
+      ],
+      "width": 430
+    },
+    {
+      "page": "/sites-cart.html",
+      "scroll": 768,
+      "title": "In the bag.",
+      "visibleFields": [
+        {
+          "left": 257.7890625,
+          "name": "updates[]",
+          "right": 333.7890625
+        },
+        {
+          "left": 257.7890625,
+          "name": "updates[]",
+          "right": 333.7890625
+        }
+      ],
+      "width": 768
+    },
+    {
+      "page": "/sites-cart.html",
+      "scroll": 1024,
+      "title": "In the bag.",
+      "visibleFields": [
+        {
+          "left": 269.3125,
+          "name": "updates[]",
+          "right": 345.3125
+        },
+        {
+          "left": 269.3125,
+          "name": "updates[]",
+          "right": 345.3125
+        }
+      ],
+      "width": 1024
+    },
+    {
+      "page": "/sites-cart.html",
+      "scroll": 1440,
+      "title": "In the bag.",
+      "visibleFields": [
+        {
+          "left": 287.234375,
+          "name": "updates[]",
+          "right": 363.234375
+        },
+        {
+          "left": 287.234375,
+          "name": "updates[]",
+          "right": 363.234375
+        }
+      ],
+      "width": 1440
+    },
+    {
+      "page": "/sites-cart.html",
+      "scroll": 1600,
+      "title": "In the bag.",
+      "visibleFields": [
+        {
+          "left": 367.234375,
+          "name": "updates[]",
+          "right": 443.234375
+        },
+        {
+          "left": 367.234375,
+          "name": "updates[]",
+          "right": 443.234375
+        }
+      ],
+      "width": 1600
+    },
+    {
+      "page": "/sites-about.html",
+      "scroll": 320,
+      "title": "High standards.\nHuman beginnings.",
+      "visibleFields": [],
+      "width": 320
+    },
+    {
+      "page": "/sites-about.html",
+      "scroll": 430,
+      "title": "High standards.\nHuman beginnings.",
+      "visibleFields": [],
+      "width": 430
+    },
+    {
+      "page": "/sites-about.html",
+      "scroll": 768,
+      "title": "High standards.\nHuman beginnings.",
+      "visibleFields": [],
+      "width": 768
+    },
+    {
+      "page": "/sites-about.html",
+      "scroll": 1024,
+      "title": "High standards.\nHuman beginnings.",
+      "visibleFields": [],
+      "width": 1024
+    },
+    {
+      "page": "/sites-about.html",
+      "scroll": 1440,
+      "title": "High standards.\nHuman beginnings.",
+      "visibleFields": [],
+      "width": 1440
+    },
+    {
+      "page": "/sites-about.html",
+      "scroll": 1600,
+      "title": "High standards.\nHuman beginnings.",
+      "visibleFields": [],
+      "width": 1600
+    },
+    {
+      "page": "/sites-contact.html",
+      "scroll": 320,
+      "title": "Let’s talk.",
+      "visibleFields": [
+        {
+          "left": 48,
+          "name": "contact[name]",
+          "right": 272
+        },
+        {
+          "left": 48,
+          "name": "contact[email]",
+          "right": 272
+        },
+        {
+          "left": 48,
+          "name": "contact[topic]",
+          "right": 272
+        },
+        {
+          "left": 48,
+          "name": "contact[body]",
+          "right": 272
+        }
+      ],
+      "width": 320
+    },
+    {
+      "page": "/sites-contact.html",
+      "scroll": 430,
+      "title": "Let’s talk.",
+      "visibleFields": [
+        {
+          "left": 48,
+          "name": "contact[name]",
+          "right": 382
+        },
+        {
+          "left": 48,
+          "name": "contact[email]",
+          "right": 382
+        },
+        {
+          "left": 48,
+          "name": "contact[topic]",
+          "right": 382
+        },
+        {
+          "left": 48,
+          "name": "contact[body]",
+          "right": 382
+        }
+      ],
+      "width": 430
+    },
+    {
+      "page": "/sites-contact.html",
+      "scroll": 768,
+      "title": "Let’s talk.",
+      "visibleFields": [
+        {
+          "left": 66.5546875,
+          "name": "contact[name]",
+          "right": 701.4453125
+        },
+        {
+          "left": 66.5546875,
+          "name": "contact[email]",
+          "right": 701.4453125
+        },
+        {
+          "left": 66.5546875,
+          "name": "contact[topic]",
+          "right": 701.4453125
+        },
+        {
+          "left": 66.5546875,
+          "name": "contact[body]",
+          "right": 701.4453125
+        }
+      ],
+      "width": 768
+    },
+    {
+      "page": "/sites-contact.html",
+      "scroll": 1024,
+      "title": "Let’s talk.",
+      "visibleFields": [
+        {
+          "left": 564,
+          "name": "contact[name]",
+          "right": 945.921875
+        },
+        {
+          "left": 564,
+          "name": "contact[email]",
+          "right": 945.921875
+        },
+        {
+          "left": 564,
+          "name": "contact[topic]",
+          "right": 945.921875
+        },
+        {
+          "left": 564,
+          "name": "contact[body]",
+          "right": 945.921875
+        }
+      ],
+      "width": 1024
+    },
+    {
+      "page": "/sites-contact.html",
+      "scroll": 1440,
+      "title": "Let’s talk.",
+      "visibleFields": [
+        {
+          "left": 788,
+          "name": "contact[name]",
+          "right": 1056
+        },
+        {
+          "left": 1076,
+          "name": "contact[email]",
+          "right": 1344
+        },
+        {
+          "left": 788,
+          "name": "contact[topic]",
+          "right": 1344
+        },
+        {
+          "left": 788,
+          "name": "contact[body]",
+          "right": 1344
+        }
+      ],
+      "width": 1440
+    },
+    {
+      "page": "/sites-contact.html",
+      "scroll": 1600,
+      "title": "Let’s talk.",
+      "visibleFields": [
+        {
+          "left": 868,
+          "name": "contact[name]",
+          "right": 1136
+        },
+        {
+          "left": 1156,
+          "name": "contact[email]",
+          "right": 1424
+        },
+        {
+          "left": 868,
+          "name": "contact[topic]",
+          "right": 1424
+        },
+        {
+          "left": 868,
+          "name": "contact[body]",
+          "right": 1424
+        }
+      ],
+      "width": 1600
+    },
+    {
+      "page": "/sites-article-0.html",
+      "scroll": 320,
+      "title": "Your Underarms Are Skin. We Formulated BPM That Way.",
+      "visibleFields": [],
+      "width": 320
+    },
+    {
+      "page": "/sites-article-0.html",
+      "scroll": 430,
+      "title": "Your Underarms Are Skin. We Formulated BPM That Way.",
+      "visibleFields": [],
+      "width": 430
+    },
+    {
+      "page": "/sites-article-0.html",
+      "scroll": 768,
+      "title": "Your Underarms Are Skin. We Formulated BPM That Way.",
+      "visibleFields": [],
+      "width": 768
+    },
+    {
+      "page": "/sites-article-0.html",
+      "scroll": 1024,
+      "title": "Your Underarms Are Skin. We Formulated BPM That Way.",
+      "visibleFields": [],
+      "width": 1024
+    },
+    {
+      "page": "/sites-article-0.html",
+      "scroll": 1440,
+      "title": "Your Underarms Are Skin. We Formulated BPM That Way.",
+      "visibleFields": [],
+      "width": 1440
+    },
+    {
+      "page": "/sites-article-0.html",
+      "scroll": 1600,
+      "title": "Your Underarms Are Skin. We Formulated BPM That Way.",
+      "visibleFields": [],
+      "width": 1600
+    },
+    {
+      "page": "/sites-policies.html",
+      "scroll": 320,
+      "title": "Clear terms.\nNo mystery.",
+      "visibleFields": [],
+      "width": 320
+    },
+    {
+      "page": "/sites-policies.html",
+      "scroll": 430,
+      "title": "Clear terms.\nNo mystery.",
+      "visibleFields": [],
+      "width": 430
+    },
+    {
+      "page": "/sites-policies.html",
+      "scroll": 768,
+      "title": "Clear terms.\nNo mystery.",
+      "visibleFields": [],
+      "width": 768
+    },
+    {
+      "page": "/sites-policies.html",
+      "scroll": 1024,
+      "title": "Clear terms.\nNo mystery.",
+      "visibleFields": [],
+      "width": 1024
+    },
+    {
+      "page": "/sites-policies.html",
+      "scroll": 1440,
+      "title": "Clear terms.\nNo mystery.",
+      "visibleFields": [],
+      "width": 1440
+    },
+    {
+      "page": "/sites-policies.html",
+      "scroll": 1600,
+      "title": "Clear terms.\nNo mystery.",
+      "visibleFields": [],
+      "width": 1600
+    },
+    {
+      "page": "/sites-cart-empty.html",
+      "scroll": 320,
+      "title": "In the bag.",
+      "visibleFields": [],
+      "width": 320
+    },
+    {
+      "page": "/sites-cart-empty.html",
+      "scroll": 430,
+      "title": "In the bag.",
+      "visibleFields": [],
+      "width": 430
+    },
+    {
+      "page": "/sites-cart-empty.html",
+      "scroll": 768,
+      "title": "In the bag.",
+      "visibleFields": [],
+      "width": 768
+    },
+    {
+      "page": "/sites-cart-empty.html",
+      "scroll": 1024,
+      "title": "In the bag.",
+      "visibleFields": [],
+      "width": 1024
+    },
+    {
+      "page": "/sites-cart-empty.html",
+      "scroll": 1440,
+      "title": "In the bag.",
+      "visibleFields": [],
+      "width": 1440
+    },
+    {
+      "page": "/sites-cart-empty.html",
+      "scroll": 1600,
+      "title": "In the bag.",
+      "visibleFields": [],
+      "width": 1600
+    }
+  ]
+}
