@@ -1,0 +1,16 @@
+{% if section.settings.heading != blank %}
+{{ 'bpm-pdp.css' | asset_url | stylesheet_tag }}
+<section class="bpm-pdp scent-story wrap">
+  {% if section.settings.image != blank %}<div class="scent-photo">{{ section.settings.image | image_url: width: 1200 | image_tag: widths: '500,800,1200', sizes: '(max-width:760px) 90vw,45vw', loading: 'lazy', alt: section.settings.image.alt }}</div>{% endif %}
+  <div><p class="eyebrow">{{ section.settings.eyebrow | escape }}</p><h2>{{ section.settings.heading | escape | newline_to_br }}</h2><p class="lead">{{ section.settings.intro | escape }}</p><div class="scent-notes">{% for block in section.blocks %}{% if block.settings.note != blank %}<span {{ block.shopify_attributes }}>{{ block.settings.note | escape }}</span>{% endif %}{% endfor %}</div>{% if section.settings.fine != blank %}<p class="fine">{{ section.settings.fine | escape }}</p>{% endif %}</div>
+</section>
+{% endif %}
+{% schema %}
+{"name":"Bpm Scent story","settings":[
+ {"type":"image_picker","id":"image","label":"Original framed open-pack image"},
+ {"type":"text","id":"eyebrow","label":"Eyebrow","default":"THE SCENT STORY"},
+ {"type":"textarea","id":"heading","label":"Product-specific heading"},
+ {"type":"textarea","id":"intro","label":"Approved scent description"},
+ {"type":"textarea","id":"fine","label":"Approved fragrance note"}
+],"blocks":[{"type":"note","name":"Scent note","settings":[{"type":"text","id":"note","label":"Note"}]}],"max_blocks":6,"presets":[{"name":"Bpm Scent story"}]}
+{% endschema %}

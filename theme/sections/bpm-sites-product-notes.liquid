@@ -1,0 +1,4 @@
+{% if product.description != blank %}<section class="section wrap"><p class="eyebrow">{{ section.settings.eyebrow | escape }}</p><h2>{{ section.settings.heading | escape | newline_to_br }}</h2><div class="prose bpm-product-description">{{ product.description }}</div></section>{% endif %}
+{% schema %}
+{"name":"Bpm Full product notes","settings":[{"type":"text","id":"eyebrow","label":"Eyebrow","default":"THE FULL PRODUCT NOTES"},{"type":"textarea","id":"heading","label":"Heading","default":"The details,\nin full."}],"presets":[{"name":"Bpm Full product notes"}]}
+{% endschema %}

@@ -56,13 +56,14 @@
     {% render 'bpm-app-blocks', blocks: section.blocks %}
   </div>
 </section>
-{% if product.description != blank %}<section class="section wrap"><p class="eyebrow">{{ 'products.full_notes' | t }}</p><h2>{{ 'products.details' | t }}</h2><div class="prose bpm-product-description">{{ product.description }}</div></section>{% endif %}
+{% unless section.settings.show_description == false %}{% if product.description != blank %}<section class="section wrap"><p class="eyebrow">{{ 'products.full_notes' | t }}</p><h2>{{ 'products.details' | t }}</h2><div class="prose bpm-product-description">{{ product.description }}</div></section>{% endif %}{% endunless %}
 <script src="{{ 'bpm-product.js' | asset_url }}" defer></script>
 {% schema %}
 {"name":"Bpm Product","settings":[
  {"type":"image_picker","id":"image","label":"First gallery image override","info":"Use original Sites framed product artwork for matching presentation. Native media remains available in the gallery."},
  {"type":"text","id":"pack_label","label":"Verified pack description"},
  {"type":"text","id":"intro","label":"Approved scent introduction"},
+ {"type":"checkbox","id":"show_description","label":"Show product description immediately after purchase","default":true},
  {"type":"link_list","id":"rotation","label":"Related rotation menu"}
 ],"blocks":[{"type":"@app"}]}
 {% endschema %}

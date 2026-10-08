@@ -1,0 +1,24 @@
+{{ 'bpm-pdp.css' | asset_url | stylesheet_tag }}
+<section class="bpm-pdp benefits wrap">
+  <div class="section-intro"><p class="eyebrow">{{ section.settings.eyebrow | escape }}</p><h2>{{ section.settings.heading | escape | newline_to_br }}</h2><p>{{ section.settings.intro | escape }}</p></div>
+  <div class="benefit-grid">{% for block in section.blocks %}{% if block.settings.heading != blank %}<article {{ block.shopify_attributes }}>
+    {% if block.settings.image != blank %}{{ block.settings.image | image_url: width: 1000 | image_tag: widths: '320,600,1000', sizes: '(max-width:760px) 90vw,30vw', loading: 'lazy', alt: block.settings.image.alt }}
+    {% else %}{% case block.settings.source_art %}
+      {% when 'texture' %}<img class="texture-photo" src="{{ 'bpm-sites-texture.jpg' | asset_url }}" width="1254" height="1254" loading="lazy" alt="{{ 'products.texture_alt' | t }}">
+      {% when 'formula' %}<img src="{{ 'bpm-sites-formula.jpg' | asset_url }}" width="1448" height="1086" loading="lazy" alt="{{ 'products.formula_alt' | t }}">
+      {% when 'metal' %}<div class="tube-detail"><img src="https://cdn.shopify.com/s/files/1/0960/5778/6740/files/Metal_Tube_copy_2.png?v=1776721242&width=800" width="1316" height="3556" loading="lazy" alt="{{ 'products.metal_alt' | t }}"></div>
+    {% endcase %}{% endif %}
+    <div><span class="eyebrow">{{ block.settings.eyebrow | escape }}</span><h3>{{ block.settings.heading | escape }}</h3><p>{{ block.settings.body | escape }}</p></div>
+  </article>{% endif %}{% endfor %}</div>
+</section>
+{% schema %}
+{"name":"Bpm Product benefits","settings":[
+ {"type":"text","id":"eyebrow","label":"Eyebrow","default":"GET TO KNOW THE TUBE"},
+ {"type":"textarea","id":"heading","label":"Heading","default":"Built for\nreal life."},
+ {"type":"text","id":"intro","label":"Approved introduction","default":"Odour control, a smooth glide and a clean finish. The everyday essentials, considered."}
+],"blocks":[{"type":"benefit","name":"Benefit","settings":[
+ {"type":"image_picker","id":"image","label":"Image override"},
+ {"type":"select","id":"source_art","label":"Original Sites artwork","options":[{"value":"texture","label":"Cream texture"},{"value":"formula","label":"Formula still life"},{"value":"metal","label":"Metal tube"}],"default":"texture"},
+ {"type":"text","id":"eyebrow","label":"Eyebrow"},{"type":"text","id":"heading","label":"Heading"},{"type":"textarea","id":"body","label":"Approved copy"}
+]}],"max_blocks":3,"presets":[{"name":"Bpm Product benefits"}]}
+{% endschema %}

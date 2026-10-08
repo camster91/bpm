@@ -1,0 +1,23 @@
+{{ 'bpm-pdp.css' | asset_url | stylesheet_tag }}
+<section class="bpm-pdp application" id="how-to-{{ section.id }}"><div class="wrap application-grid">
+  <div class="application-copy"><p class="eyebrow">{{ section.settings.eyebrow | escape }}</p><h2>{{ section.settings.heading | escape | newline_to_br }}</h2><p class="lead">{{ section.settings.intro | escape }}</p>
+    <ol class="steps">{% for block in section.blocks %}{% if block.settings.heading != blank %}<li {{ block.shopify_attributes }}><span aria-hidden="true">{{ forloop.index | prepend: '0' }}</span><div><h3>{{ block.settings.heading | escape }}</h3><p>{{ block.settings.body | escape }}</p></div></li>{% endif %}{% endfor %}</ol>
+    {% if section.settings.note != blank %}<p class="fine">{{ section.settings.note | escape }}</p>{% endif %}
+  </div>
+  {% if section.settings.video != blank or section.settings.use_source_video %}<figure class="video-card">
+    {% if section.settings.video != blank %}{{ section.settings.video | video_tag: controls: true, autoplay: false, loop: false, preload: 'none' }}
+    {% else %}<video controls playsinline preload="none" poster="https://cdn.shopify.com/s/files/1/0960/5778/6740/files/preview_images/af18b156c3864777b8d905edd00e8148.thumbnail.0000000000.jpg?v=1774979744&width=1080"><source src="https://cdn.shopify.com/videos/c/vp/af18b156c3864777b8d905edd00e8148/af18b156c3864777b8d905edd00e8148.HD-1080p-7.2Mbps-79948390.mp4" type="video/mp4"><track kind="descriptions" src="{{ 'bpm-application-description.vtt' | asset_url }}" srclang="en" label="{{ 'products.video_description' | t }}"></video>{% endif %}
+    {% if section.settings.caption != blank %}<figcaption>{{ section.settings.caption | escape }}</figcaption>{% endif %}
+  </figure>{% endif %}
+</div></section>
+{% schema %}
+{"name":"Bpm Application","settings":[
+ {"type":"text","id":"eyebrow","label":"Eyebrow","default":"PRESS PLAY ON YOUR ROUTINE"},
+ {"type":"textarea","id":"heading","label":"Heading","default":"A little goes\na long way."},
+ {"type":"text","id":"intro","label":"Introduction","default":"See the texture. See the amount. See how it goes on."},
+ {"type":"video","id":"video","label":"Shopify-hosted video override"},
+ {"type":"checkbox","id":"use_source_video","label":"Use original BPM application video if no override","default":true},
+ {"type":"text","id":"caption","label":"Video description","default":"A pea-sized amount, shown up close. The cream is spread onto skin until it absorbs."},
+ {"type":"text","id":"note","label":"Video note","default":"BPM’s original application video · 15 seconds"}
+],"blocks":[{"type":"step","name":"Application step","settings":[{"type":"text","id":"heading","label":"Heading"},{"type":"textarea","id":"body","label":"Approved directions"}]}],"max_blocks":6,"presets":[{"name":"Bpm Application"}]}
+{% endschema %}

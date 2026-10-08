@@ -39,7 +39,11 @@
     "add_bag": "Add to bag",
     "plan_unavailable": "A compatible purchase plan is not available for this variant.",
     "full_notes": "THE FULL PRODUCT NOTES",
-    "details": "The details, in full."
+    "details": "The details, in full.",
+    "texture_alt": "Close-up of BPM cream texture",
+    "formula_alt": "Editorial still life of golden oil and fine pale powder on a warm yellow surface",
+    "metal_alt": "BPM metal deodorant tube",
+    "video_description": "English visual description"
   },
   "newsletter": {
     "success": "Thanks for signing up. Check your inbox for any confirmation required."

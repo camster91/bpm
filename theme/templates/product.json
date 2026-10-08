@@ -1,1 +1,146 @@
-{"sections":{"main":{"type":"bpm-sites-product","settings":{}},"reviews":{"type":"bpm-app-region","settings":{"constrain_width":true,"padding":72}}},"order":["main","reviews"]}
+{
+  "sections": {
+    "main": {
+      "type": "bpm-sites-product",
+      "settings": {
+        "show_description": false
+      }
+    },
+    "reviews": {
+      "type": "bpm-app-region",
+      "settings": {
+        "constrain_width": true,
+        "padding": 72
+      }
+    },
+    "benefits": {
+      "type": "bpm-sites-pdp-benefits",
+      "settings": {},
+      "blocks": {
+        "0": {
+          "type": "benefit",
+          "settings": {
+            "source_art": "texture",
+            "eyebrow": "01 / THE FEEL",
+            "heading": "Smooth moves.",
+            "body": "A cream that spreads easily and absorbs quickly, without a waxy coating."
+          }
+        },
+        "1": {
+          "type": "benefit",
+          "settings": {
+            "source_art": "formula",
+            "eyebrow": "02 / THE FORMULA",
+            "heading": "Every ingredient has a job.",
+            "body": "Odour control, moisture absorption and skin feel. No baking soda, waxes or fillers."
+          }
+        },
+        "2": {
+          "type": "benefit",
+          "settings": {
+            "source_art": "metal",
+            "eyebrow": "03 / THE FORMAT",
+            "heading": "A different kind of tube.",
+            "body": "Metal packaging and a small squeeze. A considered alternative to the usual plastic stick."
+          }
+        }
+      },
+      "block_order": [
+        "0",
+        "1",
+        "2"
+      ]
+    },
+    "application": {
+      "type": "bpm-sites-pdp-application",
+      "settings": {},
+      "blocks": {
+        "0": {
+          "type": "step",
+          "settings": {
+            "heading": "Squeeze a little.",
+            "body": "Start with a pea-sized amount on your fingertip or a small spoon."
+          }
+        },
+        "1": {
+          "type": "step",
+          "settings": {
+            "heading": "Swipe it on.",
+            "body": "Apply to your underarms, then massage it in."
+          }
+        },
+        "2": {
+          "type": "step",
+          "settings": {
+            "heading": "Find your rhythm.",
+            "body": "Start small and adjust the amount if needed."
+          }
+        }
+      },
+      "block_order": [
+        "0",
+        "1",
+        "2"
+      ]
+    },
+    "scent": {
+      "type": "bpm-sites-pdp-scent",
+      "settings": {},
+      "blocks": {},
+      "block_order": []
+    },
+    "formula": {
+      "type": "bpm-sites-pdp-formula",
+      "settings": {},
+      "blocks": {
+        "0": {
+          "type": "role",
+          "settings": {
+            "heading": "Control odour.",
+            "body": "Magnesium hydroxide helps neutralise odour. Zinc ricinoleate helps trap it."
+          }
+        },
+        "1": {
+          "type": "role",
+          "settings": {
+            "heading": "Absorb moisture.",
+            "body": "Tapioca starch and kaolin help absorb moisture and give the cream a drier feel."
+          }
+        },
+        "2": {
+          "type": "role",
+          "settings": {
+            "heading": "Keep it smooth.",
+            "body": "Fractionated coconut oil gives the formula glide. Sunflower oil helps soften skin."
+          }
+        },
+        "3": {
+          "type": "role",
+          "settings": {
+            "heading": "Hold it together.",
+            "body": "Plant-based thickeners and olive-derived ingredients help keep the texture creamy and even."
+          }
+        }
+      },
+      "block_order": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    "notes": {
+      "type": "bpm-sites-product-notes",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "benefits",
+    "application",
+    "scent",
+    "formula",
+    "reviews",
+    "notes"
+  ]
+}
