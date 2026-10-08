@@ -51,8 +51,8 @@ const mappedArticles=JSON.parse(await readFile(resolve(theme,'../reference-site/
 function pickerFixture(type, handle) {
  if(typeof handle !== 'string' || !handle) return handle;
  if(type==='product') {const p=mappedProducts.find(p=>p.handle===handle); return p ? {id:p.id,title:p.title+' — fixture',url:'/sites-product.html',price:Math.round(Number(p.variants[0].price)*100),price_varies:false,available:p.variants.some(v=>v.available),featured_image:{src:p.images[0].src}} : null;}
- if(type==='article') {const n=mappedArticles.findIndex(a=>a.url.endsWith('/blogs/'+handle));return n<0?null:{title:mappedArticles[n].title+' — fixture',url:`/sites-article-${n}.html`,published_at:mappedArticles[n].date+'T12:00:00-04:00'};}
- if(type==='blog') return {title:'The Breakdown — fixture',url:'/sites-blog.html'};
+ if(type==='article') {const n=mappedArticles.findIndex(a=>a.url.endsWith('/blogs/'+handle));return n<0?null:{title:mappedArticles[n].title,url:`/sites-article-${n}.html`,published_at:mappedArticles[n].date+'T12:00:00-04:00'};}
+ if(type==='blog') return {title:'The Breakdown',url:'/sites-blog.html'};
  if(type==='page' && handle==='about-us') return {id:705670807924,title:'About — fixture',url:'/sites-about.html'};
  if(type==='collection') return {title:handle+' — fixture',url:'/sites-collection.html',products:fixtureResourceBindings.products.filter(p=>p.pack_count===(handle==='the-two-track-collection'?2:4)).map(p=>pickerFixture('product',p.handle))};
  if(type==='video') return {fixture:true};

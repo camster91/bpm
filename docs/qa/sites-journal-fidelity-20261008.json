@@ -1,0 +1,368 @@
+{
+  "scope": "Source vs local snapshot-based presentation only; fixture links/native resources are mocked",
+  "rows": [
+    {
+      "width": 375,
+      "source": {
+        "cards": [
+          {
+            "card": {
+              "height": 458,
+              "width": 327
+            },
+            "heading": {
+              "height": 90,
+              "width": 327
+            },
+            "image": {
+              "fit": "cover",
+              "height": 240,
+              "width": 327
+            },
+            "link": "/articles/underarm-skin-care-ingredients.html",
+            "metadata": "2026-09-26 / THE BREAKDOWN",
+            "title": "Your Underarms Are Skin. We Formulated BPM That Way."
+          },
+          {
+            "card": {
+              "height": 458,
+              "width": 327
+            },
+            "heading": {
+              "height": 90,
+              "width": 327
+            },
+            "image": {
+              "fit": "contain",
+              "height": 240,
+              "width": 327
+            },
+            "link": "/articles/the-name-behind-bpm-indigenous-ownership-and-finding-my-way-back.html",
+            "metadata": "2026-09-17 / THE BREAKDOWN",
+            "title": "The Name Behind BPM: Indigenous Ownership and Finding My Way Back"
+          },
+          {
+            "card": {
+              "height": 458,
+              "width": 327
+            },
+            "heading": {
+              "height": 90,
+              "width": 327
+            },
+            "image": {
+              "fit": "cover",
+              "height": 240,
+              "width": 327
+            },
+            "link": "/articles/the-math-behind-fair-pricing-bpm-vs-native-vs-schmidts.html",
+            "metadata": "2026-09-09 / THE BREAKDOWN",
+            "title": "The Math Behind Fair Pricing: BPM vs Native vs Schmidt's"
+          }
+        ],
+        "viewport": 375
+      },
+      "candidate": {
+        "cards": [
+          {
+            "card": {
+              "height": 458,
+              "width": 327
+            },
+            "heading": {
+              "height": 90,
+              "width": 327
+            },
+            "image": {
+              "fit": "cover",
+              "height": 240,
+              "width": 327
+            },
+            "link": "/sites-article-0.html",
+            "metadata": "2026-09-26 / The Breakdown",
+            "title": "Your Underarms Are Skin. We Formulated BPM That Way."
+          },
+          {
+            "card": {
+              "height": 458,
+              "width": 327
+            },
+            "heading": {
+              "height": 90,
+              "width": 327
+            },
+            "image": {
+              "fit": "contain",
+              "height": 240,
+              "width": 327
+            },
+            "link": "/sites-article-1.html",
+            "metadata": "2026-09-17 / The Breakdown",
+            "title": "The Name Behind BPM: Indigenous Ownership and Finding My Way Back"
+          },
+          {
+            "card": {
+              "height": 458,
+              "width": 327
+            },
+            "heading": {
+              "height": 90,
+              "width": 327
+            },
+            "image": {
+              "fit": "cover",
+              "height": 240,
+              "width": 327
+            },
+            "link": "/sites-article-2.html",
+            "metadata": "2026-09-09 / The Breakdown",
+            "title": "The Math Behind Fair Pricing: BPM vs Native vs Schmidt's"
+          }
+        ],
+        "viewport": 375
+      }
+    },
+    {
+      "width": 820,
+      "source": {
+        "cards": [
+          {
+            "card": {
+              "height": 444,
+              "width": 359
+            },
+            "heading": {
+              "height": 50,
+              "width": 359
+            },
+            "image": {
+              "fit": "cover",
+              "height": 240,
+              "width": 359
+            },
+            "link": "/articles/underarm-skin-care-ingredients.html",
+            "metadata": "2026-09-26 / THE BREAKDOWN",
+            "title": "Your Underarms Are Skin. We Formulated BPM That Way."
+          },
+          {
+            "card": {
+              "height": 444,
+              "width": 359
+            },
+            "heading": {
+              "height": 76,
+              "width": 359
+            },
+            "image": {
+              "fit": "contain",
+              "height": 240,
+              "width": 359
+            },
+            "link": "/articles/the-name-behind-bpm-indigenous-ownership-and-finding-my-way-back.html",
+            "metadata": "2026-09-17 / THE BREAKDOWN",
+            "title": "The Name Behind BPM: Indigenous Ownership and Finding My Way Back"
+          },
+          {
+            "card": {
+              "height": 419,
+              "width": 359
+            },
+            "heading": {
+              "height": 50,
+              "width": 359
+            },
+            "image": {
+              "fit": "cover",
+              "height": 240,
+              "width": 359
+            },
+            "link": "/articles/the-math-behind-fair-pricing-bpm-vs-native-vs-schmidts.html",
+            "metadata": "2026-09-09 / THE BREAKDOWN",
+            "title": "The Math Behind Fair Pricing: BPM vs Native vs Schmidt's"
+          }
+        ],
+        "viewport": 820
+      },
+      "candidate": {
+        "cards": [
+          {
+            "card": {
+              "height": 444,
+              "width": 359
+            },
+            "heading": {
+              "height": 50,
+              "width": 359
+            },
+            "image": {
+              "fit": "cover",
+              "height": 240,
+              "width": 359
+            },
+            "link": "/sites-article-0.html",
+            "metadata": "2026-09-26 / The Breakdown",
+            "title": "Your Underarms Are Skin. We Formulated BPM That Way."
+          },
+          {
+            "card": {
+              "height": 444,
+              "width": 359
+            },
+            "heading": {
+              "height": 76,
+              "width": 359
+            },
+            "image": {
+              "fit": "contain",
+              "height": 240,
+              "width": 359
+            },
+            "link": "/sites-article-1.html",
+            "metadata": "2026-09-17 / The Breakdown",
+            "title": "The Name Behind BPM: Indigenous Ownership and Finding My Way Back"
+          },
+          {
+            "card": {
+              "height": 419,
+              "width": 359
+            },
+            "heading": {
+              "height": 50,
+              "width": 359
+            },
+            "image": {
+              "fit": "cover",
+              "height": 240,
+              "width": 359
+            },
+            "link": "/sites-article-2.html",
+            "metadata": "2026-09-09 / The Breakdown",
+            "title": "The Math Behind Fair Pricing: BPM vs Native vs Schmidt's"
+          }
+        ],
+        "viewport": 820
+      }
+    },
+    {
+      "width": 1440,
+      "source": {
+        "cards": [
+          {
+            "card": {
+              "height": 455,
+              "width": 419
+            },
+            "heading": {
+              "height": 58,
+              "width": 419
+            },
+            "image": {
+              "fit": "cover",
+              "height": 240,
+              "width": 419
+            },
+            "link": "/articles/underarm-skin-care-ingredients.html",
+            "metadata": "2026-09-26 / THE BREAKDOWN",
+            "title": "Your Underarms Are Skin. We Formulated BPM That Way."
+          },
+          {
+            "card": {
+              "height": 455,
+              "width": 419
+            },
+            "heading": {
+              "height": 86,
+              "width": 419
+            },
+            "image": {
+              "fit": "contain",
+              "height": 240,
+              "width": 419
+            },
+            "link": "/articles/the-name-behind-bpm-indigenous-ownership-and-finding-my-way-back.html",
+            "metadata": "2026-09-17 / THE BREAKDOWN",
+            "title": "The Name Behind BPM: Indigenous Ownership and Finding My Way Back"
+          },
+          {
+            "card": {
+              "height": 455,
+              "width": 419
+            },
+            "heading": {
+              "height": 58,
+              "width": 419
+            },
+            "image": {
+              "fit": "cover",
+              "height": 240,
+              "width": 419
+            },
+            "link": "/articles/the-math-behind-fair-pricing-bpm-vs-native-vs-schmidts.html",
+            "metadata": "2026-09-09 / THE BREAKDOWN",
+            "title": "The Math Behind Fair Pricing: BPM vs Native vs Schmidt's"
+          }
+        ],
+        "viewport": 1440
+      },
+      "candidate": {
+        "cards": [
+          {
+            "card": {
+              "height": 455,
+              "width": 419
+            },
+            "heading": {
+              "height": 58,
+              "width": 419
+            },
+            "image": {
+              "fit": "cover",
+              "height": 240,
+              "width": 419
+            },
+            "link": "/sites-article-0.html",
+            "metadata": "2026-09-26 / The Breakdown",
+            "title": "Your Underarms Are Skin. We Formulated BPM That Way."
+          },
+          {
+            "card": {
+              "height": 455,
+              "width": 419
+            },
+            "heading": {
+              "height": 86,
+              "width": 419
+            },
+            "image": {
+              "fit": "contain",
+              "height": 240,
+              "width": 419
+            },
+            "link": "/sites-article-1.html",
+            "metadata": "2026-09-17 / The Breakdown",
+            "title": "The Name Behind BPM: Indigenous Ownership and Finding My Way Back"
+          },
+          {
+            "card": {
+              "height": 455,
+              "width": 419
+            },
+            "heading": {
+              "height": 58,
+              "width": 419
+            },
+            "image": {
+              "fit": "cover",
+              "height": 240,
+              "width": 419
+            },
+            "link": "/sites-article-2.html",
+            "metadata": "2026-09-09 / The Breakdown",
+            "title": "The Math Behind Fair Pricing: BPM vs Native vs Schmidt's"
+          }
+        ],
+        "viewport": 1440
+      }
+    }
+  ]
+}
