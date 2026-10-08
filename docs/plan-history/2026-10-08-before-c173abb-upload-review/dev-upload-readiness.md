@@ -1,6 +1,6 @@
 # Custom Sites theme — development upload review
 
-The current frozen candidate includes the ownership-page alignment/About-link and readable dark-section CTA corrections. Earlier snapshots and command reviews remain preserved. No prior upload command has been executed.
+Current local ownership-page alignment/About-link corrections exceed the 0670942 snapshot reviewed below. Refresh the candidate before uploading current code. The previous command has not been executed.
 
 The current frozen candidate includes native cart bundle components and line-error presentation. Previous candidate snapshots and commands remain preserved historical evidence. No upload has occurred; confirmation must refer to the revised command below.
 
@@ -8,22 +8,22 @@ This review supersedes the repaired-Dawn upload command. Its prior text is prese
 
 ## Current snapshot revision — 8 October 2026
 
-The previous October 7 and October 8 snapshots are preserved. This candidate includes the global 44px header targets, source card headings, FAQ geometry, native price narration and responsive section copy, native cart bundle components and line errors. Source commit: `c173abb79759dcb09be06568bc613ca83585b86e`; theme tree: `7bda09812a2d89638cb20419db15b26484dd3366`. It contains 160 files, 45,072,991 bytes. Manifest: `qa/dev-candidate-manifest-20261008-c173abb.json`. Local verification confirms exact committed bytes, full file set, hashes and explicit noindex; `matchesCurrentTheme: true`. Frozen-path Theme Check: zero errors, one existing Adobe Typekit warning. Prior commands remain unexecuted. This revised exact command needs separate confirmation.
+The previous October 7 and October 8 snapshots are preserved. This candidate includes the global 44px header targets, source card headings, FAQ geometry, native price narration and responsive section copy, native cart bundle components and line errors. Source commit: `0670942bb64d25493084198f62881fc80eeacf21`; theme tree: `4b06f9c5f23d6058fda9dabd2827e6979c1d9305`. It contains 160 files, 45,072,692 bytes. Manifest: `qa/dev-candidate-manifest-20261008-0670942.json`. Local verification confirms exact committed bytes, full file set, hashes and explicit noindex; `matchesCurrentTheme: true`. Frozen-path Theme Check: zero errors, one existing Adobe Typekit warning. Prior commands remain unexecuted. This revised exact command needs separate confirmation.
 
 ## Local candidate and freeze
 
-The candidate is committed `theme/`, built against Sites and recovered source. Fresh checks pass: 332 Liquid rendering checks, motion/gift-card checks, 97 captured resource bindings and 9 Judge.me configuration bindings; installed Theme Check has 0 errors and 1 existing Adobe Typekit RemoteAsset warning. Current native data, editor and app runtime are not proved by these tests.
+The candidate is committed `theme/`, built against Sites and recovered source. Fresh checks pass: 332 Liquid rendering checks, motion/gift-card checks, 96 captured resource bindings and 9 Judge.me configuration bindings; installed Theme Check has 0 errors and 1 existing Adobe Typekit RemoteAsset warning. Current native data, editor and app runtime are not proved by these tests.
 
 Prepare the frozen candidate locally:
 
 ```sh
-node scripts/prepare-dev-theme.mjs /tmp/bpm-sites-dev-candidate-20261008-c173abb
+node scripts/prepare-dev-theme.mjs /tmp/bpm-sites-dev-candidate-20261008-0670942
 ```
 
 The script refuses an existing destination or dirty theme, exports committed Shopify directories only, preserves explicit development noindex, rejects non-regular files, makes snapshot files read-only, and writes `manifest.json` outside the upload directory. The manifest records source commit/tree and every transmitted file's SHA-256 and size. README, repository documents, source reference, tests, protected audits and Git history are excluded. Verify it before upload:
 
 ```sh
-node scripts/verify-dev-theme.mjs /tmp/bpm-sites-dev-candidate-20261008-c173abb
+node scripts/verify-dev-theme.mjs /tmp/bpm-sites-dev-candidate-20261008-0670942
 ```
 
 The verifier checks the exact file set, sizes, hashes, bytes against the source commit, explicit noindex and current theme-tree identity. A valid historical snapshot can still report `matchesCurrentTheme: false`; do not substitute it for the reviewed current candidate. Preparation and verification are local only.
@@ -31,7 +31,7 @@ The verifier checks the exact file set, sizes, hashes, bytes against the source 
 ## Prepared exact upload command — not executed
 
 ```sh
-CI=1 SHOPIFY_CLI_FORCE_AUTO_UPGRADE=0 shopify theme push --store qef4ye-yg.myshopify.com --path /tmp/bpm-sites-dev-candidate-20261008-c173abb/theme --development --development-context bpm-sites-custom-qa-20261008 --strict --json
+CI=1 SHOPIFY_CLI_FORCE_AUTO_UPGRADE=0 shopify theme push --store qef4ye-yg.myshopify.com --path /tmp/bpm-sites-dev-candidate-20261008-0670942/theme --development --development-context bpm-sites-custom-qa-20261008 --strict --json
 ```
 
 Target must be confirmed as BPM's `qef4ye-yg.myshopify.com` before execution. Transmits that store identifier, authenticated theme requests, and every file in the manifest: Liquid, JSON templates/sections, CSS/JavaScript, images/fonts, locales and theme settings including resource handles and app extension references. It creates a development theme for this context or replaces that context's existing development theme. No live/publish/theme-ID flags are supplied. Development previews share the store's products, apps and store-wide settings; they are not an isolated commerce backend.
