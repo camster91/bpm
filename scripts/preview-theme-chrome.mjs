@@ -51,7 +51,7 @@ async function section(name, overrides = {}, blocks = [], context = {}) {
   const source = await readFile(join(theme, 'sections', `${name}.liquid`), 'utf8');
   const schema = JSON.parse(source.match(/{%\s*schema\s*%}([\s\S]*?){%\s*endschema\s*%}/)[1]);
   const values = Object.fromEntries(schema.settings.filter(field => field.id).map(field => [field.id, field.default]));
-  return engine.parseAndRender(clean(source), { ...common, ...context, section: { id: `preview-${name}`, settings: pickerSettings(schema.settings,{ ...values, ...overrides }), blocks: blocks.map(block=>({...block,settings:pickerSettings(schema.blocks?.find(b=>b.type===block.type)?.settings || [],block.settings)})) } });
+  return engine.parseAndRender(clean(source), { ...common, ...context, section: { id: context.preview_section_id || `preview-${name}`, settings: pickerSettings(schema.settings,{ ...values, ...overrides }), blocks: blocks.map(block=>({...block,settings:pickerSettings(schema.blocks?.find(b=>b.type===block.type)?.settings || [],block.settings)})) } });
 }
 const header = await section('bpm-announcement', { text: 'Now Shipping Canada Wide | Hand Made' }) + await section('bpm-header', { menu });
 const footer = await section('bpm-footer', { menu });
@@ -216,3 +216,8 @@ await writeFile(join(output,'sites-home-bindings.html'),await engine.parseAndRen
 const boundCollection=JSON.parse(await readFile(join(theme,'templates/collection.rotation.json'),'utf8')).sections.main;
 const boundCollectionBody=await section(boundCollection.type,boundCollection.settings,boundCollection.block_order.map(key=>boundCollection.blocks[key]),{collection:fixtureCatalogue,routes:previewCatalogueRoutes,paginate:{pages:1}});
 await writeFile(join(output,'sites-collection-bindings.html'),await engine.parseAndRender(code,{...common,content_for_layout:'<p class="wrap fine">Committed collection mappings with recovered source cartons. Products, prices, filtering and pagination remain local fixtures.</p>'+boundCollectionBody.replace(/(<button[^>]*type="submit")/g,'$1 disabled'),preview_header:sitesHeader,preview_footer:sitesFooter,page_title:'Source carton catalogue fixture'}));
+
+const wholesaleTemplate=JSON.parse(await readFile(join(theme,'templates/page.wholesale.json'),'utf8'));
+let wholesaleBody='<p class="wrap fine">Local wholesale migration fixture. Terms are preserved from the September 15, 2026 source sheet and require current owner acceptance.</p>';
+for(const key of wholesaleTemplate.order){const config=wholesaleTemplate.sections[key];wholesaleBody+=await section(config.type,config.settings,(config.block_order||[]).map(id=>config.blocks[id]),{page:{title:'Wholesale'},preview_section_id:'wholesale-'+key});}
+await writeFile(join(output,'sites-wholesale.html'),await engine.parseAndRender(code,{...common,content_for_layout:wholesaleBody,preview_header:sitesHeader,preview_footer:sitesFooter,page_title:'Wholesale migration fixture'}));

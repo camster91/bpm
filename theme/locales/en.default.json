@@ -16,7 +16,8 @@
     "bag": "Bag",
     "bag_count": "Shopping bag, {{ count }} items",
     "privacy": "Privacy policy",
-    "pagination": "Pagination"
+    "pagination": "Pagination",
+    "table_scroll": "Scroll horizontally to see every column."
   },
   "accessibility": {
     "new_window": "Opens in a new window"

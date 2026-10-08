@@ -1,0 +1,201 @@
+{
+  "sections": {
+    "opening": {
+      "type": "bpm-sites-page-opening",
+      "settings": {
+        "heading": "Wholesale pricing sheet",
+        "intro": "BPM Natural Deodorant is available for wholesale across Canada, in two scent options, Bergamot + Lime and Unscented. Retailers receive a 50% margin at MSRP, with a 12 unit single scent case pack and a one case per scent minimum on opening orders. Orders of two cases or more ship free, and every new account receives one free tester per variety on their first order. Full pricing and order terms are outlined below."
+      }
+    },
+    "table_0": {
+      "type": "bpm-sites-data-table",
+      "settings": {
+        "heading": "PRODUCT AND PRICING",
+        "columns": "5",
+        "header_1": "SKU",
+        "header_2": "MSRP (CAD)",
+        "header_3": "Wholesale price/unit (CAD)",
+        "header_4": "Case pack",
+        "header_5": "Case price (CAD)"
+      },
+      "blocks": {
+        "0": {
+          "type": "row",
+          "settings": {
+            "cell_1": "Bergamot & Lime, 76g",
+            "cell_2": "$23.99",
+            "cell_3": "$12.00 \n(50% retail margin)",
+            "cell_4": "12 units, single scent",
+            "cell_5": "$144.00"
+          }
+        },
+        "1": {
+          "type": "row",
+          "settings": {
+            "cell_1": "Unscented, 76g",
+            "cell_2": "$23.99",
+            "cell_3": "$12.00 \n (50% retail margin)",
+            "cell_4": "12 units, single scent",
+            "cell_5": "$144.00"
+          }
+        }
+      },
+      "block_order": [
+        "0",
+        "1"
+      ]
+    },
+    "table_1": {
+      "type": "bpm-sites-data-table",
+      "settings": {
+        "heading": "ORDER TERMS",
+        "columns": "2",
+        "header_1": "Term",
+        "header_2": "Description"
+      },
+      "blocks": {
+        "0": {
+          "type": "row",
+          "settings": {
+            "cell_1": "Minimum opening order",
+            "cell_2": "1 case (12 units) per scent selected, $144.00 per scent"
+          }
+        },
+        "1": {
+          "type": "row",
+          "settings": {
+            "cell_1": "Reorder minimum",
+            "cell_2": "Same as opening order, 1 case per scent"
+          }
+        },
+        "2": {
+          "type": "row",
+          "settings": {
+            "cell_1": "Free shipping",
+            "cell_2": "2 case packs (24 units) per order, $288.00"
+          }
+        },
+        "3": {
+          "type": "row",
+          "settings": {
+            "cell_1": "Shipping below threshold",
+            "cell_2": "Flat fee of $6.00 CAD for a single case order"
+          }
+        },
+        "4": {
+          "type": "row",
+          "settings": {
+            "cell_1": "Payment terms",
+            "cell_2": "First order prepaid. Net 15 or Net 30 available on approval for reorders"
+          }
+        },
+        "5": {
+          "type": "row",
+          "settings": {
+            "cell_1": "Lead time",
+            "cell_2": "3 to 5 business days in stock; up to 7 business days for orders of 72+ units"
+          }
+        },
+        "6": {
+          "type": "row",
+          "settings": {
+            "cell_1": "Shelf life",
+            "cell_2": "Targeting 18 months from manufacture. Currently undergoing stability testing to confirm."
+          }
+        },
+        "7": {
+          "type": "row",
+          "settings": {
+            "cell_1": "Returns",
+            "cell_2": "Unopened, resellable returns not accepted unless pre approved in writing"
+          }
+        },
+        "8": {
+          "type": "row",
+          "settings": {
+            "cell_1": "Damaged or incorrect items",
+            "cell_2": "Report within 7 days of receipt with photos, for replacement or credit"
+          }
+        },
+        "9": {
+          "type": "row",
+          "settings": {
+            "cell_1": "Tester policy",
+            "cell_2": "One free tester per variety, included only on a retailer's first order, regardless of order size. Additional testers, or testers on any reorder, are $6.00 CAD each"
+          }
+        },
+        "10": {
+          "type": "row",
+          "settings": {
+            "cell_1": "Distributor / volume pricing",
+            "cell_2": "Available on request, quoted separately. Not printed on this sheet"
+          }
+        }
+      },
+      "block_order": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10"
+      ]
+    },
+    "table_2": {
+      "type": "bpm-sites-data-table",
+      "settings": {
+        "heading": "CONTACT INFO",
+        "columns": "2",
+        "header_1": "",
+        "header_2": ""
+      },
+      "blocks": {
+        "0": {
+          "type": "row",
+          "settings": {
+            "cell_1": "Email:",
+            "cell_2": "wholesale@bpmdeodorant.com"
+          }
+        },
+        "1": {
+          "type": "row",
+          "settings": {
+            "cell_1": "Phone:",
+            "cell_2": "+1 (613) 762-2601"
+          }
+        },
+        "2": {
+          "type": "row",
+          "settings": {
+            "cell_1": "Name:",
+            "cell_2": "Corey Goss"
+          }
+        }
+      },
+      "block_order": [
+        "0",
+        "1",
+        "2"
+      ]
+    },
+    "terms_date": {
+      "type": "bpm-sites-rich-split",
+      "settings": {
+        "heading": "Pricing and order terms",
+        "body": "<p><strong>Note</strong>: Pricing and order terms are subject to change without notice. This page reflects current terms as of September 15, 2026 and supersedes any prior version, including screenshots or saved copies.</p>"
+      }
+    }
+  },
+  "order": [
+    "opening",
+    "table_0",
+    "table_1",
+    "table_2",
+    "terms_date"
+  ]
+}

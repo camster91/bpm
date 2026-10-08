@@ -254,3 +254,11 @@ h3{font-family:inherit}
 
 .bpm-collections-opening h1 { overflow-wrap: anywhere; }
 @media(max-width:760px) { .bpm-collections-opening h1 { font-size: 32px; } }
+
+.bpm-table-section h2 { margin-bottom: 24px; }
+.bpm-data-table-wrap { max-width: 100%; overflow-x: auto; margin-top: 20px; }
+.bpm-data-table-wrap table { width: 100%; border-collapse: collapse; font-size: 16px; }
+.bpm-data-table-wrap th,.bpm-data-table-wrap td { border: 1px solid var(--line); padding: 16px; text-align: left; vertical-align: top; min-width: 140px; overflow-wrap: anywhere; }
+.bpm-data-table-wrap thead th { background: var(--butter); }
+.bpm-data-table-wrap tbody th { font-weight: 700; }
+.bpm-table-section + .bpm-table-section { padding-top: 0; }
