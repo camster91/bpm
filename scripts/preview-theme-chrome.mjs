@@ -34,11 +34,24 @@ for (const group of JSON.parse(await readFile(join(theme, 'config/settings_schem
 }
 const menu = { links: [{ title: 'Home', url: '/' }, { title: 'Shop', url: '/collections/all' }, { title: 'About Us', url: '/pages/about-us' }, { title: 'Contact Us', url: '/pages/contact' }] };
 const common = { settings, shop: { name: 'BPM Deodorant', customer_accounts_enabled: true }, routes: { root_url: '/', account_url: '/account', cart_url: '/cart', all_products_collection_url: '/collections/all' }, cart: { item_count: 0, currency: {iso_code: 'CAD'} }, request: { page_type: 'index', locale: { iso_code: 'en' } }, page_title: 'BPM chrome preview', current_page: 1, canonical_url: 'http://127.0.0.1:8892/', content_for_header: '', content_for_layout: '' };
+// Resource-picker emulation for local snapshots only; Shopify resolution is not verified.
+const mappedProducts=JSON.parse(await readFile(resolve(theme,'../reference-site/src/content/products.json'),'utf8'));
+const mappedArticles=JSON.parse(await readFile(resolve(theme,'../reference-site/src/content/articles.json'),'utf8'));
+function pickerFixture(type, handle) {
+ if(typeof handle !== 'string' || !handle) return handle;
+ if(type==='product') {const p=mappedProducts.find(p=>p.handle===handle); return p ? {id:p.id,title:p.title+' — fixture',url:'/sites-product.html',price:Math.round(Number(p.variants[0].price)*100),price_varies:false,available:p.variants.some(v=>v.available),featured_image:{src:p.images[0].src}} : null;}
+ if(type==='article') {const n=mappedArticles.findIndex(a=>a.url.endsWith('/blogs/'+handle));return n<0?null:{title:mappedArticles[n].title+' — fixture',url:`/sites-article-${n}.html`,published_at:mappedArticles[n].date+'T12:00:00-04:00'};}
+ if(type==='blog') return {title:'The Breakdown — fixture',url:'/sites-blog.html'};
+ if(type==='page' && handle==='about-us') return {title:'About — fixture',url:'/sites-about.html'};
+ if(type==='collection') return {title:handle+' — fixture',url:'/sites-collection.html'};
+ return handle;
+}
+function pickerSettings(fields, values) {return Object.fromEntries(Object.entries(values).map(([key,value])=>[key,pickerFixture(fields.find(f=>f.id===key)?.type,value)]));}
 async function section(name, overrides = {}, blocks = [], context = {}) {
   const source = await readFile(join(theme, 'sections', `${name}.liquid`), 'utf8');
   const schema = JSON.parse(source.match(/{%\s*schema\s*%}([\s\S]*?){%\s*endschema\s*%}/)[1]);
   const values = Object.fromEntries(schema.settings.filter(field => field.id).map(field => [field.id, field.default]));
-  return engine.parseAndRender(clean(source), { ...common, ...context, section: { id: `preview-${name}`, settings: { ...values, ...overrides }, blocks } });
+  return engine.parseAndRender(clean(source), { ...common, ...context, section: { id: `preview-${name}`, settings: pickerSettings(schema.settings,{ ...values, ...overrides }), blocks: blocks.map(block=>({...block,settings:pickerSettings(schema.blocks?.find(b=>b.type===block.type)?.settings || [],block.settings)})) } });
 }
 const header = await section('bpm-announcement', { text: 'Now Shipping Canada Wide | Hand Made' }) + await section('bpm-header', { menu });
 const footer = await section('bpm-footer', { menu });
@@ -143,7 +156,7 @@ purchaseProduct.metafields = {custom:{
  whats_inside_description:{type:'rich_text_field',value:{type:'root',children:[{type:'paragraph'}]},fixtureHtml:'<p>Local fixture product-specific notes with <strong>rich formatting</strong>.</p>'},
  shipping:{value:'Local fixture shipping note.\nCurrent policy remains the authoritative source.'}
 }};
-let purchaseBody = await section('bpm-sites-product',{image:{src:'/fixture-bergamot.svg'},pack_label:'1 × 76 g',intro:'Bright citrus + quiet cedarwood.',show_description:false,fact_1:'Fabricated quick fact for local layout review.',jump_menu:{links:[{url:'#formula-preview-bpm-sites-pdp-formula',title:'Ingredients'},{url:'#creator-stories-preview-bpm-sites-pdp-creators',title:'Creator stories'}]}},[],{product:purchaseProduct,cart:{taxes_included:false},form:{}});
+let purchaseBody = await section('bpm-sites-product',{image:{src:'/fixture-bergamot.svg'},pack_label:'1 × 76 g',intro:'Bright citrus + quiet cedarwood.',show_description:false,fact_1:'Fabricated quick fact for local layout review.',jump_menu:{links:[{url:'#ProductFormula-100',title:'Ingredients'},{url:'#creator-stories-preview-bpm-sites-pdp-creators',title:'Creator stories'}]}},[],{product:purchaseProduct,cart:{taxes_included:false},form:{}});
 const duoArt = await Promise.all(['bergamot','unscented'].map(name=>readFile(join(output,`fixture-${name}.svg`))));
 await writeFile(join(output,'fixture-duo.svg'),`<svg xmlns="http://www.w3.org/2000/svg" width="800" height="700" viewBox="0 0 800 700"><image x="50" y="0" width="330" height="700" href="data:image/svg+xml;base64,${duoArt[0].toString('base64')}"/><image x="420" y="0" width="330" height="700" href="data:image/svg+xml;base64,${duoArt[1].toString('base64')}"/></svg>`);
 const pdpTemplate = JSON.parse(await readFile(join(theme,'templates/product.json'),'utf8'));
@@ -195,3 +208,7 @@ await writeFile(join(output,'sites-password.html'),await engine.parseAndRender(u
 let giftBody=await engine.parseAndRender(clean(await readFile(join(theme,'templates/gift_card.liquid'),'utf8')),{...common,gift_card:{code:'TESTONLY00000000',balance:3500,initial_value:5000,enabled:true,expired:false,expires_on:'2027-01-01T12:00:00-05:00'}});
 giftBody=giftBody.replace(/<script src="\/shopify-native\/vendor\/qrcode.js" defer><\/script>/,'');
 await writeFile(join(output,'sites-gift-card.html'),await engine.parseAndRender(utilityLayout,{...common,page_title:'Gift card — local fixture',content_for_layout:'<p class="wrap fine">Fabricated gift card. Code has no value. Native QR, Wallet and checkout are not verified.</p>'+giftBody}));
+
+let mappedHomeBody='<p class="wrap fine">Committed resource bindings emulated from recovered snapshots. Historical prices and media are fixtures; actual Shopify resolution is pending.</p>';
+for(const id of homeTemplate.order){const config=homeTemplate.sections[id];mappedHomeBody+=await section(config.type,config.settings,(config.block_order||[]).map(key=>config.blocks[key]));}
+await writeFile(join(output,'sites-home-bindings.html'),await engine.parseAndRender(code,{...common,content_for_layout:mappedHomeBody,preview_header:sitesHeader,preview_footer:sitesFooter,page_title:'Bound resources — local fixture'}));

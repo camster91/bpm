@@ -1,5 +1,5 @@
 {{ 'bpm-pdp.css' | asset_url | stylesheet_tag }}
-<section class="bpm-pdp formula" id="formula-{{ section.id }}"><div class="wrap">
+<section class="bpm-pdp formula" id="ProductFormula-{{ product.id }}"><div class="wrap">
   <div class="section-intro"><p class="eyebrow">{{ section.settings.eyebrow | escape }}</p><h2>{{ section.settings.heading | escape }}</h2><p>{{ section.settings.intro | escape }}</p></div>
   <div class="formula-grid">{% for block in section.blocks %}{% if block.settings.heading != blank %}<article {{ block.shopify_attributes }}><span aria-hidden="true">{{ forloop.index | prepend: '0' }}</span><h3>{{ block.settings.heading | escape }}</h3><p>{{ block.settings.body | escape }}</p></article>{% endif %}{% endfor %}</div>
   {% assign native_ingredients = product.metafields.custom.ingredients %}

@@ -9,7 +9,8 @@
     "header": {
       "type": "bpm-sites-header",
       "settings": {
-        "menu": "main-menu"
+        "menu": "main-menu",
+        "show_account": true
       }
     }
   },

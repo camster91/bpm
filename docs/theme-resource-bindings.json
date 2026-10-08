@@ -1,0 +1,70 @@
+{
+  "evidence": "Recovered Sites product/article snapshots and protected native theme export; current authenticated resolution pending",
+  "products": [
+    {
+      "id": 15222327476596,
+      "handle": "four-on-the-floor-mixed-scent-4-tube-deodorant-bundle",
+      "pack_count": 4
+    },
+    {
+      "id": 15222328361332,
+      "handle": "citrus-on-repeat-family-pack-4-tube-bergamot-lime-deodorant-bundle",
+      "pack_count": 4
+    },
+    {
+      "id": 15222329180532,
+      "handle": "silent-on-repeat-family-pack-4-tube-unscented-deodorant-bundle",
+      "pack_count": 4
+    },
+    {
+      "id": 15222739599732,
+      "handle": "3-4-time",
+      "pack_count": 4
+    },
+    {
+      "id": 15141686444404,
+      "handle": "silent-repeat",
+      "pack_count": 2
+    },
+    {
+      "id": 15141668815220,
+      "handle": "citrus-repeat",
+      "pack_count": 2
+    },
+    {
+      "id": 15141732581748,
+      "handle": "side-a-side-b",
+      "pack_count": 2
+    },
+    {
+      "id": 14925587775860,
+      "handle": "bpm-natural-deodorant-unscented",
+      "pack_count": 1
+    },
+    {
+      "id": 14880059228532,
+      "handle": "bpm-natural-deodorant-bergamot-lime",
+      "pack_count": 1
+    }
+  ],
+  "articles": [
+    "news/underarm-skin-care-ingredients",
+    "news/the-name-behind-bpm-indigenous-ownership-and-finding-my-way-back",
+    "news/the-math-behind-fair-pricing-bpm-vs-native-vs-schmidts"
+  ],
+  "collections": [
+    "the-two-track-collection",
+    "the-four-count"
+  ],
+  "pages": [
+    "about-us"
+  ],
+  "unresolved": [
+    "Indigenous-owned native page handle",
+    "All policy page/menu destinations",
+    "Native app-block identifiers and provider configuration",
+    "Framed source packaging media bindings",
+    "Remaining product-specific section configuration",
+    "Campaign and wholesale page template coverage"
+  ]
+}

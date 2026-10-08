@@ -1,1 +1,100 @@
-{"sections":{"main":{"type":"bpm-sites-collection","settings":{"eyebrow":"SHOP ALL TRACKS","heading":"Pick your\nrotation.","intro":"Two scents. Singles, duos and four-counts.\nFind the arrangement that works for you."}}},"order":["main"]}
+{
+  "sections": {
+    "main": {
+      "type": "bpm-sites-collection",
+      "settings": {
+        "eyebrow": "SHOP ALL TRACKS",
+        "heading": "Pick your\nrotation.",
+        "intro": "Two scents. Singles, duos and four-counts.\nFind the arrangement that works for you."
+      },
+      "blocks": {
+        "15222327476596": {
+          "type": "product_art",
+          "settings": {
+            "product": "four-on-the-floor-mixed-scent-4-tube-deodorant-bundle",
+            "pack_label": "4 × 76 g",
+            "background": "#acb228"
+          }
+        },
+        "15222328361332": {
+          "type": "product_art",
+          "settings": {
+            "product": "citrus-on-repeat-family-pack-4-tube-bergamot-lime-deodorant-bundle",
+            "pack_label": "4 × 76 g",
+            "background": "#acb228"
+          }
+        },
+        "15222329180532": {
+          "type": "product_art",
+          "settings": {
+            "product": "silent-on-repeat-family-pack-4-tube-unscented-deodorant-bundle",
+            "pack_label": "4 × 76 g",
+            "background": "#228782"
+          }
+        },
+        "15222739599732": {
+          "type": "product_art",
+          "settings": {
+            "product": "3-4-time",
+            "pack_label": "4 × 76 g",
+            "background": "#acb228"
+          }
+        },
+        "15141686444404": {
+          "type": "product_art",
+          "settings": {
+            "product": "silent-repeat",
+            "pack_label": "2 × 76 g",
+            "background": "#228782"
+          }
+        },
+        "15141668815220": {
+          "type": "product_art",
+          "settings": {
+            "product": "citrus-repeat",
+            "pack_label": "2 × 76 g",
+            "background": "#acb228"
+          }
+        },
+        "15141732581748": {
+          "type": "product_art",
+          "settings": {
+            "product": "side-a-side-b",
+            "pack_label": "2 × 76 g",
+            "background": "#acb228"
+          }
+        },
+        "14925587775860": {
+          "type": "product_art",
+          "settings": {
+            "product": "bpm-natural-deodorant-unscented",
+            "pack_label": "1 × 76 g",
+            "background": "#228782"
+          }
+        },
+        "14880059228532": {
+          "type": "product_art",
+          "settings": {
+            "product": "bpm-natural-deodorant-bergamot-lime",
+            "pack_label": "1 × 76 g",
+            "background": "#acb228"
+          }
+        }
+      },
+      "block_order": [
+        "15222327476596",
+        "15222328361332",
+        "15222329180532",
+        "15222739599732",
+        "15141686444404",
+        "15141668815220",
+        "15141732581748",
+        "14925587775860",
+        "14880059228532"
+      ]
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
