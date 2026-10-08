@@ -15,8 +15,9 @@ await writeFile(join(scratch, 'bpm-sites-card.liquid'), clean(await readFile(joi
 await writeFile(join(scratch, 'bpm-app-blocks.liquid'), clean(await readFile(join(theme, 'snippets/bpm-app-blocks.liquid'), 'utf8')));
 await writeFile(join(scratch, 'bpm-product-card.liquid'), clean(await readFile(join(theme, 'snippets/bpm-product-card.liquid'), 'utf8')));
 await writeFile(join(scratch, 'bpm-sites-article-card.liquid'), clean(await readFile(join(theme, 'snippets/bpm-sites-article-card.liquid'), 'utf8')));
-for (const name of ['bpm-sites-filters','bpm-sites-catalogue-card','bpm-sites-media','bpm-localization']) await writeFile(join(scratch,`${name}.liquid`),clean(await readFile(join(theme,'snippets',`${name}.liquid`),'utf8')));
+for (const name of ['bpm-sites-filters','bpm-sites-catalogue-card','bpm-sites-media','bpm-localization','bpm-sites-collection-card']) await writeFile(join(scratch,`${name}.liquid`),clean(await readFile(join(theme,'snippets',`${name}.liquid`),'utf8')));
 const engine = new Liquid({ root: scratch, extname: '.liquid' });
+engine.registerFilter('default_pagination', p => p.fixtureHtml);
 engine.registerFilter('money', value => '$' + (Number(value) / 100).toFixed(2));
 engine.registerFilter('money_with_currency', value => '$' + (Number(value) / 100).toFixed(2) + ' CAD');
 engine.registerFilter('image_url', value => value.src);
@@ -211,6 +212,12 @@ try {
   await check('Inside-only product renders rich notes even with no product description','sections/bpm-sites-product-notes.liquid',{section:{settings:{}},product:{metafields:{custom:{whats_inside_description:productFields.whats_inside_description}}}},html=>{assert.match(html,/<ul><li>Product-specific contents/);assert.match(html,/What’s inside/);assert.doesNotMatch(html,/Shipping notes/);});
   await check('Shipping notes preserve line breaks and use the current native policy URL','sections/bpm-sites-product-notes.liquid',{section:{settings:{}},product:withFields,shop:{shipping_policy:{url:'/policies/shipping-policy'}}},html=>{assert.match(html,/Merchant shipping note.<br/);assert.match(html,/href="\/policies\/shipping-policy"/);assert.doesNotMatch(html,/Free shipping/);});
   await check('Blank product fields create no empty full notes section','sections/bpm-sites-product-notes.liquid',{section:{settings:{}},product:{description:'',metafields:{custom:{}}}},html=>assert.equal(html.trim(),''));
+  const collectionGroups=[{title:'Single <tracks>',url:'/collections/singles',all_products_count:2,featured_image:{src:'/native-collection.jpg'}},{title:'Bundle rotation',url:'/collections/bundles',all_products_count:0}];
+  const directory={section:{settings:{page_size:12}},collections:collectionGroups,routes,paginate:{pages:1}};
+  await check('Native collections index preserves destinations counts and escaped titles','sections/bpm-sites-collections.liquid',directory,html=>{assert.match(html,/href="\/collections\/singles"/);assert.match(html,/Single &lt;tracks&gt;/);assert.match(html,/Products: 2/);assert.match(html,/Products: 0/);assert.match(html,/native-collection.jpg/);assert.equal((html.match(/<h1>/g)||[]).length,1);});
+  await check('Curated collection order wins and excludes unrelated collections','sections/bpm-sites-collections.liquid',{...directory,section:{settings:{collections:[collectionGroups[1]],heading:'Choose <rotation>',link_label:'Merchant <label>'}}},html=>{assert.match(html,/Bundle rotation/);assert.match(html,/Choose &lt;rotation&gt;/);assert.match(html,/Merchant &lt;label&gt;/);assert.doesNotMatch(html,/singles|bpm-pagination|native-collection.jpg/);});
+  await check('Empty native collection directory offers honest recovery to all products','sections/bpm-sites-collections.liquid',{...directory,collections:[]},html=>{assert.match(html,/No collections are available yet/);assert.match(html,/href="\/collections\/all"/);assert.doesNotMatch(html,/bpm-collection-card|bpm-pagination/);});
+  await check('Native collection pagination remains accessible without custom JavaScript','sections/bpm-sites-collections.liquid',{...directory,paginate:{pages:2,fixtureHtml:'<a href="/collections?page=2">Next</a>'}},html=>{assert.match(html,/aria-label="Pagination"/);assert.match(html,/href="\/collections\?page=2"/);});
   console.log(`${passed} chrome rendering checks passed; Shopify runtime and visual geometry remain unverified.`);
 } finally {
   await rm(scratch, { recursive: true, force: true });

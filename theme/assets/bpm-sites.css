@@ -244,3 +244,13 @@ h3{font-family:inherit}
 .shopify-policy__container{max-width:980px;margin:0 auto;padding:72px 24px 88px;overflow-wrap:anywhere}.shopify-policy__title h1{font-size:clamp(36px,4vw,58px);margin-bottom:40px}.shopify-policy__body{font-size:19px;line-height:1.65}.shopify-policy__body p{margin-block:24px}.shopify-policy__body :is(h2,h3,h4){font-size:28px;margin:36px 0 20px}.shopify-policy__body :is(ul,ol){padding-inline-start:24px}.shopify-policy__body table{display:block;max-width:100%;overflow-x:auto}.bpm-not-found{max-width:1000px}.bpm-not-found>.button{max-width:360px}.bpm-recovery-search{margin-top:40px;max-width:680px}.bpm-recovery-search label{display:block;margin-bottom:12px}.bpm-recovery-search>div{display:flex;gap:12px}.bpm-recovery-search input{min-width:0;flex:1;border:1px solid var(--ink);background:var(--cream);font:inherit;padding:14px}.bpm-recovery-search .button{margin:0}.bpm-localization{display:flex;flex-wrap:wrap;align-items:end;gap:20px;margin-top:28px}.bpm-localization>div{max-width:100%;min-width:0}.bpm-localization label{display:block;font-size:14px;margin-bottom:8px}.bpm-localization select{min-width:0;max-width:100%;font:inherit;padding:12px;color:var(--ink);background:var(--cream);border:1px solid currentColor;min-height:48px}.bpm-localization .button{min-height:48px}.bpm-localization :is(select,button):focus-visible{outline:3px solid var(--orange);outline-offset:4px}
 @media(max-width:680px){.shopify-policy__container{padding-block:48px}.shopify-policy__body{font-size:17px}.bpm-recovery-search>div{flex-direction:column}.bpm-localization{display:block}.bpm-localization>div{margin-top:20px}.bpm-localization select{width:100%}.bpm-localization .button{margin-top:20px}}
 .bpm-localization .button{color:var(--ink);background:var(--cream)}.bpm-localization .button:hover{color:var(--cream);background:var(--ink);border-color:var(--cream)}
+
+.bpm-collection-card { min-width: 0; border-top: 1px solid var(--line); padding-top: 24px; }
+.bpm-collection-card > a { display: block; text-decoration: none; }
+.bpm-collection-card .eyebrow { margin-top: 20px; }
+.bpm-collection-card h2 { font-size: 27px; margin-block: 16px; overflow-wrap: anywhere; }
+.bpm-collection-card .track-link { display: flex; gap: 16px; justify-content: space-between; align-items: center; min-height: 44px; }
+.bpm-collection-card .editorial-image img { width: 100%; height: 100%; object-fit: cover; }
+
+.bpm-collections-opening h1 { overflow-wrap: anywhere; }
+@media(max-width:760px) { .bpm-collections-opening h1 { font-size: 32px; } }

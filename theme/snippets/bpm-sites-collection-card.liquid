@@ -1,0 +1,15 @@
+{% doc %}
+Renders a collection destination using native imagery and current product count.
+@param {collection} group - Published collection
+@param {string} [label] - Link label
+@example
+{% render 'bpm-sites-collection-card', group: collection %}
+{% enddoc %}
+{% if group != blank %}<article class="bpm-collection-card">
+  <a href="{{ group.url }}">
+    {% if group.featured_image != blank %}<div class="editorial-image">{{ group.featured_image | image_url: width: 1200 | image_tag: widths: '320,600,900,1200', sizes: '(max-width:760px) 90vw, (max-width:1100px) 45vw, 30vw', loading: 'lazy', alt: '' }}</div>{% endif %}
+    <p class="eyebrow">{{ 'catalogue.product_count' | t: count: group.all_products_count }}</p>
+    <h2>{{ group.title | escape }}</h2>
+    <span class="track-link">{% if label != blank %}{{ label | escape }}{% else %}{{ 'catalogue.explore_collection' | t }}{% endif %} <span aria-hidden="true">↗</span></span>
+  </a>
+</article>{% endif %}

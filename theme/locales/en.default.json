@@ -95,7 +95,10 @@
     "read_article": "Read the story",
     "page": "Page",
     "read_page": "Read the page",
-    "no_results": "No results found. Try another search or clear the filters."
+    "no_results": "No results found. Try another search or clear the filters.",
+    "collections": "Collections",
+    "explore_collection": "Explore the collection",
+    "no_collections": "No collections are available yet."
   },
   "contact": {
     "name": "Your name",
