@@ -11,3 +11,7 @@ Browser fixture at 375/820/1440px opened as `:modal`, focused Close, fit inside 
 Five gate/render checks bring the suite to 337 cases. Existing product/motion/gift-card/resource/app checks pass. Shopify Theme Check has zero errors and the existing Adobe Typekit warning. The skill search helper found official app-block guidance; its validation helper remains unavailable due to missing `@shopify/theme-check-common`. Installed CLI validation and local/browser evidence do not replace native runtime validation.
 
 No store settings/provider/offer activation, upload, external message or GitHub mutation. Existing frozen candidate does not include this feature; refresh it after current work is reviewed. Operational welcome-offer delivery remains unfinished, while presentation implementation has advanced.
+
+Follow-up lifecycle verification: `scripts/test-theme-welcome.mjs` exercises editor rebinding without duplicate listeners, repeated-open guard, interior/provider/backdrop clicks, close focus return, section-unload closure, detached-launcher focus avoidance and unsupported-dialog hiding. This host test does not replace actual editor/provider execution.
+
+Additional browser viewports 320×568, 812×375 and 430×932 retained dialog bounds inside the screen and a visible 44×44 Close target. The first two used internal scrolling for overflow. Escape worked after each opening. `sites-welcome-short-viewports-20261008.json` records geometry. Physical mobile keyboards, provider content/iframes and device behavior remain unverified.

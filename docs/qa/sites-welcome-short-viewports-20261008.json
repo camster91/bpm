@@ -1,0 +1,74 @@
+{
+  "scope": "Local shell fixture only; no real provider form, virtual keyboard or physical device",
+  "rows": [
+    {
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "actual": {
+        "height": 568,
+        "width": 320
+      },
+      "closeTarget": {
+        "height": 44,
+        "width": 44
+      },
+      "closeVisible": true,
+      "dialog": {
+        "height": 464,
+        "width": 296,
+        "x": 12,
+        "y": 24
+      },
+      "fits": true,
+      "scrollable": true
+    },
+    {
+      "viewport": {
+        "width": 812,
+        "height": 375
+      },
+      "actual": {
+        "height": 375,
+        "width": 812
+      },
+      "closeTarget": {
+        "height": 44,
+        "width": 44
+      },
+      "closeVisible": true,
+      "dialog": {
+        "height": 255,
+        "width": 370,
+        "x": 20,
+        "y": 38
+      },
+      "fits": true,
+      "scrollable": true
+    },
+    {
+      "viewport": {
+        "width": 430,
+        "height": 932
+      },
+      "actual": {
+        "height": 932,
+        "width": 430
+      },
+      "closeTarget": {
+        "height": 44,
+        "width": 44
+      },
+      "closeVisible": true,
+      "dialog": {
+        "height": 479.75,
+        "width": 366,
+        "x": 12,
+        "y": 372.25
+      },
+      "fits": true,
+      "scrollable": false
+    }
+  ]
+}
