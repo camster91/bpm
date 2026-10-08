@@ -48,7 +48,11 @@ for(const record of await readJSON('docs/source-open-pack-art-provenance.json'))
  assert.deepEqual(record.crop,crop.crop_xywh);
  assert.ok(svg.includes(`viewBox="${crop.crop_xywh.join(' ')}"`));
  const embedded=Buffer.from(svg.match(/href="data:image\/png;base64,([^"]+)"/)[1],'base64');
- assert.equal(createHash('sha256').update(embedded).digest('hex'),media.assets.find(a=>a.path===record.source).sha256);
+ const source=media.assets.find(a=>a.path===record.source);
+ assert.equal(createHash('sha256').update(embedded).digest('hex'),source.sha256 || record.sha256);
+ if(record.source_url) assert.equal(record.source_url,source.url);
+ assert.equal(embedded.readUInt32BE(16),crop.source_dimensions[0]);
+ assert.equal(embedded.readUInt32BE(20),crop.source_dimensions[1]);
  assert.doesNotMatch(svg,/<script|https?:\/\/(?!www.w3.org)/);
 }
-console.log('Both open-pack artworks retain the exact original source pixels and framed viewports.');
+console.log('All nine open-pack artworks match recorded source bytes, dimensions and crop viewports; six lack historical source hashes.');

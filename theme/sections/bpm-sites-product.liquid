@@ -1,3 +1,4 @@
+{% assign purchase_pack = section.settings.pack_label %}{% assign matched_pack = nil %}{% if purchase_pack == blank %}{% for item in section.blocks %}{% if item.type == 'product_pack' and item.settings.product != blank and item.settings.product.id != blank and product.id != blank and item.settings.product.id == product.id %}{% assign purchase_pack = item.settings.pack_label %}{% assign matched_pack = item %}{% break %}{% endif %}{% endfor %}{% endif %}
 {{ 'bpm-product.css' | asset_url | stylesheet_tag }}
 {% liquid
   assign variant = product.selected_or_first_available_variant
@@ -31,7 +32,7 @@
     </div>{% endif %}
   </div>
   <div class="summary">
-    {% if section.settings.pack_label != blank %}<p class="eyebrow">{{ section.settings.pack_label | escape }}</p>{% endif %}
+    {% if purchase_pack != blank %}<p class="eyebrow" {{ matched_pack.shopify_attributes }}>{{ purchase_pack | escape }}</p>{% endif %}
     <h1 id="Title-{{ section.id }}">{{ product.title | escape }}</h1>
     {% assign scent_intro = section.settings.intro | default: product.metafields.custom.scent_tagline.value %}{% if scent_intro != blank %}<p class="lead">{{ scent_intro | escape }}</p>{% endif %}
     <p class="price" aria-live="polite"><span class="bpm-visually-hidden">{{ 'products.price' | t }} </span><span data-bpm-product-price>{{ shown_price | money_with_currency }}</span></p>
@@ -61,15 +62,79 @@
 {% unless section.settings.show_description == false %}{% if product.description != blank %}<section class="section wrap"><p class="eyebrow">{{ 'products.full_notes' | t }}</p><h2>{{ 'products.details' | t }}</h2><div class="prose bpm-product-description">{{ product.description }}</div></section>{% endif %}{% endunless %}
 <script src="{{ 'bpm-product.js' | asset_url }}" defer></script>
 {% schema %}
-{"name":"Bpm Product","settings":[
- {"type":"image_picker","id":"image","label":"First gallery image override","info":"Use original Sites framed product artwork for matching presentation. Native media remains available in the gallery."},
- {"type":"text","id":"pack_label","label":"Verified pack description"},
- {"type":"text","id":"intro","label":"Approved scent introduction"},
- {"type":"checkbox","id":"show_description","label":"Show product description immediately after purchase","default":true},
- {"type":"link_list","id":"rotation","label":"Related rotation menu"},
- {"type":"link_list","id":"jump_menu","label":"Product section links","info":"Configure fragment links to the actual sections in this product template; verify destinations after rearranging sections."},
- {"type":"text","id":"fact_1","label":"Approved quick fact 1"},
- {"type":"text","id":"fact_2","label":"Approved quick fact 2"},
- {"type":"text","id":"fact_3","label":"Approved quick fact 3"}
-],"blocks":[{"type":"@app"}]}
+{
+  "name": "Bpm Product",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "First gallery image override",
+      "info": "Use original Sites framed product artwork for matching presentation. Native media remains available in the gallery."
+    },
+    {
+      "type": "text",
+      "id": "pack_label",
+      "label": "Verified pack description"
+    },
+    {
+      "type": "text",
+      "id": "intro",
+      "label": "Approved scent introduction"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_description",
+      "label": "Show product description immediately after purchase",
+      "default": true
+    },
+    {
+      "type": "link_list",
+      "id": "rotation",
+      "label": "Related rotation menu"
+    },
+    {
+      "type": "link_list",
+      "id": "jump_menu",
+      "label": "Product section links",
+      "info": "Configure fragment links to the actual sections in this product template; verify destinations after rearranging sections."
+    },
+    {
+      "type": "text",
+      "id": "fact_1",
+      "label": "Approved quick fact 1"
+    },
+    {
+      "type": "text",
+      "id": "fact_2",
+      "label": "Approved quick fact 2"
+    },
+    {
+      "type": "text",
+      "id": "fact_3",
+      "label": "Approved quick fact 3"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "@app"
+    },
+    {
+      "type": "product_pack",
+      "name": "Product pack label",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Product"
+        },
+        {
+          "type": "text",
+          "id": "pack_label",
+          "label": "Verified pack description"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 30
+}
 {% endschema %}

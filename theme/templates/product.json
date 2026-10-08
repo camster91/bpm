@@ -4,7 +4,67 @@
       "type": "bpm-sites-product",
       "settings": {
         "show_description": false
-      }
+      },
+      "blocks": {
+        "15222327476596": {
+          "type": "product_pack",
+          "settings": {
+            "product": "four-on-the-floor-mixed-scent-4-tube-deodorant-bundle",
+            "pack_label": "THE FOUR COUNT / 4 \u00d7 76 g"
+          }
+        },
+        "15222328361332": {
+          "type": "product_pack",
+          "settings": {
+            "product": "citrus-on-repeat-family-pack-4-tube-bergamot-lime-deodorant-bundle",
+            "pack_label": "THE FOUR COUNT / 4 \u00d7 76 g"
+          }
+        },
+        "15222329180532": {
+          "type": "product_pack",
+          "settings": {
+            "product": "silent-on-repeat-family-pack-4-tube-unscented-deodorant-bundle",
+            "pack_label": "THE FOUR COUNT / 4 \u00d7 76 g"
+          }
+        },
+        "15222739599732": {
+          "type": "product_pack",
+          "settings": {
+            "product": "3-4-time",
+            "pack_label": "THE FOUR COUNT / 4 \u00d7 76 g"
+          }
+        },
+        "15141686444404": {
+          "type": "product_pack",
+          "settings": {
+            "product": "silent-repeat",
+            "pack_label": "THE TWO-TRACK / 2 \u00d7 76 g"
+          }
+        },
+        "15141668815220": {
+          "type": "product_pack",
+          "settings": {
+            "product": "citrus-repeat",
+            "pack_label": "THE TWO-TRACK / 2 \u00d7 76 g"
+          }
+        },
+        "15141732581748": {
+          "type": "product_pack",
+          "settings": {
+            "product": "side-a-side-b",
+            "pack_label": "THE TWO-TRACK / 2 \u00d7 76 g"
+          }
+        }
+      },
+      "block_order": [
+        "15222327476596",
+        "15222328361332",
+        "15222329180532",
+        "15222739599732",
+        "15141686444404",
+        "15141668815220",
+        "15141732581748"
+      ]
     },
     "reviews": {
       "type": "bpm-sites-pdp-reviews",
@@ -85,8 +145,110 @@
     "scent": {
       "type": "bpm-sites-pdp-scent",
       "settings": {},
-      "blocks": {},
-      "block_order": []
+      "blocks": {
+        "15222327476596": {
+          "type": "product_story",
+          "settings": {
+            "product": "four-on-the-floor-mixed-scent-4-tube-deodorant-bundle",
+            "heading": "Two tracks.\nYour call.",
+            "intro": "2 citrus + 2 unscented. 4 tubes, your way.",
+            "fine": "The same smooth application and baking-soda-free formula, in two scent options.",
+            "source_art": "15222327476596",
+            "source_art_alt": "Four on the Floor \u2014 Mixed Scent Natural Deodorant Bundle open packaging",
+            "note_1": "2 \u00d7 Bergamot & Lime",
+            "note_2": "2 \u00d7 Unscented"
+          }
+        },
+        "15222328361332": {
+          "type": "product_story",
+          "settings": {
+            "product": "citrus-on-repeat-family-pack-4-tube-bergamot-lime-deodorant-bundle",
+            "heading": "Bright citrus.\nClean finish.",
+            "intro": "Bergamot and lime bring the brightness. Cedarwood adds a quiet woody finish underneath.",
+            "fine": "Scented with essential oils. No synthetic fragrance.",
+            "source_art": "15222328361332",
+            "source_art_alt": "Citrus on Repeat: Family Pack \u2014 Bergamot & Lime Natural Deodorant Bundle open packaging",
+            "note_1": "Bergamot",
+            "note_2": "Lime",
+            "note_3": "Cedarwood"
+          }
+        },
+        "15222329180532": {
+          "type": "product_story",
+          "settings": {
+            "product": "silent-on-repeat-family-pack-4-tube-unscented-deodorant-bundle",
+            "heading": "Quiet on\npurpose.",
+            "intro": "No added essential oils. No masking fragrance. Base ingredients chosen to keep their natural scent as minimal as possible.",
+            "fine": "For a routine that leaves the fragrance choice to you.",
+            "source_art": "15222329180532",
+            "source_art_alt": "Silent on Repeat: Family Pack \u2014 Unscented Natural Deodorant Bundle open packaging",
+            "note_1": "No added fragrance",
+            "note_2": "Same daily ritual"
+          }
+        },
+        "15222739599732": {
+          "type": "product_story",
+          "settings": {
+            "product": "3-4-time",
+            "heading": "Two tracks.\nYour call.",
+            "intro": "3 citrus + 1 unscented. 4 tubes, your way.",
+            "fine": "The same smooth application and baking-soda-free formula, in two scent options.",
+            "source_art": "15222739599732",
+            "source_art_alt": "3/4 Time \u2014 Mixed Scent Natural Deodorant Bundle open packaging",
+            "note_1": "3 \u00d7 Bergamot & Lime",
+            "note_2": "1 \u00d7 Unscented"
+          }
+        },
+        "15141686444404": {
+          "type": "product_story",
+          "settings": {
+            "product": "silent-repeat",
+            "heading": "Quiet on\npurpose.",
+            "intro": "No added essential oils. No masking fragrance. Base ingredients chosen to keep their natural scent as minimal as possible.",
+            "fine": "For a routine that leaves the fragrance choice to you.",
+            "source_art": "15141686444404",
+            "source_art_alt": "Silent on Repeat \u2014 Unscented Natural Deodorant Duo open packaging",
+            "note_1": "No added fragrance",
+            "note_2": "Same daily ritual"
+          }
+        },
+        "15141668815220": {
+          "type": "product_story",
+          "settings": {
+            "product": "citrus-repeat",
+            "heading": "Bright citrus.\nClean finish.",
+            "intro": "Bergamot and lime bring the brightness. Cedarwood adds a quiet woody finish underneath.",
+            "fine": "Scented with essential oils. No synthetic fragrance.",
+            "source_art": "15141668815220",
+            "source_art_alt": "Citrus on Repeat \u2014 Bergamot & Lime Natural Deodorant Duo open packaging",
+            "note_1": "Bergamot",
+            "note_2": "Lime",
+            "note_3": "Cedarwood"
+          }
+        },
+        "15141732581748": {
+          "type": "product_story",
+          "settings": {
+            "product": "side-a-side-b",
+            "heading": "Two tracks.\nYour call.",
+            "intro": "1 citrus + 1 unscented. 2 tubes, your way.",
+            "fine": "The same smooth application and baking-soda-free formula, in two scent options.",
+            "source_art": "15141732581748",
+            "source_art_alt": "Side A / Side B \u2014 Mixed Scent Natural Deodorant Duo open packaging",
+            "note_1": "1 \u00d7 Bergamot & Lime",
+            "note_2": "1 \u00d7 Unscented"
+          }
+        }
+      },
+      "block_order": [
+        "15222327476596",
+        "15222328361332",
+        "15222329180532",
+        "15222739599732",
+        "15141686444404",
+        "15141668815220",
+        "15141732581748"
+      ]
     },
     "formula": {
       "type": "bpm-sites-pdp-formula",
@@ -242,7 +404,74 @@
     },
     "value": {
       "type": "bpm-sites-pdp-value",
-      "settings": {}
+      "settings": {},
+      "blocks": {
+        "15222327476596": {
+          "type": "product_value",
+          "settings": {
+            "product": "four-on-the-floor-mixed-scent-4-tube-deodorant-bundle",
+            "pack": "4 \u00d7 76 g",
+            "applications": 1216
+          }
+        },
+        "15222328361332": {
+          "type": "product_value",
+          "settings": {
+            "product": "citrus-on-repeat-family-pack-4-tube-bergamot-lime-deodorant-bundle",
+            "pack": "4 \u00d7 76 g",
+            "applications": 1216
+          }
+        },
+        "15222329180532": {
+          "type": "product_value",
+          "settings": {
+            "product": "silent-on-repeat-family-pack-4-tube-unscented-deodorant-bundle",
+            "pack": "4 \u00d7 76 g",
+            "applications": 1216
+          }
+        },
+        "15222739599732": {
+          "type": "product_value",
+          "settings": {
+            "product": "3-4-time",
+            "pack": "4 \u00d7 76 g",
+            "applications": 1216
+          }
+        },
+        "15141686444404": {
+          "type": "product_value",
+          "settings": {
+            "product": "silent-repeat",
+            "pack": "2 \u00d7 76 g",
+            "applications": 608
+          }
+        },
+        "15141668815220": {
+          "type": "product_value",
+          "settings": {
+            "product": "citrus-repeat",
+            "pack": "2 \u00d7 76 g",
+            "applications": 608
+          }
+        },
+        "15141732581748": {
+          "type": "product_value",
+          "settings": {
+            "product": "side-a-side-b",
+            "pack": "2 \u00d7 76 g",
+            "applications": 608
+          }
+        }
+      },
+      "block_order": [
+        "15222327476596",
+        "15222328361332",
+        "15222329180532",
+        "15222739599732",
+        "15141686444404",
+        "15141668815220",
+        "15141732581748"
+      ]
     },
     "lifestyle": {
       "type": "bpm-sites-pdp-lifestyle",

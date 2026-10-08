@@ -27,3 +27,5 @@ Campaign suffixes and editable native discovery/media modules are implemented lo
 The existing default About-page assignment now renders scoped, editable Sites sections locally while other native page content is preserved. [Assignment QA](docs/qa/sites-about-default-assignment.md) records 189 passing rendering checks and the remaining native Shopify verification.
 
 Existing single-product suffixes now have product-specific editable source scent/value sections and native comparisons. [Single-product QA](docs/qa/sites-assigned-single-product-templates.md) records 196 checks and remaining native/runtime requirements.
+
+Seven bundle products now have independent editable native-product pack, scent, value and source-art bindings on the shared default template. [Bundle QA](docs/qa/sites-bundle-product-bindings.md) records 222 checks and native/runtime limits.

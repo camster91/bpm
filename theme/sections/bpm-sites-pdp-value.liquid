@@ -1,8 +1,94 @@
-{% if section.settings.pack != blank or section.settings.applications > 0 %}
-{{ 'bpm-pdp.css' | asset_url | stylesheet_tag }}<section class="bpm-pdp value wrap"><div class="section-intro"><p class="eyebrow">{{ section.settings.eyebrow | escape }}</p><h2>{{ section.settings.heading | escape | newline_to_br }}</h2></div><div class="value-grid">
-{% if section.settings.pack != blank %}<article><strong>{{ section.settings.pack | escape }}</strong><p>{{ section.settings.pack_label | escape }}</p></article>{% endif %}
-{% if section.settings.applications > 0 %}<article><strong>≈ {{ section.settings.applications }}</strong><p>{{ section.settings.applications_label | escape }}</p></article>
-{% assign variant = product.selected_or_first_available_variant %}{% if variant != blank %}{% assign divisor = section.settings.applications | times: 1.0 %}{% assign estimate = variant.price | divided_by: divisor %}<article><strong>≈ {% if cart.currency.iso_code == 'CAD' or cart.currency.iso_code == 'USD' %}{{ estimate | times: 10 | round | divided_by: 10.0 }}¢{% else %}{{ estimate | money_with_currency }}{% endif %}</strong><p>{{ section.settings.cost_label | escape }}{% if cart.currency.iso_code != blank %} ({{ cart.currency.iso_code | escape }}){% endif %}</p></article>{% endif %}{% endif %}</div><p class="fine">{{ section.settings.note | escape }}</p></section>{% endif %}
+{% assign value_pack = section.settings.pack %}{% assign value_applications = section.settings.applications | default: 0 %}{% assign matched_value = nil %}{% if value_pack == blank and value_applications == 0 %}{% for item in section.blocks %}{% if item.settings.product != blank and item.settings.product.id != blank and product.id != blank and item.settings.product.id == product.id %}{% assign value_pack = item.settings.pack %}{% assign value_applications = item.settings.applications | default: 0 %}{% assign matched_value = item %}{% break %}{% endif %}{% endfor %}{% endif %}
+{% if value_pack != blank or value_applications > 0 %}
+{{ 'bpm-pdp.css' | asset_url | stylesheet_tag }}<section class="bpm-pdp value wrap" {{ matched_value.shopify_attributes }}><div class="section-intro"><p class="eyebrow">{{ section.settings.eyebrow | escape }}</p><h2>{{ section.settings.heading | escape | newline_to_br }}</h2></div><div class="value-grid">
+{% if value_pack != blank %}<article><strong>{{ value_pack | escape }}</strong><p>{{ section.settings.pack_label | escape }}</p></article>{% endif %}
+{% if value_applications > 0 %}<article><strong>≈ {{ value_applications }}</strong><p>{{ section.settings.applications_label | escape }}</p></article>
+{% assign variant = product.selected_or_first_available_variant %}{% if variant != blank %}{% assign divisor = value_applications | times: 1.0 %}{% assign estimate = variant.price | divided_by: divisor %}<article><strong>≈ {% if cart.currency.iso_code == 'CAD' or cart.currency.iso_code == 'USD' %}{{ estimate | times: 10 | round | divided_by: 10.0 }}¢{% else %}{{ estimate | money_with_currency }}{% endif %}</strong><p>{{ section.settings.cost_label | escape }}{% if cart.currency.iso_code != blank %} ({{ cart.currency.iso_code | escape }}){% endif %}</p></article>{% endif %}{% endif %}</div><p class="fine">{{ section.settings.note | escape }}</p></section>{% endif %}
 {% schema %}
-{"name": "Bpm Product value", "settings": [{"type": "paragraph", "content": "Bind approved pack and estimated application count for the current product/template. Cost uses the selected variant one-time price; subscription discounts are not implied."}, {"type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "THE EVERYDAY MATH"}, {"type": "textarea", "id": "heading", "label": "Heading", "default": "Small squeeze.\nLong rotation."}, {"type": "text", "id": "pack", "label": "Verified current product pack"}, {"type": "text", "id": "pack_label", "label": "Pack label", "default": "in your pack"}, {"type": "number", "id": "applications", "label": "Verified estimated applications", "default": 0}, {"type": "text", "id": "applications_label", "label": "Applications label", "default": "pea-sized applications"}, {"type": "text", "id": "cost_label", "label": "Cost label", "default": "one-time cost per application"}, {"type": "textarea", "id": "note", "label": "Estimate caveat", "default": "BPM’s published estimates. Your amount and frequency of use affect how long a tube lasts."}], "presets": [{"name": "Bpm Product value"}]}
+{
+  "name": "Bpm Product value",
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "Bind approved pack and estimated application count for the current product/template. Cost uses the selected variant one-time price; subscription discounts are not implied."
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "THE EVERYDAY MATH"
+    },
+    {
+      "type": "textarea",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Small squeeze.\nLong rotation."
+    },
+    {
+      "type": "text",
+      "id": "pack",
+      "label": "Verified current product pack"
+    },
+    {
+      "type": "text",
+      "id": "pack_label",
+      "label": "Pack label",
+      "default": "in your pack"
+    },
+    {
+      "type": "number",
+      "id": "applications",
+      "label": "Verified estimated applications",
+      "default": 0
+    },
+    {
+      "type": "text",
+      "id": "applications_label",
+      "label": "Applications label",
+      "default": "pea-sized applications"
+    },
+    {
+      "type": "text",
+      "id": "cost_label",
+      "label": "Cost label",
+      "default": "one-time cost per application"
+    },
+    {
+      "type": "textarea",
+      "id": "note",
+      "label": "Estimate caveat",
+      "default": "BPM\u2019s published estimates. Your amount and frequency of use affect how long a tube lasts."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Bpm Product value"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product_value",
+      "name": "Product pack and value",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Product"
+        },
+        {
+          "type": "text",
+          "id": "pack",
+          "label": "Verified pack description"
+        },
+        {
+          "type": "number",
+          "id": "applications",
+          "label": "Approved estimated applications",
+          "default": 0
+        }
+      ]
+    }
+  ],
+  "max_blocks": 30
+}
 {% endschema %}

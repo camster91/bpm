@@ -187,6 +187,17 @@ for(const [suffix,handle] of [['bergamot-lime','bpm-natural-deodorant-bergamot-l
  await writeFile(join(output,'sites-product-'+suffix+'.html'),await engine.parseAndRender(code,{...common,content_for_layout:body,preview_header:sitesHeader,preview_footer:sitesFooter,page_title:suffix+' — local fixture'}));
 }
 
+const bundleProfiles=JSON.parse(await readFile(resolve(theme,'../docs/bundle-product-content-bindings.json'),'utf8')).profiles;
+const bundleTemplate=JSON.parse(await readFile(join(theme,'templates/product.json'),'utf8'));
+for(const profile of bundleProfiles) {
+ const selected=pickerFixture('product',profile.handle);
+ const productFixture={...purchaseProduct,...selected,selected_or_first_available_variant:{...purchaseVariant,price:selected.price}};
+ let body='<p class="wrap fine">Local bundle binding fixture. Native resource and backend resolution mocked; claims and original bundle gallery framing remain pending. Purchase submissions disabled.</p>';
+ for(const key of bundleTemplate.order){const item=bundleTemplate.sections[key];if(item.disabled)continue;body+=await section(item.type,item.settings,(item.block_order||[]).map(id=>item.blocks[id]),{product:productFixture,preview_section_id:profile.handle+'-'+key,form:{}});}
+ body=body.replace(/(<button[^>]*type="submit")/g,'$1 disabled').replace(/<select id="Variant-/g,'<select disabled id="Variant-');
+ await writeFile(join(output,'sites-bundle-'+profile.handle+'.html'),await engine.parseAndRender(code,{...common,content_for_layout:body,preview_header:sitesHeader,preview_footer:sitesFooter,page_title:profile.handle+' — local fixture'}));
+}
+
 for (const pageName of ['about','indigenous-owned','contact']) {
  const config=JSON.parse(await readFile(join(theme,`templates/page.${pageName}.json`),'utf8'));
  let body='<div class="wrap"><p>Local '+pageName+' layout fixture. Source claims and merchant bindings remain unverified. Contact submissions are disabled; no Shopify backend is connected.</p></div>';
