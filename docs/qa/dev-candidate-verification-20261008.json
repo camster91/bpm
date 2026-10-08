@@ -1,0 +1,32 @@
+{
+  "sourceCommit": "71d5285abf3e0594d006f17e2c54837658327635",
+  "themeTree": "14813b6f1e9adae6e1386acf284da55d7dacc840",
+  "snapshot": "/tmp/bpm-sites-dev-candidate-20261008",
+  "manifestSha256": "92d888a6bf11e40a60e3dd15e4e8aeb4f3a6d35a029c357c49a42efff5210c5a",
+  "files": 160,
+  "bytes": 45066560,
+  "changedFromPriorSnapshot": [
+    "assets/bpm-product.js",
+    "assets/bpm-sites.css"
+  ],
+  "sourceCommitAndManifestVerified": true,
+  "matchesCurrentTheme": true,
+  "developmentNoindex": true,
+  "localChecks": {
+    "rendering": 319,
+    "productLifecycle": "pass",
+    "motionLifecycle": "pass",
+    "giftCard": "pass",
+    "capturedResourceBindings": 96,
+    "capturedAppBindings": 9
+  },
+  "themeCheck": {
+    "errors": 0,
+    "warnings": 1,
+    "warning": "RemoteAsset: existing Adobe Typekit"
+  },
+  "uploadExecuted": false,
+  "nativeShopifyQA": "pending",
+  "browserWiderRegression": "pending: browser unavailable",
+  "releaseCandidate": false
+}
