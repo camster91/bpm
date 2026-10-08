@@ -7,8 +7,8 @@ const output = resolve(process.argv[2] || '/tmp/bpm-chrome-preview');
 await mkdir(output, { recursive: true });
 await symlink(join(theme, 'assets'), join(output, 'assets')).catch(error => { if (error.code !== 'EEXIST') throw error; });
 const styles = [];
-const clean = text => text.replace(/{%\s*form\s+'product'[^%]*%}/g, '<form class="bpm-product-form" method="post" action="/local-fixture-product">').replace(/{%\s*form[^%]*%}/g, '<form class="preview-form" method="post" action="/local-fixture-newsletter">').replace(/{%\s*endform\s*%}/g, '</form>').replace(/{%\s*paginate[^%]*%}/g, '').replace(/{%\s*endpaginate\s*%}/g, '').replace(/{%\s*(schema|doc)\s*%}[\s\S]*?{%\s*end\1\s*%}/g, '').replace(/{%\s*stylesheet\s*%}([\s\S]*?){%\s*endstylesheet\s*%}/g, (_, css) => { styles.push(css); return ''; });
-for (const name of ['bpm-navigation', 'bpm-product-card', 'bpm-sites-links', 'bpm-sites-card', 'bpm-sites-article-card', 'bpm-sites-filters', 'bpm-sites-catalogue-card', 'bpm-sites-media', 'bpm-app-blocks']) await writeFile(join(output, `${name}.liquid`), clean(await readFile(join(theme, 'snippets', `${name}.liquid`), 'utf8')));
+const clean = text => text.replace(/{%\s*form\s+'product'[^%]*%}/g, '<form class="bpm-product-form" method="post" action="/local-fixture-product">').replace(/{%\s*form\s+'localization'[^%]*%}/g, '<form class="bpm-localization" method="post" action="/local-fixture-localization">').replace(/{%\s*form\s+'contact'[^%]*%}/g, '<form class="preview-form bpm-contact-form" method="post" action="/local-fixture-contact">').replace(/{%\s*form[^%]*%}/g, '<form class="preview-form" method="post" action="/local-fixture-newsletter">').replace(/{%\s*endform\s*%}/g, '</form>').replace(/{%\s*paginate[^%]*%}/g, '').replace(/{%\s*endpaginate\s*%}/g, '').replace(/{%\s*(schema|doc)\s*%}[\s\S]*?{%\s*end\1\s*%}/g, '').replace(/{%\s*stylesheet\s*%}([\s\S]*?){%\s*endstylesheet\s*%}/g, (_, css) => { styles.push(css); return ''; });
+for (const name of ['bpm-navigation', 'bpm-product-card', 'bpm-sites-links', 'bpm-sites-card', 'bpm-sites-article-card', 'bpm-sites-filters', 'bpm-sites-catalogue-card', 'bpm-sites-media', 'bpm-app-blocks', 'bpm-localization']) await writeFile(join(output, `${name}.liquid`), clean(await readFile(join(theme, 'snippets', `${name}.liquid`), 'utf8')));
 const engine = new Liquid({ root: output, extname: '.liquid' });
 const locale = JSON.parse(await readFile(join(theme, 'locales/en.default.json'), 'utf8'));
 engine.registerFilter('asset_url', value => `/assets/${value}`);
@@ -161,3 +161,17 @@ for (const pageName of ['about','indigenous-owned','contact']) {
  body=body.replace(/(<button[^>]*type="submit")/g,'$1 disabled');
  await writeFile(join(output,`sites-${pageName}.html`),await engine.parseAndRender(code,{...common,content_for_layout:body,preview_header:sitesHeader,preview_footer:sitesFooter,page_title:pageName+' — local fixture'}));
 }
+
+const fixturePolicies = {policies:[{title:'Refund policy — local fixture',url:'/sites-about.html',body:'<p>Fabricated native policy for layout review.</p>'},{title:'Shipping policy — local fixture',url:'/sites-contact.html',body:'<p>Fabricated native policy for layout review.</p>'}]};
+const policyConfig=JSON.parse(await readFile(join(theme,'templates/page.policies.json'),'utf8'));
+let policiesBody='<div class="wrap"><p>Local policy index fixture. Links and legal body are fabricated; no Shopify policy records changed.</p></div>';
+for(const id of policyConfig.order){const item=policyConfig.sections[id];policiesBody+=await section(item.type,item.settings,[],{shop:{...common.shop,...fixturePolicies}});}
+await writeFile(join(output,'sites-policies.html'),await engine.parseAndRender(code,{...common,content_for_layout:policiesBody,preview_header:sitesHeader,preview_footer:sitesFooter,page_title:'Policy index fixture'}));
+const countryChoices=[{iso_code:'CA',name:'Canada',currency:{iso_code:'CAD'}},{iso_code:'US',name:'United States',currency:{iso_code:'USD'}}];
+const languageChoices=[{iso_code:'en',endonym_name:'English'},{iso_code:'fr',endonym_name:'Français'}];
+const marketFixture={available_countries:countryChoices,country:countryChoices[0],available_languages:languageChoices,language:languageChoices[0]};
+let marketFooter=await section('bpm-sites-footer',{menu:sitesMenu,show_localization:true,show_market:true},[],{localization:marketFixture});
+marketFooter=marketFooter.replace(/(<button[^>]*type="submit")/g,'$1 disabled');
+const notFoundBody=await section('bpm-sites-not-found',{},[],{routes:{...common.routes,search_url:'/sites-search.html'}});
+await writeFile(join(output,'sites-404.html'),await engine.parseAndRender(code,{...common,content_for_layout:'<div class="wrap"><p>Local 404/market fixture. Market and search submissions are disabled; no Shopify backend is connected.</p></div>'+notFoundBody.replace(/(<button[^>]*type="submit")/g,'$1 disabled'),preview_header:sitesHeader,preview_footer:marketFooter,page_title:'404 fixture'}));
+await writeFile(join(output,'sites-policy-body.html'),await engine.parseAndRender(code,{...common,content_for_layout:'<div class="shopify-policy__container"><div class="shopify-policy__title"><h1>Shipping policy — local fixture</h1></div><div class="shopify-policy__body"><p>Fabricated policy body for layout review. Actual legal content will remain in native Shopify policy records.</p><h2>Policy section</h2><p>Fabricated paragraph.</p></div></div>',preview_header:sitesHeader,preview_footer:sitesFooter,page_title:'Native policy body fixture'}));

@@ -1,0 +1,20 @@
+{
+  "sections": {
+    "opening": {
+      "type": "bpm-sites-page-opening",
+      "settings": {
+        "eyebrow": "THE PRACTICAL DETAILS",
+        "heading": "Clear terms.\nNo mystery.",
+        "art": "none"
+      }
+    },
+    "policies": {
+      "type": "bpm-sites-policies",
+      "settings": {}
+    }
+  },
+  "order": [
+    "opening",
+    "policies"
+  ]
+}

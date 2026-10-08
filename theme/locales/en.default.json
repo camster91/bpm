@@ -101,5 +101,19 @@
     "message": "Your message",
     "submit": "Send message",
     "success": "Thanks for your message. We’ll get back to you."
+  },
+  "policies": {
+    "empty": "Published policies will appear here."
+  },
+  "not_found": {
+    "heading": "Page not found",
+    "body": "The page you’re looking for isn’t available. Browse the shop or search for what you need.",
+    "shop": "Browse the shop",
+    "search": "Search BPM"
+  },
+  "localization": {
+    "country": "Country / region",
+    "language": "Language",
+    "apply": "Apply"
   }
 }
