@@ -260,6 +260,18 @@ try {
     const faq=config.sections.faq;
     await check(`${suffix} retains product guidance and current native policy destination`,'sections/bpm-sites-pdp-faq.liquid',{section:{id:suffix,settings:faq.settings,blocks:faq.block_order.map(id=>faq.blocks[id])},shop:{shipping_policy:{url:'/policies/shipping-policy'}}},html=>{assert.match(html,/href="\/policies\/shipping-policy"/);assert.match(html,/How much should I use/);if(suffix==='campaign-texture')assert.match(html,/Do not use it on genitals or broken skin/);else assert.match(html,/counts individual underarm applications/);});
   }
+  const defaultPage=JSON.parse(await readFile(join(theme,'templates/page.json'),'utf8'));
+  for(const type of new Set(Object.values(defaultPage.sections).filter(s=>s.settings.limit_to_page).map(s=>s.type))) {
+    const config=Object.values(defaultPage.sections).find(s=>s.type===type);
+    const scoped={...config.settings,visible_on_page:{id:705670807924}};
+    const blocks=(config.block_order||[]).map(id=>config.blocks[id]);
+    await check(type+' matches selected native About page', 'sections/'+type+'.liquid',{section:{settings:scoped,blocks},page:{id:705670807924,title:'About'}},html=>assert.match(html,/<section/));
+    await check(type+' does not leak About content onto privacy pages', 'sections/'+type+'.liquid',{section:{settings:scoped,blocks},page:{id:708561764724,title:'Privacy choices'}},html=>assert.equal(html.trim(),''));
+    await check(type+' hides restricted section when native picker is missing', 'sections/'+type+'.liquid',{section:{settings:{...scoped,visible_on_page:null},blocks},page:{id:708561764724}},html=>assert.equal(html.trim(),''));
+  }
+  await check('About with empty native body has no second title or empty content block','sections/bpm-sites-page.liquid',{section:{settings:{hide_title_for_page:{id:705670807924}}},page:{id:705670807924,title:'About',content:''}},html=>assert.equal(html.trim(),''));
+  await check('About preserves new native page content without duplicate title','sections/bpm-sites-page.liquid',{section:{settings:{hide_title_for_page:{id:705670807924}}},page:{id:705670807924,title:'About',content:'<p>Merchant update.</p>'}},html=>{assert.match(html,/Merchant update/);assert.doesNotMatch(html,/<h1/);});
+  await check('Other default pages retain native heading and body','sections/bpm-sites-page.liquid',{section:{settings:{hide_title_for_page:{id:705670807924}}},page:{id:708561764724,title:'Privacy choices',content:'<p>Native privacy content.</p>'}},html=>{assert.match(html,/<h1>Privacy choices/);assert.match(html,/Native privacy content/);});
   console.log(`${passed} chrome rendering checks passed; Shopify runtime and visual geometry remain unverified.`);
 } finally {
   await rm(scratch, { recursive: true, force: true });

@@ -23,3 +23,5 @@ Open http://127.0.0.1:8878/index.html after building. Node 22.13+ required. Comm
 Current Shopify data/configuration and approved client decisions govern implementation. Historical preview copy is not production truth. Preserve the published review, verify app/commerce behaviour, and use merchant-editable Shopify sections. Store writes and production publication are separate stages.
 
 Campaign suffixes and editable native discovery/media modules are implemented locally. [Campaign QA checkpoint](docs/qa/sites-campaign-pages.md) records 171 passing rendering checks and responsive fixture evidence; Shopify runtime, media, claims, apps and purchase journeys remain open.
+
+The existing default About-page assignment now renders scoped, editable Sites sections locally while other native page content is preserved. [Assignment QA](docs/qa/sites-about-default-assignment.md) records 189 passing rendering checks and the remaining native Shopify verification.

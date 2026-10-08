@@ -1,11 +1,197 @@
 {
   "sections": {
+    "opening": {
+      "type": "bpm-sites-page-opening",
+      "settings": {
+        "eyebrow": "ABOUT BPM",
+        "heading": "High standards.\nHuman beginnings.",
+        "intro": "Performance, ingredients, packaging and price. A daily essential, considered.",
+        "art": "hand",
+        "image_alt": "Hand holding a BPM metal tube",
+        "button_label": "Find your BPM",
+        "limit_to_page": true,
+        "visible_on_page": "about-us"
+      }
+    },
+    "founder": {
+      "type": "bpm-sites-rich-split",
+      "settings": {
+        "eyebrow": "FROM THE FOUNDER",
+        "heading": "It started\nin a kitchen.",
+        "body": "<p>I started making deodorants in my kitchen in 2020 because I could not find one that met the full standard I had in mind. It needed to perform well, use natural ingredients, come in better packaging, feel good on skin, and still be priced fairly.</p><p>I did not come to BPM from a chemistry background. My background is in technology and product development, and that shaped the way I built this brand: by being thoughtful about every requirement, clear about priorities, and careful with the details.</p><p>I believed there was room for something better, and that natural products should be accessible to more people. BPM grew from that belief.</p><p><strong>Corey Goss</strong><br>Founder and President</p>",
+        "band": false,
+        "limit_to_page": true,
+        "visible_on_page": "about-us"
+      }
+    },
+    "principles": {
+      "type": "bpm-sites-principles",
+      "settings": {
+        "eyebrow": "FOUR PILLARS",
+        "heading": "The standard\nbehind the tube.",
+        "layout": "grid",
+        "band": true,
+        "limit_to_page": true,
+        "visible_on_page": "about-us"
+      },
+      "blocks": {
+        "0": {
+          "type": "principle",
+          "settings": {
+            "heading": "Performance comes first.",
+            "body": "It fights odour, goes on smoothly and absorbs quickly. Product development starts with what the product needs to do."
+          }
+        },
+        "1": {
+          "type": "principle",
+          "settings": {
+            "heading": "Potion matters.",
+            "body": "Every ingredient is natural or naturally derived. If it doesn\u2019t improve performance or skin feel, it doesn\u2019t stay."
+          }
+        },
+        "2": {
+          "type": "principle",
+          "settings": {
+            "heading": "Packaging, responsibly chosen.",
+            "body": "Eco-friendly inks. Kraft paper boxes. Thoughtful material choices that balance sustainability with real-world performance."
+          }
+        },
+        "3": {
+          "type": "principle",
+          "settings": {
+            "heading": "Price with purpose.",
+            "body": "Fair. Transparent. No inflated margins hiding behind \u201cnatural.\u201d As BPM grows, the aim is to lower prices."
+          }
+        }
+      },
+      "block_order": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    "pricing": {
+      "type": "bpm-sites-cost-comparison",
+      "disabled": true,
+      "settings": {
+        "eyebrow": "SAME PRICE. DIFFERENT SHARE.",
+        "heading": "Buying direct\ngoes further.",
+        "intro": "At the same $23.99 selling price, more stays with BPM for operations, growth and future improvements when you buy directly.",
+        "chart_label": "ESTIMATED AMOUNT FOR BPM OPERATIONS / PER TUBE",
+        "note": "Historical CAD benchmark. Costs are estimates and may vary; confirm the underlying comparison before enabling.",
+        "disclosure": "See BPM\u2019s complete estimated cost breakdown",
+        "image_alt": "Original dated BPM website and Amazon cost chart",
+        "limit_to_page": true,
+        "visible_on_page": "about-us"
+      },
+      "blocks": {
+        "website": {
+          "type": "route",
+          "settings": {
+            "label": "From BPM\u2019s website",
+            "amount": "$4.47 CAD",
+            "width": 100
+          }
+        },
+        "amazon": {
+          "type": "route",
+          "settings": {
+            "label": "From Amazon",
+            "amount": "$1.94 CAD",
+            "width": 43.4
+          }
+        }
+      },
+      "block_order": [
+        "website",
+        "amazon"
+      ]
+    },
+    "values": {
+      "type": "bpm-sites-principles",
+      "settings": {
+        "eyebrow": "THE RHYTHM BEHIND BPM",
+        "heading": "What keeps\nus moving.",
+        "layout": "list",
+        "band": false,
+        "limit_to_page": true,
+        "visible_on_page": "about-us"
+      },
+      "blocks": {
+        "0": {
+          "type": "principle",
+          "settings": {
+            "heading": "Quality should feel fair",
+            "body": "Products that feel good in every sense, including the price."
+          }
+        },
+        "1": {
+          "type": "principle",
+          "settings": {
+            "heading": "We live life with a soundtrack",
+            "body": "From hip hop and house to jazz, old country, soft rock, Afro house and Latin rhythms."
+          }
+        },
+        "2": {
+          "type": "principle",
+          "settings": {
+            "heading": "Proud to be Indigenous led",
+            "body": "Part of the company\u2019s foundation and its approach to responsibility."
+          }
+        },
+        "3": {
+          "type": "principle",
+          "settings": {
+            "heading": "Profitable companies should give back",
+            "body": "Giving back is part of how BPM believes business should work."
+          }
+        },
+        "4": {
+          "type": "principle",
+          "settings": {
+            "heading": "Sustainability, with intention",
+            "body": "Not perfectly. Better choices, less waste and progress over time."
+          }
+        },
+        "5": {
+          "type": "principle",
+          "settings": {
+            "heading": "Technology with purpose",
+            "body": "Tools that help build better products and make smarter decisions. Beyond that, keep it simple."
+          }
+        }
+      },
+      "block_order": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ]
+    },
+    "closing": {
+      "type": "bpm-sites-closing",
+      "settings": {
+        "limit_to_page": true,
+        "visible_on_page": "about-us"
+      }
+    },
     "main": {
       "type": "bpm-sites-page",
-      "settings": {}
+      "settings": {
+        "hide_title_for_page": "about-us"
+      }
     }
   },
   "order": [
+    "opening",
+    "founder",
+    "principles",
+    "pricing",
+    "values",
+    "closing",
     "main"
   ]
 }

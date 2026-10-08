@@ -45,7 +45,7 @@ function pickerFixture(type, handle) {
  if(type==='product') {const p=mappedProducts.find(p=>p.handle===handle); return p ? {id:p.id,title:p.title+' — fixture',url:'/sites-product.html',price:Math.round(Number(p.variants[0].price)*100),price_varies:false,available:p.variants.some(v=>v.available),featured_image:{src:p.images[0].src}} : null;}
  if(type==='article') {const n=mappedArticles.findIndex(a=>a.url.endsWith('/blogs/'+handle));return n<0?null:{title:mappedArticles[n].title+' — fixture',url:`/sites-article-${n}.html`,published_at:mappedArticles[n].date+'T12:00:00-04:00'};}
  if(type==='blog') return {title:'The Breakdown — fixture',url:'/sites-blog.html'};
- if(type==='page' && handle==='about-us') return {title:'About — fixture',url:'/sites-about.html'};
+ if(type==='page' && handle==='about-us') return {id:705670807924,title:'About — fixture',url:'/sites-about.html'};
  if(type==='collection') return {title:handle+' — fixture',url:'/sites-collection.html',products:fixtureResourceBindings.products.filter(p=>p.pack_count===(handle==='the-two-track-collection'?2:4)).map(p=>pickerFixture('product',p.handle))};
  if(type==='video') return {fixture:true};
  return handle;
@@ -187,6 +187,13 @@ for (const pageName of ['about','indigenous-owned','contact']) {
  }
  body=body.replace(/(<button[^>]*type="submit")/g,'$1 disabled');
  await writeFile(join(output,`sites-${pageName}.html`),await engine.parseAndRender(code,{...common,content_for_layout:body,preview_header:sitesHeader,preview_footer:sitesFooter,page_title:pageName+' — local fixture'}));
+}
+
+const defaultPageFixture=JSON.parse(await readFile(join(theme,'templates/page.json'),'utf8'));
+for (const fixture of [{name:'about-default',id:705670807924,title:'About Us',content:''},{name:'privacy-default',id:708561764724,title:'Your Privacy Choices',content:'<p>Fabricated native privacy body for isolation review.</p>'}]) {
+ let body='<p class="wrap fine">Local default-page assignment fixture; native resource resolution is mocked.</p>';
+ for(const key of defaultPageFixture.order){const item=defaultPageFixture.sections[key];if(item.disabled)continue;body+=await section(item.type,item.settings,(item.block_order||[]).map(id=>item.blocks[id]),{page:fixture,preview_section_id:fixture.name+'-'+key});}
+ await writeFile(join(output,'sites-'+fixture.name+'.html'),await engine.parseAndRender(code,{...common,content_for_layout:body,preview_header:sitesHeader,preview_footer:sitesFooter,page_title:fixture.title+' — fixture'}));
 }
 
 const fixturePolicies = {policies:[{title:'Refund policy — local fixture',url:'/sites-about.html',body:'<p>Fabricated native policy for layout review.</p>'},{title:'Shipping policy — local fixture',url:'/sites-contact.html',body:'<p>Fabricated native policy for layout review.</p>'}]};

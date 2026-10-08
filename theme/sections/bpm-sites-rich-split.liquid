@@ -1,4 +1,79 @@
+{% assign display_section = true %}{% if section.settings.limit_to_page %}{% assign display_section = false %}{% if section.settings.visible_on_page != blank and section.settings.visible_on_page.id == page.id %}{% assign display_section = true %}{% endif %}{% endif %}
+{% if display_section %}
 <section class="section{% if section.settings.band %} butter-band{% else %} wrap{% endif %}"><div class="{% if section.settings.band %}wrap {% endif %}split"><div><div class="intro-copy"><p class="eyebrow">{{ section.settings.eyebrow | escape }}</p><h2>{{ section.settings.heading | escape | newline_to_br }}</h2>{% if section.settings.intro != blank %}<p class="lead">{{ section.settings.intro | escape }}</p>{% endif %}</div></div><div class="prose">{{ section.settings.body }}{% if section.settings.quote != blank %}<blockquote>{{ section.settings.quote | escape }}</blockquote>{% if section.settings.attribution != blank %}<p>{{ section.settings.attribution | escape }}</p>{% endif %}{% endif %}{% if section.settings.button_label != blank %}{% assign destination = section.settings.page.url | default: section.settings.collection.url %}{% if destination != blank %}<a class="button" href="{{ destination }}">{{ section.settings.button_label | escape }}<span aria-hidden="true">→</span></a>{% endif %}{% endif %}</div></div></section>
+{% endif %}
 {% schema %}
-{"name": "Bpm Rich story", "settings": [{"type": "text", "id": "eyebrow", "label": "Eyebrow"}, {"type": "textarea", "id": "heading", "label": "Heading"}, {"type": "textarea", "id": "intro", "label": "Introduction"}, {"type": "richtext", "id": "body", "label": "Approved story and attribution"}, {"type": "checkbox", "id": "band", "label": "Butter background", "default": false}, {"type": "page", "id": "page", "label": "Linked page"}, {"type": "collection", "id": "collection", "label": "Linked collection"}, {"type": "text", "id": "button_label", "label": "Link label"}, {"type": "textarea", "id": "quote", "label": "Approved attributed quote"}, {"type": "text", "id": "attribution", "label": "Quote attribution"}], "presets": [{"name": "Bpm Rich story"}]}
+{
+  "name": "Bpm Rich story",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "limit_to_page",
+      "label": "Show only on the selected page",
+      "default": false
+    },
+    {
+      "type": "page",
+      "id": "visible_on_page",
+      "label": "Page to display this section",
+      "info": "When page restriction is enabled, no selection hides the section."
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow"
+    },
+    {
+      "type": "textarea",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "textarea",
+      "id": "intro",
+      "label": "Introduction"
+    },
+    {
+      "type": "richtext",
+      "id": "body",
+      "label": "Approved story and attribution"
+    },
+    {
+      "type": "checkbox",
+      "id": "band",
+      "label": "Butter background",
+      "default": false
+    },
+    {
+      "type": "page",
+      "id": "page",
+      "label": "Linked page"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Linked collection"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Link label"
+    },
+    {
+      "type": "textarea",
+      "id": "quote",
+      "label": "Approved attributed quote"
+    },
+    {
+      "type": "text",
+      "id": "attribution",
+      "label": "Quote attribution"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Bpm Rich story"
+    }
+  ]
+}
 {% endschema %}

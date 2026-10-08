@@ -1,8 +1,15 @@
-<section class="section wrap"><h1>{{ page.title | escape }}</h1></section><div class="section wrap article-body prose">{{ page.content }}</div>
+{% assign show_title = true %}{% if section.settings.hide_title_for_page != blank and section.settings.hide_title_for_page.id == page.id %}{% assign show_title = false %}{% endif %}
+{% if show_title %}<section class="section wrap"><h1>{{ page.title | escape }}</h1></section>{% endif %}{% if page.content != blank %}<div class="section wrap article-body prose">{{ page.content }}</div>{% endif %}
 {% schema %}
 {
   "name": "Bpm Page",
   "settings": [
+    {
+      "type": "page",
+      "id": "hide_title_for_page",
+      "label": "Page with an opening section instead of native title",
+      "info": "Native page body is always preserved when populated."
+    },
     {
       "type": "paragraph",
       "content": "Page title and body are edited in Shopify Pages. This section preserves native rich content."
