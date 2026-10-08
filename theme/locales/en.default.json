@@ -82,7 +82,8 @@
     "taxes_included": "Taxes included.",
     "taxes_checkout": "Taxes calculated at checkout.",
     "shipping_checkout": "Shipping calculated at checkout.",
-    "checkout": "Checkout"
+    "checkout": "Checkout",
+    "bundle_contents": "Bundle contents"
   },
   "catalogue": {
     "price_min": "From",

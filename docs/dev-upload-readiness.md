@@ -1,5 +1,7 @@
 # Custom Sites theme — development upload review
 
+Latest local change: cart bundle components and native line-error presentation now exceed the frozen 460c338 candidate below. That snapshot and its command remain historical review evidence; refresh the snapshot and exact-command review before uploading the current implementation. No upload has occurred.
+
 This review supersedes the repaired-Dawn upload command. Its prior text is preserved in `plan-history/2026-10-07-before-custom-dev-candidate/dev-upload-readiness.md`. The full Phase 0–5 plan remains in `shopify-redesign-plan.md`.
 
 ## Current snapshot revision — 8 October 2026

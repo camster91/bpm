@@ -18,6 +18,14 @@
               <h3><a href="{{ item.url }}">{{ item.product.title | escape }}</a></h3>
               {% unless item.product.has_only_default_variant %}<p>{{ item.variant.title | escape }}</p>{% endunless %}
               {% if item.selling_plan_allocation %}<p>{{ item.selling_plan_allocation.selling_plan.name | escape }}</p>{% endif %}
+              {% if item.item_components.size > 0 %}
+                <ul class="bpm-cart-components" aria-label="{{ 'cart.bundle_contents' | t | escape }}">
+                  {% for component in item.item_components %}
+                    <li>{{ component.quantity }} × {{ component.product.title | escape }}{% unless component.product.has_only_default_variant %} — {{ component.variant.title | escape }}{% endunless %}</li>
+                  {% endfor %}
+                </ul>
+              {% endif %}
+              {% if item.error_message != blank %}<p class="bpm-cart-error" role="alert">{{ item.error_message | escape }}</p>{% endif %}
               {% for property in item.properties %}
                 {% assign property_prefix = property.first | slice: 0 %}
                 {% if property.last != blank and property_prefix != '_' %}<p>{{ property.first | escape }}: {{ property.last | escape }}</p>{% endif %}

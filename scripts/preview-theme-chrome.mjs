@@ -134,14 +134,16 @@ const fixtureCart = {
   {product:{title:'Unscented — fixture',has_only_default_variant:true},variant:{title:'Default Title',quantity_rule:{min:1,increment:1,max:5}},quantity:1,url:'/sites-cart.html',url_to_remove:'/local-fixture-cart/change?id=43%3Aplan&quantity=0',image:{src:'/fixture-unscented.svg'},original_line_price:1999,final_line_price:1999,selling_plan_allocation:{selling_plan:{name:'Every five months — fixture'}},properties:{},line_level_discount_allocations:[]}
  ]
 };
-for (const empty of [false,true]) {
- let body = await section('bpm-sites-cart',{},[],{cart:empty?{item_count:0,items:[]}:fixtureCart,routes:{...common.routes,cart_url:'/local-fixture-cart',all_products_collection_url:'/sites-home.html'}});
+for (const mode of ['populated','empty','bundle-error']) {
+ const empty = mode === 'empty';
+ const activeCart = mode === 'bundle-error' ? {...fixtureCart,items:[{...fixtureCart.items[0],product:{title:'Two Track — bundle fixture',has_only_default_variant:true},item_components:[{quantity:2,product:{title:'Bergamot & Lime — fixture',has_only_default_variant:true},variant:{title:'Default Title'}},{quantity:2,product:{title:'Unscented — fixture',has_only_default_variant:false},variant:{title:'76 g'}}],error_message:'Fabricated availability error: please review the quantity.'},fixtureCart.items[1]]} : fixtureCart;
+ let body = await section('bpm-sites-cart',{},[],{cart:empty?{item_count:0,items:[]}:activeCart,routes:{...common.routes,cart_url:'/local-fixture-cart',all_products_collection_url:'/sites-home.html'}});
  const banner = '<div class="wrap"><p>Local cart fixture. No Shopify backend is connected; update, removal and checkout submissions are disabled.</p></div>';
  const cartReview=JSON.parse(await readFile(join(theme,'templates/cart.json'),'utf8')).sections.reviews;
- body+=await section(cartReview.type,cartReview.settings,cartReview.block_order.map(id=>cartReview.blocks[id]),{cart:empty?{item_count:0,items:[]}:fixtureCart});
+ body+=await section(cartReview.type,cartReview.settings,cartReview.block_order.map(id=>cartReview.blocks[id]),{cart:empty?{item_count:0,items:[]}:activeCart});
  const safeBody = body.replace(/(<button[^>]*type="submit")/g,'$1 disabled').replace(/href="\/local-fixture-cart\/change[^\"]*"/g,'aria-disabled="true"');
- const cartHeader = await section('bpm-sites-header',{menu:sitesMenu},[],{cart:empty?{item_count:0}:fixtureCart});
- await writeFile(join(output,empty?'sites-cart-empty.html':'sites-cart.html'),await engine.parseAndRender(code,{...common,cart:empty?{item_count:0}:fixtureCart,content_for_layout:banner+safeBody,preview_header:cartHeader,preview_footer:sitesFooter,page_title:'Cart fixture'}));
+ const cartHeader = await section('bpm-sites-header',{menu:sitesMenu},[],{cart:empty?{item_count:0}:activeCart});
+ await writeFile(join(output,empty?'sites-cart-empty.html':mode==='bundle-error'?'sites-cart-bundle-error.html':'sites-cart.html'),await engine.parseAndRender(code,{...common,cart:empty?{item_count:0}:activeCart,content_for_layout:banner+safeBody,preview_header:cartHeader,preview_footer:sitesFooter,page_title:'Cart fixture'}));
 }
 const sourceProducts = JSON.parse(await readFile(resolve(theme,'../reference-site/src/content/products.json'),'utf8'));
 const fixtureComponents = [[2,2],[4,0],[0,4],[3,1],[0,2],[2,0],[1,1],[0,1],[1,0]];
