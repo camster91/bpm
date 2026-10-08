@@ -51,7 +51,10 @@
     "review_source": "View original review",
     "creator_original": "Watch the original post",
     "creator_transcript": "Transcript and visual description",
-    "jump_navigation": "Product section links"
+    "jump_navigation": "Product section links",
+    "directions": "Directions for this product",
+    "whats_inside": "What’s inside",
+    "shipping_notes": "Shipping notes"
   },
   "newsletter": {
     "success": "Thanks for signing up. Check your inbox for any confirmation required."

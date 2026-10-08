@@ -11,6 +11,8 @@ const clean = text => text.replace(/{%\s*form\s+'product'[^%]*%}/g, '<form class
 for (const name of ['bpm-navigation', 'bpm-product-card', 'bpm-sites-links', 'bpm-sites-card', 'bpm-sites-article-card', 'bpm-sites-filters', 'bpm-sites-catalogue-card', 'bpm-sites-media', 'bpm-app-blocks', 'bpm-localization']) await writeFile(join(output, `${name}.liquid`), clean(await readFile(join(theme, 'snippets', `${name}.liquid`), 'utf8')));
 const engine = new Liquid({ root: output, extname: '.liquid' });
 const locale = JSON.parse(await readFile(join(theme, 'locales/en.default.json'), 'utf8'));
+// Local fixture HTML stands in for Shopify's native rich-text serializer.
+engine.registerFilter('metafield_tag', field => `<div class="metafield-rich_text_field">${field.fixtureHtml}</div>`);
 engine.registerFilter('asset_url', value => `/assets/${value}`);
 engine.registerFilter('stylesheet_tag', value => `<link rel="stylesheet" href="${value}">`);
 engine.registerFilter('money', value => new Intl.NumberFormat('en-CA', { style: 'currency', currency: 'CAD' }).format(value / 100));
@@ -133,6 +135,12 @@ const searchBody = await section('bpm-sites-search',{},catalogueArt,{search:sear
 await writeFile(join(output,'sites-search.html'),await engine.parseAndRender(code,{...common,content_for_layout:catalogueBanner+searchBody.replace(/(<button[^>]*type="submit")/g,'$1 disabled'),preview_header:sitesHeader,preview_footer:sitesFooter,page_title:'Search fixture'}));
 const purchaseVariant = {id:101,title:'76 g — fixture',available:true,price:2399,requires_shipping:true,quantity_rule:{min:1,increment:1,max:8},selling_plan_allocations:[{price:2160,checkout_charge_amount:2160,per_delivery_price:2160,selling_plan:{id:501,name:'Every five months — fixture',description:'Fabricated subscription terms for local interaction review.'}}],featured_media:{id:10}};
 const purchaseProduct = {id:100,title:'Bergamot & Lime — fixture',url:'/sites-product.html',has_only_default_variant:false,requires_selling_plan:false,selected_or_first_available_variant:purchaseVariant,variants:[purchaseVariant,{...purchaseVariant,id:102,title:'Alternate — sold-out fixture',available:false}],media:[{id:10,media_type:'image',src:'/assets/bpm-sites-texture.jpg',preview_image:{src:'/assets/bpm-sites-texture.jpg'},alt:'BPM cream texture'},{id:11,media_type:'image',src:'/assets/bpm-sites-story.jpg',preview_image:{src:'/assets/bpm-sites-story.jpg'},alt:'BPM packaging beside turntable'}],featured_media:{id:10},description:'<p>Local product description fixture. Native product HTML will come from Shopify. This does not verify product claims.</p>'};
+purchaseProduct.metafields = {custom:{
+ ingredients:{type:'rich_text_field',value:{type:'root',children:[{type:'paragraph'}]},fixtureHtml:'<p><strong>Local fixture ingredients:</strong> Illustrative contents only. Not approved product copy.</p>'},
+ how_to_use_title:{value:'Directions — local fixture'},how_to_use:{value:'Fabricated directions for layout testing.\nFabricated safety line retained as a separate line.'},
+ whats_inside_description:{type:'rich_text_field',value:{type:'root',children:[{type:'paragraph'}]},fixtureHtml:'<p>Local fixture product-specific notes with <strong>rich formatting</strong>.</p>'},
+ shipping:{value:'Local fixture shipping note.\nCurrent policy remains the authoritative source.'}
+}};
 let purchaseBody = await section('bpm-sites-product',{image:{src:'/fixture-bergamot.svg'},pack_label:'1 × 76 g',intro:'Bright citrus + quiet cedarwood.',show_description:false,fact_1:'Fabricated quick fact for local layout review.',jump_menu:{links:[{url:'#formula-preview-bpm-sites-pdp-formula',title:'Ingredients'},{url:'#creator-stories-preview-bpm-sites-pdp-creators',title:'Creator stories'}]}},[],{product:purchaseProduct,cart:{taxes_included:false},form:{}});
 const duoArt = await Promise.all(['bergamot','unscented'].map(name=>readFile(join(output,`fixture-${name}.svg`))));
 await writeFile(join(output,'fixture-duo.svg'),`<svg xmlns="http://www.w3.org/2000/svg" width="800" height="700" viewBox="0 0 800 700"><image x="50" y="0" width="330" height="700" href="data:image/svg+xml;base64,${duoArt[0].toString('base64')}"/><image x="420" y="0" width="330" height="700" href="data:image/svg+xml;base64,${duoArt[1].toString('base64')}"/></svg>`);

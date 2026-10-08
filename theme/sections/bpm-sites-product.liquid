@@ -33,7 +33,7 @@
   <div class="summary">
     {% if section.settings.pack_label != blank %}<p class="eyebrow">{{ section.settings.pack_label | escape }}</p>{% endif %}
     <h1 id="Title-{{ section.id }}">{{ product.title | escape }}</h1>
-    {% if section.settings.intro != blank %}<p class="lead">{{ section.settings.intro | escape }}</p>{% endif %}
+    {% assign scent_intro = section.settings.intro | default: product.metafields.custom.scent_tagline.value %}{% if scent_intro != blank %}<p class="lead">{{ scent_intro | escape }}</p>{% endif %}
     <p class="price" aria-live="polite"><span class="bpm-visually-hidden">{{ 'products.price' | t }} </span><span data-bpm-product-price>{{ shown_price | money_with_currency }}</span></p>
     {% if variant.compare_at_price > variant.price and allocation == nil %}<p><s>{{ variant.compare_at_price | money_with_currency }}</s></p>{% endif %}
     {% if section.settings.rotation.links.size > 0 %}<div class="scent-controls"><p class="label">{{ 'products.rotation' | t }}</p><div class="choices">{% for link in section.settings.rotation.links %}<a href="{{ link.url }}"{% if link.current %} aria-current="page"{% endif %}>{{ link.title | escape }}</a>{% endfor %}</div></div>{% endif %}

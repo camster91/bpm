@@ -2,6 +2,7 @@
 <section class="bpm-pdp application" id="how-to-{{ section.id }}"><div class="wrap application-grid">
   <div class="application-copy"><p class="eyebrow">{{ section.settings.eyebrow | escape }}</p><h2>{{ section.settings.heading | escape | newline_to_br }}</h2><p class="lead">{{ section.settings.intro | escape }}</p>
     <ol class="steps">{% for block in section.blocks %}{% if block.settings.heading != blank %}<li {{ block.shopify_attributes }}><span aria-hidden="true">{{ forloop.index | prepend: '0' }}</span><div><h3>{{ block.settings.heading | escape }}</h3><p>{{ block.settings.body | escape }}</p></div></li>{% endif %}{% endfor %}</ol>
+    {% if product.metafields.custom.how_to_use.value != blank %}<div class="bpm-native-directions prose"><h3>{% if product.metafields.custom.how_to_use_title.value != blank %}{{ product.metafields.custom.how_to_use_title.value | escape }}{% else %}{{ 'products.directions' | t }}{% endif %}</h3><p>{{ product.metafields.custom.how_to_use.value | escape | newline_to_br }}</p></div>{% endif %}
     {% if section.settings.note != blank %}<p class="fine">{{ section.settings.note | escape }}</p>{% endif %}
   </div>
   {% if section.settings.video != blank or section.settings.use_source_video %}<figure class="video-card">

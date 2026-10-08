@@ -20,3 +20,9 @@
 
 .creator-slot summary strong{font:inherit;min-width:0;flex:1;overflow-wrap:anywhere}.creator-slot summary>span{flex:none}
 .bpm-pdp .creator-slot summary{padding-inline-end:8px}.creator-slot summary>span{width:24px;height:24px;line-height:1;display:grid;place-items:center}
+
+.bpm-native-directions { margin-block: 2rem; }
+.bpm-product-details { margin-block-start: 2rem; }
+
+.bpm-pdp .inci summary { padding-inline-end: 8px; }
+.inci summary > span { flex: 0 0 24px; width: 24px; height: 24px; line-height: 24px; text-align: center; }
