@@ -43,7 +43,11 @@
     "texture_alt": "Close-up of BPM cream texture",
     "formula_alt": "Editorial still life of golden oil and fine pale powder on a warm yellow surface",
     "metal_alt": "BPM metal deodorant tube",
-    "video_description": "English visual description"
+    "video_description": "English visual description",
+    "pack": "Pack",
+    "fragrance": "Fragrance",
+    "shipping_question": "Where do you ship?",
+    "shipping_policy": "View current shipping destinations and rates"
   },
   "newsletter": {
     "success": "Thanks for signing up. Check your inbox for any confirmation required."

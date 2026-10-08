@@ -132,6 +132,44 @@
     "notes": {
       "type": "bpm-sites-product-notes",
       "settings": {}
+    },
+    "compare": {
+      "type": "bpm-sites-pdp-compare",
+      "settings": {},
+      "blocks": {},
+      "block_order": []
+    },
+    "faq": {
+      "type": "bpm-sites-pdp-faq",
+      "settings": {},
+      "blocks": {
+        "0": {
+          "type": "question",
+          "settings": {
+            "question": "How much should I use?",
+            "answer": "<p>Start with a pea-sized amount and massage it into your underarms. Adjust the amount if needed.</p>"
+          }
+        },
+        "1": {
+          "type": "question",
+          "settings": {
+            "question": "Is BPM baking soda free?",
+            "answer": "<p>Yes. Both Bergamot &amp; Lime and Unscented are formulated without baking soda or waxes.</p>"
+          }
+        },
+        "2": {
+          "type": "question",
+          "settings": {
+            "question": "How long does a tube last?",
+            "answer": "<p>BPM estimates approximately 304 pea-sized applications per 76 g tube, or around five months for one person. Your use may vary.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "0",
+        "1",
+        "2"
+      ]
     }
   },
   "order": [
@@ -140,7 +178,9 @@
     "application",
     "scent",
     "formula",
+    "compare",
     "reviews",
+    "faq",
     "notes"
   ]
 }

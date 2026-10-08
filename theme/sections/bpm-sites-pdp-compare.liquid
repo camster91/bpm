@@ -1,0 +1,19 @@
+{{ 'bpm-pdp.css' | asset_url | stylesheet_tag }}
+{% assign selected_count = 0 %}{% for block in section.blocks %}{% if block.settings.product != blank %}{% assign selected_count = selected_count | plus: 1 %}{% endif %}{% endfor %}
+{% if selected_count > 0 %}<section class="bpm-pdp compare wrap" id="compare-{{ section.id }}">
+<div class="section-intro"><p class="eyebrow">{{ section.settings.eyebrow | escape }}</p><h2>{{ section.settings.heading | escape | newline_to_br }}</h2><p>{{ section.settings.intro | escape }}</p></div>
+<div class="comparison-grid">{% for block in section.blocks %}{% assign compared = block.settings.product %}{% if compared != blank %}
+<article {% if compared.id == product.id %}data-current{% endif %} {{ block.shopify_attributes }}>
+{% assign photo = block.settings.image | default: compared.featured_image %}
+{% if photo != blank %}<div class="comparison-image" style="background:{{ block.settings.background }}">{{ photo | image_url: width: 1000 | image_tag: widths: '320,500,750,1000', sizes: '(max-width:680px) 85vw,28vw', loading: 'lazy', alt: compared.title }}</div>{% endif %}
+<h3>{{ compared.title | escape }}</h3>{% if block.settings.summary != blank %}<p>{{ block.settings.summary | escape }}</p>{% endif %}
+<dl>{% if block.settings.pack != blank %}<div><dt>{{ 'products.pack' | t }}</dt><dd>{{ block.settings.pack | escape }}</dd></div>{% endif %}{% if block.settings.fragrance != blank %}<div><dt>{{ 'products.fragrance' | t }}</dt><dd>{{ block.settings.fragrance | escape }}</dd></div>{% endif %}</dl>
+<p class="compare-price">{% if compared.price_varies %}{% assign formatted_price = compared.price | money_with_currency %}{{ 'products.price_from' | t: price: formatted_price }}{% else %}{{ compared.price | money_with_currency }}{% endif %}</p>
+{% unless compared.available %}<p>{{ 'products.sold_out' | t }}</p>{% endunless %}
+<a href="{{ compared.url }}" class="button">{{ block.settings.button_label | default: section.settings.button_label | escape }} <span aria-hidden="true">→</span></a>
+</article>{% endif %}{% endfor %}</div>
+{% if shop.shipping_policy.url != blank %}<p class="fine"><a href="{{ shop.shipping_policy.url }}">{{ 'products.shipping_policy' | t }}</a></p>{% endif %}
+</section>{% endif %}
+{% schema %}
+{"name": "Bpm Product comparison", "settings": [{"type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "CHOOSE YOUR BPM"}, {"type": "textarea", "id": "heading", "label": "Heading", "default": "Solo or\nin rotation."}, {"type": "text", "id": "intro", "label": "Introduction", "default": "Same everyday ritual. A different way to stock your shelf."}, {"type": "text", "id": "button_label", "label": "Default product link", "default": "Explore this track"}], "blocks": [{"type": "product", "name": "Compared product", "settings": [{"type": "product", "id": "product", "label": "Shopify product"}, {"type": "image_picker", "id": "image", "label": "Original framed product artwork"}, {"type": "color", "id": "background", "label": "Artwork background", "default": "#f3e4b7"}, {"type": "textarea", "id": "summary", "label": "Approved product summary"}, {"type": "text", "id": "pack", "label": "Verified pack description"}, {"type": "text", "id": "fragrance", "label": "Approved fragrance description"}, {"type": "text", "id": "button_label", "label": "Product link override"}]}], "max_blocks": 3, "presets": [{"name": "Bpm Product comparison"}]}
+{% endschema %}
