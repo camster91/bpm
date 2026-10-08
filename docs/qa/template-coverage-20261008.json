@@ -1,5 +1,5 @@
 {
-  "sourceCommit": "596714557c95e0352b234d3db0ccb17ceccde915",
+  "sourceCommit": "eb47253176261a52a167c681719b701a53a3a088",
   "themeTree": "b1b46a6553c276c090544966da5c85ed7e934095",
   "scope": "Local source classification, template presence and ordered-section file resolution only",
   "counts": {
@@ -125,43 +125,50 @@
     {
       "source": "policies/contact-information.html",
       "templates": [],
-      "state": "native-policy-or-page-resolution-and-source-layout-unverified",
+      "capturedPath": "/policies/contact-information",
+      "state": "prepared-policy-content-not-applied-native-destination-and-layout-unverified",
       "boundary": "Current approved policy body, route and native policy layout must be verified; theme upload does not migrate policy data."
     },
     {
       "source": "policies/legal.html",
       "templates": [],
-      "state": "native-policy-or-page-resolution-and-source-layout-unverified",
+      "capturedPath": "/policies/legal-notice",
+      "state": "prepared-policy-content-not-applied-native-destination-and-layout-unverified",
       "boundary": "Current approved policy body, route and native policy layout must be verified; theme upload does not migrate policy data."
     },
     {
       "source": "policies/privacy.html",
       "templates": [],
-      "state": "native-policy-or-page-resolution-and-source-layout-unverified",
+      "capturedPath": "/policies/privacy-policy",
+      "state": "prepared-policy-content-not-applied-native-destination-and-layout-unverified",
       "boundary": "Current approved policy body, route and native policy layout must be verified; theme upload does not migrate policy data."
     },
     {
       "source": "policies/refund.html",
       "templates": [],
-      "state": "native-policy-or-page-resolution-and-source-layout-unverified",
+      "capturedPath": "/policies/refund-policy",
+      "state": "prepared-policy-content-not-applied-native-destination-and-layout-unverified",
       "boundary": "Current approved policy body, route and native policy layout must be verified; theme upload does not migrate policy data."
     },
     {
       "source": "policies/shipping.html",
       "templates": [],
-      "state": "native-policy-or-page-resolution-and-source-layout-unverified",
+      "capturedPath": "/policies/shipping-policy",
+      "state": "prepared-policy-content-not-applied-native-destination-and-layout-unverified",
       "boundary": "Current approved policy body, route and native policy layout must be verified; theme upload does not migrate policy data."
     },
     {
       "source": "policies/subscription.html",
       "templates": [],
-      "state": "native-policy-or-page-resolution-and-source-layout-unverified",
+      "capturedPath": "/policies/subscription-policy",
+      "state": "prepared-policy-content-not-applied-native-destination-and-layout-unverified",
       "boundary": "Current approved policy body, route and native policy layout must be verified; theme upload does not migrate policy data."
     },
     {
       "source": "policies/terms.html",
       "templates": [],
-      "state": "native-policy-or-page-resolution-and-source-layout-unverified",
+      "capturedPath": "/policies/terms-of-service",
+      "state": "prepared-policy-content-not-applied-native-destination-and-layout-unverified",
       "boundary": "Current approved policy body, route and native policy layout must be verified; theme upload does not migrate policy data."
     },
     {

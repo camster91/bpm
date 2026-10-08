@@ -21,6 +21,7 @@ const fixed = {
   'contact.html': 'page.contact.json', 'breakdown.html': 'blog.json', 'policies.html': 'page.policies.json'
 };
 const articles = await readJSON('docs/source-article-content-candidate.json');
+const policies = await readJSON('docs/source-policy-content-candidate.json');
 const sources = sourcePages.map(path => {
   if (fixed[path]) return { source: path, templates: [fixed[path]], state: 'local-template-present-native-assignment-unverified' };
   if (path.startsWith('articles/')) {
@@ -28,7 +29,11 @@ const sources = sourcePages.map(path => {
     assert.ok(entry, `Missing prepared article content: ${path}`);
     return { source: path, templates: ['article.json'], nativeHandle: 'news/' + entry.handle, state: 'prepared-content-not-applied-native-id-unverified' };
   }
-  if (path.startsWith('policies/')) return { source: path, templates: [], state: 'native-policy-or-page-resolution-and-source-layout-unverified', boundary: 'Current approved policy body, route and native policy layout must be verified; theme upload does not migrate policy data.' };
+  if (path.startsWith('policies/')) {
+    const entry = policies.entries.find(policy => policy.sourcePath === 'reference-site/public/' + path);
+    assert.ok(entry, `Missing prepared policy content: ${path}`);
+    return { source: path, templates: [], capturedPath: entry.capturedPath, state: 'prepared-policy-content-not-applied-native-destination-and-layout-unverified', boundary: 'Current approved policy body, route and native policy layout must be verified; theme upload does not migrate policy data.' };
+  }
   if (path === 'review.html') return { source: path, templates: [], state: 'intentional-internal-tool-exclusion', boundary: 'Design review/comments tooling is not a customer storefront feature.' };
   if (path === 'product-media/preview.html') return { source: path, templates: ['product.json', 'product.bergamot-lime.json', 'product.unscented.json'], state: 'nine-local-compositions-native-commerce-unverified' };
   throw new Error(`Unclassified authoritative source page: ${path}`);
