@@ -150,3 +150,14 @@ for (const id of ['essentials','benefits','application','scent','formula','value
 const purchaseBanner = '<div class="wrap"><p>Local product fixture. Gallery and plan-price display are interactive. Review output, creator attribution and media bindings are fabricated. Variant, quantity and cart submissions are disabled; no Shopify backend is connected.</p></div>';
 const safePurchase = purchaseBody.replace(/(<button[^>]*type="submit")/g,'$1 disabled').replace(/<select id="Variant-/g,'<select disabled id="Variant-');
 await writeFile(join(output,'sites-product.html'),await engine.parseAndRender(code,{...common,content_for_layout:purchaseBanner+safePurchase,preview_header:sitesHeader,preview_footer:sitesFooter,page_title:'Product fixture'}));
+
+for (const pageName of ['about','indigenous-owned','contact']) {
+ const config=JSON.parse(await readFile(join(theme,`templates/page.${pageName}.json`),'utf8'));
+ let body='<div class="wrap"><p>Local '+pageName+' layout fixture. Source claims and merchant bindings remain unverified. Contact submissions are disabled; no Shopify backend is connected.</p></div>';
+ for (const id of config.order) {
+  const item=config.sections[id]; if(item.disabled) continue;
+  body+=await section(item.type,item.settings,(item.block_order||[]).map(key=>item.blocks[key]),{page:{title:pageName+' — fixture'},form:{}});
+ }
+ body=body.replace(/(<button[^>]*type="submit")/g,'$1 disabled');
+ await writeFile(join(output,`sites-${pageName}.html`),await engine.parseAndRender(code,{...common,content_for_layout:body,preview_header:sitesHeader,preview_footer:sitesFooter,page_title:pageName+' — local fixture'}));
+}

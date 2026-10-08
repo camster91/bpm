@@ -1,0 +1,123 @@
+{
+  "sections": {
+    "opening": {
+      "type": "bpm-sites-page-opening",
+      "settings": {
+        "eyebrow": "QUESTIONS / FEEDBACK / WHOLESALE",
+        "heading": "Let’s talk.",
+        "intro": "A formula question. An order update.\nA good idea. We’d love to hear it.",
+        "art": "none",
+        "image_alt": ""
+      }
+    },
+    "contact": {
+      "type": "bpm-sites-contact",
+      "settings": {
+        "email": "contactus@bpmdeodorant.com",
+        "response": "We aim to reply within 1–2 business days.",
+        "instructions": "<p>For order questions, include your order number.<br>For retail or wholesale, tell us a little about your business.</p>"
+      },
+      "blocks": {
+        "0": {
+          "type": "topic",
+          "settings": {
+            "topic": "Product question"
+          }
+        },
+        "1": {
+          "type": "topic",
+          "settings": {
+            "topic": "Order question"
+          }
+        },
+        "2": {
+          "type": "topic",
+          "settings": {
+            "topic": "Wholesale / partnership"
+          }
+        },
+        "3": {
+          "type": "topic",
+          "settings": {
+            "topic": "Feedback"
+          }
+        }
+      },
+      "block_order": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    "faq": {
+      "type": "bpm-sites-questions",
+      "settings": {
+        "eyebrow": "GOOD QUESTIONS",
+        "heading": "A few useful\nanswers."
+      },
+      "blocks": {
+        "0": {
+          "type": "question",
+          "settings": {
+            "question": "How quickly will I hear back?",
+            "answer": "<p>BPM aims to reply within 1–2 business days.</p>"
+          }
+        },
+        "1": {
+          "type": "question",
+          "settings": {
+            "question": "Can I track my order?",
+            "answer": "<p>Tracking details are sent by email when your order ships.</p>"
+          }
+        },
+        "2": {
+          "type": "question",
+          "settings": {
+            "question": "How much should I use?",
+            "answer": "<p>Start with a pea-sized amount and massage it into your underarms. Adjust if needed.</p>"
+          }
+        },
+        "3": {
+          "type": "question",
+          "settings": {
+            "question": "Is BPM baking soda free?",
+            "answer": "<p>Yes. Both scents are formulated without baking soda or waxes.</p>"
+          }
+        },
+        "4": {
+          "type": "question",
+          "settings": {
+            "question": "How long does a tube last?",
+            "answer": "<p>BPM estimates approximately 304 pea-sized applications per 76 g tube. Your amount and frequency affect how long it lasts.</p>"
+          }
+        },
+        "5": {
+          "type": "question",
+          "settings": {
+            "question": "Where do you ship?",
+            "answer": "<p>Canada and the United States. See the shipping policy for current thresholds and delivery details.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ]
+    },
+    "closing": {
+      "type": "bpm-sites-closing",
+      "settings": {}
+    }
+  },
+  "order": [
+    "opening",
+    "contact",
+    "faq",
+    "closing"
+  ]
+}

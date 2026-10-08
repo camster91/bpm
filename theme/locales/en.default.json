@@ -93,5 +93,13 @@
     "page": "Page",
     "read_page": "Read the page",
     "no_results": "No results found. Try another search or clear the filters."
+  },
+  "contact": {
+    "name": "Your name",
+    "email": "Email",
+    "topic": "What’s on your mind?",
+    "message": "Your message",
+    "submit": "Send message",
+    "success": "Thanks for your message. We’ll get back to you."
   }
 }
