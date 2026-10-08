@@ -5,9 +5,9 @@ Renders native Shopify product media with optional eager image loading.
 @example
 {% render 'bpm-sites-media', media: media, loading: 'lazy' %}
 {% enddoc %}
-{% assign loading = loading | default: 'lazy' %}
+{% assign loading = loading | default: 'lazy' %}{% assign priority = 'auto' %}{% if loading == 'eager' %}{% assign priority = 'high' %}{% endif %}
 {% case media.media_type %}
-  {% when 'image' %}{{ media | image_url: width: 1600 | image_tag: widths: '500,800,1200,1600', sizes: '(max-width:760px) 90vw,45vw', loading: loading, alt: media.alt }}
+  {% when 'image' %}{{ media | image_url: width: 1600 | image_tag: widths: '500,800,1200,1600', sizes: '(max-width:760px) 90vw,45vw', loading: loading, fetchpriority: priority, alt: media.alt }}
   {% when 'video' %}{{ media | video_tag: controls: true, autoplay: false, loop: false, preload: 'none' }}
   {% when 'model' %}{{ media | model_viewer_tag: interaction-policy: 'allow-when-focused' }}
   {% when 'external_video' %}<div class="bpm-external-media">{{ media.preview_image | image_url: width: 1000 | image_tag: loading: 'lazy', alt: media.alt }}<a class="button" href="{{ media | external_video_url }}" target="_blank" rel="noopener">{{ 'products.watch_video' | t }} <span class="bpm-visually-hidden">{{ 'accessibility.new_window' | t }}</span><span aria-hidden="true">↗</span></a></div>

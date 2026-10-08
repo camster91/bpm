@@ -22,7 +22,7 @@ engine.registerFilter('money', value => '$' + (Number(value) / 100).toFixed(2));
 engine.registerFilter('money_with_currency', value => '$' + (Number(value) / 100).toFixed(2) + ' CAD');
 engine.registerFilter('structured_data', value => JSON.stringify({fixture_only:true, fixture_resource_id:value.id, fixture_kind:value.fixture_kind || 'resource'}));
 engine.registerFilter('image_url', value => value.src);
-engine.registerFilter('image_tag', src => `<img src="${src}">`);
+engine.registerFilter('image_tag', (src,...pairs) => {const props=Object.fromEntries(pairs.filter(Array.isArray));return `<img src="${src}"${props.loading?' loading="'+props.loading+'"':''}${props.fetchpriority?' fetchpriority="'+props.fetchpriority+'"':''}>`;});
 engine.registerFilter('format_code', value => String(value).replace(/(.{4})/g, '$1 ').trim());
 engine.registerFilter('shopify_asset_url', value => `/shopify-native/${value}`);
 engine.registerFilter('asset_url', value => `/assets/${value}`);
@@ -342,6 +342,12 @@ try {
   }
   const galleryConfig=JSON.parse(await readFile(join(theme,'templates/product.bergamot-lime.json'),'utf8')).sections.main;
   await check('Explicit selected variant keeps native featured media initially visible','sections/bpm-sites-product.liquid',{...nativeProduct,product:{...nativeProduct.product,id:14880059228532,selected_variant:productVariant},section:hydrateGallery(galleryConfig)},html=>{assert.match(html,/id="Media-product-a-10" data-bpm-media data-initial-media/);assert.doesNotMatch(html,/id="Media-product-a-override" data-bpm-media data-initial-media/);assert.equal((html.match(/data-initial-media/g)||[]).length,1);});
+  const imageHints=html=>[...html.matchAll(/<img[^>]*>/g)].map(match=>match[0]);
+  const priorityHints=html=>imageHints(html).filter(tag=>tag.includes('fetchpriority="high"'));
+  await check('Source-first product prioritizes one visible artwork only','sections/bpm-sites-product.liquid',{...nativeProduct,product:{...nativeProduct.product,id:14880059228532},section:hydrateGallery(galleryConfig)},html=>{assert.equal(priorityHints(html).length,1);assert.match(priorityHints(html)[0],/bpm-sites-carton-bergamot/);assert.match(priorityHints(html)[0],/loading="eager"/);});
+  await check('Explicit native variant defers unused source artwork and prioritizes native image','sections/bpm-sites-product.liquid',{...nativeProduct,product:{...nativeProduct.product,id:14880059228532,selected_variant:productVariant},section:hydrateGallery(galleryConfig)},html=>{assert.equal(priorityHints(html).length,1);assert.doesNotMatch(priorityHints(html)[0],/bpm-sites-carton/);assert.ok(imageHints(html).filter(tag=>tag.includes('bpm-sites-carton-bergamot')).every(tag=>tag.includes('loading="lazy"')));});
+  await check('Merchant first image receives sole eager high-priority hint','sections/bpm-sites-product.liquid',{...nativeProduct,section:{...nativeProduct.section,settings:{...nativeProduct.section.settings,image:{src:'/merchant-first.png'}}}},html=>{assert.equal(priorityHints(html).length,1);assert.match(priorityHints(html)[0],/merchant-first.png/);assert.match(priorityHints(html)[0],/loading="eager"/);});
+  await check('Native-only gallery prioritizes selected image without preloading video','sections/bpm-sites-product.liquid',nativeProduct,html=>{assert.equal(priorityHints(html).length,1);assert.match(html,/preload="none"/);});
   await check('Uploaded first image wins over source first gallery artwork','sections/bpm-sites-product.liquid',{...nativeProduct,product:{...nativeProduct.product,id:14880059228532},section:{...hydrateGallery(galleryConfig),settings:{...galleryConfig.settings,image:{src:'merchant-first-image.jpg'}}}},html=>{assert.match(html,/merchant-first-image.jpg/);assert.doesNotMatch(html,/bpm-sites-carton-bergamot/);});
   await check('Unknown source key falls back to native selected media without phantom frame','sections/bpm-sites-product.liquid',{...nativeProduct,section:{settings:{source_gallery:'unknown'},blocks:[]}},html=>{assert.doesNotMatch(html,/Media-product-a-override/);assert.match(html,/data-initial-media/);});
   console.log(`${passed} chrome rendering checks passed; Shopify runtime and visual geometry remain unverified.`);

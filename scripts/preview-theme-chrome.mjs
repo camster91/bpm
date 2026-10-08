@@ -27,7 +27,7 @@ engine.registerFilter('money', value => new Intl.NumberFormat('en-CA', { style: 
 engine.registerFilter('money_with_currency', value => new Intl.NumberFormat('en-CA', { style: 'currency', currency: 'CAD' }).format(value / 100) + ' CAD');
 engine.registerFilter('structured_data', value => JSON.stringify({fixture_only:true, fixture_resource_id:value.id, fixture_kind:value.fixture_kind || 'resource'}));
 engine.registerFilter('image_url', value => value.src);
-engine.registerFilter('image_tag', (src, ...pairs) => { const props = Object.fromEntries(pairs.filter(Array.isArray)); const alt = String(props.alt || '').replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;'); return `<img src="${src}" alt="${alt}" width="4096" height="4096" loading="${props.loading || 'lazy'}">`; });
+engine.registerFilter('image_tag', (src, ...pairs) => { const props = Object.fromEntries(pairs.filter(Array.isArray)); const alt = String(props.alt || '').replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;'); return `<img src="${src}" alt="${alt}" width="4096" height="4096" loading="${props.loading || 'lazy'}"${props.fetchpriority?' fetchpriority="'+props.fetchpriority+'"':''}>`; });
 engine.registerFilter('handle', value => String(value).toLowerCase().replace(/[^a-z0-9-]/g, '-'));
 engine.registerFilter('t', (key, ...pairs) => {
   const value = key.split('.').reduce((obj, part) => obj?.[part], locale);
@@ -268,3 +268,7 @@ for(const suffix of ['campaign-texture','campaign-300applications']){
  for(const key of template.order){const config=template.sections[key];body+=await section(config.type,config.settings,(config.block_order||[]).map(id=>config.blocks[id]),{page:{title:suffix},preview_section_id:suffix+'-'+key,shop:{...common.shop,shipping_policy:{url:'/sites-policies.html'}}});}
  await writeFile(join(output,'sites-'+suffix+'.html'),await engine.parseAndRender(code,{...common,content_for_layout:body,preview_header:sitesHeader,preview_footer:sitesFooter,page_title:suffix+' fixture'}));
 }
+const variantTemplate=JSON.parse(await readFile(join(theme,'templates/product.bergamot-lime.json'),'utf8')).sections.main;
+const variantFixture={...purchaseProduct,...pickerFixture('product','bpm-natural-deodorant-bergamot-lime'),selected_variant:purchaseVariant};
+const variantGallery=await section(variantTemplate.type,variantTemplate.settings,variantTemplate.block_order.map(id=>variantTemplate.blocks[id]),{product:variantFixture,form:{},preview_section_id:'variant-loading'});
+await writeFile(join(output,'sites-product-native-variant-loading.html'),await engine.parseAndRender(code,{...common,product:variantFixture,request:{...common.request,page_type:'product'},page_title:'Explicit native variant — local loading fixture',canonical_url:'http://127.0.0.1:8892/sites-product-native-variant-loading.html',preview_header:sitesHeader,preview_footer:sitesFooter,content_for_layout:'<p class="wrap fine">Focused fabricated variant gallery loading fixture. No commerce backend. Native selected variant and image data are mocked.</p>'+variantGallery.replace(/(<button[^>]*type="submit")/g,'$1 disabled').replace(/<select id="Variant-/g,'<select disabled id="Variant-')}));
