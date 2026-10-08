@@ -269,3 +269,10 @@ h3{font-family:inherit}
 .rhythm-strip--extended{flex-wrap:wrap}
 .rhythm-strip--extended span{min-width:0;overflow-wrap:anywhere}
 @media(max-width:600px){.rhythm-strip--extended{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;text-align:center}.rhythm-strip--extended span:last-child{display:block;grid-column:1 / -1}.rhythm-strip--extended b{display:none}}
+
+/* Native account access adds one action to Sites: keep phone labels intact. */
+@media(max-width:360px){
+ .bpm-sites-header{gap:12px}
+ .bpm-sites-header .header-actions{gap:8px;font-size:14px}
+ .bpm-sites-header .header-actions>a,.bpm-sites-mobile>summary{white-space:nowrap;overflow-wrap:normal;min-width:44px;min-height:44px}
+}
