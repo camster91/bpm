@@ -37,7 +37,8 @@
         "heading": "Care\nin practice.",
         "body": "<p>BPM has to earn its place on your shelf by working well and offering the right value. Choosing Indigenous-owned can help keep ownership, opportunity and decision-making in Indigenous hands.</p><p>BPM has committed 5% of net profits to great causes, including those in the Indigenous community. As it grows, the company intends to build direct relationships with First Nations communities and be transparent about where that support goes.</p>",
         "band": false,
-        "button_label": "Meet the people and principles"
+        "button_label": "Meet the people and principles",
+        "page": "about-us"
       }
     },
     "closing": {

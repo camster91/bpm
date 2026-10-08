@@ -1,5 +1,7 @@
 # Custom Sites theme — development upload review
 
+Current local ownership-page alignment/About-link corrections exceed the 0670942 snapshot reviewed below. Refresh the candidate before uploading current code. The previous command has not been executed.
+
 The current frozen candidate includes native cart bundle components and line-error presentation. Previous candidate snapshots and commands remain preserved historical evidence. No upload has occurred; confirmation must refer to the revised command below.
 
 This review supersedes the repaired-Dawn upload command. Its prior text is preserved in `plan-history/2026-10-07-before-custom-dev-candidate/dev-upload-readiness.md`. The full Phase 0–5 plan remains in `shopify-redesign-plan.md`.

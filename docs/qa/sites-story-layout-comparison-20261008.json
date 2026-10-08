@@ -1,0 +1,1321 @@
+{
+  "scope": "Live Sites vs local fabricated resource preview, not native resource/claim approval",
+  "before": [
+    {
+      "page": "about",
+      "width": 375,
+      "kind": "source",
+      "data": {
+        "headings": [
+          {
+            "box": {
+              "h": 153,
+              "w": 327
+            },
+            "lead": [
+              {
+                "box": {
+                  "h": 85.03125,
+                  "w": 327
+                },
+                "text": "Performance, ingredients, packaging and price. A daily essential, considered."
+              }
+            ],
+            "section": {
+              "h": 895.4296875,
+              "w": 375
+            },
+            "text": "High standards.Human beginnings."
+          },
+          {
+            "box": {
+              "h": 67.3125,
+              "w": 327
+            },
+            "lead": [],
+            "section": {
+              "h": 878.1484375,
+              "w": 375
+            },
+            "text": "It startedin a kitchen."
+          },
+          {
+            "box": {
+              "h": 100.96875,
+              "w": 327
+            },
+            "lead": [],
+            "section": {
+              "h": 1276.25,
+              "w": 375
+            },
+            "text": "The standardbehind the tube."
+          },
+          {
+            "box": {
+              "h": 67.3125,
+              "w": 327
+            },
+            "lead": [
+              {
+                "box": {
+                  "h": 141.71875,
+                  "w": 327
+                },
+                "text": "At the same $23.99 selling price, more stays with BPM for operations, growth and future improvements when you buy directly."
+              }
+            ],
+            "section": {
+              "h": 900.7109375,
+              "w": 375
+            },
+            "text": "Buying directgoes further."
+          },
+          {
+            "box": {
+              "h": 67.3125,
+              "w": 327
+            },
+            "lead": [],
+            "section": {
+              "h": 1453.734375,
+              "w": 375
+            },
+            "text": "What keepsus moving."
+          },
+          {
+            "box": {
+              "h": 104.0390625,
+              "w": 327
+            },
+            "lead": [],
+            "section": {
+              "h": 284.0390625,
+              "w": 375
+            },
+            "text": "Find youreveryday BPM."
+          }
+        ],
+        "images": [
+          {
+            "alt": "Hand holding a BPM metal tube",
+            "box": {
+              "h": 388.6123046875,
+              "w": 337.0491943359375
+            },
+            "complete": true,
+            "naturalWidth": 1024
+          },
+          {
+            "alt": "BPM’s original chart comparing estimated website and Amazon costs at $23.99 per tube",
+            "box": {
+              "h": 0,
+              "w": 327
+            },
+            "complete": false,
+            "naturalWidth": 0
+          }
+        ],
+        "overflow": false,
+        "viewport": 375
+      }
+    },
+    {
+      "page": "about",
+      "width": 375,
+      "kind": "candidate",
+      "data": {
+        "headings": [
+          {
+            "box": {
+              "h": 153,
+              "w": 327
+            },
+            "lead": [
+              {
+                "box": {
+                  "h": 85.03125,
+                  "w": 327
+                },
+                "text": "Performance, ingredients, packaging and price. A daily essential, considered."
+              }
+            ],
+            "section": {
+              "h": 895.4296875,
+              "w": 375
+            },
+            "text": "High standards. Human beginnings."
+          },
+          {
+            "box": {
+              "h": 67.3125,
+              "w": 327
+            },
+            "lead": [],
+            "section": {
+              "h": 878.1484375,
+              "w": 375
+            },
+            "text": "It started in a kitchen."
+          },
+          {
+            "box": {
+              "h": 100.96875,
+              "w": 327
+            },
+            "lead": [],
+            "section": {
+              "h": 1276.25,
+              "w": 375
+            },
+            "text": "The standard behind the tube."
+          },
+          {
+            "box": {
+              "h": 67.3125,
+              "w": 327
+            },
+            "lead": [],
+            "section": {
+              "h": 1453.734375,
+              "w": 375
+            },
+            "text": "What keeps us moving."
+          },
+          {
+            "box": {
+              "h": 104.0390625,
+              "w": 327
+            },
+            "lead": [],
+            "section": {
+              "h": 284.0390625,
+              "w": 375
+            },
+            "text": "Find your everyday BPM."
+          }
+        ],
+        "images": [
+          {
+            "alt": "Hand holding a BPM metal tube",
+            "box": {
+              "h": 388.5736083984375,
+              "w": 337.0037841796875
+            },
+            "complete": true,
+            "naturalWidth": 1024
+          }
+        ],
+        "overflow": false,
+        "viewport": 375
+      }
+    },
+    {
+      "page": "about",
+      "width": 820,
+      "kind": "source",
+      "data": {
+        "headings": [
+          {
+            "box": {
+              "h": 77.515625,
+              "w": 746.203125
+            },
+            "lead": [
+              {
+                "box": {
+                  "h": 54,
+                  "w": 640
+                },
+                "text": "Performance, ingredients, packaging and price. A daily essential, considered."
+              }
+            ],
+            "section": {
+              "h": 1004.9140625,
+              "w": 820
+            },
+            "text": "High standards.Human beginnings."
+          },
+          {
+            "box": {
+              "h": 85.671875,
+              "w": 746.203125
+            },
+            "lead": [],
+            "section": {
+              "h": 756.3515625,
+              "w": 820
+            },
+            "text": "It startedin a kitchen."
+          },
+          {
+            "box": {
+              "h": 85.671875,
+              "w": 746.203125
+            },
+            "lead": [],
+            "section": {
+              "h": 877.28125,
+              "w": 820
+            },
+            "text": "The standardbehind the tube."
+          },
+          {
+            "box": {
+              "h": 85.671875,
+              "w": 746.203125
+            },
+            "lead": [
+              {
+                "box": {
+                  "h": 81,
+                  "w": 640
+                },
+                "text": "At the same $23.99 selling price, more stays with BPM for operations, growth and future improvements when you buy directly."
+              }
+            ],
+            "section": {
+              "h": 882.953125,
+              "w": 820
+            },
+            "text": "Buying directgoes further."
+          },
+          {
+            "box": {
+              "h": 85.671875,
+              "w": 746.203125
+            },
+            "lead": [],
+            "section": {
+              "h": 1058.2578125,
+              "w": 820
+            },
+            "text": "What keepsus moving."
+          },
+          {
+            "box": {
+              "h": 73.4375,
+              "w": 349.671875
+            },
+            "lead": [],
+            "section": {
+              "h": 217.4375,
+              "w": 820
+            },
+            "text": "Find youreveryday BPM."
+          }
+        ],
+        "images": [
+          {
+            "alt": "Hand holding a BPM metal tube",
+            "box": {
+              "h": 545.725341796875,
+              "w": 763.896240234375
+            },
+            "complete": true,
+            "naturalWidth": 1024
+          },
+          {
+            "alt": "BPM’s original chart comparing estimated website and Amazon costs at $23.99 per tube",
+            "box": {
+              "h": 0,
+              "w": 746.203125
+            },
+            "complete": false,
+            "naturalWidth": 0
+          }
+        ],
+        "overflow": false,
+        "viewport": 820
+      }
+    },
+    {
+      "page": "about",
+      "width": 820,
+      "kind": "candidate",
+      "data": {
+        "headings": [
+          {
+            "box": {
+              "h": 77.515625,
+              "w": 746.203125
+            },
+            "lead": [
+              {
+                "box": {
+                  "h": 54,
+                  "w": 640
+                },
+                "text": "Performance, ingredients, packaging and price. A daily essential, considered."
+              }
+            ],
+            "section": {
+              "h": 1004.9140625,
+              "w": 820
+            },
+            "text": "High standards. Human beginnings."
+          },
+          {
+            "box": {
+              "h": 85.671875,
+              "w": 746.203125
+            },
+            "lead": [],
+            "section": {
+              "h": 756.3515625,
+              "w": 820
+            },
+            "text": "It started in a kitchen."
+          },
+          {
+            "box": {
+              "h": 85.671875,
+              "w": 746.203125
+            },
+            "lead": [],
+            "section": {
+              "h": 877.28125,
+              "w": 820
+            },
+            "text": "The standard behind the tube."
+          },
+          {
+            "box": {
+              "h": 85.671875,
+              "w": 746.203125
+            },
+            "lead": [],
+            "section": {
+              "h": 1058.2578125,
+              "w": 820
+            },
+            "text": "What keeps us moving."
+          },
+          {
+            "box": {
+              "h": 73.4375,
+              "w": 349.671875
+            },
+            "lead": [],
+            "section": {
+              "h": 217.4375,
+              "w": 820
+            },
+            "text": "Find your everyday BPM."
+          }
+        ],
+        "images": [
+          {
+            "alt": "Hand holding a BPM metal tube",
+            "box": {
+              "h": 541.679443359375,
+              "w": 761.145263671875
+            },
+            "complete": true,
+            "naturalWidth": 1024
+          }
+        ],
+        "overflow": false,
+        "viewport": 820
+      }
+    },
+    {
+      "page": "about",
+      "width": 1440,
+      "kind": "source",
+      "data": {
+        "headings": [
+          {
+            "box": {
+              "h": 240.875,
+              "w": 620
+            },
+            "lead": [
+              {
+                "box": {
+                  "h": 62.09375,
+                  "w": 620
+                },
+                "text": "Performance, ingredients, packaging and price. A daily essential, considered."
+              }
+            ],
+            "section": {
+              "h": 696,
+              "w": 1440
+            },
+            "text": "High standards.Human beginnings."
+          },
+          {
+            "box": {
+              "h": 129.25,
+              "w": 620
+            },
+            "lead": [],
+            "section": {
+              "h": 655.96875,
+              "w": 1440
+            },
+            "text": "It startedin a kitchen."
+          },
+          {
+            "box": {
+              "h": 129.25,
+              "w": 1312
+            },
+            "lead": [],
+            "section": {
+              "h": 779.7265625,
+              "w": 1440
+            },
+            "text": "The standardbehind the tube."
+          },
+          {
+            "box": {
+              "h": 129.25,
+              "w": 620
+            },
+            "lead": [
+              {
+                "box": {
+                  "h": 93.140625,
+                  "w": 620
+                },
+                "text": "At the same $23.99 selling price, more stays with BPM for operations, growth and future improvements when you buy directly."
+              }
+            ],
+            "section": {
+              "h": 632.5859375,
+              "w": 1440
+            },
+            "text": "Buying directgoes further."
+          },
+          {
+            "box": {
+              "h": 129.25,
+              "w": 1312
+            },
+            "lead": [],
+            "section": {
+              "h": 947.2421875,
+              "w": 1440
+            },
+            "text": "What keepsus moving."
+          },
+          {
+            "box": {
+              "h": 117.5,
+              "w": 559.4765625
+            },
+            "lead": [],
+            "section": {
+              "h": 261.5,
+              "w": 1440
+            },
+            "text": "Find youreveryday BPM."
+          }
+        ],
+        "images": [
+          {
+            "alt": "Hand holding a BPM metal tube",
+            "box": {
+              "h": 541.3209228515625,
+              "w": 637.77001953125
+            },
+            "complete": true,
+            "naturalWidth": 1024
+          },
+          {
+            "alt": "BPM’s original chart comparing estimated website and Amazon costs at $23.99 per tube",
+            "box": {
+              "h": 0,
+              "w": 1312
+            },
+            "complete": false,
+            "naturalWidth": 0
+          }
+        ],
+        "overflow": false,
+        "viewport": 1440
+      }
+    },
+    {
+      "page": "about",
+      "width": 1440,
+      "kind": "candidate",
+      "data": {
+        "headings": [
+          {
+            "box": {
+              "h": 240.875,
+              "w": 620
+            },
+            "lead": [
+              {
+                "box": {
+                  "h": 62.09375,
+                  "w": 620
+                },
+                "text": "Performance, ingredients, packaging and price. A daily essential, considered."
+              }
+            ],
+            "section": {
+              "h": 696,
+              "w": 1440
+            },
+            "text": "High standards. Human beginnings."
+          },
+          {
+            "box": {
+              "h": 129.25,
+              "w": 620
+            },
+            "lead": [],
+            "section": {
+              "h": 655.96875,
+              "w": 1440
+            },
+            "text": "It started in a kitchen."
+          },
+          {
+            "box": {
+              "h": 129.25,
+              "w": 1312
+            },
+            "lead": [],
+            "section": {
+              "h": 779.7265625,
+              "w": 1440
+            },
+            "text": "The standard behind the tube."
+          },
+          {
+            "box": {
+              "h": 129.25,
+              "w": 1312
+            },
+            "lead": [],
+            "section": {
+              "h": 947.2421875,
+              "w": 1440
+            },
+            "text": "What keeps us moving."
+          },
+          {
+            "box": {
+              "h": 117.5,
+              "w": 559.4765625
+            },
+            "lead": [],
+            "section": {
+              "h": 261.5,
+              "w": 1440
+            },
+            "text": "Find your everyday BPM."
+          }
+        ],
+        "images": [
+          {
+            "alt": "Hand holding a BPM metal tube",
+            "box": {
+              "h": 541.3209228515625,
+              "w": 637.77001953125
+            },
+            "complete": true,
+            "naturalWidth": 1024
+          }
+        ],
+        "overflow": false,
+        "viewport": 1440
+      }
+    },
+    {
+      "page": "indigenous-owned",
+      "width": 375,
+      "kind": "source",
+      "data": {
+        "headings": [
+          {
+            "box": {
+              "h": 114.75,
+              "w": 327
+            },
+            "lead": [
+              {
+                "box": {
+                  "h": 141.71875,
+                  "w": 327
+                },
+                "text": "Indigenous-owned describes who owns the business, makes the decisions and is accountable for what BPM puts into the world."
+              }
+            ],
+            "section": {
+              "h": 778.3359375,
+              "w": 375
+            },
+            "text": "Ownedwith purpose."
+          },
+          {
+            "box": {
+              "h": 67.3125,
+              "w": 327
+            },
+            "lead": [],
+            "section": {
+              "h": 1072.3671875,
+              "w": 375
+            },
+            "text": "Rootedin who we are."
+          },
+          {
+            "box": {
+              "h": 100.96875,
+              "w": 327
+            },
+            "lead": [],
+            "section": {
+              "h": 690.9765625,
+              "w": 375
+            },
+            "text": "Family.Heritage.Rhythm."
+          },
+          {
+            "box": {
+              "h": 67.3125,
+              "w": 327
+            },
+            "lead": [],
+            "section": {
+              "h": 689.2734375,
+              "w": 375
+            },
+            "text": "Carein practice."
+          },
+          {
+            "box": {
+              "h": 104.0390625,
+              "w": 327
+            },
+            "lead": [],
+            "section": {
+              "h": 284.0390625,
+              "w": 375
+            },
+            "text": "Find youreveryday BPM."
+          }
+        ],
+        "images": [
+          {
+            "alt": "Original BPM owl and drum-inspired Indigenous-owned mark",
+            "box": {
+              "h": 266.841796875,
+              "w": 271.83758544921875
+            },
+            "complete": true,
+            "naturalWidth": 864
+          }
+        ],
+        "overflow": false,
+        "viewport": 375
+      }
+    },
+    {
+      "page": "indigenous-owned",
+      "width": 375,
+      "kind": "candidate",
+      "data": {
+        "headings": [
+          {
+            "box": {
+              "h": 114.75,
+              "w": 327
+            },
+            "lead": [
+              {
+                "box": {
+                  "h": 141.71875,
+                  "w": 327
+                },
+                "text": "Indigenous-owned describes who owns the business, makes the decisions and is accountable for what BPM puts into the world."
+              }
+            ],
+            "section": {
+              "h": 771.6875,
+              "w": 375
+            },
+            "text": "Owned with purpose."
+          },
+          {
+            "box": {
+              "h": 67.3125,
+              "w": 327
+            },
+            "lead": [],
+            "section": {
+              "h": 1072.3671875,
+              "w": 375
+            },
+            "text": "Rooted in who we are."
+          },
+          {
+            "box": {
+              "h": 100.96875,
+              "w": 327
+            },
+            "lead": [],
+            "section": {
+              "h": 690.9765625,
+              "w": 375
+            },
+            "text": "Family. Heritage. Rhythm."
+          },
+          {
+            "box": {
+              "h": 67.3125,
+              "w": 327
+            },
+            "lead": [],
+            "section": {
+              "h": 605.2734375,
+              "w": 375
+            },
+            "text": "Care in practice."
+          },
+          {
+            "box": {
+              "h": 104.0390625,
+              "w": 327
+            },
+            "lead": [],
+            "section": {
+              "h": 284.0390625,
+              "w": 375
+            },
+            "text": "Find your everyday BPM."
+          }
+        ],
+        "images": [
+          {
+            "alt": "Original BPM owl and drum-inspired Indigenous-owned mark",
+            "box": {
+              "h": 266.1014404296875,
+              "w": 271.11273193359375
+            },
+            "complete": true,
+            "naturalWidth": 864
+          }
+        ],
+        "overflow": false,
+        "viewport": 375
+      }
+    },
+    {
+      "page": "indigenous-owned",
+      "width": 820,
+      "kind": "source",
+      "data": {
+        "headings": [
+          {
+            "box": {
+              "h": 77.515625,
+              "w": 746.203125
+            },
+            "lead": [
+              {
+                "box": {
+                  "h": 54,
+                  "w": 640
+                },
+                "text": "Indigenous-owned describes who owns the business, makes the decisions and is accountable for what BPM puts into the world."
+              }
+            ],
+            "section": {
+              "h": 959.5625,
+              "w": 820
+            },
+            "text": "Ownedwith purpose."
+          },
+          {
+            "box": {
+              "h": 85.671875,
+              "w": 746.203125
+            },
+            "lead": [],
+            "section": {
+              "h": 883.8203125,
+              "w": 820
+            },
+            "text": "Rootedin who we are."
+          },
+          {
+            "box": {
+              "h": 128.5078125,
+              "w": 746.203125
+            },
+            "lead": [],
+            "section": {
+              "h": 617.96875,
+              "w": 820
+            },
+            "text": "Family.Heritage.Rhythm."
+          },
+          {
+            "box": {
+              "h": 85.671875,
+              "w": 746.203125
+            },
+            "lead": [],
+            "section": {
+              "h": 666.875,
+              "w": 820
+            },
+            "text": "Carein practice."
+          },
+          {
+            "box": {
+              "h": 73.4375,
+              "w": 349.671875
+            },
+            "lead": [],
+            "section": {
+              "h": 217.4375,
+              "w": 820
+            },
+            "text": "Find youreveryday BPM."
+          }
+        ],
+        "images": [
+          {
+            "alt": "Original BPM owl and drum-inspired Indigenous-owned mark",
+            "box": {
+              "h": 503.2369384765625,
+              "w": 690.544189453125
+            },
+            "complete": true,
+            "naturalWidth": 864
+          }
+        ],
+        "overflow": false,
+        "viewport": 820
+      }
+    },
+    {
+      "page": "indigenous-owned",
+      "width": 820,
+      "kind": "candidate",
+      "data": {
+        "headings": [
+          {
+            "box": {
+              "h": 77.515625,
+              "w": 746.203125
+            },
+            "lead": [
+              {
+                "box": {
+                  "h": 54,
+                  "w": 640
+                },
+                "text": "Indigenous-owned describes who owns the business, makes the decisions and is accountable for what BPM puts into the world."
+              }
+            ],
+            "section": {
+              "h": 952.9140625,
+              "w": 820
+            },
+            "text": "Owned with purpose."
+          },
+          {
+            "box": {
+              "h": 85.671875,
+              "w": 746.203125
+            },
+            "lead": [],
+            "section": {
+              "h": 883.8203125,
+              "w": 820
+            },
+            "text": "Rooted in who we are."
+          },
+          {
+            "box": {
+              "h": 128.5078125,
+              "w": 746.203125
+            },
+            "lead": [],
+            "section": {
+              "h": 617.96875,
+              "w": 820
+            },
+            "text": "Family. Heritage. Rhythm."
+          },
+          {
+            "box": {
+              "h": 85.671875,
+              "w": 746.203125
+            },
+            "lead": [],
+            "section": {
+              "h": 582.4765625,
+              "w": 820
+            },
+            "text": "Care in practice."
+          },
+          {
+            "box": {
+              "h": 73.4375,
+              "w": 349.671875
+            },
+            "lead": [],
+            "section": {
+              "h": 217.4375,
+              "w": 820
+            },
+            "text": "Find your everyday BPM."
+          }
+        ],
+        "images": [
+          {
+            "alt": "Original BPM owl and drum-inspired Indigenous-owned mark",
+            "box": {
+              "h": 503.23687744140625,
+              "w": 690.544189453125
+            },
+            "complete": true,
+            "naturalWidth": 864
+          }
+        ],
+        "overflow": false,
+        "viewport": 820
+      }
+    },
+    {
+      "page": "indigenous-owned",
+      "width": 1440,
+      "kind": "source",
+      "data": {
+        "headings": [
+          {
+            "box": {
+              "h": 120.4375,
+              "w": 620
+            },
+            "lead": [
+              {
+                "box": {
+                  "h": 93.140625,
+                  "w": 620
+                },
+                "text": "Indigenous-owned describes who owns the business, makes the decisions and is accountable for what BPM puts into the world."
+              }
+            ],
+            "section": {
+              "h": 734.6484375,
+              "w": 1440
+            },
+            "text": "Ownedwith purpose."
+          },
+          {
+            "box": {
+              "h": 193.875,
+              "w": 620
+            },
+            "lead": [],
+            "section": {
+              "h": 759.75,
+              "w": 1440
+            },
+            "text": "Rootedin who we are."
+          },
+          {
+            "box": {
+              "h": 193.875,
+              "w": 620
+            },
+            "lead": [],
+            "section": {
+              "h": 474.75,
+              "w": 1440
+            },
+            "text": "Family.Heritage.Rhythm."
+          },
+          {
+            "box": {
+              "h": 129.25,
+              "w": 620
+            },
+            "lead": [],
+            "section": {
+              "h": 503.8046875,
+              "w": 1440
+            },
+            "text": "Carein practice."
+          },
+          {
+            "box": {
+              "h": 117.5,
+              "w": 559.4765625
+            },
+            "lead": [],
+            "section": {
+              "h": 261.5,
+              "w": 1440
+            },
+            "text": "Find youreveryday BPM."
+          }
+        ],
+        "images": [
+          {
+            "alt": "Original BPM owl and drum-inspired Indigenous-owned mark",
+            "box": {
+              "h": 498.83251953125,
+              "w": 564.4178466796875
+            },
+            "complete": true,
+            "naturalWidth": 864
+          }
+        ],
+        "overflow": false,
+        "viewport": 1440
+      }
+    },
+    {
+      "page": "indigenous-owned",
+      "width": 1440,
+      "kind": "candidate",
+      "data": {
+        "headings": [
+          {
+            "box": {
+              "h": 120.4375,
+              "w": 620
+            },
+            "lead": [
+              {
+                "box": {
+                  "h": 93.140625,
+                  "w": 620
+                },
+                "text": "Indigenous-owned describes who owns the business, makes the decisions and is accountable for what BPM puts into the world."
+              }
+            ],
+            "section": {
+              "h": 728,
+              "w": 1440
+            },
+            "text": "Owned with purpose."
+          },
+          {
+            "box": {
+              "h": 193.875,
+              "w": 620
+            },
+            "lead": [],
+            "section": {
+              "h": 759.75,
+              "w": 1440
+            },
+            "text": "Rooted in who we are."
+          },
+          {
+            "box": {
+              "h": 193.875,
+              "w": 620
+            },
+            "lead": [],
+            "section": {
+              "h": 474.75,
+              "w": 1440
+            },
+            "text": "Family. Heritage. Rhythm."
+          },
+          {
+            "box": {
+              "h": 129.25,
+              "w": 620
+            },
+            "lead": [],
+            "section": {
+              "h": 419.40625,
+              "w": 1440
+            },
+            "text": "Care in practice."
+          },
+          {
+            "box": {
+              "h": 117.5,
+              "w": 559.4765625
+            },
+            "lead": [],
+            "section": {
+              "h": 261.5,
+              "w": 1440
+            },
+            "text": "Find your everyday BPM."
+          }
+        ],
+        "images": [
+          {
+            "alt": "Original BPM owl and drum-inspired Indigenous-owned mark",
+            "box": {
+              "h": 498.83251953125,
+              "w": 564.41796875
+            },
+            "complete": true,
+            "naturalWidth": 864
+          }
+        ],
+        "overflow": false,
+        "viewport": 1440
+      }
+    }
+  ],
+  "openingDiagnosis": [
+    {
+      "kind": "candidate",
+      "data": {
+        "image": {
+          "display": "inline",
+          "lineHeight": "24.65px",
+          "offsetHeight": 480,
+          "padding": "0px",
+          "verticalAlign": "middle"
+        },
+        "links": [
+          {
+            "href": "/collections/all",
+            "text": "Shop all tracks→"
+          }
+        ],
+        "wrapper": {
+          "display": "block",
+          "lineHeight": "24.65px",
+          "offsetHeight": 552,
+          "padding": "36px",
+          "verticalAlign": "baseline"
+        }
+      }
+    },
+    {
+      "kind": "source",
+      "data": {
+        "image": {
+          "display": "inline",
+          "lineHeight": "24.65px",
+          "offsetHeight": 480,
+          "padding": "0px",
+          "verticalAlign": "baseline"
+        },
+        "links": [
+          {
+            "href": "/about.html",
+            "text": "Meet the people and principles→"
+          },
+          {
+            "href": "/shop.html",
+            "text": "Shop all tracks→"
+          }
+        ],
+        "wrapper": {
+          "display": "block",
+          "lineHeight": "24.65px",
+          "offsetHeight": 559,
+          "padding": "36px",
+          "verticalAlign": "baseline"
+        }
+      }
+    }
+  ],
+  "ownershipAfter": [
+    {
+      "width": 375,
+      "data": {
+        "overflow": false,
+        "sections": [
+          {
+            "height": 778.3359375,
+            "text": "Owned with purpose."
+          },
+          {
+            "height": 1072.3671875,
+            "text": "Rooted in who we are."
+          },
+          {
+            "height": 690.9765625,
+            "text": "Family. Heritage. Rhythm."
+          },
+          {
+            "height": 689.671875,
+            "text": "Care in practice."
+          },
+          {
+            "height": 284.0390625,
+            "text": "Find your everyday BPM."
+          }
+        ],
+        "storyLink": "/sites-about.html",
+        "viewport": 375
+      }
+    },
+    {
+      "width": 820,
+      "data": {
+        "overflow": false,
+        "sections": [
+          {
+            "height": 959.5625,
+            "text": "Owned with purpose."
+          },
+          {
+            "height": 883.8203125,
+            "text": "Rooted in who we are."
+          },
+          {
+            "height": 617.96875,
+            "text": "Family. Heritage. Rhythm."
+          },
+          {
+            "height": 666.875,
+            "text": "Care in practice."
+          },
+          {
+            "height": 217.4375,
+            "text": "Find your everyday BPM."
+          }
+        ],
+        "storyLink": "/sites-about.html",
+        "viewport": 820
+      }
+    },
+    {
+      "width": 1440,
+      "data": {
+        "overflow": false,
+        "sections": [
+          {
+            "height": 734.6484375,
+            "text": "Owned with purpose."
+          },
+          {
+            "height": 759.75,
+            "text": "Rooted in who we are."
+          },
+          {
+            "height": 474.75,
+            "text": "Family. Heritage. Rhythm."
+          },
+          {
+            "height": 503.8046875,
+            "text": "Care in practice."
+          },
+          {
+            "height": 261.5,
+            "text": "Find your everyday BPM."
+          }
+        ],
+        "storyLink": "/sites-about.html",
+        "viewport": 1440
+      }
+    }
+  ],
+  "linkFollowedTo": "local About heading verified"
+}
