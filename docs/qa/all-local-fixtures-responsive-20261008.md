@@ -1,0 +1,15 @@
+# Complete local fixture responsive DOM sweep
+
+The audit covers all 48 generated `sites-*.html` fixtures except `sites-chrome.html`, which intentionally contains chrome with an empty main. Each page was inspected at 320, 430, 768, 1024 and 1600px with a 900px viewport height, yielding 240 unique page/width observations. The exact page list, repository commit, theme tree and per-observation results are in `all-local-fixtures-responsive-20261008.json`.
+
+This includes the nine source product compositions, long-title/native-variant/product-form/welcome fixtures, all eight articles, home and resource-bound home, collection/search, populated/empty/bundle-error cart, About/default About/Indigenous, contact, policy/general-body/privacy, campaigns, wholesale, blog/collection directory, newsletter/welcome, password, gift card and 404 fixtures. These are generated local resource/app/form substitutions. Presence of a fixture does not verify a native page assignment, app, account mode, commerce flow or actual shared store content.
+
+At every observation, the document width equals its scroll width, the main contains exactly one H1, there are no duplicate document IDs, and no completed img load reports zero natural width. Fonts were awaited after navigation. The completed-image check does not prove that every lazy image, CSS background, SVG-embedded asset, video or external provider finished loading. The default visible states were inspected; expanded dialogs, deep scroll, errors absent from fixtures, text zoom and physical devices require their own checks.
+
+A separate 430px homepage interaction opened the mobile menu with keyboard Enter and exposed its five source navigation labels without overflow. Escape from both the summary and an actual menu link closed it and returned focus to the summary. `mobile-menu-430-keyboard-20261008.json` records those results. No link navigation, form submission, backend request or editor mutation occurred.
+
+All 240 observations passed these four DOM criteria. This is **local responsive geometry/structure evidence**, not pixel fidelity, full accessibility or native purchase readiness. No QA-matrix native acceptance checkbox is closed by this sweep. Complete Sites image/crop/type/spacing/state comparisons, actual editor/app/account/migration/commerce/analytics/claims/performance/device validation and approved release/rollback remain required by Phase 0–5.
+
+Current GitHub readback confirms master tracker #11 remains Open and recovery PR #12 remains Merged (7 October 2026); the latter is separate from custom-theme acceptance. No GitHub issue, PR, CI setting or remote branch was mutated.
+
+No theme file changed. The frozen 5daa4af development candidate remains the current theme tree `a3cf19ec77c74c72217a9b89a492d185cc4b14d5`, and its pending exact upload review remains in `../dev-upload-readiness.md`. Upload approval is still missing; there is no live upload/authentication process being waited on. No custom push, merge, Shopify upload or publication occurred. Temporary viewport overrides were reset and the agent-created tab was closed.

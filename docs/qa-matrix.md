@@ -151,3 +151,7 @@ After explicit launch approval and production publish:
 - [ ] No obvious 404/broken assets
 
 If any P0/P1 fails, roll back or stop the launch.
+
+## Local fixture evidence — 8 October 2026
+
+The complete generated-fixture sweep covers 48 pages at 320/430/768/1024/1600px (240 unique observations): no horizontal overflow, exactly one main H1, no duplicate IDs and no completed image-load failure. See `qa/all-local-fixtures-responsive-20261008.md` for the exact scope and exclusions. The 430px mobile-menu keyboard open/Escape/focus-return check also passes locally. These results are preparatory geometry/structure evidence; the native/store/device acceptance checkboxes above remain open.

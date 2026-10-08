@@ -1,0 +1,2474 @@
+{
+  "scope": "Read-only local fixture DOM audit, default visible states; no native backend or submissions",
+  "widths": [
+    320,
+    430,
+    768,
+    1024,
+    1600
+  ],
+  "height": 900,
+  "pages": [
+    "sites-404.html",
+    "sites-about-default.html",
+    "sites-about.html",
+    "sites-article-0.html",
+    "sites-article-1.html",
+    "sites-article-2.html",
+    "sites-article-3.html",
+    "sites-article-4.html",
+    "sites-article-5.html",
+    "sites-article-6.html",
+    "sites-article-7.html",
+    "sites-blog.html",
+    "sites-bundle-3-4-time.html",
+    "sites-bundle-citrus-on-repeat-family-pack-4-tube-bergamot-lime-deodorant-bundle.html",
+    "sites-bundle-citrus-repeat.html",
+    "sites-bundle-four-on-the-floor-mixed-scent-4-tube-deodorant-bundle.html",
+    "sites-bundle-side-a-side-b.html",
+    "sites-bundle-silent-on-repeat-family-pack-4-tube-unscented-deodorant-bundle.html",
+    "sites-bundle-silent-repeat.html",
+    "sites-campaign-300applications.html",
+    "sites-campaign-texture.html",
+    "sites-cart-bundle-error.html",
+    "sites-cart-empty.html",
+    "sites-cart.html",
+    "sites-collection-bindings.html",
+    "sites-collection.html",
+    "sites-collections.html",
+    "sites-contact.html",
+    "sites-gift-card.html",
+    "sites-home-bindings.html",
+    "sites-home-secondary-link.html",
+    "sites-home.html",
+    "sites-indigenous-owned.html",
+    "sites-newsletter.html",
+    "sites-password.html",
+    "sites-policies.html",
+    "sites-policy-body.html",
+    "sites-privacy-default.html",
+    "sites-product-bergamot-lime.html",
+    "sites-product-form-controls.html",
+    "sites-product-long-title.html",
+    "sites-product-native-variant-loading.html",
+    "sites-product-unscented.html",
+    "sites-product-welcome.html",
+    "sites-product.html",
+    "sites-search.html",
+    "sites-welcome.html",
+    "sites-wholesale.html"
+  ],
+  "excluded": [
+    {
+      "page": "sites-chrome.html",
+      "reason": "Chrome-only fixture with intentionally empty main"
+    }
+  ],
+  "fontReadiness": "await document.fonts.ready after each navigation",
+  "observations": [
+    {
+      "page": "sites-404.html",
+      "duplicateIds": [],
+      "h1": [
+        "PAGE NOT FOUND"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 320,
+      "width": 320
+    },
+    {
+      "page": "sites-about-default.html",
+      "duplicateIds": [],
+      "h1": [
+        "HIGH STANDARDS.\nHUMAN BEGINNINGS."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 320,
+      "width": 320
+    },
+    {
+      "page": "sites-about.html",
+      "duplicateIds": [],
+      "h1": [
+        "HIGH STANDARDS.\nHUMAN BEGINNINGS."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 320,
+      "width": 320
+    },
+    {
+      "page": "sites-article-0.html",
+      "duplicateIds": [],
+      "h1": [
+        "YOUR UNDERARMS ARE SKIN. WE FORMULATED BPM THAT WAY."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 320,
+      "width": 320
+    },
+    {
+      "page": "sites-article-1.html",
+      "duplicateIds": [],
+      "h1": [
+        "THE NAME BEHIND BPM: INDIGENOUS OWNERSHIP AND FINDING MY WAY BACK"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 320,
+      "width": 320
+    },
+    {
+      "page": "sites-article-2.html",
+      "duplicateIds": [],
+      "h1": [
+        "THE MATH BEHIND FAIR PRICING: BPM VS NATIVE VS SCHMIDT'S"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 320,
+      "width": 320
+    },
+    {
+      "page": "sites-article-3.html",
+      "duplicateIds": [],
+      "h1": [
+        "DEODORANT IS CHANGING SHAPE. HERE'S WHY WE CHOSE CREAM."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 320,
+      "width": 320
+    },
+    {
+      "page": "sites-article-4.html",
+      "duplicateIds": [],
+      "h1": [
+        "WHAT'S CHANGING IN DEODORANT PACKAGING RIGHT NOW (AND WHY WE WENT WITH METAL)"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 320,
+      "width": 320
+    },
+    {
+      "page": "sites-article-5.html",
+      "duplicateIds": [],
+      "h1": [
+        "HOW TO SWITCH TO NATURAL DEODORANT (WITHOUT THE AWKWARD TRANSITION PERIOD)"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 320,
+      "width": 320
+    },
+    {
+      "page": "sites-article-6.html",
+      "duplicateIds": [],
+      "h1": [
+        "BEST NATURAL DEODORANT FOR SENSITIVE SKIN: WHAT TO LOOK FOR (AND WHAT TO AVOID)"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 320,
+      "width": 320
+    },
+    {
+      "page": "sites-article-7.html",
+      "duplicateIds": [],
+      "h1": [
+        "IS BAKING SODA BAD FOR SENSITIVE SKIN? WHAT YOU NEED TO KNOW"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 320,
+      "width": 320
+    },
+    {
+      "page": "sites-blog.html",
+      "duplicateIds": [],
+      "h1": [
+        "THE\nBREAKDOWN."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 320,
+      "width": 320
+    },
+    {
+      "page": "sites-bundle-3-4-time.html",
+      "duplicateIds": [],
+      "h1": [
+        "3/4 TIME \u2014 MIXED SCENT NATURAL DEODORANT BUNDLE \u2014 FIXTURE"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 320,
+      "width": 320
+    },
+    {
+      "page": "sites-bundle-citrus-on-repeat-family-pack-4-tube-bergamot-lime-deodorant-bundle.html",
+      "duplicateIds": [],
+      "h1": [
+        "CITRUS ON REPEAT: FAMILY PACK \u2014 BERGAMOT & LIME NATURAL DEODORANT BUNDLE \u2014 FIXTURE"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 320,
+      "width": 320
+    },
+    {
+      "page": "sites-bundle-citrus-repeat.html",
+      "duplicateIds": [],
+      "h1": [
+        "CITRUS ON REPEAT \u2014 BERGAMOT & LIME NATURAL DEODORANT DUO \u2014 FIXTURE"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 320,
+      "width": 320
+    },
+    {
+      "page": "sites-bundle-four-on-the-floor-mixed-scent-4-tube-deodorant-bundle.html",
+      "duplicateIds": [],
+      "h1": [
+        "FOUR ON THE FLOOR \u2014 MIXED SCENT NATURAL DEODORANT BUNDLE \u2014 FIXTURE"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 320,
+      "width": 320
+    },
+    {
+      "page": "sites-bundle-side-a-side-b.html",
+      "duplicateIds": [],
+      "h1": [
+        "SIDE A / SIDE B \u2014 MIXED SCENT NATURAL DEODORANT DUO \u2014 FIXTURE"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 320,
+      "width": 320
+    },
+    {
+      "page": "sites-bundle-silent-on-repeat-family-pack-4-tube-unscented-deodorant-bundle.html",
+      "duplicateIds": [],
+      "h1": [
+        "SILENT ON REPEAT: FAMILY PACK \u2014 UNSCENTED NATURAL DEODORANT BUNDLE \u2014 FIXTURE"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 320,
+      "width": 320
+    },
+    {
+      "page": "sites-bundle-silent-repeat.html",
+      "duplicateIds": [],
+      "h1": [
+        "SILENT ON REPEAT \u2014 UNSCENTED NATURAL DEODORANT DUO \u2014 FIXTURE"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 320,
+      "width": 320
+    },
+    {
+      "page": "sites-campaign-300applications.html",
+      "duplicateIds": [],
+      "h1": [
+        "ONE TUBE. MORE THAN 300 APPLICATIONS."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 320,
+      "width": 320
+    },
+    {
+      "page": "sites-campaign-texture.html",
+      "duplicateIds": [],
+      "h1": [
+        "NATURAL DEODORANT, WITH A POLISHED FEEL."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 320,
+      "width": 320
+    },
+    {
+      "page": "sites-cart-bundle-error.html",
+      "duplicateIds": [],
+      "h1": [
+        "IN THE BAG."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 320,
+      "width": 320
+    },
+    {
+      "page": "sites-cart-empty.html",
+      "duplicateIds": [],
+      "h1": [
+        "IN THE BAG."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 320,
+      "width": 320
+    },
+    {
+      "page": "sites-cart.html",
+      "duplicateIds": [],
+      "h1": [
+        "IN THE BAG."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 320,
+      "width": 320
+    },
+    {
+      "page": "sites-collection-bindings.html",
+      "duplicateIds": [],
+      "h1": [
+        "PICK YOUR\nROTATION."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 320,
+      "width": 320
+    },
+    {
+      "page": "sites-collection.html",
+      "duplicateIds": [],
+      "h1": [
+        "PICK YOUR\nROTATION."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 320,
+      "width": 320
+    },
+    {
+      "page": "sites-collections.html",
+      "duplicateIds": [],
+      "h1": [
+        "COLLECTIONS"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 320,
+      "width": 320
+    },
+    {
+      "page": "sites-contact.html",
+      "duplicateIds": [],
+      "h1": [
+        "LET\u2019S TALK."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 320,
+      "width": 320
+    },
+    {
+      "page": "sites-gift-card.html",
+      "duplicateIds": [],
+      "h1": [
+        "YOUR GIFT CARD."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 320,
+      "width": 320
+    },
+    {
+      "page": "sites-home-bindings.html",
+      "duplicateIds": [],
+      "h1": [
+        "THIS IS\nDEODORANT.\nIT JUST HAPPENS\nTO BE NATURAL."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 320,
+      "width": 320
+    },
+    {
+      "page": "sites-home-secondary-link.html",
+      "duplicateIds": [],
+      "h1": [
+        "THIS IS\nDEODORANT.\nIT JUST HAPPENS\nTO BE NATURAL."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 320,
+      "width": 320
+    },
+    {
+      "page": "sites-home.html",
+      "duplicateIds": [],
+      "h1": [
+        "THIS IS\nDEODORANT.\nIT JUST HAPPENS\nTO BE NATURAL."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 320,
+      "width": 320
+    },
+    {
+      "page": "sites-indigenous-owned.html",
+      "duplicateIds": [],
+      "h1": [
+        "OWNED\nWITH PURPOSE."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 320,
+      "width": 320
+    },
+    {
+      "page": "sites-newsletter.html",
+      "duplicateIds": [],
+      "h1": [
+        "LOCAL NEWSLETTER FIXTURE"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 320,
+      "width": 320
+    },
+    {
+      "page": "sites-password.html",
+      "duplicateIds": [],
+      "h1": [
+        "ENTER THE STORE."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 320,
+      "width": 320
+    },
+    {
+      "page": "sites-policies.html",
+      "duplicateIds": [],
+      "h1": [
+        "CLEAR TERMS.\nNO MYSTERY."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 320,
+      "width": 320
+    },
+    {
+      "page": "sites-policy-body.html",
+      "duplicateIds": [],
+      "h1": [
+        "SHIPPING POLICY \u2014 LOCAL FIXTURE"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 320,
+      "width": 320
+    },
+    {
+      "page": "sites-privacy-default.html",
+      "duplicateIds": [],
+      "h1": [
+        "YOUR PRIVACY CHOICES"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 320,
+      "width": 320
+    },
+    {
+      "page": "sites-product-bergamot-lime.html",
+      "duplicateIds": [],
+      "h1": [
+        "BERGAMOT & LIME \u2014 NATURAL DEODORANT \u2014 FIXTURE"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 320,
+      "width": 320
+    },
+    {
+      "page": "sites-product-form-controls.html",
+      "duplicateIds": [],
+      "h1": [
+        "BERGAMOT & LIME \u2014 FIXTURE"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 320,
+      "width": 320
+    },
+    {
+      "page": "sites-product-long-title.html",
+      "duplicateIds": [],
+      "h1": [
+        "FABRICATED EXTRA-LONG PRODUCT NAME FOR A FAMILY PACK WITH MULTIPLE SCENT CHOICES AND EXTENDED MERCHANT WORDING"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 320,
+      "width": 320
+    },
+    {
+      "page": "sites-product-native-variant-loading.html",
+      "duplicateIds": [],
+      "h1": [
+        "BERGAMOT & LIME \u2014 NATURAL DEODORANT \u2014 FIXTURE"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 320,
+      "width": 320
+    },
+    {
+      "page": "sites-product-unscented.html",
+      "duplicateIds": [],
+      "h1": [
+        "UNSCENTED \u2014 NATURAL DEODORANT \u2014 FIXTURE"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 320,
+      "width": 320
+    },
+    {
+      "page": "sites-product-welcome.html",
+      "duplicateIds": [],
+      "h1": [
+        "BERGAMOT & LIME \u2014 FIXTURE"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 320,
+      "width": 320
+    },
+    {
+      "page": "sites-product.html",
+      "duplicateIds": [],
+      "h1": [
+        "BERGAMOT & LIME \u2014 FIXTURE"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 320,
+      "width": 320
+    },
+    {
+      "page": "sites-search.html",
+      "duplicateIds": [],
+      "h1": [
+        "FIND YOUR\nROTATION."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 320,
+      "width": 320
+    },
+    {
+      "page": "sites-welcome.html",
+      "duplicateIds": [],
+      "h1": [
+        "WELCOME LAUNCHER \u2014 LOCAL FIXTURE"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 320,
+      "width": 320
+    },
+    {
+      "page": "sites-wholesale.html",
+      "duplicateIds": [],
+      "h1": [
+        "WHOLESALE PRICING SHEET"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 320,
+      "width": 320
+    },
+    {
+      "page": "sites-404.html",
+      "duplicateIds": [],
+      "h1": [
+        "PAGE NOT FOUND"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 430,
+      "width": 430
+    },
+    {
+      "page": "sites-about-default.html",
+      "duplicateIds": [],
+      "h1": [
+        "HIGH STANDARDS.\nHUMAN BEGINNINGS."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 430,
+      "width": 430
+    },
+    {
+      "page": "sites-about.html",
+      "duplicateIds": [],
+      "h1": [
+        "HIGH STANDARDS.\nHUMAN BEGINNINGS."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 430,
+      "width": 430
+    },
+    {
+      "page": "sites-article-0.html",
+      "duplicateIds": [],
+      "h1": [
+        "YOUR UNDERARMS ARE SKIN. WE FORMULATED BPM THAT WAY."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 430,
+      "width": 430
+    },
+    {
+      "page": "sites-article-1.html",
+      "duplicateIds": [],
+      "h1": [
+        "THE NAME BEHIND BPM: INDIGENOUS OWNERSHIP AND FINDING MY WAY BACK"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 430,
+      "width": 430
+    },
+    {
+      "page": "sites-article-2.html",
+      "duplicateIds": [],
+      "h1": [
+        "THE MATH BEHIND FAIR PRICING: BPM VS NATIVE VS SCHMIDT'S"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 430,
+      "width": 430
+    },
+    {
+      "page": "sites-article-3.html",
+      "duplicateIds": [],
+      "h1": [
+        "DEODORANT IS CHANGING SHAPE. HERE'S WHY WE CHOSE CREAM."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 430,
+      "width": 430
+    },
+    {
+      "page": "sites-article-4.html",
+      "duplicateIds": [],
+      "h1": [
+        "WHAT'S CHANGING IN DEODORANT PACKAGING RIGHT NOW (AND WHY WE WENT WITH METAL)"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 430,
+      "width": 430
+    },
+    {
+      "page": "sites-article-5.html",
+      "duplicateIds": [],
+      "h1": [
+        "HOW TO SWITCH TO NATURAL DEODORANT (WITHOUT THE AWKWARD TRANSITION PERIOD)"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 430,
+      "width": 430
+    },
+    {
+      "page": "sites-article-6.html",
+      "duplicateIds": [],
+      "h1": [
+        "BEST NATURAL DEODORANT FOR SENSITIVE SKIN: WHAT TO LOOK FOR (AND WHAT TO AVOID)"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 430,
+      "width": 430
+    },
+    {
+      "page": "sites-article-7.html",
+      "duplicateIds": [],
+      "h1": [
+        "IS BAKING SODA BAD FOR SENSITIVE SKIN? WHAT YOU NEED TO KNOW"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 430,
+      "width": 430
+    },
+    {
+      "page": "sites-blog.html",
+      "duplicateIds": [],
+      "h1": [
+        "THE\nBREAKDOWN."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 430,
+      "width": 430
+    },
+    {
+      "page": "sites-bundle-3-4-time.html",
+      "duplicateIds": [],
+      "h1": [
+        "3/4 TIME \u2014 MIXED SCENT NATURAL DEODORANT BUNDLE \u2014 FIXTURE"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 430,
+      "width": 430
+    },
+    {
+      "page": "sites-bundle-citrus-on-repeat-family-pack-4-tube-bergamot-lime-deodorant-bundle.html",
+      "duplicateIds": [],
+      "h1": [
+        "CITRUS ON REPEAT: FAMILY PACK \u2014 BERGAMOT & LIME NATURAL DEODORANT BUNDLE \u2014 FIXTURE"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 430,
+      "width": 430
+    },
+    {
+      "page": "sites-bundle-citrus-repeat.html",
+      "duplicateIds": [],
+      "h1": [
+        "CITRUS ON REPEAT \u2014 BERGAMOT & LIME NATURAL DEODORANT DUO \u2014 FIXTURE"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 430,
+      "width": 430
+    },
+    {
+      "page": "sites-bundle-four-on-the-floor-mixed-scent-4-tube-deodorant-bundle.html",
+      "duplicateIds": [],
+      "h1": [
+        "FOUR ON THE FLOOR \u2014 MIXED SCENT NATURAL DEODORANT BUNDLE \u2014 FIXTURE"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 430,
+      "width": 430
+    },
+    {
+      "page": "sites-bundle-side-a-side-b.html",
+      "duplicateIds": [],
+      "h1": [
+        "SIDE A / SIDE B \u2014 MIXED SCENT NATURAL DEODORANT DUO \u2014 FIXTURE"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 430,
+      "width": 430
+    },
+    {
+      "page": "sites-bundle-silent-on-repeat-family-pack-4-tube-unscented-deodorant-bundle.html",
+      "duplicateIds": [],
+      "h1": [
+        "SILENT ON REPEAT: FAMILY PACK \u2014 UNSCENTED NATURAL DEODORANT BUNDLE \u2014 FIXTURE"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 430,
+      "width": 430
+    },
+    {
+      "page": "sites-bundle-silent-repeat.html",
+      "duplicateIds": [],
+      "h1": [
+        "SILENT ON REPEAT \u2014 UNSCENTED NATURAL DEODORANT DUO \u2014 FIXTURE"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 430,
+      "width": 430
+    },
+    {
+      "page": "sites-campaign-300applications.html",
+      "duplicateIds": [],
+      "h1": [
+        "ONE TUBE. MORE THAN 300 APPLICATIONS."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 430,
+      "width": 430
+    },
+    {
+      "page": "sites-campaign-texture.html",
+      "duplicateIds": [],
+      "h1": [
+        "NATURAL DEODORANT, WITH A POLISHED FEEL."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 430,
+      "width": 430
+    },
+    {
+      "page": "sites-cart-bundle-error.html",
+      "duplicateIds": [],
+      "h1": [
+        "IN THE BAG."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 430,
+      "width": 430
+    },
+    {
+      "page": "sites-cart-empty.html",
+      "duplicateIds": [],
+      "h1": [
+        "IN THE BAG."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 430,
+      "width": 430
+    },
+    {
+      "page": "sites-cart.html",
+      "duplicateIds": [],
+      "h1": [
+        "IN THE BAG."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 430,
+      "width": 430
+    },
+    {
+      "page": "sites-collection-bindings.html",
+      "duplicateIds": [],
+      "h1": [
+        "PICK YOUR\nROTATION."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 430,
+      "width": 430
+    },
+    {
+      "page": "sites-collection.html",
+      "duplicateIds": [],
+      "h1": [
+        "PICK YOUR\nROTATION."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 430,
+      "width": 430
+    },
+    {
+      "page": "sites-collections.html",
+      "duplicateIds": [],
+      "h1": [
+        "COLLECTIONS"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 430,
+      "width": 430
+    },
+    {
+      "page": "sites-contact.html",
+      "duplicateIds": [],
+      "h1": [
+        "LET\u2019S TALK."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 430,
+      "width": 430
+    },
+    {
+      "page": "sites-gift-card.html",
+      "duplicateIds": [],
+      "h1": [
+        "YOUR GIFT CARD."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 430,
+      "width": 430
+    },
+    {
+      "page": "sites-home-bindings.html",
+      "duplicateIds": [],
+      "h1": [
+        "THIS IS\nDEODORANT.\nIT JUST HAPPENS\nTO BE NATURAL."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 430,
+      "width": 430
+    },
+    {
+      "page": "sites-home-secondary-link.html",
+      "duplicateIds": [],
+      "h1": [
+        "THIS IS\nDEODORANT.\nIT JUST HAPPENS\nTO BE NATURAL."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 430,
+      "width": 430
+    },
+    {
+      "page": "sites-home.html",
+      "duplicateIds": [],
+      "h1": [
+        "THIS IS\nDEODORANT.\nIT JUST HAPPENS\nTO BE NATURAL."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 430,
+      "width": 430
+    },
+    {
+      "page": "sites-indigenous-owned.html",
+      "duplicateIds": [],
+      "h1": [
+        "OWNED\nWITH PURPOSE."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 430,
+      "width": 430
+    },
+    {
+      "page": "sites-newsletter.html",
+      "duplicateIds": [],
+      "h1": [
+        "LOCAL NEWSLETTER FIXTURE"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 430,
+      "width": 430
+    },
+    {
+      "page": "sites-password.html",
+      "duplicateIds": [],
+      "h1": [
+        "ENTER THE STORE."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 430,
+      "width": 430
+    },
+    {
+      "page": "sites-policies.html",
+      "duplicateIds": [],
+      "h1": [
+        "CLEAR TERMS.\nNO MYSTERY."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 430,
+      "width": 430
+    },
+    {
+      "page": "sites-policy-body.html",
+      "duplicateIds": [],
+      "h1": [
+        "SHIPPING POLICY \u2014 LOCAL FIXTURE"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 430,
+      "width": 430
+    },
+    {
+      "page": "sites-privacy-default.html",
+      "duplicateIds": [],
+      "h1": [
+        "YOUR PRIVACY CHOICES"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 430,
+      "width": 430
+    },
+    {
+      "page": "sites-product-bergamot-lime.html",
+      "duplicateIds": [],
+      "h1": [
+        "BERGAMOT & LIME \u2014 NATURAL DEODORANT \u2014 FIXTURE"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 430,
+      "width": 430
+    },
+    {
+      "page": "sites-product-form-controls.html",
+      "duplicateIds": [],
+      "h1": [
+        "BERGAMOT & LIME \u2014 FIXTURE"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 430,
+      "width": 430
+    },
+    {
+      "page": "sites-product-long-title.html",
+      "duplicateIds": [],
+      "h1": [
+        "FABRICATED EXTRA-LONG PRODUCT NAME FOR A FAMILY PACK WITH MULTIPLE SCENT CHOICES AND EXTENDED MERCHANT WORDING"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 430,
+      "width": 430
+    },
+    {
+      "page": "sites-product-native-variant-loading.html",
+      "duplicateIds": [],
+      "h1": [
+        "BERGAMOT & LIME \u2014 NATURAL DEODORANT \u2014 FIXTURE"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 430,
+      "width": 430
+    },
+    {
+      "page": "sites-product-unscented.html",
+      "duplicateIds": [],
+      "h1": [
+        "UNSCENTED \u2014 NATURAL DEODORANT \u2014 FIXTURE"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 430,
+      "width": 430
+    },
+    {
+      "page": "sites-product-welcome.html",
+      "duplicateIds": [],
+      "h1": [
+        "BERGAMOT & LIME \u2014 FIXTURE"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 430,
+      "width": 430
+    },
+    {
+      "page": "sites-product.html",
+      "duplicateIds": [],
+      "h1": [
+        "BERGAMOT & LIME \u2014 FIXTURE"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 430,
+      "width": 430
+    },
+    {
+      "page": "sites-search.html",
+      "duplicateIds": [],
+      "h1": [
+        "FIND YOUR\nROTATION."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 430,
+      "width": 430
+    },
+    {
+      "page": "sites-welcome.html",
+      "duplicateIds": [],
+      "h1": [
+        "WELCOME LAUNCHER \u2014 LOCAL FIXTURE"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 430,
+      "width": 430
+    },
+    {
+      "page": "sites-wholesale.html",
+      "duplicateIds": [],
+      "h1": [
+        "WHOLESALE PRICING SHEET"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 430,
+      "width": 430
+    },
+    {
+      "page": "sites-404.html",
+      "duplicateIds": [],
+      "h1": [
+        "PAGE NOT FOUND"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 768,
+      "width": 768
+    },
+    {
+      "page": "sites-about-default.html",
+      "duplicateIds": [],
+      "h1": [
+        "HIGH STANDARDS.\nHUMAN BEGINNINGS."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 768,
+      "width": 768
+    },
+    {
+      "page": "sites-about.html",
+      "duplicateIds": [],
+      "h1": [
+        "HIGH STANDARDS.\nHUMAN BEGINNINGS."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 768,
+      "width": 768
+    },
+    {
+      "page": "sites-article-0.html",
+      "duplicateIds": [],
+      "h1": [
+        "YOUR UNDERARMS ARE SKIN. WE FORMULATED BPM THAT WAY."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 768,
+      "width": 768
+    },
+    {
+      "page": "sites-article-1.html",
+      "duplicateIds": [],
+      "h1": [
+        "THE NAME BEHIND BPM: INDIGENOUS OWNERSHIP AND FINDING MY WAY BACK"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 768,
+      "width": 768
+    },
+    {
+      "page": "sites-article-2.html",
+      "duplicateIds": [],
+      "h1": [
+        "THE MATH BEHIND FAIR PRICING: BPM VS NATIVE VS SCHMIDT'S"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 768,
+      "width": 768
+    },
+    {
+      "page": "sites-article-3.html",
+      "duplicateIds": [],
+      "h1": [
+        "DEODORANT IS CHANGING SHAPE. HERE'S WHY WE CHOSE CREAM."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 768,
+      "width": 768
+    },
+    {
+      "page": "sites-article-4.html",
+      "duplicateIds": [],
+      "h1": [
+        "WHAT'S CHANGING IN DEODORANT PACKAGING RIGHT NOW (AND WHY WE WENT WITH METAL)"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 768,
+      "width": 768
+    },
+    {
+      "page": "sites-article-5.html",
+      "duplicateIds": [],
+      "h1": [
+        "HOW TO SWITCH TO NATURAL DEODORANT (WITHOUT THE AWKWARD TRANSITION PERIOD)"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 768,
+      "width": 768
+    },
+    {
+      "page": "sites-article-6.html",
+      "duplicateIds": [],
+      "h1": [
+        "BEST NATURAL DEODORANT FOR SENSITIVE SKIN: WHAT TO LOOK FOR (AND WHAT TO AVOID)"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 768,
+      "width": 768
+    },
+    {
+      "page": "sites-article-7.html",
+      "duplicateIds": [],
+      "h1": [
+        "IS BAKING SODA BAD FOR SENSITIVE SKIN? WHAT YOU NEED TO KNOW"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 768,
+      "width": 768
+    },
+    {
+      "page": "sites-blog.html",
+      "duplicateIds": [],
+      "h1": [
+        "THE\nBREAKDOWN."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 768,
+      "width": 768
+    },
+    {
+      "page": "sites-bundle-3-4-time.html",
+      "duplicateIds": [],
+      "h1": [
+        "3/4 TIME \u2014 MIXED SCENT NATURAL DEODORANT BUNDLE \u2014 FIXTURE"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 768,
+      "width": 768
+    },
+    {
+      "page": "sites-bundle-citrus-on-repeat-family-pack-4-tube-bergamot-lime-deodorant-bundle.html",
+      "duplicateIds": [],
+      "h1": [
+        "CITRUS ON REPEAT: FAMILY PACK \u2014 BERGAMOT & LIME NATURAL DEODORANT BUNDLE \u2014 FIXTURE"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 768,
+      "width": 768
+    },
+    {
+      "page": "sites-bundle-citrus-repeat.html",
+      "duplicateIds": [],
+      "h1": [
+        "CITRUS ON REPEAT \u2014 BERGAMOT & LIME NATURAL DEODORANT DUO \u2014 FIXTURE"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 768,
+      "width": 768
+    },
+    {
+      "page": "sites-bundle-four-on-the-floor-mixed-scent-4-tube-deodorant-bundle.html",
+      "duplicateIds": [],
+      "h1": [
+        "FOUR ON THE FLOOR \u2014 MIXED SCENT NATURAL DEODORANT BUNDLE \u2014 FIXTURE"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 768,
+      "width": 768
+    },
+    {
+      "page": "sites-bundle-side-a-side-b.html",
+      "duplicateIds": [],
+      "h1": [
+        "SIDE A / SIDE B \u2014 MIXED SCENT NATURAL DEODORANT DUO \u2014 FIXTURE"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 768,
+      "width": 768
+    },
+    {
+      "page": "sites-bundle-silent-on-repeat-family-pack-4-tube-unscented-deodorant-bundle.html",
+      "duplicateIds": [],
+      "h1": [
+        "SILENT ON REPEAT: FAMILY PACK \u2014 UNSCENTED NATURAL DEODORANT BUNDLE \u2014 FIXTURE"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 768,
+      "width": 768
+    },
+    {
+      "page": "sites-bundle-silent-repeat.html",
+      "duplicateIds": [],
+      "h1": [
+        "SILENT ON REPEAT \u2014 UNSCENTED NATURAL DEODORANT DUO \u2014 FIXTURE"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 768,
+      "width": 768
+    },
+    {
+      "page": "sites-campaign-300applications.html",
+      "duplicateIds": [],
+      "h1": [
+        "ONE TUBE. MORE THAN 300 APPLICATIONS."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 768,
+      "width": 768
+    },
+    {
+      "page": "sites-campaign-texture.html",
+      "duplicateIds": [],
+      "h1": [
+        "NATURAL DEODORANT, WITH A POLISHED FEEL."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 768,
+      "width": 768
+    },
+    {
+      "page": "sites-cart-bundle-error.html",
+      "duplicateIds": [],
+      "h1": [
+        "IN THE BAG."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 768,
+      "width": 768
+    },
+    {
+      "page": "sites-cart-empty.html",
+      "duplicateIds": [],
+      "h1": [
+        "IN THE BAG."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 768,
+      "width": 768
+    },
+    {
+      "page": "sites-cart.html",
+      "duplicateIds": [],
+      "h1": [
+        "IN THE BAG."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 768,
+      "width": 768
+    },
+    {
+      "page": "sites-collection-bindings.html",
+      "duplicateIds": [],
+      "h1": [
+        "PICK YOUR\nROTATION."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 768,
+      "width": 768
+    },
+    {
+      "page": "sites-collection.html",
+      "duplicateIds": [],
+      "h1": [
+        "PICK YOUR\nROTATION."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 768,
+      "width": 768
+    },
+    {
+      "page": "sites-collections.html",
+      "duplicateIds": [],
+      "h1": [
+        "COLLECTIONS"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 768,
+      "width": 768
+    },
+    {
+      "page": "sites-contact.html",
+      "duplicateIds": [],
+      "h1": [
+        "LET\u2019S TALK."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 768,
+      "width": 768
+    },
+    {
+      "page": "sites-gift-card.html",
+      "duplicateIds": [],
+      "h1": [
+        "YOUR GIFT CARD."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 768,
+      "width": 768
+    },
+    {
+      "page": "sites-home-bindings.html",
+      "duplicateIds": [],
+      "h1": [
+        "THIS IS\nDEODORANT.\nIT JUST HAPPENS\nTO BE NATURAL."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 768,
+      "width": 768
+    },
+    {
+      "page": "sites-home-secondary-link.html",
+      "duplicateIds": [],
+      "h1": [
+        "THIS IS\nDEODORANT.\nIT JUST HAPPENS\nTO BE NATURAL."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 768,
+      "width": 768
+    },
+    {
+      "page": "sites-home.html",
+      "duplicateIds": [],
+      "h1": [
+        "THIS IS\nDEODORANT.\nIT JUST HAPPENS\nTO BE NATURAL."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 768,
+      "width": 768
+    },
+    {
+      "page": "sites-indigenous-owned.html",
+      "duplicateIds": [],
+      "h1": [
+        "OWNED\nWITH PURPOSE."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 768,
+      "width": 768
+    },
+    {
+      "page": "sites-newsletter.html",
+      "duplicateIds": [],
+      "h1": [
+        "LOCAL NEWSLETTER FIXTURE"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 768,
+      "width": 768
+    },
+    {
+      "page": "sites-password.html",
+      "duplicateIds": [],
+      "h1": [
+        "ENTER THE STORE."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 768,
+      "width": 768
+    },
+    {
+      "page": "sites-policies.html",
+      "duplicateIds": [],
+      "h1": [
+        "CLEAR TERMS.\nNO MYSTERY."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 768,
+      "width": 768
+    },
+    {
+      "page": "sites-policy-body.html",
+      "duplicateIds": [],
+      "h1": [
+        "SHIPPING POLICY \u2014 LOCAL FIXTURE"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 768,
+      "width": 768
+    },
+    {
+      "page": "sites-privacy-default.html",
+      "duplicateIds": [],
+      "h1": [
+        "YOUR PRIVACY CHOICES"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 768,
+      "width": 768
+    },
+    {
+      "page": "sites-product-bergamot-lime.html",
+      "duplicateIds": [],
+      "h1": [
+        "BERGAMOT & LIME \u2014 NATURAL DEODORANT \u2014 FIXTURE"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 768,
+      "width": 768
+    },
+    {
+      "page": "sites-product-form-controls.html",
+      "duplicateIds": [],
+      "h1": [
+        "BERGAMOT & LIME \u2014 FIXTURE"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 768,
+      "width": 768
+    },
+    {
+      "page": "sites-product-long-title.html",
+      "duplicateIds": [],
+      "h1": [
+        "FABRICATED EXTRA-LONG PRODUCT NAME FOR A FAMILY PACK WITH MULTIPLE SCENT CHOICES AND EXTENDED MERCHANT WORDING"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 768,
+      "width": 768
+    },
+    {
+      "page": "sites-product-native-variant-loading.html",
+      "duplicateIds": [],
+      "h1": [
+        "BERGAMOT & LIME \u2014 NATURAL DEODORANT \u2014 FIXTURE"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 768,
+      "width": 768
+    },
+    {
+      "page": "sites-product-unscented.html",
+      "duplicateIds": [],
+      "h1": [
+        "UNSCENTED \u2014 NATURAL DEODORANT \u2014 FIXTURE"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 768,
+      "width": 768
+    },
+    {
+      "page": "sites-product-welcome.html",
+      "duplicateIds": [],
+      "h1": [
+        "BERGAMOT & LIME \u2014 FIXTURE"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 768,
+      "width": 768
+    },
+    {
+      "page": "sites-product.html",
+      "duplicateIds": [],
+      "h1": [
+        "BERGAMOT & LIME \u2014 FIXTURE"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 768,
+      "width": 768
+    },
+    {
+      "page": "sites-search.html",
+      "duplicateIds": [],
+      "h1": [
+        "FIND YOUR\nROTATION."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 768,
+      "width": 768
+    },
+    {
+      "page": "sites-welcome.html",
+      "duplicateIds": [],
+      "h1": [
+        "WELCOME LAUNCHER \u2014 LOCAL FIXTURE"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 768,
+      "width": 768
+    },
+    {
+      "page": "sites-wholesale.html",
+      "duplicateIds": [],
+      "h1": [
+        "WHOLESALE PRICING SHEET"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 768,
+      "width": 768
+    },
+    {
+      "page": "sites-404.html",
+      "duplicateIds": [],
+      "h1": [
+        "PAGE NOT FOUND"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 1024,
+      "width": 1024
+    },
+    {
+      "page": "sites-about-default.html",
+      "duplicateIds": [],
+      "h1": [
+        "HIGH STANDARDS.\nHUMAN BEGINNINGS."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 1024,
+      "width": 1024
+    },
+    {
+      "page": "sites-about.html",
+      "duplicateIds": [],
+      "h1": [
+        "HIGH STANDARDS.\nHUMAN BEGINNINGS."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 1024,
+      "width": 1024
+    },
+    {
+      "page": "sites-article-0.html",
+      "duplicateIds": [],
+      "h1": [
+        "YOUR UNDERARMS ARE SKIN. WE FORMULATED BPM THAT WAY."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 1024,
+      "width": 1024
+    },
+    {
+      "page": "sites-article-1.html",
+      "duplicateIds": [],
+      "h1": [
+        "THE NAME BEHIND BPM: INDIGENOUS OWNERSHIP AND FINDING MY WAY BACK"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 1024,
+      "width": 1024
+    },
+    {
+      "page": "sites-article-2.html",
+      "duplicateIds": [],
+      "h1": [
+        "THE MATH BEHIND FAIR PRICING: BPM VS NATIVE VS SCHMIDT'S"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 1024,
+      "width": 1024
+    },
+    {
+      "page": "sites-article-3.html",
+      "duplicateIds": [],
+      "h1": [
+        "DEODORANT IS CHANGING SHAPE. HERE'S WHY WE CHOSE CREAM."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 1024,
+      "width": 1024
+    },
+    {
+      "page": "sites-article-4.html",
+      "duplicateIds": [],
+      "h1": [
+        "WHAT'S CHANGING IN DEODORANT PACKAGING RIGHT NOW (AND WHY WE WENT WITH METAL)"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 1024,
+      "width": 1024
+    },
+    {
+      "page": "sites-article-5.html",
+      "duplicateIds": [],
+      "h1": [
+        "HOW TO SWITCH TO NATURAL DEODORANT (WITHOUT THE AWKWARD TRANSITION PERIOD)"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 1024,
+      "width": 1024
+    },
+    {
+      "page": "sites-article-6.html",
+      "duplicateIds": [],
+      "h1": [
+        "BEST NATURAL DEODORANT FOR SENSITIVE SKIN: WHAT TO LOOK FOR (AND WHAT TO AVOID)"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 1024,
+      "width": 1024
+    },
+    {
+      "page": "sites-article-7.html",
+      "duplicateIds": [],
+      "h1": [
+        "IS BAKING SODA BAD FOR SENSITIVE SKIN? WHAT YOU NEED TO KNOW"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 1024,
+      "width": 1024
+    },
+    {
+      "page": "sites-blog.html",
+      "duplicateIds": [],
+      "h1": [
+        "THE\nBREAKDOWN."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 1024,
+      "width": 1024
+    },
+    {
+      "page": "sites-bundle-3-4-time.html",
+      "duplicateIds": [],
+      "h1": [
+        "3/4 TIME \u2014 MIXED SCENT NATURAL DEODORANT BUNDLE \u2014 FIXTURE"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 1024,
+      "width": 1024
+    },
+    {
+      "page": "sites-bundle-citrus-on-repeat-family-pack-4-tube-bergamot-lime-deodorant-bundle.html",
+      "duplicateIds": [],
+      "h1": [
+        "CITRUS ON REPEAT: FAMILY PACK \u2014 BERGAMOT & LIME NATURAL DEODORANT BUNDLE \u2014 FIXTURE"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 1024,
+      "width": 1024
+    },
+    {
+      "page": "sites-bundle-citrus-repeat.html",
+      "duplicateIds": [],
+      "h1": [
+        "CITRUS ON REPEAT \u2014 BERGAMOT & LIME NATURAL DEODORANT DUO \u2014 FIXTURE"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 1024,
+      "width": 1024
+    },
+    {
+      "page": "sites-bundle-four-on-the-floor-mixed-scent-4-tube-deodorant-bundle.html",
+      "duplicateIds": [],
+      "h1": [
+        "FOUR ON THE FLOOR \u2014 MIXED SCENT NATURAL DEODORANT BUNDLE \u2014 FIXTURE"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 1024,
+      "width": 1024
+    },
+    {
+      "page": "sites-bundle-side-a-side-b.html",
+      "duplicateIds": [],
+      "h1": [
+        "SIDE A / SIDE B \u2014 MIXED SCENT NATURAL DEODORANT DUO \u2014 FIXTURE"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 1024,
+      "width": 1024
+    },
+    {
+      "page": "sites-bundle-silent-on-repeat-family-pack-4-tube-unscented-deodorant-bundle.html",
+      "duplicateIds": [],
+      "h1": [
+        "SILENT ON REPEAT: FAMILY PACK \u2014 UNSCENTED NATURAL DEODORANT BUNDLE \u2014 FIXTURE"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 1024,
+      "width": 1024
+    },
+    {
+      "page": "sites-bundle-silent-repeat.html",
+      "duplicateIds": [],
+      "h1": [
+        "SILENT ON REPEAT \u2014 UNSCENTED NATURAL DEODORANT DUO \u2014 FIXTURE"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 1024,
+      "width": 1024
+    },
+    {
+      "page": "sites-campaign-300applications.html",
+      "duplicateIds": [],
+      "h1": [
+        "ONE TUBE. MORE THAN 300 APPLICATIONS."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 1024,
+      "width": 1024
+    },
+    {
+      "page": "sites-campaign-texture.html",
+      "duplicateIds": [],
+      "h1": [
+        "NATURAL DEODORANT, WITH A POLISHED FEEL."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 1024,
+      "width": 1024
+    },
+    {
+      "page": "sites-cart-bundle-error.html",
+      "duplicateIds": [],
+      "h1": [
+        "IN THE BAG."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 1024,
+      "width": 1024
+    },
+    {
+      "page": "sites-cart-empty.html",
+      "duplicateIds": [],
+      "h1": [
+        "IN THE BAG."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 1024,
+      "width": 1024
+    },
+    {
+      "page": "sites-cart.html",
+      "duplicateIds": [],
+      "h1": [
+        "IN THE BAG."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 1024,
+      "width": 1024
+    },
+    {
+      "page": "sites-collection-bindings.html",
+      "duplicateIds": [],
+      "h1": [
+        "PICK YOUR\nROTATION."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 1024,
+      "width": 1024
+    },
+    {
+      "page": "sites-collection.html",
+      "duplicateIds": [],
+      "h1": [
+        "PICK YOUR\nROTATION."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 1024,
+      "width": 1024
+    },
+    {
+      "page": "sites-collections.html",
+      "duplicateIds": [],
+      "h1": [
+        "COLLECTIONS"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 1024,
+      "width": 1024
+    },
+    {
+      "page": "sites-contact.html",
+      "duplicateIds": [],
+      "h1": [
+        "LET\u2019S TALK."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 1024,
+      "width": 1024
+    },
+    {
+      "page": "sites-gift-card.html",
+      "duplicateIds": [],
+      "h1": [
+        "YOUR GIFT CARD."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 1024,
+      "width": 1024
+    },
+    {
+      "page": "sites-home-bindings.html",
+      "duplicateIds": [],
+      "h1": [
+        "THIS IS\nDEODORANT.\nIT JUST HAPPENS\nTO BE NATURAL."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 1024,
+      "width": 1024
+    },
+    {
+      "page": "sites-home-secondary-link.html",
+      "duplicateIds": [],
+      "h1": [
+        "THIS IS\nDEODORANT.\nIT JUST HAPPENS\nTO BE NATURAL."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 1024,
+      "width": 1024
+    },
+    {
+      "page": "sites-home.html",
+      "duplicateIds": [],
+      "h1": [
+        "THIS IS\nDEODORANT.\nIT JUST HAPPENS\nTO BE NATURAL."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 1024,
+      "width": 1024
+    },
+    {
+      "page": "sites-indigenous-owned.html",
+      "duplicateIds": [],
+      "h1": [
+        "OWNED\nWITH PURPOSE."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 1024,
+      "width": 1024
+    },
+    {
+      "page": "sites-newsletter.html",
+      "duplicateIds": [],
+      "h1": [
+        "LOCAL NEWSLETTER FIXTURE"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 1024,
+      "width": 1024
+    },
+    {
+      "page": "sites-password.html",
+      "duplicateIds": [],
+      "h1": [
+        "ENTER THE STORE."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 1024,
+      "width": 1024
+    },
+    {
+      "page": "sites-policies.html",
+      "duplicateIds": [],
+      "h1": [
+        "CLEAR TERMS.\nNO MYSTERY."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 1024,
+      "width": 1024
+    },
+    {
+      "page": "sites-policy-body.html",
+      "duplicateIds": [],
+      "h1": [
+        "SHIPPING POLICY \u2014 LOCAL FIXTURE"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 1024,
+      "width": 1024
+    },
+    {
+      "page": "sites-privacy-default.html",
+      "duplicateIds": [],
+      "h1": [
+        "YOUR PRIVACY CHOICES"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 1024,
+      "width": 1024
+    },
+    {
+      "page": "sites-product-bergamot-lime.html",
+      "duplicateIds": [],
+      "h1": [
+        "BERGAMOT & LIME \u2014 NATURAL DEODORANT \u2014 FIXTURE"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 1024,
+      "width": 1024
+    },
+    {
+      "page": "sites-product-form-controls.html",
+      "duplicateIds": [],
+      "h1": [
+        "BERGAMOT & LIME \u2014 FIXTURE"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 1024,
+      "width": 1024
+    },
+    {
+      "page": "sites-product-long-title.html",
+      "duplicateIds": [],
+      "h1": [
+        "FABRICATED EXTRA-LONG PRODUCT NAME FOR A FAMILY PACK WITH MULTIPLE SCENT CHOICES AND EXTENDED MERCHANT WORDING"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 1024,
+      "width": 1024
+    },
+    {
+      "page": "sites-product-native-variant-loading.html",
+      "duplicateIds": [],
+      "h1": [
+        "BERGAMOT & LIME \u2014 NATURAL DEODORANT \u2014 FIXTURE"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 1024,
+      "width": 1024
+    },
+    {
+      "page": "sites-product-unscented.html",
+      "duplicateIds": [],
+      "h1": [
+        "UNSCENTED \u2014 NATURAL DEODORANT \u2014 FIXTURE"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 1024,
+      "width": 1024
+    },
+    {
+      "page": "sites-product-welcome.html",
+      "duplicateIds": [],
+      "h1": [
+        "BERGAMOT & LIME \u2014 FIXTURE"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 1024,
+      "width": 1024
+    },
+    {
+      "page": "sites-product.html",
+      "duplicateIds": [],
+      "h1": [
+        "BERGAMOT & LIME \u2014 FIXTURE"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 1024,
+      "width": 1024
+    },
+    {
+      "page": "sites-search.html",
+      "duplicateIds": [],
+      "h1": [
+        "FIND YOUR\nROTATION."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 1024,
+      "width": 1024
+    },
+    {
+      "page": "sites-welcome.html",
+      "duplicateIds": [],
+      "h1": [
+        "WELCOME LAUNCHER \u2014 LOCAL FIXTURE"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 1024,
+      "width": 1024
+    },
+    {
+      "page": "sites-wholesale.html",
+      "duplicateIds": [],
+      "h1": [
+        "WHOLESALE PRICING SHEET"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 1024,
+      "width": 1024
+    },
+    {
+      "page": "sites-404.html",
+      "duplicateIds": [],
+      "h1": [
+        "PAGE NOT FOUND"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 1600,
+      "width": 1600
+    },
+    {
+      "page": "sites-about-default.html",
+      "duplicateIds": [],
+      "h1": [
+        "HIGH STANDARDS.\nHUMAN BEGINNINGS."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 1600,
+      "width": 1600
+    },
+    {
+      "page": "sites-about.html",
+      "duplicateIds": [],
+      "h1": [
+        "HIGH STANDARDS.\nHUMAN BEGINNINGS."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 1600,
+      "width": 1600
+    },
+    {
+      "page": "sites-article-0.html",
+      "duplicateIds": [],
+      "h1": [
+        "YOUR UNDERARMS ARE SKIN. WE FORMULATED BPM THAT WAY."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 1600,
+      "width": 1600
+    },
+    {
+      "page": "sites-article-1.html",
+      "duplicateIds": [],
+      "h1": [
+        "THE NAME BEHIND BPM: INDIGENOUS OWNERSHIP AND FINDING MY WAY BACK"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 1600,
+      "width": 1600
+    },
+    {
+      "page": "sites-article-2.html",
+      "duplicateIds": [],
+      "h1": [
+        "THE MATH BEHIND FAIR PRICING: BPM VS NATIVE VS SCHMIDT'S"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 1600,
+      "width": 1600
+    },
+    {
+      "page": "sites-article-3.html",
+      "duplicateIds": [],
+      "h1": [
+        "DEODORANT IS CHANGING SHAPE. HERE'S WHY WE CHOSE CREAM."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 1600,
+      "width": 1600
+    },
+    {
+      "page": "sites-article-4.html",
+      "duplicateIds": [],
+      "h1": [
+        "WHAT'S CHANGING IN DEODORANT PACKAGING RIGHT NOW (AND WHY WE WENT WITH METAL)"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 1600,
+      "width": 1600
+    },
+    {
+      "page": "sites-article-5.html",
+      "duplicateIds": [],
+      "h1": [
+        "HOW TO SWITCH TO NATURAL DEODORANT (WITHOUT THE AWKWARD TRANSITION PERIOD)"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 1600,
+      "width": 1600
+    },
+    {
+      "page": "sites-article-6.html",
+      "duplicateIds": [],
+      "h1": [
+        "BEST NATURAL DEODORANT FOR SENSITIVE SKIN: WHAT TO LOOK FOR (AND WHAT TO AVOID)"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 1600,
+      "width": 1600
+    },
+    {
+      "page": "sites-article-7.html",
+      "duplicateIds": [],
+      "h1": [
+        "IS BAKING SODA BAD FOR SENSITIVE SKIN? WHAT YOU NEED TO KNOW"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 1600,
+      "width": 1600
+    },
+    {
+      "page": "sites-blog.html",
+      "duplicateIds": [],
+      "h1": [
+        "THE\nBREAKDOWN."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 1600,
+      "width": 1600
+    },
+    {
+      "page": "sites-bundle-3-4-time.html",
+      "duplicateIds": [],
+      "h1": [
+        "3/4 TIME \u2014 MIXED SCENT NATURAL DEODORANT BUNDLE \u2014 FIXTURE"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 1600,
+      "width": 1600
+    },
+    {
+      "page": "sites-bundle-citrus-on-repeat-family-pack-4-tube-bergamot-lime-deodorant-bundle.html",
+      "duplicateIds": [],
+      "h1": [
+        "CITRUS ON REPEAT: FAMILY PACK \u2014 BERGAMOT & LIME NATURAL DEODORANT BUNDLE \u2014 FIXTURE"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 1600,
+      "width": 1600
+    },
+    {
+      "page": "sites-bundle-citrus-repeat.html",
+      "duplicateIds": [],
+      "h1": [
+        "CITRUS ON REPEAT \u2014 BERGAMOT & LIME NATURAL DEODORANT DUO \u2014 FIXTURE"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 1600,
+      "width": 1600
+    },
+    {
+      "page": "sites-bundle-four-on-the-floor-mixed-scent-4-tube-deodorant-bundle.html",
+      "duplicateIds": [],
+      "h1": [
+        "FOUR ON THE FLOOR \u2014 MIXED SCENT NATURAL DEODORANT BUNDLE \u2014 FIXTURE"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 1600,
+      "width": 1600
+    },
+    {
+      "page": "sites-bundle-side-a-side-b.html",
+      "duplicateIds": [],
+      "h1": [
+        "SIDE A / SIDE B \u2014 MIXED SCENT NATURAL DEODORANT DUO \u2014 FIXTURE"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 1600,
+      "width": 1600
+    },
+    {
+      "page": "sites-bundle-silent-on-repeat-family-pack-4-tube-unscented-deodorant-bundle.html",
+      "duplicateIds": [],
+      "h1": [
+        "SILENT ON REPEAT: FAMILY PACK \u2014 UNSCENTED NATURAL DEODORANT BUNDLE \u2014 FIXTURE"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 1600,
+      "width": 1600
+    },
+    {
+      "page": "sites-bundle-silent-repeat.html",
+      "duplicateIds": [],
+      "h1": [
+        "SILENT ON REPEAT \u2014 UNSCENTED NATURAL DEODORANT DUO \u2014 FIXTURE"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 1600,
+      "width": 1600
+    },
+    {
+      "page": "sites-campaign-300applications.html",
+      "duplicateIds": [],
+      "h1": [
+        "ONE TUBE. MORE THAN 300 APPLICATIONS."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 1600,
+      "width": 1600
+    },
+    {
+      "page": "sites-campaign-texture.html",
+      "duplicateIds": [],
+      "h1": [
+        "NATURAL DEODORANT, WITH A POLISHED FEEL."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 1600,
+      "width": 1600
+    },
+    {
+      "page": "sites-cart-bundle-error.html",
+      "duplicateIds": [],
+      "h1": [
+        "IN THE BAG."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 1600,
+      "width": 1600
+    },
+    {
+      "page": "sites-cart-empty.html",
+      "duplicateIds": [],
+      "h1": [
+        "IN THE BAG."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 1600,
+      "width": 1600
+    },
+    {
+      "page": "sites-cart.html",
+      "duplicateIds": [],
+      "h1": [
+        "IN THE BAG."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 1600,
+      "width": 1600
+    },
+    {
+      "page": "sites-collection-bindings.html",
+      "duplicateIds": [],
+      "h1": [
+        "PICK YOUR\nROTATION."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 1600,
+      "width": 1600
+    },
+    {
+      "page": "sites-collection.html",
+      "duplicateIds": [],
+      "h1": [
+        "PICK YOUR\nROTATION."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 1600,
+      "width": 1600
+    },
+    {
+      "page": "sites-collections.html",
+      "duplicateIds": [],
+      "h1": [
+        "COLLECTIONS"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 1600,
+      "width": 1600
+    },
+    {
+      "page": "sites-contact.html",
+      "duplicateIds": [],
+      "h1": [
+        "LET\u2019S TALK."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 1600,
+      "width": 1600
+    },
+    {
+      "page": "sites-gift-card.html",
+      "duplicateIds": [],
+      "h1": [
+        "YOUR GIFT CARD."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 1600,
+      "width": 1600
+    },
+    {
+      "page": "sites-home-bindings.html",
+      "duplicateIds": [],
+      "h1": [
+        "THIS IS\nDEODORANT.\nIT JUST HAPPENS\nTO BE NATURAL."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 1600,
+      "width": 1600
+    },
+    {
+      "page": "sites-home-secondary-link.html",
+      "duplicateIds": [],
+      "h1": [
+        "THIS IS\nDEODORANT.\nIT JUST HAPPENS\nTO BE NATURAL."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 1600,
+      "width": 1600
+    },
+    {
+      "page": "sites-home.html",
+      "duplicateIds": [],
+      "h1": [
+        "THIS IS\nDEODORANT.\nIT JUST HAPPENS\nTO BE NATURAL."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 1600,
+      "width": 1600
+    },
+    {
+      "page": "sites-indigenous-owned.html",
+      "duplicateIds": [],
+      "h1": [
+        "OWNED\nWITH PURPOSE."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 1600,
+      "width": 1600
+    },
+    {
+      "page": "sites-newsletter.html",
+      "duplicateIds": [],
+      "h1": [
+        "LOCAL NEWSLETTER FIXTURE"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 1600,
+      "width": 1600
+    },
+    {
+      "page": "sites-password.html",
+      "duplicateIds": [],
+      "h1": [
+        "ENTER THE STORE."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 1600,
+      "width": 1600
+    },
+    {
+      "page": "sites-policies.html",
+      "duplicateIds": [],
+      "h1": [
+        "CLEAR TERMS.\nNO MYSTERY."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 1600,
+      "width": 1600
+    },
+    {
+      "page": "sites-policy-body.html",
+      "duplicateIds": [],
+      "h1": [
+        "SHIPPING POLICY \u2014 LOCAL FIXTURE"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 1600,
+      "width": 1600
+    },
+    {
+      "page": "sites-privacy-default.html",
+      "duplicateIds": [],
+      "h1": [
+        "YOUR PRIVACY CHOICES"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 1600,
+      "width": 1600
+    },
+    {
+      "page": "sites-product-bergamot-lime.html",
+      "duplicateIds": [],
+      "h1": [
+        "BERGAMOT & LIME \u2014 NATURAL DEODORANT \u2014 FIXTURE"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 1600,
+      "width": 1600
+    },
+    {
+      "page": "sites-product-form-controls.html",
+      "duplicateIds": [],
+      "h1": [
+        "BERGAMOT & LIME \u2014 FIXTURE"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 1600,
+      "width": 1600
+    },
+    {
+      "page": "sites-product-long-title.html",
+      "duplicateIds": [],
+      "h1": [
+        "FABRICATED EXTRA-LONG PRODUCT NAME FOR A FAMILY PACK WITH MULTIPLE SCENT CHOICES AND EXTENDED MERCHANT WORDING"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 1600,
+      "width": 1600
+    },
+    {
+      "page": "sites-product-native-variant-loading.html",
+      "duplicateIds": [],
+      "h1": [
+        "BERGAMOT & LIME \u2014 NATURAL DEODORANT \u2014 FIXTURE"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 1600,
+      "width": 1600
+    },
+    {
+      "page": "sites-product-unscented.html",
+      "duplicateIds": [],
+      "h1": [
+        "UNSCENTED \u2014 NATURAL DEODORANT \u2014 FIXTURE"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 1600,
+      "width": 1600
+    },
+    {
+      "page": "sites-product-welcome.html",
+      "duplicateIds": [],
+      "h1": [
+        "BERGAMOT & LIME \u2014 FIXTURE"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 1600,
+      "width": 1600
+    },
+    {
+      "page": "sites-product.html",
+      "duplicateIds": [],
+      "h1": [
+        "BERGAMOT & LIME \u2014 FIXTURE"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 1600,
+      "width": 1600
+    },
+    {
+      "page": "sites-search.html",
+      "duplicateIds": [],
+      "h1": [
+        "FIND YOUR\nROTATION."
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 1600,
+      "width": 1600
+    },
+    {
+      "page": "sites-welcome.html",
+      "duplicateIds": [],
+      "h1": [
+        "WELCOME LAUNCHER \u2014 LOCAL FIXTURE"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 1600,
+      "width": 1600
+    },
+    {
+      "page": "sites-wholesale.html",
+      "duplicateIds": [],
+      "h1": [
+        "WHOLESALE PRICING SHEET"
+      ],
+      "loadedBrokenImages": [],
+      "scrollWidth": 1600,
+      "width": 1600
+    }
+  ],
+  "provesPixelFidelity": false,
+  "provesNativeJourneys": false,
+  "repositoryCommit": "f5550af7a7146e2f6f2b344340132908aeb44d1d",
+  "themeTree": "a3cf19ec77c74c72217a9b89a492d185cc4b14d5"
+}
