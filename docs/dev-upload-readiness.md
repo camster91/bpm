@@ -44,3 +44,7 @@ Native data disproves the local fixture's single-H1 assumption: this product has
 ## Local source-alignment follow-up
 
 Subsequent local changes now match purchase display titles, introductions and tablet column rules to the authoritative source. See `qa/purchase-source-alignment-20261008.md` and the 27-pair measured matrix. The uploaded a17ef61 archive remains intact and identifies the current dev upload, but no longer matches the current local theme. These changes have not been uploaded. Prepare a new frozen candidate after the remaining local repairs; obtain exact-command approval before the next development upload.
+
+## Latest prepared client-content candidate
+
+415e242 now includes current client homepage additions and the prior purchase-source alignment. See `client-content-dev-upload-20261008.md` for the exact new command, frozen file identity, review evidence and effects. 168 files / 45,111,695 bytes are verified, with explicit noindex and zero Theme Check errors. a17ef61 remains the latest uploaded candidate on dev theme 194480669044. The new client-content snapshot has not been uploaded and requires separate exact-command confirmation.
