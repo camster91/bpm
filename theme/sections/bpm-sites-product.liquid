@@ -1,0 +1,68 @@
+{{ 'bpm-product.css' | asset_url | stylesheet_tag }}
+{% liquid
+  assign variant = product.selected_or_first_available_variant
+  assign allocation = product.selected_selling_plan_allocation
+  if product.requires_selling_plan and allocation == nil
+    assign allocation = variant.selling_plan_allocations.first
+  endif
+  assign shown_price = allocation.price | default: variant.price
+  assign chosen_media = variant.featured_media | default: product.featured_media
+  assign form_id = 'Product-' | append: section.id
+  assign media_count = product.media.size
+  assign purchasable = variant.available
+  if product.requires_selling_plan and allocation == nil
+    assign purchasable = false
+  endif
+  if section.settings.image != blank
+    assign media_count = media_count | plus: 1
+  endif
+%}
+<div class="crumb wrap"><a href="{{ routes.all_products_collection_url }}">{{ 'products.shop' | t }}</a> / {{ product.title | escape }}</div>
+<section class="purchase wrap bpm-product" data-bpm-product aria-labelledby="Title-{{ section.id }}">
+  <div class="gallery" data-bpm-gallery>
+    {% if section.settings.image != blank %}<div class="main-image" id="Media-{{ section.id }}-override" data-bpm-media data-initial-media>{{ section.settings.image | image_url: width: 1600 | image_tag: loading: 'eager', widths: '500,800,1200,1600', sizes: '(max-width:760px) 90vw,45vw', alt: product.title }}<span class="image-count">1 / {{ media_count }}</span></div>{% endif %}
+    {% for media in product.media %}
+      {% assign loading = 'lazy' %}{% if section.settings.image == blank and media.id == chosen_media.id %}{% assign loading = 'eager' %}{% endif %}
+      <div class="main-image" id="Media-{{ section.id }}-{{ media.id }}" data-bpm-media{% if section.settings.image == blank and media.id == chosen_media.id %} data-initial-media{% endif %}>{% render 'bpm-sites-media', media: media, loading: loading %}<span class="image-count">{% if section.settings.image != blank %}{{ forloop.index | plus: 1 }}{% else %}{{ forloop.index }}{% endif %} / {{ media_count }}</span></div>
+    {% endfor %}
+    {% if media_count > 1 %}<div class="thumbs" aria-label="{{ 'products.gallery' | t }}">
+      {% if section.settings.image != blank %}<a class="thumb" href="#Media-{{ section.id }}-override" data-bpm-thumb aria-label="{{ 'products.media_number' | t: number: 1 }}">{{ section.settings.image | image_url: width: 150 | image_tag: loading: 'lazy', alt: '' }}</a>{% endif %}
+      {% for media in product.media %}{% assign number = forloop.index %}{% if section.settings.image != blank %}{% assign number = number | plus: 1 %}{% endif %}<a class="thumb" href="#Media-{{ section.id }}-{{ media.id }}" data-bpm-thumb aria-label="{{ 'products.media_number' | t: number: number }}">{{ media.preview_image | image_url: width: 150 | image_tag: loading: 'lazy', alt: '' }}{% unless media.media_type == 'image' %}<span class="play" aria-hidden="true">▶</span>{% endunless %}</a>{% endfor %}
+    </div>{% endif %}
+  </div>
+  <div class="summary">
+    {% if section.settings.pack_label != blank %}<p class="eyebrow">{{ section.settings.pack_label | escape }}</p>{% endif %}
+    <h1 id="Title-{{ section.id }}">{{ product.title | escape }}</h1>
+    {% if section.settings.intro != blank %}<p class="lead">{{ section.settings.intro | escape }}</p>{% endif %}
+    <p class="price" aria-live="polite"><span class="bpm-visually-hidden">{{ 'products.price' | t }} </span><span data-bpm-product-price>{{ shown_price | money_with_currency }}</span></p>
+    {% if variant.compare_at_price > variant.price and allocation == nil %}<p><s>{{ variant.compare_at_price | money_with_currency }}</s></p>{% endif %}
+    {% if section.settings.rotation.links.size > 0 %}<div class="scent-controls"><p class="label">{{ 'products.rotation' | t }}</p><div class="choices">{% for link in section.settings.rotation.links %}<a href="{{ link.url }}"{% if link.current %} aria-current="page"{% endif %}>{{ link.title | escape }}</a>{% endfor %}</div></div>{% endif %}
+    {% unless product.has_only_default_variant %}<form action="{{ product.url }}" method="get" class="bpm-variant-form" data-bpm-variant-form><label for="Variant-{{ section.id }}">{{ 'products.variant' | t }}</label><select id="Variant-{{ section.id }}" name="variant">{% for option in product.variants %}<option value="{{ option.id }}"{% if option.id == variant.id %} selected{% endif %}>{{ option.title | escape }}{% unless option.available %} — {{ 'products.sold_out' | t }}{% endunless %}</option>{% endfor %}</select><button type="submit" class="button">{{ 'products.update_selection' | t }}</button></form>{% endunless %}
+    {% form 'product', product, id: form_id, class: 'bpm-product-form' %}
+      {% if form.errors %}<div role="alert">{{ form.errors | default_errors }}</div>{% endif %}
+      <input type="hidden" name="id" value="{{ variant.id }}">
+      {% if variant.selling_plan_allocations.size > 0 %}<fieldset class="bpm-purchase-plans"><legend class="label">{{ 'products.purchase_option' | t }}</legend>
+        {% unless product.requires_selling_plan %}<label class="plan"><input type="radio" name="selling_plan" value=""{% if allocation == nil %} checked{% endif %} data-price="{{ variant.price | money_with_currency | escape }}"><span>{{ 'products.one_time' | t }}</span><strong>{{ variant.price | money_with_currency }}</strong></label>{% endunless %}
+        {% for plan in variant.selling_plan_allocations %}<label class="plan"><input type="radio" name="selling_plan" value="{{ plan.selling_plan.id }}"{% if plan.selling_plan.id == allocation.selling_plan.id %} checked{% endif %} data-price="{{ plan.price | money_with_currency | escape }}"><span>{{ plan.selling_plan.name | escape }}</span><strong>{{ plan.price | money_with_currency }}</strong></label>
+          <div class="bpm-plan-terms"><p>{{ plan.selling_plan.description | strip_html | escape }}</p><p class="fine">{{ 'products.checkout_charge' | t }}: {{ plan.checkout_charge_amount | money_with_currency }} · {{ 'products.per_delivery' | t }}: {{ plan.per_delivery_price | money_with_currency }}</p></div>
+        {% endfor %}
+      </fieldset>{% endif %}
+      <div class="buy-row"><label class="bpm-product-quantity" for="Qty-{{ section.id }}">{{ 'cart.quantity' | t }}<input id="Qty-{{ section.id }}" type="number" name="quantity" value="{{ variant.quantity_rule.min | default: 1 }}" min="{{ variant.quantity_rule.min | default: 1 }}" step="{{ variant.quantity_rule.increment | default: 1 }}"{% if variant.quantity_rule.max %} max="{{ variant.quantity_rule.max }}"{% endif %} required></label>
+        <button type="submit" name="add" class="button dark add-bag"{% unless purchasable %} disabled{% endunless %}>{% unless variant.available %}{{ 'products.sold_out' | t }}{% else %}{{ 'products.add_bag' | t }}{% endunless %}<span aria-hidden="true">→</span></button>
+      </div>
+      {% if product.requires_selling_plan and allocation == nil %}<p role="status">{{ 'products.plan_unavailable' | t }}</p>{% endif %}
+      <p class="shipping">{% if cart.taxes_included %}{{ 'cart.taxes_included' | t }}{% else %}{{ 'cart.taxes_checkout' | t }}{% endif %}{% if variant.requires_shipping %} {{ 'cart.shipping_checkout' | t }}{% endif %}</p>
+    {% endform %}
+    {% render 'bpm-app-blocks', blocks: section.blocks %}
+  </div>
+</section>
+{% if product.description != blank %}<section class="section wrap"><p class="eyebrow">{{ 'products.full_notes' | t }}</p><h2>{{ 'products.details' | t }}</h2><div class="prose bpm-product-description">{{ product.description }}</div></section>{% endif %}
+<script src="{{ 'bpm-product.js' | asset_url }}" defer></script>
+{% schema %}
+{"name":"Bpm Product","settings":[
+ {"type":"image_picker","id":"image","label":"First gallery image override","info":"Use original Sites framed product artwork for matching presentation. Native media remains available in the gallery."},
+ {"type":"text","id":"pack_label","label":"Verified pack description"},
+ {"type":"text","id":"intro","label":"Approved scent introduction"},
+ {"type":"link_list","id":"rotation","label":"Related rotation menu"}
+],"blocks":[{"type":"@app"}]}
+{% endschema %}

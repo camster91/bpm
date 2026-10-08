@@ -23,7 +23,23 @@
   },
   "products": {
     "price_from": "From {{ price }}",
-    "sold_out": "Sold out"
+    "sold_out": "Sold out",
+    "watch_video": "Watch video",
+    "shop": "Shop",
+    "gallery": "Product gallery",
+    "media_number": "View media {{ number }}",
+    "price": "Price",
+    "rotation": "Choose your rotation",
+    "variant": "Choose a variant",
+    "update_selection": "Update selection",
+    "purchase_option": "Purchase option",
+    "one_time": "One-time purchase",
+    "checkout_charge": "Charge at checkout",
+    "per_delivery": "Per delivery",
+    "add_bag": "Add to bag",
+    "plan_unavailable": "A compatible purchase plan is not available for this variant.",
+    "full_notes": "THE FULL PRODUCT NOTES",
+    "details": "The details, in full."
   },
   "newsletter": {
     "success": "Thanks for signing up. Check your inbox for any confirmation required."

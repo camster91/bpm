@@ -7,7 +7,7 @@ import { Liquid } from 'liquidjs';
 const theme = resolve(import.meta.dirname, '../theme');
 const scratch = await mkdtemp(join(tmpdir(), 'bpm-chrome-fixtures-'));
 const locale = JSON.parse(await readFile(join(theme, 'locales/en.default.json'), 'utf8'));
-const clean = source => source.replace(/{%\s*form[^%]*%}/g, '<form class="preview-form" method="post" action="/local-fixture-newsletter">').replace(/{%\s*endform\s*%}/g, '</form>').replace(/{%\s*paginate[^%]*%}/g, '').replace(/{%\s*endpaginate\s*%}/g, '').replace(/{%\s*(schema|doc|stylesheet)\s*%}[\s\S]*?{%\s*end\1\s*%}/g, '');
+const clean = source => source.replace(/{%\s*form\s+'product'[^%]*%}/g, '<form class="bpm-product-form" method="post" action="/local-fixture-product">').replace(/{%\s*form[^%]*%}/g, '<form class="preview-form" method="post" action="/local-fixture-newsletter">').replace(/{%\s*endform\s*%}/g, '</form>').replace(/{%\s*paginate[^%]*%}/g, '').replace(/{%\s*endpaginate\s*%}/g, '').replace(/{%\s*(schema|doc|stylesheet)\s*%}[\s\S]*?{%\s*end\1\s*%}/g, '');
 const navigation = clean(await readFile(join(theme, 'snippets/bpm-navigation.liquid'), 'utf8'));
 await writeFile(join(scratch, 'bpm-navigation.liquid'), navigation);
 await writeFile(join(scratch, 'bpm-sites-links.liquid'), clean(await readFile(join(theme, 'snippets/bpm-sites-links.liquid'), 'utf8')));
@@ -15,13 +15,17 @@ await writeFile(join(scratch, 'bpm-sites-card.liquid'), clean(await readFile(joi
 await writeFile(join(scratch, 'bpm-app-blocks.liquid'), clean(await readFile(join(theme, 'snippets/bpm-app-blocks.liquid'), 'utf8')));
 await writeFile(join(scratch, 'bpm-product-card.liquid'), clean(await readFile(join(theme, 'snippets/bpm-product-card.liquid'), 'utf8')));
 await writeFile(join(scratch, 'bpm-sites-article-card.liquid'), clean(await readFile(join(theme, 'snippets/bpm-sites-article-card.liquid'), 'utf8')));
-for (const name of ['bpm-sites-filters','bpm-sites-catalogue-card']) await writeFile(join(scratch,`${name}.liquid`),clean(await readFile(join(theme,'snippets',`${name}.liquid`),'utf8')));
+for (const name of ['bpm-sites-filters','bpm-sites-catalogue-card','bpm-sites-media']) await writeFile(join(scratch,`${name}.liquid`),clean(await readFile(join(theme,'snippets',`${name}.liquid`),'utf8')));
 const engine = new Liquid({ root: scratch, extname: '.liquid' });
 engine.registerFilter('money', value => '$' + (Number(value) / 100).toFixed(2));
 engine.registerFilter('money_with_currency', value => '$' + (Number(value) / 100).toFixed(2) + ' CAD');
 engine.registerFilter('image_url', value => value.src);
 engine.registerFilter('image_tag', src => `<img src="${src}">`);
 engine.registerFilter('asset_url', value => `/assets/${value}`);
+engine.registerFilter('stylesheet_tag', value => `<link rel="stylesheet" href="${value}">`);
+engine.registerFilter('video_tag', () => '<video controls preload="none"></video>');
+engine.registerFilter('model_viewer_tag', () => '<model-viewer></model-viewer>');
+engine.registerFilter('external_video_url', media => media.external_url);
 engine.registerFilter('t', (key, ...pairs) => {
   const value = key.split('.').reduce((o, k) => o?.[k], locale);
   assert.equal(typeof value, 'string', `Missing translation: ${key}`);
@@ -121,6 +125,15 @@ try {
   await check('Search renders native products articles and pages with escaped query','sections/bpm-sites-search.liquid',nativeSearch,html=>{assert.match(html,/Results: 3 for “&lt;query&gt;”/);assert.match(html,/Article &lt;result&gt;/);assert.match(html,/Page &lt;result&gt;/);assert.match(html,/href="\/pages\/result"/);assert.match(html,/href="\/blogs\/news\/result"/);assert.match(html,/carton4.svg/);assert.doesNotMatch(html,/<query>/);});
   await check('Unperformed search has no invented results or filters','sections/bpm-sites-search.liquid',{...nativeSearch,search:{performed:false,terms:''}},html=>{assert.match(html,/name="q"/);assert.doesNotMatch(html,/bpm-results-count|bpm-catalogue-form|track-card/);});
   await check('Performed search with no results shows recovery copy','sections/bpm-sites-search.liquid',{...nativeSearch,search:{...nativeSearch.search,results:[],results_count:0}},html=>assert.match(html,/No results found/));
+  const productVariant = {id:101,title:'Tube <one>',available:true,price:2400,compare_at_price:3000,requires_shipping:true,quantity_rule:{min:2,increment:2,max:12},selling_plan_allocations:[{price:2160,checkout_charge_amount:2160,per_delivery_price:2160,selling_plan:{id:501,name:'Every five months <plan>',description:'<p>Native plan terms.</p>'}}],featured_media:{id:10}};
+  const nativeProduct = {section:{id:'product-a',settings:{pack_label:'1 × 76 g',intro:'<intro>'},blocks:[]},product:{id:100,title:'Native <product>',url:'/products/native',description:'<p>Admin product body.</p>',has_only_default_variant:false,requires_selling_plan:false,selected_or_first_available_variant:productVariant,variants:[productVariant,{...productVariant,id:102,title:'Tube two',available:false}],media:[{id:10,media_type:'image',src:'/native-photo.png',preview_image:{src:'/native-photo.png'},alt:'Native product'},{id:11,media_type:'video',preview_image:{src:'/video-poster.png'}}],featured_media:{id:10}},cart:{taxes_included:false},routes,form:{}};
+  await check('Product native form binds selected variant quantity rules and compatible plan prices','sections/bpm-sites-product.liquid',nativeProduct,html=>{assert.match(html,/name="id" value="101"/);assert.match(html,/name="quantity" value="2" min="2" step="2" max="12"/);assert.match(html,/name="selling_plan" value="" checked/);assert.match(html,/name="selling_plan" value="501"/);assert.match(html,/Every five months &lt;plan&gt;/);assert.match(html,/\$21.60 CAD/);assert.match(html,/action="\/products\/native" method="get"/);assert.match(html,/value="101" selected/);assert.match(html,/Admin product body/);assert.match(html,/Native &lt;product&gt;/);assert.doesNotMatch(html,/Subscribe &amp; save 10%|localStorage/);});
+  await check('Required plan defaults to compatible allocation and omits one-time choice','sections/bpm-sites-product.liquid',{...nativeProduct,product:{...nativeProduct.product,requires_selling_plan:true}},html=>{assert.match(html,/name="selling_plan" value="501" checked/);assert.doesNotMatch(html,/One-time purchase/);assert.match(html,/data-bpm-product-price>\$21.60 CAD/);});
+  await check('Required plan without compatible allocations disables purchase','sections/bpm-sites-product.liquid',{...nativeProduct,product:{...nativeProduct.product,requires_selling_plan:true,selected_or_first_available_variant:{...productVariant,selling_plan_allocations:[]}}},html=>{assert.match(html,/name="add" class="button dark add-bag" disabled/);assert.match(html,/compatible purchase plan is not available/);});
+  await check('Selected compatible plan renders actual price while sold-out variant cannot be purchased','sections/bpm-sites-product.liquid',{...nativeProduct,product:{...nativeProduct.product,selected_or_first_available_variant:{...productVariant,available:false},selected_selling_plan_allocation:productVariant.selling_plan_allocations[0]}},html=>{assert.match(html,/name="selling_plan" value="501" checked/);assert.match(html,/data-bpm-product-price>\$21.60 CAD/);assert.match(html,/name="add" class="button dark add-bag" disabled>Sold out/);});
+  await check('Product gallery exposes native images video thumbnails and original override','sections/bpm-sites-product.liquid',{...nativeProduct,section:{...nativeProduct.section,settings:{...nativeProduct.section.settings,image:{src:'/source-framed.png'}}}},html=>{assert.match(html,/source-framed.png/);assert.match(html,/Media-product-a-override" data-bpm-media data-initial-media/);assert.match(html,/<video controls preload="none"/);assert.match(html,/href="#Media-product-a-11"/);assert.match(html,/3 \/ 3/);});
+  await check('External media stays a deliberate external link and model uses native renderer','snippets/bpm-sites-media.liquid',{media:{media_type:'external_video',external_url:'https://example.test/video',preview_image:{src:'/poster.png'}}},html=>{assert.match(html,/href="https:\/\/example.test\/video"/);assert.match(html,/Opens in a new window/);assert.doesNotMatch(html,/<iframe/);});
+  await check('Native model markup is routed to Shopify model viewer','snippets/bpm-sites-media.liquid',{media:{media_type:'model'}},html=>assert.match(html,/<model-viewer/));
   console.log(`${passed} chrome rendering checks passed; Shopify runtime and visual geometry remain unverified.`);
 } finally {
   await rm(scratch, { recursive: true, force: true });
