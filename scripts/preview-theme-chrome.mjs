@@ -254,6 +254,11 @@ await writeFile(join(output,'sites-gift-card.html'),await engine.parseAndRender(
 let mappedHomeBody='<p class="wrap fine">Committed resource bindings emulated from recovered snapshots. Historical prices and media are fixtures; actual Shopify resolution is pending.</p>';
 for(const id of homeTemplate.order){const config=homeTemplate.sections[id];mappedHomeBody+=await section(config.type,config.settings,(config.block_order||[]).map(key=>config.blocks[key]));}
 await writeFile(join(output,'sites-home-bindings.html'),await engine.parseAndRender(code,{...common,content_for_layout:mappedHomeBody,preview_header:sitesHeader,preview_footer:sitesFooter,page_title:'Bound resources — local fixture'}));
+// Hypothetical source-fidelity configuration, not a native page-handle binding.
+let sourceSecondaryBody='<p class="wrap fine">Source secondary-link layout fixture only. Destination is fabricated and the independently-verified claim remains unapproved. Committed native binding is unchanged.</p>';
+for(const id of homeTemplate.order){const config=homeTemplate.sections[id];const settings=config.type==='bpm-sites-hero'?{...config.settings,secondary_page:{url:'/sites-indigenous-owned.html'},secondary_label:'Indigenous-owned. Independently verified.'}:config.settings;sourceSecondaryBody+=await section(config.type,settings,(config.block_order||[]).map(key=>config.blocks[key]));}
+await writeFile(join(output,'sites-home-secondary-link.html'),await engine.parseAndRender(code,{...common,content_for_layout:sourceSecondaryBody,preview_header:sitesHeader,preview_footer:sitesFooter,page_title:'Unapproved secondary link — local layout fixture'}));
+
 
 const boundCollection=JSON.parse(await readFile(join(theme,'templates/collection.rotation.json'),'utf8')).sections.main;
 const boundCollectionBody=await section(boundCollection.type,boundCollection.settings,boundCollection.block_order.map(key=>boundCollection.blocks[key]),{collection:fixtureCatalogue,routes:previewCatalogueRoutes,paginate:{pages:1}});
