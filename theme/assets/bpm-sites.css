@@ -229,7 +229,7 @@ h3{font-family:inherit}
 
 @media(min-width:761px) and (max-width:1100px){.bpm-sites-mobile{display:block}.bpm-sites-mobile .bpm-sites-menu{display:block}.bpm-sites-mobile .bpm-sites-menu a,.bpm-sites-mobile .bpm-sites-menu summary{display:block;padding:12px 0;font-size:21px}.bpm-sites-mobile .bpm-sites-menu ul{position:static;border:0;padding:0 0 0 16px;margin:0;min-width:0}}
 
-.closing{background:var(--ink);color:var(--cream);padding:72px 0}.closing .button{min-width:290px}.closing h2{max-width:750px}.bpm-sites-answer{padding-top:16px}.bpm-sites-answer p{margin-top:0}.bpm-sites-answer p+p{margin-top:16px}.questions summary::-webkit-details-marker{display:none}.questions details[open] summary>span{transform:rotate(45deg)}
+.closing{background:var(--ink);color:var(--cream);padding:72px 0}.closing .button{min-width:290px}.closing h2{max-width:750px}.bpm-sites-answer{padding-top:16px}.bpm-sites-answer p{margin-top:0}.bpm-sites-answer p+p{margin-top:16px}.questions summary{align-items:center;padding:22px 0;font-weight:700}.questions summary>span{font-size:24px}.questions summary::-webkit-details-marker{display:none}.questions details[open] summary>span{transform:rotate(45deg)}
 @media(max-width:760px){.closing{padding:48px 0}.closing .button{min-width:0}.closing h2{font-size:34px}}
 
 .bpm-newsletter-consent{display:flex!important;align-items:start;gap:12px;margin:0 0 24px;font-size:14px!important}.preview-form .bpm-newsletter-consent input{width:18px;height:18px;flex-shrink:0;margin:3px 0 0;accent-color:var(--ink)}
