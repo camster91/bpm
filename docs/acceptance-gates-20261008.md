@@ -1,0 +1,22 @@
+# Remaining delivery and acceptance gates — 2026-10-08
+
+This reconciliation retains the complete Phase 0–5 objective. Local theme implementation and local checks are progress; none establishes complete storefront, native integration, client acceptance or launch. Source authority is Sites/recovered code. Source parity and safe operational adaptation both remain required.
+
+| Requirement | Current evidence | Outstanding action / owner |
+| --- | --- | --- |
+| Recovery and hosted source | 60 protected source hashes; 30 normalized hosted resources match; 25 routes/40 targets | Client final source/copy acceptance: Cameron/Corey, #28/#29 |
+| Existing Shopify/apps/content | Captured audit/export, 97 resource bindings, nine Judge.me configuration bindings | Current account/page handle/provider/app/market/plan verification in authenticated store: Cameron access + implementation QA, #3/#4/#13/#14 |
+| Reusable merchant controls | Local schema/Liquid implementation | Actual editor add/reorder/remove/edit/save/reload and scope demonstration, #5/#6/#14 |
+| All native commerce/templates | Broad implementation; local product/cart lifecycle and fabricated-state checks | Real one-time/subscription/bundle variant/stock/cart/update/remove/error/checkout handoff and native account/market testing, #7/#16–#21 |
+| Welcome launcher | **Missing from theme.** Newsletter section supports disabled/native/app modes; it is not the site-wide launcher | Implement source presentation independently; verified provider, duplicate/double-opt-in routing, approved offer eligibility/terms and isolated delivery tests before activation, #18/#21/#29 |
+| Reviews and creators | Captured extension configurations, optional creator controls | Real product attribution/list/write/moderation/media; reuse permission and provider playback/consent, #4/#21/#29 |
+| Ownership/claims/policies | Source copy, historical captured resources | Certification, 5% commitment, ingredients/environmental claims, shipping, application/cost estimates and policies require accepted current evidence, #29 |
+| Source fidelity | Scoped measured home cards/journal/FAQ/value, About/ownership comparisons and responsive reflow | Complete all source pages/states/device comparisons; document operational differences and accepted accessibility repairs, #26/#28 |
+| SEO/a11y/performance/analytics | Native metadata/schema, source image/crop delivery, keyboard/default CTA contrast checks | Real merged theme/app schema, redirects, zoom/screen reader/physical devices, loading measurements, consent/event IDs/value/deduplication, #22–#26 |
+| CI/PR/release | Local nondeploying checks; recovery PR is separate | Custom branch remote PR/CI remains unverified; release backup/rehearsal, no P0/P1, accepted P2/P3, client and explicit publication approvals, #15/#27 |
+
+Candidate c173abb has 160 committed theme files and explicit noindex, verified against its source tree. Frozen-path Theme Check has zero errors/one Adobe Typekit warning. Upload is pending exact-command confirmation. This is an initial development QA candidate with the unfinished requirements above; it is not a completed release candidate.
+
+Local checks currently include 332 Liquid render cases, product/motion/gift-card lifecycle, 97 historical resource mappings and nine app configuration mappings. Their scope remains local code/snapshot verification. They do not replace any outstanding native or acceptance gate.
+
+Next independent work: build the source welcome launcher shell with its operational integration disabled until provider/offer decisions are verified. Next native work: approved upload of the frozen candidate, then current resource/editor/app QA. No provider, discount, email, review request, store-wide setting or production activation is authorized by this reconciliation. No client communication or GitHub issue update was sent.
