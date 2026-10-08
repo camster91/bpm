@@ -4,22 +4,22 @@ This review supersedes the repaired-Dawn upload command. Its prior text is prese
 
 ## Current snapshot revision — 8 October 2026
 
-The previous October 7 and October 8 snapshots are preserved. This candidate includes the global 44px header targets, source card headings, FAQ geometry, native price narration and responsive section copy. Source commit: `460c33811a6c4fb7e8272845968ea11b645be30a`; theme tree: `ac549fffd8892d8f9312d6261f6705df09684ea0`. It contains 160 files, 45,072,005 bytes. Manifest: `qa/dev-candidate-manifest-20261008-460c338.json`. Local verification confirms exact committed bytes, full file set, hashes and explicit noindex; `matchesCurrentTheme: true`. Frozen-path Theme Check: zero errors, one existing Adobe Typekit warning. Prior commands remain unexecuted. This revised exact command needs separate confirmation.
+The October 7 snapshot is preserved and superseded for the current upload review. The new snapshot includes the narrow-phone header and purchase-option restoration fixes. The prior manifest is retained as `qa/dev-candidate-manifest-20261007.json`; the updated manifest is `qa/dev-candidate-manifest-20261008.json`. No previous exact command has been executed or newly approved. Use the revised command below only after separate confirmation.
 
 ## Local candidate and freeze
 
-The candidate is committed `theme/`, built against Sites and recovered source. Fresh checks pass: 329 Liquid rendering checks, motion/gift-card checks, 96 captured resource bindings and 9 Judge.me configuration bindings; installed Theme Check has 0 errors and 1 existing Adobe Typekit RemoteAsset warning. Current native data, editor and app runtime are not proved by these tests.
+The candidate is committed `theme/`, built against Sites and recovered source. Fresh checks pass: 319 Liquid rendering checks, motion/gift-card checks, 96 captured resource bindings and 9 Judge.me configuration bindings; installed Theme Check has 0 errors and 1 existing Adobe Typekit RemoteAsset warning. Current native data, editor and app runtime are not proved by these tests.
 
 Prepare the frozen candidate locally:
 
 ```sh
-node scripts/prepare-dev-theme.mjs /tmp/bpm-sites-dev-candidate-20261008-460c338
+node scripts/prepare-dev-theme.mjs /tmp/bpm-sites-dev-candidate-20261008
 ```
 
 The script refuses an existing destination or dirty theme, exports committed Shopify directories only, preserves explicit development noindex, rejects non-regular files, makes snapshot files read-only, and writes `manifest.json` outside the upload directory. The manifest records source commit/tree and every transmitted file's SHA-256 and size. README, repository documents, source reference, tests, protected audits and Git history are excluded. Verify it before upload:
 
 ```sh
-node scripts/verify-dev-theme.mjs /tmp/bpm-sites-dev-candidate-20261008-460c338
+node scripts/verify-dev-theme.mjs /tmp/bpm-sites-dev-candidate-20261008
 ```
 
 The verifier checks the exact file set, sizes, hashes, bytes against the source commit, explicit noindex and current theme-tree identity. A valid historical snapshot can still report `matchesCurrentTheme: false`; do not substitute it for the reviewed current candidate. Preparation and verification are local only.
@@ -27,7 +27,7 @@ The verifier checks the exact file set, sizes, hashes, bytes against the source 
 ## Prepared exact upload command — not executed
 
 ```sh
-CI=1 SHOPIFY_CLI_FORCE_AUTO_UPGRADE=0 shopify theme push --store qef4ye-yg.myshopify.com --path /tmp/bpm-sites-dev-candidate-20261008-460c338/theme --development --development-context bpm-sites-custom-qa-20261008 --strict --json
+CI=1 SHOPIFY_CLI_FORCE_AUTO_UPGRADE=0 shopify theme push --store qef4ye-yg.myshopify.com --path /tmp/bpm-sites-dev-candidate-20261008/theme --development --development-context bpm-sites-custom-qa-20261008 --strict --json
 ```
 
 Target must be confirmed as BPM's `qef4ye-yg.myshopify.com` before execution. Transmits that store identifier, authenticated theme requests, and every file in the manifest: Liquid, JSON templates/sections, CSS/JavaScript, images/fonts, locales and theme settings including resource handles and app extension references. It creates a development theme for this context or replaces that context's existing development theme. No live/publish/theme-ID flags are supplied. Development previews share the store's products, apps and store-wide settings; they are not an isolated commerce backend.
