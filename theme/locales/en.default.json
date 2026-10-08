@@ -9,7 +9,7 @@
     "navigation": "Main navigation",
     "footer_navigation": "Footer navigation",
     "view_item": "View {{ title }}",
-    "copyright": "\u00a9 {{ year }} {{ shop }}. All rights reserved.",
+    "copyright": "© {{ year }} {{ shop }}. All rights reserved.",
     "search": "Search",
     "social_links": "Social links",
     "policies": "Policies",
@@ -49,5 +49,21 @@
     "taxes_checkout": "Taxes calculated at checkout.",
     "shipping_checkout": "Shipping calculated at checkout.",
     "checkout": "Checkout"
+  },
+  "catalogue": {
+    "price_min": "From",
+    "price_max": "To",
+    "sort": "Sort by",
+    "apply": "Apply",
+    "remove_filter": "Remove filter",
+    "clear": "Clear filters",
+    "find": "Find a scent, track or story",
+    "product_count": "Products: {{ count }}",
+    "result_count": "Results: {{ count }} for “{{ terms }}”",
+    "empty": "No products match these filters.",
+    "read_article": "Read the story",
+    "page": "Page",
+    "read_page": "Read the page",
+    "no_results": "No results found. Try another search or clear the filters."
   }
 }

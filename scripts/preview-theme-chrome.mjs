@@ -8,7 +8,7 @@ await mkdir(output, { recursive: true });
 await symlink(join(theme, 'assets'), join(output, 'assets')).catch(error => { if (error.code !== 'EEXIST') throw error; });
 const styles = [];
 const clean = text => text.replace(/{%\s*form[^%]*%}/g, '<form class="preview-form" method="post" action="/local-fixture-newsletter">').replace(/{%\s*endform\s*%}/g, '</form>').replace(/{%\s*paginate[^%]*%}/g, '').replace(/{%\s*endpaginate\s*%}/g, '').replace(/{%\s*(schema|doc)\s*%}[\s\S]*?{%\s*end\1\s*%}/g, '').replace(/{%\s*stylesheet\s*%}([\s\S]*?){%\s*endstylesheet\s*%}/g, (_, css) => { styles.push(css); return ''; });
-for (const name of ['bpm-navigation', 'bpm-product-card', 'bpm-sites-links', 'bpm-sites-card', 'bpm-sites-article-card']) await writeFile(join(output, `${name}.liquid`), clean(await readFile(join(theme, 'snippets', `${name}.liquid`), 'utf8')));
+for (const name of ['bpm-navigation', 'bpm-product-card', 'bpm-sites-links', 'bpm-sites-card', 'bpm-sites-article-card', 'bpm-sites-filters', 'bpm-sites-catalogue-card']) await writeFile(join(output, `${name}.liquid`), clean(await readFile(join(theme, 'snippets', `${name}.liquid`), 'utf8')));
 const engine = new Liquid({ root: output, extname: '.liquid' });
 const locale = JSON.parse(await readFile(join(theme, 'locales/en.default.json'), 'utf8'));
 engine.registerFilter('asset_url', value => `/assets/${value}`);
@@ -112,3 +112,22 @@ for (const empty of [false,true]) {
  const cartHeader = await section('bpm-sites-header',{menu:sitesMenu},[],{cart:empty?{item_count:0}:fixtureCart});
  await writeFile(join(output,empty?'sites-cart-empty.html':'sites-cart.html'),await engine.parseAndRender(code,{...common,cart:empty?{item_count:0}:fixtureCart,content_for_layout:banner+safeBody,preview_header:cartHeader,preview_footer:sitesFooter,page_title:'Cart fixture'}));
 }
+const sourceProducts = JSON.parse(await readFile(resolve(theme,'../reference-site/src/content/products.json'),'utf8'));
+const fixtureComponents = [[2,2],[4,0],[0,4],[3,1],[0,2],[2,0],[1,1],[0,1],[1,0]];
+const catalogueProducts = sourceProducts.map((value,i)=>({id:value.id,title:value.title+' — fixture',object_type:'product',url:'/sites-cart-empty.html',price:Math.round(Number(value.variants[0].price)*100),price_varies:false,available:true,featured_image:{src:fixtureComponents[i][0]?'/fixture-bergamot.svg':'/fixture-unscented.svg'}})).reverse();
+const catalogueArt = sourceProducts.map((value,i)=>{
+ const [citrus,silent] = fixtureComponents[i];
+ const components = [...Array(citrus).fill('/fixture-bergamot.svg'),...Array(silent).fill('/fixture-unscented.svg')];
+ return {settings:{product:{id:value.id},pack_label:`${components.length} × 76 g`,background:citrus&&silent?'#f3e4b7':citrus?'#acb228':'#228782',...Object.fromEntries(components.map((src,n)=>[n===0?'image':`image_${n+1}`,{src}]))}};
+});
+const sortOptions = [{value:'manual',name:'Featured'},{value:'price-ascending',name:'Price, low to high'},{value:'price-descending',name:'Price, high to low'}];
+const fixtureFilters = [{label:'Pack size',type:'list',active_values:[],values:[1,2,4].map((size,i)=>({param_name:'filter.p.m.custom.pack_size',value:String(size),label:['Solo','Two track','Four count'][i],count:[2,3,4][i],active:false}))},{label:'Price',type:'price_range',range_max:7498,min_value:{param_name:'filter.v.price.gte',value:null},max_value:{param_name:'filter.v.price.lte',value:null},url_to_remove:'/sites-collection.html'}];
+const fixtureCatalogue = {title:'All tracks',url:'/sites-collection.html',products:catalogueProducts,products_count:9,sort_by:'manual',default_sort_by:'manual',sort_options:sortOptions,filters:fixtureFilters};
+const catalogueBanner = '<div class="wrap"><p>Local catalogue fixture using recovered product data. Filter, sort and search submissions are disabled; no Shopify backend is connected.</p></div>';
+const previewCatalogueRoutes = {...common.routes,search_url:'/sites-search.html'};
+const rotation = JSON.parse(await readFile(join(theme,'templates/collection.rotation.json'),'utf8')).sections.main.settings;
+const catalogueBody = await section('bpm-sites-collection',rotation,catalogueArt,{collection:fixtureCatalogue,routes:previewCatalogueRoutes,paginate:{pages:1}});
+await writeFile(join(output,'sites-collection.html'),await engine.parseAndRender(code,{...common,content_for_layout:catalogueBanner+catalogueBody.replace(/(<button[^>]*type="submit")/g,'$1 disabled'),preview_header:sitesHeader,preview_footer:sitesFooter,page_title:'Catalogue fixture'}));
+const searchFixture = {performed:true,terms:'BPM',results_count:3,results:[catalogueProducts[0],{...fixtureArticles[0],object_type:'article',image:{src:'/assets/bpm-sites-texture.jpg'}},{object_type:'page',title:'Our story — fixture',url:'/sites-blog.html',content:'<p>A fabricated page result for local layout review.</p>'}],sort_by:'manual',default_sort_by:'manual',sort_options:sortOptions,filters:[]};
+const searchBody = await section('bpm-sites-search',{},catalogueArt,{search:searchFixture,routes:previewCatalogueRoutes,paginate:{pages:1}});
+await writeFile(join(output,'sites-search.html'),await engine.parseAndRender(code,{...common,content_for_layout:catalogueBanner+searchBody.replace(/(<button[^>]*type="submit")/g,'$1 disabled'),preview_header:sitesHeader,preview_footer:sitesFooter,page_title:'Search fixture'}));

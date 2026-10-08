@@ -1,0 +1,12 @@
+{% doc %}
+Applies merchant-selected product presentation to native catalogue results.
+@param {product} product - Actual result product
+@param {object[]} blocks - Section product mappings
+@param {string} label - Product link label
+@example
+{% render 'bpm-sites-catalogue-card', product: product, blocks: section.blocks, label: section.settings.product_label %}
+{% enddoc %}
+{% assign presentation = nil %}
+{% assign attributes = nil %}
+{% for block in blocks %}{% if block.settings.product.id == product.id %}{% assign presentation = block.settings %}{% assign attributes = block.shopify_attributes %}{% break %}{% endif %}{% endfor %}
+{% render 'bpm-sites-card', product: product, image: presentation.image, image_2: presentation.image_2, image_3: presentation.image_3, image_4: presentation.image_4, pack_label: presentation.pack_label, summary: presentation.summary, background: presentation.background, button_label: label, attributes: attributes %}

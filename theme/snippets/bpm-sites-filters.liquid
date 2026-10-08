@@ -1,0 +1,47 @@
+{% doc %}
+Native GET filtering and sorting for collection or search resources.
+@param {object} resource - Current native collection or search resource
+@param {string} action - Native form destination
+@param {string} prefix - Unique section identifier
+@param {string} [terms] - Search terms preserved in the form
+@example
+{% render 'bpm-sites-filters', resource: collection, action: collection.url, prefix: section.id %}
+{% enddoc %}
+{% assign sort_by = resource.sort_by | default: resource.default_sort_by %}
+<form method="get" action="{{ action }}" class="bpm-catalogue-form">
+  {% if terms != nil %}<input type="hidden" name="q" value="{{ terms | escape }}">{% endif %}
+  <div class="catalogue-tools bpm-native-tools">
+    <div class="bpm-filter-groups">
+      {% for filter in resource.filters %}
+        {% assign filter_index = forloop.index %}
+        <details class="bpm-filter"><summary>{{ filter.label | escape }} <span aria-hidden="true">+</span></summary>
+          <fieldset><legend class="bpm-visually-hidden">{{ filter.label | escape }}</legend>
+            {% case filter.type %}
+              {% when 'boolean', 'list' %}
+                {% for value in filter.values %}<label class="bpm-filter-value" for="Filter-{{ prefix }}-{{ filter_index }}-{{ forloop.index }}"><input id="Filter-{{ prefix }}-{{ filter_index }}-{{ forloop.index }}" type="checkbox" name="{{ value.param_name | escape }}" value="{{ value.value | escape }}"{% if value.active %} checked{% elsif value.count == 0 %} disabled{% endif %}> {{ value.label | escape }} <span>({{ value.count }})</span></label>{% endfor %}
+              {% when 'price_range' %}
+                <p class="fine">{{ cart.currency.iso_code | escape }}</p>
+                <div class="bpm-price-range">
+                  <label for="Filter-{{ prefix }}-{{ filter_index }}-min">{{ 'catalogue.price_min' | t }}<input id="Filter-{{ prefix }}-{{ filter_index }}-min" type="number" inputmode="decimal" name="{{ filter.min_value.param_name | escape }}" min="0" max="{{ filter.range_max | divided_by: 100.0 }}" step="0.01"{% if filter.min_value.value != nil %} value="{{ filter.min_value.value | divided_by: 100.0 }}"{% endif %}></label>
+                  <label for="Filter-{{ prefix }}-{{ filter_index }}-max">{{ 'catalogue.price_max' | t }}<input id="Filter-{{ prefix }}-{{ filter_index }}-max" type="number" inputmode="decimal" name="{{ filter.max_value.param_name | escape }}" min="0" max="{{ filter.range_max | divided_by: 100.0 }}" step="0.01"{% if filter.max_value.value != nil %} value="{{ filter.max_value.value | divided_by: 100.0 }}"{% endif %} placeholder="{{ filter.range_max | divided_by: 100.0 }}"></label>
+                </div>
+            {% endcase %}
+          </fieldset>
+        </details>
+      {% endfor %}
+    </div>
+    {% if resource.sort_options.size > 0 %}<label class="bpm-sort" for="Sort-{{ prefix }}">{{ 'catalogue.sort' | t }}<select id="Sort-{{ prefix }}" name="sort_by">{% for option in resource.sort_options %}<option value="{{ option.value | escape }}"{% if option.value == sort_by %} selected{% endif %}>{{ option.name | escape }}</option>{% endfor %}</select></label>{% endif %}
+    <button type="submit" class="button">{{ 'catalogue.apply' | t }}</button>
+  </div>
+  <div class="bpm-active-filters">
+    {% for filter in resource.filters %}
+      {% if filter.type == 'price_range' %}
+        {% if filter.min_value.value != nil or filter.max_value.value != nil %}{% assign minimum = filter.min_value.value | default: 0 %}{% assign maximum = filter.max_value.value | default: filter.range_max %}<a href="{{ filter.url_to_remove }}">{{ filter.label | escape }}: {{ minimum | money_with_currency }} – {{ maximum | money_with_currency }} <span aria-hidden="true">×</span><span class="bpm-visually-hidden"> {{ 'catalogue.remove_filter' | t }}</span></a>{% endif %}
+      {% else %}
+        {% for value in filter.active_values %}<a href="{{ value.url_to_remove }}">{{ filter.label | escape }}: {{ value.label | escape }} <span aria-hidden="true">×</span><span class="bpm-visually-hidden"> {{ 'catalogue.remove_filter' | t }}</span></a>{% endfor %}
+      {% endif %}
+    {% endfor %}
+  </div>
+  {% capture clear_url %}{{ action }}?sort_by={{ sort_by | url_encode }}{% if terms != nil %}&q={{ terms | url_encode }}{% endif %}{% endcapture %}
+  {% if resource.filters.size > 0 %}<a class="bpm-clear-filters" href="{{ clear_url | escape }}">{{ 'catalogue.clear' | t }}</a>{% endif %}
+</form>
