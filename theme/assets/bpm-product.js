@@ -1,5 +1,11 @@
+const syncPlanPrice = (product) => {
+  const selected = product.querySelector('[name="selling_plan"]:checked');
+  const price = product.querySelector('[data-bpm-product-price]');
+  if (selected?.dataset.price && price) price.textContent = selected.dataset.price;
+};
 const bindProduct = (root = document) => {
   root.querySelectorAll('[data-bpm-product]').forEach((product) => {
+    syncPlanPrice(product);
     if (product.dataset.bpmBound) return;
     product.dataset.bpmBound = 'true';
     const gallery = product.querySelector('[data-bpm-gallery]');
@@ -23,7 +29,7 @@ const bindProduct = (root = document) => {
       selectMedia(thumb.hash.slice(1));
     }));
     product.querySelectorAll('[name="selling_plan"]').forEach((radio) => radio.addEventListener('change', () => {
-      if (radio.checked) product.querySelector('[data-bpm-product-price]').textContent = radio.dataset.price;
+      if (radio.checked) syncPlanPrice(product);
     }));
     const variants = product.querySelector('[data-bpm-variant-form]');
     variants?.querySelector('select').addEventListener('change', () => variants.requestSubmit());
@@ -31,3 +37,4 @@ const bindProduct = (root = document) => {
 };
 bindProduct();
 document.addEventListener('shopify:section:load', (event) => bindProduct(event.target));
+window.addEventListener('pageshow', () => bindProduct());
