@@ -1,0 +1,102 @@
+{
+  "themeId": 194480669044,
+  "candidate": "3d296aa",
+  "observations": [
+    {
+      "activeSections": 17,
+      "appRegions": 2,
+      "duplicateIds": [],
+      "faqCount": 5,
+      "h1": 1,
+      "menuVisible": true,
+      "pricingCards": [
+        {
+          "scrollWidth": 325,
+          "width": 325
+        },
+        {
+          "scrollWidth": 325,
+          "width": 325
+        }
+      ],
+      "reviewSnippetLoaded": true,
+      "robots": "noindex,follow",
+      "scrollWidth": 375,
+      "width": 375
+    },
+    {
+      "activeSections": 17,
+      "appRegions": 2,
+      "duplicateIds": [],
+      "faqCount": 5,
+      "h1": 1,
+      "menuVisible": true,
+      "pricingCards": [
+        {
+          "scrollWidth": 359,
+          "width": 359
+        },
+        {
+          "scrollWidth": 359,
+          "width": 359
+        }
+      ],
+      "reviewSnippetLoaded": true,
+      "robots": "noindex,follow",
+      "scrollWidth": 820,
+      "width": 820
+    },
+    {
+      "activeSections": 17,
+      "appRegions": 2,
+      "duplicateIds": [],
+      "faqCount": 5,
+      "h1": 1,
+      "menuVisible": true,
+      "pricingCards": [
+        {
+          "scrollWidth": 642,
+          "width": 642
+        },
+        {
+          "scrollWidth": 642,
+          "width": 642
+        }
+      ],
+      "reviewSnippetLoaded": true,
+      "robots": "noindex,follow",
+      "scrollWidth": 1440,
+      "width": 1440
+    }
+  ],
+  "menu": {
+    "open": true,
+    "topLevelItems": 9,
+    "width": 375
+  },
+  "faqAndAssets": {
+    "badgeLoaded": true,
+    "faqOpen": 5,
+    "formAction": "/contact#Newsletter-template--29534574575988__newsletter",
+    "pricingImageLoaded": true,
+    "qualificationPresent": true,
+    "reviewSnippetItems": 2,
+    "scrollWidth": 375,
+    "width": 375
+  },
+  "product": {
+    "formAction": "/cart/add",
+    "h1Count": 1,
+    "notesH4": 15,
+    "plans": [
+      "One-time purchase\n$23.99 CAD",
+      "Deliver every 5 months, 10% off\n$21.59 CAD"
+    ],
+    "reviewRegion": true,
+    "robots": "noindex,follow",
+    "scrollWidth": 375,
+    "title": "BERGAMOT & LIME",
+    "width": 375
+  },
+  "backendSubmissions": false
+}
