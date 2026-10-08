@@ -1,0 +1,35 @@
+{% if section.blocks.size > 0 %}<section class="section bpm-beliefs"><div class="wrap bpm-beliefs-grid">{% for block in section.blocks %}{% if block.settings.heading != blank and block.settings.body != blank %}<article {{ block.shopify_attributes }}><p class="eyebrow">{{ block.settings.eyebrow | escape }}</p><h2>{{ block.settings.heading | escape | newline_to_br }}</h2><div class="bpm-client-copy">{{ block.settings.body }}</div></article>{% endif %}{% endfor %}</div></section>{% endif %}
+{% schema %}
+{
+  "name": "BPM brand statements",
+  "blocks": [
+    {
+      "type": "statement",
+      "name": "Brand statement",
+      "settings": [
+        {
+          "type": "text",
+          "id": "eyebrow",
+          "label": "Eyebrow"
+        },
+        {
+          "type": "textarea",
+          "id": "heading",
+          "label": "Heading"
+        },
+        {
+          "type": "richtext",
+          "id": "body",
+          "label": "Client copy"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 4,
+  "presets": [
+    {
+      "name": "BPM brand statements"
+    }
+  ]
+}
+{% endschema %}

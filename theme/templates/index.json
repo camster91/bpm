@@ -3,7 +3,8 @@
     "hero": {
       "type": "bpm-sites-hero",
       "settings": {
-        "secondary_page": "about-us"
+        "secondary_page": "about-us",
+        "body": "Performance first. Effective ingredients.\nMetal tube. Indigenous-owned. Made in Canada."
       }
     },
     "rhythm": {
@@ -13,31 +14,47 @@
         "0": {
           "type": "message",
           "settings": {
-            "text": "Performance first."
+            "text": "Performance First"
           }
         },
         "1": {
           "type": "message",
           "settings": {
-            "text": "Nothing extra."
+            "text": "Baking Soda Free"
           }
         },
         "2": {
           "type": "message",
           "settings": {
-            "text": "A little goes a long way."
+            "text": "Metal Tube"
+          }
+        },
+        "3": {
+          "type": "message",
+          "settings": {
+            "text": "Made in Canada"
+          }
+        },
+        "4": {
+          "type": "message",
+          "settings": {
+            "text": "Sensitive Skin Friendly"
           }
         }
       },
       "block_order": [
         "0",
         "1",
-        "2"
+        "2",
+        "3",
+        "4"
       ]
     },
     "tracks": {
       "type": "bpm-sites-tracks",
-      "settings": {},
+      "settings": {
+        "heading": "Choose your\nBPM."
+      },
       "blocks": {
         "bergamot": {
           "type": "product",
@@ -47,7 +64,7 @@
             "pack_label": "1 \u00d7 76 g",
             "source_pack": "1-0",
             "display_title": "Bergamot & Lime",
-            "summary": "Bergamot & Lime."
+            "summary": "Bright citrus. Clean finish."
           }
         },
         "unscented": {
@@ -58,7 +75,7 @@
             "pack_label": "1 \u00d7 76 g",
             "source_pack": "0-1",
             "display_title": "Unscented",
-            "summary": "Unscented."
+            "summary": "Clean. Quiet. Nothing extra."
           }
         }
       },
@@ -70,14 +87,19 @@
     "texture": {
       "type": "bpm-sites-image-text",
       "settings": {
-        "product": "bpm-natural-deodorant-bergamot-lime"
+        "product": "bpm-natural-deodorant-bergamot-lime",
+        "eyebrow": "BUILT TO PERFORM",
+        "heading": "Built to\nperform.",
+        "body": "Deodorant has one job: control odour and feel good on skin. BPM goes on smoothly, absorbs quickly, and leaves no waxy or sticky residue. It works whether your skin is dry or just out of the shower."
       }
     },
     "formula": {
       "type": "bpm-sites-formula",
       "settings": {
         "note": "No baking soda. No waxes. No synthetic fragrance.",
-        "product": "bpm-natural-deodorant-bergamot-lime"
+        "product": "bpm-natural-deodorant-bergamot-lime",
+        "heading": "Clean by\ndesign.",
+        "body": "Every ingredient in BPM has a job. No baking soda. No waxes. No unnecessary fillers. Just a simple, effective formula designed to work with your skin, not against it."
       },
       "blocks": {
         "0": {
@@ -136,39 +158,50 @@
         "heading": "A personal story.\nA real responsibility.",
         "body": "Founded by Corey Goss, a member of the Algonquins of Pikw\u00e0kanag\u00e0n First Nation. The mark connects family, identity and BPM\u2019s musical roots.",
         "image_alt": "BPM\u2019s original owl and drum-inspired Indigenous-owned mark",
-        "button_label": "The story behind the mark"
+        "button_label": "The story behind the mark",
+        "badge": "shopify://shop_images/CCIB_CIB-Member-PrimaryLogo_CIB-Lockup.png",
+        "badge_alt": "Canadian Council for Indigenous Business member and Certified Indigenous Business logo supplied by BPM"
       }
     },
     "faq": {
       "type": "bpm-sites-questions",
-      "settings": {},
+      "settings": {
+        "heading": "Frequently asked\nquestions."
+      },
       "blocks": {
         "0": {
           "type": "question",
           "settings": {
-            "question": "How much should I use?",
-            "answer": "<p>Start with a pea-sized amount and massage it into your underarms. Adjust if needed.</p>"
+            "question": "What makes BPM different from other deodorants?",
+            "answer": "<p>BPM is a high performance natural deodorant in a recyclable metal tube. It is baking soda free, wax free, easy to apply, quick to absorb, and made to work without the usual compromises.</p>"
           }
         },
         "1": {
           "type": "question",
           "settings": {
-            "question": "Is BPM baking soda free?",
-            "answer": "<p>Yes. Both scents are formulated without baking soda or waxes.</p>"
+            "question": "Does BPM actually work?",
+            "answer": "<p>Yes. BPM was made to perform. It helps fight odour, goes on smoothly, and was refined using feedback from real people using it in everyday life.</p>"
           }
         },
         "2": {
           "type": "question",
           "settings": {
-            "question": "How long does a tube last?",
-            "answer": "<p>BPM estimates approximately 304 pea-sized applications per 76 g tube. Your amount and frequency affect how long it lasts.</p>"
+            "question": "How much should I apply?",
+            "answer": "<p>A small amount is enough. Start with a pea sized amount for each underarm or area requiring protection, then adjust if needed.</p>"
           }
         },
         "3": {
           "type": "question",
           "settings": {
-            "question": "Where do you ship?",
-            "answer": "<p>Canada and the United States. See the shipping policy for current thresholds and delivery details.</p>"
+            "question": "How long does one 76g tube last?",
+            "answer": "<p>It depends on how much you apply, but each tube contains over 300 pea-sized applications. That&#x27;s roughly 5 months of daily use. Start small. A little goes a long way.</p>"
+          }
+        },
+        "4": {
+          "type": "question",
+          "settings": {
+            "question": "Where can I use BPM?",
+            "answer": "<p>Anywhere odour is a concern. That includes underarms, feet, chest, back, under skin folds, behind the knees, and an unpierced navel. Just keep it to external use and avoid extra sensitive areas.</p>"
           }
         }
       },
@@ -176,7 +209,8 @@
         "0",
         "1",
         "2",
-        "3"
+        "3",
+        "4"
       ]
     },
     "closing": {
@@ -215,7 +249,8 @@
       "block_order": [
         "duo",
         "four"
-      ]
+      ],
+      "disabled": true
     },
     "journal": {
       "type": "bpm-sites-journal",
@@ -256,28 +291,379 @@
       "settings": {
         "product": "bpm-natural-deodorant-bergamot-lime",
         "price_intro": "BPM prices a single tube at"
-      }
+      },
+      "disabled": true
     },
     "newsletter": {
       "type": "bpm-sites-newsletter",
       "settings": {
-        "mode": "disabled"
+        "mode": "shopify",
+        "body": "Get event information, scent drops, and quiet BPM updates.",
+        "heading": "Put me\nin the mix.",
+        "button_label": "Put me in the mix"
       }
+    },
+    "beliefs": {
+      "type": "bpm-sites-beliefs",
+      "settings": {},
+      "blocks": {
+        "life": {
+          "type": "statement",
+          "settings": {
+            "eyebrow": "ON BEAT. ON YOU.",
+            "heading": "Made for\nreal life.",
+            "body": "<p>For people who want deodorant to do its job.<br>No drama. No irritation. No nonsense.<br>Just a clean formula that goes on smoothly and works.</p>"
+          }
+        },
+        "purpose": {
+          "type": "statement",
+          "settings": {
+            "eyebrow": "NOTHING EXTRA.",
+            "heading": "Why BPM\nexists.",
+            "body": "<p>Most natural deodorants come with tradeoffs: <br>weak performance, irritation, plastic packaging, or inflated pricing. <br>BPM was built to do better. Reliable odour control, simple ingredients, smooth application, and a metal tube instead of the usual plastic stick, without inflated pricing.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "life",
+        "purpose"
+      ]
+    },
+    "duos": {
+      "type": "bpm-sites-featured-collection",
+      "settings": {
+        "collection": "the-two-track-collection",
+        "heading": "THE TWO-TRACK COLLECTION",
+        "description": "<p>Choose two and set your rotation.</p><p>Mix Bergamot &amp; Lime with Unscented, or double up on your favourite. Every two-tube set gives you the same smooth, baking-soda-free formula, natural odour control and free shipping.</p><p>Two tracks. One routine. Your call.</p>",
+        "limit": 3
+      },
+      "blocks": {
+        "duo": {
+          "type": "product_art",
+          "settings": {
+            "product": "side-a-side-b",
+            "display_title": "Side A / Side B",
+            "pack_label": "2 \u00d7 76 g",
+            "source_pack": "1-1",
+            "background": "#f3e4b7",
+            "summary": "1 citrus + 1 unscented"
+          }
+        },
+        "silent_repeat": {
+          "type": "product_art",
+          "settings": {
+            "product": "silent-repeat",
+            "display_title": "Silent on Repeat",
+            "pack_label": "2 \u00d7 76 g",
+            "source_pack": "0-2",
+            "background": "#228782",
+            "summary": "Unscented"
+          }
+        },
+        "citrus_repeat": {
+          "type": "product_art",
+          "settings": {
+            "product": "citrus-repeat",
+            "display_title": "Citrus on Repeat",
+            "pack_label": "2 \u00d7 76 g",
+            "source_pack": "2-0",
+            "background": "#acb228",
+            "summary": "Bergamot & Lime"
+          }
+        }
+      },
+      "block_order": [
+        "duo",
+        "silent_repeat",
+        "citrus_repeat"
+      ]
+    },
+    "four_count": {
+      "type": "bpm-sites-featured-collection",
+      "settings": {
+        "collection": "the-four-count",
+        "heading": "THE FOUR COUNT COLLECTION",
+        "description": "<p>The Four Count is a collection of four-tube natural deodorant bundles made for families, roommates, gifting, or keeping your favourite people on beat. Choose all bright Bergamot &amp; Lime, all truly Unscented, or a mixed arrangement that works for your crew.</p><p>Four tubes. Different arrangements. Everyone covered.</p>",
+        "limit": 4
+      },
+      "blocks": {
+        "four_on_the_floor_mixed_scent_4_tube_deo": {
+          "type": "product_art",
+          "settings": {
+            "product": "four-on-the-floor-mixed-scent-4-tube-deodorant-bundle",
+            "display_title": "Four on the Floor",
+            "pack_label": "4 \u00d7 76 g",
+            "source_pack": "2-2",
+            "background": "#f3e4b7",
+            "summary": "2 citrus + 2 unscented"
+          }
+        },
+        "citrus_on_repeat_family_pack_4_tube_berg": {
+          "type": "product_art",
+          "settings": {
+            "product": "citrus-on-repeat-family-pack-4-tube-bergamot-lime-deodorant-bundle",
+            "display_title": "Citrus on Repeat: Family Pack",
+            "pack_label": "4 \u00d7 76 g",
+            "source_pack": "4-0",
+            "background": "#acb228",
+            "summary": "Bergamot & Lime"
+          }
+        },
+        "3_4_time": {
+          "type": "product_art",
+          "settings": {
+            "product": "3-4-time",
+            "display_title": "3/4 Time",
+            "pack_label": "4 \u00d7 76 g",
+            "source_pack": "3-1",
+            "background": "#f3e4b7",
+            "summary": "3 citrus + 1 unscented"
+          }
+        },
+        "silent_on_repeat_family_pack_4_tube_unsc": {
+          "type": "product_art",
+          "settings": {
+            "product": "silent-on-repeat-family-pack-4-tube-unscented-deodorant-bundle",
+            "display_title": "Silent on Repeat: Family Pack",
+            "pack_label": "4 \u00d7 76 g",
+            "source_pack": "0-4",
+            "background": "#228782",
+            "summary": "Unscented"
+          }
+        }
+      },
+      "block_order": [
+        "four_on_the_floor_mixed_scent_4_tube_deo",
+        "citrus_on_repeat_family_pack_4_tube_berg",
+        "3_4_time",
+        "silent_on_repeat_family_pack_4_tube_unsc"
+      ]
+    },
+    "pricing": {
+      "type": "bpm-sites-pricing-breakdown",
+      "settings": {
+        "eyebrow": "TRANSPARENT PRICING",
+        "heading": "No green tax.\nNo mystery markup.",
+        "body": "<p>No green tax or mystery markup. A transparent look at where your money goes.</p><p>We price BPM at $23.99 to cover what it takes to make the product properly, package it responsibly, ship it thoughtfully, support discounts, give back, and keep BPM running. We keep pricing consistent across our website and Amazon, even though Amazon takes a larger share through fulfilment, fees, advertising, and freight. Buying directly from BPM keeps more of each sale with us, which means more can go back into the product, the company, and charitable causes. Fair, transparent pricing. No hidden markups. Costs shown are estimates and may vary slightly over time.</p>",
+        "website_title": "Website Sale",
+        "amazon_title": "Amazon Sale",
+        "total_label": "Total per tube",
+        "total_cents": 2399,
+        "note": "Costs shown are estimates and may vary slightly over time.",
+        "original_image": "shopify://shop_images/bpm_website_amazon_pricing_stacks_equal_spacing.png",
+        "original_label": "View the original pricing graphic",
+        "original_alt": "Client estimated website and Amazon cost breakdown. The same labels and amounts are provided in the readable cards above."
+      },
+      "blocks": {
+        "0": {
+          "type": "cost",
+          "settings": {
+            "label": "Product and Packaging",
+            "description": "Formula, tube, carton and production",
+            "website_cents": 582,
+            "amazon_cents": 582
+          }
+        },
+        "1": {
+          "type": "cost",
+          "settings": {
+            "label": "Fulfillment",
+            "description": "Pick, pack and delivery",
+            "website_cents": 1012,
+            "amazon_cents": 0
+          }
+        },
+        "2": {
+          "type": "cost",
+          "settings": {
+            "label": "FBA Fulfillment",
+            "description": "Amazon storage, pick, pack and ship",
+            "website_cents": 0,
+            "amazon_cents": 893
+          }
+        },
+        "3": {
+          "type": "cost",
+          "settings": {
+            "label": "Payment Processing",
+            "description": "Card and platform fees",
+            "website_cents": 95,
+            "amazon_cents": 0
+          }
+        },
+        "4": {
+          "type": "cost",
+          "settings": {
+            "label": "Amazon Referral Fees",
+            "description": "Amazon platform fee",
+            "website_cents": 0,
+            "amazon_cents": 360
+          }
+        },
+        "5": {
+          "type": "cost",
+          "settings": {
+            "label": "Amazon Advertising",
+            "description": "Paid visibility on Amazon",
+            "website_cents": 0,
+            "amazon_cents": 120
+          }
+        },
+        "6": {
+          "type": "cost",
+          "settings": {
+            "label": "Promotions and Offers",
+            "description": "Discounts and customer offers",
+            "website_cents": 240,
+            "amazon_cents": 240
+          }
+        },
+        "7": {
+          "type": "cost",
+          "settings": {
+            "label": "Community Donations",
+            "description": "5% of profits donated to charity",
+            "website_cents": 24,
+            "amazon_cents": 10
+          }
+        },
+        "8": {
+          "type": "cost",
+          "settings": {
+            "label": "BPM Operations",
+            "description": "Operations, growth and future improvements",
+            "website_cents": 447,
+            "amazon_cents": 194
+          }
+        }
+      },
+      "block_order": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ]
+    },
+    "without": {
+      "type": "bpm-sites-without",
+      "settings": {
+        "eyebrow": "NOTHING EXTRA",
+        "heading": "Formulated without."
+      },
+      "blocks": {
+        "0": {
+          "type": "ingredient",
+          "settings": {
+            "label": "Aluminium salts"
+          }
+        },
+        "1": {
+          "type": "ingredient",
+          "settings": {
+            "label": "Parabens"
+          }
+        },
+        "2": {
+          "type": "ingredient",
+          "settings": {
+            "label": "Phthalates"
+          }
+        },
+        "3": {
+          "type": "ingredient",
+          "settings": {
+            "label": "Baking soda"
+          }
+        },
+        "4": {
+          "type": "ingredient",
+          "settings": {
+            "label": "Synthetic fragrance"
+          }
+        },
+        "5": {
+          "type": "ingredient",
+          "settings": {
+            "label": "Waxes"
+          }
+        }
+      },
+      "block_order": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ]
+    },
+    "feedback": {
+      "type": "bpm-sites-home-feedback",
+      "settings": {
+        "eyebrow": "FROM YOUR SIDE OF THE BEAT",
+        "heading": "BPM feedback."
+      },
+      "blocks": {
+        "judge_me_reviews_medals_aVjNkQ": {
+          "type": "shopify://apps/judge-me-reviews/blocks/medals/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        },
+        "judge_me_reviews_review_snippet_widget_Yy3gfb": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_snippet_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "reviews_selection": "auto",
+            "products": [],
+            "filter_pinned": false,
+            "filter_featured": false,
+            "filter_custom_tags": "",
+            "min_star_rating": "inherit",
+            "show_review_media": true,
+            "max_reviews": 5,
+            "review_length": "medium",
+            "text_size": "medium",
+            "max_width": 1100,
+            "max_image_size": "small",
+            "arrows_visibility": "always_shown",
+            "transition_speed": 5,
+            "corner_styling": "inherit",
+            "text_color": "",
+            "card_color": "",
+            "stars_color": "#F157B7",
+            "arrows_color": "",
+            "arrows_background_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_medals_aVjNkQ",
+        "judge_me_reviews_review_snippet_widget_Yy3gfb"
+      ]
     }
   },
   "order": [
     "hero",
     "rhythm",
     "tracks",
+    "duos",
+    "four_count",
+    "beliefs",
     "texture",
-    "bundles",
     "formula",
+    "without",
     "story",
     "ownership",
-    "value",
+    "pricing",
     "journal",
+    "feedback",
     "faq",
     "newsletter",
-    "closing"
+    "closing",
+    "bundles",
+    "value"
   ]
 }

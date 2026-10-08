@@ -413,6 +413,20 @@ try {
   await check('Native-only gallery prioritizes selected image without preloading video','sections/bpm-sites-product.liquid',nativeProduct,html=>{assert.equal(priorityHints(html).length,1);assert.match(html,/preload="none"/);});
   await check('Uploaded first image wins over source first gallery artwork','sections/bpm-sites-product.liquid',{...nativeProduct,product:{...nativeProduct.product,id:14880059228532},section:{...hydrateGallery(galleryConfig),settings:{...galleryConfig.settings,image:{src:'merchant-first-image.jpg'}}}},html=>{assert.match(html,/merchant-first-image.jpg/);assert.doesNotMatch(html,/bpm-sites-carton-bergamot/);});
   await check('Unknown source key falls back to native selected media without phantom frame','sections/bpm-sites-product.liquid',{...nativeProduct,section:{settings:{source_gallery:'unknown'},blocks:[]}},html=>{assert.doesNotMatch(html,/Media-product-a-override/);assert.match(html,/data-initial-media/);});
+  const clientHome=JSON.parse(await readFile(join(theme,'templates/index.json'),'utf8'));
+  const clientSection=id=>{const cfg=clientHome.sections[id];return {section:{id:'client-'+id,settings:cfg.settings,blocks:(cfg.block_order||[]).map(key=>({...cfg.blocks[key],shopify_attributes:'data-client-block="'+key+'"'}))}};};
+  await check('Client statements retain wording, semantic headings and editor attributes','sections/bpm-sites-beliefs.liquid',clientSection('beliefs'),html=>{assert.match(html,/No drama\. No irritation\. No nonsense/);assert.match(html,/BPM was built to do better/);assert.equal((html.match(/<h2>/g)||[]).length,2);assert.match(html,/data-client-block="purpose"/);});
+  await check('Client exclusions are a six-item semantic editable list','sections/bpm-sites-without.liquid',clientSection('without'),html=>{assert.equal((html.match(/<li /g)||[]).length,6);for(const name of ['Aluminium salts','Parabens','Phthalates','Baking soda','Synthetic fragrance','Waxes'])assert.ok(html.includes(name));});
+  await check('Client pricing renders separate readable cost definitions without inventing absent charges','sections/bpm-sites-pricing-breakdown.liquid',clientSection('pricing'),html=>{assert.equal((html.match(/<dl>/g)||[]).length,2);assert.equal((html.match(/<dd>/g)||[]).length,13);for(const amount of ['5.82','10.12','0.95','2.40','0.24','4.47','8.93','3.60','1.20','0.10','1.94'])assert.ok(html.includes('$'+amount+' CAD'));assert.equal((html.match(/23.99 CAD/g)||[]).length,2);assert.match(html,/Costs shown are estimates/);assert.doesNotMatch(html,/>\$0.00 CAD/);});
+  await check('Client FAQ retains all five questions and complete usage qualification','sections/bpm-sites-questions.liquid',clientSection('faq'),html=>{assert.equal((html.match(/<details /g)||[]).length,5);assert.match(html,/external use and avoid extra sensitive areas/);assert.match(html,/under skin folds/);});
+  assert.equal(clientHome.sections.newsletter.settings.mode,'shopify');
+  assert.equal(clientHome.sections.newsletter.settings.body,'Get event information, scent drops, and quiet BPM updates.');
+  const homeReviewBlocks=clientHome.sections.feedback.blocks;
+  assert.equal(Object.keys(homeReviewBlocks).length,2);
+  assert.ok(Object.values(homeReviewBlocks).some(block=>block.type.includes('/medals/')));
+  assert.ok(Object.values(homeReviewBlocks).some(block=>block.type.includes('/review_snippet_widget/')));
+  assert.ok(!JSON.stringify(homeReviewBlocks).includes('show_sample_reviews'));
+  await check('Extended client menu gains a responsive presentation hook','sections/bpm-sites-header.liquid',{...header,section:{settings:{menu:{links:Array.from({length:9},(_,i)=>({title:'Client menu '+i,url:'/pages/example-'+i}))},show_account:true}}},html=>{assert.match(html,/bpm-sites-header--extended/);assert.match(html,/Client menu 8/);});
   console.log(`${passed} chrome rendering checks passed; Shopify runtime and visual geometry remain unverified.`);
 } finally {
   await rm(scratch, { recursive: true, force: true });

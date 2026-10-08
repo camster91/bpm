@@ -56,6 +56,7 @@ function pickerFixture(type, handle) {
  if(type==='blog') return {title:'The Breakdown',url:'/sites-blog.html'};
  if(type==='page' && handle==='about-us') return {id:705670807924,title:'About — fixture',url:'/sites-about.html'};
  if(type==='collection') return {title:handle+' — fixture',url:'/sites-collection.html',products:fixtureResourceBindings.products.filter(p=>p.pack_count===(handle==='the-two-track-collection'?2:4)).map(p=>pickerFixture('product',p.handle))};
+ if(type==='image_picker' && handle.startsWith('shopify://shop_images/')) return {src:'https://bpmdeodorant.com/cdn/shop/files/'+handle.split('/').pop(),fixture_resize:true};
  if(type==='video') return {fixture:true};
  return handle;
 }
@@ -63,8 +64,8 @@ function pickerSettings(fields, values) {return Object.fromEntries(Object.entrie
 async function section(name, overrides = {}, blocks = [], context = {}) {
   const source = await readFile(join(theme, 'sections', `${name}.liquid`), 'utf8');
   const schema = JSON.parse(source.match(/{%\s*schema\s*%}([\s\S]*?){%\s*endschema\s*%}/)[1]);
-  const values = Object.fromEntries(schema.settings.filter(field => field.id).map(field => [field.id, field.default]));
-  return engine.parseAndRender(clean(source), { ...common, ...context, section: { id: context.preview_section_id || `preview-${name}`, settings: pickerSettings(schema.settings,{ ...values, ...overrides }), blocks: blocks.map(block=>({...block,...(block.type?.startsWith('shopify://apps/')?{type:'@app',fixture_html:block.type.includes('/preview_badge/')?'<p class="fine">MOCK JUDGE.ME BADGE — no live rating or review count.</p>':'<div class="local-review-fixture"><h3>MOCK JUDGE.ME WIDGET</h3><p>Fabricated app output for wrapper layout only. No live review data or app runtime.</p></div>'}:{}),settings:pickerSettings(schema.blocks?.find(b=>b.type===block.type)?.settings || [],block.settings)})) } }, { globals: { cart: context.cart || common.cart } });
+  const values = Object.fromEntries((schema.settings || []).filter(field => field.id).map(field => [field.id, field.default]));
+  return engine.parseAndRender(clean(source), { ...common, ...context, section: { id: context.preview_section_id || `preview-${name}`, settings: pickerSettings(schema.settings || [],{ ...values, ...overrides }), blocks: blocks.map(block=>({...block,...(block.type?.startsWith('shopify://apps/')?{type:'@app',fixture_html:block.type.includes('/preview_badge/')?'<p class="fine">MOCK JUDGE.ME BADGE — no live rating or review count.</p>':'<div class="local-review-fixture"><h3>MOCK JUDGE.ME WIDGET</h3><p>Fabricated app output for wrapper layout only. No live review data or app runtime.</p></div>'}:{}),settings:pickerSettings(schema.blocks?.find(b=>b.type===block.type)?.settings || [],block.settings)})) } }, { globals: { cart: context.cart || common.cart } });
 }
 const header = await section('bpm-announcement', { text: 'Now Shipping Canada Wide | Hand Made' }) + await section('bpm-header', { menu });
 const footer = await section('bpm-footer', { menu });
@@ -83,6 +84,8 @@ const isolated = (await engine.parseAndRender(code, { ...common, content_for_lay
 await writeFile(join(output, 'sections.html'), isolated);
 console.log(`Local fabricated-data chrome preview: ${output}/index.html. This does not emulate Shopify commerce or editor APIs.`);
 const sitesMenu = {links:[{title:'Shop',url:'/collections/all',current:true},{title:'Our story',url:'/pages/about'},{title:'Indigenous-owned',url:'/pages/indigenous-owned'},{title:'The Breakdown',url:'/blogs/the-breakdown'},{title:'Contact',url:'/pages/contact'}]};
+const clientLiveMenu={links:[{title:'HOME',url:'/'},{title:'PRODUCTS',url:'/collections/all'},{title:'BUNDLES',url:'/collections/the-two-track-collection',links:[{title:'THE TWO TRACK',url:'/collections/the-two-track-collection'},{title:'THE FOUR COUNT',url:'/collections/the-four-count'}]},{title:'COLLECTIONS',url:'/collections/all',links:[{title:'SHOP ALL TRACKS',url:'/collections/all'},{title:'SENSITIVE SKIN DEODORANT',url:'/collections/sensitive-skin-deodorant'}]},{title:'ABOUT US',url:'/pages/about-us'},{title:'INDIGENOUS OWNED',url:'/pages/indigenous-owned'},{title:'THE BREAKDOWN (Blog)',url:'/blogs/news'},{title:'CONTACT US',url:'/pages/contact'},{title:'POLICY PAGES',url:'/policies/shipping-policy',links:[{title:'Shipping Policy',url:'/policies/shipping-policy'},{title:'Privacy Policy',url:'/policies/privacy-policy'}]}]};
+const clientLiveHeader=await section('bpm-sites-header',{menu:clientLiveMenu});
 const sitesHeader = await section('bpm-sites-header', {menu:sitesMenu});
 const sitesFooter = await section('bpm-sites-footer', {menu:sitesMenu, legal_name:'Fabricated legal entity — local fixture',show_market:false});
 const sitesLayout = await engine.parseAndRender(code, {...common, content_for_layout:'<section class="section wrap"><p class="eyebrow">Local theme fixture</p><h1>Sites chrome migration</h1><p>Shared navigation and footer only. Homepage implementation is pending.</p></section>',preview_header:sitesHeader, preview_footer:sitesFooter,page_title:'Sites chrome — local fixture'});
@@ -107,14 +110,15 @@ const sitesHome = await engine.parseAndRender(code,{...common,content_for_layout
 await writeFile(join(output,'sites-home.html'), sitesHome);
 
 const homeTemplate = JSON.parse(await readFile(join(theme,'templates/index.json'),'utf8'));
-let sitesContent = sitesHero + sitesRhythm + sitesTracks + sitesTexture;
-for (const id of ['bundles','formula','story','ownership','value','journal','faq','newsletter','closing']) {
+let sitesContent = '<p class="wrap fine">Local client-content review. Product data and review widgets are fixtures. Newsletter and purchase submissions are disabled.</p>';
+for (const id of homeTemplate.order) {
  const configured = homeTemplate.sections[id];
+ if(configured.disabled) continue;
  const blocks = (configured.block_order || []).map(key=>configured.blocks[key]);
- const previewBlocks = id === 'bundles' ? blocks.map((block,i)=>({...block,settings:{...block.settings,...Object.fromEntries(Array.from({length:i===0?2:4},(_,n)=>["image_"+(n+1),{src:n<(i===0?1:2)?"/fixture-bergamot.svg":"/fixture-unscented.svg",alt: n<(i===0?1:2)?"Bergamot & Lime carton":"Unscented carton"}])),product:{title:`Bundle ${i+1} — fixture`,url:`/products/fixture-bundle-${i}`,price:i===0?3999:7498,available:true,featured_image:{src:'/fixture-bergamot.svg'}}}})) : id === 'journal' ? blocks.map((block,i)=>({...block,settings:{...block.settings,article:{title:`Article ${i+1} — fixture`,url:`/blogs/fixture/article-${i}`,published_at:'2026-09-26T12:00:00-04:00'}}})) : blocks;
- sitesContent += await section(configured.type,id === 'value' ? {...configured.settings,product:{title:'Single tube — fixture',price:2399,price_varies:false}} : configured.settings,previewBlocks);
+ sitesContent += await section(configured.type,configured.settings,blocks,{preview_section_id:'home-'+id});
 }
-await writeFile(join(output,'sites-home.html'), await engine.parseAndRender(code,{...common,content_for_layout:sitesContent,preview_header:sitesHeader,preview_footer:sitesFooter,page_title:'Sites homepage migration — local fixture'}));
+sitesContent=sitesContent.replace(/(<button[^>]*type="submit")/g,'$1 disabled');
+await writeFile(join(output,'sites-home.html'), await engine.parseAndRender(code,{...common,content_for_layout:sitesContent,preview_header:clientLiveHeader,preview_footer:sitesFooter,page_title:'Sites homepage migration — local fixture'}));
 const newsletterPreview = await section('bpm-sites-newsletter',{mode:'shopify'});
 await writeFile(join(output,'sites-newsletter.html'),await engine.parseAndRender(code,{...common,content_for_layout:'<section class="section wrap"><h1>Local newsletter fixture</h1><p>No provider is connected in this local preview. Do not enter real contact details.</p></section>'+newsletterPreview,preview_header:sitesHeader,preview_footer:sitesFooter,page_title:'Newsletter fixture'}));
 const { sourceArticleContent } = await import('./source-article-content.mjs');
@@ -263,7 +267,8 @@ giftBody=giftBody.replace(/<script src="\/shopify-native\/vendor\/qrcode.js" def
 await writeFile(join(output,'sites-gift-card.html'),await engine.parseAndRender(utilityLayout,{...common,page_title:'Gift card — local fixture',content_for_layout:'<p class="wrap fine">Fabricated gift card. Code has no value. Native QR, Wallet and checkout are not verified.</p>'+giftBody}));
 
 let mappedHomeBody='<p class="wrap fine">Committed resource bindings emulated from recovered snapshots. Historical prices and media are fixtures; actual Shopify resolution is pending.</p>';
-for(const id of homeTemplate.order){const config=homeTemplate.sections[id];mappedHomeBody+=await section(config.type,config.settings,(config.block_order||[]).map(key=>config.blocks[key]));}
+for(const id of homeTemplate.order){const config=homeTemplate.sections[id];if(config.disabled)continue;mappedHomeBody+=await section(config.type,config.settings,(config.block_order||[]).map(key=>config.blocks[key]));}
+mappedHomeBody=mappedHomeBody.replace(/(<button[^>]*type="submit")/g,'$1 disabled');
 await writeFile(join(output,'sites-home-bindings.html'),await engine.parseAndRender(code,{...common,content_for_layout:mappedHomeBody,preview_header:sitesHeader,preview_footer:sitesFooter,page_title:'Bound resources — local fixture'}));
 // Hypothetical source-fidelity configuration, not a native page-handle binding.
 let sourceSecondaryBody='<p class="wrap fine">Source secondary-link layout fixture only. Destination is fabricated and the independently-verified claim remains unapproved. Committed native binding is unchanged.</p>';

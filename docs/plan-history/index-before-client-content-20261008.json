@@ -1,0 +1,283 @@
+{
+  "sections": {
+    "hero": {
+      "type": "bpm-sites-hero",
+      "settings": {
+        "secondary_page": "about-us"
+      }
+    },
+    "rhythm": {
+      "type": "bpm-sites-rhythm",
+      "settings": {},
+      "blocks": {
+        "0": {
+          "type": "message",
+          "settings": {
+            "text": "Performance first."
+          }
+        },
+        "1": {
+          "type": "message",
+          "settings": {
+            "text": "Nothing extra."
+          }
+        },
+        "2": {
+          "type": "message",
+          "settings": {
+            "text": "A little goes a long way."
+          }
+        }
+      },
+      "block_order": [
+        "0",
+        "1",
+        "2"
+      ]
+    },
+    "tracks": {
+      "type": "bpm-sites-tracks",
+      "settings": {},
+      "blocks": {
+        "bergamot": {
+          "type": "product",
+          "settings": {
+            "background": "#acb228",
+            "product": "bpm-natural-deodorant-bergamot-lime",
+            "pack_label": "1 \u00d7 76 g",
+            "source_pack": "1-0",
+            "display_title": "Bergamot & Lime",
+            "summary": "Bergamot & Lime."
+          }
+        },
+        "unscented": {
+          "type": "product",
+          "settings": {
+            "background": "#228782",
+            "product": "bpm-natural-deodorant-unscented",
+            "pack_label": "1 \u00d7 76 g",
+            "source_pack": "0-1",
+            "display_title": "Unscented",
+            "summary": "Unscented."
+          }
+        }
+      },
+      "block_order": [
+        "bergamot",
+        "unscented"
+      ]
+    },
+    "texture": {
+      "type": "bpm-sites-image-text",
+      "settings": {
+        "product": "bpm-natural-deodorant-bergamot-lime"
+      }
+    },
+    "formula": {
+      "type": "bpm-sites-formula",
+      "settings": {
+        "note": "No baking soda. No waxes. No synthetic fragrance.",
+        "product": "bpm-natural-deodorant-bergamot-lime"
+      },
+      "blocks": {
+        "0": {
+          "type": "ingredient",
+          "settings": {
+            "heading": "Magnesium hydroxide",
+            "role": "Odour control"
+          }
+        },
+        "1": {
+          "type": "ingredient",
+          "settings": {
+            "heading": "Tapioca starch + kaolin",
+            "role": "Moisture absorption"
+          }
+        },
+        "2": {
+          "type": "ingredient",
+          "settings": {
+            "heading": "Coconut + sunflower oils",
+            "role": "Glide and skin feel"
+          }
+        },
+        "3": {
+          "type": "ingredient",
+          "settings": {
+            "heading": "Zinc ricinoleate",
+            "role": "Helps trap odour"
+          }
+        }
+      },
+      "block_order": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    "story": {
+      "type": "bpm-sites-story",
+      "settings": {
+        "layout": "story",
+        "eyebrow": "THE PEOPLE BEHIND THE PRODUCT",
+        "heading": "Made with purpose.\nAnd a soundtrack.",
+        "body": "Corey Goss started making deodorants in his kitchen in 2020. His standard: performance, skin feel, thoughtful packaging and fair pricing.",
+        "image_alt": "BPM beside a turntable",
+        "button_label": "Meet BPM",
+        "page": "about-us"
+      }
+    },
+    "ownership": {
+      "type": "bpm-sites-story",
+      "settings": {
+        "layout": "ownership",
+        "eyebrow": "INDIGENOUS-OWNED",
+        "heading": "A personal story.\nA real responsibility.",
+        "body": "Founded by Corey Goss, a member of the Algonquins of Pikw\u00e0kanag\u00e0n First Nation. The mark connects family, identity and BPM\u2019s musical roots.",
+        "image_alt": "BPM\u2019s original owl and drum-inspired Indigenous-owned mark",
+        "button_label": "The story behind the mark"
+      }
+    },
+    "faq": {
+      "type": "bpm-sites-questions",
+      "settings": {},
+      "blocks": {
+        "0": {
+          "type": "question",
+          "settings": {
+            "question": "How much should I use?",
+            "answer": "<p>Start with a pea-sized amount and massage it into your underarms. Adjust if needed.</p>"
+          }
+        },
+        "1": {
+          "type": "question",
+          "settings": {
+            "question": "Is BPM baking soda free?",
+            "answer": "<p>Yes. Both scents are formulated without baking soda or waxes.</p>"
+          }
+        },
+        "2": {
+          "type": "question",
+          "settings": {
+            "question": "How long does a tube last?",
+            "answer": "<p>BPM estimates approximately 304 pea-sized applications per 76 g tube. Your amount and frequency affect how long it lasts.</p>"
+          }
+        },
+        "3": {
+          "type": "question",
+          "settings": {
+            "question": "Where do you ship?",
+            "answer": "<p>Canada and the United States. See the shipping policy for current thresholds and delivery details.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    "closing": {
+      "type": "bpm-sites-closing",
+      "settings": {}
+    },
+    "bundles": {
+      "type": "bpm-sites-bundles",
+      "settings": {},
+      "blocks": {
+        "duo": {
+          "type": "bundle",
+          "settings": {
+            "eyebrow": "THE TWO TRACK",
+            "heading": "Two tubes. Find your mix.",
+            "button_label": "Explore duos",
+            "background": "#f157b7",
+            "product": "side-a-side-b",
+            "collection": "the-two-track-collection",
+            "source_pack": "1-1"
+          }
+        },
+        "four": {
+          "type": "bundle",
+          "settings": {
+            "eyebrow": "THE FOUR COUNT",
+            "heading": "Four tubes. Everyone covered.",
+            "button_label": "Explore four-packs",
+            "background": "#f3e4b7",
+            "product": "four-on-the-floor-mixed-scent-4-tube-deodorant-bundle",
+            "collection": "the-four-count",
+            "source_pack": "2-2"
+          }
+        }
+      },
+      "block_order": [
+        "duo",
+        "four"
+      ]
+    },
+    "journal": {
+      "type": "bpm-sites-journal",
+      "settings": {
+        "blog": "news"
+      },
+      "blocks": {
+        "0": {
+          "type": "article",
+          "settings": {
+            "source_art": "texture",
+            "article": "news/underarm-skin-care-ingredients"
+          }
+        },
+        "1": {
+          "type": "article",
+          "settings": {
+            "source_art": "ownership",
+            "article": "news/the-name-behind-bpm-indigenous-ownership-and-finding-my-way-back"
+          }
+        },
+        "2": {
+          "type": "article",
+          "settings": {
+            "source_art": "story",
+            "article": "news/the-math-behind-fair-pricing-bpm-vs-native-vs-schmidts"
+          }
+        }
+      },
+      "block_order": [
+        "0",
+        "1",
+        "2"
+      ]
+    },
+    "value": {
+      "type": "bpm-sites-value",
+      "settings": {
+        "product": "bpm-natural-deodorant-bergamot-lime",
+        "price_intro": "BPM prices a single tube at"
+      }
+    },
+    "newsletter": {
+      "type": "bpm-sites-newsletter",
+      "settings": {
+        "mode": "disabled"
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "rhythm",
+    "tracks",
+    "texture",
+    "bundles",
+    "formula",
+    "story",
+    "ownership",
+    "value",
+    "journal",
+    "faq",
+    "newsletter",
+    "closing"
+  ]
+}

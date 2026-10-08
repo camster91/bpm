@@ -1,7 +1,7 @@
 <section class="section wrap"><div class="{% if section.settings.layout == 'ownership' %}ownership-tile{% else %}split{% endif %}">
 {% if section.settings.layout != 'ownership' %}<div class="story-photo">{% endif %}
 {% if section.settings.image != blank %}{{ section.settings.image | image_url: width: 1400 | image_tag: widths: '400,700,1000,1400', sizes: '(max-width:900px) 90vw,45vw', loading: 'lazy', alt: section.settings.image_alt }}{% elsif section.settings.layout == 'ownership' %}<img src="{{ 'bpm-sites-ownership.png' | asset_url }}" width="864" height="847" loading="lazy" alt="{{ section.settings.image_alt | escape }}">{% else %}<img src="{{ 'bpm-sites-story.jpg' | asset_url }}" width="1600" height="2844" loading="lazy" alt="{{ section.settings.image_alt | escape }}">{% endif %}
-{% if section.settings.layout != 'ownership' %}</div>{% endif %}<div><div class="intro-copy">{% if section.settings.eyebrow != blank %}<p class="eyebrow">{{ section.settings.eyebrow | escape }}</p>{% endif %}{% if section.settings.heading != blank %}<h2>{{ section.settings.heading | escape | newline_to_br }}</h2>{% endif %}{% if section.settings.body != blank %}<p class="lead">{{ section.settings.body | escape }}</p>{% endif %}</div>{% if section.settings.page != blank and section.settings.button_label != blank %}<a class="button" href="{{ section.settings.page.url }}">{{ section.settings.button_label | escape }}<span aria-hidden="true">→</span></a>{% endif %}</div></div></section>
+{% if section.settings.layout != 'ownership' %}</div>{% endif %}<div><div class="intro-copy">{% if section.settings.eyebrow != blank %}<p class="eyebrow">{{ section.settings.eyebrow | escape }}</p>{% endif %}{% if section.settings.heading != blank %}<h2>{{ section.settings.heading | escape | newline_to_br }}</h2>{% endif %}{% if section.settings.body != blank %}<p class="lead">{{ section.settings.body | escape }}</p>{% endif %}</div>{% if section.settings.badge != blank %}<div class="bpm-client-badge">{{ section.settings.badge | image_url: width: 600 | image_tag: widths: '200,400,600', sizes: '240px', loading: 'lazy', alt: section.settings.badge_alt }}</div>{% endif %}{% if section.settings.page != blank and section.settings.button_label != blank %}<a class="button" href="{{ section.settings.page.url }}">{{ section.settings.button_label | escape }}<span aria-hidden="true">→</span></a>{% endif %}</div></div></section>
 {% schema %}
 {
   "name": "Bpm Story",
@@ -56,6 +56,16 @@
       "type": "text",
       "id": "button_label",
       "label": "Page link label"
+    },
+    {
+      "type": "image_picker",
+      "id": "badge",
+      "label": "Client certification or membership image"
+    },
+    {
+      "type": "text",
+      "id": "badge_alt",
+      "label": "Badge image description"
     }
   ],
   "presets": [

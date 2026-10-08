@@ -1,4 +1,4 @@
-<header class="site-header bpm-sites-header" style="background:{{ section.settings.background }};color:{{ section.settings.text_color }}">
+<header class="site-header bpm-sites-header{% if section.settings.menu.links.size > 6 %} bpm-sites-header--extended{% endif %}" style="background:{{ section.settings.background }};color:{{ section.settings.text_color }}">
   <a class="site-logo" href="{{ routes.root_url }}" aria-label="{{ shop.name | escape }}">
     {% if section.settings.logo != blank %}{{ section.settings.logo | image_url: width: 264 | image_tag: widths: '66,132,264', sizes: '(max-width:760px) 52px,66px', loading: 'eager', alt: shop.name }}{% else %}<img src="{{ 'bpm-sites-logo.svg' | asset_url }}" width="66" height="68" alt="{{ shop.name | escape }}">{% endif %}
   </a>

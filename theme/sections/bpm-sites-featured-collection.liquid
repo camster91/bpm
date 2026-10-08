@@ -1,4 +1,5 @@
-{% assign featured = section.settings.collection %}{% if featured != blank %}<section class="section wrap"><div class="section-heading"><h2>{{ section.settings.heading | default: featured.title | escape }}</h2><a class="button" href="{{ featured.url }}">{{ 'catalogue.explore_collection' | t }} <span aria-hidden="true">→</span></a></div>
+{% assign featured = section.settings.collection %}{% if featured != blank %}<section class="section wrap bpm-client-collection{% if section.settings.limit == 4 %} bpm-client-collection--four{% endif %}"><div class="section-heading"><h2>{{ section.settings.heading | default: featured.title | escape }}</h2><a class="button" href="{{ featured.url }}">{{ 'catalogue.explore_collection' | t }} <span aria-hidden="true">→</span></a></div>
+{% if section.settings.description != blank %}<div class="bpm-client-copy bpm-collection-intro">{{ section.settings.description }}</div>{% endif %}
 <div class="track-grid three">{% for product in featured.products limit: section.settings.limit %}{% render 'bpm-sites-catalogue-card', product: product, blocks: section.blocks, label: section.settings.product_label, images: images, native_delivery: settings.native_source_delivery %}{% else %}<p>{{ 'catalogue.empty_collection' | t }}</p>{% endfor %}</div></section>{% endif %}
 {% schema %}
 {
@@ -13,6 +14,11 @@
       "type": "text",
       "id": "heading",
       "label": "Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Collection introduction"
     },
     {
       "type": "range",

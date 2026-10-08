@@ -1,0 +1,28 @@
+{% if section.blocks.size > 0 %}<section class="section wrap bpm-home-feedback"><div class="intro-copy"><p class="eyebrow">{{ section.settings.eyebrow | escape }}</p><h2>{{ section.settings.heading | escape | newline_to_br }}</h2></div><div class="bpm-home-review-apps">{% render 'bpm-app-blocks', blocks: section.blocks %}</div></section>{% endif %}
+{% schema %}
+{
+  "name": "BPM homepage feedback",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow"
+    },
+    {
+      "type": "textarea",
+      "id": "heading",
+      "label": "Heading"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "@app"
+    }
+  ],
+  "presets": [
+    {
+      "name": "BPM homepage feedback"
+    }
+  ]
+}
+{% endschema %}

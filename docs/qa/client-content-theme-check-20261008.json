@@ -1,0 +1,1 @@
+[{"path":"/Users/Cameron/Documents/Codex/2026-10-06-let-s-work-on-this/bpm/theme/layout/theme.liquid","offenses":[{"check":"RemoteAsset","severity":"warning","start_row":6,"start_column":27,"end_row":6,"end_column":69,"message":"Asset should be served by the Shopify CDN for better performance."}],"errorCount":0,"warningCount":1,"infoCount":0}]
