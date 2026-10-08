@@ -1,0 +1,825 @@
+{
+  "format": 1,
+  "commit": "f750619d697cee864afd4914495663bf5ff02135",
+  "themeTree": "660566e916b3d1b4102be30509e0addaf4deea0b",
+  "purpose": "unpublished development QA only",
+  "developmentNoindex": true,
+  "files": [
+    {
+      "path": "assets/HelveticaNeueLT-BoldExt.woff2",
+      "bytes": 14596,
+      "sha256": "dd4c2ebb922586ae6a3e742b69f760ecb1a80429c95845ea278b5ae940803658"
+    },
+    {
+      "path": "assets/HelveticaNeueLTStd-Ex.woff2",
+      "bytes": 13344,
+      "sha256": "4a14d97b56a5c1d02e62d2e10d47d5e2145620d8f0ab2bbc03e9372b74a7f5ce"
+    },
+    {
+      "path": "assets/bpm-account.svg",
+      "bytes": 1181,
+      "sha256": "b1bbb28a0bc051a3a8ee26f705e6400b6c75eea230aa7074a6fbda7c5aaeb2db"
+    },
+    {
+      "path": "assets/bpm-application-description.vtt",
+      "bytes": 274,
+      "sha256": "b3c7e6462d05c02a51e3351df76ae04ece4f97c99d66a71054b326672f82f0cb"
+    },
+    {
+      "path": "assets/bpm-arrow-ink.svg",
+      "bytes": 1356,
+      "sha256": "26f137efeb448ff91b239c821e0bd8e0810e99c6860f3d9dd2d14f24122e5dc1"
+    },
+    {
+      "path": "assets/bpm-arrow.svg",
+      "bytes": 1431,
+      "sha256": "183c58cbb7b4e44bf7f9a52eab20477f4bac99b41f3097c93f5ff9280e1d1540"
+    },
+    {
+      "path": "assets/bpm-base.css",
+      "bytes": 7486,
+      "sha256": "9a8d5ea416e44154ba687d943b147d59bd5d21c4d5300028d8b20286ecf016ae"
+    },
+    {
+      "path": "assets/bpm-benefit-flask.png",
+      "bytes": 12871,
+      "sha256": "5e86956b0fec6b483e0219c261653e17491079b48a18243387573ffda4e2b1ff"
+    },
+    {
+      "path": "assets/bpm-benefit-fresh.png",
+      "bytes": 13410,
+      "sha256": "c76e7ef517ce8d583f3e666f9fb3a8b2cd0454a05846f07065ec6c18b4c0d78f"
+    },
+    {
+      "path": "assets/bpm-benefit-leaf.png",
+      "bytes": 10253,
+      "sha256": "6b9e8437bdb7f0b5c64950a99c1eb28b3106429b5bbd56e0513addf00f96821c"
+    },
+    {
+      "path": "assets/bpm-cart.svg",
+      "bytes": 1474,
+      "sha256": "97c3d5f25b7a740d91f3b0e1a14eed97e597022058e0fabe58b5e1dbbf18140a"
+    },
+    {
+      "path": "assets/bpm-chrome.js",
+      "bytes": 1116,
+      "sha256": "3c2d356a89847352bf8ad385bb79acd67c652899cfc614fc4c1c730d003ffec1"
+    },
+    {
+      "path": "assets/bpm-faq-close.svg",
+      "bytes": 1139,
+      "sha256": "bba16c93f2c9bebd4e9d63dc7ce73233b7c21861875d797de8c751434f0bbb46"
+    },
+    {
+      "path": "assets/bpm-faq-mask.svg",
+      "bytes": 274,
+      "sha256": "ce07150f99e0742c5cf47127ad9e2c1a9d75c47efac90c1fe440b05db166b1b7"
+    },
+    {
+      "path": "assets/bpm-faq-photo.png",
+      "bytes": 6600358,
+      "sha256": "c84ce8ed6654c4bb33ff376e12beae39703e23f9bd1f1a41a4bc075059fab2e1"
+    },
+    {
+      "path": "assets/bpm-faq-plus.svg",
+      "bytes": 997,
+      "sha256": "76b1cc86eb58e038a63eb381fcbc877fcba5628cf4309e81f991dfbc0f7cf070"
+    },
+    {
+      "path": "assets/bpm-footer-bergamot.png",
+      "bytes": 6359552,
+      "sha256": "7f3bfec3a6402163303d6de498a2ab1e1d30211b4fd1a7033c9ead50218770fa"
+    },
+    {
+      "path": "assets/bpm-footer-tube.png",
+      "bytes": 1442639,
+      "sha256": "c95dadf82130e8ecc6b327d49cc191cfd1d2a5db6aac3951df4837f612eda52e"
+    },
+    {
+      "path": "assets/bpm-footer-unscented.png",
+      "bytes": 6392068,
+      "sha256": "766bf59c1b4fd2f7d0e40b3bf01b56fc365b97646392ce85539455182bdab622"
+    },
+    {
+      "path": "assets/bpm-gift-card.js",
+      "bytes": 1075,
+      "sha256": "4a043a31c8f4f2811a45dbd2e3c1daf8b25fe598969ca32a110eb091d03c5302"
+    },
+    {
+      "path": "assets/bpm-hero-highlight.svg",
+      "bytes": 243,
+      "sha256": "fb3f07824318fae6725c5e32bcded8c81fd2b58c225095a178089788036e3173"
+    },
+    {
+      "path": "assets/bpm-home-photo.png",
+      "bytes": 1645478,
+      "sha256": "b68793287ab602f7dba132b5d886b4c604f1829d98128ae79c2890deeea28da3"
+    },
+    {
+      "path": "assets/bpm-logo-footer.svg",
+      "bytes": 1523,
+      "sha256": "966c67046e3c917b9f9046f43b49c39067df2a64e3040990df71299465294203"
+    },
+    {
+      "path": "assets/bpm-logo-header.svg",
+      "bytes": 1507,
+      "sha256": "b60491580db9839adaa502e366f8a143bf3533f1515e4e0031810abd57afabbf"
+    },
+    {
+      "path": "assets/bpm-motion.js",
+      "bytes": 6618,
+      "sha256": "bb5a8dd350b79f0a695c7d7a98db74f32d6c109bbbbf0927dc46ba8edd0fa31d"
+    },
+    {
+      "path": "assets/bpm-pdp.css",
+      "bytes": 9798,
+      "sha256": "dc0b6ad41e7a345f3e49484b1cb8db3e592e9959737d7ca7d98db3ec975464c6"
+    },
+    {
+      "path": "assets/bpm-product.css",
+      "bytes": 6178,
+      "sha256": "4a2688fc4bdace43bbde6e630a3d7e2d26eb47ad490c38cf45baf38fdf94774d"
+    },
+    {
+      "path": "assets/bpm-product.js",
+      "bytes": 1932,
+      "sha256": "37ebcb2aa2b7dce3e3395409b0bb1f92cb024a8019b39691d58b4e706456b3d0"
+    },
+    {
+      "path": "assets/bpm-sites-carton-bergamot.svg",
+      "bytes": 141990,
+      "sha256": "7b83b3613d4cbedf956384ce444df14d6b2a496b2ecc2932dd061f90d44a7bb5"
+    },
+    {
+      "path": "assets/bpm-sites-carton-unscented.svg",
+      "bytes": 141922,
+      "sha256": "d0c78bd628dac47da3a64fce57a91977606cf385e87523526d9f912161f8204a"
+    },
+    {
+      "path": "assets/bpm-sites-display.woff2",
+      "bytes": 14596,
+      "sha256": "dd4c2ebb922586ae6a3e742b69f760ecb1a80429c95845ea278b5ae940803658"
+    },
+    {
+      "path": "assets/bpm-sites-formula.jpg",
+      "bytes": 356650,
+      "sha256": "a9a287288cac4d921c3be05a4f3d965b3448d68ed050a11b316b3e0304e3cc60"
+    },
+    {
+      "path": "assets/bpm-sites-gallery-15141668815220.svg",
+      "bytes": 602041,
+      "sha256": "b83d52dc117f9d9d2f3371bb8ffb9f4fe7cfaced530c3998f1dfdbce5fc2046f"
+    },
+    {
+      "path": "assets/bpm-sites-gallery-15141686444404.svg",
+      "bytes": 622449,
+      "sha256": "d2c480bbe398d09ea48483d4ec7f2b2654a282fd8fdc50e110a36c9d1e8c4b5d"
+    },
+    {
+      "path": "assets/bpm-sites-gallery-15141732581748.svg",
+      "bytes": 647849,
+      "sha256": "45babcf4dae3eaae6f1296d8152ba5fef5f762778b4adde789c4e412f66c448d"
+    },
+    {
+      "path": "assets/bpm-sites-gallery-15222327476596.svg",
+      "bytes": 1142442,
+      "sha256": "b9cd88bea77ea465b3b6d5b9c154ec22e4d24d6561efa9a08b793675b09748a9"
+    },
+    {
+      "path": "assets/bpm-sites-gallery-15222328361332.svg",
+      "bytes": 983497,
+      "sha256": "84d84e9578d8033179947796d79612ae49f9aca85b95c66ffd367bce0d38615d"
+    },
+    {
+      "path": "assets/bpm-sites-gallery-15222329180532.svg",
+      "bytes": 1130550,
+      "sha256": "424c165edf0f3016b9809a8a872ebf3554c1635beeb4684a122822cce5ebda15"
+    },
+    {
+      "path": "assets/bpm-sites-gallery-15222739599732.svg",
+      "bytes": 1024205,
+      "sha256": "c02b5d1e3bc1eb4d912b4422cb70c6f46c31a1096851a0c1dea8ab28b088a177"
+    },
+    {
+      "path": "assets/bpm-sites-hand.png",
+      "bytes": 1107902,
+      "sha256": "bdb8375e7b60cf8fefdefbcad506772c684b53530aade5804a50aaba9e354e11"
+    },
+    {
+      "path": "assets/bpm-sites-hero.jpg",
+      "bytes": 194297,
+      "sha256": "cb672032586573a9b3f2dfbc252c61d47c0a7f12f9e90993dbe76e748a458c90"
+    },
+    {
+      "path": "assets/bpm-sites-logo.svg",
+      "bytes": 1366,
+      "sha256": "8e49558fa477a7f0d93b42bf6002eecca6a427846f61bfbfbe6076ad15f35731"
+    },
+    {
+      "path": "assets/bpm-sites-open-15141668815220.svg",
+      "bytes": 705189,
+      "sha256": "5cd7dd2eb947fc25f9ef9755cd66ec755ff6b13cf659d26909f0a82f73eab3cc"
+    },
+    {
+      "path": "assets/bpm-sites-open-15141686444404.svg",
+      "bytes": 740474,
+      "sha256": "a4ddfe7049f332710de15989c620ca3b52ebbf45dcfa3fefbfd36c94c7af60d2"
+    },
+    {
+      "path": "assets/bpm-sites-open-15141732581748.svg",
+      "bytes": 719017,
+      "sha256": "bcbe20a739c9d0c478e5bebc1036a22ca3f3ff68979ddceaf64107ec182d01e5"
+    },
+    {
+      "path": "assets/bpm-sites-open-15222327476596.svg",
+      "bytes": 1256037,
+      "sha256": "452b1c29f49bf7ef836d87c2ffdcb927b266f295a7ba6b3221f4e17156aff51e"
+    },
+    {
+      "path": "assets/bpm-sites-open-15222328361332.svg",
+      "bytes": 1252400,
+      "sha256": "bfd08198c7eb2c79ce757390873d79ccf278fcb3e16c4b7aa68ef35f0c4a6e5f"
+    },
+    {
+      "path": "assets/bpm-sites-open-15222329180532.svg",
+      "bytes": 1230244,
+      "sha256": "67a72abc502810f6efeed2162bbf0466526fd6b670eb6b058db4dd859c007063"
+    },
+    {
+      "path": "assets/bpm-sites-open-15222739599732.svg",
+      "bytes": 1281189,
+      "sha256": "b33edb22e78c53eef4fbd22d38a34473fb12a05400dffb6907c97e42d30a3a6c"
+    },
+    {
+      "path": "assets/bpm-sites-open-bergamot.svg",
+      "bytes": 2579655,
+      "sha256": "d3c6edafe4ee01909e5df618dc1b48e86fd8ea4c68ae813de88ebb0071193ebb"
+    },
+    {
+      "path": "assets/bpm-sites-open-unscented.svg",
+      "bytes": 2566131,
+      "sha256": "f2f164ca75ced19c96d2cdef4ecf781f8d1485bc602f24725e6f1868a6925bd5"
+    },
+    {
+      "path": "assets/bpm-sites-ownership.png",
+      "bytes": 55912,
+      "sha256": "05d2623ae8789060a8407720cf9ab47261cb5d06a56773c4edfdc6bd20125e74"
+    },
+    {
+      "path": "assets/bpm-sites-story.jpg",
+      "bytes": 578236,
+      "sha256": "a43487ff7f602006abb433b3f5947a239258c74e386b4b06b3a33332c012ad4f"
+    },
+    {
+      "path": "assets/bpm-sites-texture.jpg",
+      "bytes": 626453,
+      "sha256": "f64342d28fc82d1e3811de62ef9d8f191bf2fb0dcd58668584fe1851dfd352fd"
+    },
+    {
+      "path": "assets/bpm-sites-turntable.jpg",
+      "bytes": 452986,
+      "sha256": "ef743872e2bee879aa30ec378e4fe9d158b8bff1098254d409a7cc2b990f2c75"
+    },
+    {
+      "path": "assets/bpm-sites.css",
+      "bytes": 48518,
+      "sha256": "2136fff20d332024e3b1f570948a2682fb63d397fc354f1a3030ae8f76f17172"
+    },
+    {
+      "path": "assets/bpm-social-facebook.svg",
+      "bytes": 728,
+      "sha256": "bfb1e83af6f38c7eb8dc9e0ae47e47ee1278f82999f71a5a0d57984509a6e0f1"
+    },
+    {
+      "path": "assets/bpm-social-instagram.svg",
+      "bytes": 2526,
+      "sha256": "46d7079a57fc13d0377932a43284b2085bd2fce88a95d34e51cc13f5cace90fc"
+    },
+    {
+      "path": "assets/bpm-social-twitter.svg",
+      "bytes": 1297,
+      "sha256": "fdb830386379b842f88b99cbe8443bceef6b10210c1e0e6dca7e165b92edb459"
+    },
+    {
+      "path": "assets/bpm-utility.css",
+      "bytes": 1825,
+      "sha256": "30941a99a4f85506cfae3f35a9e8c408d37c8fe3e51cc6539a70f3c167795f7a"
+    },
+    {
+      "path": "assets/bpm-welcome.css",
+      "bytes": 2240,
+      "sha256": "360dc024acdd2b1be6bb3156bc406cf5a43c4928e82c13f9bb74c39e73b93d1e"
+    },
+    {
+      "path": "assets/bpm-welcome.js",
+      "bytes": 1238,
+      "sha256": "72469dcaa68d2ccb88c810ae6ee262b1faea519726a306c3b0880f797b409b89"
+    },
+    {
+      "path": "config/settings_data.json",
+      "bytes": 547,
+      "sha256": "460e9ddf582a14898f8ecc081ff18a733bdb7072eabc62e68bb4868b041f9a93"
+    },
+    {
+      "path": "config/settings_schema.json",
+      "bytes": 3830,
+      "sha256": "556c92d8be2cadc0bf7ead7469ea16287ea129b53228e9ecd6d367275159f9e8"
+    },
+    {
+      "path": "layout/bpm-utility.liquid",
+      "bytes": 1245,
+      "sha256": "a60c28695569df18d3008d37b0969382e1543f8b077b5e3b4a5861bcad58264c"
+    },
+    {
+      "path": "layout/theme.liquid",
+      "bytes": 2473,
+      "sha256": "2f40583d545852e2b1f6a44787ee5f53121c7cc88c3f8c14fb967400cf784254"
+    },
+    {
+      "path": "locales/en.default.json",
+      "bytes": 5271,
+      "sha256": "331366eaae17ec965106fcbea9858fe3f75fed0a7c20892e0165b051ff280aa8"
+    },
+    {
+      "path": "sections/apps.liquid",
+      "bytes": 758,
+      "sha256": "f62d259e883613e6e19f9f26474c787054e32277d6c39d6002af2f53195258be"
+    },
+    {
+      "path": "sections/bpm-announcement.liquid",
+      "bytes": 1451,
+      "sha256": "3f383e6477c18fd791336363977c6adea6361ea92d46f1ec175c5c3e0ec38eeb"
+    },
+    {
+      "path": "sections/bpm-app-region.liquid",
+      "bytes": 1341,
+      "sha256": "268ded0bcbdd4d6c5b482bb05b68f9b8d27a2841e21f05101b801e77c0c9dac2"
+    },
+    {
+      "path": "sections/bpm-benefits.liquid",
+      "bytes": 5030,
+      "sha256": "afff496886ec81f2b6150094fa06d39622e1766a1dfc393a16796d3da6067161"
+    },
+    {
+      "path": "sections/bpm-faq.liquid",
+      "bytes": 5745,
+      "sha256": "b15ff15d02466b9e0649a7ef53623eef0c9bb1f7cfb9f68289a9980c6a9b6560"
+    },
+    {
+      "path": "sections/bpm-footer.liquid",
+      "bytes": 5044,
+      "sha256": "38a87effccce5c21e0543dfc5d7920a29328ffda00b4021f890582de71a178dd"
+    },
+    {
+      "path": "sections/bpm-header.liquid",
+      "bytes": 2988,
+      "sha256": "f91c3c6019cc6747fc8bfe50039d5eab9ccd269cc5f424c83b03726768c3d845"
+    },
+    {
+      "path": "sections/bpm-hero.liquid",
+      "bytes": 6112,
+      "sha256": "39e5915172c3687ea8f25f7b96de75a3a2921c5b6b5feb6ee379822888b98834"
+    },
+    {
+      "path": "sections/bpm-product-lineup.liquid",
+      "bytes": 3319,
+      "sha256": "acc2ca9a86e25bb5ac1bbb2be13375bf03752c2702845fa7128999b9790aa557"
+    },
+    {
+      "path": "sections/bpm-sites-article.liquid",
+      "bytes": 757,
+      "sha256": "4284a8717bc2f8862b8c3e4c379b73ca353de2a8cc7d78864dad5871e0dde5ae"
+    },
+    {
+      "path": "sections/bpm-sites-blog.liquid",
+      "bytes": 2975,
+      "sha256": "4dfa4b5f93a8721ce3a86cf37022b0664f1f06e1c6cad9f0825c9d93ee56c44b"
+    },
+    {
+      "path": "sections/bpm-sites-bundles.liquid",
+      "bytes": 6544,
+      "sha256": "4a11f8e68ffbe16aa4693939f39ee1813d2da91cb066f2152baeb2c7cce8dca6"
+    },
+    {
+      "path": "sections/bpm-sites-cart.liquid",
+      "bytes": 5516,
+      "sha256": "077e0e2bec881e6b17d55f5360ab058c3f8887cd65e030f8d5fe20dad8cf7702"
+    },
+    {
+      "path": "sections/bpm-sites-closing.liquid",
+      "bytes": 1617,
+      "sha256": "486c36754a7a84d47c62ee8b6ee671c71184af33e2eb311d8c36f93af86331c0"
+    },
+    {
+      "path": "sections/bpm-sites-collection.liquid",
+      "bytes": 5334,
+      "sha256": "c4883e90246418f1d1cffd31c2dd693c1724f197f2bce51507ae031630a56414"
+    },
+    {
+      "path": "sections/bpm-sites-collections.liquid",
+      "bytes": 2081,
+      "sha256": "347a8c04d81c819cefd9999e3bd129318c0dd41446a64d4b4b29d2b89d009f55"
+    },
+    {
+      "path": "sections/bpm-sites-contact.liquid",
+      "bytes": 2747,
+      "sha256": "46409826aedb84fdf4ad4a2485580afebec4c04e1a493e7da88e56868632d121"
+    },
+    {
+      "path": "sections/bpm-sites-cost-comparison.liquid",
+      "bytes": 3325,
+      "sha256": "34fc3bd94ffe30b6a1928af27241e597d107be73c25b6e603f81fd5134cf36e3"
+    },
+    {
+      "path": "sections/bpm-sites-data-table.liquid",
+      "bytes": 2900,
+      "sha256": "e19910d916e00bdce74920e2ca81aeba51e554e7bf8a82931da2cb751b04928a"
+    },
+    {
+      "path": "sections/bpm-sites-featured-collection.liquid",
+      "bytes": 4114,
+      "sha256": "c5f15ead2a1319a26938a0e9b23ca1a8206de0b1bab209149dd0645158afbe05"
+    },
+    {
+      "path": "sections/bpm-sites-footer.liquid",
+      "bytes": 3087,
+      "sha256": "326af5cbe342504685144cd1b8d879d71689415f63c48938a38b2638e853c553"
+    },
+    {
+      "path": "sections/bpm-sites-formula.liquid",
+      "bytes": 2461,
+      "sha256": "d7fce095cc266cdac0d45e10d43b073ebb5b687bb9f181108f2cd194832bc5db"
+    },
+    {
+      "path": "sections/bpm-sites-header.liquid",
+      "bytes": 2321,
+      "sha256": "389d658e05718e45cbf3b924e340943da9c91cc877e82ec5c6d808f1a2426c6c"
+    },
+    {
+      "path": "sections/bpm-sites-hero.liquid",
+      "bytes": 3290,
+      "sha256": "5d92c94f452aacf122f92f24a7569c0aa46c5f5452a51771cb8716afe265445c"
+    },
+    {
+      "path": "sections/bpm-sites-image-text.liquid",
+      "bytes": 2628,
+      "sha256": "649bc574599c6f61e8e01f8920fd7a2585a86ba7871cef655797438444adc348"
+    },
+    {
+      "path": "sections/bpm-sites-journal.liquid",
+      "bytes": 3403,
+      "sha256": "0ceb89a3e4525ffd4e89cd2f44226186c76a97cd98becc6c2c2cdb9fbdfce0c5"
+    },
+    {
+      "path": "sections/bpm-sites-newsletter.liquid",
+      "bytes": 3957,
+      "sha256": "b2ee6708874f01c58e5d6537d2bc97b20926c881fb9207a5cc67f76daf48d959"
+    },
+    {
+      "path": "sections/bpm-sites-not-found.liquid",
+      "bytes": 704,
+      "sha256": "0e9db431e3c15a49aa535e5a0704dd80560c568fb6cc2445a164cf3b8a4d35e3"
+    },
+    {
+      "path": "sections/bpm-sites-page-opening.liquid",
+      "bytes": 3461,
+      "sha256": "41f385fd452df58a1d379ab24bbc79ab12e23cb0c109728a402abbd17576c8f2"
+    },
+    {
+      "path": "sections/bpm-sites-page.liquid",
+      "bytes": 833,
+      "sha256": "0fd020247ad8704e892436f31c77371f7a4e3d6c22817204669ce43fd42321c3"
+    },
+    {
+      "path": "sections/bpm-sites-password.liquid",
+      "bytes": 1330,
+      "sha256": "aa34b59227d012d7a14110e9ff3c47e9b1b524529735c2e6919b7d47da984a1a"
+    },
+    {
+      "path": "sections/bpm-sites-pdp-application.liquid",
+      "bytes": 3237,
+      "sha256": "4779244a68af0fa30e2928a71f81fe57d71f3680a783493afe3c6553bd836bf8"
+    },
+    {
+      "path": "sections/bpm-sites-pdp-benefits.liquid",
+      "bytes": 2530,
+      "sha256": "b3c04db0403bd2b533cd0bfe03effed4eb143c38586bf4c5f87f79c218b90cb8"
+    },
+    {
+      "path": "sections/bpm-sites-pdp-closing.liquid",
+      "bytes": 637,
+      "sha256": "fa675bc06f8fe153a015a4add4e2431fb0a274cc9199326c44cfc7f9857a06f1"
+    },
+    {
+      "path": "sections/bpm-sites-pdp-compare.liquid",
+      "bytes": 5066,
+      "sha256": "9867895676e712df32b67aa6628d6a9d7a71eedea60c4406e88517797d542280"
+    },
+    {
+      "path": "sections/bpm-sites-pdp-creators.liquid",
+      "bytes": 4115,
+      "sha256": "d32a4c9b61e1a7062cc2ababe047e16d72fe1612ef594c89318e72dda52fcfb5"
+    },
+    {
+      "path": "sections/bpm-sites-pdp-essentials.liquid",
+      "bytes": 999,
+      "sha256": "5e4451b05afd4bad9aef31d5ae064aad38a67c1662b34ed953c52d0b79e4e198"
+    },
+    {
+      "path": "sections/bpm-sites-pdp-faq.liquid",
+      "bytes": 1383,
+      "sha256": "27804432ff235fb208621aaf30aa33222f47603905adb5c6d6d891e26cd6560b"
+    },
+    {
+      "path": "sections/bpm-sites-pdp-formula.liquid",
+      "bytes": 2222,
+      "sha256": "bec005349992acac849806d074c11f9962e9823ef0a9f240c2aa59e02049368d"
+    },
+    {
+      "path": "sections/bpm-sites-pdp-lifestyle.liquid",
+      "bytes": 2290,
+      "sha256": "de7234085ab17c94fec24d7756678a17c4442866364d7889fad696a16fb1dbad"
+    },
+    {
+      "path": "sections/bpm-sites-pdp-reviews.liquid",
+      "bytes": 2214,
+      "sha256": "dddf1fbc3f088a9359ac6bc86c269ce0aefcaf589151d33067f7b37d5beb112f"
+    },
+    {
+      "path": "sections/bpm-sites-pdp-scent.liquid",
+      "bytes": 8032,
+      "sha256": "6fef99999c77f59be885ac74adde89a2251b4459518e06abe23d4c73cf7dacb8"
+    },
+    {
+      "path": "sections/bpm-sites-pdp-value.liquid",
+      "bytes": 3947,
+      "sha256": "2df21ea3d127a1118f429f01fb4fc0b71284195f4dd2adb6f828c879ddf7f965"
+    },
+    {
+      "path": "sections/bpm-sites-policies.liquid",
+      "bytes": 963,
+      "sha256": "b14a7b47aaf15a6cca57609004b4c79ba9da8bbbacb78f7182a71845230cf002"
+    },
+    {
+      "path": "sections/bpm-sites-principles.liquid",
+      "bytes": 2451,
+      "sha256": "d1a69db5bb8672730ee7d50f81640c8d464765e266bccca240245877d82180c0"
+    },
+    {
+      "path": "sections/bpm-sites-product-notes.liquid",
+      "bytes": 1618,
+      "sha256": "f8bcbcdb55a5eb5606a8c548e02e0ad74ee31b0c8b82349dc9389811c0c1fe14"
+    },
+    {
+      "path": "sections/bpm-sites-product.liquid",
+      "bytes": 15836,
+      "sha256": "763e33ac9824b17c526ea50184ba7eaaf17db030ee5b30c756c764fadc3ce8c5"
+    },
+    {
+      "path": "sections/bpm-sites-questions.liquid",
+      "bytes": 1627,
+      "sha256": "05934eccff2f108b304694511e626a2e3fdf4e06cb6ed17600907b85bbe8e41e"
+    },
+    {
+      "path": "sections/bpm-sites-rhythm.liquid",
+      "bytes": 1228,
+      "sha256": "a03cebbee40d133638c91bc467c2213b9ebd5e218f32088c5f5ee77ab3b743e3"
+    },
+    {
+      "path": "sections/bpm-sites-rich-split.liquid",
+      "bytes": 2787,
+      "sha256": "2bb48b07cc143a2cb77adc98c4184fa7aae6a18b7821684e56fcef5a365f9492"
+    },
+    {
+      "path": "sections/bpm-sites-search.liquid",
+      "bytes": 3891,
+      "sha256": "e8730496042919834dbae5c4942096f1bc9f37893a8a8e26a0a0743bee5a33c4"
+    },
+    {
+      "path": "sections/bpm-sites-story.liquid",
+      "bytes": 2545,
+      "sha256": "ebc30b5878348280203c2a7f9003fdd7c620086612946368c50de8f12eb572d2"
+    },
+    {
+      "path": "sections/bpm-sites-tracks.liquid",
+      "bytes": 4940,
+      "sha256": "207faa6ec026c7d7677dfdc495720eff15f35e20b746a34e555d18ee05f04082"
+    },
+    {
+      "path": "sections/bpm-sites-value.liquid",
+      "bytes": 4353,
+      "sha256": "8595dbae804908005c1c166a924551fea4681a341018172147478ab5594b10f0"
+    },
+    {
+      "path": "sections/bpm-sites-video.liquid",
+      "bytes": 1115,
+      "sha256": "fb376037dae64659b8abed4a24ecedbd8d9af8011483ee5c934d275d58f823e9"
+    },
+    {
+      "path": "sections/bpm-sites-welcome.liquid",
+      "bytes": 2957,
+      "sha256": "425b53ddd051060e8c2959432afbfd4d9bcbab63f3a050831037eae22177244c"
+    },
+    {
+      "path": "sections/footer-group.json",
+      "bytes": 322,
+      "sha256": "c25bb6940ed2e9bc6a679666487f13baffbd2987725646ce28a1f792c45dd075"
+    },
+    {
+      "path": "sections/header-group.json",
+      "bytes": 341,
+      "sha256": "40f57182235f9900ff7e59dc05a7d504bd801c1ded4f86b0f0d2080a145b0cc3"
+    },
+    {
+      "path": "snippets/bpm-app-blocks.liquid",
+      "bytes": 278,
+      "sha256": "7eaf7eeb63d1e06b634e832a44ad0031eef2eb5b680b62ad3a93e30e1b1524f5"
+    },
+    {
+      "path": "snippets/bpm-localization.liquid",
+      "bytes": 1456,
+      "sha256": "a58ee6ef181a0920858a7c9a7d4220f15df6c5d666ed536a7d30a1b6b9755365"
+    },
+    {
+      "path": "snippets/bpm-meta-tags.liquid",
+      "bytes": 2902,
+      "sha256": "0854254b74140a0eb61fe4ac2b2dae76799ca3edec8f3b71449fd4cafc4de3be"
+    },
+    {
+      "path": "snippets/bpm-motion-toggle.liquid",
+      "bytes": 509,
+      "sha256": "ab0d25ec4bb205ba9bcd1f28c24ca498fd3183cf42df7ef3121225b09e63fd03"
+    },
+    {
+      "path": "snippets/bpm-navigation.liquid",
+      "bytes": 1384,
+      "sha256": "a6d44bf3f5a74c72a376837426f52d9512f525da67e3648aa0c11776d0bfc6a9"
+    },
+    {
+      "path": "snippets/bpm-product-card.liquid",
+      "bytes": 1990,
+      "sha256": "033c1d2d28d6dfc183bbcdf3b9b8b304da173face65d2d350140ccd56680bbd8"
+    },
+    {
+      "path": "snippets/bpm-sites-article-card.liquid",
+      "bytes": 1902,
+      "sha256": "ede0ec46c1324e33a827b8d16c3fd251b937ecb4a894230d171b1a68b971ed68"
+    },
+    {
+      "path": "snippets/bpm-sites-card.liquid",
+      "bytes": 3724,
+      "sha256": "0ebc2c96152ea269e8658d925b8d565e337c12d019d4b316054bd09889b78636"
+    },
+    {
+      "path": "snippets/bpm-sites-catalogue-card.liquid",
+      "bytes": 1205,
+      "sha256": "68cf293e3b636e4a470b1cfa1109d2e89462d76b4c1ff042898678d9f8cafe86"
+    },
+    {
+      "path": "snippets/bpm-sites-collection-card.liquid",
+      "bytes": 961,
+      "sha256": "0a92926333329cc3ec04be805b2660179e59b7105d7275a71f62d284eee7c299"
+    },
+    {
+      "path": "snippets/bpm-sites-filters.liquid",
+      "bytes": 4546,
+      "sha256": "32e9e61fbd22336fa63d5e388dafc86bdc7ebecca970f33c1adf84db1caf3dc8"
+    },
+    {
+      "path": "snippets/bpm-sites-gallery-art.liquid",
+      "bytes": 5268,
+      "sha256": "46f0122e4fb828cda50da3c1f2b9493025361cb1938447361d116780d7dcb92f"
+    },
+    {
+      "path": "snippets/bpm-sites-links.liquid",
+      "bytes": 1189,
+      "sha256": "ec6421d280d6c6f6092c9340589d04ae9fc68c64da440f97989275a7279c0b0d"
+    },
+    {
+      "path": "snippets/bpm-sites-media.liquid",
+      "bytes": 1235,
+      "sha256": "f7faa6c09f78c6216eebf2cca311dcc2406e0a3c55427e14db0ccc071adb266a"
+    },
+    {
+      "path": "snippets/bpm-sites-pack-art.liquid",
+      "bytes": 1194,
+      "sha256": "f9871fd43369de3b0fab457d39ccdd4870a9a476a6a01fa97185fca214c19b45"
+    },
+    {
+      "path": "snippets/bpm-structured-data.liquid",
+      "bytes": 931,
+      "sha256": "26b35ad70d443cd1ebb56d8f4c2ae88d0890a0de1369e9848d1fb1f2247d58d9"
+    },
+    {
+      "path": "templates/404.json",
+      "bytes": 84,
+      "sha256": "a7974b4b83508f1a227c2d02d4703f1ae7e7d0594e4d091e5a95cf79ae83e56c"
+    },
+    {
+      "path": "templates/article.json",
+      "bytes": 1007,
+      "sha256": "9e815d59ef8270692c7d60cf2527afda2d207c1a7e26aa512967c4cbba32c169"
+    },
+    {
+      "path": "templates/blog.json",
+      "bytes": 126,
+      "sha256": "aa25015eff48f09e7729f93c8bdb5cd2d5cfbcc221d81aa021a36a85c7f0a169"
+    },
+    {
+      "path": "templates/cart.json",
+      "bytes": 738,
+      "sha256": "5fb891a0936bc45f907ef72a9d2dd2b95291c09f35658d6894501a1b2a838a29"
+    },
+    {
+      "path": "templates/collection.json",
+      "bytes": 3400,
+      "sha256": "38cfe13f62287c4b05aa98102d27af1c111e1651275c0a9f812449ade82a7e9b"
+    },
+    {
+      "path": "templates/collection.rotation.json",
+      "bytes": 3592,
+      "sha256": "dc6aef482fe77a4eb3a52de04e1b5d2c6151c86c749e2deed5cc984dc56f9de9"
+    },
+    {
+      "path": "templates/gift_card.liquid",
+      "bytes": 2141,
+      "sha256": "0612666dfc101f979b3811308ebfd358660642bd7f1197c64f6f1a5aa63f5a64"
+    },
+    {
+      "path": "templates/index.json",
+      "bytes": 7492,
+      "sha256": "98b6da26f89ff57c3628074bf2fc4f2e28d2ce36c3bd869f2dccb02d36527f36"
+    },
+    {
+      "path": "templates/list-collections.json",
+      "bytes": 133,
+      "sha256": "cb43eb7b61e08b1993d1fe5ace3fc27c1673eb4caa6be5e3b2112901bd7ab34d"
+    },
+    {
+      "path": "templates/page.about.json",
+      "bytes": 6020,
+      "sha256": "e0002aa0c95be71eab7d0e74fbff6db4fa0cd3ca99db971daa6ecd576833b9ed"
+    },
+    {
+      "path": "templates/page.campaign-300applications.json",
+      "bytes": 7437,
+      "sha256": "a6c8a1b1b624ab32672e01733f385a94e89cf8d5da2378c6f2fa9f8dbc44bfc6"
+    },
+    {
+      "path": "templates/page.campaign-texture.json",
+      "bytes": 8255,
+      "sha256": "d5bad36f8f26553ab726cf37ca520d2cba9e5311f3d7d551561c8e7066063571"
+    },
+    {
+      "path": "templates/page.contact.json",
+      "bytes": 3289,
+      "sha256": "516d7aa6df87e0fbfb273f850ad605c52957e12716d327bde48401efa0fcffb9"
+    },
+    {
+      "path": "templates/page.indigenous-owned.json",
+      "bytes": 3036,
+      "sha256": "3351cfa278fcf76ddb53b5a526b14362e70c4c548bbc0835d6fb8f15eba553e7"
+    },
+    {
+      "path": "templates/page.json",
+      "bytes": 6602,
+      "sha256": "7455d46b480a9fda9f78661efe751240d5196c408ecaee13871fd658e7441586"
+    },
+    {
+      "path": "templates/page.policies.json",
+      "bytes": 359,
+      "sha256": "4dd368d8d3ae4410e4c9a5865e1ed83662f5cc962049eae3a2e912cdff79a783"
+    },
+    {
+      "path": "templates/page.wholesale.json",
+      "bytes": 5759,
+      "sha256": "8b7ea8c1dc0d0e93343a70c737bf899894c4c6efef41f2d393fc65d2a084d97a"
+    },
+    {
+      "path": "templates/password.json",
+      "bytes": 157,
+      "sha256": "125ff0cf1f98a8b5def52856fd5566b5fd24ba02315c79a2fd2f0292c59eee6c"
+    },
+    {
+      "path": "templates/product.bergamot-lime.json",
+      "bytes": 8862,
+      "sha256": "971bbfd2d17717d0e9e75e441a9858ef84fd0c82a69c0565ca5a8ff2beb05aef"
+    },
+    {
+      "path": "templates/product.json",
+      "bytes": 16811,
+      "sha256": "d334e98894be84838e06c00f296d0f0ac0717687c4f5ed60e31bc7a8040245a9"
+    },
+    {
+      "path": "templates/product.unscented.json",
+      "bytes": 8773,
+      "sha256": "551c388bf7e460fafec415a93cde2b6af54975ecbc6fae88cc51c248ac0648b2"
+    },
+    {
+      "path": "templates/search.json",
+      "bytes": 81,
+      "sha256": "63f2f685321a6ad6acf8851d20940ea729d701fcfc67716dde67788e431d3e09"
+    }
+  ],
+  "bytes": 45083235
+}
