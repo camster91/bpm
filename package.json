@@ -10,6 +10,7 @@
     "dev": "node reference-site/dev.mjs",
     "test": "node --test reference-site/tests/*.test.mjs",
     "check": "node scripts/check-reference.mjs && npm run build && npm test && node reference-site/verify-pages.mjs",
+    "check:article-content": "node scripts/source-article-content.mjs",
     "check:theme": "node --check theme/assets/bpm-welcome.js && node --check theme/assets/bpm-motion.js && node --check theme/assets/bpm-chrome.js && node --check theme/assets/bpm-product.js && node --check scripts/preview-theme-chrome.mjs && node scripts/test-theme-welcome.mjs && node scripts/test-theme-product.mjs && node scripts/test-theme-motion.mjs && node scripts/test-theme-chrome.mjs && node scripts/test-gift-card.mjs && node scripts/verify-theme-resource-bindings.mjs && node scripts/verify-theme-app-bindings.mjs"
   },
   "devDependencies": {

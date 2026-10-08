@@ -116,7 +116,8 @@ for (const id of ['bundles','formula','story','ownership','value','journal','faq
 await writeFile(join(output,'sites-home.html'), await engine.parseAndRender(code,{...common,content_for_layout:sitesContent,preview_header:sitesHeader,preview_footer:sitesFooter,page_title:'Sites homepage migration — local fixture'}));
 const newsletterPreview = await section('bpm-sites-newsletter',{mode:'shopify'});
 await writeFile(join(output,'sites-newsletter.html'),await engine.parseAndRender(code,{...common,content_for_layout:'<section class="section wrap"><h1>Local newsletter fixture</h1><p>No provider is connected in this local preview. Do not enter real contact details.</p></section>'+newsletterPreview,preview_header:sitesHeader,preview_footer:sitesFooter,page_title:'Newsletter fixture'}));
-const sourceArticles = JSON.parse(await readFile(resolve(theme,'../reference-site/src/content/articles.json'),'utf8'));
+const { sourceArticleContent } = await import('./source-article-content.mjs');
+const { articles: sourceArticles } = await sourceArticleContent();
 const fixtureArticles = sourceArticles.map((value,i)=>({...value,id:i+1,url:`/sites-article-${i}.html`,published_at:`${value.date}T12:00:00-04:00`}));
 const fixtureBlog = {title:'The Breakdown',url:'/sites-blog.html',articles:fixtureArticles};
 const artBlocks = fixtureArticles.map((article,i)=>({settings:{article,source_art:i===0?'texture':i===1?'ownership':'story'}}));
