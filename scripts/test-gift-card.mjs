@@ -1,0 +1,32 @@
+import assert from 'node:assert/strict';
+import { readFile } from 'node:fs/promises';
+import { runInNewContext } from 'node:vm';
+const script = await readFile(new URL('../theme/assets/bpm-gift-card.js', import.meta.url), 'utf8');
+function fixture({ clipboard, brokenQR = false } = {}) {
+  const listeners = {};
+  const copy = { hidden: true, addEventListener: (event, fn) => { listeners.copy = fn; } };
+  const print = { hidden: true, addEventListener: (event, fn) => { listeners.print = fn; } };
+  const qr = { hidden: true, dataset: { bpmGiftQr: 'FAKE-QR-IDENTIFIER' } };
+  const status = { dataset: { success: 'Copied', failure: 'Copy manually' }, textContent: '' };
+  const elements = { '[data-bpm-copy-code]': copy, '[data-bpm-print]': print, '[data-bpm-gift-qr]': qr, '[data-bpm-copy-status]': status };
+  let printed = false;
+  let qrText;
+  runInNewContext(script, { document: { getElementById: () => ({ textContent: 'TEST ONLY 0000 0000' }), querySelector: selector => elements[selector] }, navigator: { clipboard }, window: { print: () => { printed = true; }, QRCode: function (element, options) { if (brokenQR) throw new Error('Fixture failure'); qrText = options.text; } } });
+  return { copy, print, qr, status, listeners, printed: () => printed, qrText: () => qrText };
+}
+let copied;
+const active = fixture({ clipboard: { writeText: async value => { copied = value; } } });
+await active.listeners.copy();
+assert.equal(copied, 'TESTONLY00000000');
+assert.equal(active.status.textContent, 'Copied');
+assert.equal(active.qrText(), 'FAKE-QR-IDENTIFIER');
+assert.equal(active.qr.hidden, false);
+active.listeners.print();
+assert.equal(active.printed(), true);
+const denied = fixture({ clipboard: { writeText: async () => { throw new Error('Denied'); } }, brokenQR: true });
+await denied.listeners.copy();
+assert.equal(denied.status.textContent, 'Copy manually');
+assert.equal(denied.qr.hidden, true);
+const unsupported = fixture();
+assert.equal(unsupported.copy.hidden, true);
+console.log('Gift-card enhancement checks passed: copy success/denial, unavailable clipboard, print handler and QR success/failure. No browser backend verified.');

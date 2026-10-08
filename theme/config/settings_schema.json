@@ -81,6 +81,12 @@
         "id": "orange",
         "label": "Orange accent",
         "default": "#ffb268"
+      },
+      {
+        "type": "image_picker",
+        "id": "utility_logo",
+        "label": "Password and gift-card logo",
+        "info": "Leave blank to retain the original Sites BPM mark."
       }
     ]
   }

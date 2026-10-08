@@ -121,5 +121,26 @@
     "country": "Country / region",
     "language": "Language",
     "apply": "Apply"
+  },
+  "password": {
+    "heading": "Enter the store.",
+    "label": "Store password",
+    "enter": "Enter"
+  },
+  "gift_card": {
+    "heading": "Your gift card.",
+    "balance": "Remaining balance",
+    "original": "Original value:",
+    "disabled": "This gift card is disabled.",
+    "expired": "This gift card has expired.",
+    "redeemed": "This gift card has been fully redeemed.",
+    "redeem": "Use this code at checkout.",
+    "expires": "Expires:",
+    "qr": "Gift card redemption QR code",
+    "wallet": "Add to Apple Wallet",
+    "copy": "Copy code",
+    "copied": "Code copied.",
+    "copy_failed": "Copy failed. Select the visible code and copy it manually.",
+    "print": "Print gift card"
   }
 }

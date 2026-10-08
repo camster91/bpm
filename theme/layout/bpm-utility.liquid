@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="{{ request.locale.iso_code }}"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ page_title | default: shop.name | escape }}</title>
+<meta name="robots" content="noindex, nofollow"><meta name="referrer" content="no-referrer">
+{{ 'bpm-sites.css' | asset_url | stylesheet_tag }}{{ 'bpm-utility.css' | asset_url | stylesheet_tag }}
+{% style %}:root { --ink: {{ settings.ink }}; --cream: {{ settings.cream }}; --butter: {{ settings.butter }}; --olive: {{ settings.lime }}; --teal: {{ settings.teal }}; --orange: {{ settings.orange }}; }{% endstyle %}
+{{ content_for_header }}
+</head><body class="bpm-utility-page">
+<a class="bpm-utility-skip" href="#MainContent">{{ 'general.skip_content' | t }}</a>
+<header class="bpm-utility-header"><a href="{{ routes.root_url }}">{% if settings.utility_logo != blank %}{{ settings.utility_logo | image_url: width: 264 | image_tag: widths: '66,132,264', sizes: '66px', loading: 'eager', alt: shop.name }}{% else %}<img src="{{ 'bpm-sites-logo.svg' | asset_url }}" width="66" height="68" alt="{{ shop.name | escape }}">{% endif %}</a></header>
+<main id="MainContent" tabindex="-1">{{ content_for_layout }}</main>
+</body></html>
