@@ -3,7 +3,8 @@
     "main": {
       "type": "bpm-sites-product",
       "settings": {
-        "show_description": false
+        "show_description": false,
+        "pack_label": "NATURAL DEODORANT / 1 \u00d7 76 g"
       }
     },
     "reviews": {
@@ -84,9 +85,38 @@
     },
     "scent": {
       "type": "bpm-sites-pdp-scent",
-      "settings": {},
-      "blocks": {},
-      "block_order": []
+      "settings": {
+        "source_art": "bergamot",
+        "source_art_alt": "Bergamot & Lime open carton and metal tube",
+        "heading": "Bright citrus.\nClean finish.",
+        "intro": "Bergamot and lime bring the brightness. Cedarwood adds a quiet woody finish underneath.",
+        "fine": "Scented with essential oils. No synthetic fragrance."
+      },
+      "blocks": {
+        "0": {
+          "type": "note",
+          "settings": {
+            "note": "Bergamot"
+          }
+        },
+        "1": {
+          "type": "note",
+          "settings": {
+            "note": "Lime"
+          }
+        },
+        "2": {
+          "type": "note",
+          "settings": {
+            "note": "Cedarwood"
+          }
+        }
+      },
+      "block_order": [
+        "0",
+        "1",
+        "2"
+      ]
     },
     "formula": {
       "type": "bpm-sites-pdp-formula",
@@ -242,11 +272,16 @@
     },
     "value": {
       "type": "bpm-sites-pdp-value",
-      "settings": {}
+      "settings": {
+        "pack": "76 g",
+        "applications": 304
+      }
     },
     "lifestyle": {
       "type": "bpm-sites-pdp-lifestyle",
-      "settings": {}
+      "settings": {
+        "page": "about-us"
+      }
     },
     "closing": {
       "type": "bpm-sites-pdp-closing",

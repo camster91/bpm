@@ -1,0 +1,26 @@
+[
+  {
+    "asset": "theme/assets/bpm-sites-open-bergamot.svg",
+    "source": "product-media/open-box.png",
+    "sha256": "d4dbcb6b5ca45ec12326c0d95c5248c5467f76e3c4551cf7fafd589efabf14e0",
+    "crop": [
+      177,
+      120,
+      1255,
+      1375
+    ],
+    "method": "Original pixels embedded unchanged; non-destructive source SVG viewport"
+  },
+  {
+    "asset": "theme/assets/bpm-sites-open-unscented.svg",
+    "source": "product-media/unscented-open-box.png",
+    "sha256": "88b8ebf10985316c943a31ffc6077bc561814d926f70ead41ce5ae8dc26fb01e",
+    "crop": [
+      177,
+      120,
+      1255,
+      1375
+    ],
+    "method": "Original pixels embedded unchanged; non-destructive source SVG viewport"
+  }
+]

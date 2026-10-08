@@ -178,6 +178,15 @@ const purchaseBanner = '<div class="wrap"><p>Local product fixture. Gallery and 
 const safePurchase = purchaseBody.replace(/(<button[^>]*type="submit")/g,'$1 disabled').replace(/<select id="Variant-/g,'<select disabled id="Variant-');
 await writeFile(join(output,'sites-product.html'),await engine.parseAndRender(code,{...common,content_for_layout:purchaseBanner+safePurchase,preview_header:sitesHeader,preview_footer:sitesFooter,page_title:'Product fixture'}));
 
+for(const [suffix,handle] of [['bergamot-lime','bpm-natural-deodorant-bergamot-lime'],['unscented','bpm-natural-deodorant-unscented']]) {
+ const template=JSON.parse(await readFile(join(theme,'templates/product.'+suffix+'.json'),'utf8'));
+ const productFixture={...purchaseProduct,...pickerFixture('product',handle),selected_or_first_available_variant:purchaseVariant};
+ let body='<p class="wrap fine">Local assigned-product template fixture. Native media, variant and backend resolution are mocked; claims require acceptance. Purchase submissions disabled.</p>';
+ for(const key of template.order){const item=template.sections[key];if(item.disabled)continue;body+=await section(item.type,item.settings,(item.block_order||[]).map(id=>item.blocks[id]),{product:productFixture,preview_section_id:suffix+'-'+key,form:{}});}
+ body=body.replace(/(<button[^>]*type="submit")/g,'$1 disabled').replace(/<select id="Variant-/g,'<select disabled id="Variant-');
+ await writeFile(join(output,'sites-product-'+suffix+'.html'),await engine.parseAndRender(code,{...common,content_for_layout:body,preview_header:sitesHeader,preview_footer:sitesFooter,page_title:suffix+' — local fixture'}));
+}
+
 for (const pageName of ['about','indigenous-owned','contact']) {
  const config=JSON.parse(await readFile(join(theme,`templates/page.${pageName}.json`),'utf8'));
  let body='<div class="wrap"><p>Local '+pageName+' layout fixture. Source claims and merchant bindings remain unverified. Contact submissions are disabled; no Shopify backend is connected.</p></div>';

@@ -3,7 +3,8 @@
     "main": {
       "type": "bpm-sites-product",
       "settings": {
-        "show_description": false
+        "show_description": false,
+        "pack_label": "NATURAL DEODORANT / 1 \u00d7 76 g"
       }
     },
     "reviews": {
@@ -84,9 +85,31 @@
     },
     "scent": {
       "type": "bpm-sites-pdp-scent",
-      "settings": {},
-      "blocks": {},
-      "block_order": []
+      "settings": {
+        "source_art": "unscented",
+        "source_art_alt": "Unscented open carton and metal tube",
+        "heading": "Quiet on\npurpose.",
+        "intro": "No added essential oils. No masking fragrance. Base ingredients chosen to keep their natural scent as minimal as possible.",
+        "fine": "For a routine that leaves the fragrance choice to you."
+      },
+      "blocks": {
+        "0": {
+          "type": "note",
+          "settings": {
+            "note": "No added fragrance"
+          }
+        },
+        "1": {
+          "type": "note",
+          "settings": {
+            "note": "Same daily ritual"
+          }
+        }
+      },
+      "block_order": [
+        "0",
+        "1"
+      ]
     },
     "formula": {
       "type": "bpm-sites-pdp-formula",
@@ -242,11 +265,16 @@
     },
     "value": {
       "type": "bpm-sites-pdp-value",
-      "settings": {}
+      "settings": {
+        "pack": "76 g",
+        "applications": 304
+      }
     },
     "lifestyle": {
       "type": "bpm-sites-pdp-lifestyle",
-      "settings": {}
+      "settings": {
+        "page": "about-us"
+      }
     },
     "closing": {
       "type": "bpm-sites-pdp-closing",

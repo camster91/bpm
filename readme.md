@@ -25,3 +25,5 @@ Current Shopify data/configuration and approved client decisions govern implemen
 Campaign suffixes and editable native discovery/media modules are implemented locally. [Campaign QA checkpoint](docs/qa/sites-campaign-pages.md) records 171 passing rendering checks and responsive fixture evidence; Shopify runtime, media, claims, apps and purchase journeys remain open.
 
 The existing default About-page assignment now renders scoped, editable Sites sections locally while other native page content is preserved. [Assignment QA](docs/qa/sites-about-default-assignment.md) records 189 passing rendering checks and the remaining native Shopify verification.
+
+Existing single-product suffixes now have product-specific editable source scent/value sections and native comparisons. [Single-product QA](docs/qa/sites-assigned-single-product-templates.md) records 196 checks and remaining native/runtime requirements.

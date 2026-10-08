@@ -41,3 +41,14 @@ for(const [scent,source] of [['bergamot','gallery-pack.png'],['unscented','unsce
  assert.doesNotMatch(svg,/<script|https?:\/\/(?!www.w3.org)/);
 }
 console.log('Both source carton SVG viewports retain the exact manifest crop and original embedded PNG SHA; no external image requests.');
+
+for(const record of await readJSON('docs/source-open-pack-art-provenance.json')) {
+ const svg=await readFile(join(root,record.asset),'utf8');
+ const crop=crops.find(c=>record.source.endsWith('/'+c.source));
+ assert.deepEqual(record.crop,crop.crop_xywh);
+ assert.ok(svg.includes(`viewBox="${crop.crop_xywh.join(' ')}"`));
+ const embedded=Buffer.from(svg.match(/href="data:image\/png;base64,([^"]+)"/)[1],'base64');
+ assert.equal(createHash('sha256').update(embedded).digest('hex'),media.assets.find(a=>a.path===record.source).sha256);
+ assert.doesNotMatch(svg,/<script|https?:\/\/(?!www.w3.org)/);
+}
+console.log('Both open-pack artworks retain the exact original source pixels and framed viewports.');
